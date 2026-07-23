@@ -1,0 +1,28 @@
+# Python cache files
+__pycache__/
+*.pyc
+
+# Virtual environment
+.venv/
+
+# Environment variables
+.env
+
+# General cache directories
+.cache/
+logs/
+
+# Temporary build artifacts
+artifacts/tmp/
+
+# pytest cache
+.pytest_cache/
+
+# ruff cache
+.ruff_cache/
+
+# Egg information directories
+*.egg-info/
+
+# Local orchestration scratch output
+.codex-tmp/

@@ -1,0 +1,73 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://nps-core.local/schemas/evidence_packet.schema.json",
+  "title": "EvidencePacket",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "evidence_id",
+    "task_id",
+    "executor_id",
+    "claim",
+    "result",
+    "method",
+    "artifacts",
+    "confidence",
+    "limitations",
+    "failure_modes",
+    "reproducibility",
+    "affected_hypotheses",
+    "provenance",
+    "content_hash"
+  ],
+  "$defs": {
+    "nonEmptyString": {
+      "type": "string",
+      "minLength": 1
+    },
+    "stringArray": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/nonEmptyString" }
+    }
+  },
+  "properties": {
+    "evidence_id": {
+      "type": "string",
+      "pattern": "^EV-[A-Za-z0-9._-]+$"
+    },
+    "task_id": {
+      "type": "string",
+      "pattern": "^TASK-[A-Za-z0-9._-]+$"
+    },
+    "executor_id": { "$ref": "#/$defs/nonEmptyString" },
+    "claim": { "$ref": "#/$defs/nonEmptyString" },
+    "result": { "$ref": "#/$defs/nonEmptyString" },
+    "method": { "$ref": "#/$defs/nonEmptyString" },
+    "artifacts": { "$ref": "#/$defs/stringArray" },
+    "confidence": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "limitations": { "$ref": "#/$defs/stringArray" },
+    "failure_modes": { "$ref": "#/$defs/stringArray" },
+    "reproducibility": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["command", "environment", "seed"],
+      "properties": {
+        "command": { "$ref": "#/$defs/nonEmptyString" },
+        "environment": { "$ref": "#/$defs/nonEmptyString" },
+        "seed": {
+          "anyOf": [
+            { "type": "integer" },
+            { "type": "null" }
+          ]
+        }
+      }
+    },
+    "affected_hypotheses": { "$ref": "#/$defs/stringArray" },
+    "provenance": { "$ref": "#/$defs/stringArray" },
+    "content_hash": { "$ref": "#/$defs/nonEmptyString" }
+  }
+}

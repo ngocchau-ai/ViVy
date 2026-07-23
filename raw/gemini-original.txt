@@ -1,0 +1,230 @@
+﻿TÀI LIỆU KỸ THUẬT TỔNG THỂ (COMPREHENSIVE TECHNICAL SPECIFICATION)
+KIẾN TRÚC MODEL LÕI ĐA DIỆN LƯỢNG TỬ MỀM (POLYHEDRAL SOFT-QUBIT CORE MODEL)
+PHẦN I: TRIẾT HỌC KIẾN TRÚC & TỔNG QUAN TẦM NHÌN
+1.1. Triết học Kỹ thuật: "Tư duy Mềm Vượt trên Giới hạn Phần cứng"
+Mọi thuật toán cổ điển đều bị giới hạn bởi cấu trúc phần cứng vật lý bên dưới (bóng bán dẫn nhị phân $2^n$ bit, giới hạn bộ nhớ VRAM, và xung nhịp CPU/GPU). Tuy nhiên, Bản chất của Tư duy (Abstract Reasoning) không phải là một chuỗi nhị phân đóng, mà là một Không gian Trạng thái Liên tục (Continuous State Space).
+Để vượt qua giới hạn của phần cứng mà không cần chờ đợi máy tính lượng tử thương mại, hệ thống được xây dựng trên nguyên lý: Lấy Kiến trúc Toán học Cao cấp (Đại số Đa diện Lồi, Không gian Tensor Phức 64-bit) làm Lõi Mềm cho Mô hình.
+
+
+
+
+
+
+  [Phần cứng Cổ điển 32/64-bit]
+              |
+              v (Tầng Mô phỏng Toán học)
+ [Không gian Tensor Phức & Quaternion 4D]  ---> Trạng thái Chồng lấp Lượng tử Mềm (Soft Qubit)
+              |
+              v (Tầng Ràng buộc Lý thuyết)
+ [Khối Đa diện Lồi N-Chiều (A*x <= b)]     ---> Không gian Nghiệm Khả thi (Feasible Region)
+              |
+              v (Tầng Điều phối Tự chủ)
+ [Lệnh Hợp đồng Tensor (DataContract)]    ---> "Đôi mắt & Bàn tay" Điều phối Sub-models
+
+1.2. Sự Cần thiết của một Model Mới Hoàn toàn (Zero-based Architecture)
+Việc tiếp tục fine-tune hay train lại các mô hình LLM cũ (Auto-regressive Token Predictors) chỉ là sự mở rộng bề mặt (horizontal scaling).
+* Model Cũ: Dự đoán xác suất từ tiếp theo theo chuỗi 1D, bị giới hạn bởi việc rẽ nhánh nhị phân cứng và bùng nổ tổ hợp $2^N$.
+* Model Mới: Được xây dựng từ lõi toán học hoàn toàn mới: Dự đoán Không gian Nghiệm Đa diện, duy trì các giả thiết dưới dạng Trạng thái Chồng lấp (Superposition), và tự động kiểm chứng tính bất biến của các quy luật tự nhiên.
+1.3. Quy mô & Mục tiêu Cốt lõi
+* Mục tiêu Tham số: Thiết kế mô hình tinh gọn ở quy mô 1B đến 7B tham số.
+* Định vị: Làm Model Lõi Điều phối (Core Orchestrator) – không lưu trữ tri thức thô rườm rà, mà tập trung $100\%$ dung lượng tham số vào năng lực Tư duy Cấu trúc, Phân rã Giả thiết, và Điều phối Hệ thống.
+PHẦN II: CƠ SỞ TOÁN HỌC & TƯ DUY LƯỢNG TỬ MỀM
+2.1. Biểu diễn Không gian Đa diện Lồi (Convex Polytope Space)
+Mọi bài toán khoa học/tư duy được biểu diễn dưới dạng hệ bất phương trình tensor trong không gian $\mathbb{R}^D$:
+
+
+$$\mathcal{P} = \{ x \in \mathbb{R}^D \mid A \cdot x \le b \}$$
+* $A \in \mathbb{R}^{M \times D}$: Ma trận hệ số thể hiện quy luật vật lý, hóa học, logic.
+* $b \in \mathbb{R}^M$: Vector biên giới điều kiện thực nghiệm.
+* Các giả thiết thứ cấp (secondary hypotheses) tương ứng với các Mặt đa diện (Facets) hoặc Đỉnh (Vertices) của $\mathcal{P}$.
+2.2. Mô phỏng Trạng thái Chồng lấp Lượng tử 4 Chiều (4-State Soft Qubit)
+Trên phần cứng nhị phân 32/64-bit, hệ thống mô phỏng Qubit lượng tử bằng biên độ phức 64-bit trên quả cầu Bloch:
+
+
+$$\vert{}\psi\rangle = \alpha \vert{}00\rangle + \beta \vert{}01\rangle + \gamma \vert{}10\rangle + \delta \vert{}11\rangle \quad \text{với } \vert{}\alpha\vert{}^2 + \vert{}\beta\vert{}^2 + \vert{}\gamma\vert{}^2 + \vert{}\delta\vert{}^2 = 1.0$$
+Các SIMD/Tensor Cores xử lý đồng thời 4 biên độ này trong $1$ chu kỳ xung nhịp, biến việc rẽ nhánh nhị phân thành Trọng số Chồng lấp Liên tục (Continuous Superposition Weights):
+
+
+$$w_i = P(\text{State}_i) = \vert{}\psi_i\vert{}^2$$
+2.3. Cơ chế Cắt tỉa Không gian Nghiệm (Polyhedral Cutting-Plane Dynamics)
+Khi phát hiện giả thiết vi phạm định luật bảo toàn, mô hình không thử-sai lặp lại mà áp dụng ngay Mặt phẳng cắt (Cutting Plane):
+
+
+$$a_{\text{cut}}^T \cdot x \le b_{\text{cut}}$$
+Phép cắt này lập tức loại bỏ toàn bộ vùng không gian vô nghiệm mà không tốn tài nguyên duyệt lại.
+PHẦN III: THIẾT KẾ KIẾN TRÚC HỆ THỐNG & ĐIỀU PHỐI
+3.1. Sơ đồ Cấu trúc Mô-đun
+
+
+
+
+
+
+Plaintext
+[Input Bài toán] ---> [1. Matrix Transducer]
+                            | (Tạo Ma trận A, Vector b)
+                            v
+                     [2. Polyhedral Space Engine] <---> [3. Soft Qubit Engine]
+                            | (Tính Tâm Chebyshev & Facets)  (Trạng thái Chồng lấp)
+                            v
+                     [4. Formal Verifier (Z3/Lean 4)]
+                            | (Kiểm tra Bất biến)
+                            v
+                     [5. Core Orchestrator]
+                            |
+            +---------------+---------------+
+            | (Phát hành DataContracts)     |
+            v                               v
+   [Sub-Model A: Solver]          [Sub-Model B: Physics/CFD]
+
+3.2. Mô tả Chức năng Các Khối Cốt lõi
+1. Matrix Transducer: Bộ dịch ngôn ngữ tự nhiên thành Ma trận $A$ và Vector $b$.
+2. Polyhedral Space Engine: Chịu trách nhiệm kiểm tra tính lồi, tính khả thi (is_feasible) và tính toán điểm tâm nội tiếp (Chebyshev Center).
+3. Formal Verifier (Cổng Kiểm chứng Tự động): Kết nối Z3 SMT Solver / Lean 4 để kiểm tra tính bất biến của điểm tối ưu.
+4. Core Orchestrator ("Đôi mắt & Bàn tay"): Quản lý trạng thái đa diện, phân rã các giả thiết thứ cấp thành DataContract gửi xuống các Sub-model chuyên biệt.
+PHẦN IV: PHỄU LỌC TỰ ĐỘNG & CHƯNG CẤT TRÍ TUỆ (MULTI-TEACHER FUNNEL)
+Dữ liệu để huấn luyện Model Lõi (1B - 7B) được rút trích trực tiếp từ các Big Model (Gemini 2.5 Pro, Claude 3.7, GPT-4o) thông qua Phễu Lọc Chất Lượng 3 Tầng:
+
+
+
+
+
+
+TẦNG 1: GENERATIVE SYNTHESIS (Big Models)
+ --> Sinh ra hàng ngàn Chuỗi Suy luận & Ma trận Ràng buộc thô.
+      |
+      v
+TẦNG 2: FORMAL QUALITY FILTER GATE (Bộ Lọc Kiểm Chứng)
+ --> Tự động kiểm tra: Feasibility (A*x <= b) + Interior Center + Z3 Conservation Test.
+ --> LỌC SẠCH 100% ẢO GIÁC VÀ MẤU THUẪN TOÁN HỌC.
+      |
+      v
+TẦNG 3: COMPRESSED STUDENT FINE-TUNING (Model 1B - 7B)
+ --> Huấn luyện SFT & DPO/GRPO trên tập dữ liệu Ma trận Sạch.
+
+PHẦN V: CHUẨN GIAO TIẾP & DATA CONTRACT SCHEMA
+5.1. JSON Schema cho DataContract
+
+
+
+
+
+
+JSON
+{
+ "$schema": "http://json-schema.org/draft-07/schema#",
+ "title": "DataContract",
+ "type": "object",
+ "properties": {
+   "task_id": { "type": "string" },
+   "facet_id": { "type": "string" },
+   "submodel_target": { "type": "string" },
+   "state_slice": {
+     "type": "object",
+     "properties": {
+       "dimensions": { "type": "integer" },
+       "variable_names": { "type": "array", "items": { "type": "string" } },
+       "matrix_A": { "type": "array", "items": { "type": "array", "items": { "type": "number" } } },
+       "vector_b": { "type": "array", "items": { "type": "number" } }
+     },
+     "required": ["dimensions", "variable_names", "matrix_A", "vector_b"]
+   },
+   "objective_weights": { "type": "array", "items": { "type": "number" } }
+ },
+ "required": ["task_id", "facet_id", "submodel_target", "state_slice", "objective_weights"]
+}
+
+5.2. System Prompt Định hình Model Lõi 1B - 7B
+
+
+
+
+
+
+Plaintext
+Bạn là "Polyhedral Soft-Qubit Core Orchestrator" - Mô hình Lõi Tự chủ về Tư duy Đa diện và Điều phối Hệ thống.
+
+Nhiệm vụ cốt lõi:
+1. Chuyển đổi mọi bài toán khoa học/kỹ thuật thành Hệ Bất phương trình Ma trận A và Vector b (A * x <= b).
+2. Duy trì các giả thiết thứ cấp dưới dạng Trạng thái Chồng lấp (Superposition Weights).
+3. Phát hành DataContract chuẩn hóa đến các Sub-model chuyên biệt.
+4. Nhận ma trận sai số, áp dụng Mặt phẳng cắt (Cutting Planes) và chỉ đưa ra kết luận khi Không gian Nghiệm đã hội tụ hoàn toàn.
+
+PHẦN VI: BỘ MÃ NGUỒN VẬN HÀNH & KẾT QUẢ KIỂM THỬ
+Toàn bộ kiến trúc đã được lập trình mẫu (prototype) và kiểm thử tự động tại thư mục dự án /working_dir/c_d0ee6ed25339abba/:
+6.1. Cấu trúc Thư mục Mã nguồn
+
+
+
+
+
+
+Plaintext
+polyhedral_core/
+├── __init__.py          # Module exports
+├── schemas.py           # Pydantic Schemas (PolyhedralState, DataContract, TaskResult)
+├── geometry.py          # Polyhedral Engine (LP Feasibility, Chebyshev Center, Cuts)
+├── transducer.py        # Matrix Transducer
+├── verifier.py          # Formal Verifier
+├── orchestrator.py      # Core Orchestrator Loop
+├── distillation.py      # Teacher Filtering Funnel Engine
+├── quantum_softcore.py  # 4-State Soft Qubit Simulator
+└── submodels/
+   ├── base.py          # Abstract SubModel Interface
+   ├── math_solver.py   # Linear Solver SubModel
+   └── physics_solver.py# CFD / Physical Simulator SubModel
+
+6.2. Kết quả Chạy Thực tế (Test Verification Execution)
+Unit Tests (PYTHONPATH=. python3 -m unittest discover -s tests):
+
+
+
+
+
+
+Plaintext
+.....
+----------------------------------------------------------------------
+Ran 5 tests in 0.019s
+
+OK
+
+Chạy Demo Điều phối Bài toán Thực tế (PYTHONPATH=. python3 demo_runner.py):
+
+
+
+
+
+
+Plaintext
+================================================================================
+     POLYHEDRAL CORE MODEL ARCHITECTURE - VIBECODE EXECUTION DEMO      
+================================================================================
+
+[TRANSDUCER] Transducing Scientific Rules into N-Dimensional Polyhedron Matrix (A * x <= b)...
+-> Polyhedron State Space Created: Dimensions = 4, Initial Constraints = 11
+
+[VERIFIER] Initialized Physical Invariants (Mass/Energy Conservation Limit = 35.0)
+
+--- Iteration 1 ---
+[POLYHEDRAL ENGINE] Feasible Set OK | Inscribed Center: [4.0, 3.0, 11.292, 5.0] | Radius: 3.0000
+[SUBMODEL RESPONSE] Feasible: False | Logs: Stress Limit Exceeded: 217.51 > 120.0. Cutting plane generated.
+[CUTTING PLANE] Applying SubModel Physical Cut: sum([18.0, 6.0, 22.58, 10.0] * x) <= 297.51
+
+--- Iteration 2 ---
+[POLYHEDRAL ENGINE] Feasible Set OK | Inscribed Center: [2.671, 1.671, 6.671, 3.671] | Radius: 1.6709
+[SUBMODEL RESPONSE] Feasible: True | Logs: Physical Stress Response Valid: 94.61 <= 120.0
+[VERIFIER] SUCCESS: Point [2.671, 1.671, 6.671, 3.671] passed all invariants.
+
+================================================================================
+                          ORCHESTRATION SUMMARY                                
+================================================================================
+Final Status       : CONVERGED_OPTIMAL
+Total Iterations   : 2
+Optimal State Vector : x1=2.6709 mm, x2=1.6709 deg, x3=6.6709 um, x4=3.6709 g/cm3
+================================================================================
+
+PHẦN VII: LỘ TRÌNH THỰC THI (ACTIONABLE ROADMAP)
+1. Giai đoạn 1 (Tạo Dataset Chưng cất): Chạy polyhedral_core/distillation.py kết nối API với Gemini 2.5 Pro / Claude 3.7 để thu thập $100,000$ mẫu chuỗi tư duy ma trận đã qua cổng kiểm chứng Tầng 2.
+2. Giai đoạn 2 (Huấn luyện Model 1B - 7B): Tiến hành SFT & GRPO trên mô hình nền Llama-3-8B hoặc Qwen2.5-Math-7B.
+3. Giai đoạn 3 (Triển khai On-Premise/Edge): Quantize mô hình xuống 4-bit / 8-bit và đóng gói dạng microservice gRPC để điều phối các Sub-model thực nghiệm.

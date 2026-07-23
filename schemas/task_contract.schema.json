@@ -1,0 +1,179 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://nps-core.local/schemas/task_contract.schema.json",
+  "title": "TaskContract",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["task_contract"],
+  "properties": {
+    "task_contract": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["task_id", "title", "objective", "context", "constraints", "implementation", "validation", "token_budget", "completion"],
+      "properties": {
+        "task_id": {
+          "type": "string",
+          "pattern": "^TASK-[A-Za-z0-9._-]+$"
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1
+        },
+        "objective": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["problem", "expected_outcome", "non_goals"],
+          "properties": {
+            "problem": {
+              "$ref": "#/$defs/nonEmptyString"
+            },
+            "expected_outcome": {
+              "$ref": "#/$defs/nonEmptyString"
+            },
+            "non_goals": {
+              "$ref": "#/$defs/stringArray"
+            }
+          }
+        },
+        "context": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["architecture_refs", "codegraph_nodes", "relevant_files", "prior_decisions"],
+          "properties": {
+            "architecture_refs": {
+              "$ref": "#/$defs/stringArray"
+            },
+            "codegraph_nodes": {
+              "$ref": "#/$defs/stringArray"
+            },
+            "relevant_files": {
+              "$ref": "#/$defs/stringArray"
+            },
+            "prior_decisions": {
+              "$ref": "#/$defs/stringArray"
+            }
+          }
+        },
+        "constraints": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["language", "dependencies_allowed", "dependencies_forbidden", "performance_budget", "security_requirements", "compatibility_requirements"],
+          "properties": {
+            "language": {
+              "$ref": "#/$defs/nonEmptyString"
+            },
+            "dependencies_allowed": {
+              "$ref": "#/$defs/stringArray"
+            },
+            "dependencies_forbidden": {
+              "$ref": "#/$defs/stringArray"
+            },
+            "performance_budget": {
+              "type": "object",
+              "additionalProperties": {
+                "oneOf": [
+                  { "type": "number", "minimum": 0 },
+                  { "type": "string" },
+                  { "type": "boolean" }
+                ]
+              }
+            },
+            "security_requirements": {
+              "$ref": "#/$defs/stringArray"
+            },
+            "compatibility_requirements": {
+              "$ref": "#/$defs/stringArray"
+            }
+          }
+        },
+        "implementation": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["assigned_role", "allowed_files", "forbidden_files", "expected_artifacts"],
+          "properties": {
+            "assigned_role": {
+              "$ref": "#/$defs/nonEmptyString"
+            },
+            "allowed_files": {
+              "$ref": "#/$defs/stringArray"
+            },
+            "forbidden_files": {
+              "$ref": "#/$defs/stringArray"
+            },
+            "expected_artifacts": {
+              "$ref": "#/$defs/stringArray"
+            }
+          }
+        },
+        "validation": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["acceptance_criteria", "required_tests", "regression_checks", "evidence_schema"],
+          "properties": {
+            "acceptance_criteria": {
+              "$ref": "#/$defs/stringArray"
+            },
+            "required_tests": {
+              "$ref": "#/$defs/stringArray"
+            },
+            "regression_checks": {
+              "$ref": "#/$defs/stringArray"
+            },
+            "evidence_schema": {
+              "$ref": "#/$defs/nonEmptyString"
+            }
+          }
+        },
+        "token_budget": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["max_context_tokens", "max_output_tokens", "required_summary_mode"],
+          "properties": {
+            "max_context_tokens": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "max_output_tokens": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "required_summary_mode": {
+              "$ref": "#/$defs/nonEmptyString"
+            }
+          }
+        },
+        "completion": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["status", "reviewer", "codegraph_refresh_required", "memory_update_required"],
+          "properties": {
+            "status": {
+              "enum": ["open", "active", "blocked", "completed", "failed"]
+            },
+            "reviewer": {
+              "$ref": "#/$defs/nonEmptyString"
+            },
+            "codegraph_refresh_required": {
+              "type": "boolean"
+            },
+            "memory_update_required": {
+              "type": "boolean"
+            }
+          }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "nonEmptyString": {
+      "type": "string",
+      "minLength": 1
+    },
+    "stringArray": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/nonEmptyString"
+      }
+    }
+  }
+}

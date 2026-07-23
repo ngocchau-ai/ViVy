@@ -1,0 +1,26 @@
+routing:
+  task_id: TASK-001
+  strategy: sequential_role_isolation
+  implementation:
+    role: local_coder
+    profile: LOCAL-CODER-QWEN25-05B
+    slices:
+      - repository_and_schemas
+      - codegraph_indexer
+      - tests_and_hardening
+  validation:
+    tester:
+      runtime: ollama
+      model: qwen2.5-coder:7b
+      isolated_session: true
+    reviewer:
+      runtime: ollama
+      model: qwen2.5-coder:7b
+      isolated_session: true
+  independence:
+    level: low
+    reason: "All roles currently use the same installed local coding backbone."
+    mitigation:
+      - "Separate role prompts and sessions."
+      - "Executable tests are primary evidence."
+      - "Codex checks contract and provenance but does not approve implementation."
