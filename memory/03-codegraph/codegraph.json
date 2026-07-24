@@ -1,8 +1,1367 @@
 {
   "schema_version": "0.1",
-  "status": "NOT_INITIALIZED",
-  "repository_head": null,
-  "codegraph_commit": null,
-  "nodes": [],
-  "edges": []
+  "status": "FRESH",
+  "repository_head": "927c243e53371c80a4c3ac568270e4b4a5900174",
+  "codegraph_commit": "927c243e53371c80a4c3ac568270e4b4a5900174",
+  "nodes": [
+    {
+      "id": "module:nps_core",
+      "kind": "module",
+      "name": "nps_core",
+      "qualified_name": "nps_core",
+      "path": "src/nps_core/__init__.py",
+      "line": 1
+    },
+    {
+      "id": "module:nps_core.adaptive_n",
+      "kind": "module",
+      "name": "adaptive_n",
+      "qualified_name": "nps_core.adaptive_n",
+      "path": "src/nps_core/adaptive_n/__init__.py",
+      "line": 1
+    },
+    {
+      "id": "module:nps_core.codegraph",
+      "kind": "module",
+      "name": "codegraph",
+      "qualified_name": "nps_core.codegraph",
+      "path": "src/nps_core/codegraph/__init__.py",
+      "line": 1
+    },
+    {
+      "id": "module:nps_core.codegraph.indexer",
+      "kind": "module",
+      "name": "indexer",
+      "qualified_name": "nps_core.codegraph.indexer",
+      "path": "src/nps_core/codegraph/indexer.py",
+      "line": 1
+    },
+    {
+      "id": "module:nps_core.contract_generator",
+      "kind": "module",
+      "name": "contract_generator",
+      "qualified_name": "nps_core.contract_generator",
+      "path": "src/nps_core/contract_generator/__init__.py",
+      "line": 1
+    },
+    {
+      "id": "module:nps_core.evidence_assimilator",
+      "kind": "module",
+      "name": "evidence_assimilator",
+      "qualified_name": "nps_core.evidence_assimilator",
+      "path": "src/nps_core/evidence_assimilator/__init__.py",
+      "line": 1
+    },
+    {
+      "id": "module:nps_core.executor_router",
+      "kind": "module",
+      "name": "executor_router",
+      "qualified_name": "nps_core.executor_router",
+      "path": "src/nps_core/executor_router/__init__.py",
+      "line": 1
+    },
+    {
+      "id": "module:nps_core.experiment_designer",
+      "kind": "module",
+      "name": "experiment_designer",
+      "qualified_name": "nps_core.experiment_designer",
+      "path": "src/nps_core/experiment_designer/__init__.py",
+      "line": 1
+    },
+    {
+      "id": "module:nps_core.hypothesis_population",
+      "kind": "module",
+      "name": "hypothesis_population",
+      "qualified_name": "nps_core.hypothesis_population",
+      "path": "src/nps_core/hypothesis_population/__init__.py",
+      "line": 1
+    },
+    {
+      "id": "module:nps_core.interfaces",
+      "kind": "module",
+      "name": "interfaces",
+      "qualified_name": "nps_core.interfaces",
+      "path": "src/nps_core/interfaces/__init__.py",
+      "line": 1
+    },
+    {
+      "id": "module:nps_core.memory",
+      "kind": "module",
+      "name": "memory",
+      "qualified_name": "nps_core.memory",
+      "path": "src/nps_core/memory/__init__.py",
+      "line": 1
+    },
+    {
+      "id": "module:nps_core.problem_compiler",
+      "kind": "module",
+      "name": "problem_compiler",
+      "qualified_name": "nps_core.problem_compiler",
+      "path": "src/nps_core/problem_compiler/__init__.py",
+      "line": 1
+    },
+    {
+      "id": "module:nps_core.state_update",
+      "kind": "module",
+      "name": "state_update",
+      "qualified_name": "nps_core.state_update",
+      "path": "src/nps_core/state_update/__init__.py",
+      "line": 1
+    },
+    {
+      "id": "module:nps_core.thought_ecology",
+      "kind": "module",
+      "name": "thought_ecology",
+      "qualified_name": "nps_core.thought_ecology",
+      "path": "src/nps_core/thought_ecology/__init__.py",
+      "line": 1
+    },
+    {
+      "id": "module:nps_core.verification_tribunal",
+      "kind": "module",
+      "name": "verification_tribunal",
+      "qualified_name": "nps_core.verification_tribunal",
+      "path": "src/nps_core/verification_tribunal/__init__.py",
+      "line": 1
+    },
+    {
+      "id": "module:scripts.refresh_codegraph",
+      "kind": "module",
+      "name": "refresh_codegraph",
+      "qualified_name": "scripts.refresh_codegraph",
+      "path": "scripts/refresh_codegraph.py",
+      "line": 1
+    },
+    {
+      "id": "module:tests.architecture.test_package_skeleton",
+      "kind": "module",
+      "name": "test_package_skeleton",
+      "qualified_name": "tests.architecture.test_package_skeleton",
+      "path": "tests/architecture/test_package_skeleton.py",
+      "line": 1
+    },
+    {
+      "id": "module:tests.integration.test_refresh_codegraph",
+      "kind": "module",
+      "name": "test_refresh_codegraph",
+      "qualified_name": "tests.integration.test_refresh_codegraph",
+      "path": "tests/integration/test_refresh_codegraph.py",
+      "line": 1
+    },
+    {
+      "id": "module:tests.unit.test_codegraph_build",
+      "kind": "module",
+      "name": "test_codegraph_build",
+      "qualified_name": "tests.unit.test_codegraph_build",
+      "path": "tests/unit/test_codegraph_build.py",
+      "line": 1
+    },
+    {
+      "id": "module:tests.unit.test_codegraph_errors",
+      "kind": "module",
+      "name": "test_codegraph_errors",
+      "qualified_name": "tests.unit.test_codegraph_errors",
+      "path": "tests/unit/test_codegraph_errors.py",
+      "line": 1
+    },
+    {
+      "id": "module:tests.unit.test_codegraph_writes",
+      "kind": "module",
+      "name": "test_codegraph_writes",
+      "qualified_name": "tests.unit.test_codegraph_writes",
+      "path": "tests/unit/test_codegraph_writes.py",
+      "line": 1
+    },
+    {
+      "id": "module:tests.unit.test_evidence_packet_schema",
+      "kind": "module",
+      "name": "test_evidence_packet_schema",
+      "qualified_name": "tests.unit.test_evidence_packet_schema",
+      "path": "tests/unit/test_evidence_packet_schema.py",
+      "line": 1
+    },
+    {
+      "id": "module:tests.unit.test_experiment_schema",
+      "kind": "module",
+      "name": "test_experiment_schema",
+      "qualified_name": "tests.unit.test_experiment_schema",
+      "path": "tests/unit/test_experiment_schema.py",
+      "line": 1
+    },
+    {
+      "id": "module:tests.unit.test_schemas",
+      "kind": "module",
+      "name": "test_schemas",
+      "qualified_name": "tests.unit.test_schemas",
+      "path": "tests/unit/test_schemas.py",
+      "line": 1
+    },
+    {
+      "id": "module:tests.unit.test_task_contract_schema",
+      "kind": "module",
+      "name": "test_task_contract_schema",
+      "qualified_name": "tests.unit.test_task_contract_schema",
+      "path": "tests/unit/test_task_contract_schema.py",
+      "line": 1
+    },
+    {
+      "id": "module:tests.unit.test_thought_state_schema",
+      "kind": "module",
+      "name": "test_thought_state_schema",
+      "qualified_name": "tests.unit.test_thought_state_schema",
+      "path": "tests/unit/test_thought_state_schema.py",
+      "line": 1
+    },
+    {
+      "id": "symbol:nps_core.codegraph.indexer:_DefinitionVisitor",
+      "kind": "class",
+      "name": "_DefinitionVisitor",
+      "qualified_name": "nps_core.codegraph.indexer._DefinitionVisitor",
+      "path": "src/nps_core/codegraph/indexer.py",
+      "line": 60
+    },
+    {
+      "id": "symbol:nps_core.codegraph.indexer:_DefinitionVisitor.__init__",
+      "kind": "function",
+      "name": "__init__",
+      "qualified_name": "nps_core.codegraph.indexer._DefinitionVisitor.__init__",
+      "path": "src/nps_core/codegraph/indexer.py",
+      "line": 61
+    },
+    {
+      "id": "symbol:nps_core.codegraph.indexer:_DefinitionVisitor._record",
+      "kind": "function",
+      "name": "_record",
+      "qualified_name": "nps_core.codegraph.indexer._DefinitionVisitor._record",
+      "path": "src/nps_core/codegraph/indexer.py",
+      "line": 68
+    },
+    {
+      "id": "symbol:nps_core.codegraph.indexer:_DefinitionVisitor._visit_definition",
+      "kind": "function",
+      "name": "_visit_definition",
+      "qualified_name": "nps_core.codegraph.indexer._DefinitionVisitor._visit_definition",
+      "path": "src/nps_core/codegraph/indexer.py",
+      "line": 86
+    },
+    {
+      "id": "symbol:nps_core.codegraph.indexer:_DefinitionVisitor.visit_AsyncFunctionDef",
+      "kind": "function",
+      "name": "visit_AsyncFunctionDef",
+      "qualified_name": "nps_core.codegraph.indexer._DefinitionVisitor.visit_AsyncFunctionDef",
+      "path": "src/nps_core/codegraph/indexer.py",
+      "line": 100
+    },
+    {
+      "id": "symbol:nps_core.codegraph.indexer:_DefinitionVisitor.visit_ClassDef",
+      "kind": "function",
+      "name": "visit_ClassDef",
+      "qualified_name": "nps_core.codegraph.indexer._DefinitionVisitor.visit_ClassDef",
+      "path": "src/nps_core/codegraph/indexer.py",
+      "line": 94
+    },
+    {
+      "id": "symbol:nps_core.codegraph.indexer:_DefinitionVisitor.visit_FunctionDef",
+      "kind": "function",
+      "name": "visit_FunctionDef",
+      "qualified_name": "nps_core.codegraph.indexer._DefinitionVisitor.visit_FunctionDef",
+      "path": "src/nps_core/codegraph/indexer.py",
+      "line": 97
+    },
+    {
+      "id": "symbol:nps_core.codegraph.indexer:_DefinitionVisitor.visit_Import",
+      "kind": "function",
+      "name": "visit_Import",
+      "qualified_name": "nps_core.codegraph.indexer._DefinitionVisitor.visit_Import",
+      "path": "src/nps_core/codegraph/indexer.py",
+      "line": 103
+    },
+    {
+      "id": "symbol:nps_core.codegraph.indexer:_DefinitionVisitor.visit_ImportFrom",
+      "kind": "function",
+      "name": "visit_ImportFrom",
+      "qualified_name": "nps_core.codegraph.indexer._DefinitionVisitor.visit_ImportFrom",
+      "path": "src/nps_core/codegraph/indexer.py",
+      "line": 112
+    },
+    {
+      "id": "symbol:nps_core.codegraph.indexer:_git_head",
+      "kind": "function",
+      "name": "_git_head",
+      "qualified_name": "nps_core.codegraph.indexer._git_head",
+      "path": "src/nps_core/codegraph/indexer.py",
+      "line": 34
+    },
+    {
+      "id": "symbol:nps_core.codegraph.indexer:_index_python_file",
+      "kind": "function",
+      "name": "_index_python_file",
+      "qualified_name": "nps_core.codegraph.indexer._index_python_file",
+      "path": "src/nps_core/codegraph/indexer.py",
+      "line": 124
+    },
+    {
+      "id": "symbol:nps_core.codegraph.indexer:_module_name",
+      "kind": "function",
+      "name": "_module_name",
+      "qualified_name": "nps_core.codegraph.indexer._module_name",
+      "path": "src/nps_core/codegraph/indexer.py",
+      "line": 50
+    },
+    {
+      "id": "symbol:nps_core.codegraph.indexer:_resolved_root",
+      "kind": "function",
+      "name": "_resolved_root",
+      "qualified_name": "nps_core.codegraph.indexer._resolved_root",
+      "path": "src/nps_core/codegraph/indexer.py",
+      "line": 19
+    },
+    {
+      "id": "symbol:nps_core.codegraph.indexer:_safe_output",
+      "kind": "function",
+      "name": "_safe_output",
+      "qualified_name": "nps_core.codegraph.indexer._safe_output",
+      "path": "src/nps_core/codegraph/indexer.py",
+      "line": 26
+    },
+    {
+      "id": "symbol:nps_core.codegraph.indexer:build_codegraph",
+      "kind": "function",
+      "name": "build_codegraph",
+      "qualified_name": "nps_core.codegraph.indexer.build_codegraph",
+      "path": "src/nps_core/codegraph/indexer.py",
+      "line": 152
+    },
+    {
+      "id": "symbol:nps_core.codegraph.indexer:main",
+      "kind": "function",
+      "name": "main",
+      "qualified_name": "nps_core.codegraph.indexer.main",
+      "path": "src/nps_core/codegraph/indexer.py",
+      "line": 246
+    },
+    {
+      "id": "symbol:nps_core.codegraph.indexer:write_codegraph",
+      "kind": "function",
+      "name": "write_codegraph",
+      "qualified_name": "nps_core.codegraph.indexer.write_codegraph",
+      "path": "src/nps_core/codegraph/indexer.py",
+      "line": 189
+    },
+    {
+      "id": "symbol:nps_core.codegraph.indexer:write_markdown_reports",
+      "kind": "function",
+      "name": "write_markdown_reports",
+      "qualified_name": "nps_core.codegraph.indexer.write_markdown_reports",
+      "path": "src/nps_core/codegraph/indexer.py",
+      "line": 199
+    },
+    {
+      "id": "symbol:tests.architecture.test_package_skeleton:test_module_import",
+      "kind": "function",
+      "name": "test_module_import",
+      "qualified_name": "tests.architecture.test_package_skeleton.test_module_import",
+      "path": "tests/architecture/test_package_skeleton.py",
+      "line": 22
+    },
+    {
+      "id": "symbol:tests.architecture.test_package_skeleton:test_nps_core_all",
+      "kind": "function",
+      "name": "test_nps_core_all",
+      "qualified_name": "tests.architecture.test_package_skeleton.test_nps_core_all",
+      "path": "tests/architecture/test_package_skeleton.py",
+      "line": 26
+    },
+    {
+      "id": "symbol:tests.integration.test_refresh_codegraph:test_refresh_codegraph",
+      "kind": "function",
+      "name": "test_refresh_codegraph",
+      "qualified_name": "tests.integration.test_refresh_codegraph.test_refresh_codegraph",
+      "path": "tests/integration/test_refresh_codegraph.py",
+      "line": 13
+    },
+    {
+      "id": "symbol:tests.unit.test_codegraph_build:codegraph",
+      "kind": "function",
+      "name": "codegraph",
+      "qualified_name": "tests.unit.test_codegraph_build.codegraph",
+      "path": "tests/unit/test_codegraph_build.py",
+      "line": 31
+    },
+    {
+      "id": "symbol:tests.unit.test_codegraph_build:test_build_codegraph_twice",
+      "kind": "function",
+      "name": "test_build_codegraph_twice",
+      "qualified_name": "tests.unit.test_codegraph_build.test_build_codegraph_twice",
+      "path": "tests/unit/test_codegraph_build.py",
+      "line": 39
+    },
+    {
+      "id": "symbol:tests.unit.test_codegraph_build:test_edges_sorted",
+      "kind": "function",
+      "name": "test_edges_sorted",
+      "qualified_name": "tests.unit.test_codegraph_build.test_edges_sorted",
+      "path": "tests/unit/test_codegraph_build.py",
+      "line": 81
+    },
+    {
+      "id": "symbol:tests.unit.test_codegraph_build:test_import_targets",
+      "kind": "function",
+      "name": "test_import_targets",
+      "qualified_name": "tests.unit.test_codegraph_build.test_import_targets",
+      "path": "tests/unit/test_codegraph_build.py",
+      "line": 75
+    },
+    {
+      "id": "symbol:tests.unit.test_codegraph_build:test_module_paths",
+      "kind": "function",
+      "name": "test_module_paths",
+      "qualified_name": "tests.unit.test_codegraph_build.test_module_paths",
+      "path": "tests/unit/test_codegraph_build.py",
+      "line": 63
+    },
+    {
+      "id": "symbol:tests.unit.test_codegraph_build:test_nested_symbol_edge",
+      "kind": "function",
+      "name": "test_nested_symbol_edge",
+      "qualified_name": "tests.unit.test_codegraph_build.test_nested_symbol_edge",
+      "path": "tests/unit/test_codegraph_build.py",
+      "line": 70
+    },
+    {
+      "id": "symbol:tests.unit.test_codegraph_build:test_node_ids",
+      "kind": "function",
+      "name": "test_node_ids",
+      "qualified_name": "tests.unit.test_codegraph_build.test_node_ids",
+      "path": "tests/unit/test_codegraph_build.py",
+      "line": 48
+    },
+    {
+      "id": "symbol:tests.unit.test_codegraph_build:write_module",
+      "kind": "function",
+      "name": "write_module",
+      "qualified_name": "tests.unit.test_codegraph_build.write_module",
+      "path": "tests/unit/test_codegraph_build.py",
+      "line": 7
+    },
+    {
+      "id": "symbol:tests.unit.test_codegraph_errors:test_excluded_directories",
+      "kind": "function",
+      "name": "test_excluded_directories",
+      "qualified_name": "tests.unit.test_codegraph_errors.test_excluded_directories",
+      "path": "tests/unit/test_codegraph_errors.py",
+      "line": 25
+    },
+    {
+      "id": "symbol:tests.unit.test_codegraph_errors:test_symlink_directory",
+      "kind": "function",
+      "name": "test_symlink_directory",
+      "qualified_name": "tests.unit.test_codegraph_errors.test_symlink_directory",
+      "path": "tests/unit/test_codegraph_errors.py",
+      "line": 43
+    },
+    {
+      "id": "symbol:tests.unit.test_codegraph_errors:test_syntax_error",
+      "kind": "function",
+      "name": "test_syntax_error",
+      "qualified_name": "tests.unit.test_codegraph_errors.test_syntax_error",
+      "path": "tests/unit/test_codegraph_errors.py",
+      "line": 5
+    },
+    {
+      "id": "symbol:tests.unit.test_codegraph_writes:test_write_codegraph",
+      "kind": "function",
+      "name": "test_write_codegraph",
+      "qualified_name": "tests.unit.test_codegraph_writes.test_write_codegraph",
+      "path": "tests/unit/test_codegraph_writes.py",
+      "line": 8
+    },
+    {
+      "id": "symbol:tests.unit.test_codegraph_writes:test_write_markdown_reports",
+      "kind": "function",
+      "name": "test_write_markdown_reports",
+      "qualified_name": "tests.unit.test_codegraph_writes.test_write_markdown_reports",
+      "path": "tests/unit/test_codegraph_writes.py",
+      "line": 23
+    },
+    {
+      "id": "symbol:tests.unit.test_evidence_packet_schema:add_unknown_field_inside_reproducibility",
+      "kind": "function",
+      "name": "add_unknown_field_inside_reproducibility",
+      "qualified_name": "tests.unit.test_evidence_packet_schema.add_unknown_field_inside_reproducibility",
+      "path": "tests/unit/test_evidence_packet_schema.py",
+      "line": 60
+    },
+    {
+      "id": "symbol:tests.unit.test_evidence_packet_schema:add_unknown_root_key",
+      "kind": "function",
+      "name": "add_unknown_root_key",
+      "qualified_name": "tests.unit.test_evidence_packet_schema.add_unknown_root_key",
+      "path": "tests/unit/test_evidence_packet_schema.py",
+      "line": 40
+    },
+    {
+      "id": "symbol:tests.unit.test_evidence_packet_schema:confidence_minus_0_1",
+      "kind": "function",
+      "name": "confidence_minus_0_1",
+      "qualified_name": "tests.unit.test_evidence_packet_schema.confidence_minus_0_1",
+      "path": "tests/unit/test_evidence_packet_schema.py",
+      "line": 50
+    },
+    {
+      "id": "symbol:tests.unit.test_evidence_packet_schema:delete_reproducibility_seed",
+      "kind": "function",
+      "name": "delete_reproducibility_seed",
+      "qualified_name": "tests.unit.test_evidence_packet_schema.delete_reproducibility_seed",
+      "path": "tests/unit/test_evidence_packet_schema.py",
+      "line": 55
+    },
+    {
+      "id": "symbol:tests.unit.test_evidence_packet_schema:set_evidence_id_to_bad",
+      "kind": "function",
+      "name": "set_evidence_id_to_bad",
+      "qualified_name": "tests.unit.test_evidence_packet_schema.set_evidence_id_to_bad",
+      "path": "tests/unit/test_evidence_packet_schema.py",
+      "line": 45
+    },
+    {
+      "id": "symbol:tests.unit.test_evidence_packet_schema:test_invalid_mutations",
+      "kind": "function",
+      "name": "test_invalid_mutations",
+      "qualified_name": "tests.unit.test_evidence_packet_schema.test_invalid_mutations",
+      "path": "tests/unit/test_evidence_packet_schema.py",
+      "line": 72
+    },
+    {
+      "id": "symbol:tests.unit.test_evidence_packet_schema:test_valid_canonical_instance",
+      "kind": "function",
+      "name": "test_valid_canonical_instance",
+      "qualified_name": "tests.unit.test_evidence_packet_schema.test_valid_canonical_instance",
+      "path": "tests/unit/test_evidence_packet_schema.py",
+      "line": 35
+    },
+    {
+      "id": "symbol:tests.unit.test_experiment_schema:add_unknown_key_to_outer_candidate",
+      "kind": "function",
+      "name": "add_unknown_key_to_outer_candidate",
+      "qualified_name": "tests.unit.test_experiment_schema.add_unknown_key_to_outer_candidate",
+      "path": "tests/unit/test_experiment_schema.py",
+      "line": 41
+    },
+    {
+      "id": "symbol:tests.unit.test_experiment_schema:set_bad_experiment_id",
+      "kind": "function",
+      "name": "set_bad_experiment_id",
+      "qualified_name": "tests.unit.test_experiment_schema.set_bad_experiment_id",
+      "path": "tests/unit/test_experiment_schema.py",
+      "line": 45
+    },
+    {
+      "id": "symbol:tests.unit.test_experiment_schema:set_cost_budget_with_negative_resource",
+      "kind": "function",
+      "name": "set_cost_budget_with_negative_resource",
+      "qualified_name": "tests.unit.test_experiment_schema.set_cost_budget_with_negative_resource",
+      "path": "tests/unit/test_experiment_schema.py",
+      "line": 57
+    },
+    {
+      "id": "symbol:tests.unit.test_experiment_schema:set_discriminating_outcomes_to_empty_dict",
+      "kind": "function",
+      "name": "set_discriminating_outcomes_to_empty_dict",
+      "qualified_name": "tests.unit.test_experiment_schema.set_discriminating_outcomes_to_empty_dict",
+      "path": "tests/unit/test_experiment_schema.py",
+      "line": 53
+    },
+    {
+      "id": "symbol:tests.unit.test_experiment_schema:set_expected_information_gain_1_1",
+      "kind": "function",
+      "name": "set_expected_information_gain_1_1",
+      "qualified_name": "tests.unit.test_experiment_schema.set_expected_information_gain_1_1",
+      "path": "tests/unit/test_experiment_schema.py",
+      "line": 49
+    },
+    {
+      "id": "symbol:tests.unit.test_experiment_schema:test_invalid_experiments",
+      "kind": "function",
+      "name": "test_invalid_experiments",
+      "qualified_name": "tests.unit.test_experiment_schema.test_invalid_experiments",
+      "path": "tests/unit/test_experiment_schema.py",
+      "line": 68
+    },
+    {
+      "id": "symbol:tests.unit.test_experiment_schema:test_valid_experiment",
+      "kind": "function",
+      "name": "test_valid_experiment",
+      "qualified_name": "tests.unit.test_experiment_schema.test_valid_experiment",
+      "path": "tests/unit/test_experiment_schema.py",
+      "line": 37
+    },
+    {
+      "id": "symbol:tests.unit.test_experiment_schema:valid_experiment",
+      "kind": "function",
+      "name": "valid_experiment",
+      "qualified_name": "tests.unit.test_experiment_schema.valid_experiment",
+      "path": "tests/unit/test_experiment_schema.py",
+      "line": 20
+    },
+    {
+      "id": "symbol:tests.unit.test_experiment_schema:validate_experiment",
+      "kind": "function",
+      "name": "validate_experiment",
+      "qualified_name": "tests.unit.test_experiment_schema.validate_experiment",
+      "path": "tests/unit/test_experiment_schema.py",
+      "line": 14
+    },
+    {
+      "id": "symbol:tests.unit.test_schemas:test_schema_properties",
+      "kind": "function",
+      "name": "test_schema_properties",
+      "qualified_name": "tests.unit.test_schemas.test_schema_properties",
+      "path": "tests/unit/test_schemas.py",
+      "line": 27
+    },
+    {
+      "id": "symbol:tests.unit.test_schemas:test_validate_schemas",
+      "kind": "function",
+      "name": "test_validate_schemas",
+      "qualified_name": "tests.unit.test_schemas.test_validate_schemas",
+      "path": "tests/unit/test_schemas.py",
+      "line": 19
+    },
+    {
+      "id": "symbol:tests.unit.test_task_contract_schema:add_unknown_constraint",
+      "kind": "function",
+      "name": "add_unknown_constraint",
+      "qualified_name": "tests.unit.test_task_contract_schema.add_unknown_constraint",
+      "path": "tests/unit/test_task_contract_schema.py",
+      "line": 78
+    },
+    {
+      "id": "symbol:tests.unit.test_task_contract_schema:add_unknown_root",
+      "kind": "function",
+      "name": "add_unknown_root",
+      "qualified_name": "tests.unit.test_task_contract_schema.add_unknown_root",
+      "path": "tests/unit/test_task_contract_schema.py",
+      "line": 66
+    },
+    {
+      "id": "symbol:tests.unit.test_task_contract_schema:set_bad_task_id",
+      "kind": "function",
+      "name": "set_bad_task_id",
+      "qualified_name": "tests.unit.test_task_contract_schema.set_bad_task_id",
+      "path": "tests/unit/test_task_contract_schema.py",
+      "line": 70
+    },
+    {
+      "id": "symbol:tests.unit.test_task_contract_schema:set_negative_budget",
+      "kind": "function",
+      "name": "set_negative_budget",
+      "qualified_name": "tests.unit.test_task_contract_schema.set_negative_budget",
+      "path": "tests/unit/test_task_contract_schema.py",
+      "line": 82
+    },
+    {
+      "id": "symbol:tests.unit.test_task_contract_schema:set_zero_tokens",
+      "kind": "function",
+      "name": "set_zero_tokens",
+      "qualified_name": "tests.unit.test_task_contract_schema.set_zero_tokens",
+      "path": "tests/unit/test_task_contract_schema.py",
+      "line": 74
+    },
+    {
+      "id": "symbol:tests.unit.test_task_contract_schema:test_invalid_task_contract",
+      "kind": "function",
+      "name": "test_invalid_task_contract",
+      "qualified_name": "tests.unit.test_task_contract_schema.test_invalid_task_contract",
+      "path": "tests/unit/test_task_contract_schema.py",
+      "line": 93
+    },
+    {
+      "id": "symbol:tests.unit.test_task_contract_schema:test_valid_task_contract",
+      "kind": "function",
+      "name": "test_valid_task_contract",
+      "qualified_name": "tests.unit.test_task_contract_schema.test_valid_task_contract",
+      "path": "tests/unit/test_task_contract_schema.py",
+      "line": 61
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_state_schema:mutate_confidence_1_1",
+      "kind": "function",
+      "name": "mutate_confidence_1_1",
+      "qualified_name": "tests.unit.test_thought_state_schema.mutate_confidence_1_1",
+      "path": "tests/unit/test_thought_state_schema.py",
+      "line": 85
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_state_schema:mutate_invalid_thought_id",
+      "kind": "function",
+      "name": "mutate_invalid_thought_id",
+      "qualified_name": "tests.unit.test_thought_state_schema.mutate_invalid_thought_id",
+      "path": "tests/unit/test_thought_state_schema.py",
+      "line": 81
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_state_schema:mutate_missing_required_interpretation_scope",
+      "kind": "function",
+      "name": "mutate_missing_required_interpretation_scope",
+      "qualified_name": "tests.unit.test_thought_state_schema.mutate_missing_required_interpretation_scope",
+      "path": "tests/unit/test_thought_state_schema.py",
+      "line": 89
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_state_schema:mutate_unknown_nested_metric",
+      "kind": "function",
+      "name": "mutate_unknown_nested_metric",
+      "qualified_name": "tests.unit.test_thought_state_schema.mutate_unknown_nested_metric",
+      "path": "tests/unit/test_thought_state_schema.py",
+      "line": 93
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_state_schema:mutate_unknown_root_key",
+      "kind": "function",
+      "name": "mutate_unknown_root_key",
+      "qualified_name": "tests.unit.test_thought_state_schema.mutate_unknown_root_key",
+      "path": "tests/unit/test_thought_state_schema.py",
+      "line": 77
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_state_schema:test_canonical_thought_state",
+      "kind": "function",
+      "name": "test_canonical_thought_state",
+      "qualified_name": "tests.unit.test_thought_state_schema.test_canonical_thought_state",
+      "path": "tests/unit/test_thought_state_schema.py",
+      "line": 72
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_state_schema:test_invalid_thought_state",
+      "kind": "function",
+      "name": "test_invalid_thought_state",
+      "qualified_name": "tests.unit.test_thought_state_schema.test_invalid_thought_state",
+      "path": "tests/unit/test_thought_state_schema.py",
+      "line": 104
+    }
+  ],
+  "edges": [
+    {
+      "source": "module:nps_core.codegraph.indexer",
+      "target": "symbol:nps_core.codegraph.indexer:_DefinitionVisitor",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.codegraph.indexer",
+      "target": "symbol:nps_core.codegraph.indexer:_DefinitionVisitor.__init__",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.codegraph.indexer",
+      "target": "symbol:nps_core.codegraph.indexer:_DefinitionVisitor._record",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.codegraph.indexer",
+      "target": "symbol:nps_core.codegraph.indexer:_DefinitionVisitor._visit_definition",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.codegraph.indexer",
+      "target": "symbol:nps_core.codegraph.indexer:_DefinitionVisitor.visit_AsyncFunctionDef",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.codegraph.indexer",
+      "target": "symbol:nps_core.codegraph.indexer:_DefinitionVisitor.visit_ClassDef",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.codegraph.indexer",
+      "target": "symbol:nps_core.codegraph.indexer:_DefinitionVisitor.visit_FunctionDef",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.codegraph.indexer",
+      "target": "symbol:nps_core.codegraph.indexer:_DefinitionVisitor.visit_Import",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.codegraph.indexer",
+      "target": "symbol:nps_core.codegraph.indexer:_DefinitionVisitor.visit_ImportFrom",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.codegraph.indexer",
+      "target": "symbol:nps_core.codegraph.indexer:_git_head",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.codegraph.indexer",
+      "target": "symbol:nps_core.codegraph.indexer:_index_python_file",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.codegraph.indexer",
+      "target": "symbol:nps_core.codegraph.indexer:_module_name",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.codegraph.indexer",
+      "target": "symbol:nps_core.codegraph.indexer:_resolved_root",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.codegraph.indexer",
+      "target": "symbol:nps_core.codegraph.indexer:_safe_output",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.codegraph.indexer",
+      "target": "symbol:nps_core.codegraph.indexer:build_codegraph",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.codegraph.indexer",
+      "target": "symbol:nps_core.codegraph.indexer:main",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.codegraph.indexer",
+      "target": "symbol:nps_core.codegraph.indexer:write_codegraph",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.codegraph.indexer",
+      "target": "symbol:nps_core.codegraph.indexer:write_markdown_reports",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.architecture.test_package_skeleton",
+      "target": "symbol:tests.architecture.test_package_skeleton:test_module_import",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.architecture.test_package_skeleton",
+      "target": "symbol:tests.architecture.test_package_skeleton:test_nps_core_all",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.integration.test_refresh_codegraph",
+      "target": "symbol:tests.integration.test_refresh_codegraph:test_refresh_codegraph",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_codegraph_build",
+      "target": "symbol:tests.unit.test_codegraph_build:codegraph",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_codegraph_build",
+      "target": "symbol:tests.unit.test_codegraph_build:test_build_codegraph_twice",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_codegraph_build",
+      "target": "symbol:tests.unit.test_codegraph_build:test_edges_sorted",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_codegraph_build",
+      "target": "symbol:tests.unit.test_codegraph_build:test_import_targets",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_codegraph_build",
+      "target": "symbol:tests.unit.test_codegraph_build:test_module_paths",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_codegraph_build",
+      "target": "symbol:tests.unit.test_codegraph_build:test_nested_symbol_edge",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_codegraph_build",
+      "target": "symbol:tests.unit.test_codegraph_build:test_node_ids",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_codegraph_build",
+      "target": "symbol:tests.unit.test_codegraph_build:write_module",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_codegraph_errors",
+      "target": "symbol:tests.unit.test_codegraph_errors:test_excluded_directories",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_codegraph_errors",
+      "target": "symbol:tests.unit.test_codegraph_errors:test_symlink_directory",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_codegraph_errors",
+      "target": "symbol:tests.unit.test_codegraph_errors:test_syntax_error",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_codegraph_writes",
+      "target": "symbol:tests.unit.test_codegraph_writes:test_write_codegraph",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_codegraph_writes",
+      "target": "symbol:tests.unit.test_codegraph_writes:test_write_markdown_reports",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_evidence_packet_schema",
+      "target": "symbol:tests.unit.test_evidence_packet_schema:add_unknown_field_inside_reproducibility",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_evidence_packet_schema",
+      "target": "symbol:tests.unit.test_evidence_packet_schema:add_unknown_root_key",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_evidence_packet_schema",
+      "target": "symbol:tests.unit.test_evidence_packet_schema:confidence_minus_0_1",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_evidence_packet_schema",
+      "target": "symbol:tests.unit.test_evidence_packet_schema:delete_reproducibility_seed",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_evidence_packet_schema",
+      "target": "symbol:tests.unit.test_evidence_packet_schema:set_evidence_id_to_bad",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_evidence_packet_schema",
+      "target": "symbol:tests.unit.test_evidence_packet_schema:test_invalid_mutations",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_evidence_packet_schema",
+      "target": "symbol:tests.unit.test_evidence_packet_schema:test_valid_canonical_instance",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_experiment_schema",
+      "target": "symbol:tests.unit.test_experiment_schema:add_unknown_key_to_outer_candidate",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_experiment_schema",
+      "target": "symbol:tests.unit.test_experiment_schema:set_bad_experiment_id",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_experiment_schema",
+      "target": "symbol:tests.unit.test_experiment_schema:set_cost_budget_with_negative_resource",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_experiment_schema",
+      "target": "symbol:tests.unit.test_experiment_schema:set_discriminating_outcomes_to_empty_dict",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_experiment_schema",
+      "target": "symbol:tests.unit.test_experiment_schema:set_expected_information_gain_1_1",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_experiment_schema",
+      "target": "symbol:tests.unit.test_experiment_schema:test_invalid_experiments",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_experiment_schema",
+      "target": "symbol:tests.unit.test_experiment_schema:test_valid_experiment",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_experiment_schema",
+      "target": "symbol:tests.unit.test_experiment_schema:valid_experiment",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_experiment_schema",
+      "target": "symbol:tests.unit.test_experiment_schema:validate_experiment",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_schemas",
+      "target": "symbol:tests.unit.test_schemas:test_schema_properties",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_schemas",
+      "target": "symbol:tests.unit.test_schemas:test_validate_schemas",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_task_contract_schema",
+      "target": "symbol:tests.unit.test_task_contract_schema:add_unknown_constraint",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_task_contract_schema",
+      "target": "symbol:tests.unit.test_task_contract_schema:add_unknown_root",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_task_contract_schema",
+      "target": "symbol:tests.unit.test_task_contract_schema:set_bad_task_id",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_task_contract_schema",
+      "target": "symbol:tests.unit.test_task_contract_schema:set_negative_budget",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_task_contract_schema",
+      "target": "symbol:tests.unit.test_task_contract_schema:set_zero_tokens",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_task_contract_schema",
+      "target": "symbol:tests.unit.test_task_contract_schema:test_invalid_task_contract",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_task_contract_schema",
+      "target": "symbol:tests.unit.test_task_contract_schema:test_valid_task_contract",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_state_schema",
+      "target": "symbol:tests.unit.test_thought_state_schema:mutate_confidence_1_1",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_state_schema",
+      "target": "symbol:tests.unit.test_thought_state_schema:mutate_invalid_thought_id",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_state_schema",
+      "target": "symbol:tests.unit.test_thought_state_schema:mutate_missing_required_interpretation_scope",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_state_schema",
+      "target": "symbol:tests.unit.test_thought_state_schema:mutate_unknown_nested_metric",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_state_schema",
+      "target": "symbol:tests.unit.test_thought_state_schema:mutate_unknown_root_key",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_state_schema",
+      "target": "symbol:tests.unit.test_thought_state_schema:test_canonical_thought_state",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_state_schema",
+      "target": "symbol:tests.unit.test_thought_state_schema:test_invalid_thought_state",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core",
+      "target": "import:importlib.metadata",
+      "kind": "imports"
+    },
+    {
+      "source": "module:nps_core.codegraph.indexer",
+      "target": "import:__future__",
+      "kind": "imports"
+    },
+    {
+      "source": "module:nps_core.codegraph.indexer",
+      "target": "import:argparse",
+      "kind": "imports"
+    },
+    {
+      "source": "module:nps_core.codegraph.indexer",
+      "target": "import:ast",
+      "kind": "imports"
+    },
+    {
+      "source": "module:nps_core.codegraph.indexer",
+      "target": "import:json",
+      "kind": "imports"
+    },
+    {
+      "source": "module:nps_core.codegraph.indexer",
+      "target": "import:os",
+      "kind": "imports"
+    },
+    {
+      "source": "module:nps_core.codegraph.indexer",
+      "target": "import:pathlib",
+      "kind": "imports"
+    },
+    {
+      "source": "module:nps_core.codegraph.indexer",
+      "target": "import:re",
+      "kind": "imports"
+    },
+    {
+      "source": "module:nps_core.codegraph.indexer",
+      "target": "import:subprocess",
+      "kind": "imports"
+    },
+    {
+      "source": "module:nps_core.codegraph.indexer",
+      "target": "import:typing",
+      "kind": "imports"
+    },
+    {
+      "source": "module:scripts.refresh_codegraph",
+      "target": "import:nps_core.codegraph.indexer",
+      "kind": "imports"
+    },
+    {
+      "source": "module:scripts.refresh_codegraph",
+      "target": "import:pathlib",
+      "kind": "imports"
+    },
+    {
+      "source": "module:scripts.refresh_codegraph",
+      "target": "import:sys",
+      "kind": "imports"
+    },
+    {
+      "source": "module:tests.architecture.test_package_skeleton",
+      "target": "import:importlib",
+      "kind": "imports"
+    },
+    {
+      "source": "module:tests.architecture.test_package_skeleton",
+      "target": "import:nps_core",
+      "kind": "imports"
+    },
+    {
+      "source": "module:tests.architecture.test_package_skeleton",
+      "target": "import:pytest",
+      "kind": "imports"
+    },
+    {
+      "source": "module:tests.integration.test_refresh_codegraph",
+      "target": "import:json",
+      "kind": "imports"
+    },
+    {
+      "source": "module:tests.integration.test_refresh_codegraph",
+      "target": "import:pathlib",
+      "kind": "imports"
+    },
+    {
+      "source": "module:tests.integration.test_refresh_codegraph",
+      "target": "import:pytest",
+      "kind": "imports"
+    },
+    {
+      "source": "module:tests.integration.test_refresh_codegraph",
+      "target": "import:shutil",
+      "kind": "imports"
+    },
+    {
+      "source": "module:tests.integration.test_refresh_codegraph",
+      "target": "import:subprocess",
+      "kind": "imports"
+    },
+    {
+      "source": "module:tests.integration.test_refresh_codegraph",
+      "target": "import:sys",
+      "kind": "imports"
+    },
+    {
+      "source": "module:tests.unit.test_codegraph_build",
+      "target": "import:nps_core.codegraph",
+      "kind": "imports"
+    },
+    {
+      "source": "module:tests.unit.test_codegraph_build",
+      "target": "import:nps_core.codegraph.indexer",
+      "kind": "imports"
+    },
+    {
+      "source": "module:tests.unit.test_codegraph_build",
+      "target": "import:pathlib",
+      "kind": "imports"
+    },
+    {
+      "source": "module:tests.unit.test_codegraph_build",
+      "target": "import:pytest",
+      "kind": "imports"
+    },
+    {
+      "source": "module:tests.unit.test_codegraph_errors",
+      "target": "import:nps_core.codegraph.indexer",
+      "kind": "imports"
+    },
+    {
+      "source": "module:tests.unit.test_codegraph_errors",
+      "target": "import:pytest",
+      "kind": "imports"
+    },
+    {
+      "source": "module:tests.unit.test_codegraph_writes",
+      "target": "import:json",
+      "kind": "imports"
+    },
+    {
+      "source": "module:tests.unit.test_codegraph_writes",
+      "target": "import:nps_core.codegraph.indexer",
+      "kind": "imports"
+    },
+    {
+      "source": "module:tests.unit.test_codegraph_writes",
+      "target": "import:pathlib",
+      "kind": "imports"
+    },
+    {
+      "source": "module:tests.unit.test_codegraph_writes",
+      "target": "import:pytest",
+      "kind": "imports"
+    },
+    {
+      "source": "module:tests.unit.test_evidence_packet_schema",
+      "target": "import:copy",
+      "kind": "imports"
+    },
+    {
+      "source": "module:tests.unit.test_evidence_packet_schema",
+      "target": "import:json",
+      "kind": "imports"
+    },
+    {
+      "source": "module:tests.unit.test_evidence_packet_schema",
+      "target": "import:jsonschema",
+      "kind": "imports"
+    },
+    {
+      "source": "module:tests.unit.test_evidence_packet_schema",
+      "target": "import:jsonschema.exceptions",
+      "kind": "imports"
+    },
+    {
+      "source": "module:tests.unit.test_evidence_packet_schema",
+      "target": "import:pathlib",
+      "kind": "imports"
+    },
+    {
+      "source": "module:tests.unit.test_evidence_packet_schema",
+      "target": "import:pytest",
+      "kind": "imports"
+    },
+    {
+      "source": "module:tests.unit.test_experiment_schema",
+      "target": "import:copy",
+      "kind": "imports"
+    },
+    {
+      "source": "module:tests.unit.test_experiment_schema",
+      "target": "import:json",
+      "kind": "imports"
+    },
+    {
+      "source": "module:tests.unit.test_experiment_schema",
+      "target": "import:jsonschema",
+      "kind": "imports"
+    },
+    {
+      "source": "module:tests.unit.test_experiment_schema",
+      "target": "import:jsonschema.exceptions",
+      "kind": "imports"
+    },
+    {
+      "source": "module:tests.unit.test_experiment_schema",
+      "target": "import:pathlib",
+      "kind": "imports"
+    },
+    {
+      "source": "module:tests.unit.test_experiment_schema",
+      "target": "import:pytest",
+      "kind": "imports"
+    },
+    {
+      "source": "module:tests.unit.test_schemas",
+      "target": "import:json",
+      "kind": "imports"
+    },
+    {
+      "source": "module:tests.unit.test_schemas",
+      "target": "import:jsonschema.validators",
+      "kind": "imports"
+    },
+    {
+      "source": "module:tests.unit.test_schemas",
+      "target": "import:pathlib",
+      "kind": "imports"
+    },
+    {
+      "source": "module:tests.unit.test_schemas",
+      "target": "import:pytest",
+      "kind": "imports"
+    },
+    {
+      "source": "module:tests.unit.test_task_contract_schema",
+      "target": "import:copy",
+      "kind": "imports"
+    },
+    {
+      "source": "module:tests.unit.test_task_contract_schema",
+      "target": "import:json",
+      "kind": "imports"
+    },
+    {
+      "source": "module:tests.unit.test_task_contract_schema",
+      "target": "import:jsonschema",
+      "kind": "imports"
+    },
+    {
+      "source": "module:tests.unit.test_task_contract_schema",
+      "target": "import:pathlib",
+      "kind": "imports"
+    },
+    {
+      "source": "module:tests.unit.test_task_contract_schema",
+      "target": "import:pytest",
+      "kind": "imports"
+    },
+    {
+      "source": "module:tests.unit.test_thought_state_schema",
+      "target": "import:copy",
+      "kind": "imports"
+    },
+    {
+      "source": "module:tests.unit.test_thought_state_schema",
+      "target": "import:json",
+      "kind": "imports"
+    },
+    {
+      "source": "module:tests.unit.test_thought_state_schema",
+      "target": "import:jsonschema",
+      "kind": "imports"
+    },
+    {
+      "source": "module:tests.unit.test_thought_state_schema",
+      "target": "import:pathlib",
+      "kind": "imports"
+    },
+    {
+      "source": "module:tests.unit.test_thought_state_schema",
+      "target": "import:pytest",
+      "kind": "imports"
+    }
+  ],
+  "errors": []
 }

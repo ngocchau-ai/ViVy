@@ -1,0 +1,41 @@
+{
+  "evidence_id": "EV-TASK-002-LIFECYCLE",
+  "task_id": "TASK-002",
+  "executor_id": "mimo-v2.5-pro-isolated-roles",
+  "claim": "TASK-002 implements a deterministic immutable ThoughtState lifecycle core that satisfies its contract.",
+  "result": "259 tests passed, one inherited Windows symlink test skipped, Ruff and compileall passed, final reviewer APPROVED, and the 100-thought benchmark completed in at most 0.007745 seconds.",
+  "method": "MiMo coder/tester/reviewer role isolation followed by schema tests, unit and integration replay tests, static import validation, lint, compilation, benchmark, and Codex contract audit.",
+  "artifacts": [
+    "src/nps_core/hypothesis_population",
+    "tests/unit/test_thought_state_model.py",
+    "tests/unit/test_thought_lifecycle.py",
+    "tests/integration/test_thought_lifecycle_end_to_end.py",
+    "memory/05-evidence/TASK-002/test-report.md",
+    "memory/05-evidence/TASK-002/review-report.md"
+  ],
+  "confidence": 0.99,
+  "limitations": [
+    "Coder, tester, and reviewer use the same MiMo model family under isolated sessions.",
+    "One pre-existing Windows symlink test is skipped because the operating system denies symlink creation."
+  ],
+  "failure_modes": [
+    "Future changes can stale codegraph metadata unless the post-commit refresh gate is repeated.",
+    "Future population scales may require caching the lineage index despite the current budget passing."
+  ],
+  "reproducibility": {
+    "command": ".venv\\Scripts\\python.exe -m pytest -o addopts=\"\" -ra && .venv\\Scripts\\ruff.exe check .",
+    "environment": "Windows PowerShell; Python 3.12.13; pytest 9.1.1; nps-core workspace",
+    "seed": null
+  },
+  "affected_hypotheses": [
+    "TASK-002 deterministic ThoughtState lifecycle acceptance claim"
+  ],
+  "provenance": [
+    "User-authorized direct MiMo API execution after Hermes MCP was unavailable.",
+    "MiMo coder-authored production implementation.",
+    "MiMo tester-authored executable unit and integration tests.",
+    "Fresh MiMo reviewer verdict: APPROVED.",
+    "Codex-observed machine validation and contract audit."
+  ],
+  "content_hash": "sha256:de9e08543819afd3c23140108aee65bf5cfe1c04dd29d21651a1595666b25b56"
+}
