@@ -2,51 +2,44 @@
 
 ## Completed
 
-- Architecture V1 Final đã được tạo.
-- Memory tree đã được đóng gói.
-- Codex/local boundary đã được chốt.
-- Raw context đã được giữ trong `raw/`.
-- TASK-001 Foundation Freeze đã hoàn tất.
-- Python 3.11+ src-layout skeleton và bốn V1 JSON Schema đã được khóa.
-- Minimal AST codegraph indexer và refresh CLI đã được kiểm thử.
-- Local tester ghi nhận 57 passed, 1 Windows symlink skip; Ruff pass.
-- Local reviewer APPROVED WITH LIMITATIONS, không có actionable finding.
-- TASK-002 Deterministic ThoughtState Lifecycle Core đã hoàn tất implementation
-  và machine validation bằng các phiên MiMo coder/tester/reviewer tách biệt.
-- Immutable ThoughtState, lineage, canonical snapshot/audit và
-  create/branch/merge/prune đã chạy end-to-end.
-- Final MiMo reviewer: APPROVED, không còn actionable finding.
-- Full regression: 259 passed, 1 inherited Windows symlink skip; Ruff và
-  compileall pass; benchmark 100 thoughts tối đa 0.007745 giây.
+- TASK-001 Foundation Freeze.
+- TASK-002 deterministic ThoughtState lifecycle.
+- TASK-003 strict evidence assimilation and atomic multi-ThoughtState update.
+- 493-test regression gate: 492 passed, one inherited Windows symlink skip.
+- Ruff, compileall, deterministic replay, schema compatibility, atomic failure,
+  and exact digest checks pass.
+- MiMo production and test reviews are APPROVED after remediation.
 
 ## Current repository state
 
-Repository có Git baseline, production foundation skeleton, executable schemas,
-deterministic ThoughtState lifecycle core, expanded test suite, dependency lock
-và codegraph được refresh theo final HEAD.
+The repository now has the Stage-1 lifecycle and evidence-update slices. One
+EvidencePacket can target multiple active thoughts with caller-supplied impact
+classifications and complete replacements. The runtime revalidates plans
+against the exact snapshot, applies all replacements together, preserves
+lifecycle history, and emits a deterministic standalone EvidenceUpdateRecord.
 
 ## Open risks
 
-- TASK-002 coder, tester và reviewer dùng cùng backbone `mimo-v2.5-pro`;
-  role/session tách biệt nhưng independence thấp.
-- Test symlink-directory skip trên Windows vì hệ điều hành từ chối tạo
-  symlink; ordinary exclusion paths vẫn được kiểm thử.
-- Codegraph generated files phải được refresh sau mỗi final commit để giữ
-  `codegraph_commit == HEAD`.
+- Coder, tester, and reviewer use the same MiMo model family under separate
+  sessions; model-family independence remains low.
+- The inherited Windows symlink test remains skipped because the OS denies
+  symlink creation; ordinary exclusion behavior remains tested.
+- Stage 1 is not complete: Thought Ecology, ExperimentContract/`N_v`, executor
+  accounting/`N_e`, and the integrated Stage-1 benchmark remain.
+- Generated codegraph files must be refreshed after every final commit so their
+  metadata equals exact Git HEAD.
 
 ## Next exact action
 
-Tạo TaskContract tiếp theo cho Stage 1, ưu tiên EvidencePacket assimilation
-hoặc Thought Ecology store theo architecture; không gộp cả hai vào một task và
-không mở rộng sang training hoặc autonomous runtime.
+Execute TASK-004: deterministic Thought Ecology graph store and graph
+invariants. Do not combine it with ExperimentContract, Adaptive N, tribunal, or
+training work.
 
-## Required context for next session
+## Required context
 
-- `memory/00-identity/*`
-- `memory/02-decisions/*`
-- `memory/03-codegraph/codegraph-summary.md`
-- `memory/04-tasks/TASK-001.md`
-- `memory/04-tasks/TASK-002.md`
-- `memory/05-evidence/TASK-001/*`
-- `memory/05-evidence/TASK-002/*`
-- phần Giai đoạn 1 trong `ARCHITECTURE.md`
+- `ARCHITECTURE.md`, Stage 1.
+- `memory/02-decisions/ADR-0005-deterministic-thought-lifecycle.md`.
+- `memory/02-decisions/ADR-0006-evidence-assimilation-state-update.md`.
+- `memory/04-tasks/PROJECT-COMPLETION-MATRIX.md`.
+- `memory/05-evidence/TASK-002/` and `memory/05-evidence/TASK-003/`.
+- `memory/03-codegraph/codegraph-summary.md`.

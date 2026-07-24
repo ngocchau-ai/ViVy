@@ -1,8 +1,8 @@
 {
   "schema_version": "0.1",
   "status": "FRESH",
-  "repository_head": "927c243e53371c80a4c3ac568270e4b4a5900174",
-  "codegraph_commit": "927c243e53371c80a4c3ac568270e4b4a5900174",
+  "repository_head": "2370643530b9b322b2e0ad349dd2645b1ad35a94",
+  "codegraph_commit": "2370643530b9b322b2e0ad349dd2645b1ad35a94",
   "nodes": [
     {
       "id": "module:nps_core",
@@ -74,6 +74,46 @@
       "name": "hypothesis_population",
       "qualified_name": "nps_core.hypothesis_population",
       "path": "src/nps_core/hypothesis_population/__init__.py",
+      "line": 1
+    },
+    {
+      "id": "module:nps_core.hypothesis_population.errors",
+      "kind": "module",
+      "name": "errors",
+      "qualified_name": "nps_core.hypothesis_population.errors",
+      "path": "src/nps_core/hypothesis_population/errors.py",
+      "line": 1
+    },
+    {
+      "id": "module:nps_core.hypothesis_population.lifecycle",
+      "kind": "module",
+      "name": "lifecycle",
+      "qualified_name": "nps_core.hypothesis_population.lifecycle",
+      "path": "src/nps_core/hypothesis_population/lifecycle.py",
+      "line": 1
+    },
+    {
+      "id": "module:nps_core.hypothesis_population.lineage",
+      "kind": "module",
+      "name": "lineage",
+      "qualified_name": "nps_core.hypothesis_population.lineage",
+      "path": "src/nps_core/hypothesis_population/lineage.py",
+      "line": 1
+    },
+    {
+      "id": "module:nps_core.hypothesis_population.serialization",
+      "kind": "module",
+      "name": "serialization",
+      "qualified_name": "nps_core.hypothesis_population.serialization",
+      "path": "src/nps_core/hypothesis_population/serialization.py",
+      "line": 1
+    },
+    {
+      "id": "module:nps_core.hypothesis_population.thought_state",
+      "kind": "module",
+      "name": "thought_state",
+      "qualified_name": "nps_core.hypothesis_population.thought_state",
+      "path": "src/nps_core/hypothesis_population/thought_state.py",
       "line": 1
     },
     {
@@ -149,6 +189,14 @@
       "line": 1
     },
     {
+      "id": "module:tests.integration.test_thought_lifecycle_end_to_end",
+      "kind": "module",
+      "name": "test_thought_lifecycle_end_to_end",
+      "qualified_name": "tests.integration.test_thought_lifecycle_end_to_end",
+      "path": "tests/integration/test_thought_lifecycle_end_to_end.py",
+      "line": 1
+    },
+    {
       "id": "module:tests.unit.test_codegraph_build",
       "kind": "module",
       "name": "test_codegraph_build",
@@ -202,6 +250,22 @@
       "name": "test_task_contract_schema",
       "qualified_name": "tests.unit.test_task_contract_schema",
       "path": "tests/unit/test_task_contract_schema.py",
+      "line": 1
+    },
+    {
+      "id": "module:tests.unit.test_thought_lifecycle",
+      "kind": "module",
+      "name": "test_thought_lifecycle",
+      "qualified_name": "tests.unit.test_thought_lifecycle",
+      "path": "tests/unit/test_thought_lifecycle.py",
+      "line": 1
+    },
+    {
+      "id": "module:tests.unit.test_thought_state_model",
+      "kind": "module",
+      "name": "test_thought_state_model",
+      "qualified_name": "tests.unit.test_thought_state_model",
+      "path": "tests/unit/test_thought_state_model.py",
       "line": 1
     },
     {
@@ -357,6 +421,790 @@
       "line": 199
     },
     {
+      "id": "symbol:nps_core.hypothesis_population.errors:CycleDetectedError",
+      "kind": "class",
+      "name": "CycleDetectedError",
+      "qualified_name": "nps_core.hypothesis_population.errors.CycleDetectedError",
+      "path": "src/nps_core/hypothesis_population/errors.py",
+      "line": 60
+    },
+    {
+      "id": "symbol:nps_core.hypothesis_population.errors:DuplicateEventError",
+      "kind": "class",
+      "name": "DuplicateEventError",
+      "qualified_name": "nps_core.hypothesis_population.errors.DuplicateEventError",
+      "path": "src/nps_core/hypothesis_population/errors.py",
+      "line": 80
+    },
+    {
+      "id": "symbol:nps_core.hypothesis_population.errors:DuplicateIdError",
+      "kind": "class",
+      "name": "DuplicateIdError",
+      "qualified_name": "nps_core.hypothesis_population.errors.DuplicateIdError",
+      "path": "src/nps_core/hypothesis_population/errors.py",
+      "line": 48
+    },
+    {
+      "id": "symbol:nps_core.hypothesis_population.errors:InvalidDispositionError",
+      "kind": "class",
+      "name": "InvalidDispositionError",
+      "qualified_name": "nps_core.hypothesis_population.errors.InvalidDispositionError",
+      "path": "src/nps_core/hypothesis_population/errors.py",
+      "line": 68
+    },
+    {
+      "id": "symbol:nps_core.hypothesis_population.errors:InvalidTransitionError",
+      "kind": "class",
+      "name": "InvalidTransitionError",
+      "qualified_name": "nps_core.hypothesis_population.errors.InvalidTransitionError",
+      "path": "src/nps_core/hypothesis_population/errors.py",
+      "line": 64
+    },
+    {
+      "id": "symbol:nps_core.hypothesis_population.errors:MergeSourceError",
+      "kind": "class",
+      "name": "MergeSourceError",
+      "qualified_name": "nps_core.hypothesis_population.errors.MergeSourceError",
+      "path": "src/nps_core/hypothesis_population/errors.py",
+      "line": 76
+    },
+    {
+      "id": "symbol:nps_core.hypothesis_population.errors:SelfReferenceError",
+      "kind": "class",
+      "name": "SelfReferenceError",
+      "qualified_name": "nps_core.hypothesis_population.errors.SelfReferenceError",
+      "path": "src/nps_core/hypothesis_population/errors.py",
+      "line": 56
+    },
+    {
+      "id": "symbol:nps_core.hypothesis_population.errors:TerminalStateError",
+      "kind": "class",
+      "name": "TerminalStateError",
+      "qualified_name": "nps_core.hypothesis_population.errors.TerminalStateError",
+      "path": "src/nps_core/hypothesis_population/errors.py",
+      "line": 72
+    },
+    {
+      "id": "symbol:nps_core.hypothesis_population.errors:ThoughtStateError",
+      "kind": "class",
+      "name": "ThoughtStateError",
+      "qualified_name": "nps_core.hypothesis_population.errors.ThoughtStateError",
+      "path": "src/nps_core/hypothesis_population/errors.py",
+      "line": 23
+    },
+    {
+      "id": "symbol:nps_core.hypothesis_population.errors:ThoughtStateError.__init__",
+      "kind": "function",
+      "name": "__init__",
+      "qualified_name": "nps_core.hypothesis_population.errors.ThoughtStateError.__init__",
+      "path": "src/nps_core/hypothesis_population/errors.py",
+      "line": 26
+    },
+    {
+      "id": "symbol:nps_core.hypothesis_population.errors:UnknownReferenceError",
+      "kind": "class",
+      "name": "UnknownReferenceError",
+      "qualified_name": "nps_core.hypothesis_population.errors.UnknownReferenceError",
+      "path": "src/nps_core/hypothesis_population/errors.py",
+      "line": 52
+    },
+    {
+      "id": "symbol:nps_core.hypothesis_population.errors:ValidationError",
+      "kind": "class",
+      "name": "ValidationError",
+      "qualified_name": "nps_core.hypothesis_population.errors.ValidationError",
+      "path": "src/nps_core/hypothesis_population/errors.py",
+      "line": 44
+    },
+    {
+      "id": "symbol:nps_core.hypothesis_population.lifecycle:PopulationSnapshot",
+      "kind": "class",
+      "name": "PopulationSnapshot",
+      "qualified_name": "nps_core.hypothesis_population.lifecycle.PopulationSnapshot",
+      "path": "src/nps_core/hypothesis_population/lifecycle.py",
+      "line": 273
+    },
+    {
+      "id": "symbol:nps_core.hypothesis_population.lifecycle:PopulationSnapshot.__post_init__",
+      "kind": "function",
+      "name": "__post_init__",
+      "qualified_name": "nps_core.hypothesis_population.lifecycle.PopulationSnapshot.__post_init__",
+      "path": "src/nps_core/hypothesis_population/lifecycle.py",
+      "line": 277
+    },
+    {
+      "id": "symbol:nps_core.hypothesis_population.lifecycle:PopulationSnapshot.contains",
+      "kind": "function",
+      "name": "contains",
+      "qualified_name": "nps_core.hypothesis_population.lifecycle.PopulationSnapshot.contains",
+      "path": "src/nps_core/hypothesis_population/lifecycle.py",
+      "line": 333
+    },
+    {
+      "id": "symbol:nps_core.hypothesis_population.lifecycle:PopulationSnapshot.empty",
+      "kind": "function",
+      "name": "empty",
+      "qualified_name": "nps_core.hypothesis_population.lifecycle.PopulationSnapshot.empty",
+      "path": "src/nps_core/hypothesis_population/lifecycle.py",
+      "line": 324
+    },
+    {
+      "id": "symbol:nps_core.hypothesis_population.lifecycle:PopulationSnapshot.from_canonical_json",
+      "kind": "function",
+      "name": "from_canonical_json",
+      "qualified_name": "nps_core.hypothesis_population.lifecycle.PopulationSnapshot.from_canonical_json",
+      "path": "src/nps_core/hypothesis_population/lifecycle.py",
+      "line": 383
+    },
+    {
+      "id": "symbol:nps_core.hypothesis_population.lifecycle:PopulationSnapshot.from_dict",
+      "kind": "function",
+      "name": "from_dict",
+      "qualified_name": "nps_core.hypothesis_population.lifecycle.PopulationSnapshot.from_dict",
+      "path": "src/nps_core/hypothesis_population/lifecycle.py",
+      "line": 349
+    },
+    {
+      "id": "symbol:nps_core.hypothesis_population.lifecycle:PopulationSnapshot.get",
+      "kind": "function",
+      "name": "get",
+      "qualified_name": "nps_core.hypothesis_population.lifecycle.PopulationSnapshot.get",
+      "path": "src/nps_core/hypothesis_population/lifecycle.py",
+      "line": 327
+    },
+    {
+      "id": "symbol:nps_core.hypothesis_population.lifecycle:PopulationSnapshot.lineage",
+      "kind": "function",
+      "name": "lineage",
+      "qualified_name": "nps_core.hypothesis_population.lifecycle.PopulationSnapshot.lineage",
+      "path": "src/nps_core/hypothesis_population/lifecycle.py",
+      "line": 337
+    },
+    {
+      "id": "symbol:nps_core.hypothesis_population.lifecycle:PopulationSnapshot.to_canonical_json",
+      "kind": "function",
+      "name": "to_canonical_json",
+      "qualified_name": "nps_core.hypothesis_population.lifecycle.PopulationSnapshot.to_canonical_json",
+      "path": "src/nps_core/hypothesis_population/lifecycle.py",
+      "line": 373
+    },
+    {
+      "id": "symbol:nps_core.hypothesis_population.lifecycle:PopulationSnapshot.to_dict",
+      "kind": "function",
+      "name": "to_dict",
+      "qualified_name": "nps_core.hypothesis_population.lifecycle.PopulationSnapshot.to_dict",
+      "path": "src/nps_core/hypothesis_population/lifecycle.py",
+      "line": 342
+    },
+    {
+      "id": "symbol:nps_core.hypothesis_population.lifecycle:TransitionEvent",
+      "kind": "class",
+      "name": "TransitionEvent",
+      "qualified_name": "nps_core.hypothesis_population.lifecycle.TransitionEvent",
+      "path": "src/nps_core/hypothesis_population/lifecycle.py",
+      "line": 193
+    },
+    {
+      "id": "symbol:nps_core.hypothesis_population.lifecycle:TransitionEvent.__post_init__",
+      "kind": "function",
+      "name": "__post_init__",
+      "qualified_name": "nps_core.hypothesis_population.lifecycle.TransitionEvent.__post_init__",
+      "path": "src/nps_core/hypothesis_population/lifecycle.py",
+      "line": 203
+    },
+    {
+      "id": "symbol:nps_core.hypothesis_population.lifecycle:TransitionEvent.from_dict",
+      "kind": "function",
+      "name": "from_dict",
+      "qualified_name": "nps_core.hypothesis_population.lifecycle.TransitionEvent.from_dict",
+      "path": "src/nps_core/hypothesis_population/lifecycle.py",
+      "line": 234
+    },
+    {
+      "id": "symbol:nps_core.hypothesis_population.lifecycle:TransitionEvent.to_dict",
+      "kind": "function",
+      "name": "to_dict",
+      "qualified_name": "nps_core.hypothesis_population.lifecycle.TransitionEvent.to_dict",
+      "path": "src/nps_core/hypothesis_population/lifecycle.py",
+      "line": 218
+    },
+    {
+      "id": "symbol:nps_core.hypothesis_population.lifecycle:_is_active",
+      "kind": "function",
+      "name": "_is_active",
+      "qualified_name": "nps_core.hypothesis_population.lifecycle._is_active",
+      "path": "src/nps_core/hypothesis_population/lifecycle.py",
+      "line": 145
+    },
+    {
+      "id": "symbol:nps_core.hypothesis_population.lifecycle:_is_terminal",
+      "kind": "function",
+      "name": "_is_terminal",
+      "qualified_name": "nps_core.hypothesis_population.lifecycle._is_terminal",
+      "path": "src/nps_core/hypothesis_population/lifecycle.py",
+      "line": 141
+    },
+    {
+      "id": "symbol:nps_core.hypothesis_population.lifecycle:_validate_actor",
+      "kind": "function",
+      "name": "_validate_actor",
+      "qualified_name": "nps_core.hypothesis_population.lifecycle._validate_actor",
+      "path": "src/nps_core/hypothesis_population/lifecycle.py",
+      "line": 110
+    },
+    {
+      "id": "symbol:nps_core.hypothesis_population.lifecycle:_validate_disposition",
+      "kind": "function",
+      "name": "_validate_disposition",
+      "qualified_name": "nps_core.hypothesis_population.lifecycle._validate_disposition",
+      "path": "src/nps_core/hypothesis_population/lifecycle.py",
+      "line": 126
+    },
+    {
+      "id": "symbol:nps_core.hypothesis_population.lifecycle:_validate_event_id",
+      "kind": "function",
+      "name": "_validate_event_id",
+      "qualified_name": "nps_core.hypothesis_population.lifecycle._validate_event_id",
+      "path": "src/nps_core/hypothesis_population/lifecycle.py",
+      "line": 106
+    },
+    {
+      "id": "symbol:nps_core.hypothesis_population.lifecycle:_validate_id_tuple",
+      "kind": "function",
+      "name": "_validate_id_tuple",
+      "qualified_name": "nps_core.hypothesis_population.lifecycle._validate_id_tuple",
+      "path": "src/nps_core/hypothesis_population/lifecycle.py",
+      "line": 94
+    },
+    {
+      "id": "symbol:nps_core.hypothesis_population.lifecycle:_validate_non_empty_str",
+      "kind": "function",
+      "name": "_validate_non_empty_str",
+      "qualified_name": "nps_core.hypothesis_population.lifecycle._validate_non_empty_str",
+      "path": "src/nps_core/hypothesis_population/lifecycle.py",
+      "line": 45
+    },
+    {
+      "id": "symbol:nps_core.hypothesis_population.lifecycle:_validate_operation",
+      "kind": "function",
+      "name": "_validate_operation",
+      "qualified_name": "nps_core.hypothesis_population.lifecycle._validate_operation",
+      "path": "src/nps_core/hypothesis_population/lifecycle.py",
+      "line": 84
+    },
+    {
+      "id": "symbol:nps_core.hypothesis_population.lifecycle:_validate_operation_shape",
+      "kind": "function",
+      "name": "_validate_operation_shape",
+      "qualified_name": "nps_core.hypothesis_population.lifecycle._validate_operation_shape",
+      "path": "src/nps_core/hypothesis_population/lifecycle.py",
+      "line": 149
+    },
+    {
+      "id": "symbol:nps_core.hypothesis_population.lifecycle:_validate_reason",
+      "kind": "function",
+      "name": "_validate_reason",
+      "qualified_name": "nps_core.hypothesis_population.lifecycle._validate_reason",
+      "path": "src/nps_core/hypothesis_population/lifecycle.py",
+      "line": 114
+    },
+    {
+      "id": "symbol:nps_core.hypothesis_population.lifecycle:_validate_thought_id",
+      "kind": "function",
+      "name": "_validate_thought_id",
+      "qualified_name": "nps_core.hypothesis_population.lifecycle._validate_thought_id",
+      "path": "src/nps_core/hypothesis_population/lifecycle.py",
+      "line": 53
+    },
+    {
+      "id": "symbol:nps_core.hypothesis_population.lifecycle:_validate_timestamp",
+      "kind": "function",
+      "name": "_validate_timestamp",
+      "qualified_name": "nps_core.hypothesis_population.lifecycle._validate_timestamp",
+      "path": "src/nps_core/hypothesis_population/lifecycle.py",
+      "line": 62
+    },
+    {
+      "id": "symbol:nps_core.hypothesis_population.lifecycle:branch",
+      "kind": "function",
+      "name": "branch",
+      "qualified_name": "nps_core.hypothesis_population.lifecycle.branch",
+      "path": "src/nps_core/hypothesis_population/lifecycle.py",
+      "line": 436
+    },
+    {
+      "id": "symbol:nps_core.hypothesis_population.lifecycle:create",
+      "kind": "function",
+      "name": "create",
+      "qualified_name": "nps_core.hypothesis_population.lifecycle.create",
+      "path": "src/nps_core/hypothesis_population/lifecycle.py",
+      "line": 395
+    },
+    {
+      "id": "symbol:nps_core.hypothesis_population.lifecycle:merge",
+      "kind": "function",
+      "name": "merge",
+      "qualified_name": "nps_core.hypothesis_population.lifecycle.merge",
+      "path": "src/nps_core/hypothesis_population/lifecycle.py",
+      "line": 489
+    },
+    {
+      "id": "symbol:nps_core.hypothesis_population.lifecycle:prune",
+      "kind": "function",
+      "name": "prune",
+      "qualified_name": "nps_core.hypothesis_population.lifecycle.prune",
+      "path": "src/nps_core/hypothesis_population/lifecycle.py",
+      "line": 576
+    },
+    {
+      "id": "symbol:nps_core.hypothesis_population.lineage:LineageIndex",
+      "kind": "class",
+      "name": "LineageIndex",
+      "qualified_name": "nps_core.hypothesis_population.lineage.LineageIndex",
+      "path": "src/nps_core/hypothesis_population/lineage.py",
+      "line": 70
+    },
+    {
+      "id": "symbol:nps_core.hypothesis_population.lineage:LineageIndex.add",
+      "kind": "function",
+      "name": "add",
+      "qualified_name": "nps_core.hypothesis_population.lineage.LineageIndex.add",
+      "path": "src/nps_core/hypothesis_population/lineage.py",
+      "line": 195
+    },
+    {
+      "id": "symbol:nps_core.hypothesis_population.lineage:LineageIndex.children_of",
+      "kind": "function",
+      "name": "children_of",
+      "qualified_name": "nps_core.hypothesis_population.lineage.LineageIndex.children_of",
+      "path": "src/nps_core/hypothesis_population/lineage.py",
+      "line": 275
+    },
+    {
+      "id": "symbol:nps_core.hypothesis_population.lineage:LineageIndex.contains",
+      "kind": "function",
+      "name": "contains",
+      "qualified_name": "nps_core.hypothesis_population.lineage.LineageIndex.contains",
+      "path": "src/nps_core/hypothesis_population/lineage.py",
+      "line": 257
+    },
+    {
+      "id": "symbol:nps_core.hypothesis_population.lineage:LineageIndex.empty",
+      "kind": "function",
+      "name": "empty",
+      "qualified_name": "nps_core.hypothesis_population.lineage.LineageIndex.empty",
+      "path": "src/nps_core/hypothesis_population/lineage.py",
+      "line": 92
+    },
+    {
+      "id": "symbol:nps_core.hypothesis_population.lineage:LineageIndex.from_states",
+      "kind": "function",
+      "name": "from_states",
+      "qualified_name": "nps_core.hypothesis_population.lineage.LineageIndex.from_states",
+      "path": "src/nps_core/hypothesis_population/lineage.py",
+      "line": 97
+    },
+    {
+      "id": "symbol:nps_core.hypothesis_population.lineage:LineageIndex.ids",
+      "kind": "function",
+      "name": "ids",
+      "qualified_name": "nps_core.hypothesis_population.lineage.LineageIndex.ids",
+      "path": "src/nps_core/hypothesis_population/lineage.py",
+      "line": 289
+    },
+    {
+      "id": "symbol:nps_core.hypothesis_population.lineage:LineageIndex.parents_of",
+      "kind": "function",
+      "name": "parents_of",
+      "qualified_name": "nps_core.hypothesis_population.lineage.LineageIndex.parents_of",
+      "path": "src/nps_core/hypothesis_population/lineage.py",
+      "line": 261
+    },
+    {
+      "id": "symbol:nps_core.hypothesis_population.lineage:LineageIndex.to_dict",
+      "kind": "function",
+      "name": "to_dict",
+      "qualified_name": "nps_core.hypothesis_population.lineage.LineageIndex.to_dict",
+      "path": "src/nps_core/hypothesis_population/lineage.py",
+      "line": 293
+    },
+    {
+      "id": "symbol:nps_core.hypothesis_population.lineage:_detect_cycle",
+      "kind": "function",
+      "name": "_detect_cycle",
+      "qualified_name": "nps_core.hypothesis_population.lineage._detect_cycle",
+      "path": "src/nps_core/hypothesis_population/lineage.py",
+      "line": 36
+    },
+    {
+      "id": "symbol:nps_core.hypothesis_population.lineage:_validate_state",
+      "kind": "function",
+      "name": "_validate_state",
+      "qualified_name": "nps_core.hypothesis_population.lineage._validate_state",
+      "path": "src/nps_core/hypothesis_population/lineage.py",
+      "line": 27
+    },
+    {
+      "id": "symbol:nps_core.hypothesis_population.serialization:canonical_json",
+      "kind": "function",
+      "name": "canonical_json",
+      "qualified_name": "nps_core.hypothesis_population.serialization.canonical_json",
+      "path": "src/nps_core/hypothesis_population/serialization.py",
+      "line": 62
+    },
+    {
+      "id": "symbol:nps_core.hypothesis_population.serialization:parse_json",
+      "kind": "function",
+      "name": "parse_json",
+      "qualified_name": "nps_core.hypothesis_population.serialization.parse_json",
+      "path": "src/nps_core/hypothesis_population/serialization.py",
+      "line": 112
+    },
+    {
+      "id": "symbol:nps_core.hypothesis_population.serialization:thought_state_from_dict",
+      "kind": "function",
+      "name": "thought_state_from_dict",
+      "qualified_name": "nps_core.hypothesis_population.serialization.thought_state_from_dict",
+      "path": "src/nps_core/hypothesis_population/serialization.py",
+      "line": 47
+    },
+    {
+      "id": "symbol:nps_core.hypothesis_population.serialization:thought_state_from_json",
+      "kind": "function",
+      "name": "thought_state_from_json",
+      "qualified_name": "nps_core.hypothesis_population.serialization.thought_state_from_json",
+      "path": "src/nps_core/hypothesis_population/serialization.py",
+      "line": 138
+    },
+    {
+      "id": "symbol:nps_core.hypothesis_population.serialization:thought_state_to_dict",
+      "kind": "function",
+      "name": "thought_state_to_dict",
+      "qualified_name": "nps_core.hypothesis_population.serialization.thought_state_to_dict",
+      "path": "src/nps_core/hypothesis_population/serialization.py",
+      "line": 27
+    },
+    {
+      "id": "symbol:nps_core.hypothesis_population.thought_state:Assumption",
+      "kind": "class",
+      "name": "Assumption",
+      "qualified_name": "nps_core.hypothesis_population.thought_state.Assumption",
+      "path": "src/nps_core/hypothesis_population/thought_state.py",
+      "line": 203
+    },
+    {
+      "id": "symbol:nps_core.hypothesis_population.thought_state:Assumption.__post_init__",
+      "kind": "function",
+      "name": "__post_init__",
+      "qualified_name": "nps_core.hypothesis_population.thought_state.Assumption.__post_init__",
+      "path": "src/nps_core/hypothesis_population/thought_state.py",
+      "line": 211
+    },
+    {
+      "id": "symbol:nps_core.hypothesis_population.thought_state:Evidence",
+      "kind": "class",
+      "name": "Evidence",
+      "qualified_name": "nps_core.hypothesis_population.thought_state.Evidence",
+      "path": "src/nps_core/hypothesis_population/thought_state.py",
+      "line": 220
+    },
+    {
+      "id": "symbol:nps_core.hypothesis_population.thought_state:Evidence.__post_init__",
+      "kind": "function",
+      "name": "__post_init__",
+      "qualified_name": "nps_core.hypothesis_population.thought_state.Evidence.__post_init__",
+      "path": "src/nps_core/hypothesis_population/thought_state.py",
+      "line": 227
+    },
+    {
+      "id": "symbol:nps_core.hypothesis_population.thought_state:ExecutorProfile",
+      "kind": "class",
+      "name": "ExecutorProfile",
+      "qualified_name": "nps_core.hypothesis_population.thought_state.ExecutorProfile",
+      "path": "src/nps_core/hypothesis_population/thought_state.py",
+      "line": 290
+    },
+    {
+      "id": "symbol:nps_core.hypothesis_population.thought_state:ExecutorProfile.__post_init__",
+      "kind": "function",
+      "name": "__post_init__",
+      "qualified_name": "nps_core.hypothesis_population.thought_state.ExecutorProfile.__post_init__",
+      "path": "src/nps_core/hypothesis_population/thought_state.py",
+      "line": 298
+    },
+    {
+      "id": "symbol:nps_core.hypothesis_population.thought_state:Graph",
+      "kind": "class",
+      "name": "Graph",
+      "qualified_name": "nps_core.hypothesis_population.thought_state.Graph",
+      "path": "src/nps_core/hypothesis_population/thought_state.py",
+      "line": 313
+    },
+    {
+      "id": "symbol:nps_core.hypothesis_population.thought_state:Graph.__post_init__",
+      "kind": "function",
+      "name": "__post_init__",
+      "qualified_name": "nps_core.hypothesis_population.thought_state.Graph.__post_init__",
+      "path": "src/nps_core/hypothesis_population/thought_state.py",
+      "line": 320
+    },
+    {
+      "id": "symbol:nps_core.hypothesis_population.thought_state:Hypothesis",
+      "kind": "class",
+      "name": "Hypothesis",
+      "qualified_name": "nps_core.hypothesis_population.thought_state.Hypothesis",
+      "path": "src/nps_core/hypothesis_population/thought_state.py",
+      "line": 175
+    },
+    {
+      "id": "symbol:nps_core.hypothesis_population.thought_state:Hypothesis.__post_init__",
+      "kind": "function",
+      "name": "__post_init__",
+      "qualified_name": "nps_core.hypothesis_population.thought_state.Hypothesis.__post_init__",
+      "path": "src/nps_core/hypothesis_population/thought_state.py",
+      "line": 182
+    },
+    {
+      "id": "symbol:nps_core.hypothesis_population.thought_state:Interpretation",
+      "kind": "class",
+      "name": "Interpretation",
+      "qualified_name": "nps_core.hypothesis_population.thought_state.Interpretation",
+      "path": "src/nps_core/hypothesis_population/thought_state.py",
+      "line": 156
+    },
+    {
+      "id": "symbol:nps_core.hypothesis_population.thought_state:Interpretation.__post_init__",
+      "kind": "function",
+      "name": "__post_init__",
+      "qualified_name": "nps_core.hypothesis_population.thought_state.Interpretation.__post_init__",
+      "path": "src/nps_core/hypothesis_population/thought_state.py",
+      "line": 163
+    },
+    {
+      "id": "symbol:nps_core.hypothesis_population.thought_state:Metrics",
+      "kind": "class",
+      "name": "Metrics",
+      "qualified_name": "nps_core.hypothesis_population.thought_state.Metrics",
+      "path": "src/nps_core/hypothesis_population/thought_state.py",
+      "line": 239
+    },
+    {
+      "id": "symbol:nps_core.hypothesis_population.thought_state:Metrics.__post_init__",
+      "kind": "function",
+      "name": "__post_init__",
+      "qualified_name": "nps_core.hypothesis_population.thought_state.Metrics.__post_init__",
+      "path": "src/nps_core/hypothesis_population/thought_state.py",
+      "line": 250
+    },
+    {
+      "id": "symbol:nps_core.hypothesis_population.thought_state:Status",
+      "kind": "class",
+      "name": "Status",
+      "qualified_name": "nps_core.hypothesis_population.thought_state.Status",
+      "path": "src/nps_core/hypothesis_population/thought_state.py",
+      "line": 332
+    },
+    {
+      "id": "symbol:nps_core.hypothesis_population.thought_state:Status.__post_init__",
+      "kind": "function",
+      "name": "__post_init__",
+      "qualified_name": "nps_core.hypothesis_population.thought_state.Status.__post_init__",
+      "path": "src/nps_core/hypothesis_population/thought_state.py",
+      "line": 338
+    },
+    {
+      "id": "symbol:nps_core.hypothesis_population.thought_state:ThoughtState",
+      "kind": "class",
+      "name": "ThoughtState",
+      "qualified_name": "nps_core.hypothesis_population.thought_state.ThoughtState",
+      "path": "src/nps_core/hypothesis_population/thought_state.py",
+      "line": 352
+    },
+    {
+      "id": "symbol:nps_core.hypothesis_population.thought_state:ThoughtState.__post_init__",
+      "kind": "function",
+      "name": "__post_init__",
+      "qualified_name": "nps_core.hypothesis_population.thought_state.ThoughtState.__post_init__",
+      "path": "src/nps_core/hypothesis_population/thought_state.py",
+      "line": 368
+    },
+    {
+      "id": "symbol:nps_core.hypothesis_population.thought_state:ThoughtState.from_dict",
+      "kind": "function",
+      "name": "from_dict",
+      "qualified_name": "nps_core.hypothesis_population.thought_state.ThoughtState.from_dict",
+      "path": "src/nps_core/hypothesis_population/thought_state.py",
+      "line": 466
+    },
+    {
+      "id": "symbol:nps_core.hypothesis_population.thought_state:ThoughtState.to_dict",
+      "kind": "function",
+      "name": "to_dict",
+      "qualified_name": "nps_core.hypothesis_population.thought_state.ThoughtState.to_dict",
+      "path": "src/nps_core/hypothesis_population/thought_state.py",
+      "line": 748
+    },
+    {
+      "id": "symbol:nps_core.hypothesis_population.thought_state:ThoughtState.to_dict._assump",
+      "kind": "function",
+      "name": "_assump",
+      "qualified_name": "nps_core.hypothesis_population.thought_state.ThoughtState.to_dict._assump",
+      "path": "src/nps_core/hypothesis_population/thought_state.py",
+      "line": 768
+    },
+    {
+      "id": "symbol:nps_core.hypothesis_population.thought_state:ThoughtState.to_dict._ep",
+      "kind": "function",
+      "name": "_ep",
+      "qualified_name": "nps_core.hypothesis_population.thought_state.ThoughtState.to_dict._ep",
+      "path": "src/nps_core/hypothesis_population/thought_state.py",
+      "line": 802
+    },
+    {
+      "id": "symbol:nps_core.hypothesis_population.thought_state:ThoughtState.to_dict._evid",
+      "kind": "function",
+      "name": "_evid",
+      "qualified_name": "nps_core.hypothesis_population.thought_state.ThoughtState.to_dict._evid",
+      "path": "src/nps_core/hypothesis_population/thought_state.py",
+      "line": 776
+    },
+    {
+      "id": "symbol:nps_core.hypothesis_population.thought_state:ThoughtState.to_dict._graph",
+      "kind": "function",
+      "name": "_graph",
+      "qualified_name": "nps_core.hypothesis_population.thought_state.ThoughtState.to_dict._graph",
+      "path": "src/nps_core/hypothesis_population/thought_state.py",
+      "line": 810
+    },
+    {
+      "id": "symbol:nps_core.hypothesis_population.thought_state:ThoughtState.to_dict._hyp",
+      "kind": "function",
+      "name": "_hyp",
+      "qualified_name": "nps_core.hypothesis_population.thought_state.ThoughtState.to_dict._hyp",
+      "path": "src/nps_core/hypothesis_population/thought_state.py",
+      "line": 761
+    },
+    {
+      "id": "symbol:nps_core.hypothesis_population.thought_state:ThoughtState.to_dict._interp",
+      "kind": "function",
+      "name": "_interp",
+      "qualified_name": "nps_core.hypothesis_population.thought_state.ThoughtState.to_dict._interp",
+      "path": "src/nps_core/hypothesis_population/thought_state.py",
+      "line": 754
+    },
+    {
+      "id": "symbol:nps_core.hypothesis_population.thought_state:ThoughtState.to_dict._met",
+      "kind": "function",
+      "name": "_met",
+      "qualified_name": "nps_core.hypothesis_population.thought_state.ThoughtState.to_dict._met",
+      "path": "src/nps_core/hypothesis_population/thought_state.py",
+      "line": 783
+    },
+    {
+      "id": "symbol:nps_core.hypothesis_population.thought_state:ThoughtState.to_dict._status",
+      "kind": "function",
+      "name": "_status",
+      "qualified_name": "nps_core.hypothesis_population.thought_state.ThoughtState.to_dict._status",
+      "path": "src/nps_core/hypothesis_population/thought_state.py",
+      "line": 817
+    },
+    {
+      "id": "symbol:nps_core.hypothesis_population.thought_state:ThoughtState.to_dict._vp",
+      "kind": "function",
+      "name": "_vp",
+      "qualified_name": "nps_core.hypothesis_population.thought_state.ThoughtState.to_dict._vp",
+      "path": "src/nps_core/hypothesis_population/thought_state.py",
+      "line": 794
+    },
+    {
+      "id": "symbol:nps_core.hypothesis_population.thought_state:ThoughtState.with_status",
+      "kind": "function",
+      "name": "with_status",
+      "qualified_name": "nps_core.hypothesis_population.thought_state.ThoughtState.with_status",
+      "path": "src/nps_core/hypothesis_population/thought_state.py",
+      "line": 838
+    },
+    {
+      "id": "symbol:nps_core.hypothesis_population.thought_state:VerificationPlan",
+      "kind": "class",
+      "name": "VerificationPlan",
+      "qualified_name": "nps_core.hypothesis_population.thought_state.VerificationPlan",
+      "path": "src/nps_core/hypothesis_population/thought_state.py",
+      "line": 266
+    },
+    {
+      "id": "symbol:nps_core.hypothesis_population.thought_state:VerificationPlan.__post_init__",
+      "kind": "function",
+      "name": "__post_init__",
+      "qualified_name": "nps_core.hypothesis_population.thought_state.VerificationPlan.__post_init__",
+      "path": "src/nps_core/hypothesis_population/thought_state.py",
+      "line": 274
+    },
+    {
+      "id": "symbol:nps_core.hypothesis_population.thought_state:_check_confidence",
+      "kind": "function",
+      "name": "_check_confidence",
+      "qualified_name": "nps_core.hypothesis_population.thought_state._check_confidence",
+      "path": "src/nps_core/hypothesis_population/thought_state.py",
+      "line": 111
+    },
+    {
+      "id": "symbol:nps_core.hypothesis_population.thought_state:_check_non_empty",
+      "kind": "function",
+      "name": "_check_non_empty",
+      "qualified_name": "nps_core.hypothesis_population.thought_state._check_non_empty",
+      "path": "src/nps_core/hypothesis_population/thought_state.py",
+      "line": 96
+    },
+    {
+      "id": "symbol:nps_core.hypothesis_population.thought_state:_check_string_tuple",
+      "kind": "function",
+      "name": "_check_string_tuple",
+      "qualified_name": "nps_core.hypothesis_population.thought_state._check_string_tuple",
+      "path": "src/nps_core/hypothesis_population/thought_state.py",
+      "line": 101
+    },
+    {
+      "id": "symbol:nps_core.hypothesis_population.thought_state:_require_dict",
+      "kind": "function",
+      "name": "_require_dict",
+      "qualified_name": "nps_core.hypothesis_population.thought_state._require_dict",
+      "path": "src/nps_core/hypothesis_population/thought_state.py",
+      "line": 68
+    },
+    {
+      "id": "symbol:nps_core.hypothesis_population.thought_state:_require_list",
+      "kind": "function",
+      "name": "_require_list",
+      "qualified_name": "nps_core.hypothesis_population.thought_state._require_list",
+      "path": "src/nps_core/hypothesis_population/thought_state.py",
+      "line": 74
+    },
+    {
+      "id": "symbol:nps_core.hypothesis_population.thought_state:_require_string",
+      "kind": "function",
+      "name": "_require_string",
+      "qualified_name": "nps_core.hypothesis_population.thought_state._require_string",
+      "path": "src/nps_core/hypothesis_population/thought_state.py",
+      "line": 80
+    },
+    {
+      "id": "symbol:nps_core.hypothesis_population.thought_state:_string_list_to_tuple",
+      "kind": "function",
+      "name": "_string_list_to_tuple",
+      "qualified_name": "nps_core.hypothesis_population.thought_state._string_list_to_tuple",
+      "path": "src/nps_core/hypothesis_population/thought_state.py",
+      "line": 86
+    },
+    {
+      "id": "symbol:nps_core.hypothesis_population.thought_state:_validate_dict_keys",
+      "kind": "function",
+      "name": "_validate_dict_keys",
+      "qualified_name": "nps_core.hypothesis_population.thought_state._validate_dict_keys",
+      "path": "src/nps_core/hypothesis_population/thought_state.py",
+      "line": 131
+    },
+    {
       "id": "symbol:tests.architecture.test_package_skeleton:test_module_import",
       "kind": "function",
       "name": "test_module_import",
@@ -379,6 +1227,94 @@
       "qualified_name": "tests.integration.test_refresh_codegraph.test_refresh_codegraph",
       "path": "tests/integration/test_refresh_codegraph.py",
       "line": 13
+    },
+    {
+      "id": "symbol:tests.integration.test_thought_lifecycle_end_to_end:_replay",
+      "kind": "function",
+      "name": "_replay",
+      "qualified_name": "tests.integration.test_thought_lifecycle_end_to_end._replay",
+      "path": "tests/integration/test_thought_lifecycle_end_to_end.py",
+      "line": 80
+    },
+    {
+      "id": "symbol:tests.integration.test_thought_lifecycle_end_to_end:_state",
+      "kind": "function",
+      "name": "_state",
+      "qualified_name": "tests.integration.test_thought_lifecycle_end_to_end._state",
+      "path": "tests/integration/test_thought_lifecycle_end_to_end.py",
+      "line": 24
+    },
+    {
+      "id": "symbol:tests.integration.test_thought_lifecycle_end_to_end:test_final_statuses_and_merged_claim_confidence",
+      "kind": "function",
+      "name": "test_final_statuses_and_merged_claim_confidence",
+      "qualified_name": "tests.integration.test_thought_lifecycle_end_to_end.test_final_statuses_and_merged_claim_confidence",
+      "path": "tests/integration/test_thought_lifecycle_end_to_end.py",
+      "line": 179
+    },
+    {
+      "id": "symbol:tests.integration.test_thought_lifecycle_end_to_end:test_history_order_and_event_fields",
+      "kind": "function",
+      "name": "test_history_order_and_event_fields",
+      "qualified_name": "tests.integration.test_thought_lifecycle_end_to_end.test_history_order_and_event_fields",
+      "path": "tests/integration/test_thought_lifecycle_end_to_end.py",
+      "line": 163
+    },
+    {
+      "id": "symbol:tests.integration.test_thought_lifecycle_end_to_end:test_lineage_and_no_dangling_references",
+      "kind": "function",
+      "name": "test_lineage_and_no_dangling_references",
+      "qualified_name": "tests.integration.test_thought_lifecycle_end_to_end.test_lineage_and_no_dangling_references",
+      "path": "tests/integration/test_thought_lifecycle_end_to_end.py",
+      "line": 190
+    },
+    {
+      "id": "symbol:tests.integration.test_thought_lifecycle_end_to_end:test_prior_snapshots_round_trip_unchanged",
+      "kind": "function",
+      "name": "test_prior_snapshots_round_trip_unchanged",
+      "qualified_name": "tests.integration.test_thought_lifecycle_end_to_end.test_prior_snapshots_round_trip_unchanged",
+      "path": "tests/integration/test_thought_lifecycle_end_to_end.py",
+      "line": 205
+    },
+    {
+      "id": "symbol:tests.integration.test_thought_lifecycle_end_to_end:test_replay_byte_identity",
+      "kind": "function",
+      "name": "test_replay_byte_identity",
+      "qualified_name": "tests.integration.test_thought_lifecycle_end_to_end.test_replay_byte_identity",
+      "path": "tests/integration/test_thought_lifecycle_end_to_end.py",
+      "line": 156
+    },
+    {
+      "id": "symbol:tests.integration.test_thought_lifecycle_end_to_end:test_snapshot_dict_json_round_trip",
+      "kind": "function",
+      "name": "test_snapshot_dict_json_round_trip",
+      "qualified_name": "tests.integration.test_thought_lifecycle_end_to_end.test_snapshot_dict_json_round_trip",
+      "path": "tests/integration/test_thought_lifecycle_end_to_end.py",
+      "line": 217
+    },
+    {
+      "id": "symbol:tests.integration.test_thought_lifecycle_end_to_end:test_sorted_thought_ids",
+      "kind": "function",
+      "name": "test_sorted_thought_ids",
+      "qualified_name": "tests.integration.test_thought_lifecycle_end_to_end.test_sorted_thought_ids",
+      "path": "tests/integration/test_thought_lifecycle_end_to_end.py",
+      "line": 239
+    },
+    {
+      "id": "symbol:tests.integration.test_thought_lifecycle_end_to_end:test_thought_state_dict_round_trip",
+      "kind": "function",
+      "name": "test_thought_state_dict_round_trip",
+      "qualified_name": "tests.integration.test_thought_lifecycle_end_to_end.test_thought_state_dict_round_trip",
+      "path": "tests/integration/test_thought_lifecycle_end_to_end.py",
+      "line": 225
+    },
+    {
+      "id": "symbol:tests.integration.test_thought_lifecycle_end_to_end:test_transition_event_dict_round_trip",
+      "kind": "function",
+      "name": "test_transition_event_dict_round_trip",
+      "qualified_name": "tests.integration.test_thought_lifecycle_end_to_end.test_transition_event_dict_round_trip",
+      "path": "tests/integration/test_thought_lifecycle_end_to_end.py",
+      "line": 232
     },
     {
       "id": "symbol:tests.unit.test_codegraph_build:codegraph",
@@ -685,6 +1621,1294 @@
       "line": 61
     },
     {
+      "id": "symbol:tests.unit.test_thought_lifecycle:TestLineageIndexEmpty",
+      "kind": "class",
+      "name": "TestLineageIndexEmpty",
+      "qualified_name": "tests.unit.test_thought_lifecycle.TestLineageIndexEmpty",
+      "path": "tests/unit/test_thought_lifecycle.py",
+      "line": 434
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_lifecycle:TestLineageIndexEmpty.test_empty_index",
+      "kind": "function",
+      "name": "test_empty_index",
+      "qualified_name": "tests.unit.test_thought_lifecycle.TestLineageIndexEmpty.test_empty_index",
+      "path": "tests/unit/test_thought_lifecycle.py",
+      "line": 435
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_lifecycle:TestLineageIndexFromStates",
+      "kind": "class",
+      "name": "TestLineageIndexFromStates",
+      "qualified_name": "tests.unit.test_thought_lifecycle.TestLineageIndexFromStates",
+      "path": "tests/unit/test_thought_lifecycle.py",
+      "line": 441
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_lifecycle:TestLineageIndexFromStates.test_canonical_queries",
+      "kind": "function",
+      "name": "test_canonical_queries",
+      "qualified_name": "tests.unit.test_thought_lifecycle.TestLineageIndexFromStates.test_canonical_queries",
+      "path": "tests/unit/test_thought_lifecycle.py",
+      "line": 450
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_lifecycle:TestLineageIndexFromStates.test_order_independence",
+      "kind": "function",
+      "name": "test_order_independence",
+      "qualified_name": "tests.unit.test_thought_lifecycle.TestLineageIndexFromStates.test_order_independence",
+      "path": "tests/unit/test_thought_lifecycle.py",
+      "line": 442
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_lifecycle:TestLineageIndexFromStates.test_to_dict",
+      "kind": "function",
+      "name": "test_to_dict",
+      "qualified_name": "tests.unit.test_thought_lifecycle.TestLineageIndexFromStates.test_to_dict",
+      "path": "tests/unit/test_thought_lifecycle.py",
+      "line": 462
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_lifecycle:TestLineageIndexImmutable",
+      "kind": "class",
+      "name": "TestLineageIndexImmutable",
+      "qualified_name": "tests.unit.test_thought_lifecycle.TestLineageIndexImmutable",
+      "path": "tests/unit/test_thought_lifecycle.py",
+      "line": 470
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_lifecycle:TestLineageIndexImmutable.test_add_returns_new_instance",
+      "kind": "function",
+      "name": "test_add_returns_new_instance",
+      "qualified_name": "tests.unit.test_thought_lifecycle.TestLineageIndexImmutable.test_add_returns_new_instance",
+      "path": "tests/unit/test_thought_lifecycle.py",
+      "line": 471
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_lifecycle:TestLineageIndexRejects",
+      "kind": "class",
+      "name": "TestLineageIndexRejects",
+      "qualified_name": "tests.unit.test_thought_lifecycle.TestLineageIndexRejects",
+      "path": "tests/unit/test_thought_lifecycle.py",
+      "line": 480
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_lifecycle:TestLineageIndexRejects.test_duplicate_add_rejected",
+      "kind": "function",
+      "name": "test_duplicate_add_rejected",
+      "qualified_name": "tests.unit.test_thought_lifecycle.TestLineageIndexRejects.test_duplicate_add_rejected",
+      "path": "tests/unit/test_thought_lifecycle.py",
+      "line": 481
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_lifecycle:TestLineageIndexRejects.test_duplicate_from_states_rejected",
+      "kind": "function",
+      "name": "test_duplicate_from_states_rejected",
+      "qualified_name": "tests.unit.test_thought_lifecycle.TestLineageIndexRejects.test_duplicate_from_states_rejected",
+      "path": "tests/unit/test_thought_lifecycle.py",
+      "line": 487
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_lifecycle:TestLineageIndexRejects.test_self_reference_rejected",
+      "kind": "function",
+      "name": "test_self_reference_rejected",
+      "qualified_name": "tests.unit.test_thought_lifecycle.TestLineageIndexRejects.test_self_reference_rejected",
+      "path": "tests/unit/test_thought_lifecycle.py",
+      "line": 504
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_lifecycle:TestLineageIndexRejects.test_two_node_cycle_rejected",
+      "kind": "function",
+      "name": "test_two_node_cycle_rejected",
+      "qualified_name": "tests.unit.test_thought_lifecycle.TestLineageIndexRejects.test_two_node_cycle_rejected",
+      "path": "tests/unit/test_thought_lifecycle.py",
+      "line": 508
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_lifecycle:TestLineageIndexRejects.test_unknown_parent_add_rejected",
+      "kind": "function",
+      "name": "test_unknown_parent_add_rejected",
+      "qualified_name": "tests.unit.test_thought_lifecycle.TestLineageIndexRejects.test_unknown_parent_add_rejected",
+      "path": "tests/unit/test_thought_lifecycle.py",
+      "line": 497
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_lifecycle:TestLineageIndexRejects.test_unknown_parent_rejected",
+      "kind": "function",
+      "name": "test_unknown_parent_rejected",
+      "qualified_name": "tests.unit.test_thought_lifecycle.TestLineageIndexRejects.test_unknown_parent_rejected",
+      "path": "tests/unit/test_thought_lifecycle.py",
+      "line": 492
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_lifecycle:TestLineageIndexRejects.test_unknown_query_rejected",
+      "kind": "function",
+      "name": "test_unknown_query_rejected",
+      "qualified_name": "tests.unit.test_thought_lifecycle.TestLineageIndexRejects.test_unknown_query_rejected",
+      "path": "tests/unit/test_thought_lifecycle.py",
+      "line": 514
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_lifecycle:TestPopulationSnapshotHistoryOrder",
+      "kind": "class",
+      "name": "TestPopulationSnapshotHistoryOrder",
+      "qualified_name": "tests.unit.test_thought_lifecycle.TestPopulationSnapshotHistoryOrder",
+      "path": "tests/unit/test_thought_lifecycle.py",
+      "line": 344
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_lifecycle:TestPopulationSnapshotHistoryOrder.test_history_preserves_insertion_order",
+      "kind": "function",
+      "name": "test_history_preserves_insertion_order",
+      "qualified_name": "tests.unit.test_thought_lifecycle.TestPopulationSnapshotHistoryOrder.test_history_preserves_insertion_order",
+      "path": "tests/unit/test_thought_lifecycle.py",
+      "line": 345
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_lifecycle:TestPopulationSnapshotImmutable",
+      "kind": "class",
+      "name": "TestPopulationSnapshotImmutable",
+      "qualified_name": "tests.unit.test_thought_lifecycle.TestPopulationSnapshotImmutable",
+      "path": "tests/unit/test_thought_lifecycle.py",
+      "line": 355
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_lifecycle:TestPopulationSnapshotImmutable.test_tuple_fields_are_frozen",
+      "kind": "function",
+      "name": "test_tuple_fields_are_frozen",
+      "qualified_name": "tests.unit.test_thought_lifecycle.TestPopulationSnapshotImmutable.test_tuple_fields_are_frozen",
+      "path": "tests/unit/test_thought_lifecycle.py",
+      "line": 356
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_lifecycle:TestPopulationSnapshotRejects",
+      "kind": "class",
+      "name": "TestPopulationSnapshotRejects",
+      "qualified_name": "tests.unit.test_thought_lifecycle.TestPopulationSnapshotRejects",
+      "path": "tests/unit/test_thought_lifecycle.py",
+      "line": 396
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_lifecycle:TestPopulationSnapshotRejects.test_duplicate_event_id_rejected",
+      "kind": "function",
+      "name": "test_duplicate_event_id_rejected",
+      "qualified_name": "tests.unit.test_thought_lifecycle.TestPopulationSnapshotRejects.test_duplicate_event_id_rejected",
+      "path": "tests/unit/test_thought_lifecycle.py",
+      "line": 402
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_lifecycle:TestPopulationSnapshotRejects.test_duplicate_thought_id_rejected",
+      "kind": "function",
+      "name": "test_duplicate_thought_id_rejected",
+      "qualified_name": "tests.unit.test_thought_lifecycle.TestPopulationSnapshotRejects.test_duplicate_thought_id_rejected",
+      "path": "tests/unit/test_thought_lifecycle.py",
+      "line": 397
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_lifecycle:TestPopulationSnapshotRejects.test_event_unknown_input_ref_rejected",
+      "kind": "function",
+      "name": "test_event_unknown_input_ref_rejected",
+      "qualified_name": "tests.unit.test_thought_lifecycle.TestPopulationSnapshotRejects.test_event_unknown_input_ref_rejected",
+      "path": "tests/unit/test_thought_lifecycle.py",
+      "line": 408
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_lifecycle:TestPopulationSnapshotRejects.test_event_unknown_output_ref_rejected",
+      "kind": "function",
+      "name": "test_event_unknown_output_ref_rejected",
+      "qualified_name": "tests.unit.test_thought_lifecycle.TestPopulationSnapshotRejects.test_event_unknown_output_ref_rejected",
+      "path": "tests/unit/test_thought_lifecycle.py",
+      "line": 419
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_lifecycle:TestPopulationSnapshotRoundTrip",
+      "kind": "class",
+      "name": "TestPopulationSnapshotRoundTrip",
+      "qualified_name": "tests.unit.test_thought_lifecycle.TestPopulationSnapshotRoundTrip",
+      "path": "tests/unit/test_thought_lifecycle.py",
+      "line": 362
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_lifecycle:TestPopulationSnapshotRoundTrip.test_dict_roundtrip",
+      "kind": "function",
+      "name": "test_dict_roundtrip",
+      "qualified_name": "tests.unit.test_thought_lifecycle.TestPopulationSnapshotRoundTrip.test_dict_roundtrip",
+      "path": "tests/unit/test_thought_lifecycle.py",
+      "line": 363
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_lifecycle:TestPopulationSnapshotRoundTrip.test_json_roundtrip_deterministic",
+      "kind": "function",
+      "name": "test_json_roundtrip_deterministic",
+      "qualified_name": "tests.unit.test_thought_lifecycle.TestPopulationSnapshotRoundTrip.test_json_roundtrip_deterministic",
+      "path": "tests/unit/test_thought_lifecycle.py",
+      "line": 371
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_lifecycle:TestPopulationSnapshotSorting",
+      "kind": "class",
+      "name": "TestPopulationSnapshotSorting",
+      "qualified_name": "tests.unit.test_thought_lifecycle.TestPopulationSnapshotSorting",
+      "path": "tests/unit/test_thought_lifecycle.py",
+      "line": 335
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_lifecycle:TestPopulationSnapshotSorting.test_thoughts_sorted_by_id",
+      "kind": "function",
+      "name": "test_thoughts_sorted_by_id",
+      "qualified_name": "tests.unit.test_thought_lifecycle.TestPopulationSnapshotSorting.test_thoughts_sorted_by_id",
+      "path": "tests/unit/test_thought_lifecycle.py",
+      "line": 336
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_lifecycle:TestTransitionEventDuplicateIds",
+      "kind": "class",
+      "name": "TestTransitionEventDuplicateIds",
+      "qualified_name": "tests.unit.test_thought_lifecycle.TestTransitionEventDuplicateIds",
+      "path": "tests/unit/test_thought_lifecycle.py",
+      "line": 231
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_lifecycle:TestTransitionEventDuplicateIds.test_duplicate_input_ids_rejected",
+      "kind": "function",
+      "name": "test_duplicate_input_ids_rejected",
+      "qualified_name": "tests.unit.test_thought_lifecycle.TestTransitionEventDuplicateIds.test_duplicate_input_ids_rejected",
+      "path": "tests/unit/test_thought_lifecycle.py",
+      "line": 232
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_lifecycle:TestTransitionEventDuplicateIds.test_duplicate_output_ids_rejected",
+      "kind": "function",
+      "name": "test_duplicate_output_ids_rejected",
+      "qualified_name": "tests.unit.test_thought_lifecycle.TestTransitionEventDuplicateIds.test_duplicate_output_ids_rejected",
+      "path": "tests/unit/test_thought_lifecycle.py",
+      "line": 240
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_lifecycle:TestTransitionEventEquality",
+      "kind": "class",
+      "name": "TestTransitionEventEquality",
+      "qualified_name": "tests.unit.test_thought_lifecycle.TestTransitionEventEquality",
+      "path": "tests/unit/test_thought_lifecycle.py",
+      "line": 142
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_lifecycle:TestTransitionEventEquality.test_different_event_ids_not_equal",
+      "kind": "function",
+      "name": "test_different_event_ids_not_equal",
+      "qualified_name": "tests.unit.test_thought_lifecycle.TestTransitionEventEquality.test_different_event_ids_not_equal",
+      "path": "tests/unit/test_thought_lifecycle.py",
+      "line": 148
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_lifecycle:TestTransitionEventEquality.test_equal_events_are_equal",
+      "kind": "function",
+      "name": "test_equal_events_are_equal",
+      "qualified_name": "tests.unit.test_thought_lifecycle.TestTransitionEventEquality.test_equal_events_are_equal",
+      "path": "tests/unit/test_thought_lifecycle.py",
+      "line": 143
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_lifecycle:TestTransitionEventFrozen",
+      "kind": "class",
+      "name": "TestTransitionEventFrozen",
+      "qualified_name": "tests.unit.test_thought_lifecycle.TestTransitionEventFrozen",
+      "path": "tests/unit/test_thought_lifecycle.py",
+      "line": 154
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_lifecycle:TestTransitionEventFrozen.test_fields_are_frozen",
+      "kind": "function",
+      "name": "test_fields_are_frozen",
+      "qualified_name": "tests.unit.test_thought_lifecycle.TestTransitionEventFrozen.test_fields_are_frozen",
+      "path": "tests/unit/test_thought_lifecycle.py",
+      "line": 155
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_lifecycle:TestTransitionEventKeyValidation",
+      "kind": "class",
+      "name": "TestTransitionEventKeyValidation",
+      "qualified_name": "tests.unit.test_thought_lifecycle.TestTransitionEventKeyValidation",
+      "path": "tests/unit/test_thought_lifecycle.py",
+      "line": 248
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_lifecycle:TestTransitionEventKeyValidation.test_bad_timestamp_rejected",
+      "kind": "function",
+      "name": "test_bad_timestamp_rejected",
+      "qualified_name": "tests.unit.test_thought_lifecycle.TestTransitionEventKeyValidation.test_bad_timestamp_rejected",
+      "path": "tests/unit/test_thought_lifecycle.py",
+      "line": 267
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_lifecycle:TestTransitionEventKeyValidation.test_bad_type_for_input_ids_rejected",
+      "kind": "function",
+      "name": "test_bad_type_for_input_ids_rejected",
+      "qualified_name": "tests.unit.test_thought_lifecycle.TestTransitionEventKeyValidation.test_bad_type_for_input_ids_rejected",
+      "path": "tests/unit/test_thought_lifecycle.py",
+      "line": 261
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_lifecycle:TestTransitionEventKeyValidation.test_extra_key_rejected",
+      "kind": "function",
+      "name": "test_extra_key_rejected",
+      "qualified_name": "tests.unit.test_thought_lifecycle.TestTransitionEventKeyValidation.test_extra_key_rejected",
+      "path": "tests/unit/test_thought_lifecycle.py",
+      "line": 255
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_lifecycle:TestTransitionEventKeyValidation.test_missing_required_key_rejected",
+      "kind": "function",
+      "name": "test_missing_required_key_rejected",
+      "qualified_name": "tests.unit.test_thought_lifecycle.TestTransitionEventKeyValidation.test_missing_required_key_rejected",
+      "path": "tests/unit/test_thought_lifecycle.py",
+      "line": 249
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_lifecycle:TestTransitionEventKeyValidation.test_semantically_invalid_rfc3339_rejected",
+      "kind": "function",
+      "name": "test_semantically_invalid_rfc3339_rejected",
+      "qualified_name": "tests.unit.test_thought_lifecycle.TestTransitionEventKeyValidation.test_semantically_invalid_rfc3339_rejected",
+      "path": "tests/unit/test_thought_lifecycle.py",
+      "line": 289
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_lifecycle:TestTransitionEventMalformed",
+      "kind": "class",
+      "name": "TestTransitionEventMalformed",
+      "qualified_name": "tests.unit.test_thought_lifecycle.TestTransitionEventMalformed",
+      "path": "tests/unit/test_thought_lifecycle.py",
+      "line": 207
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_lifecycle:TestTransitionEventMalformed.test_branch_same_input_output_rejected",
+      "kind": "function",
+      "name": "test_branch_same_input_output_rejected",
+      "qualified_name": "tests.unit.test_thought_lifecycle.TestTransitionEventMalformed.test_branch_same_input_output_rejected",
+      "path": "tests/unit/test_thought_lifecycle.py",
+      "line": 212
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_lifecycle:TestTransitionEventMalformed.test_create_with_inputs_rejected",
+      "kind": "function",
+      "name": "test_create_with_inputs_rejected",
+      "qualified_name": "tests.unit.test_thought_lifecycle.TestTransitionEventMalformed.test_create_with_inputs_rejected",
+      "path": "tests/unit/test_thought_lifecycle.py",
+      "line": 208
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_lifecycle:TestTransitionEventMalformed.test_merge_single_input_rejected",
+      "kind": "function",
+      "name": "test_merge_single_input_rejected",
+      "qualified_name": "tests.unit.test_thought_lifecycle.TestTransitionEventMalformed.test_merge_single_input_rejected",
+      "path": "tests/unit/test_thought_lifecycle.py",
+      "line": 216
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_lifecycle:TestTransitionEventMalformed.test_prune_mismatched_ids_rejected",
+      "kind": "function",
+      "name": "test_prune_mismatched_ids_rejected",
+      "qualified_name": "tests.unit.test_thought_lifecycle.TestTransitionEventMalformed.test_prune_mismatched_ids_rejected",
+      "path": "tests/unit/test_thought_lifecycle.py",
+      "line": 220
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_lifecycle:TestTransitionEventOperationShapes",
+      "kind": "class",
+      "name": "TestTransitionEventOperationShapes",
+      "qualified_name": "tests.unit.test_thought_lifecycle.TestTransitionEventOperationShapes",
+      "path": "tests/unit/test_thought_lifecycle.py",
+      "line": 185
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_lifecycle:TestTransitionEventOperationShapes.test_valid_operation_shape",
+      "kind": "function",
+      "name": "test_valid_operation_shape",
+      "qualified_name": "tests.unit.test_thought_lifecycle.TestTransitionEventOperationShapes.test_valid_operation_shape",
+      "path": "tests/unit/test_thought_lifecycle.py",
+      "line": 196
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_lifecycle:TestTransitionEventReasonDisposition",
+      "kind": "class",
+      "name": "TestTransitionEventReasonDisposition",
+      "qualified_name": "tests.unit.test_thought_lifecycle.TestTransitionEventReasonDisposition",
+      "path": "tests/unit/test_thought_lifecycle.py",
+      "line": 301
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_lifecycle:TestTransitionEventReasonDisposition.test_non_prune_with_disposition_rejected",
+      "kind": "function",
+      "name": "test_non_prune_with_disposition_rejected",
+      "qualified_name": "tests.unit.test_thought_lifecycle.TestTransitionEventReasonDisposition.test_non_prune_with_disposition_rejected",
+      "path": "tests/unit/test_thought_lifecycle.py",
+      "line": 306
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_lifecycle:TestTransitionEventReasonDisposition.test_non_prune_with_reason_rejected",
+      "kind": "function",
+      "name": "test_non_prune_with_reason_rejected",
+      "qualified_name": "tests.unit.test_thought_lifecycle.TestTransitionEventReasonDisposition.test_non_prune_with_reason_rejected",
+      "path": "tests/unit/test_thought_lifecycle.py",
+      "line": 302
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_lifecycle:TestTransitionEventReasonDisposition.test_prune_blank_reason_rejected",
+      "kind": "function",
+      "name": "test_prune_blank_reason_rejected",
+      "qualified_name": "tests.unit.test_thought_lifecycle.TestTransitionEventReasonDisposition.test_prune_blank_reason_rejected",
+      "path": "tests/unit/test_thought_lifecycle.py",
+      "line": 310
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_lifecycle:TestTransitionEventReasonDisposition.test_prune_invalid_disposition_rejected",
+      "kind": "function",
+      "name": "test_prune_invalid_disposition_rejected",
+      "qualified_name": "tests.unit.test_thought_lifecycle.TestTransitionEventReasonDisposition.test_prune_invalid_disposition_rejected",
+      "path": "tests/unit/test_thought_lifecycle.py",
+      "line": 320
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_lifecycle:TestTransitionEventRoundTrip",
+      "kind": "class",
+      "name": "TestTransitionEventRoundTrip",
+      "qualified_name": "tests.unit.test_thought_lifecycle.TestTransitionEventRoundTrip",
+      "path": "tests/unit/test_thought_lifecycle.py",
+      "line": 161
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_lifecycle:TestTransitionEventRoundTrip.test_prune_with_reason_and_disposition_roundtrip",
+      "kind": "function",
+      "name": "test_prune_with_reason_and_disposition_roundtrip",
+      "qualified_name": "tests.unit.test_thought_lifecycle.TestTransitionEventRoundTrip.test_prune_with_reason_and_disposition_roundtrip",
+      "path": "tests/unit/test_thought_lifecycle.py",
+      "line": 169
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_lifecycle:TestTransitionEventRoundTrip.test_to_dict_from_dict_roundtrip",
+      "kind": "function",
+      "name": "test_to_dict_from_dict_roundtrip",
+      "qualified_name": "tests.unit.test_thought_lifecycle.TestTransitionEventRoundTrip.test_to_dict_from_dict_roundtrip",
+      "path": "tests/unit/test_thought_lifecycle.py",
+      "line": 162
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_lifecycle:_bytes",
+      "kind": "function",
+      "name": "_bytes",
+      "qualified_name": "tests.unit.test_thought_lifecycle._bytes",
+      "path": "tests/unit/test_thought_lifecycle.py",
+      "line": 108
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_lifecycle:_event",
+      "kind": "function",
+      "name": "_event",
+      "qualified_name": "tests.unit.test_thought_lifecycle._event",
+      "path": "tests/unit/test_thought_lifecycle.py",
+      "line": 86
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_lifecycle:_kwargs",
+      "kind": "function",
+      "name": "_kwargs",
+      "qualified_name": "tests.unit.test_thought_lifecycle._kwargs",
+      "path": "tests/unit/test_thought_lifecycle.py",
+      "line": 113
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_lifecycle:_state",
+      "kind": "function",
+      "name": "_state",
+      "qualified_name": "tests.unit.test_thought_lifecycle._state",
+      "path": "tests/unit/test_thought_lifecycle.py",
+      "line": 32
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_lifecycle:_two_active_roots",
+      "kind": "function",
+      "name": "_two_active_roots",
+      "qualified_name": "tests.unit.test_thought_lifecycle._two_active_roots",
+      "path": "tests/unit/test_thought_lifecycle.py",
+      "line": 692
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_lifecycle:test_branch_child_id_collision_rejected",
+      "kind": "function",
+      "name": "test_branch_child_id_collision_rejected",
+      "qualified_name": "tests.unit.test_thought_lifecycle.test_branch_child_id_collision_rejected",
+      "path": "tests/unit/test_thought_lifecycle.py",
+      "line": 614
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_lifecycle:test_branch_deterministic_event_shape",
+      "kind": "function",
+      "name": "test_branch_deterministic_event_shape",
+      "qualified_name": "tests.unit.test_thought_lifecycle.test_branch_deterministic_event_shape",
+      "path": "tests/unit/test_thought_lifecycle.py",
+      "line": 593
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_lifecycle:test_branch_duplicate_event_rejected",
+      "kind": "function",
+      "name": "test_branch_duplicate_event_rejected",
+      "qualified_name": "tests.unit.test_thought_lifecycle.test_branch_duplicate_event_rejected",
+      "path": "tests/unit/test_thought_lifecycle.py",
+      "line": 660
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_lifecycle:test_branch_failure_atomicity",
+      "kind": "function",
+      "name": "test_branch_failure_atomicity",
+      "qualified_name": "tests.unit.test_thought_lifecycle.test_branch_failure_atomicity",
+      "path": "tests/unit/test_thought_lifecycle.py",
+      "line": 678
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_lifecycle:test_branch_mismatched_parent_rejected",
+      "kind": "function",
+      "name": "test_branch_mismatched_parent_rejected",
+      "qualified_name": "tests.unit.test_thought_lifecycle.test_branch_mismatched_parent_rejected",
+      "path": "tests/unit/test_thought_lifecycle.py",
+      "line": 628
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_lifecycle:test_branch_non_active_child_rejected",
+      "kind": "function",
+      "name": "test_branch_non_active_child_rejected",
+      "qualified_name": "tests.unit.test_thought_lifecycle.test_branch_non_active_child_rejected",
+      "path": "tests/unit/test_thought_lifecycle.py",
+      "line": 637
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_lifecycle:test_branch_self_parent_rejected",
+      "kind": "function",
+      "name": "test_branch_self_parent_rejected",
+      "qualified_name": "tests.unit.test_thought_lifecycle.test_branch_self_parent_rejected",
+      "path": "tests/unit/test_thought_lifecycle.py",
+      "line": 623
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_lifecycle:test_branch_success_parent_unchanged",
+      "kind": "function",
+      "name": "test_branch_success_parent_unchanged",
+      "qualified_name": "tests.unit.test_thought_lifecycle.test_branch_success_parent_unchanged",
+      "path": "tests/unit/test_thought_lifecycle.py",
+      "line": 582
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_lifecycle:test_branch_terminal_parent_rejected",
+      "kind": "function",
+      "name": "test_branch_terminal_parent_rejected",
+      "qualified_name": "tests.unit.test_thought_lifecycle.test_branch_terminal_parent_rejected",
+      "path": "tests/unit/test_thought_lifecycle.py",
+      "line": 645
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_lifecycle:test_branch_unknown_parent_rejected",
+      "kind": "function",
+      "name": "test_branch_unknown_parent_rejected",
+      "qualified_name": "tests.unit.test_thought_lifecycle.test_branch_unknown_parent_rejected",
+      "path": "tests/unit/test_thought_lifecycle.py",
+      "line": 606
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_lifecycle:test_create_deterministic_repeat",
+      "kind": "function",
+      "name": "test_create_deterministic_repeat",
+      "qualified_name": "tests.unit.test_thought_lifecycle.test_create_deterministic_repeat",
+      "path": "tests/unit/test_thought_lifecycle.py",
+      "line": 541
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_lifecycle:test_create_duplicate_event_id_rejected",
+      "kind": "function",
+      "name": "test_create_duplicate_event_id_rejected",
+      "qualified_name": "tests.unit.test_thought_lifecycle.test_create_duplicate_event_id_rejected",
+      "path": "tests/unit/test_thought_lifecycle.py",
+      "line": 557
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_lifecycle:test_create_failure_atomicity",
+      "kind": "function",
+      "name": "test_create_failure_atomicity",
+      "qualified_name": "tests.unit.test_thought_lifecycle.test_create_failure_atomicity",
+      "path": "tests/unit/test_thought_lifecycle.py",
+      "line": 670
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_lifecycle:test_create_immutability",
+      "kind": "function",
+      "name": "test_create_immutability",
+      "qualified_name": "tests.unit.test_thought_lifecycle.test_create_immutability",
+      "path": "tests/unit/test_thought_lifecycle.py",
+      "line": 572
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_lifecycle:test_create_prior_snapshot_unchanged",
+      "kind": "function",
+      "name": "test_create_prior_snapshot_unchanged",
+      "qualified_name": "tests.unit.test_thought_lifecycle.test_create_prior_snapshot_unchanged",
+      "path": "tests/unit/test_thought_lifecycle.py",
+      "line": 565
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_lifecycle:test_create_root_active_new_requirements",
+      "kind": "function",
+      "name": "test_create_root_active_new_requirements",
+      "qualified_name": "tests.unit.test_thought_lifecycle.test_create_root_active_new_requirements",
+      "path": "tests/unit/test_thought_lifecycle.py",
+      "line": 549
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_lifecycle:test_create_success_audit_shape",
+      "kind": "function",
+      "name": "test_create_success_audit_shape",
+      "qualified_name": "tests.unit.test_thought_lifecycle.test_create_success_audit_shape",
+      "path": "tests/unit/test_thought_lifecycle.py",
+      "line": 526
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_lifecycle:test_from_canonical_json_rejects_bad_input",
+      "kind": "function",
+      "name": "test_from_canonical_json_rejects_bad_input",
+      "qualified_name": "tests.unit.test_thought_lifecycle.test_from_canonical_json_rejects_bad_input",
+      "path": "tests/unit/test_thought_lifecycle.py",
+      "line": 391
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_lifecycle:test_merge_bad_source_ids",
+      "kind": "function",
+      "name": "test_merge_bad_source_ids",
+      "qualified_name": "tests.unit.test_thought_lifecycle.test_merge_bad_source_ids",
+      "path": "tests/unit/test_thought_lifecycle.py",
+      "line": 732
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_lifecycle:test_merge_failure_prior_bytes_unchanged",
+      "kind": "function",
+      "name": "test_merge_failure_prior_bytes_unchanged",
+      "qualified_name": "tests.unit.test_thought_lifecycle.test_merge_failure_prior_bytes_unchanged",
+      "path": "tests/unit/test_thought_lifecycle.py",
+      "line": 775
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_lifecycle:test_merge_inactive_result_rejected",
+      "kind": "function",
+      "name": "test_merge_inactive_result_rejected",
+      "qualified_name": "tests.unit.test_thought_lifecycle.test_merge_inactive_result_rejected",
+      "path": "tests/unit/test_thought_lifecycle.py",
+      "line": 761
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_lifecycle:test_merge_list_and_generator_source_ids_byte_identical",
+      "kind": "function",
+      "name": "test_merge_list_and_generator_source_ids_byte_identical",
+      "qualified_name": "tests.unit.test_thought_lifecycle.test_merge_list_and_generator_source_ids_byte_identical",
+      "path": "tests/unit/test_thought_lifecycle.py",
+      "line": 714
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_lifecycle:test_merge_result_id_collision_rejected",
+      "kind": "function",
+      "name": "test_merge_result_id_collision_rejected",
+      "qualified_name": "tests.unit.test_thought_lifecycle.test_merge_result_id_collision_rejected",
+      "path": "tests/unit/test_thought_lifecycle.py",
+      "line": 754
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_lifecycle:test_merge_result_parent_mismatch_rejected",
+      "kind": "function",
+      "name": "test_merge_result_parent_mismatch_rejected",
+      "qualified_name": "tests.unit.test_thought_lifecycle.test_merge_result_parent_mismatch_rejected",
+      "path": "tests/unit/test_thought_lifecycle.py",
+      "line": 768
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_lifecycle:test_merge_success_sources_merged_result_active",
+      "kind": "function",
+      "name": "test_merge_success_sources_merged_result_active",
+      "qualified_name": "tests.unit.test_thought_lifecycle.test_merge_success_sources_merged_result_active",
+      "path": "tests/unit/test_thought_lifecycle.py",
+      "line": 699
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_lifecycle:test_merge_terminal_source_rejected",
+      "kind": "function",
+      "name": "test_merge_terminal_source_rejected",
+      "qualified_name": "tests.unit.test_thought_lifecycle.test_merge_terminal_source_rejected",
+      "path": "tests/unit/test_thought_lifecycle.py",
+      "line": 746
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_lifecycle:test_merge_unknown_source_rejected",
+      "kind": "function",
+      "name": "test_merge_unknown_source_rejected",
+      "qualified_name": "tests.unit.test_thought_lifecycle.test_merge_unknown_source_rejected",
+      "path": "tests/unit/test_thought_lifecycle.py",
+      "line": 739
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_lifecycle:test_prune_audit_reason_disposition_input_output",
+      "kind": "function",
+      "name": "test_prune_audit_reason_disposition_input_output",
+      "qualified_name": "tests.unit.test_thought_lifecycle.test_prune_audit_reason_disposition_input_output",
+      "path": "tests/unit/test_thought_lifecycle.py",
+      "line": 798
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_lifecycle:test_prune_blank_reason_rejected",
+      "kind": "function",
+      "name": "test_prune_blank_reason_rejected",
+      "qualified_name": "tests.unit.test_thought_lifecycle.test_prune_blank_reason_rejected",
+      "path": "tests/unit/test_thought_lifecycle.py",
+      "line": 815
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_lifecycle:test_prune_duplicate_event_rejected",
+      "kind": "function",
+      "name": "test_prune_duplicate_event_rejected",
+      "qualified_name": "tests.unit.test_thought_lifecycle.test_prune_duplicate_event_rejected",
+      "path": "tests/unit/test_thought_lifecycle.py",
+      "line": 840
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_lifecycle:test_prune_failure_prior_bytes_unchanged",
+      "kind": "function",
+      "name": "test_prune_failure_prior_bytes_unchanged",
+      "qualified_name": "tests.unit.test_thought_lifecycle.test_prune_failure_prior_bytes_unchanged",
+      "path": "tests/unit/test_thought_lifecycle.py",
+      "line": 847
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_lifecycle:test_prune_invalid_disposition_rejected",
+      "kind": "function",
+      "name": "test_prune_invalid_disposition_rejected",
+      "qualified_name": "tests.unit.test_thought_lifecycle.test_prune_invalid_disposition_rejected",
+      "path": "tests/unit/test_thought_lifecycle.py",
+      "line": 827
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_lifecycle:test_prune_non_string_reason_rejected",
+      "kind": "function",
+      "name": "test_prune_non_string_reason_rejected",
+      "qualified_name": "tests.unit.test_thought_lifecycle.test_prune_non_string_reason_rejected",
+      "path": "tests/unit/test_thought_lifecycle.py",
+      "line": 821
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_lifecycle:test_prune_repeated_terminal_rejected",
+      "kind": "function",
+      "name": "test_prune_repeated_terminal_rejected",
+      "qualified_name": "tests.unit.test_thought_lifecycle.test_prune_repeated_terminal_rejected",
+      "path": "tests/unit/test_thought_lifecycle.py",
+      "line": 833
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_lifecycle:test_prune_success_rejected_and_dormant",
+      "kind": "function",
+      "name": "test_prune_success_rejected_and_dormant",
+      "qualified_name": "tests.unit.test_thought_lifecycle.test_prune_success_rejected_and_dormant",
+      "path": "tests/unit/test_thought_lifecycle.py",
+      "line": 788
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_lifecycle:test_prune_unknown_target_rejected",
+      "kind": "function",
+      "name": "test_prune_unknown_target_rejected",
+      "qualified_name": "tests.unit.test_thought_lifecycle.test_prune_unknown_target_rejected",
+      "path": "tests/unit/test_thought_lifecycle.py",
+      "line": 809
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_lifecycle:test_state_round_trip",
+      "kind": "function",
+      "name": "test_state_round_trip",
+      "qualified_name": "tests.unit.test_thought_lifecycle.test_state_round_trip",
+      "path": "tests/unit/test_thought_lifecycle.py",
+      "line": 126
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_state_model:_canonical_dict",
+      "kind": "function",
+      "name": "_canonical_dict",
+      "qualified_name": "tests.unit.test_thought_state_model._canonical_dict",
+      "path": "tests/unit/test_thought_state_model.py",
+      "line": 54
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_state_model:_delete",
+      "kind": "function",
+      "name": "_delete",
+      "qualified_name": "tests.unit.test_thought_state_model._delete",
+      "path": "tests/unit/test_thought_state_model.py",
+      "line": 143
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_state_model:_mutate",
+      "kind": "function",
+      "name": "_mutate",
+      "qualified_name": "tests.unit.test_thought_state_model._mutate",
+      "path": "tests/unit/test_thought_state_model.py",
+      "line": 123
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_state_model:schema",
+      "kind": "function",
+      "name": "schema",
+      "qualified_name": "tests.unit.test_thought_state_model.schema",
+      "path": "tests/unit/test_thought_state_model.py",
+      "line": 45
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_state_model:test_all_constants_importable",
+      "kind": "function",
+      "name": "test_all_constants_importable",
+      "qualified_name": "tests.unit.test_thought_state_model.test_all_constants_importable",
+      "path": "tests/unit/test_thought_state_model.py",
+      "line": 537
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_state_model:test_all_serialization_functions_importable",
+      "kind": "function",
+      "name": "test_all_serialization_functions_importable",
+      "qualified_name": "tests.unit.test_thought_state_model.test_all_serialization_functions_importable",
+      "path": "tests/unit/test_thought_state_model.py",
+      "line": 552
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_state_model:test_all_value_types_importable",
+      "kind": "function",
+      "name": "test_all_value_types_importable",
+      "qualified_name": "tests.unit.test_thought_state_model.test_all_value_types_importable",
+      "path": "tests/unit/test_thought_state_model.py",
+      "line": 544
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_state_model:test_assumptions_preserved",
+      "kind": "function",
+      "name": "test_assumptions_preserved",
+      "qualified_name": "tests.unit.test_thought_state_model.test_assumptions_preserved",
+      "path": "tests/unit/test_thought_state_model.py",
+      "line": 190
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_state_model:test_canonical_dict_validates",
+      "kind": "function",
+      "name": "test_canonical_dict_validates",
+      "qualified_name": "tests.unit.test_thought_state_model.test_canonical_dict_validates",
+      "path": "tests/unit/test_thought_state_model.py",
+      "line": 281
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_state_model:test_canonical_json_byte_identical",
+      "kind": "function",
+      "name": "test_canonical_json_byte_identical",
+      "qualified_name": "tests.unit.test_thought_state_model.test_canonical_json_byte_identical",
+      "path": "tests/unit/test_thought_state_model.py",
+      "line": 232
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_state_model:test_canonical_json_compact_separators",
+      "kind": "function",
+      "name": "test_canonical_json_compact_separators",
+      "qualified_name": "tests.unit.test_thought_state_model.test_canonical_json_compact_separators",
+      "path": "tests/unit/test_thought_state_model.py",
+      "line": 244
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_state_model:test_canonical_json_on_dict",
+      "kind": "function",
+      "name": "test_canonical_json_on_dict",
+      "qualified_name": "tests.unit.test_thought_state_model.test_canonical_json_on_dict",
+      "path": "tests/unit/test_thought_state_model.py",
+      "line": 257
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_state_model:test_canonical_json_on_list",
+      "kind": "function",
+      "name": "test_canonical_json_on_list",
+      "qualified_name": "tests.unit.test_thought_state_model.test_canonical_json_on_list",
+      "path": "tests/unit/test_thought_state_model.py",
+      "line": 261
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_state_model:test_canonical_json_rejects_nan",
+      "kind": "function",
+      "name": "test_canonical_json_rejects_nan",
+      "qualified_name": "tests.unit.test_thought_state_model.test_canonical_json_rejects_nan",
+      "path": "tests/unit/test_thought_state_model.py",
+      "line": 270
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_state_model:test_canonical_json_rejects_non_serializable",
+      "kind": "function",
+      "name": "test_canonical_json_rejects_non_serializable",
+      "qualified_name": "tests.unit.test_thought_state_model.test_canonical_json_rejects_non_serializable",
+      "path": "tests/unit/test_thought_state_model.py",
+      "line": 265
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_state_model:test_canonical_json_sorted_keys",
+      "kind": "function",
+      "name": "test_canonical_json_sorted_keys",
+      "qualified_name": "tests.unit.test_thought_state_model.test_canonical_json_sorted_keys",
+      "path": "tests/unit/test_thought_state_model.py",
+      "line": 239
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_state_model:test_canonical_json_unicode_preserved",
+      "kind": "function",
+      "name": "test_canonical_json_unicode_preserved",
+      "qualified_name": "tests.unit.test_thought_state_model.test_canonical_json_unicode_preserved",
+      "path": "tests/unit/test_thought_state_model.py",
+      "line": 249
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_state_model:test_canonical_separators_constant",
+      "kind": "function",
+      "name": "test_canonical_separators_constant",
+      "qualified_name": "tests.unit.test_thought_state_model.test_canonical_separators_constant",
+      "path": "tests/unit/test_thought_state_model.py",
+      "line": 275
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_state_model:test_confidence_boundary",
+      "kind": "function",
+      "name": "test_confidence_boundary",
+      "qualified_name": "tests.unit.test_thought_state_model.test_confidence_boundary",
+      "path": "tests/unit/test_thought_state_model.py",
+      "line": 470
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_state_model:test_deep_copy_round_trip",
+      "kind": "function",
+      "name": "test_deep_copy_round_trip",
+      "qualified_name": "tests.unit.test_thought_state_model.test_deep_copy_round_trip",
+      "path": "tests/unit/test_thought_state_model.py",
+      "line": 579
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_state_model:test_duplicate_assumption_ids",
+      "kind": "function",
+      "name": "test_duplicate_assumption_ids",
+      "qualified_name": "tests.unit.test_thought_state_model.test_duplicate_assumption_ids",
+      "path": "tests/unit/test_thought_state_model.py",
+      "line": 586
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_state_model:test_duplicate_parent_ids",
+      "kind": "function",
+      "name": "test_duplicate_parent_ids",
+      "qualified_name": "tests.unit.test_thought_state_model.test_duplicate_parent_ids",
+      "path": "tests/unit/test_thought_state_model.py",
+      "line": 478
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_state_model:test_empty_parent_ids_allowed",
+      "kind": "function",
+      "name": "test_empty_parent_ids_allowed",
+      "qualified_name": "tests.unit.test_thought_state_model.test_empty_parent_ids_allowed",
+      "path": "tests/unit/test_thought_state_model.py",
+      "line": 490
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_state_model:test_empty_string_rejected",
+      "kind": "function",
+      "name": "test_empty_string_rejected",
+      "qualified_name": "tests.unit.test_thought_state_model.test_empty_string_rejected",
+      "path": "tests/unit/test_thought_state_model.py",
+      "line": 609
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_state_model:test_exact_round_trip_through_public_api",
+      "kind": "function",
+      "name": "test_exact_round_trip_through_public_api",
+      "qualified_name": "tests.unit.test_thought_state_model.test_exact_round_trip_through_public_api",
+      "path": "tests/unit/test_thought_state_model.py",
+      "line": 561
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_state_model:test_extra_nested_field",
+      "kind": "function",
+      "name": "test_extra_nested_field",
+      "qualified_name": "tests.unit.test_thought_state_model.test_extra_nested_field",
+      "path": "tests/unit/test_thought_state_model.py",
+      "line": 385
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_state_model:test_extra_root_field",
+      "kind": "function",
+      "name": "test_extra_root_field",
+      "qualified_name": "tests.unit.test_thought_state_model.test_extra_root_field",
+      "path": "tests/unit/test_thought_state_model.py",
+      "line": 355
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_state_model:test_from_dict_returns_thought_state",
+      "kind": "function",
+      "name": "test_from_dict_returns_thought_state",
+      "qualified_name": "tests.unit.test_thought_state_model.test_from_dict_returns_thought_state",
+      "path": "tests/unit/test_thought_state_model.py",
+      "line": 165
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_state_model:test_from_dict_to_dict_round_trip",
+      "kind": "function",
+      "name": "test_from_dict_to_dict_round_trip",
+      "qualified_name": "tests.unit.test_thought_state_model.test_from_dict_to_dict_round_trip",
+      "path": "tests/unit/test_thought_state_model.py",
+      "line": 174
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_state_model:test_from_json_failures",
+      "kind": "function",
+      "name": "test_from_json_failures",
+      "qualified_name": "tests.unit.test_thought_state_model.test_from_json_failures",
+      "path": "tests/unit/test_thought_state_model.py",
+      "line": 511
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_state_model:test_from_json_to_json_round_trip",
+      "kind": "function",
+      "name": "test_from_json_to_json_round_trip",
+      "qualified_name": "tests.unit.test_thought_state_model.test_from_json_to_json_round_trip",
+      "path": "tests/unit/test_thought_state_model.py",
+      "line": 179
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_state_model:test_frozen_rejects_mutation",
+      "kind": "function",
+      "name": "test_frozen_rejects_mutation",
+      "qualified_name": "tests.unit.test_thought_state_model.test_frozen_rejects_mutation",
+      "path": "tests/unit/test_thought_state_model.py",
+      "line": 209
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_state_model:test_huge_integer_confidence_rejected_as_validation_error",
+      "kind": "function",
+      "name": "test_huge_integer_confidence_rejected_as_validation_error",
+      "qualified_name": "tests.unit.test_thought_state_model.test_huge_integer_confidence_rejected_as_validation_error",
+      "path": "tests/unit/test_thought_state_model.py",
+      "line": 462
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_state_model:test_int_rejected_for_thought_id",
+      "kind": "function",
+      "name": "test_int_rejected_for_thought_id",
+      "qualified_name": "tests.unit.test_thought_state_model.test_int_rejected_for_thought_id",
+      "path": "tests/unit/test_thought_state_model.py",
+      "line": 426
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_state_model:test_invalid_confidence",
+      "kind": "function",
+      "name": "test_invalid_confidence",
+      "qualified_name": "tests.unit.test_thought_state_model.test_invalid_confidence",
+      "path": "tests/unit/test_thought_state_model.py",
+      "line": 447
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_state_model:test_invalid_identifiers",
+      "kind": "function",
+      "name": "test_invalid_identifiers",
+      "qualified_name": "tests.unit.test_thought_state_model.test_invalid_identifiers",
+      "path": "tests/unit/test_thought_state_model.py",
+      "line": 319
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_state_model:test_json_round_trip_through_public_api",
+      "kind": "function",
+      "name": "test_json_round_trip_through_public_api",
+      "qualified_name": "tests.unit.test_thought_state_model.test_json_round_trip_through_public_api",
+      "path": "tests/unit/test_thought_state_model.py",
+      "line": 568
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_state_model:test_missing_nested_field",
+      "kind": "function",
+      "name": "test_missing_nested_field",
+      "qualified_name": "tests.unit.test_thought_state_model.test_missing_nested_field",
+      "path": "tests/unit/test_thought_state_model.py",
+      "line": 370
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_state_model:test_missing_root_field",
+      "kind": "function",
+      "name": "test_missing_root_field",
+      "qualified_name": "tests.unit.test_thought_state_model.test_missing_root_field",
+      "path": "tests/unit/test_thought_state_model.py",
+      "line": 348
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_state_model:test_non_string_identifiers",
+      "kind": "function",
+      "name": "test_non_string_identifiers",
+      "qualified_name": "tests.unit.test_thought_state_model.test_non_string_identifiers",
+      "path": "tests/unit/test_thought_state_model.py",
+      "line": 331
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_state_model:test_parent_ids_preserved",
+      "kind": "function",
+      "name": "test_parent_ids_preserved",
+      "qualified_name": "tests.unit.test_thought_state_model.test_parent_ids_preserved",
+      "path": "tests/unit/test_thought_state_model.py",
+      "line": 185
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_state_model:test_parent_ids_tuple_immutable",
+      "kind": "function",
+      "name": "test_parent_ids_tuple_immutable",
+      "qualified_name": "tests.unit.test_thought_state_model.test_parent_ids_tuple_immutable",
+      "path": "tests/unit/test_thought_state_model.py",
+      "line": 215
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_state_model:test_parse_json_not_string",
+      "kind": "function",
+      "name": "test_parse_json_not_string",
+      "qualified_name": "tests.unit.test_thought_state_model.test_parse_json_not_string",
+      "path": "tests/unit/test_thought_state_model.py",
+      "line": 516
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_state_model:test_parse_json_valid",
+      "kind": "function",
+      "name": "test_parse_json_valid",
+      "qualified_name": "tests.unit.test_thought_state_model.test_parse_json_valid",
+      "path": "tests/unit/test_thought_state_model.py",
+      "line": 521
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_state_model:test_production_module_imports_only_allowed",
+      "kind": "function",
+      "name": "test_production_module_imports_only_allowed",
+      "qualified_name": "tests.unit.test_thought_state_model.test_production_module_imports_only_allowed",
+      "path": "tests/unit/test_thought_state_model.py",
+      "line": 621
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_state_model:test_round_trip_validates",
+      "kind": "function",
+      "name": "test_round_trip_validates",
+      "qualified_name": "tests.unit.test_thought_state_model.test_round_trip_validates",
+      "path": "tests/unit/test_thought_state_model.py",
+      "line": 285
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_state_model:test_self_reference_in_parent_ids",
+      "kind": "function",
+      "name": "test_self_reference_in_parent_ids",
+      "qualified_name": "tests.unit.test_thought_state_model.test_self_reference_in_parent_ids",
+      "path": "tests/unit/test_thought_state_model.py",
+      "line": 484
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_state_model:test_terminal_states_validate",
+      "kind": "function",
+      "name": "test_terminal_states_validate",
+      "qualified_name": "tests.unit.test_thought_state_model.test_terminal_states_validate",
+      "path": "tests/unit/test_thought_state_model.py",
+      "line": 295
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_state_model:test_to_dict_rejects_non_thought_state",
+      "kind": "function",
+      "name": "test_to_dict_rejects_non_thought_state",
+      "qualified_name": "tests.unit.test_thought_state_model.test_to_dict_rejects_non_thought_state",
+      "path": "tests/unit/test_thought_state_model.py",
+      "line": 525
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_state_model:test_to_dict_round_trip",
+      "kind": "function",
+      "name": "test_to_dict_round_trip",
+      "qualified_name": "tests.unit.test_thought_state_model.test_to_dict_round_trip",
+      "path": "tests/unit/test_thought_state_model.py",
+      "line": 169
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_state_model:test_unicode_validates",
+      "kind": "function",
+      "name": "test_unicode_validates",
+      "qualified_name": "tests.unit.test_thought_state_model.test_unicode_validates",
+      "path": "tests/unit/test_thought_state_model.py",
+      "line": 300
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_state_model:test_unique_parent_ids_allowed",
+      "kind": "function",
+      "name": "test_unique_parent_ids_allowed",
+      "qualified_name": "tests.unit.test_thought_state_model.test_unique_parent_ids_allowed",
+      "path": "tests/unit/test_thought_state_model.py",
+      "line": 494
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_state_model:test_valid_states_match_schema_enum",
+      "kind": "function",
+      "name": "test_valid_states_match_schema_enum",
+      "qualified_name": "tests.unit.test_thought_state_model.test_valid_states_match_schema_enum",
+      "path": "tests/unit/test_thought_state_model.py",
+      "line": 574
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_state_model:test_validation_error_importable",
+      "kind": "function",
+      "name": "test_validation_error_importable",
+      "qualified_name": "tests.unit.test_thought_state_model.test_validation_error_importable",
+      "path": "tests/unit/test_thought_state_model.py",
+      "line": 557
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_state_model:test_validation_error_is_value_error",
+      "kind": "function",
+      "name": "test_validation_error_is_value_error",
+      "qualified_name": "tests.unit.test_thought_state_model.test_validation_error_is_value_error",
+      "path": "tests/unit/test_thought_state_model.py",
+      "line": 530
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_state_model:test_with_parent_validates",
+      "kind": "function",
+      "name": "test_with_parent_validates",
+      "qualified_name": "tests.unit.test_thought_state_model.test_with_parent_validates",
+      "path": "tests/unit/test_thought_state_model.py",
+      "line": 289
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_state_model:test_with_status_returns_new_instance",
+      "kind": "function",
+      "name": "test_with_status_returns_new_instance",
+      "qualified_name": "tests.unit.test_thought_state_model.test_with_status_returns_new_instance",
+      "path": "tests/unit/test_thought_state_model.py",
+      "line": 222
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_state_model:test_wrong_container_type",
+      "kind": "function",
+      "name": "test_wrong_container_type",
+      "qualified_name": "tests.unit.test_thought_state_model.test_wrong_container_type",
+      "path": "tests/unit/test_thought_state_model.py",
+      "line": 419
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_state_model:test_wrong_primitive_type",
+      "kind": "function",
+      "name": "test_wrong_primitive_type",
+      "qualified_name": "tests.unit.test_thought_state_model.test_wrong_primitive_type",
+      "path": "tests/unit/test_thought_state_model.py",
+      "line": 405
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_state_model:validator",
+      "kind": "function",
+      "name": "validator",
+      "qualified_name": "tests.unit.test_thought_state_model.validator",
+      "path": "tests/unit/test_thought_state_model.py",
+      "line": 50
+    },
+    {
       "id": "symbol:tests.unit.test_thought_state_schema:mutate_confidence_1_1",
       "kind": "function",
       "name": "mutate_confidence_1_1",
@@ -833,6 +3057,496 @@
       "kind": "contains"
     },
     {
+      "source": "module:nps_core.hypothesis_population.errors",
+      "target": "symbol:nps_core.hypothesis_population.errors:CycleDetectedError",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.hypothesis_population.errors",
+      "target": "symbol:nps_core.hypothesis_population.errors:DuplicateEventError",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.hypothesis_population.errors",
+      "target": "symbol:nps_core.hypothesis_population.errors:DuplicateIdError",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.hypothesis_population.errors",
+      "target": "symbol:nps_core.hypothesis_population.errors:InvalidDispositionError",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.hypothesis_population.errors",
+      "target": "symbol:nps_core.hypothesis_population.errors:InvalidTransitionError",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.hypothesis_population.errors",
+      "target": "symbol:nps_core.hypothesis_population.errors:MergeSourceError",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.hypothesis_population.errors",
+      "target": "symbol:nps_core.hypothesis_population.errors:SelfReferenceError",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.hypothesis_population.errors",
+      "target": "symbol:nps_core.hypothesis_population.errors:TerminalStateError",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.hypothesis_population.errors",
+      "target": "symbol:nps_core.hypothesis_population.errors:ThoughtStateError",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.hypothesis_population.errors",
+      "target": "symbol:nps_core.hypothesis_population.errors:ThoughtStateError.__init__",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.hypothesis_population.errors",
+      "target": "symbol:nps_core.hypothesis_population.errors:UnknownReferenceError",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.hypothesis_population.errors",
+      "target": "symbol:nps_core.hypothesis_population.errors:ValidationError",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.hypothesis_population.lifecycle",
+      "target": "symbol:nps_core.hypothesis_population.lifecycle:PopulationSnapshot",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.hypothesis_population.lifecycle",
+      "target": "symbol:nps_core.hypothesis_population.lifecycle:PopulationSnapshot.__post_init__",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.hypothesis_population.lifecycle",
+      "target": "symbol:nps_core.hypothesis_population.lifecycle:PopulationSnapshot.contains",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.hypothesis_population.lifecycle",
+      "target": "symbol:nps_core.hypothesis_population.lifecycle:PopulationSnapshot.empty",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.hypothesis_population.lifecycle",
+      "target": "symbol:nps_core.hypothesis_population.lifecycle:PopulationSnapshot.from_canonical_json",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.hypothesis_population.lifecycle",
+      "target": "symbol:nps_core.hypothesis_population.lifecycle:PopulationSnapshot.from_dict",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.hypothesis_population.lifecycle",
+      "target": "symbol:nps_core.hypothesis_population.lifecycle:PopulationSnapshot.get",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.hypothesis_population.lifecycle",
+      "target": "symbol:nps_core.hypothesis_population.lifecycle:PopulationSnapshot.lineage",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.hypothesis_population.lifecycle",
+      "target": "symbol:nps_core.hypothesis_population.lifecycle:PopulationSnapshot.to_canonical_json",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.hypothesis_population.lifecycle",
+      "target": "symbol:nps_core.hypothesis_population.lifecycle:PopulationSnapshot.to_dict",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.hypothesis_population.lifecycle",
+      "target": "symbol:nps_core.hypothesis_population.lifecycle:TransitionEvent",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.hypothesis_population.lifecycle",
+      "target": "symbol:nps_core.hypothesis_population.lifecycle:TransitionEvent.__post_init__",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.hypothesis_population.lifecycle",
+      "target": "symbol:nps_core.hypothesis_population.lifecycle:TransitionEvent.from_dict",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.hypothesis_population.lifecycle",
+      "target": "symbol:nps_core.hypothesis_population.lifecycle:TransitionEvent.to_dict",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.hypothesis_population.lifecycle",
+      "target": "symbol:nps_core.hypothesis_population.lifecycle:_is_active",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.hypothesis_population.lifecycle",
+      "target": "symbol:nps_core.hypothesis_population.lifecycle:_is_terminal",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.hypothesis_population.lifecycle",
+      "target": "symbol:nps_core.hypothesis_population.lifecycle:_validate_actor",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.hypothesis_population.lifecycle",
+      "target": "symbol:nps_core.hypothesis_population.lifecycle:_validate_disposition",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.hypothesis_population.lifecycle",
+      "target": "symbol:nps_core.hypothesis_population.lifecycle:_validate_event_id",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.hypothesis_population.lifecycle",
+      "target": "symbol:nps_core.hypothesis_population.lifecycle:_validate_id_tuple",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.hypothesis_population.lifecycle",
+      "target": "symbol:nps_core.hypothesis_population.lifecycle:_validate_non_empty_str",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.hypothesis_population.lifecycle",
+      "target": "symbol:nps_core.hypothesis_population.lifecycle:_validate_operation",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.hypothesis_population.lifecycle",
+      "target": "symbol:nps_core.hypothesis_population.lifecycle:_validate_operation_shape",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.hypothesis_population.lifecycle",
+      "target": "symbol:nps_core.hypothesis_population.lifecycle:_validate_reason",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.hypothesis_population.lifecycle",
+      "target": "symbol:nps_core.hypothesis_population.lifecycle:_validate_thought_id",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.hypothesis_population.lifecycle",
+      "target": "symbol:nps_core.hypothesis_population.lifecycle:_validate_timestamp",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.hypothesis_population.lifecycle",
+      "target": "symbol:nps_core.hypothesis_population.lifecycle:branch",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.hypothesis_population.lifecycle",
+      "target": "symbol:nps_core.hypothesis_population.lifecycle:create",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.hypothesis_population.lifecycle",
+      "target": "symbol:nps_core.hypothesis_population.lifecycle:merge",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.hypothesis_population.lifecycle",
+      "target": "symbol:nps_core.hypothesis_population.lifecycle:prune",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.hypothesis_population.lineage",
+      "target": "symbol:nps_core.hypothesis_population.lineage:LineageIndex",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.hypothesis_population.lineage",
+      "target": "symbol:nps_core.hypothesis_population.lineage:LineageIndex.add",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.hypothesis_population.lineage",
+      "target": "symbol:nps_core.hypothesis_population.lineage:LineageIndex.children_of",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.hypothesis_population.lineage",
+      "target": "symbol:nps_core.hypothesis_population.lineage:LineageIndex.contains",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.hypothesis_population.lineage",
+      "target": "symbol:nps_core.hypothesis_population.lineage:LineageIndex.empty",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.hypothesis_population.lineage",
+      "target": "symbol:nps_core.hypothesis_population.lineage:LineageIndex.from_states",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.hypothesis_population.lineage",
+      "target": "symbol:nps_core.hypothesis_population.lineage:LineageIndex.ids",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.hypothesis_population.lineage",
+      "target": "symbol:nps_core.hypothesis_population.lineage:LineageIndex.parents_of",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.hypothesis_population.lineage",
+      "target": "symbol:nps_core.hypothesis_population.lineage:LineageIndex.to_dict",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.hypothesis_population.lineage",
+      "target": "symbol:nps_core.hypothesis_population.lineage:_detect_cycle",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.hypothesis_population.lineage",
+      "target": "symbol:nps_core.hypothesis_population.lineage:_validate_state",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.hypothesis_population.serialization",
+      "target": "symbol:nps_core.hypothesis_population.serialization:canonical_json",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.hypothesis_population.serialization",
+      "target": "symbol:nps_core.hypothesis_population.serialization:parse_json",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.hypothesis_population.serialization",
+      "target": "symbol:nps_core.hypothesis_population.serialization:thought_state_from_dict",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.hypothesis_population.serialization",
+      "target": "symbol:nps_core.hypothesis_population.serialization:thought_state_from_json",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.hypothesis_population.serialization",
+      "target": "symbol:nps_core.hypothesis_population.serialization:thought_state_to_dict",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.hypothesis_population.thought_state",
+      "target": "symbol:nps_core.hypothesis_population.thought_state:Assumption",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.hypothesis_population.thought_state",
+      "target": "symbol:nps_core.hypothesis_population.thought_state:Assumption.__post_init__",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.hypothesis_population.thought_state",
+      "target": "symbol:nps_core.hypothesis_population.thought_state:Evidence",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.hypothesis_population.thought_state",
+      "target": "symbol:nps_core.hypothesis_population.thought_state:Evidence.__post_init__",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.hypothesis_population.thought_state",
+      "target": "symbol:nps_core.hypothesis_population.thought_state:ExecutorProfile",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.hypothesis_population.thought_state",
+      "target": "symbol:nps_core.hypothesis_population.thought_state:ExecutorProfile.__post_init__",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.hypothesis_population.thought_state",
+      "target": "symbol:nps_core.hypothesis_population.thought_state:Graph",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.hypothesis_population.thought_state",
+      "target": "symbol:nps_core.hypothesis_population.thought_state:Graph.__post_init__",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.hypothesis_population.thought_state",
+      "target": "symbol:nps_core.hypothesis_population.thought_state:Hypothesis",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.hypothesis_population.thought_state",
+      "target": "symbol:nps_core.hypothesis_population.thought_state:Hypothesis.__post_init__",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.hypothesis_population.thought_state",
+      "target": "symbol:nps_core.hypothesis_population.thought_state:Interpretation",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.hypothesis_population.thought_state",
+      "target": "symbol:nps_core.hypothesis_population.thought_state:Interpretation.__post_init__",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.hypothesis_population.thought_state",
+      "target": "symbol:nps_core.hypothesis_population.thought_state:Metrics",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.hypothesis_population.thought_state",
+      "target": "symbol:nps_core.hypothesis_population.thought_state:Metrics.__post_init__",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.hypothesis_population.thought_state",
+      "target": "symbol:nps_core.hypothesis_population.thought_state:Status",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.hypothesis_population.thought_state",
+      "target": "symbol:nps_core.hypothesis_population.thought_state:Status.__post_init__",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.hypothesis_population.thought_state",
+      "target": "symbol:nps_core.hypothesis_population.thought_state:ThoughtState",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.hypothesis_population.thought_state",
+      "target": "symbol:nps_core.hypothesis_population.thought_state:ThoughtState.__post_init__",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.hypothesis_population.thought_state",
+      "target": "symbol:nps_core.hypothesis_population.thought_state:ThoughtState.from_dict",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.hypothesis_population.thought_state",
+      "target": "symbol:nps_core.hypothesis_population.thought_state:ThoughtState.to_dict",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.hypothesis_population.thought_state",
+      "target": "symbol:nps_core.hypothesis_population.thought_state:ThoughtState.to_dict._assump",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.hypothesis_population.thought_state",
+      "target": "symbol:nps_core.hypothesis_population.thought_state:ThoughtState.to_dict._ep",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.hypothesis_population.thought_state",
+      "target": "symbol:nps_core.hypothesis_population.thought_state:ThoughtState.to_dict._evid",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.hypothesis_population.thought_state",
+      "target": "symbol:nps_core.hypothesis_population.thought_state:ThoughtState.to_dict._graph",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.hypothesis_population.thought_state",
+      "target": "symbol:nps_core.hypothesis_population.thought_state:ThoughtState.to_dict._hyp",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.hypothesis_population.thought_state",
+      "target": "symbol:nps_core.hypothesis_population.thought_state:ThoughtState.to_dict._interp",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.hypothesis_population.thought_state",
+      "target": "symbol:nps_core.hypothesis_population.thought_state:ThoughtState.to_dict._met",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.hypothesis_population.thought_state",
+      "target": "symbol:nps_core.hypothesis_population.thought_state:ThoughtState.to_dict._status",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.hypothesis_population.thought_state",
+      "target": "symbol:nps_core.hypothesis_population.thought_state:ThoughtState.to_dict._vp",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.hypothesis_population.thought_state",
+      "target": "symbol:nps_core.hypothesis_population.thought_state:ThoughtState.with_status",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.hypothesis_population.thought_state",
+      "target": "symbol:nps_core.hypothesis_population.thought_state:VerificationPlan",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.hypothesis_population.thought_state",
+      "target": "symbol:nps_core.hypothesis_population.thought_state:VerificationPlan.__post_init__",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.hypothesis_population.thought_state",
+      "target": "symbol:nps_core.hypothesis_population.thought_state:_check_confidence",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.hypothesis_population.thought_state",
+      "target": "symbol:nps_core.hypothesis_population.thought_state:_check_non_empty",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.hypothesis_population.thought_state",
+      "target": "symbol:nps_core.hypothesis_population.thought_state:_check_string_tuple",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.hypothesis_population.thought_state",
+      "target": "symbol:nps_core.hypothesis_population.thought_state:_require_dict",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.hypothesis_population.thought_state",
+      "target": "symbol:nps_core.hypothesis_population.thought_state:_require_list",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.hypothesis_population.thought_state",
+      "target": "symbol:nps_core.hypothesis_population.thought_state:_require_string",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.hypothesis_population.thought_state",
+      "target": "symbol:nps_core.hypothesis_population.thought_state:_string_list_to_tuple",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.hypothesis_population.thought_state",
+      "target": "symbol:nps_core.hypothesis_population.thought_state:_validate_dict_keys",
+      "kind": "contains"
+    },
+    {
       "source": "module:tests.architecture.test_package_skeleton",
       "target": "symbol:tests.architecture.test_package_skeleton:test_module_import",
       "kind": "contains"
@@ -845,6 +3559,61 @@
     {
       "source": "module:tests.integration.test_refresh_codegraph",
       "target": "symbol:tests.integration.test_refresh_codegraph:test_refresh_codegraph",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.integration.test_thought_lifecycle_end_to_end",
+      "target": "symbol:tests.integration.test_thought_lifecycle_end_to_end:_replay",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.integration.test_thought_lifecycle_end_to_end",
+      "target": "symbol:tests.integration.test_thought_lifecycle_end_to_end:_state",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.integration.test_thought_lifecycle_end_to_end",
+      "target": "symbol:tests.integration.test_thought_lifecycle_end_to_end:test_final_statuses_and_merged_claim_confidence",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.integration.test_thought_lifecycle_end_to_end",
+      "target": "symbol:tests.integration.test_thought_lifecycle_end_to_end:test_history_order_and_event_fields",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.integration.test_thought_lifecycle_end_to_end",
+      "target": "symbol:tests.integration.test_thought_lifecycle_end_to_end:test_lineage_and_no_dangling_references",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.integration.test_thought_lifecycle_end_to_end",
+      "target": "symbol:tests.integration.test_thought_lifecycle_end_to_end:test_prior_snapshots_round_trip_unchanged",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.integration.test_thought_lifecycle_end_to_end",
+      "target": "symbol:tests.integration.test_thought_lifecycle_end_to_end:test_replay_byte_identity",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.integration.test_thought_lifecycle_end_to_end",
+      "target": "symbol:tests.integration.test_thought_lifecycle_end_to_end:test_snapshot_dict_json_round_trip",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.integration.test_thought_lifecycle_end_to_end",
+      "target": "symbol:tests.integration.test_thought_lifecycle_end_to_end:test_sorted_thought_ids",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.integration.test_thought_lifecycle_end_to_end",
+      "target": "symbol:tests.integration.test_thought_lifecycle_end_to_end:test_thought_state_dict_round_trip",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.integration.test_thought_lifecycle_end_to_end",
+      "target": "symbol:tests.integration.test_thought_lifecycle_end_to_end:test_transition_event_dict_round_trip",
       "kind": "contains"
     },
     {
@@ -1038,6 +3807,811 @@
       "kind": "contains"
     },
     {
+      "source": "module:tests.unit.test_thought_lifecycle",
+      "target": "symbol:tests.unit.test_thought_lifecycle:TestLineageIndexEmpty",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_lifecycle",
+      "target": "symbol:tests.unit.test_thought_lifecycle:TestLineageIndexEmpty.test_empty_index",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_lifecycle",
+      "target": "symbol:tests.unit.test_thought_lifecycle:TestLineageIndexFromStates",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_lifecycle",
+      "target": "symbol:tests.unit.test_thought_lifecycle:TestLineageIndexFromStates.test_canonical_queries",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_lifecycle",
+      "target": "symbol:tests.unit.test_thought_lifecycle:TestLineageIndexFromStates.test_order_independence",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_lifecycle",
+      "target": "symbol:tests.unit.test_thought_lifecycle:TestLineageIndexFromStates.test_to_dict",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_lifecycle",
+      "target": "symbol:tests.unit.test_thought_lifecycle:TestLineageIndexImmutable",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_lifecycle",
+      "target": "symbol:tests.unit.test_thought_lifecycle:TestLineageIndexImmutable.test_add_returns_new_instance",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_lifecycle",
+      "target": "symbol:tests.unit.test_thought_lifecycle:TestLineageIndexRejects",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_lifecycle",
+      "target": "symbol:tests.unit.test_thought_lifecycle:TestLineageIndexRejects.test_duplicate_add_rejected",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_lifecycle",
+      "target": "symbol:tests.unit.test_thought_lifecycle:TestLineageIndexRejects.test_duplicate_from_states_rejected",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_lifecycle",
+      "target": "symbol:tests.unit.test_thought_lifecycle:TestLineageIndexRejects.test_self_reference_rejected",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_lifecycle",
+      "target": "symbol:tests.unit.test_thought_lifecycle:TestLineageIndexRejects.test_two_node_cycle_rejected",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_lifecycle",
+      "target": "symbol:tests.unit.test_thought_lifecycle:TestLineageIndexRejects.test_unknown_parent_add_rejected",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_lifecycle",
+      "target": "symbol:tests.unit.test_thought_lifecycle:TestLineageIndexRejects.test_unknown_parent_rejected",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_lifecycle",
+      "target": "symbol:tests.unit.test_thought_lifecycle:TestLineageIndexRejects.test_unknown_query_rejected",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_lifecycle",
+      "target": "symbol:tests.unit.test_thought_lifecycle:TestPopulationSnapshotHistoryOrder",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_lifecycle",
+      "target": "symbol:tests.unit.test_thought_lifecycle:TestPopulationSnapshotHistoryOrder.test_history_preserves_insertion_order",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_lifecycle",
+      "target": "symbol:tests.unit.test_thought_lifecycle:TestPopulationSnapshotImmutable",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_lifecycle",
+      "target": "symbol:tests.unit.test_thought_lifecycle:TestPopulationSnapshotImmutable.test_tuple_fields_are_frozen",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_lifecycle",
+      "target": "symbol:tests.unit.test_thought_lifecycle:TestPopulationSnapshotRejects",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_lifecycle",
+      "target": "symbol:tests.unit.test_thought_lifecycle:TestPopulationSnapshotRejects.test_duplicate_event_id_rejected",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_lifecycle",
+      "target": "symbol:tests.unit.test_thought_lifecycle:TestPopulationSnapshotRejects.test_duplicate_thought_id_rejected",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_lifecycle",
+      "target": "symbol:tests.unit.test_thought_lifecycle:TestPopulationSnapshotRejects.test_event_unknown_input_ref_rejected",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_lifecycle",
+      "target": "symbol:tests.unit.test_thought_lifecycle:TestPopulationSnapshotRejects.test_event_unknown_output_ref_rejected",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_lifecycle",
+      "target": "symbol:tests.unit.test_thought_lifecycle:TestPopulationSnapshotRoundTrip",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_lifecycle",
+      "target": "symbol:tests.unit.test_thought_lifecycle:TestPopulationSnapshotRoundTrip.test_dict_roundtrip",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_lifecycle",
+      "target": "symbol:tests.unit.test_thought_lifecycle:TestPopulationSnapshotRoundTrip.test_json_roundtrip_deterministic",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_lifecycle",
+      "target": "symbol:tests.unit.test_thought_lifecycle:TestPopulationSnapshotSorting",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_lifecycle",
+      "target": "symbol:tests.unit.test_thought_lifecycle:TestPopulationSnapshotSorting.test_thoughts_sorted_by_id",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_lifecycle",
+      "target": "symbol:tests.unit.test_thought_lifecycle:TestTransitionEventDuplicateIds",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_lifecycle",
+      "target": "symbol:tests.unit.test_thought_lifecycle:TestTransitionEventDuplicateIds.test_duplicate_input_ids_rejected",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_lifecycle",
+      "target": "symbol:tests.unit.test_thought_lifecycle:TestTransitionEventDuplicateIds.test_duplicate_output_ids_rejected",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_lifecycle",
+      "target": "symbol:tests.unit.test_thought_lifecycle:TestTransitionEventEquality",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_lifecycle",
+      "target": "symbol:tests.unit.test_thought_lifecycle:TestTransitionEventEquality.test_different_event_ids_not_equal",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_lifecycle",
+      "target": "symbol:tests.unit.test_thought_lifecycle:TestTransitionEventEquality.test_equal_events_are_equal",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_lifecycle",
+      "target": "symbol:tests.unit.test_thought_lifecycle:TestTransitionEventFrozen",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_lifecycle",
+      "target": "symbol:tests.unit.test_thought_lifecycle:TestTransitionEventFrozen.test_fields_are_frozen",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_lifecycle",
+      "target": "symbol:tests.unit.test_thought_lifecycle:TestTransitionEventKeyValidation",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_lifecycle",
+      "target": "symbol:tests.unit.test_thought_lifecycle:TestTransitionEventKeyValidation.test_bad_timestamp_rejected",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_lifecycle",
+      "target": "symbol:tests.unit.test_thought_lifecycle:TestTransitionEventKeyValidation.test_bad_type_for_input_ids_rejected",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_lifecycle",
+      "target": "symbol:tests.unit.test_thought_lifecycle:TestTransitionEventKeyValidation.test_extra_key_rejected",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_lifecycle",
+      "target": "symbol:tests.unit.test_thought_lifecycle:TestTransitionEventKeyValidation.test_missing_required_key_rejected",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_lifecycle",
+      "target": "symbol:tests.unit.test_thought_lifecycle:TestTransitionEventKeyValidation.test_semantically_invalid_rfc3339_rejected",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_lifecycle",
+      "target": "symbol:tests.unit.test_thought_lifecycle:TestTransitionEventMalformed",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_lifecycle",
+      "target": "symbol:tests.unit.test_thought_lifecycle:TestTransitionEventMalformed.test_branch_same_input_output_rejected",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_lifecycle",
+      "target": "symbol:tests.unit.test_thought_lifecycle:TestTransitionEventMalformed.test_create_with_inputs_rejected",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_lifecycle",
+      "target": "symbol:tests.unit.test_thought_lifecycle:TestTransitionEventMalformed.test_merge_single_input_rejected",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_lifecycle",
+      "target": "symbol:tests.unit.test_thought_lifecycle:TestTransitionEventMalformed.test_prune_mismatched_ids_rejected",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_lifecycle",
+      "target": "symbol:tests.unit.test_thought_lifecycle:TestTransitionEventOperationShapes",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_lifecycle",
+      "target": "symbol:tests.unit.test_thought_lifecycle:TestTransitionEventOperationShapes.test_valid_operation_shape",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_lifecycle",
+      "target": "symbol:tests.unit.test_thought_lifecycle:TestTransitionEventReasonDisposition",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_lifecycle",
+      "target": "symbol:tests.unit.test_thought_lifecycle:TestTransitionEventReasonDisposition.test_non_prune_with_disposition_rejected",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_lifecycle",
+      "target": "symbol:tests.unit.test_thought_lifecycle:TestTransitionEventReasonDisposition.test_non_prune_with_reason_rejected",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_lifecycle",
+      "target": "symbol:tests.unit.test_thought_lifecycle:TestTransitionEventReasonDisposition.test_prune_blank_reason_rejected",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_lifecycle",
+      "target": "symbol:tests.unit.test_thought_lifecycle:TestTransitionEventReasonDisposition.test_prune_invalid_disposition_rejected",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_lifecycle",
+      "target": "symbol:tests.unit.test_thought_lifecycle:TestTransitionEventRoundTrip",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_lifecycle",
+      "target": "symbol:tests.unit.test_thought_lifecycle:TestTransitionEventRoundTrip.test_prune_with_reason_and_disposition_roundtrip",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_lifecycle",
+      "target": "symbol:tests.unit.test_thought_lifecycle:TestTransitionEventRoundTrip.test_to_dict_from_dict_roundtrip",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_lifecycle",
+      "target": "symbol:tests.unit.test_thought_lifecycle:_bytes",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_lifecycle",
+      "target": "symbol:tests.unit.test_thought_lifecycle:_event",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_lifecycle",
+      "target": "symbol:tests.unit.test_thought_lifecycle:_kwargs",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_lifecycle",
+      "target": "symbol:tests.unit.test_thought_lifecycle:_state",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_lifecycle",
+      "target": "symbol:tests.unit.test_thought_lifecycle:_two_active_roots",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_lifecycle",
+      "target": "symbol:tests.unit.test_thought_lifecycle:test_branch_child_id_collision_rejected",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_lifecycle",
+      "target": "symbol:tests.unit.test_thought_lifecycle:test_branch_deterministic_event_shape",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_lifecycle",
+      "target": "symbol:tests.unit.test_thought_lifecycle:test_branch_duplicate_event_rejected",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_lifecycle",
+      "target": "symbol:tests.unit.test_thought_lifecycle:test_branch_failure_atomicity",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_lifecycle",
+      "target": "symbol:tests.unit.test_thought_lifecycle:test_branch_mismatched_parent_rejected",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_lifecycle",
+      "target": "symbol:tests.unit.test_thought_lifecycle:test_branch_non_active_child_rejected",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_lifecycle",
+      "target": "symbol:tests.unit.test_thought_lifecycle:test_branch_self_parent_rejected",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_lifecycle",
+      "target": "symbol:tests.unit.test_thought_lifecycle:test_branch_success_parent_unchanged",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_lifecycle",
+      "target": "symbol:tests.unit.test_thought_lifecycle:test_branch_terminal_parent_rejected",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_lifecycle",
+      "target": "symbol:tests.unit.test_thought_lifecycle:test_branch_unknown_parent_rejected",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_lifecycle",
+      "target": "symbol:tests.unit.test_thought_lifecycle:test_create_deterministic_repeat",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_lifecycle",
+      "target": "symbol:tests.unit.test_thought_lifecycle:test_create_duplicate_event_id_rejected",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_lifecycle",
+      "target": "symbol:tests.unit.test_thought_lifecycle:test_create_failure_atomicity",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_lifecycle",
+      "target": "symbol:tests.unit.test_thought_lifecycle:test_create_immutability",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_lifecycle",
+      "target": "symbol:tests.unit.test_thought_lifecycle:test_create_prior_snapshot_unchanged",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_lifecycle",
+      "target": "symbol:tests.unit.test_thought_lifecycle:test_create_root_active_new_requirements",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_lifecycle",
+      "target": "symbol:tests.unit.test_thought_lifecycle:test_create_success_audit_shape",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_lifecycle",
+      "target": "symbol:tests.unit.test_thought_lifecycle:test_from_canonical_json_rejects_bad_input",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_lifecycle",
+      "target": "symbol:tests.unit.test_thought_lifecycle:test_merge_bad_source_ids",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_lifecycle",
+      "target": "symbol:tests.unit.test_thought_lifecycle:test_merge_failure_prior_bytes_unchanged",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_lifecycle",
+      "target": "symbol:tests.unit.test_thought_lifecycle:test_merge_inactive_result_rejected",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_lifecycle",
+      "target": "symbol:tests.unit.test_thought_lifecycle:test_merge_list_and_generator_source_ids_byte_identical",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_lifecycle",
+      "target": "symbol:tests.unit.test_thought_lifecycle:test_merge_result_id_collision_rejected",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_lifecycle",
+      "target": "symbol:tests.unit.test_thought_lifecycle:test_merge_result_parent_mismatch_rejected",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_lifecycle",
+      "target": "symbol:tests.unit.test_thought_lifecycle:test_merge_success_sources_merged_result_active",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_lifecycle",
+      "target": "symbol:tests.unit.test_thought_lifecycle:test_merge_terminal_source_rejected",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_lifecycle",
+      "target": "symbol:tests.unit.test_thought_lifecycle:test_merge_unknown_source_rejected",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_lifecycle",
+      "target": "symbol:tests.unit.test_thought_lifecycle:test_prune_audit_reason_disposition_input_output",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_lifecycle",
+      "target": "symbol:tests.unit.test_thought_lifecycle:test_prune_blank_reason_rejected",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_lifecycle",
+      "target": "symbol:tests.unit.test_thought_lifecycle:test_prune_duplicate_event_rejected",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_lifecycle",
+      "target": "symbol:tests.unit.test_thought_lifecycle:test_prune_failure_prior_bytes_unchanged",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_lifecycle",
+      "target": "symbol:tests.unit.test_thought_lifecycle:test_prune_invalid_disposition_rejected",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_lifecycle",
+      "target": "symbol:tests.unit.test_thought_lifecycle:test_prune_non_string_reason_rejected",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_lifecycle",
+      "target": "symbol:tests.unit.test_thought_lifecycle:test_prune_repeated_terminal_rejected",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_lifecycle",
+      "target": "symbol:tests.unit.test_thought_lifecycle:test_prune_success_rejected_and_dormant",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_lifecycle",
+      "target": "symbol:tests.unit.test_thought_lifecycle:test_prune_unknown_target_rejected",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_lifecycle",
+      "target": "symbol:tests.unit.test_thought_lifecycle:test_state_round_trip",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_state_model",
+      "target": "symbol:tests.unit.test_thought_state_model:_canonical_dict",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_state_model",
+      "target": "symbol:tests.unit.test_thought_state_model:_delete",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_state_model",
+      "target": "symbol:tests.unit.test_thought_state_model:_mutate",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_state_model",
+      "target": "symbol:tests.unit.test_thought_state_model:schema",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_state_model",
+      "target": "symbol:tests.unit.test_thought_state_model:test_all_constants_importable",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_state_model",
+      "target": "symbol:tests.unit.test_thought_state_model:test_all_serialization_functions_importable",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_state_model",
+      "target": "symbol:tests.unit.test_thought_state_model:test_all_value_types_importable",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_state_model",
+      "target": "symbol:tests.unit.test_thought_state_model:test_assumptions_preserved",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_state_model",
+      "target": "symbol:tests.unit.test_thought_state_model:test_canonical_dict_validates",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_state_model",
+      "target": "symbol:tests.unit.test_thought_state_model:test_canonical_json_byte_identical",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_state_model",
+      "target": "symbol:tests.unit.test_thought_state_model:test_canonical_json_compact_separators",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_state_model",
+      "target": "symbol:tests.unit.test_thought_state_model:test_canonical_json_on_dict",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_state_model",
+      "target": "symbol:tests.unit.test_thought_state_model:test_canonical_json_on_list",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_state_model",
+      "target": "symbol:tests.unit.test_thought_state_model:test_canonical_json_rejects_nan",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_state_model",
+      "target": "symbol:tests.unit.test_thought_state_model:test_canonical_json_rejects_non_serializable",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_state_model",
+      "target": "symbol:tests.unit.test_thought_state_model:test_canonical_json_sorted_keys",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_state_model",
+      "target": "symbol:tests.unit.test_thought_state_model:test_canonical_json_unicode_preserved",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_state_model",
+      "target": "symbol:tests.unit.test_thought_state_model:test_canonical_separators_constant",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_state_model",
+      "target": "symbol:tests.unit.test_thought_state_model:test_confidence_boundary",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_state_model",
+      "target": "symbol:tests.unit.test_thought_state_model:test_deep_copy_round_trip",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_state_model",
+      "target": "symbol:tests.unit.test_thought_state_model:test_duplicate_assumption_ids",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_state_model",
+      "target": "symbol:tests.unit.test_thought_state_model:test_duplicate_parent_ids",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_state_model",
+      "target": "symbol:tests.unit.test_thought_state_model:test_empty_parent_ids_allowed",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_state_model",
+      "target": "symbol:tests.unit.test_thought_state_model:test_empty_string_rejected",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_state_model",
+      "target": "symbol:tests.unit.test_thought_state_model:test_exact_round_trip_through_public_api",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_state_model",
+      "target": "symbol:tests.unit.test_thought_state_model:test_extra_nested_field",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_state_model",
+      "target": "symbol:tests.unit.test_thought_state_model:test_extra_root_field",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_state_model",
+      "target": "symbol:tests.unit.test_thought_state_model:test_from_dict_returns_thought_state",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_state_model",
+      "target": "symbol:tests.unit.test_thought_state_model:test_from_dict_to_dict_round_trip",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_state_model",
+      "target": "symbol:tests.unit.test_thought_state_model:test_from_json_failures",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_state_model",
+      "target": "symbol:tests.unit.test_thought_state_model:test_from_json_to_json_round_trip",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_state_model",
+      "target": "symbol:tests.unit.test_thought_state_model:test_frozen_rejects_mutation",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_state_model",
+      "target": "symbol:tests.unit.test_thought_state_model:test_huge_integer_confidence_rejected_as_validation_error",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_state_model",
+      "target": "symbol:tests.unit.test_thought_state_model:test_int_rejected_for_thought_id",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_state_model",
+      "target": "symbol:tests.unit.test_thought_state_model:test_invalid_confidence",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_state_model",
+      "target": "symbol:tests.unit.test_thought_state_model:test_invalid_identifiers",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_state_model",
+      "target": "symbol:tests.unit.test_thought_state_model:test_json_round_trip_through_public_api",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_state_model",
+      "target": "symbol:tests.unit.test_thought_state_model:test_missing_nested_field",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_state_model",
+      "target": "symbol:tests.unit.test_thought_state_model:test_missing_root_field",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_state_model",
+      "target": "symbol:tests.unit.test_thought_state_model:test_non_string_identifiers",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_state_model",
+      "target": "symbol:tests.unit.test_thought_state_model:test_parent_ids_preserved",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_state_model",
+      "target": "symbol:tests.unit.test_thought_state_model:test_parent_ids_tuple_immutable",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_state_model",
+      "target": "symbol:tests.unit.test_thought_state_model:test_parse_json_not_string",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_state_model",
+      "target": "symbol:tests.unit.test_thought_state_model:test_parse_json_valid",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_state_model",
+      "target": "symbol:tests.unit.test_thought_state_model:test_production_module_imports_only_allowed",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_state_model",
+      "target": "symbol:tests.unit.test_thought_state_model:test_round_trip_validates",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_state_model",
+      "target": "symbol:tests.unit.test_thought_state_model:test_self_reference_in_parent_ids",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_state_model",
+      "target": "symbol:tests.unit.test_thought_state_model:test_terminal_states_validate",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_state_model",
+      "target": "symbol:tests.unit.test_thought_state_model:test_to_dict_rejects_non_thought_state",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_state_model",
+      "target": "symbol:tests.unit.test_thought_state_model:test_to_dict_round_trip",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_state_model",
+      "target": "symbol:tests.unit.test_thought_state_model:test_unicode_validates",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_state_model",
+      "target": "symbol:tests.unit.test_thought_state_model:test_unique_parent_ids_allowed",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_state_model",
+      "target": "symbol:tests.unit.test_thought_state_model:test_valid_states_match_schema_enum",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_state_model",
+      "target": "symbol:tests.unit.test_thought_state_model:test_validation_error_importable",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_state_model",
+      "target": "symbol:tests.unit.test_thought_state_model:test_validation_error_is_value_error",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_state_model",
+      "target": "symbol:tests.unit.test_thought_state_model:test_with_parent_validates",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_state_model",
+      "target": "symbol:tests.unit.test_thought_state_model:test_with_status_returns_new_instance",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_state_model",
+      "target": "symbol:tests.unit.test_thought_state_model:test_wrong_container_type",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_state_model",
+      "target": "symbol:tests.unit.test_thought_state_model:test_wrong_primitive_type",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_state_model",
+      "target": "symbol:tests.unit.test_thought_state_model:validator",
+      "kind": "contains"
+    },
+    {
       "source": "module:tests.unit.test_thought_state_schema",
       "target": "symbol:tests.unit.test_thought_state_schema:mutate_confidence_1_1",
       "kind": "contains"
@@ -1123,6 +4697,171 @@
       "kind": "imports"
     },
     {
+      "source": "module:nps_core.hypothesis_population",
+      "target": "import:__future__",
+      "kind": "imports"
+    },
+    {
+      "source": "module:nps_core.hypothesis_population",
+      "target": "import:nps_core.hypothesis_population.errors",
+      "kind": "imports"
+    },
+    {
+      "source": "module:nps_core.hypothesis_population",
+      "target": "import:nps_core.hypothesis_population.lifecycle",
+      "kind": "imports"
+    },
+    {
+      "source": "module:nps_core.hypothesis_population",
+      "target": "import:nps_core.hypothesis_population.lineage",
+      "kind": "imports"
+    },
+    {
+      "source": "module:nps_core.hypothesis_population",
+      "target": "import:nps_core.hypothesis_population.serialization",
+      "kind": "imports"
+    },
+    {
+      "source": "module:nps_core.hypothesis_population",
+      "target": "import:nps_core.hypothesis_population.thought_state",
+      "kind": "imports"
+    },
+    {
+      "source": "module:nps_core.hypothesis_population.errors",
+      "target": "import:__future__",
+      "kind": "imports"
+    },
+    {
+      "source": "module:nps_core.hypothesis_population.lifecycle",
+      "target": "import:__future__",
+      "kind": "imports"
+    },
+    {
+      "source": "module:nps_core.hypothesis_population.lifecycle",
+      "target": "import:dataclasses",
+      "kind": "imports"
+    },
+    {
+      "source": "module:nps_core.hypothesis_population.lifecycle",
+      "target": "import:datetime",
+      "kind": "imports"
+    },
+    {
+      "source": "module:nps_core.hypothesis_population.lifecycle",
+      "target": "import:json",
+      "kind": "imports"
+    },
+    {
+      "source": "module:nps_core.hypothesis_population.lifecycle",
+      "target": "import:nps_core.hypothesis_population.errors",
+      "kind": "imports"
+    },
+    {
+      "source": "module:nps_core.hypothesis_population.lifecycle",
+      "target": "import:nps_core.hypothesis_population.lineage",
+      "kind": "imports"
+    },
+    {
+      "source": "module:nps_core.hypothesis_population.lifecycle",
+      "target": "import:nps_core.hypothesis_population.thought_state",
+      "kind": "imports"
+    },
+    {
+      "source": "module:nps_core.hypothesis_population.lifecycle",
+      "target": "import:re",
+      "kind": "imports"
+    },
+    {
+      "source": "module:nps_core.hypothesis_population.lifecycle",
+      "target": "import:typing",
+      "kind": "imports"
+    },
+    {
+      "source": "module:nps_core.hypothesis_population.lineage",
+      "target": "import:__future__",
+      "kind": "imports"
+    },
+    {
+      "source": "module:nps_core.hypothesis_population.lineage",
+      "target": "import:dataclasses",
+      "kind": "imports"
+    },
+    {
+      "source": "module:nps_core.hypothesis_population.lineage",
+      "target": "import:nps_core.hypothesis_population.errors",
+      "kind": "imports"
+    },
+    {
+      "source": "module:nps_core.hypothesis_population.lineage",
+      "target": "import:nps_core.hypothesis_population.thought_state",
+      "kind": "imports"
+    },
+    {
+      "source": "module:nps_core.hypothesis_population.lineage",
+      "target": "import:typing",
+      "kind": "imports"
+    },
+    {
+      "source": "module:nps_core.hypothesis_population.serialization",
+      "target": "import:__future__",
+      "kind": "imports"
+    },
+    {
+      "source": "module:nps_core.hypothesis_population.serialization",
+      "target": "import:json",
+      "kind": "imports"
+    },
+    {
+      "source": "module:nps_core.hypothesis_population.serialization",
+      "target": "import:nps_core.hypothesis_population.errors",
+      "kind": "imports"
+    },
+    {
+      "source": "module:nps_core.hypothesis_population.serialization",
+      "target": "import:nps_core.hypothesis_population.thought_state",
+      "kind": "imports"
+    },
+    {
+      "source": "module:nps_core.hypothesis_population.serialization",
+      "target": "import:typing",
+      "kind": "imports"
+    },
+    {
+      "source": "module:nps_core.hypothesis_population.thought_state",
+      "target": "import:__future__",
+      "kind": "imports"
+    },
+    {
+      "source": "module:nps_core.hypothesis_population.thought_state",
+      "target": "import:dataclasses",
+      "kind": "imports"
+    },
+    {
+      "source": "module:nps_core.hypothesis_population.thought_state",
+      "target": "import:datetime",
+      "kind": "imports"
+    },
+    {
+      "source": "module:nps_core.hypothesis_population.thought_state",
+      "target": "import:math",
+      "kind": "imports"
+    },
+    {
+      "source": "module:nps_core.hypothesis_population.thought_state",
+      "target": "import:nps_core.hypothesis_population.errors",
+      "kind": "imports"
+    },
+    {
+      "source": "module:nps_core.hypothesis_population.thought_state",
+      "target": "import:re",
+      "kind": "imports"
+    },
+    {
+      "source": "module:nps_core.hypothesis_population.thought_state",
+      "target": "import:typing",
+      "kind": "imports"
+    },
+    {
       "source": "module:scripts.refresh_codegraph",
       "target": "import:nps_core.codegraph.indexer",
       "kind": "imports"
@@ -1180,6 +4919,21 @@
     {
       "source": "module:tests.integration.test_refresh_codegraph",
       "target": "import:sys",
+      "kind": "imports"
+    },
+    {
+      "source": "module:tests.integration.test_thought_lifecycle_end_to_end",
+      "target": "import:__future__",
+      "kind": "imports"
+    },
+    {
+      "source": "module:tests.integration.test_thought_lifecycle_end_to_end",
+      "target": "import:json",
+      "kind": "imports"
+    },
+    {
+      "source": "module:tests.integration.test_thought_lifecycle_end_to_end",
+      "target": "import:nps_core.hypothesis_population",
       "kind": "imports"
     },
     {
@@ -1335,6 +5089,71 @@
     {
       "source": "module:tests.unit.test_task_contract_schema",
       "target": "import:pytest",
+      "kind": "imports"
+    },
+    {
+      "source": "module:tests.unit.test_thought_lifecycle",
+      "target": "import:__future__",
+      "kind": "imports"
+    },
+    {
+      "source": "module:tests.unit.test_thought_lifecycle",
+      "target": "import:nps_core.hypothesis_population",
+      "kind": "imports"
+    },
+    {
+      "source": "module:tests.unit.test_thought_lifecycle",
+      "target": "import:pytest",
+      "kind": "imports"
+    },
+    {
+      "source": "module:tests.unit.test_thought_state_model",
+      "target": "import:__future__",
+      "kind": "imports"
+    },
+    {
+      "source": "module:tests.unit.test_thought_state_model",
+      "target": "import:ast",
+      "kind": "imports"
+    },
+    {
+      "source": "module:tests.unit.test_thought_state_model",
+      "target": "import:copy",
+      "kind": "imports"
+    },
+    {
+      "source": "module:tests.unit.test_thought_state_model",
+      "target": "import:json",
+      "kind": "imports"
+    },
+    {
+      "source": "module:tests.unit.test_thought_state_model",
+      "target": "import:jsonschema",
+      "kind": "imports"
+    },
+    {
+      "source": "module:tests.unit.test_thought_state_model",
+      "target": "import:nps_core.hypothesis_population",
+      "kind": "imports"
+    },
+    {
+      "source": "module:tests.unit.test_thought_state_model",
+      "target": "import:pathlib",
+      "kind": "imports"
+    },
+    {
+      "source": "module:tests.unit.test_thought_state_model",
+      "target": "import:pytest",
+      "kind": "imports"
+    },
+    {
+      "source": "module:tests.unit.test_thought_state_model",
+      "target": "import:sys",
+      "kind": "imports"
+    },
+    {
+      "source": "module:tests.unit.test_thought_state_model",
+      "target": "import:typing",
       "kind": "imports"
     },
     {

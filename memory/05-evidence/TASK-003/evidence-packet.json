@@ -1,0 +1,43 @@
+{
+  "evidence_id": "EV-TASK-003-ATOMIC-EVIDENCE",
+  "task_id": "TASK-003",
+  "executor_id": "mimo-v2.5-pro-isolated-roles",
+  "claim": "TASK-003 implements strict deterministic evidence assimilation and atomic multi-ThoughtState replacement.",
+  "result": "493 tests collected, 492 passed, one inherited Windows symlink test skipped, Ruff and compileall passed, and all final MiMo review scopes returned APPROVED.",
+  "method": "MiMo architect, coder, tester, and reviewer role isolation followed by schema checks, strict unit tests, atomic failure tests, explicit digest verification, replay-identical integration, full regression, lint, compilation, and Codex contract audit.",
+  "artifacts": [
+    "src/nps_core/evidence_assimilator",
+    "src/nps_core/state_update",
+    "tests/unit/test_evidence_packet_model.py",
+    "tests/unit/test_evidence_assimilation.py",
+    "tests/unit/test_atomic_state_update.py",
+    "tests/integration/test_multi_hypothesis_evidence_update.py",
+    "memory/05-evidence/TASK-003/test-report.md",
+    "memory/05-evidence/TASK-003/review-report.md"
+  ],
+  "confidence": 0.99,
+  "limitations": [
+    "Coder, tester, and reviewer use the same MiMo model family under isolated sessions.",
+    "One inherited Windows symlink test is skipped because the operating system denies symlink creation."
+  ],
+  "failure_modes": [
+    "Future snapshot or schema changes can invalidate the strict replacement boundary and require new review.",
+    "Future commits can stale codegraph metadata unless the exact-HEAD refresh gate is repeated."
+  ],
+  "reproducibility": {
+    "command": ".venv\\Scripts\\python.exe -m pytest -q; .venv\\Scripts\\ruff.exe check .; .venv\\Scripts\\python.exe -m compileall -q src tests",
+    "environment": "Windows PowerShell; Python 3.12.13; pytest 9.1.1; Ruff 0.15.22; nps-core workspace",
+    "seed": null
+  },
+  "affected_hypotheses": [
+    "TASK-003 evidence assimilation and atomic state-update acceptance claim"
+  ],
+  "provenance": [
+    "User-authorized prepaid MiMo API execution after Hermes MCP was unavailable.",
+    "MiMo-authored architecture decision and production implementation.",
+    "MiMo-authored independent unit and integration tests.",
+    "Final scoped MiMo reviewer verdicts: APPROVED.",
+    "Codex-observed machine validation and TaskContract audit."
+  ],
+  "content_hash": "sha256:800ecd572d490d7e2c07d8aec3ecb236c50d310c2b99261efe01da5da5074e25"
+}

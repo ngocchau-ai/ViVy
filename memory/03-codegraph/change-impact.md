@@ -12,6 +12,11 @@ Generated baseline for indexed modules.
 - src/nps_core/executor_router/__init__.py
 - src/nps_core/experiment_designer/__init__.py
 - src/nps_core/hypothesis_population/__init__.py
+- src/nps_core/hypothesis_population/errors.py
+- src/nps_core/hypothesis_population/lifecycle.py
+- src/nps_core/hypothesis_population/lineage.py
+- src/nps_core/hypothesis_population/serialization.py
+- src/nps_core/hypothesis_population/thought_state.py
 - src/nps_core/interfaces/__init__.py
 - src/nps_core/memory/__init__.py
 - src/nps_core/problem_compiler/__init__.py
@@ -21,6 +26,7 @@ Generated baseline for indexed modules.
 - scripts/refresh_codegraph.py
 - tests/architecture/test_package_skeleton.py
 - tests/integration/test_refresh_codegraph.py
+- tests/integration/test_thought_lifecycle_end_to_end.py
 - tests/unit/test_codegraph_build.py
 - tests/unit/test_codegraph_errors.py
 - tests/unit/test_codegraph_writes.py
@@ -28,4 +34,6 @@ Generated baseline for indexed modules.
 - tests/unit/test_experiment_schema.py
 - tests/unit/test_schemas.py
 - tests/unit/test_task_contract_schema.py
+- tests/unit/test_thought_lifecycle.py
+- tests/unit/test_thought_state_model.py
 - tests/unit/test_thought_state_schema.py
