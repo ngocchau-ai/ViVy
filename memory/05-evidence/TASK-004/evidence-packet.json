@@ -1,0 +1,41 @@
+{
+  "evidence_id": "EV-TASK-004-THOUGHT-ECOLOGY",
+  "task_id": "TASK-004",
+  "executor_id": "mimo-v2.5-pro-isolated-roles",
+  "claim": "TASK-004 implements a strict deterministic exact-snapshot Thought Ecology graph index.",
+  "result": "594 tests collected, 593 passed, one inherited Windows symlink test skipped, Ruff and compileall passed, and all final MiMo review scopes returned APPROVED.",
+  "method": "MiMo architect, coder, tester, and reviewer role isolation followed by strict relation/index tests, graph invariant and cycle tests, exact digest verification, replay-identical integration, static import audit, full regression, lint, compilation, and Codex TaskContract audit.",
+  "artifacts": [
+    "src/nps_core/thought_ecology",
+    "tests/unit/test_thought_ecology.py",
+    "tests/integration/test_thought_ecology_population.py",
+    "memory/02-decisions/ADR-0007-thought-ecology.md",
+    "memory/05-evidence/TASK-004/test-report.md",
+    "memory/05-evidence/TASK-004/review-report.md"
+  ],
+  "confidence": 0.99,
+  "limitations": [
+    "Coder, tester, and reviewer use the same MiMo model family under isolated sessions.",
+    "One inherited Windows symlink test is skipped because the operating system denies symlink creation."
+  ],
+  "failure_modes": [
+    "Future ThoughtState graph or PopulationSnapshot canonical-format changes require ecology contract review.",
+    "Future commits can stale codegraph metadata unless the exact-HEAD refresh gate is repeated."
+  ],
+  "reproducibility": {
+    "command": ".venv\\Scripts\\python.exe -m pytest -q; .venv\\Scripts\\ruff.exe check .; .venv\\Scripts\\python.exe -m compileall -q src tests",
+    "environment": "Windows PowerShell; Python 3.12.13; pytest 9.1.1; Ruff 0.15.22; nps-core workspace",
+    "seed": null
+  },
+  "affected_hypotheses": [
+    "TASK-004 deterministic Thought Ecology acceptance claim"
+  ],
+  "provenance": [
+    "User-authorized prepaid MiMo API execution after Hermes MCP was unavailable.",
+    "MiMo-authored architecture decision and production implementation.",
+    "MiMo-authored independent unit, integration, and hardening tests.",
+    "Final scoped MiMo reviewer verdicts: APPROVED.",
+    "Codex-observed machine validation and TaskContract audit."
+  ],
+  "content_hash": "sha256:efb08e3f2136d94cb3cd0024c6e2b35b5948c03aee9e43746fa2b92692205cd7"
+}
