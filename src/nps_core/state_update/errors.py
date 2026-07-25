@@ -1,4 +1,4 @@
-"""Domain exceptions for atomic state updates.
+"""Domain exceptions for the atomic state update engine.
 
 All exceptions are deterministic and carry no nondeterministic data.
 """
@@ -35,12 +35,12 @@ class StateUpdateError(ValueError):
 
 
 class ReplacementValidationError(StateUpdateError):
-    """A ThoughtState replacement fails structural or value validation."""
+    """A replacement ThoughtState fails validation."""
 
 
 class TargetMismatchError(StateUpdateError):
-    """Replacement target set does not match the expected affected set."""
+    """The replacement key set does not match the plan targets."""
 
 
 class InvalidRecordError(StateUpdateError):
-    """The update record metadata is missing or malformed."""
+    """The EvidenceUpdateRecord metadata is invalid."""

@@ -1,4 +1,4 @@
-"""Domain exceptions for the ThoughtState lifecycle.
+"""Domain exceptions for the hypothesis population lifecycle.
 
 All exceptions are deterministic and carry no nondeterministic data.
 """
@@ -42,40 +42,51 @@ class ThoughtStateError(ValueError):
 
 
 class ValidationError(ThoughtStateError):
-    """Input fails structural or value validation."""
+    """A ThoughtState field or relation fails structural or value validation."""
 
 
 class DuplicateIdError(ThoughtStateError):
-    """A thought ID already exists in the population."""
+    """A duplicate thought_id or event_id was detected."""
 
 
 class UnknownReferenceError(ThoughtStateError):
-    """A referenced thought ID does not exist in the population."""
+    """A referenced thought_id does not exist."""
 
 
 class SelfReferenceError(ThoughtStateError):
-    """A thought references itself in its lineage."""
+    """A relation references the same thought at both endpoints."""
+
+    def __init__(
+        self,
+        message: str,
+        *,
+        thought_id: str | None = None,
+        relation_type: str | None = None,
+        path: str | None = None,
+    ) -> None:
+        super().__init__(message, thought_id=thought_id, path=path)
+        self.relation_type = relation_type
 
 
 class CycleDetectedError(ThoughtStateError):
-    """Adding a lineage edge would create a cycle."""
+    """A cycle was detected in the lineage graph."""
 
 
 class InvalidTransitionError(ThoughtStateError):
-    """The requested status transition is not allowed."""
+    """A lifecycle transition violates the state machine rules."""
 
 
 class InvalidDispositionError(ThoughtStateError):
-    """The prune disposition is not ``rejected`` or ``dormant``."""
+    """An invalid prune disposition was supplied."""
 
 
 class TerminalStateError(ThoughtStateError):
-    """The target thought is already in a terminal state."""
+    """The target thought is in a terminal state."""
 
 
 class MergeSourceError(ThoughtStateError):
-    """Merge sources are duplicate, terminal, or insufficient."""
+    """The merge source_ids are invalid."""
 
 
 class DuplicateEventError(ThoughtStateError):
-    """An audit event ID has already been recorded."""
+    """A duplicate event_id was detected."""

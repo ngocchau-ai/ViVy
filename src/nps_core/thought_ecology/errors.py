@@ -1,4 +1,4 @@
-"""Domain exceptions for thought ecology.
+"""Domain exceptions for the thought ecology graph.
 
 All exceptions are deterministic and carry no nondeterministic data.
 """
@@ -35,7 +35,7 @@ class ThoughtEcologyError(ValueError):
 
 
 class EcologyValidationError(ThoughtEcologyError):
-    """Relation or index fails structural or value validation."""
+    """A field or relation fails structural or value validation."""
 
 
 class UnknownThoughtError(ThoughtEcologyError):
@@ -49,9 +49,9 @@ class UnknownThoughtError(ThoughtEcologyError):
         reference_source: str,
         path: str | None = None,
     ) -> None:
+        super().__init__(message, path=path)
         self.thought_id = thought_id
         self.reference_source = reference_source
-        super().__init__(message, path=path)
 
 
 class SelfReferenceError(ThoughtEcologyError):
@@ -65,9 +65,9 @@ class SelfReferenceError(ThoughtEcologyError):
         relation_type: str,
         path: str | None = None,
     ) -> None:
+        super().__init__(message, path=path)
         self.thought_id = thought_id
         self.relation_type = relation_type
-        super().__init__(message, path=path)
 
 
 class DependencyCycleError(ThoughtEcologyError):
@@ -77,11 +77,11 @@ class DependencyCycleError(ThoughtEcologyError):
         self,
         message: str,
         *,
-        cycle: tuple[str, ...],
+        cycle: tuple[str, ...] = (),
         path: str | None = None,
     ) -> None:
-        self.cycle = cycle
         super().__init__(message, path=path)
+        self.cycle = cycle
 
 
 class ConflictingAssumptionError(ThoughtEcologyError):
@@ -92,12 +92,12 @@ class ConflictingAssumptionError(ThoughtEcologyError):
         message: str,
         *,
         assumption_id: str,
-        thoughts: tuple[str, ...],
+        thoughts: tuple[str, ...] = (),
         path: str | None = None,
     ) -> None:
+        super().__init__(message, path=path)
         self.assumption_id = assumption_id
         self.thoughts = thoughts
-        super().__init__(message, path=path)
 
 
 class AmbiguousEvidenceBucketError(ThoughtEcologyError):
@@ -109,13 +109,13 @@ class AmbiguousEvidenceBucketError(ThoughtEcologyError):
         *,
         evidence_id: str,
         thought_id: str,
-        buckets: tuple[str, ...],
+        buckets: tuple[str, ...] = (),
         path: str | None = None,
     ) -> None:
+        super().__init__(message, path=path)
         self.evidence_id = evidence_id
         self.thought_id = thought_id
         self.buckets = buckets
-        super().__init__(message, path=path)
 
 
 class SnapshotMismatchError(ThoughtEcologyError):
@@ -129,6 +129,6 @@ class SnapshotMismatchError(ThoughtEcologyError):
         actual_digest: str,
         path: str | None = None,
     ) -> None:
+        super().__init__(message, path=path)
         self.expected_digest = expected_digest
         self.actual_digest = actual_digest
-        super().__init__(message, path=path)
