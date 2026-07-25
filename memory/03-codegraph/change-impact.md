@@ -27,11 +27,15 @@ Generated baseline for indexed modules.
 - src/nps_core/state_update/engine.py
 - src/nps_core/state_update/errors.py
 - src/nps_core/thought_ecology/__init__.py
+- src/nps_core/thought_ecology/errors.py
+- src/nps_core/thought_ecology/index.py
+- src/nps_core/thought_ecology/relations.py
 - src/nps_core/verification_tribunal/__init__.py
 - scripts/refresh_codegraph.py
 - tests/architecture/test_package_skeleton.py
 - tests/integration/test_multi_hypothesis_evidence_update.py
 - tests/integration/test_refresh_codegraph.py
+- tests/integration/test_thought_ecology_population.py
 - tests/integration/test_thought_lifecycle_end_to_end.py
 - tests/unit/test_atomic_state_update.py
 - tests/unit/test_codegraph_build.py
@@ -43,6 +47,7 @@ Generated baseline for indexed modules.
 - tests/unit/test_experiment_schema.py
 - tests/unit/test_schemas.py
 - tests/unit/test_task_contract_schema.py
+- tests/unit/test_thought_ecology.py
 - tests/unit/test_thought_lifecycle.py
 - tests/unit/test_thought_state_model.py
 - tests/unit/test_thought_state_schema.py

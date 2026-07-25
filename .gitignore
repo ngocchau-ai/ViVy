@@ -26,3 +26,4 @@ artifacts/tmp/
 
 # Local orchestration scratch output
 .codex-tmp/
+.aider*

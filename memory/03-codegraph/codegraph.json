@@ -1,8 +1,8 @@
 {
   "schema_version": "0.1",
   "status": "FRESH",
-  "repository_head": "e635360d84e98b29a51ae397b84a85cd4662a91b",
-  "codegraph_commit": "e635360d84e98b29a51ae397b84a85cd4662a91b",
+  "repository_head": "de1c314cb32d41311a02695f0c6f2198831e068d",
+  "codegraph_commit": "de1c314cb32d41311a02695f0c6f2198831e068d",
   "nodes": [
     {
       "id": "module:nps_core",
@@ -197,6 +197,30 @@
       "line": 1
     },
     {
+      "id": "module:nps_core.thought_ecology.errors",
+      "kind": "module",
+      "name": "errors",
+      "qualified_name": "nps_core.thought_ecology.errors",
+      "path": "src/nps_core/thought_ecology/errors.py",
+      "line": 1
+    },
+    {
+      "id": "module:nps_core.thought_ecology.index",
+      "kind": "module",
+      "name": "index",
+      "qualified_name": "nps_core.thought_ecology.index",
+      "path": "src/nps_core/thought_ecology/index.py",
+      "line": 1
+    },
+    {
+      "id": "module:nps_core.thought_ecology.relations",
+      "kind": "module",
+      "name": "relations",
+      "qualified_name": "nps_core.thought_ecology.relations",
+      "path": "src/nps_core/thought_ecology/relations.py",
+      "line": 1
+    },
+    {
       "id": "module:nps_core.verification_tribunal",
       "kind": "module",
       "name": "verification_tribunal",
@@ -234,6 +258,14 @@
       "name": "test_refresh_codegraph",
       "qualified_name": "tests.integration.test_refresh_codegraph",
       "path": "tests/integration/test_refresh_codegraph.py",
+      "line": 1
+    },
+    {
+      "id": "module:tests.integration.test_thought_ecology_population",
+      "kind": "module",
+      "name": "test_thought_ecology_population",
+      "qualified_name": "tests.integration.test_thought_ecology_population",
+      "path": "tests/integration/test_thought_ecology_population.py",
       "line": 1
     },
     {
@@ -322,6 +354,14 @@
       "name": "test_task_contract_schema",
       "qualified_name": "tests.unit.test_task_contract_schema",
       "path": "tests/unit/test_task_contract_schema.py",
+      "line": 1
+    },
+    {
+      "id": "module:tests.unit.test_thought_ecology",
+      "kind": "module",
+      "name": "test_thought_ecology",
+      "qualified_name": "tests.unit.test_thought_ecology",
+      "path": "tests/unit/test_thought_ecology.py",
       "line": 1
     },
     {
@@ -1773,6 +1813,518 @@
       "line": 41
     },
     {
+      "id": "symbol:nps_core.thought_ecology.errors:AmbiguousEvidenceBucketError",
+      "kind": "class",
+      "name": "AmbiguousEvidenceBucketError",
+      "qualified_name": "nps_core.thought_ecology.errors.AmbiguousEvidenceBucketError",
+      "path": "src/nps_core/thought_ecology/errors.py",
+      "line": 103
+    },
+    {
+      "id": "symbol:nps_core.thought_ecology.errors:AmbiguousEvidenceBucketError.__init__",
+      "kind": "function",
+      "name": "__init__",
+      "qualified_name": "nps_core.thought_ecology.errors.AmbiguousEvidenceBucketError.__init__",
+      "path": "src/nps_core/thought_ecology/errors.py",
+      "line": 106
+    },
+    {
+      "id": "symbol:nps_core.thought_ecology.errors:ConflictingAssumptionError",
+      "kind": "class",
+      "name": "ConflictingAssumptionError",
+      "qualified_name": "nps_core.thought_ecology.errors.ConflictingAssumptionError",
+      "path": "src/nps_core/thought_ecology/errors.py",
+      "line": 87
+    },
+    {
+      "id": "symbol:nps_core.thought_ecology.errors:ConflictingAssumptionError.__init__",
+      "kind": "function",
+      "name": "__init__",
+      "qualified_name": "nps_core.thought_ecology.errors.ConflictingAssumptionError.__init__",
+      "path": "src/nps_core/thought_ecology/errors.py",
+      "line": 90
+    },
+    {
+      "id": "symbol:nps_core.thought_ecology.errors:DependencyCycleError",
+      "kind": "class",
+      "name": "DependencyCycleError",
+      "qualified_name": "nps_core.thought_ecology.errors.DependencyCycleError",
+      "path": "src/nps_core/thought_ecology/errors.py",
+      "line": 73
+    },
+    {
+      "id": "symbol:nps_core.thought_ecology.errors:DependencyCycleError.__init__",
+      "kind": "function",
+      "name": "__init__",
+      "qualified_name": "nps_core.thought_ecology.errors.DependencyCycleError.__init__",
+      "path": "src/nps_core/thought_ecology/errors.py",
+      "line": 76
+    },
+    {
+      "id": "symbol:nps_core.thought_ecology.errors:EcologyValidationError",
+      "kind": "class",
+      "name": "EcologyValidationError",
+      "qualified_name": "nps_core.thought_ecology.errors.EcologyValidationError",
+      "path": "src/nps_core/thought_ecology/errors.py",
+      "line": 37
+    },
+    {
+      "id": "symbol:nps_core.thought_ecology.errors:SelfReferenceError",
+      "kind": "class",
+      "name": "SelfReferenceError",
+      "qualified_name": "nps_core.thought_ecology.errors.SelfReferenceError",
+      "path": "src/nps_core/thought_ecology/errors.py",
+      "line": 57
+    },
+    {
+      "id": "symbol:nps_core.thought_ecology.errors:SelfReferenceError.__init__",
+      "kind": "function",
+      "name": "__init__",
+      "qualified_name": "nps_core.thought_ecology.errors.SelfReferenceError.__init__",
+      "path": "src/nps_core/thought_ecology/errors.py",
+      "line": 60
+    },
+    {
+      "id": "symbol:nps_core.thought_ecology.errors:SnapshotMismatchError",
+      "kind": "class",
+      "name": "SnapshotMismatchError",
+      "qualified_name": "nps_core.thought_ecology.errors.SnapshotMismatchError",
+      "path": "src/nps_core/thought_ecology/errors.py",
+      "line": 121
+    },
+    {
+      "id": "symbol:nps_core.thought_ecology.errors:SnapshotMismatchError.__init__",
+      "kind": "function",
+      "name": "__init__",
+      "qualified_name": "nps_core.thought_ecology.errors.SnapshotMismatchError.__init__",
+      "path": "src/nps_core/thought_ecology/errors.py",
+      "line": 124
+    },
+    {
+      "id": "symbol:nps_core.thought_ecology.errors:ThoughtEcologyError",
+      "kind": "class",
+      "name": "ThoughtEcologyError",
+      "qualified_name": "nps_core.thought_ecology.errors.ThoughtEcologyError",
+      "path": "src/nps_core/thought_ecology/errors.py",
+      "line": 20
+    },
+    {
+      "id": "symbol:nps_core.thought_ecology.errors:ThoughtEcologyError.__init__",
+      "kind": "function",
+      "name": "__init__",
+      "qualified_name": "nps_core.thought_ecology.errors.ThoughtEcologyError.__init__",
+      "path": "src/nps_core/thought_ecology/errors.py",
+      "line": 23
+    },
+    {
+      "id": "symbol:nps_core.thought_ecology.errors:UnknownThoughtError",
+      "kind": "class",
+      "name": "UnknownThoughtError",
+      "qualified_name": "nps_core.thought_ecology.errors.UnknownThoughtError",
+      "path": "src/nps_core/thought_ecology/errors.py",
+      "line": 41
+    },
+    {
+      "id": "symbol:nps_core.thought_ecology.errors:UnknownThoughtError.__init__",
+      "kind": "function",
+      "name": "__init__",
+      "qualified_name": "nps_core.thought_ecology.errors.UnknownThoughtError.__init__",
+      "path": "src/nps_core/thought_ecology/errors.py",
+      "line": 44
+    },
+    {
+      "id": "symbol:nps_core.thought_ecology.index:ThoughtEcology",
+      "kind": "class",
+      "name": "ThoughtEcology",
+      "qualified_name": "nps_core.thought_ecology.index.ThoughtEcology",
+      "path": "src/nps_core/thought_ecology/index.py",
+      "line": 96
+    },
+    {
+      "id": "symbol:nps_core.thought_ecology.index:ThoughtEcology.__post_init__",
+      "kind": "function",
+      "name": "__post_init__",
+      "qualified_name": "nps_core.thought_ecology.index.ThoughtEcology.__post_init__",
+      "path": "src/nps_core/thought_ecology/index.py",
+      "line": 107
+    },
+    {
+      "id": "symbol:nps_core.thought_ecology.index:ThoughtEcology._id_set",
+      "kind": "function",
+      "name": "_id_set",
+      "qualified_name": "nps_core.thought_ecology.index.ThoughtEcology._id_set",
+      "path": "src/nps_core/thought_ecology/index.py",
+      "line": 561
+    },
+    {
+      "id": "symbol:nps_core.thought_ecology.index:ThoughtEcology._require_known",
+      "kind": "function",
+      "name": "_require_known",
+      "qualified_name": "nps_core.thought_ecology.index.ThoughtEcology._require_known",
+      "path": "src/nps_core/thought_ecology/index.py",
+      "line": 320
+    },
+    {
+      "id": "symbol:nps_core.thought_ecology.index:ThoughtEcology.contradictions_of",
+      "kind": "function",
+      "name": "contradictions_of",
+      "qualified_name": "nps_core.thought_ecology.index.ThoughtEcology.contradictions_of",
+      "path": "src/nps_core/thought_ecology/index.py",
+      "line": 362
+    },
+    {
+      "id": "symbol:nps_core.thought_ecology.index:ThoughtEcology.contradictions_of._other",
+      "kind": "function",
+      "name": "_other",
+      "qualified_name": "nps_core.thought_ecology.index.ThoughtEcology.contradictions_of._other",
+      "path": "src/nps_core/thought_ecology/index.py",
+      "line": 366
+    },
+    {
+      "id": "symbol:nps_core.thought_ecology.index:ThoughtEcology.dependencies_of",
+      "kind": "function",
+      "name": "dependencies_of",
+      "qualified_name": "nps_core.thought_ecology.index.ThoughtEcology.dependencies_of",
+      "path": "src/nps_core/thought_ecology/index.py",
+      "line": 342
+    },
+    {
+      "id": "symbol:nps_core.thought_ecology.index:ThoughtEcology.dependents_of",
+      "kind": "function",
+      "name": "dependents_of",
+      "qualified_name": "nps_core.thought_ecology.index.ThoughtEcology.dependents_of",
+      "path": "src/nps_core/thought_ecology/index.py",
+      "line": 352
+    },
+    {
+      "id": "symbol:nps_core.thought_ecology.index:ThoughtEcology.evidence_for",
+      "kind": "function",
+      "name": "evidence_for",
+      "qualified_name": "nps_core.thought_ecology.index.ThoughtEcology.evidence_for",
+      "path": "src/nps_core/thought_ecology/index.py",
+      "line": 412
+    },
+    {
+      "id": "symbol:nps_core.thought_ecology.index:ThoughtEcology.from_canonical_json",
+      "kind": "function",
+      "name": "from_canonical_json",
+      "qualified_name": "nps_core.thought_ecology.index.ThoughtEcology.from_canonical_json",
+      "path": "src/nps_core/thought_ecology/index.py",
+      "line": 640
+    },
+    {
+      "id": "symbol:nps_core.thought_ecology.index:ThoughtEcology.from_dict",
+      "kind": "function",
+      "name": "from_dict",
+      "qualified_name": "nps_core.thought_ecology.index.ThoughtEcology.from_dict",
+      "path": "src/nps_core/thought_ecology/index.py",
+      "line": 577
+    },
+    {
+      "id": "symbol:nps_core.thought_ecology.index:ThoughtEcology.neighborhood",
+      "kind": "function",
+      "name": "neighborhood",
+      "qualified_name": "nps_core.thought_ecology.index.ThoughtEcology.neighborhood",
+      "path": "src/nps_core/thought_ecology/index.py",
+      "line": 422
+    },
+    {
+      "id": "symbol:nps_core.thought_ecology.index:ThoughtEcology.overlaps_of",
+      "kind": "function",
+      "name": "overlaps_of",
+      "qualified_name": "nps_core.thought_ecology.index.ThoughtEcology.overlaps_of",
+      "path": "src/nps_core/thought_ecology/index.py",
+      "line": 376
+    },
+    {
+      "id": "symbol:nps_core.thought_ecology.index:ThoughtEcology.overlaps_of._other",
+      "kind": "function",
+      "name": "_other",
+      "qualified_name": "nps_core.thought_ecology.index.ThoughtEcology.overlaps_of._other",
+      "path": "src/nps_core/thought_ecology/index.py",
+      "line": 380
+    },
+    {
+      "id": "symbol:nps_core.thought_ecology.index:ThoughtEcology.shared_assumptions_of",
+      "kind": "function",
+      "name": "shared_assumptions_of",
+      "qualified_name": "nps_core.thought_ecology.index.ThoughtEcology.shared_assumptions_of",
+      "path": "src/nps_core/thought_ecology/index.py",
+      "line": 390
+    },
+    {
+      "id": "symbol:nps_core.thought_ecology.index:ThoughtEcology.shared_assumptions_of._other",
+      "kind": "function",
+      "name": "_other",
+      "qualified_name": "nps_core.thought_ecology.index.ThoughtEcology.shared_assumptions_of._other",
+      "path": "src/nps_core/thought_ecology/index.py",
+      "line": 394
+    },
+    {
+      "id": "symbol:nps_core.thought_ecology.index:ThoughtEcology.to_canonical_json",
+      "kind": "function",
+      "name": "to_canonical_json",
+      "qualified_name": "nps_core.thought_ecology.index.ThoughtEcology.to_canonical_json",
+      "path": "src/nps_core/thought_ecology/index.py",
+      "line": 630
+    },
+    {
+      "id": "symbol:nps_core.thought_ecology.index:ThoughtEcology.to_dict",
+      "kind": "function",
+      "name": "to_dict",
+      "qualified_name": "nps_core.thought_ecology.index.ThoughtEcology.to_dict",
+      "path": "src/nps_core/thought_ecology/index.py",
+      "line": 565
+    },
+    {
+      "id": "symbol:nps_core.thought_ecology.index:ThoughtEcology.topological_order",
+      "kind": "function",
+      "name": "topological_order",
+      "qualified_name": "nps_core.thought_ecology.index.ThoughtEcology.topological_order",
+      "path": "src/nps_core/thought_ecology/index.py",
+      "line": 508
+    },
+    {
+      "id": "symbol:nps_core.thought_ecology.index:ThoughtEcology.transitive_dependencies",
+      "kind": "function",
+      "name": "transitive_dependencies",
+      "qualified_name": "nps_core.thought_ecology.index.ThoughtEcology.transitive_dependencies",
+      "path": "src/nps_core/thought_ecology/index.py",
+      "line": 480
+    },
+    {
+      "id": "symbol:nps_core.thought_ecology.index:ThoughtEcology.validate_for",
+      "kind": "function",
+      "name": "validate_for",
+      "qualified_name": "nps_core.thought_ecology.index.ThoughtEcology.validate_for",
+      "path": "src/nps_core/thought_ecology/index.py",
+      "line": 655
+    },
+    {
+      "id": "symbol:nps_core.thought_ecology.index:_check_non_empty_str",
+      "kind": "function",
+      "name": "_check_non_empty_str",
+      "qualified_name": "nps_core.thought_ecology.index._check_non_empty_str",
+      "path": "src/nps_core/thought_ecology/index.py",
+      "line": 51
+    },
+    {
+      "id": "symbol:nps_core.thought_ecology.index:_check_thought_id",
+      "kind": "function",
+      "name": "_check_thought_id",
+      "qualified_name": "nps_core.thought_ecology.index._check_thought_id",
+      "path": "src/nps_core/thought_ecology/index.py",
+      "line": 41
+    },
+    {
+      "id": "symbol:nps_core.thought_ecology.index:_detect_cycle",
+      "kind": "function",
+      "name": "_detect_cycle",
+      "qualified_name": "nps_core.thought_ecology.index._detect_cycle",
+      "path": "src/nps_core/thought_ecology/index.py",
+      "line": 59
+    },
+    {
+      "id": "symbol:nps_core.thought_ecology.index:_detect_cycle._dfs",
+      "kind": "function",
+      "name": "_dfs",
+      "qualified_name": "nps_core.thought_ecology.index._detect_cycle._dfs",
+      "path": "src/nps_core/thought_ecology/index.py",
+      "line": 65
+    },
+    {
+      "id": "symbol:nps_core.thought_ecology.index:build",
+      "kind": "function",
+      "name": "build",
+      "qualified_name": "nps_core.thought_ecology.index.build",
+      "path": "src/nps_core/thought_ecology/index.py",
+      "line": 671
+    },
+    {
+      "id": "symbol:nps_core.thought_ecology.relations:ContradictionEdge",
+      "kind": "class",
+      "name": "ContradictionEdge",
+      "qualified_name": "nps_core.thought_ecology.relations.ContradictionEdge",
+      "path": "src/nps_core/thought_ecology/relations.py",
+      "line": 96
+    },
+    {
+      "id": "symbol:nps_core.thought_ecology.relations:ContradictionEdge.__post_init__",
+      "kind": "function",
+      "name": "__post_init__",
+      "qualified_name": "nps_core.thought_ecology.relations.ContradictionEdge.__post_init__",
+      "path": "src/nps_core/thought_ecology/relations.py",
+      "line": 102
+    },
+    {
+      "id": "symbol:nps_core.thought_ecology.relations:ContradictionEdge.from_dict",
+      "kind": "function",
+      "name": "from_dict",
+      "qualified_name": "nps_core.thought_ecology.relations.ContradictionEdge.from_dict",
+      "path": "src/nps_core/thought_ecology/relations.py",
+      "line": 119
+    },
+    {
+      "id": "symbol:nps_core.thought_ecology.relations:ContradictionEdge.to_dict",
+      "kind": "function",
+      "name": "to_dict",
+      "qualified_name": "nps_core.thought_ecology.relations.ContradictionEdge.to_dict",
+      "path": "src/nps_core/thought_ecology/relations.py",
+      "line": 115
+    },
+    {
+      "id": "symbol:nps_core.thought_ecology.relations:DependencyEdge",
+      "kind": "class",
+      "name": "DependencyEdge",
+      "qualified_name": "nps_core.thought_ecology.relations.DependencyEdge",
+      "path": "src/nps_core/thought_ecology/relations.py",
+      "line": 63
+    },
+    {
+      "id": "symbol:nps_core.thought_ecology.relations:DependencyEdge.__post_init__",
+      "kind": "function",
+      "name": "__post_init__",
+      "qualified_name": "nps_core.thought_ecology.relations.DependencyEdge.__post_init__",
+      "path": "src/nps_core/thought_ecology/relations.py",
+      "line": 69
+    },
+    {
+      "id": "symbol:nps_core.thought_ecology.relations:DependencyEdge.from_dict",
+      "kind": "function",
+      "name": "from_dict",
+      "qualified_name": "nps_core.thought_ecology.relations.DependencyEdge.from_dict",
+      "path": "src/nps_core/thought_ecology/relations.py",
+      "line": 85
+    },
+    {
+      "id": "symbol:nps_core.thought_ecology.relations:DependencyEdge.to_dict",
+      "kind": "function",
+      "name": "to_dict",
+      "qualified_name": "nps_core.thought_ecology.relations.DependencyEdge.to_dict",
+      "path": "src/nps_core/thought_ecology/relations.py",
+      "line": 81
+    },
+    {
+      "id": "symbol:nps_core.thought_ecology.relations:EvidencePlacement",
+      "kind": "class",
+      "name": "EvidencePlacement",
+      "qualified_name": "nps_core.thought_ecology.relations.EvidencePlacement",
+      "path": "src/nps_core/thought_ecology/relations.py",
+      "line": 209
+    },
+    {
+      "id": "symbol:nps_core.thought_ecology.relations:EvidencePlacement.__post_init__",
+      "kind": "function",
+      "name": "__post_init__",
+      "qualified_name": "nps_core.thought_ecology.relations.EvidencePlacement.__post_init__",
+      "path": "src/nps_core/thought_ecology/relations.py",
+      "line": 216
+    },
+    {
+      "id": "symbol:nps_core.thought_ecology.relations:EvidencePlacement.from_dict",
+      "kind": "function",
+      "name": "from_dict",
+      "qualified_name": "nps_core.thought_ecology.relations.EvidencePlacement.from_dict",
+      "path": "src/nps_core/thought_ecology/relations.py",
+      "line": 241
+    },
+    {
+      "id": "symbol:nps_core.thought_ecology.relations:EvidencePlacement.to_dict",
+      "kind": "function",
+      "name": "to_dict",
+      "qualified_name": "nps_core.thought_ecology.relations.EvidencePlacement.to_dict",
+      "path": "src/nps_core/thought_ecology/relations.py",
+      "line": 233
+    },
+    {
+      "id": "symbol:nps_core.thought_ecology.relations:OverlapEdge",
+      "kind": "class",
+      "name": "OverlapEdge",
+      "qualified_name": "nps_core.thought_ecology.relations.OverlapEdge",
+      "path": "src/nps_core/thought_ecology/relations.py",
+      "line": 130
+    },
+    {
+      "id": "symbol:nps_core.thought_ecology.relations:OverlapEdge.__post_init__",
+      "kind": "function",
+      "name": "__post_init__",
+      "qualified_name": "nps_core.thought_ecology.relations.OverlapEdge.__post_init__",
+      "path": "src/nps_core/thought_ecology/relations.py",
+      "line": 136
+    },
+    {
+      "id": "symbol:nps_core.thought_ecology.relations:OverlapEdge.from_dict",
+      "kind": "function",
+      "name": "from_dict",
+      "qualified_name": "nps_core.thought_ecology.relations.OverlapEdge.from_dict",
+      "path": "src/nps_core/thought_ecology/relations.py",
+      "line": 153
+    },
+    {
+      "id": "symbol:nps_core.thought_ecology.relations:OverlapEdge.to_dict",
+      "kind": "function",
+      "name": "to_dict",
+      "qualified_name": "nps_core.thought_ecology.relations.OverlapEdge.to_dict",
+      "path": "src/nps_core/thought_ecology/relations.py",
+      "line": 149
+    },
+    {
+      "id": "symbol:nps_core.thought_ecology.relations:SharedAssumptionLink",
+      "kind": "class",
+      "name": "SharedAssumptionLink",
+      "qualified_name": "nps_core.thought_ecology.relations.SharedAssumptionLink",
+      "path": "src/nps_core/thought_ecology/relations.py",
+      "line": 164
+    },
+    {
+      "id": "symbol:nps_core.thought_ecology.relations:SharedAssumptionLink.__post_init__",
+      "kind": "function",
+      "name": "__post_init__",
+      "qualified_name": "nps_core.thought_ecology.relations.SharedAssumptionLink.__post_init__",
+      "path": "src/nps_core/thought_ecology/relations.py",
+      "line": 171
+    },
+    {
+      "id": "symbol:nps_core.thought_ecology.relations:SharedAssumptionLink.from_dict",
+      "kind": "function",
+      "name": "from_dict",
+      "qualified_name": "nps_core.thought_ecology.relations.SharedAssumptionLink.from_dict",
+      "path": "src/nps_core/thought_ecology/relations.py",
+      "line": 194
+    },
+    {
+      "id": "symbol:nps_core.thought_ecology.relations:SharedAssumptionLink.to_dict",
+      "kind": "function",
+      "name": "to_dict",
+      "qualified_name": "nps_core.thought_ecology.relations.SharedAssumptionLink.to_dict",
+      "path": "src/nps_core/thought_ecology/relations.py",
+      "line": 186
+    },
+    {
+      "id": "symbol:nps_core.thought_ecology.relations:_canonical_pair",
+      "kind": "function",
+      "name": "_canonical_pair",
+      "qualified_name": "nps_core.thought_ecology.relations._canonical_pair",
+      "path": "src/nps_core/thought_ecology/relations.py",
+      "line": 57
+    },
+    {
+      "id": "symbol:nps_core.thought_ecology.relations:_validate_non_empty_str",
+      "kind": "function",
+      "name": "_validate_non_empty_str",
+      "qualified_name": "nps_core.thought_ecology.relations._validate_non_empty_str",
+      "path": "src/nps_core/thought_ecology/relations.py",
+      "line": 43
+    },
+    {
+      "id": "symbol:nps_core.thought_ecology.relations:_validate_thought_id",
+      "kind": "function",
+      "name": "_validate_thought_id",
+      "qualified_name": "nps_core.thought_ecology.relations._validate_thought_id",
+      "path": "src/nps_core/thought_ecology/relations.py",
+      "line": 29
+    },
+    {
       "id": "symbol:tests.architecture.test_package_skeleton:test_module_import",
       "kind": "function",
       "name": "test_module_import",
@@ -1971,6 +2523,222 @@
       "qualified_name": "tests.integration.test_refresh_codegraph.test_refresh_codegraph",
       "path": "tests/integration/test_refresh_codegraph.py",
       "line": 13
+    },
+    {
+      "id": "symbol:tests.integration.test_thought_ecology_population:_add",
+      "kind": "function",
+      "name": "_add",
+      "qualified_name": "tests.integration.test_thought_ecology_population._add",
+      "path": "tests/integration/test_thought_ecology_population.py",
+      "line": 214
+    },
+    {
+      "id": "symbol:tests.integration.test_thought_ecology_population:_snapshot",
+      "kind": "function",
+      "name": "_snapshot",
+      "qualified_name": "tests.integration.test_thought_ecology_population._snapshot",
+      "path": "tests/integration/test_thought_ecology_population.py",
+      "line": 107
+    },
+    {
+      "id": "symbol:tests.integration.test_thought_ecology_population:_state",
+      "kind": "function",
+      "name": "_state",
+      "qualified_name": "tests.integration.test_thought_ecology_population._state",
+      "path": "tests/integration/test_thought_ecology_population.py",
+      "line": 28
+    },
+    {
+      "id": "symbol:tests.integration.test_thought_ecology_population:test_build_twice_canonical_json_byte_identical",
+      "kind": "function",
+      "name": "test_build_twice_canonical_json_byte_identical",
+      "qualified_name": "tests.integration.test_thought_ecology_population.test_build_twice_canonical_json_byte_identical",
+      "path": "tests/integration/test_thought_ecology_population.py",
+      "line": 236
+    },
+    {
+      "id": "symbol:tests.integration.test_thought_ecology_population:test_changed_snapshot_makes_old_ecology_validate_for_raise",
+      "kind": "function",
+      "name": "test_changed_snapshot_makes_old_ecology_validate_for_raise",
+      "qualified_name": "tests.integration.test_thought_ecology_population.test_changed_snapshot_makes_old_ecology_validate_for_raise",
+      "path": "tests/integration/test_thought_ecology_population.py",
+      "line": 495
+    },
+    {
+      "id": "symbol:tests.integration.test_thought_ecology_population:test_contradictions_of_query",
+      "kind": "function",
+      "name": "test_contradictions_of_query",
+      "qualified_name": "tests.integration.test_thought_ecology_population.test_contradictions_of_query",
+      "path": "tests/integration/test_thought_ecology_population.py",
+      "line": 348
+    },
+    {
+      "id": "symbol:tests.integration.test_thought_ecology_population:test_dependencies_of_query",
+      "kind": "function",
+      "name": "test_dependencies_of_query",
+      "qualified_name": "tests.integration.test_thought_ecology_population.test_dependencies_of_query",
+      "path": "tests/integration/test_thought_ecology_population.py",
+      "line": 325
+    },
+    {
+      "id": "symbol:tests.integration.test_thought_ecology_population:test_dependents_of_query",
+      "kind": "function",
+      "name": "test_dependents_of_query",
+      "qualified_name": "tests.integration.test_thought_ecology_population.test_dependents_of_query",
+      "path": "tests/integration/test_thought_ecology_population.py",
+      "line": 336
+    },
+    {
+      "id": "symbol:tests.integration.test_thought_ecology_population:test_ecology_dict_json_round_trip",
+      "kind": "function",
+      "name": "test_ecology_dict_json_round_trip",
+      "qualified_name": "tests.integration.test_thought_ecology_population.test_ecology_dict_json_round_trip",
+      "path": "tests/integration/test_thought_ecology_population.py",
+      "line": 450
+    },
+    {
+      "id": "symbol:tests.integration.test_thought_ecology_population:test_evidence_for_query",
+      "kind": "function",
+      "name": "test_evidence_for_query",
+      "qualified_name": "tests.integration.test_thought_ecology_population.test_evidence_for_query",
+      "path": "tests/integration/test_thought_ecology_population.py",
+      "line": 385
+    },
+    {
+      "id": "symbol:tests.integration.test_thought_ecology_population:test_expected_contradiction_edges",
+      "kind": "function",
+      "name": "test_expected_contradiction_edges",
+      "qualified_name": "tests.integration.test_thought_ecology_population.test_expected_contradiction_edges",
+      "path": "tests/integration/test_thought_ecology_population.py",
+      "line": 266
+    },
+    {
+      "id": "symbol:tests.integration.test_thought_ecology_population:test_expected_dependency_edges",
+      "kind": "function",
+      "name": "test_expected_dependency_edges",
+      "qualified_name": "tests.integration.test_thought_ecology_population.test_expected_dependency_edges",
+      "path": "tests/integration/test_thought_ecology_population.py",
+      "line": 253
+    },
+    {
+      "id": "symbol:tests.integration.test_thought_ecology_population:test_expected_evidence_placements",
+      "kind": "function",
+      "name": "test_expected_evidence_placements",
+      "qualified_name": "tests.integration.test_thought_ecology_population.test_expected_evidence_placements",
+      "path": "tests/integration/test_thought_ecology_population.py",
+      "line": 312
+    },
+    {
+      "id": "symbol:tests.integration.test_thought_ecology_population:test_expected_overlap_edges",
+      "kind": "function",
+      "name": "test_expected_overlap_edges",
+      "qualified_name": "tests.integration.test_thought_ecology_population.test_expected_overlap_edges",
+      "path": "tests/integration/test_thought_ecology_population.py",
+      "line": 277
+    },
+    {
+      "id": "symbol:tests.integration.test_thought_ecology_population:test_expected_shared_assumption_links",
+      "kind": "function",
+      "name": "test_expected_shared_assumption_links",
+      "qualified_name": "tests.integration.test_thought_ecology_population.test_expected_shared_assumption_links",
+      "path": "tests/integration/test_thought_ecology_population.py",
+      "line": 288
+    },
+    {
+      "id": "symbol:tests.integration.test_thought_ecology_population:test_expected_thought_ids",
+      "kind": "function",
+      "name": "test_expected_thought_ids",
+      "qualified_name": "tests.integration.test_thought_ecology_population.test_expected_thought_ids",
+      "path": "tests/integration/test_thought_ecology_population.py",
+      "line": 244
+    },
+    {
+      "id": "symbol:tests.integration.test_thought_ecology_population:test_forged_ecology_with_removed_relation_fails_validate_for",
+      "kind": "function",
+      "name": "test_forged_ecology_with_removed_relation_fails_validate_for",
+      "qualified_name": "tests.integration.test_thought_ecology_population.test_forged_ecology_with_removed_relation_fails_validate_for",
+      "path": "tests/integration/test_thought_ecology_population.py",
+      "line": 519
+    },
+    {
+      "id": "symbol:tests.integration.test_thought_ecology_population:test_neighborhood_unions_all_relation_types",
+      "kind": "function",
+      "name": "test_neighborhood_unions_all_relation_types",
+      "qualified_name": "tests.integration.test_thought_ecology_population.test_neighborhood_unions_all_relation_types",
+      "path": "tests/integration/test_thought_ecology_population.py",
+      "line": 432
+    },
+    {
+      "id": "symbol:tests.integration.test_thought_ecology_population:test_overlaps_of_query",
+      "kind": "function",
+      "name": "test_overlaps_of_query",
+      "qualified_name": "tests.integration.test_thought_ecology_population.test_overlaps_of_query",
+      "path": "tests/integration/test_thought_ecology_population.py",
+      "line": 359
+    },
+    {
+      "id": "symbol:tests.integration.test_thought_ecology_population:test_rebuild_from_independently_reconstructed_snapshot",
+      "kind": "function",
+      "name": "test_rebuild_from_independently_reconstructed_snapshot",
+      "qualified_name": "tests.integration.test_thought_ecology_population.test_rebuild_from_independently_reconstructed_snapshot",
+      "path": "tests/integration/test_thought_ecology_population.py",
+      "line": 543
+    },
+    {
+      "id": "symbol:tests.integration.test_thought_ecology_population:test_shared_assumptions_of_query",
+      "kind": "function",
+      "name": "test_shared_assumptions_of_query",
+      "qualified_name": "tests.integration.test_thought_ecology_population.test_shared_assumptions_of_query",
+      "path": "tests/integration/test_thought_ecology_population.py",
+      "line": 368
+    },
+    {
+      "id": "symbol:tests.integration.test_thought_ecology_population:test_snapshot_digest_equals_sha256_of_snapshot_canonical_json",
+      "kind": "function",
+      "name": "test_snapshot_digest_equals_sha256_of_snapshot_canonical_json",
+      "qualified_name": "tests.integration.test_thought_ecology_population.test_snapshot_digest_equals_sha256_of_snapshot_canonical_json",
+      "path": "tests/integration/test_thought_ecology_population.py",
+      "line": 467
+    },
+    {
+      "id": "symbol:tests.integration.test_thought_ecology_population:test_source_snapshots_and_lifecycle_history_byte_identical",
+      "kind": "function",
+      "name": "test_source_snapshots_and_lifecycle_history_byte_identical",
+      "qualified_name": "tests.integration.test_thought_ecology_population.test_source_snapshots_and_lifecycle_history_byte_identical",
+      "path": "tests/integration/test_thought_ecology_population.py",
+      "line": 476
+    },
+    {
+      "id": "symbol:tests.integration.test_thought_ecology_population:test_topological_order_contains_all_thoughts",
+      "kind": "function",
+      "name": "test_topological_order_contains_all_thoughts",
+      "qualified_name": "tests.integration.test_thought_ecology_population.test_topological_order_contains_all_thoughts",
+      "path": "tests/integration/test_thought_ecology_population.py",
+      "line": 406
+    },
+    {
+      "id": "symbol:tests.integration.test_thought_ecology_population:test_topological_order_targets_precede_sources",
+      "kind": "function",
+      "name": "test_topological_order_targets_precede_sources",
+      "qualified_name": "tests.integration.test_thought_ecology_population.test_topological_order_targets_precede_sources",
+      "path": "tests/integration/test_thought_ecology_population.py",
+      "line": 394
+    },
+    {
+      "id": "symbol:tests.integration.test_thought_ecology_population:test_transitive_dependencies",
+      "kind": "function",
+      "name": "test_transitive_dependencies",
+      "qualified_name": "tests.integration.test_thought_ecology_population.test_transitive_dependencies",
+      "path": "tests/integration/test_thought_ecology_population.py",
+      "line": 413
+    },
+    {
+      "id": "symbol:tests.integration.test_thought_ecology_population:test_validate_for_exact_snapshot",
+      "kind": "function",
+      "name": "test_validate_for_exact_snapshot",
+      "qualified_name": "tests.integration.test_thought_ecology_population.test_validate_for_exact_snapshot",
+      "path": "tests/integration/test_thought_ecology_population.py",
+      "line": 461
     },
     {
       "id": "symbol:tests.integration.test_thought_lifecycle_end_to_end:_replay",
@@ -4325,6 +5093,734 @@
       "line": 61
     },
     {
+      "id": "symbol:tests.unit.test_thought_ecology:TestBuild",
+      "kind": "class",
+      "name": "TestBuild",
+      "qualified_name": "tests.unit.test_thought_ecology.TestBuild",
+      "path": "tests/unit/test_thought_ecology.py",
+      "line": 434
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_ecology:TestBuild.test_dependency_cycle_detected",
+      "kind": "function",
+      "name": "test_dependency_cycle_detected",
+      "qualified_name": "tests.unit.test_thought_ecology.TestBuild.test_dependency_cycle_detected",
+      "path": "tests/unit/test_thought_ecology.py",
+      "line": 513
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_ecology:TestBuild.test_dependency_direction",
+      "kind": "function",
+      "name": "test_dependency_direction",
+      "qualified_name": "tests.unit.test_thought_ecology.TestBuild.test_dependency_direction",
+      "path": "tests/unit/test_thought_ecology.py",
+      "line": 443
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_ecology:TestBuild.test_dependency_three_node_cycle_detected",
+      "kind": "function",
+      "name": "test_dependency_three_node_cycle_detected",
+      "qualified_name": "tests.unit.test_thought_ecology.TestBuild.test_dependency_three_node_cycle_detected",
+      "path": "tests/unit/test_thought_ecology.py",
+      "line": 522
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_ecology:TestBuild.test_empty_snapshot",
+      "kind": "function",
+      "name": "test_empty_snapshot",
+      "qualified_name": "tests.unit.test_thought_ecology.TestBuild.test_empty_snapshot",
+      "path": "tests/unit/test_thought_ecology.py",
+      "line": 435
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_ecology:TestBuild.test_evidence_placements",
+      "kind": "function",
+      "name": "test_evidence_placements",
+      "qualified_name": "tests.unit.test_thought_ecology.TestBuild.test_evidence_placements",
+      "path": "tests/unit/test_thought_ecology.py",
+      "line": 481
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_ecology:TestBuild.test_reciprocal_undirected_collapse",
+      "kind": "function",
+      "name": "test_reciprocal_undirected_collapse",
+      "qualified_name": "tests.unit.test_thought_ecology.TestBuild.test_reciprocal_undirected_collapse",
+      "path": "tests/unit/test_thought_ecology.py",
+      "line": 452
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_ecology:TestBuild.test_self_contradiction_rejected",
+      "kind": "function",
+      "name": "test_self_contradiction_rejected",
+      "qualified_name": "tests.unit.test_thought_ecology.TestBuild.test_self_contradiction_rejected",
+      "path": "tests/unit/test_thought_ecology.py",
+      "line": 501
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_ecology:TestBuild.test_self_dependency_rejected",
+      "kind": "function",
+      "name": "test_self_dependency_rejected",
+      "qualified_name": "tests.unit.test_thought_ecology.TestBuild.test_self_dependency_rejected",
+      "path": "tests/unit/test_thought_ecology.py",
+      "line": 493
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_ecology:TestBuild.test_self_overlap_rejected",
+      "kind": "function",
+      "name": "test_self_overlap_rejected",
+      "qualified_name": "tests.unit.test_thought_ecology.TestBuild.test_self_overlap_rejected",
+      "path": "tests/unit/test_thought_ecology.py",
+      "line": 509
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_ecology:TestBuild.test_shared_assumption_pair_generation",
+      "kind": "function",
+      "name": "test_shared_assumption_pair_generation",
+      "qualified_name": "tests.unit.test_thought_ecology.TestBuild.test_shared_assumption_pair_generation",
+      "path": "tests/unit/test_thought_ecology.py",
+      "line": 460
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_ecology:TestBuild.test_shared_assumption_payload_conflict",
+      "kind": "function",
+      "name": "test_shared_assumption_payload_conflict",
+      "qualified_name": "tests.unit.test_thought_ecology.TestBuild.test_shared_assumption_payload_conflict",
+      "path": "tests/unit/test_thought_ecology.py",
+      "line": 472
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_ecology:TestBuild.test_unknown_contradiction_endpoint",
+      "kind": "function",
+      "name": "test_unknown_contradiction_endpoint",
+      "qualified_name": "tests.unit.test_thought_ecology.TestBuild.test_unknown_contradiction_endpoint",
+      "path": "tests/unit/test_thought_ecology.py",
+      "line": 497
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_ecology:TestBuild.test_unknown_dependency_endpoint",
+      "kind": "function",
+      "name": "test_unknown_dependency_endpoint",
+      "qualified_name": "tests.unit.test_thought_ecology.TestBuild.test_unknown_dependency_endpoint",
+      "path": "tests/unit/test_thought_ecology.py",
+      "line": 489
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_ecology:TestBuild.test_unknown_overlap_endpoint",
+      "kind": "function",
+      "name": "test_unknown_overlap_endpoint",
+      "qualified_name": "tests.unit.test_thought_ecology.TestBuild.test_unknown_overlap_endpoint",
+      "path": "tests/unit/test_thought_ecology.py",
+      "line": 505
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_ecology:TestContradictionEdge",
+      "kind": "class",
+      "name": "TestContradictionEdge",
+      "qualified_name": "tests.unit.test_thought_ecology.TestContradictionEdge",
+      "path": "tests/unit/test_thought_ecology.py",
+      "line": 158
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_ecology:TestContradictionEdge.test_canonicalization",
+      "kind": "function",
+      "name": "test_canonicalization",
+      "qualified_name": "tests.unit.test_thought_ecology.TestContradictionEdge.test_canonicalization",
+      "path": "tests/unit/test_thought_ecology.py",
+      "line": 159
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_ecology:TestContradictionEdge.test_from_dict_extra_key",
+      "kind": "function",
+      "name": "test_from_dict_extra_key",
+      "qualified_name": "tests.unit.test_thought_ecology.TestContradictionEdge.test_from_dict_extra_key",
+      "path": "tests/unit/test_thought_ecology.py",
+      "line": 174
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_ecology:TestContradictionEdge.test_self_reference_rejected",
+      "kind": "function",
+      "name": "test_self_reference_rejected",
+      "qualified_name": "tests.unit.test_thought_ecology.TestContradictionEdge.test_self_reference_rejected",
+      "path": "tests/unit/test_thought_ecology.py",
+      "line": 164
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_ecology:TestContradictionEdge.test_to_dict_from_dict_roundtrip",
+      "kind": "function",
+      "name": "test_to_dict_from_dict_roundtrip",
+      "qualified_name": "tests.unit.test_thought_ecology.TestContradictionEdge.test_to_dict_from_dict_roundtrip",
+      "path": "tests/unit/test_thought_ecology.py",
+      "line": 168
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_ecology:TestDependencyEdge",
+      "kind": "class",
+      "name": "TestDependencyEdge",
+      "qualified_name": "tests.unit.test_thought_ecology.TestDependencyEdge",
+      "path": "tests/unit/test_thought_ecology.py",
+      "line": 121
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_ecology:TestDependencyEdge.test_direct_construction",
+      "kind": "function",
+      "name": "test_direct_construction",
+      "qualified_name": "tests.unit.test_thought_ecology.TestDependencyEdge.test_direct_construction",
+      "path": "tests/unit/test_thought_ecology.py",
+      "line": 122
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_ecology:TestDependencyEdge.test_from_dict_extra_key",
+      "kind": "function",
+      "name": "test_from_dict_extra_key",
+      "qualified_name": "tests.unit.test_thought_ecology.TestDependencyEdge.test_from_dict_extra_key",
+      "path": "tests/unit/test_thought_ecology.py",
+      "line": 145
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_ecology:TestDependencyEdge.test_from_dict_missing_key",
+      "kind": "function",
+      "name": "test_from_dict_missing_key",
+      "qualified_name": "tests.unit.test_thought_ecology.TestDependencyEdge.test_from_dict_missing_key",
+      "path": "tests/unit/test_thought_ecology.py",
+      "line": 149
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_ecology:TestDependencyEdge.test_from_dict_wrong_type",
+      "kind": "function",
+      "name": "test_from_dict_wrong_type",
+      "qualified_name": "tests.unit.test_thought_ecology.TestDependencyEdge.test_from_dict_wrong_type",
+      "path": "tests/unit/test_thought_ecology.py",
+      "line": 153
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_ecology:TestDependencyEdge.test_invalid_id",
+      "kind": "function",
+      "name": "test_invalid_id",
+      "qualified_name": "tests.unit.test_thought_ecology.TestDependencyEdge.test_invalid_id",
+      "path": "tests/unit/test_thought_ecology.py",
+      "line": 132
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_ecology:TestDependencyEdge.test_self_reference_rejected",
+      "kind": "function",
+      "name": "test_self_reference_rejected",
+      "qualified_name": "tests.unit.test_thought_ecology.TestDependencyEdge.test_self_reference_rejected",
+      "path": "tests/unit/test_thought_ecology.py",
+      "line": 127
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_ecology:TestDependencyEdge.test_to_dict_from_dict_roundtrip",
+      "kind": "function",
+      "name": "test_to_dict_from_dict_roundtrip",
+      "qualified_name": "tests.unit.test_thought_ecology.TestDependencyEdge.test_to_dict_from_dict_roundtrip",
+      "path": "tests/unit/test_thought_ecology.py",
+      "line": 138
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_ecology:TestEvidencePlacement",
+      "kind": "class",
+      "name": "TestEvidencePlacement",
+      "qualified_name": "tests.unit.test_thought_ecology.TestEvidencePlacement",
+      "path": "tests/unit/test_thought_ecology.py",
+      "line": 226
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_ecology:TestEvidencePlacement.test_from_dict_extra_key",
+      "kind": "function",
+      "name": "test_from_dict_extra_key",
+      "qualified_name": "tests.unit.test_thought_ecology.TestEvidencePlacement.test_from_dict_extra_key",
+      "path": "tests/unit/test_thought_ecology.py",
+      "line": 242
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_ecology:TestEvidencePlacement.test_invalid_bucket",
+      "kind": "function",
+      "name": "test_invalid_bucket",
+      "qualified_name": "tests.unit.test_thought_ecology.TestEvidencePlacement.test_invalid_bucket",
+      "path": "tests/unit/test_thought_ecology.py",
+      "line": 232
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_ecology:TestEvidencePlacement.test_to_dict_from_dict_roundtrip",
+      "kind": "function",
+      "name": "test_to_dict_from_dict_roundtrip",
+      "qualified_name": "tests.unit.test_thought_ecology.TestEvidencePlacement.test_to_dict_from_dict_roundtrip",
+      "path": "tests/unit/test_thought_ecology.py",
+      "line": 236
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_ecology:TestEvidencePlacement.test_valid_buckets",
+      "kind": "function",
+      "name": "test_valid_buckets",
+      "qualified_name": "tests.unit.test_thought_ecology.TestEvidencePlacement.test_valid_buckets",
+      "path": "tests/unit/test_thought_ecology.py",
+      "line": 228
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_ecology:TestFromDictSnapshotDigest",
+      "kind": "class",
+      "name": "TestFromDictSnapshotDigest",
+      "qualified_name": "tests.unit.test_thought_ecology.TestFromDictSnapshotDigest",
+      "path": "tests/unit/test_thought_ecology.py",
+      "line": 717
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_ecology:TestFromDictSnapshotDigest.test_non_string_rejected",
+      "kind": "function",
+      "name": "test_non_string_rejected",
+      "qualified_name": "tests.unit.test_thought_ecology.TestFromDictSnapshotDigest.test_non_string_rejected",
+      "path": "tests/unit/test_thought_ecology.py",
+      "line": 718
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_ecology:TestOverlapEdge",
+      "kind": "class",
+      "name": "TestOverlapEdge",
+      "qualified_name": "tests.unit.test_thought_ecology.TestOverlapEdge",
+      "path": "tests/unit/test_thought_ecology.py",
+      "line": 179
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_ecology:TestOverlapEdge.test_canonicalization",
+      "kind": "function",
+      "name": "test_canonicalization",
+      "qualified_name": "tests.unit.test_thought_ecology.TestOverlapEdge.test_canonicalization",
+      "path": "tests/unit/test_thought_ecology.py",
+      "line": 180
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_ecology:TestOverlapEdge.test_self_reference_rejected",
+      "kind": "function",
+      "name": "test_self_reference_rejected",
+      "qualified_name": "tests.unit.test_thought_ecology.TestOverlapEdge.test_self_reference_rejected",
+      "path": "tests/unit/test_thought_ecology.py",
+      "line": 185
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_ecology:TestOverlapEdge.test_to_dict_from_dict_roundtrip",
+      "kind": "function",
+      "name": "test_to_dict_from_dict_roundtrip",
+      "qualified_name": "tests.unit.test_thought_ecology.TestOverlapEdge.test_to_dict_from_dict_roundtrip",
+      "path": "tests/unit/test_thought_ecology.py",
+      "line": 189
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_ecology:TestQueryMethods",
+      "kind": "class",
+      "name": "TestQueryMethods",
+      "qualified_name": "tests.unit.test_thought_ecology.TestQueryMethods",
+      "path": "tests/unit/test_thought_ecology.py",
+      "line": 537
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_ecology:TestQueryMethods.eco",
+      "kind": "function",
+      "name": "eco",
+      "qualified_name": "tests.unit.test_thought_ecology.TestQueryMethods.eco",
+      "path": "tests/unit/test_thought_ecology.py",
+      "line": 539
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_ecology:TestQueryMethods.test_contradictions_of",
+      "kind": "function",
+      "name": "test_contradictions_of",
+      "qualified_name": "tests.unit.test_thought_ecology.TestQueryMethods.test_contradictions_of",
+      "path": "tests/unit/test_thought_ecology.py",
+      "line": 556
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_ecology:TestQueryMethods.test_dependencies_of",
+      "kind": "function",
+      "name": "test_dependencies_of",
+      "qualified_name": "tests.unit.test_thought_ecology.TestQueryMethods.test_dependencies_of",
+      "path": "tests/unit/test_thought_ecology.py",
+      "line": 546
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_ecology:TestQueryMethods.test_dependents_of",
+      "kind": "function",
+      "name": "test_dependents_of",
+      "qualified_name": "tests.unit.test_thought_ecology.TestQueryMethods.test_dependents_of",
+      "path": "tests/unit/test_thought_ecology.py",
+      "line": 551
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_ecology:TestQueryMethods.test_evidence_for",
+      "kind": "function",
+      "name": "test_evidence_for",
+      "qualified_name": "tests.unit.test_thought_ecology.TestQueryMethods.test_evidence_for",
+      "path": "tests/unit/test_thought_ecology.py",
+      "line": 564
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_ecology:TestQueryMethods.test_neighborhood",
+      "kind": "function",
+      "name": "test_neighborhood",
+      "qualified_name": "tests.unit.test_thought_ecology.TestQueryMethods.test_neighborhood",
+      "path": "tests/unit/test_thought_ecology.py",
+      "line": 599
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_ecology:TestQueryMethods.test_neighborhood_evidence_sharing",
+      "kind": "function",
+      "name": "test_neighborhood_evidence_sharing",
+      "qualified_name": "tests.unit.test_thought_ecology.TestQueryMethods.test_neighborhood_evidence_sharing",
+      "path": "tests/unit/test_thought_ecology.py",
+      "line": 609
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_ecology:TestQueryMethods.test_neighborhood_unknown_raises",
+      "kind": "function",
+      "name": "test_neighborhood_unknown_raises",
+      "qualified_name": "tests.unit.test_thought_ecology.TestQueryMethods.test_neighborhood_unknown_raises",
+      "path": "tests/unit/test_thought_ecology.py",
+      "line": 605
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_ecology:TestQueryMethods.test_overlaps_of",
+      "kind": "function",
+      "name": "test_overlaps_of",
+      "qualified_name": "tests.unit.test_thought_ecology.TestQueryMethods.test_overlaps_of",
+      "path": "tests/unit/test_thought_ecology.py",
+      "line": 560
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_ecology:TestQueryMethods.test_topological_order_empty",
+      "kind": "function",
+      "name": "test_topological_order_empty",
+      "qualified_name": "tests.unit.test_thought_ecology.TestQueryMethods.test_topological_order_empty",
+      "path": "tests/unit/test_thought_ecology.py",
+      "line": 595
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_ecology:TestQueryMethods.test_topological_order_target_before_source",
+      "kind": "function",
+      "name": "test_topological_order_target_before_source",
+      "qualified_name": "tests.unit.test_thought_ecology.TestQueryMethods.test_topological_order_target_before_source",
+      "path": "tests/unit/test_thought_ecology.py",
+      "line": 587
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_ecology:TestQueryMethods.test_transitive_dependencies",
+      "kind": "function",
+      "name": "test_transitive_dependencies",
+      "qualified_name": "tests.unit.test_thought_ecology.TestQueryMethods.test_transitive_dependencies",
+      "path": "tests/unit/test_thought_ecology.py",
+      "line": 574
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_ecology:TestQueryMethods.test_transitive_unknown_raises",
+      "kind": "function",
+      "name": "test_transitive_unknown_raises",
+      "qualified_name": "tests.unit.test_thought_ecology.TestQueryMethods.test_transitive_unknown_raises",
+      "path": "tests/unit/test_thought_ecology.py",
+      "line": 583
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_ecology:TestQueryMethods.test_unknown_query_id_raises",
+      "kind": "function",
+      "name": "test_unknown_query_id_raises",
+      "qualified_name": "tests.unit.test_thought_ecology.TestQueryMethods.test_unknown_query_id_raises",
+      "path": "tests/unit/test_thought_ecology.py",
+      "line": 570
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_ecology:TestSharedAssumptionLink",
+      "kind": "class",
+      "name": "TestSharedAssumptionLink",
+      "qualified_name": "tests.unit.test_thought_ecology.TestSharedAssumptionLink",
+      "path": "tests/unit/test_thought_ecology.py",
+      "line": 196
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_ecology:TestSharedAssumptionLink.test_canonicalization",
+      "kind": "function",
+      "name": "test_canonicalization",
+      "qualified_name": "tests.unit.test_thought_ecology.TestSharedAssumptionLink.test_canonicalization",
+      "path": "tests/unit/test_thought_ecology.py",
+      "line": 197
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_ecology:TestSharedAssumptionLink.test_from_dict_extra_key",
+      "kind": "function",
+      "name": "test_from_dict_extra_key",
+      "qualified_name": "tests.unit.test_thought_ecology.TestSharedAssumptionLink.test_from_dict_extra_key",
+      "path": "tests/unit/test_thought_ecology.py",
+      "line": 218
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_ecology:TestSharedAssumptionLink.test_self_reference_rejected",
+      "kind": "function",
+      "name": "test_self_reference_rejected",
+      "qualified_name": "tests.unit.test_thought_ecology.TestSharedAssumptionLink.test_self_reference_rejected",
+      "path": "tests/unit/test_thought_ecology.py",
+      "line": 204
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_ecology:TestSharedAssumptionLink.test_to_dict_from_dict_roundtrip",
+      "kind": "function",
+      "name": "test_to_dict_from_dict_roundtrip",
+      "qualified_name": "tests.unit.test_thought_ecology.TestSharedAssumptionLink.test_to_dict_from_dict_roundtrip",
+      "path": "tests/unit/test_thought_ecology.py",
+      "line": 210
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_ecology:TestSharedAssumptionsOfUnknown",
+      "kind": "class",
+      "name": "TestSharedAssumptionsOfUnknown",
+      "qualified_name": "tests.unit.test_thought_ecology.TestSharedAssumptionsOfUnknown",
+      "path": "tests/unit/test_thought_ecology.py",
+      "line": 702
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_ecology:TestSharedAssumptionsOfUnknown.test_valid_format_absent_id_raises",
+      "kind": "function",
+      "name": "test_valid_format_absent_id_raises",
+      "qualified_name": "tests.unit.test_thought_ecology.TestSharedAssumptionsOfUnknown.test_valid_format_absent_id_raises",
+      "path": "tests/unit/test_thought_ecology.py",
+      "line": 703
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_ecology:TestSnapshotDigest",
+      "kind": "class",
+      "name": "TestSnapshotDigest",
+      "qualified_name": "tests.unit.test_thought_ecology.TestSnapshotDigest",
+      "path": "tests/unit/test_thought_ecology.py",
+      "line": 414
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_ecology:TestSnapshotDigest.test_digest_deterministic",
+      "kind": "function",
+      "name": "test_digest_deterministic",
+      "qualified_name": "tests.unit.test_thought_ecology.TestSnapshotDigest.test_digest_deterministic",
+      "path": "tests/unit/test_thought_ecology.py",
+      "line": 422
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_ecology:TestSnapshotDigest.test_digest_is_sha256_of_snapshot",
+      "kind": "function",
+      "name": "test_digest_is_sha256_of_snapshot",
+      "qualified_name": "tests.unit.test_thought_ecology.TestSnapshotDigest.test_digest_is_sha256_of_snapshot",
+      "path": "tests/unit/test_thought_ecology.py",
+      "line": 415
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_ecology:TestStaticImportAudit",
+      "kind": "class",
+      "name": "TestStaticImportAudit",
+      "qualified_name": "tests.unit.test_thought_ecology.TestStaticImportAudit",
+      "path": "tests/unit/test_thought_ecology.py",
+      "line": 682
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_ecology:TestStaticImportAudit.test_no_disallowed_imports",
+      "kind": "function",
+      "name": "test_no_disallowed_imports",
+      "qualified_name": "tests.unit.test_thought_ecology.TestStaticImportAudit.test_no_disallowed_imports",
+      "path": "tests/unit/test_thought_ecology.py",
+      "line": 686
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_ecology:TestThoughtEcologyConstruction",
+      "kind": "class",
+      "name": "TestThoughtEcologyConstruction",
+      "qualified_name": "tests.unit.test_thought_ecology.TestThoughtEcologyConstruction",
+      "path": "tests/unit/test_thought_ecology.py",
+      "line": 254
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_ecology:TestThoughtEcologyConstruction.test_ambiguous_evidence_bucket_rejected",
+      "kind": "function",
+      "name": "test_ambiguous_evidence_bucket_rejected",
+      "qualified_name": "tests.unit.test_thought_ecology.TestThoughtEcologyConstruction.test_ambiguous_evidence_bucket_rejected",
+      "path": "tests/unit/test_thought_ecology.py",
+      "line": 294
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_ecology:TestThoughtEcologyConstruction.test_dependency_cycle_rejected",
+      "kind": "function",
+      "name": "test_dependency_cycle_rejected",
+      "qualified_name": "tests.unit.test_thought_ecology.TestThoughtEcologyConstruction.test_dependency_cycle_rejected",
+      "path": "tests/unit/test_thought_ecology.py",
+      "line": 307
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_ecology:TestThoughtEcologyConstruction.test_direct_tuple_enforcement",
+      "kind": "function",
+      "name": "test_direct_tuple_enforcement",
+      "qualified_name": "tests.unit.test_thought_ecology.TestThoughtEcologyConstruction.test_direct_tuple_enforcement",
+      "path": "tests/unit/test_thought_ecology.py",
+      "line": 255
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_ecology:TestThoughtEcologyConstruction.test_duplicate_dependency_rejected",
+      "kind": "function",
+      "name": "test_duplicate_dependency_rejected",
+      "qualified_name": "tests.unit.test_thought_ecology.TestThoughtEcologyConstruction.test_duplicate_dependency_rejected",
+      "path": "tests/unit/test_thought_ecology.py",
+      "line": 281
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_ecology:TestThoughtEcologyConstruction.test_sorting_canonical_shape",
+      "kind": "function",
+      "name": "test_sorting_canonical_shape",
+      "qualified_name": "tests.unit.test_thought_ecology.TestThoughtEcologyConstruction.test_sorting_canonical_shape",
+      "path": "tests/unit/test_thought_ecology.py",
+      "line": 320
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_ecology:TestThoughtEcologyConstruction.test_unknown_endpoint_rejected",
+      "kind": "function",
+      "name": "test_unknown_endpoint_rejected",
+      "qualified_name": "tests.unit.test_thought_ecology.TestThoughtEcologyConstruction.test_unknown_endpoint_rejected",
+      "path": "tests/unit/test_thought_ecology.py",
+      "line": 272
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_ecology:TestThoughtEcologyConstruction.test_wrong_relation_type_rejected",
+      "kind": "function",
+      "name": "test_wrong_relation_type_rejected",
+      "qualified_name": "tests.unit.test_thought_ecology.TestThoughtEcologyConstruction.test_wrong_relation_type_rejected",
+      "path": "tests/unit/test_thought_ecology.py",
+      "line": 263
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_ecology:TestThoughtEcologySerialization",
+      "kind": "class",
+      "name": "TestThoughtEcologySerialization",
+      "qualified_name": "tests.unit.test_thought_ecology.TestThoughtEcologySerialization",
+      "path": "tests/unit/test_thought_ecology.py",
+      "line": 339
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_ecology:TestThoughtEcologySerialization.test_canonical_json_deterministic",
+      "kind": "function",
+      "name": "test_canonical_json_deterministic",
+      "qualified_name": "tests.unit.test_thought_ecology.TestThoughtEcologySerialization.test_canonical_json_deterministic",
+      "path": "tests/unit/test_thought_ecology.py",
+      "line": 383
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_ecology:TestThoughtEcologySerialization.test_from_canonical_json_bad_json",
+      "kind": "function",
+      "name": "test_from_canonical_json_bad_json",
+      "qualified_name": "tests.unit.test_thought_ecology.TestThoughtEcologySerialization.test_from_canonical_json_bad_json",
+      "path": "tests/unit/test_thought_ecology.py",
+      "line": 404
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_ecology:TestThoughtEcologySerialization.test_from_canonical_json_bad_type",
+      "kind": "function",
+      "name": "test_from_canonical_json_bad_type",
+      "qualified_name": "tests.unit.test_thought_ecology.TestThoughtEcologySerialization.test_from_canonical_json_bad_type",
+      "path": "tests/unit/test_thought_ecology.py",
+      "line": 400
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_ecology:TestThoughtEcologySerialization.test_from_canonical_json_roundtrip",
+      "kind": "function",
+      "name": "test_from_canonical_json_roundtrip",
+      "qualified_name": "tests.unit.test_thought_ecology.TestThoughtEcologySerialization.test_from_canonical_json_roundtrip",
+      "path": "tests/unit/test_thought_ecology.py",
+      "line": 391
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_ecology:TestThoughtEcologySerialization.test_from_dict_extra_key",
+      "kind": "function",
+      "name": "test_from_dict_extra_key",
+      "qualified_name": "tests.unit.test_thought_ecology.TestThoughtEcologySerialization.test_from_dict_extra_key",
+      "path": "tests/unit/test_thought_ecology.py",
+      "line": 344
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_ecology:TestThoughtEcologySerialization.test_from_dict_missing_key",
+      "kind": "function",
+      "name": "test_from_dict_missing_key",
+      "qualified_name": "tests.unit.test_thought_ecology.TestThoughtEcologySerialization.test_from_dict_missing_key",
+      "path": "tests/unit/test_thought_ecology.py",
+      "line": 340
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_ecology:TestThoughtEcologySerialization.test_from_dict_requires_lists",
+      "kind": "function",
+      "name": "test_from_dict_requires_lists",
+      "qualified_name": "tests.unit.test_thought_ecology.TestThoughtEcologySerialization.test_from_dict_requires_lists",
+      "path": "tests/unit/test_thought_ecology.py",
+      "line": 358
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_ecology:TestThoughtEcologySerialization.test_to_dict_from_dict_roundtrip",
+      "kind": "function",
+      "name": "test_to_dict_from_dict_roundtrip",
+      "qualified_name": "tests.unit.test_thought_ecology.TestThoughtEcologySerialization.test_to_dict_from_dict_roundtrip",
+      "path": "tests/unit/test_thought_ecology.py",
+      "line": 374
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_ecology:TestValidateFor",
+      "kind": "class",
+      "name": "TestValidateFor",
+      "qualified_name": "tests.unit.test_thought_ecology.TestValidateFor",
+      "path": "tests/unit/test_thought_ecology.py",
+      "line": 623
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_ecology:TestValidateFor.test_validate_for_digest_mismatch",
+      "kind": "function",
+      "name": "test_validate_for_digest_mismatch",
+      "qualified_name": "tests.unit.test_thought_ecology.TestValidateFor.test_validate_for_digest_mismatch",
+      "path": "tests/unit/test_thought_ecology.py",
+      "line": 632
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_ecology:TestValidateFor.test_validate_for_exact_snapshot",
+      "kind": "function",
+      "name": "test_validate_for_exact_snapshot",
+      "qualified_name": "tests.unit.test_thought_ecology.TestValidateFor.test_validate_for_exact_snapshot",
+      "path": "tests/unit/test_thought_ecology.py",
+      "line": 624
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_ecology:TestValidateFor.test_validate_for_forged_same_digest_missing_relation",
+      "kind": "function",
+      "name": "test_validate_for_forged_same_digest_missing_relation",
+      "qualified_name": "tests.unit.test_thought_ecology.TestValidateFor.test_validate_for_forged_same_digest_missing_relation",
+      "path": "tests/unit/test_thought_ecology.py",
+      "line": 640
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_ecology:_build",
+      "kind": "function",
+      "name": "_build",
+      "qualified_name": "tests.unit.test_thought_ecology._build",
+      "path": "tests/unit/test_thought_ecology.py",
+      "line": 112
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_ecology:_collect_imports",
+      "kind": "function",
+      "name": "_collect_imports",
+      "qualified_name": "tests.unit.test_thought_ecology._collect_imports",
+      "path": "tests/unit/test_thought_ecology.py",
+      "line": 668
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_ecology:_make_state",
+      "kind": "function",
+      "name": "_make_state",
+      "qualified_name": "tests.unit.test_thought_ecology._make_state",
+      "path": "tests/unit/test_thought_ecology.py",
+      "line": 46
+    },
+    {
+      "id": "symbol:tests.unit.test_thought_ecology:_snapshot",
+      "kind": "function",
+      "name": "_snapshot",
+      "qualified_name": "tests.unit.test_thought_ecology._snapshot",
+      "path": "tests/unit/test_thought_ecology.py",
+      "line": 108
+    },
+    {
       "id": "symbol:tests.unit.test_thought_lifecycle:TestLineageIndexEmpty",
       "kind": "class",
       "name": "TestLineageIndexEmpty",
@@ -6561,6 +8057,326 @@
       "kind": "contains"
     },
     {
+      "source": "module:nps_core.thought_ecology.errors",
+      "target": "symbol:nps_core.thought_ecology.errors:AmbiguousEvidenceBucketError",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.thought_ecology.errors",
+      "target": "symbol:nps_core.thought_ecology.errors:AmbiguousEvidenceBucketError.__init__",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.thought_ecology.errors",
+      "target": "symbol:nps_core.thought_ecology.errors:ConflictingAssumptionError",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.thought_ecology.errors",
+      "target": "symbol:nps_core.thought_ecology.errors:ConflictingAssumptionError.__init__",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.thought_ecology.errors",
+      "target": "symbol:nps_core.thought_ecology.errors:DependencyCycleError",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.thought_ecology.errors",
+      "target": "symbol:nps_core.thought_ecology.errors:DependencyCycleError.__init__",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.thought_ecology.errors",
+      "target": "symbol:nps_core.thought_ecology.errors:EcologyValidationError",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.thought_ecology.errors",
+      "target": "symbol:nps_core.thought_ecology.errors:SelfReferenceError",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.thought_ecology.errors",
+      "target": "symbol:nps_core.thought_ecology.errors:SelfReferenceError.__init__",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.thought_ecology.errors",
+      "target": "symbol:nps_core.thought_ecology.errors:SnapshotMismatchError",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.thought_ecology.errors",
+      "target": "symbol:nps_core.thought_ecology.errors:SnapshotMismatchError.__init__",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.thought_ecology.errors",
+      "target": "symbol:nps_core.thought_ecology.errors:ThoughtEcologyError",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.thought_ecology.errors",
+      "target": "symbol:nps_core.thought_ecology.errors:ThoughtEcologyError.__init__",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.thought_ecology.errors",
+      "target": "symbol:nps_core.thought_ecology.errors:UnknownThoughtError",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.thought_ecology.errors",
+      "target": "symbol:nps_core.thought_ecology.errors:UnknownThoughtError.__init__",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.thought_ecology.index",
+      "target": "symbol:nps_core.thought_ecology.index:ThoughtEcology",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.thought_ecology.index",
+      "target": "symbol:nps_core.thought_ecology.index:ThoughtEcology.__post_init__",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.thought_ecology.index",
+      "target": "symbol:nps_core.thought_ecology.index:ThoughtEcology._id_set",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.thought_ecology.index",
+      "target": "symbol:nps_core.thought_ecology.index:ThoughtEcology._require_known",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.thought_ecology.index",
+      "target": "symbol:nps_core.thought_ecology.index:ThoughtEcology.contradictions_of",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.thought_ecology.index",
+      "target": "symbol:nps_core.thought_ecology.index:ThoughtEcology.contradictions_of._other",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.thought_ecology.index",
+      "target": "symbol:nps_core.thought_ecology.index:ThoughtEcology.dependencies_of",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.thought_ecology.index",
+      "target": "symbol:nps_core.thought_ecology.index:ThoughtEcology.dependents_of",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.thought_ecology.index",
+      "target": "symbol:nps_core.thought_ecology.index:ThoughtEcology.evidence_for",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.thought_ecology.index",
+      "target": "symbol:nps_core.thought_ecology.index:ThoughtEcology.from_canonical_json",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.thought_ecology.index",
+      "target": "symbol:nps_core.thought_ecology.index:ThoughtEcology.from_dict",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.thought_ecology.index",
+      "target": "symbol:nps_core.thought_ecology.index:ThoughtEcology.neighborhood",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.thought_ecology.index",
+      "target": "symbol:nps_core.thought_ecology.index:ThoughtEcology.overlaps_of",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.thought_ecology.index",
+      "target": "symbol:nps_core.thought_ecology.index:ThoughtEcology.overlaps_of._other",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.thought_ecology.index",
+      "target": "symbol:nps_core.thought_ecology.index:ThoughtEcology.shared_assumptions_of",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.thought_ecology.index",
+      "target": "symbol:nps_core.thought_ecology.index:ThoughtEcology.shared_assumptions_of._other",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.thought_ecology.index",
+      "target": "symbol:nps_core.thought_ecology.index:ThoughtEcology.to_canonical_json",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.thought_ecology.index",
+      "target": "symbol:nps_core.thought_ecology.index:ThoughtEcology.to_dict",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.thought_ecology.index",
+      "target": "symbol:nps_core.thought_ecology.index:ThoughtEcology.topological_order",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.thought_ecology.index",
+      "target": "symbol:nps_core.thought_ecology.index:ThoughtEcology.transitive_dependencies",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.thought_ecology.index",
+      "target": "symbol:nps_core.thought_ecology.index:ThoughtEcology.validate_for",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.thought_ecology.index",
+      "target": "symbol:nps_core.thought_ecology.index:_check_non_empty_str",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.thought_ecology.index",
+      "target": "symbol:nps_core.thought_ecology.index:_check_thought_id",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.thought_ecology.index",
+      "target": "symbol:nps_core.thought_ecology.index:_detect_cycle",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.thought_ecology.index",
+      "target": "symbol:nps_core.thought_ecology.index:_detect_cycle._dfs",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.thought_ecology.index",
+      "target": "symbol:nps_core.thought_ecology.index:build",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.thought_ecology.relations",
+      "target": "symbol:nps_core.thought_ecology.relations:ContradictionEdge",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.thought_ecology.relations",
+      "target": "symbol:nps_core.thought_ecology.relations:ContradictionEdge.__post_init__",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.thought_ecology.relations",
+      "target": "symbol:nps_core.thought_ecology.relations:ContradictionEdge.from_dict",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.thought_ecology.relations",
+      "target": "symbol:nps_core.thought_ecology.relations:ContradictionEdge.to_dict",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.thought_ecology.relations",
+      "target": "symbol:nps_core.thought_ecology.relations:DependencyEdge",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.thought_ecology.relations",
+      "target": "symbol:nps_core.thought_ecology.relations:DependencyEdge.__post_init__",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.thought_ecology.relations",
+      "target": "symbol:nps_core.thought_ecology.relations:DependencyEdge.from_dict",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.thought_ecology.relations",
+      "target": "symbol:nps_core.thought_ecology.relations:DependencyEdge.to_dict",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.thought_ecology.relations",
+      "target": "symbol:nps_core.thought_ecology.relations:EvidencePlacement",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.thought_ecology.relations",
+      "target": "symbol:nps_core.thought_ecology.relations:EvidencePlacement.__post_init__",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.thought_ecology.relations",
+      "target": "symbol:nps_core.thought_ecology.relations:EvidencePlacement.from_dict",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.thought_ecology.relations",
+      "target": "symbol:nps_core.thought_ecology.relations:EvidencePlacement.to_dict",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.thought_ecology.relations",
+      "target": "symbol:nps_core.thought_ecology.relations:OverlapEdge",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.thought_ecology.relations",
+      "target": "symbol:nps_core.thought_ecology.relations:OverlapEdge.__post_init__",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.thought_ecology.relations",
+      "target": "symbol:nps_core.thought_ecology.relations:OverlapEdge.from_dict",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.thought_ecology.relations",
+      "target": "symbol:nps_core.thought_ecology.relations:OverlapEdge.to_dict",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.thought_ecology.relations",
+      "target": "symbol:nps_core.thought_ecology.relations:SharedAssumptionLink",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.thought_ecology.relations",
+      "target": "symbol:nps_core.thought_ecology.relations:SharedAssumptionLink.__post_init__",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.thought_ecology.relations",
+      "target": "symbol:nps_core.thought_ecology.relations:SharedAssumptionLink.from_dict",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.thought_ecology.relations",
+      "target": "symbol:nps_core.thought_ecology.relations:SharedAssumptionLink.to_dict",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.thought_ecology.relations",
+      "target": "symbol:nps_core.thought_ecology.relations:_canonical_pair",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.thought_ecology.relations",
+      "target": "symbol:nps_core.thought_ecology.relations:_validate_non_empty_str",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.thought_ecology.relations",
+      "target": "symbol:nps_core.thought_ecology.relations:_validate_thought_id",
+      "kind": "contains"
+    },
+    {
       "source": "module:tests.architecture.test_package_skeleton",
       "target": "symbol:tests.architecture.test_package_skeleton:test_module_import",
       "kind": "contains"
@@ -6683,6 +8499,141 @@
     {
       "source": "module:tests.integration.test_refresh_codegraph",
       "target": "symbol:tests.integration.test_refresh_codegraph:test_refresh_codegraph",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.integration.test_thought_ecology_population",
+      "target": "symbol:tests.integration.test_thought_ecology_population:_add",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.integration.test_thought_ecology_population",
+      "target": "symbol:tests.integration.test_thought_ecology_population:_snapshot",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.integration.test_thought_ecology_population",
+      "target": "symbol:tests.integration.test_thought_ecology_population:_state",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.integration.test_thought_ecology_population",
+      "target": "symbol:tests.integration.test_thought_ecology_population:test_build_twice_canonical_json_byte_identical",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.integration.test_thought_ecology_population",
+      "target": "symbol:tests.integration.test_thought_ecology_population:test_changed_snapshot_makes_old_ecology_validate_for_raise",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.integration.test_thought_ecology_population",
+      "target": "symbol:tests.integration.test_thought_ecology_population:test_contradictions_of_query",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.integration.test_thought_ecology_population",
+      "target": "symbol:tests.integration.test_thought_ecology_population:test_dependencies_of_query",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.integration.test_thought_ecology_population",
+      "target": "symbol:tests.integration.test_thought_ecology_population:test_dependents_of_query",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.integration.test_thought_ecology_population",
+      "target": "symbol:tests.integration.test_thought_ecology_population:test_ecology_dict_json_round_trip",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.integration.test_thought_ecology_population",
+      "target": "symbol:tests.integration.test_thought_ecology_population:test_evidence_for_query",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.integration.test_thought_ecology_population",
+      "target": "symbol:tests.integration.test_thought_ecology_population:test_expected_contradiction_edges",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.integration.test_thought_ecology_population",
+      "target": "symbol:tests.integration.test_thought_ecology_population:test_expected_dependency_edges",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.integration.test_thought_ecology_population",
+      "target": "symbol:tests.integration.test_thought_ecology_population:test_expected_evidence_placements",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.integration.test_thought_ecology_population",
+      "target": "symbol:tests.integration.test_thought_ecology_population:test_expected_overlap_edges",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.integration.test_thought_ecology_population",
+      "target": "symbol:tests.integration.test_thought_ecology_population:test_expected_shared_assumption_links",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.integration.test_thought_ecology_population",
+      "target": "symbol:tests.integration.test_thought_ecology_population:test_expected_thought_ids",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.integration.test_thought_ecology_population",
+      "target": "symbol:tests.integration.test_thought_ecology_population:test_forged_ecology_with_removed_relation_fails_validate_for",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.integration.test_thought_ecology_population",
+      "target": "symbol:tests.integration.test_thought_ecology_population:test_neighborhood_unions_all_relation_types",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.integration.test_thought_ecology_population",
+      "target": "symbol:tests.integration.test_thought_ecology_population:test_overlaps_of_query",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.integration.test_thought_ecology_population",
+      "target": "symbol:tests.integration.test_thought_ecology_population:test_rebuild_from_independently_reconstructed_snapshot",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.integration.test_thought_ecology_population",
+      "target": "symbol:tests.integration.test_thought_ecology_population:test_shared_assumptions_of_query",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.integration.test_thought_ecology_population",
+      "target": "symbol:tests.integration.test_thought_ecology_population:test_snapshot_digest_equals_sha256_of_snapshot_canonical_json",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.integration.test_thought_ecology_population",
+      "target": "symbol:tests.integration.test_thought_ecology_population:test_source_snapshots_and_lifecycle_history_byte_identical",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.integration.test_thought_ecology_population",
+      "target": "symbol:tests.integration.test_thought_ecology_population:test_topological_order_contains_all_thoughts",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.integration.test_thought_ecology_population",
+      "target": "symbol:tests.integration.test_thought_ecology_population:test_topological_order_targets_precede_sources",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.integration.test_thought_ecology_population",
+      "target": "symbol:tests.integration.test_thought_ecology_population:test_transitive_dependencies",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.integration.test_thought_ecology_population",
+      "target": "symbol:tests.integration.test_thought_ecology_population:test_validate_for_exact_snapshot",
       "kind": "contains"
     },
     {
@@ -8156,6 +10107,461 @@
       "kind": "contains"
     },
     {
+      "source": "module:tests.unit.test_thought_ecology",
+      "target": "symbol:tests.unit.test_thought_ecology:TestBuild",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_ecology",
+      "target": "symbol:tests.unit.test_thought_ecology:TestBuild.test_dependency_cycle_detected",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_ecology",
+      "target": "symbol:tests.unit.test_thought_ecology:TestBuild.test_dependency_direction",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_ecology",
+      "target": "symbol:tests.unit.test_thought_ecology:TestBuild.test_dependency_three_node_cycle_detected",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_ecology",
+      "target": "symbol:tests.unit.test_thought_ecology:TestBuild.test_empty_snapshot",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_ecology",
+      "target": "symbol:tests.unit.test_thought_ecology:TestBuild.test_evidence_placements",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_ecology",
+      "target": "symbol:tests.unit.test_thought_ecology:TestBuild.test_reciprocal_undirected_collapse",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_ecology",
+      "target": "symbol:tests.unit.test_thought_ecology:TestBuild.test_self_contradiction_rejected",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_ecology",
+      "target": "symbol:tests.unit.test_thought_ecology:TestBuild.test_self_dependency_rejected",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_ecology",
+      "target": "symbol:tests.unit.test_thought_ecology:TestBuild.test_self_overlap_rejected",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_ecology",
+      "target": "symbol:tests.unit.test_thought_ecology:TestBuild.test_shared_assumption_pair_generation",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_ecology",
+      "target": "symbol:tests.unit.test_thought_ecology:TestBuild.test_shared_assumption_payload_conflict",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_ecology",
+      "target": "symbol:tests.unit.test_thought_ecology:TestBuild.test_unknown_contradiction_endpoint",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_ecology",
+      "target": "symbol:tests.unit.test_thought_ecology:TestBuild.test_unknown_dependency_endpoint",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_ecology",
+      "target": "symbol:tests.unit.test_thought_ecology:TestBuild.test_unknown_overlap_endpoint",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_ecology",
+      "target": "symbol:tests.unit.test_thought_ecology:TestContradictionEdge",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_ecology",
+      "target": "symbol:tests.unit.test_thought_ecology:TestContradictionEdge.test_canonicalization",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_ecology",
+      "target": "symbol:tests.unit.test_thought_ecology:TestContradictionEdge.test_from_dict_extra_key",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_ecology",
+      "target": "symbol:tests.unit.test_thought_ecology:TestContradictionEdge.test_self_reference_rejected",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_ecology",
+      "target": "symbol:tests.unit.test_thought_ecology:TestContradictionEdge.test_to_dict_from_dict_roundtrip",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_ecology",
+      "target": "symbol:tests.unit.test_thought_ecology:TestDependencyEdge",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_ecology",
+      "target": "symbol:tests.unit.test_thought_ecology:TestDependencyEdge.test_direct_construction",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_ecology",
+      "target": "symbol:tests.unit.test_thought_ecology:TestDependencyEdge.test_from_dict_extra_key",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_ecology",
+      "target": "symbol:tests.unit.test_thought_ecology:TestDependencyEdge.test_from_dict_missing_key",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_ecology",
+      "target": "symbol:tests.unit.test_thought_ecology:TestDependencyEdge.test_from_dict_wrong_type",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_ecology",
+      "target": "symbol:tests.unit.test_thought_ecology:TestDependencyEdge.test_invalid_id",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_ecology",
+      "target": "symbol:tests.unit.test_thought_ecology:TestDependencyEdge.test_self_reference_rejected",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_ecology",
+      "target": "symbol:tests.unit.test_thought_ecology:TestDependencyEdge.test_to_dict_from_dict_roundtrip",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_ecology",
+      "target": "symbol:tests.unit.test_thought_ecology:TestEvidencePlacement",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_ecology",
+      "target": "symbol:tests.unit.test_thought_ecology:TestEvidencePlacement.test_from_dict_extra_key",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_ecology",
+      "target": "symbol:tests.unit.test_thought_ecology:TestEvidencePlacement.test_invalid_bucket",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_ecology",
+      "target": "symbol:tests.unit.test_thought_ecology:TestEvidencePlacement.test_to_dict_from_dict_roundtrip",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_ecology",
+      "target": "symbol:tests.unit.test_thought_ecology:TestEvidencePlacement.test_valid_buckets",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_ecology",
+      "target": "symbol:tests.unit.test_thought_ecology:TestFromDictSnapshotDigest",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_ecology",
+      "target": "symbol:tests.unit.test_thought_ecology:TestFromDictSnapshotDigest.test_non_string_rejected",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_ecology",
+      "target": "symbol:tests.unit.test_thought_ecology:TestOverlapEdge",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_ecology",
+      "target": "symbol:tests.unit.test_thought_ecology:TestOverlapEdge.test_canonicalization",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_ecology",
+      "target": "symbol:tests.unit.test_thought_ecology:TestOverlapEdge.test_self_reference_rejected",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_ecology",
+      "target": "symbol:tests.unit.test_thought_ecology:TestOverlapEdge.test_to_dict_from_dict_roundtrip",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_ecology",
+      "target": "symbol:tests.unit.test_thought_ecology:TestQueryMethods",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_ecology",
+      "target": "symbol:tests.unit.test_thought_ecology:TestQueryMethods.eco",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_ecology",
+      "target": "symbol:tests.unit.test_thought_ecology:TestQueryMethods.test_contradictions_of",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_ecology",
+      "target": "symbol:tests.unit.test_thought_ecology:TestQueryMethods.test_dependencies_of",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_ecology",
+      "target": "symbol:tests.unit.test_thought_ecology:TestQueryMethods.test_dependents_of",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_ecology",
+      "target": "symbol:tests.unit.test_thought_ecology:TestQueryMethods.test_evidence_for",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_ecology",
+      "target": "symbol:tests.unit.test_thought_ecology:TestQueryMethods.test_neighborhood",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_ecology",
+      "target": "symbol:tests.unit.test_thought_ecology:TestQueryMethods.test_neighborhood_evidence_sharing",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_ecology",
+      "target": "symbol:tests.unit.test_thought_ecology:TestQueryMethods.test_neighborhood_unknown_raises",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_ecology",
+      "target": "symbol:tests.unit.test_thought_ecology:TestQueryMethods.test_overlaps_of",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_ecology",
+      "target": "symbol:tests.unit.test_thought_ecology:TestQueryMethods.test_topological_order_empty",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_ecology",
+      "target": "symbol:tests.unit.test_thought_ecology:TestQueryMethods.test_topological_order_target_before_source",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_ecology",
+      "target": "symbol:tests.unit.test_thought_ecology:TestQueryMethods.test_transitive_dependencies",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_ecology",
+      "target": "symbol:tests.unit.test_thought_ecology:TestQueryMethods.test_transitive_unknown_raises",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_ecology",
+      "target": "symbol:tests.unit.test_thought_ecology:TestQueryMethods.test_unknown_query_id_raises",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_ecology",
+      "target": "symbol:tests.unit.test_thought_ecology:TestSharedAssumptionLink",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_ecology",
+      "target": "symbol:tests.unit.test_thought_ecology:TestSharedAssumptionLink.test_canonicalization",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_ecology",
+      "target": "symbol:tests.unit.test_thought_ecology:TestSharedAssumptionLink.test_from_dict_extra_key",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_ecology",
+      "target": "symbol:tests.unit.test_thought_ecology:TestSharedAssumptionLink.test_self_reference_rejected",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_ecology",
+      "target": "symbol:tests.unit.test_thought_ecology:TestSharedAssumptionLink.test_to_dict_from_dict_roundtrip",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_ecology",
+      "target": "symbol:tests.unit.test_thought_ecology:TestSharedAssumptionsOfUnknown",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_ecology",
+      "target": "symbol:tests.unit.test_thought_ecology:TestSharedAssumptionsOfUnknown.test_valid_format_absent_id_raises",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_ecology",
+      "target": "symbol:tests.unit.test_thought_ecology:TestSnapshotDigest",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_ecology",
+      "target": "symbol:tests.unit.test_thought_ecology:TestSnapshotDigest.test_digest_deterministic",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_ecology",
+      "target": "symbol:tests.unit.test_thought_ecology:TestSnapshotDigest.test_digest_is_sha256_of_snapshot",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_ecology",
+      "target": "symbol:tests.unit.test_thought_ecology:TestStaticImportAudit",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_ecology",
+      "target": "symbol:tests.unit.test_thought_ecology:TestStaticImportAudit.test_no_disallowed_imports",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_ecology",
+      "target": "symbol:tests.unit.test_thought_ecology:TestThoughtEcologyConstruction",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_ecology",
+      "target": "symbol:tests.unit.test_thought_ecology:TestThoughtEcologyConstruction.test_ambiguous_evidence_bucket_rejected",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_ecology",
+      "target": "symbol:tests.unit.test_thought_ecology:TestThoughtEcologyConstruction.test_dependency_cycle_rejected",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_ecology",
+      "target": "symbol:tests.unit.test_thought_ecology:TestThoughtEcologyConstruction.test_direct_tuple_enforcement",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_ecology",
+      "target": "symbol:tests.unit.test_thought_ecology:TestThoughtEcologyConstruction.test_duplicate_dependency_rejected",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_ecology",
+      "target": "symbol:tests.unit.test_thought_ecology:TestThoughtEcologyConstruction.test_sorting_canonical_shape",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_ecology",
+      "target": "symbol:tests.unit.test_thought_ecology:TestThoughtEcologyConstruction.test_unknown_endpoint_rejected",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_ecology",
+      "target": "symbol:tests.unit.test_thought_ecology:TestThoughtEcologyConstruction.test_wrong_relation_type_rejected",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_ecology",
+      "target": "symbol:tests.unit.test_thought_ecology:TestThoughtEcologySerialization",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_ecology",
+      "target": "symbol:tests.unit.test_thought_ecology:TestThoughtEcologySerialization.test_canonical_json_deterministic",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_ecology",
+      "target": "symbol:tests.unit.test_thought_ecology:TestThoughtEcologySerialization.test_from_canonical_json_bad_json",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_ecology",
+      "target": "symbol:tests.unit.test_thought_ecology:TestThoughtEcologySerialization.test_from_canonical_json_bad_type",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_ecology",
+      "target": "symbol:tests.unit.test_thought_ecology:TestThoughtEcologySerialization.test_from_canonical_json_roundtrip",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_ecology",
+      "target": "symbol:tests.unit.test_thought_ecology:TestThoughtEcologySerialization.test_from_dict_extra_key",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_ecology",
+      "target": "symbol:tests.unit.test_thought_ecology:TestThoughtEcologySerialization.test_from_dict_missing_key",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_ecology",
+      "target": "symbol:tests.unit.test_thought_ecology:TestThoughtEcologySerialization.test_from_dict_requires_lists",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_ecology",
+      "target": "symbol:tests.unit.test_thought_ecology:TestThoughtEcologySerialization.test_to_dict_from_dict_roundtrip",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_ecology",
+      "target": "symbol:tests.unit.test_thought_ecology:TestValidateFor",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_ecology",
+      "target": "symbol:tests.unit.test_thought_ecology:TestValidateFor.test_validate_for_digest_mismatch",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_ecology",
+      "target": "symbol:tests.unit.test_thought_ecology:TestValidateFor.test_validate_for_exact_snapshot",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_ecology",
+      "target": "symbol:tests.unit.test_thought_ecology:TestValidateFor.test_validate_for_forged_same_digest_missing_relation",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_ecology",
+      "target": "symbol:tests.unit.test_thought_ecology:_build",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_ecology",
+      "target": "symbol:tests.unit.test_thought_ecology:_collect_imports",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_ecology",
+      "target": "symbol:tests.unit.test_thought_ecology:_make_state",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_thought_ecology",
+      "target": "symbol:tests.unit.test_thought_ecology:_snapshot",
+      "kind": "contains"
+    },
+    {
       "source": "module:tests.unit.test_thought_lifecycle",
       "target": "symbol:tests.unit.test_thought_lifecycle:TestLineageIndexEmpty",
       "kind": "contains"
@@ -9381,6 +11787,106 @@
       "kind": "imports"
     },
     {
+      "source": "module:nps_core.thought_ecology",
+      "target": "import:nps_core.thought_ecology.errors",
+      "kind": "imports"
+    },
+    {
+      "source": "module:nps_core.thought_ecology",
+      "target": "import:nps_core.thought_ecology.index",
+      "kind": "imports"
+    },
+    {
+      "source": "module:nps_core.thought_ecology",
+      "target": "import:nps_core.thought_ecology.relations",
+      "kind": "imports"
+    },
+    {
+      "source": "module:nps_core.thought_ecology.errors",
+      "target": "import:__future__",
+      "kind": "imports"
+    },
+    {
+      "source": "module:nps_core.thought_ecology.index",
+      "target": "import:__future__",
+      "kind": "imports"
+    },
+    {
+      "source": "module:nps_core.thought_ecology.index",
+      "target": "import:collections",
+      "kind": "imports"
+    },
+    {
+      "source": "module:nps_core.thought_ecology.index",
+      "target": "import:dataclasses",
+      "kind": "imports"
+    },
+    {
+      "source": "module:nps_core.thought_ecology.index",
+      "target": "import:hashlib",
+      "kind": "imports"
+    },
+    {
+      "source": "module:nps_core.thought_ecology.index",
+      "target": "import:heapq",
+      "kind": "imports"
+    },
+    {
+      "source": "module:nps_core.thought_ecology.index",
+      "target": "import:json",
+      "kind": "imports"
+    },
+    {
+      "source": "module:nps_core.thought_ecology.index",
+      "target": "import:nps_core.hypothesis_population.lifecycle",
+      "kind": "imports"
+    },
+    {
+      "source": "module:nps_core.thought_ecology.index",
+      "target": "import:nps_core.thought_ecology.errors",
+      "kind": "imports"
+    },
+    {
+      "source": "module:nps_core.thought_ecology.index",
+      "target": "import:nps_core.thought_ecology.relations",
+      "kind": "imports"
+    },
+    {
+      "source": "module:nps_core.thought_ecology.index",
+      "target": "import:re",
+      "kind": "imports"
+    },
+    {
+      "source": "module:nps_core.thought_ecology.index",
+      "target": "import:typing",
+      "kind": "imports"
+    },
+    {
+      "source": "module:nps_core.thought_ecology.relations",
+      "target": "import:__future__",
+      "kind": "imports"
+    },
+    {
+      "source": "module:nps_core.thought_ecology.relations",
+      "target": "import:dataclasses",
+      "kind": "imports"
+    },
+    {
+      "source": "module:nps_core.thought_ecology.relations",
+      "target": "import:nps_core.thought_ecology.errors",
+      "kind": "imports"
+    },
+    {
+      "source": "module:nps_core.thought_ecology.relations",
+      "target": "import:re",
+      "kind": "imports"
+    },
+    {
+      "source": "module:nps_core.thought_ecology.relations",
+      "target": "import:typing",
+      "kind": "imports"
+    },
+    {
       "source": "module:scripts.refresh_codegraph",
       "target": "import:nps_core.codegraph.indexer",
       "kind": "imports"
@@ -9468,6 +11974,31 @@
     {
       "source": "module:tests.integration.test_refresh_codegraph",
       "target": "import:sys",
+      "kind": "imports"
+    },
+    {
+      "source": "module:tests.integration.test_thought_ecology_population",
+      "target": "import:__future__",
+      "kind": "imports"
+    },
+    {
+      "source": "module:tests.integration.test_thought_ecology_population",
+      "target": "import:hashlib",
+      "kind": "imports"
+    },
+    {
+      "source": "module:tests.integration.test_thought_ecology_population",
+      "target": "import:json",
+      "kind": "imports"
+    },
+    {
+      "source": "module:tests.integration.test_thought_ecology_population",
+      "target": "import:nps_core.hypothesis_population",
+      "kind": "imports"
+    },
+    {
+      "source": "module:tests.integration.test_thought_ecology_population",
+      "target": "import:nps_core.thought_ecology",
       "kind": "imports"
     },
     {
@@ -9763,6 +12294,56 @@
     {
       "source": "module:tests.unit.test_task_contract_schema",
       "target": "import:pytest",
+      "kind": "imports"
+    },
+    {
+      "source": "module:tests.unit.test_thought_ecology",
+      "target": "import:__future__",
+      "kind": "imports"
+    },
+    {
+      "source": "module:tests.unit.test_thought_ecology",
+      "target": "import:ast",
+      "kind": "imports"
+    },
+    {
+      "source": "module:tests.unit.test_thought_ecology",
+      "target": "import:hashlib",
+      "kind": "imports"
+    },
+    {
+      "source": "module:tests.unit.test_thought_ecology",
+      "target": "import:json",
+      "kind": "imports"
+    },
+    {
+      "source": "module:tests.unit.test_thought_ecology",
+      "target": "import:nps_core.hypothesis_population",
+      "kind": "imports"
+    },
+    {
+      "source": "module:tests.unit.test_thought_ecology",
+      "target": "import:nps_core.thought_ecology",
+      "kind": "imports"
+    },
+    {
+      "source": "module:tests.unit.test_thought_ecology",
+      "target": "import:pathlib",
+      "kind": "imports"
+    },
+    {
+      "source": "module:tests.unit.test_thought_ecology",
+      "target": "import:pytest",
+      "kind": "imports"
+    },
+    {
+      "source": "module:tests.unit.test_thought_ecology",
+      "target": "import:sys",
+      "kind": "imports"
+    },
+    {
+      "source": "module:tests.unit.test_thought_ecology",
+      "target": "import:typing",
       "kind": "imports"
     },
     {
