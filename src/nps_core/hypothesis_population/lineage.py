@@ -263,7 +263,7 @@ class LineageIndex:
         result: dict[str, list[str]] = {}
         for tid in self._ids:
             parents = sorted(
-                pid for cid, pid in self._parent_pairs if cid == tid,
+                pid for cid, pid in self._parent_pairs if cid == tid
             )
             result[tid] = parents
         return result
