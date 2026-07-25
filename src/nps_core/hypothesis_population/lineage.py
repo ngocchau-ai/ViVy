@@ -1,70 +1,46 @@
-"""Immutable deterministic lineage index for ThoughtState populations.
+"""Immutable deterministic lineage index for ThoughtState parent-child tracking.
 
-Provides a frozen, slotted dataclass that tracks parent-child relationships
-between ThoughtState objects.  All internal state is stored as canonical
-tuples to guarantee determinism and immutability.
-
-No runtime dependencies beyond the Python standard library.
+Provides ``LineageIndex`` frozen dataclass for efficient lineage queries
+on a population of ThoughtStates.  Standard-library only; no I/O.
 """
 
 from __future__ import annotations
 
 from dataclasses import dataclass
-from typing import Iterable
+from typing import Any
 
 from nps_core.hypothesis_population.errors import (
-    CycleDetectedError,
-    DuplicateIdError,
     SelfReferenceError,
-    UnknownReferenceError,
     ValidationError,
 )
 from nps_core.hypothesis_population.thought_state import ThoughtState
 
-__all__ = ["LineageIndex"]
+__all__ = [
+    "LineageIndex",
+]
 
 
-def _validate_state(state: ThoughtState) -> None:
-    """Validate that *state* is a ``ThoughtState`` instance without coercion."""
-    if not isinstance(state, ThoughtState):
+# ---------------------------------------------------------------------------
+# Helpers
+# ---------------------------------------------------------------------------
+
+def _validate_thought_id(value: str, *, field: str) -> None:
+    """Validate a thought ID is a non-empty string."""
+    if not isinstance(value, str):
         raise ValidationError(
-            f"expected ThoughtState, got {type(state).__name__}",
-            path="state",
+            f"{field} must be a string, got {type(value).__name__}",
+            path=field,
+        )
+    if not value.strip():
+        raise ValidationError(
+            f"{field} must be non-empty",
+            path=field,
         )
 
 
-def _detect_cycle(
-    adjacency: dict[str, tuple[str, ...]],
-    new_id: str,
-    new_parents: tuple[str, ...],
-) -> None:
-    """Raise ``CycleDetectedError`` if adding *new_id* with *new_parents* creates a cycle.
-
-    Uses iterative DFS from *new_id* through its descendants (reverse edges
-    are not needed because we only walk forward from the new node).
-    """
-    # Build a temporary forward adjacency that includes the new edge.
-    full: dict[str, tuple[str, ...]] = dict(adjacency)
-    full[new_id] = new_parents  # parents are "forward" from child perspective
-
-    # We need to detect if any ancestor of new_id can reach new_id.
-    # Walk backwards: for each parent of new_id, check if new_id is reachable.
-    visited: set[str] = set()
-    stack: list[str] = list(new_parents)
-    while stack:
-        node = stack.pop()
-        if node == new_id:
-            raise CycleDetectedError(
-                f"adding {new_id} would create a cycle",
-                thought_id=new_id,
-            )
-        if node in visited:
-            continue
-        visited.add(node)
-        # node's parents are stored in full[node]
-        for parent in full.get(node, ()):
-            stack.append(parent)
-
+# ---------------------------------------------------------------------------
+# LineageIndex
+# ---------------------------------------------------------------------------
 
 @dataclass(frozen=True, slots=True)
 class LineageIndex:
@@ -81,222 +57,382 @@ class LineageIndex:
     """
 
     _ids: tuple[str, ...]
-    _parents: tuple[tuple[str, str], ...]  # (child, parent) edges
-    _children: tuple[tuple[str, str], ...]  # (parent, child) edges
+    _parents: tuple[tuple[str, str], ...]
+    _children: tuple[tuple[str, str], ...]
 
-    # ------------------------------------------------------------------
-    # Construction helpers
-    # ------------------------------------------------------------------
+    def __post_init__(self) -> None:
+        # Validate types
+        if not isinstance(self._ids, tuple):
+            raise ValidationError(
+                f"_ids must be a tuple, got {type(self._ids).__name__}",
+                path="_ids",
+            )
+        if not isinstance(self._parents, tuple):
+            raise ValidationError(
+                f"_parents must be a tuple, got {type(self._parents).__name__}",
+                path="_parents",
+            )
+        if not isinstance(self._children, tuple):
+            raise ValidationError(
+                f"_children must be a tuple, got {type(self._children).__name__}",
+                path="_children",
+            )
+
+    # -- Factory methods ----------------------------------------------------
 
     @classmethod
     def empty(cls) -> LineageIndex:
-        """Return an empty ``LineageIndex``."""
+        """Create an empty lineage index."""
         return cls(_ids=(), _parents=(), _children=())
 
     @classmethod
-    def from_states(cls, states: Iterable[ThoughtState]) -> LineageIndex:
-        """Build a ``LineageIndex`` from an iterable of ``ThoughtState`` objects.
+    def from_states(cls, states: tuple[ThoughtState, ...]) -> LineageIndex:
+        """Construct a LineageIndex from a tuple of ThoughtStates.
 
-        The result is independent of input order.  Duplicate IDs, unknown
-        parent references, self-references, and cycles are rejected.
+        Validates:
+        - No self-references (thought_id in its own parent_ids)
+        - All parent_ids reference existing thought IDs
+
+        Parameters
+        ----------
+        states:
+            Tuple of ThoughtState instances.
+
+        Returns
+        -------
+        LineageIndex
+            A validated, immutable lineage index.
         """
-        collected: list[ThoughtState] = []
-        for state in states:
-            _validate_state(state)
-            collected.append(state)
-
-        # Sort by thought_id for deterministic processing.
-        collected.sort(key=lambda s: s.thought_id)
-
-        # Check for duplicate IDs.
-        seen_ids: set[str] = set()
-        for state in collected:
-            if state.thought_id in seen_ids:
-                raise DuplicateIdError(
-                    f"duplicate thought_id: {state.thought_id!r}",
-                    thought_id=state.thought_id,
-                )
-            seen_ids.add(state.thought_id)
-
-        # Validate self-references and unknown parents.
-        for state in collected:
-            for pid in state.parent_ids:
-                if pid == state.thought_id:
-                    raise SelfReferenceError(
-                        f"thought {state.thought_id} references itself",
-                        thought_id=state.thought_id,
-                    )
-                if pid not in seen_ids:
-                    raise UnknownReferenceError(
-                        f"parent {pid!r} not found in population",
-                        thought_id=state.thought_id,
-                    )
-
-        # Build adjacency for cycle detection.
-        # adjacency[thought_id] = tuple of parent_ids
-        adjacency: dict[str, tuple[str, ...]] = {}
-        for state in collected:
-            adjacency[state.thought_id] = state.parent_ids
-
-        # Detect cycles using topological sort (Kahn's algorithm).
-        # Build in-degree map.
-        in_degree: dict[str, int] = {tid: 0 for tid in adjacency}
-        forward: dict[str, list[str]] = {tid: [] for tid in adjacency}
-        for tid, parents in adjacency.items():
-            in_degree[tid] = len(parents)
-            for pid in parents:
-                forward[pid].append(tid)
-
-        queue: list[str] = sorted(
-            tid for tid, deg in in_degree.items() if deg == 0
-        )
-        processed = 0
-        while queue:
-            node = queue.pop(0)
-            processed += 1
-            for child in sorted(forward[node]):
-                in_degree[child] -= 1
-                if in_degree[child] == 0:
-                    # Insert in sorted position.
-                    idx = 0
-                    for idx, existing in enumerate(queue):
-                        if child < existing:
-                            break
-                    else:
-                        idx = len(queue)
-                    queue.insert(idx, child)
-
-        if processed != len(adjacency):
-            raise CycleDetectedError(
-                "population contains a cycle",
+        if not isinstance(states, tuple):
+            raise ValidationError(
+                f"states must be a tuple, got {type(states).__name__}",
+                path="states",
             )
 
-        # Build canonical edge tuples.
+        # Collect all thought IDs
+        all_ids: set[str] = set()
+        for state in states:
+            if not isinstance(state, ThoughtState):
+                raise ValidationError(
+                    f"each state must be a ThoughtState, got {type(state).__name__}",
+                    path="states",
+                )
+            all_ids.add(state.thought_id)
+
+        # Build edge lists
         parent_edges: list[tuple[str, str]] = []
         child_edges: list[tuple[str, str]] = []
-        for state in collected:
-            for pid in state.parent_ids:
-                parent_edges.append((state.thought_id, pid))
-                child_edges.append((pid, state.thought_id))
 
-        parent_edges.sort()
-        child_edges.sort()
+        for state in states:
+            # Check for self-references
+            if state.thought_id in state.parent_ids:
+                raise SelfReferenceError(
+                    f"thought {state.thought_id!r} cannot be its own parent",
+                    thought_id=state.thought_id,
+                    relation_type="lineage",
+                )
+
+            for parent_id in state.parent_ids:
+                # Validate parent exists
+                if parent_id not in all_ids:
+                    raise ValidationError(
+                        (
+                            f"parent {parent_id!r} of thought "
+                            f"{state.thought_id!r} not found in states"
+                        ),
+                        path="parent_ids",
+                    )
+
+                # child depends on parent
+                parent_edges.append((state.thought_id, parent_id))
+                # parent has child
+                child_edges.append((parent_id, state.thought_id))
+
+        # Sort for determinism
+        sorted_ids = tuple(sorted(all_ids))
+        sorted_parents = tuple(sorted(parent_edges))
+        sorted_children = tuple(sorted(child_edges))
 
         return cls(
-            _ids=tuple(sorted(seen_ids)),
-            _parents=tuple(parent_edges),
-            _children=tuple(child_edges),
+            _ids=sorted_ids,
+            _parents=sorted_parents,
+            _children=sorted_children,
         )
 
-    # ------------------------------------------------------------------
-    # Mutation (returns new instance)
-    # ------------------------------------------------------------------
+    # -- Query methods ------------------------------------------------------
 
-    def add(self, state: ThoughtState) -> LineageIndex:
-        """Return a new ``LineageIndex`` with *state* added.
-
-        Rejects duplicate IDs and requires every parent to already exist.
-        The original index is never mutated.
-        """
-        _validate_state(state)
-
-        if state.thought_id in set(self._ids):
-            raise DuplicateIdError(
-                f"duplicate thought_id: {state.thought_id!r}",
-                thought_id=state.thought_id,
-            )
-
-        existing_ids = set(self._ids)
-        for pid in state.parent_ids:
-            if pid == state.thought_id:
-                raise SelfReferenceError(
-                    f"thought {state.thought_id} references itself",
-                    thought_id=state.thought_id,
-                )
-            if pid not in existing_ids:
-                raise UnknownReferenceError(
-                    f"parent {pid!r} not found in index",
-                    thought_id=state.thought_id,
-                )
-
-        # Build new adjacency and check for cycles.
-        adjacency: dict[str, tuple[str, ...]] = {}
-        # Reconstruct from existing edges.
-        for child, parent in self._parents:
-            adjacency.setdefault(child, [])
-            adjacency[child] = (*adjacency.get(child, ()), parent)
-        adjacency[state.thought_id] = state.parent_ids
-
-        _detect_cycle(
-            {k: tuple(v) if isinstance(v, list) else v for k, v in adjacency.items()},
-            state.thought_id,
-            state.parent_ids,
-        )
-
-        # Build new canonical tuples.
-        new_ids = tuple(sorted((*self._ids, state.thought_id)))
-
-        new_parent_edges: list[tuple[str, str]] = list(self._parents)
-        new_child_edges: list[tuple[str, str]] = list(self._children)
-        for pid in state.parent_ids:
-            new_parent_edges.append((state.thought_id, pid))
-            new_child_edges.append((pid, state.thought_id))
-        new_parent_edges.sort()
-        new_child_edges.sort()
-
-        return LineageIndex(
-            _ids=new_ids,
-            _parents=tuple(new_parent_edges),
-            _children=tuple(new_child_edges),
-        )
-
-    # ------------------------------------------------------------------
-    # Queries
-    # ------------------------------------------------------------------
-
-    def contains(self, thought_id: str) -> bool:
-        """Return ``True`` if *thought_id* is in the index."""
-        return thought_id in set(self._ids)
-
-    def parents_of(self, thought_id: str) -> tuple[str, ...]:
-        """Return the parent IDs of *thought_id*, sorted lexicographically.
-
-        Raises ``UnknownReferenceError`` if *thought_id* is not in the index.
-        """
-        if thought_id not in set(self._ids):
-            raise UnknownReferenceError(
-                f"thought {thought_id!r} not found in index",
-                thought_id=thought_id,
-            )
-        return tuple(
-            sorted(pid for child, pid in self._parents if child == thought_id)
-        )
-
-    def children_of(self, thought_id: str) -> tuple[str, ...]:
-        """Return the child IDs of *thought_id*, sorted lexicographically.
-
-        Raises ``UnknownReferenceError`` if *thought_id* is not in the index.
-        """
-        if thought_id not in set(self._ids):
-            raise UnknownReferenceError(
-                f"thought {thought_id!r} not found in index",
-                thought_id=thought_id,
-            )
-        return tuple(
-            sorted(cid for parent, cid in self._children if parent == thought_id)
-        )
-
+    @property
     def ids(self) -> tuple[str, ...]:
-        """Return all thought IDs, sorted lexicographically."""
+        """All thought IDs in lexicographic order."""
         return self._ids
 
-    def to_dict(self) -> dict[str, list[str]]:
-        """Serialize the index to a plain dict mapping each ID to its parent IDs.
+    def parent_ids(self, thought_id: str) -> tuple[str, ...]:
+        """Return the parent IDs of the given thought, sorted lexicographically.
 
-        Keys are sorted lexicographically; parent lists are sorted
-        lexicographically.
+        Parameters
+        ----------
+        thought_id:
+            The thought ID to query.
+
+        Returns
+        -------
+        tuple[str, ...]
+            Sorted tuple of parent IDs.
+
+        Raises
+        ------
+        ValidationError
+            If thought_id is not a string.
         """
-        result: dict[str, list[str]] = {}
-        for tid in self._ids:
-            result[tid] = list(self.parents_of(tid))
-        return result
+        _validate_thought_id(thought_id, field="thought_id")
+        return tuple(
+            sorted(pid for cid, pid in self._parents if cid == thought_id)
+        )
+
+    def children_ids(self, thought_id: str) -> tuple[str, ...]:
+        """Return the children IDs of the given thought, sorted lexicographically.
+
+        Parameters
+        ----------
+        thought_id:
+            The thought ID to query.
+
+        Returns
+        -------
+        tuple[str, ...]
+            Sorted tuple of children IDs.
+
+        Raises
+        ------
+        ValidationError
+            If thought_id is not a string.
+        """
+        _validate_thought_id(thought_id, field="thought_id")
+        return tuple(
+            sorted(cid for pid, cid in self._children if pid == thought_id)
+        )
+
+    def ancestors(self, thought_id: str) -> tuple[str, ...]:
+        """Return all ancestor IDs of the given thought, sorted lexicographically.
+
+        Uses BFS to traverse parent edges.
+
+        Parameters
+        ----------
+        thought_id:
+            The thought ID to query.
+
+        Returns
+        -------
+        tuple[str, ...]
+            Sorted tuple of all ancestor IDs (excluding the thought itself).
+
+        Raises
+        ------
+        ValidationError
+            If thought_id is not a string.
+        """
+        _validate_thought_id(thought_id, field="thought_id")
+
+        # Build adjacency list for parent lookups
+        parent_map: dict[str, list[str]] = {}
+        for cid, pid in self._parents:
+            parent_map.setdefault(cid, []).append(pid)
+
+        # BFS from thought_id upward
+        visited: set[str] = set()
+        queue: list[str] = [thought_id]
+
+        while queue:
+            current = queue.pop(0)
+            for parent in parent_map.get(current, []):
+                if parent not in visited:
+                    visited.add(parent)
+                    queue.append(parent)
+
+        # Exclude the thought itself
+        visited.discard(thought_id)
+        return tuple(sorted(visited))
+
+    def descendants(self, thought_id: str) -> tuple[str, ...]:
+        """Return all descendant IDs of the given thought, sorted lexicographically.
+
+        Uses BFS to traverse child edges.
+
+        Parameters
+        ----------
+        thought_id:
+            The thought ID to query.
+
+        Returns
+        -------
+        tuple[str, ...]
+            Sorted tuple of all descendant IDs (excluding the thought itself).
+
+        Raises
+        ------
+        ValidationError
+            If thought_id is not a string.
+        """
+        _validate_thought_id(thought_id, field="thought_id")
+
+        # Build adjacency list for child lookups
+        child_map: dict[str, list[str]] = {}
+        for pid, cid in self._children:
+            child_map.setdefault(pid, []).append(cid)
+
+        # BFS from thought_id downward
+        visited: set[str] = set()
+        queue: list[str] = [thought_id]
+
+        while queue:
+            current = queue.pop(0)
+            for child in child_map.get(current, []):
+                if child not in visited:
+                    visited.add(child)
+                    queue.append(child)
+
+        # Exclude the thought itself
+        visited.discard(thought_id)
+        return tuple(sorted(visited))
+
+    def add(self, state: ThoughtState) -> LineageIndex:
+        """Return a new LineageIndex with the given thought added.
+
+        Parameters
+        ----------
+        state:
+            The ThoughtState to add.
+
+        Returns
+        -------
+        LineageIndex
+            A new immutable lineage index with the thought added.
+
+        Raises
+        ------
+        ValidationError
+            If state is not a ThoughtState or has invalid parent references.
+        """
+        if not isinstance(state, ThoughtState):
+            raise ValidationError(
+                f"state must be a ThoughtState, got {type(state).__name__}",
+                path="state",
+            )
+
+        # Check for self-reference
+        if state.thought_id in state.parent_ids:
+            raise SelfReferenceError(
+                f"thought {state.thought_id!r} cannot be its own parent",
+                thought_id=state.thought_id,
+                relation_type="lineage",
+            )
+
+        # Build new ID set
+        new_ids_set = set(self._ids)
+        new_ids_set.add(state.thought_id)
+
+        # Validate parent references
+        for parent_id in state.parent_ids:
+            if parent_id not in new_ids_set:
+                raise ValidationError(
+                    (
+                        f"parent {parent_id!r} of thought "
+                        f"{state.thought_id!r} not found in index"
+                    ),
+                    path="parent_ids",
+                )
+
+        # Build new edge lists
+        new_parents = list(self._parents)
+        new_children = list(self._children)
+
+        for parent_id in state.parent_ids:
+            new_parents.append((state.thought_id, parent_id))
+            new_children.append((parent_id, state.thought_id))
+
+        return LineageIndex(
+            _ids=tuple(sorted(new_ids_set)),
+            _parents=tuple(sorted(new_parents)),
+            _children=tuple(sorted(new_children)),
+        )
+
+    # -- Serialization ------------------------------------------------------
+
+    def to_dict(self) -> dict[str, Any]:
+        """Serialize to a plain dict."""
+        return {
+            "ids": list(self._ids),
+            "parents": [list(edge) for edge in self._parents],
+            "children": [list(edge) for edge in self._children],
+        }
+
+    @classmethod
+    def from_dict(cls, data: dict[str, Any]) -> LineageIndex:
+        """Strict construction from a plain dict."""
+        if not isinstance(data, dict):
+            raise ValidationError(
+                f"expected dict, got {type(data).__name__}",
+                path="root",
+            )
+
+        required = {"ids", "parents", "children"}
+        missing = required - data.keys()
+        if missing:
+            raise ValidationError(
+                f"missing keys: {sorted(missing)}",
+                path="root",
+            )
+        extra = data.keys() - required
+        if extra:
+            raise ValidationError(
+                f"unexpected keys: {sorted(extra)}",
+                path="root",
+            )
+
+        # Parse ids
+        raw_ids = data["ids"]
+        if not isinstance(raw_ids, list):
+            raise ValidationError(
+                f"ids must be a JSON list, got {type(raw_ids).__name__}",
+                path="ids",
+            )
+        ids = tuple(sorted(raw_ids))
+
+        # Parse parents
+        raw_parents = data["parents"]
+        if not isinstance(raw_parents, list):
+            raise ValidationError(
+                f"parents must be a JSON list, got {type(raw_parents).__name__}",
+                path="parents",
+            )
+        parents: list[tuple[str, str]] = []
+        for i, edge in enumerate(raw_parents):
+            if not isinstance(edge, list) or len(edge) != 2:
+                raise ValidationError(
+                    f"parents[{i}] must be a 2-element list",
+                    path=f"parents[{i}]",
+                )
+            parents.append((edge[0], edge[1]))
+
+        # Parse children
+        raw_children = data["children"]
+        if not isinstance(raw_children, list):
+            raise ValidationError(
+                f"children must be a JSON list, got {type(raw_children).__name__}",
+                path="children",
+            )
+        children: list[tuple[str, str]] = []
+        for i, edge in enumerate(raw_children):
+            if not isinstance(edge, list) or len(edge) != 2:
+                raise ValidationError(
+                    f"children[{i}] must be a 2-element list",
+                    path=f"children[{i}]",
+                )
+            children.append((edge[0], edge[1]))
+
+        return cls(
+            _ids=ids,
+            _parents=tuple(sorted(parents)),
+            _children=tuple(sorted(children)),
+        )
