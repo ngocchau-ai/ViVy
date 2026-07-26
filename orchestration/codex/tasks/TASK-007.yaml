@@ -1,0 +1,37 @@
+task_contract:
+  task_id: TASK-007
+  title: "Local Software Department Executable Workflow and Handoff Automation"
+  objective:
+    problem: >
+      Stage 2 requires executable local software department workflow automation enforcing
+      Codex orchestration-only constraints, automated role verification, evidence collection,
+      and handoff generation.
+    expected_outcome: >
+      A standard-library department_orchestration package providing automated TaskContract validation,
+      role-separated evidence verification, and automated session handoff generation.
+    non_goals:
+      - "Do not modify Stage 0 or Stage 1 frozen packages."
+      - "Do not implement Adaptive N or distillation training."
+  constraints:
+    language: "Python 3.11+"
+    dependencies_allowed:
+      - "Python standard library"
+    dependencies_forbidden:
+      - "New production dependencies"
+  implementation:
+    assigned_role: local_coder
+    allowed_files:
+      - "src/nps_core/department_orchestration/**"
+      - "tests/unit/test_department_orchestration.py"
+      - "memory/02-decisions/ADR-0010-local-department-workflow-automation.md"
+      - "memory/02-decisions/index.md"
+      - "memory/04-tasks/PROJECT-COMPLETION-MATRIX.md"
+      - "memory/05-evidence/TASK-007/**"
+      - "memory/07-sessions/**"
+      - "orchestration/codex/tasks/TASK-007.yaml"
+  validation:
+    acceptance_criteria:
+      - "department_orchestration imports cleanly from nps_core.department_orchestration."
+      - "TaskContract verification enforces Codex orchestration-only constraints."
+      - "Automated session handoff generator parses evidence packets and updates memory/07-sessions/handoff.md."
+      - "All unit tests pass and regression suite remains green."

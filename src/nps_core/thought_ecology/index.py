@@ -87,7 +87,7 @@ def _check_unknown_thoughts(
     def _check(tid: str, source: str) -> None:
         if tid not in thought_ids:
             raise UnknownThoughtError(
-                f"unknown thought {tid!r} referenced in {source}",
+                f"thought {tid!r} not in thought_ids for {source}",
                 thought_id=tid,
                 reference_source=source,
             )

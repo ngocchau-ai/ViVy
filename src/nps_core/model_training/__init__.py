@@ -23,6 +23,7 @@ from nps_core.model_training.bridge import (
 )
 from nps_core.model_training.config import (
     MODEL_1B,
+    MODEL_MOE_40B,
     DataConfig,
     ModelConfig,
     PipelineConfig,
@@ -55,6 +56,16 @@ from nps_core.model_training.trainer import (
     train_step,
 )
 
+from nps_core.model_training.moe import (
+    MoEConfig,
+    MoERouter,
+)
+from nps_core.model_training.student import (
+    LatencyEvaluator,
+    StudentProposalEngine,
+    StudentTrainingConfig,
+)
+
 __all__ = [
     # errors
     "ModelTrainingError",
@@ -62,12 +73,20 @@ __all__ = [
     "FunnelError",
     "ConfigError",
     "TrainerError",
+    # moe
+    "MoEConfig",
+    "MoERouter",
+    # student
+    "StudentTrainingConfig",
+    "StudentProposalEngine",
+    "LatencyEvaluator",
     # config
     "ModelConfig",
     "TrainingConfig",
     "DataConfig",
     "PipelineConfig",
     "MODEL_1B",
+    "MODEL_MOE_40B",
     # bridge
     "TASK_TYPES",
     "BridgeConfig",

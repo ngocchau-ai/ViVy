@@ -6,7 +6,6 @@ Standard-library only; no runtime dependencies.
 
 from __future__ import annotations
 
-import math
 from dataclasses import dataclass
 from typing import Any
 
@@ -18,6 +17,7 @@ __all__ = [
     "DataConfig",
     "PipelineConfig",
     "MODEL_1B",
+    "MODEL_MOE_40B",
 ]
 
 # ---------------------------------------------------------------------------
@@ -424,6 +424,77 @@ MODEL_1B = PipelineConfig(
             "critique",
             "synthesis",
             "ecology_analysis",
+        ),
+        min_confidence=0.3,
+        min_evidence_count=1,
+        preferred_statuses=(
+            "verified",
+            "partially_verified",
+            "testing",
+            "active",
+        ),
+    ),
+)
+
+
+# ---------------------------------------------------------------------------
+# MODEL_MOE_40B — PipelineConfig targeting ~40B parameters (7B active)
+# ---------------------------------------------------------------------------
+
+
+MODEL_MOE_40B: PipelineConfig = PipelineConfig(
+    model=ModelConfig(
+        vocab_size=32000,
+        hidden_size=4096,
+        num_layers=32,
+        num_attention_heads=32,
+        num_kv_heads=8,
+        intermediate_size=11008,
+        max_position_embeddings=8192,
+        max_seq_len=8192,
+        rms_norm_eps=1e-5,
+        rope_theta=10000.0,
+        attention_dropout=0.0,
+        hidden_dropout=0.0,
+        initializer_range=0.02,
+        tie_word_embeddings=True,
+    ),
+    training=TrainingConfig(
+        learning_rate=3e-4,
+        min_learning_rate=3e-5,
+        weight_decay=0.1,
+        adam_beta1=0.9,
+        adam_beta2=0.95,
+        adam_eps=1e-8,
+        max_grad_norm=1.0,
+        warmup_steps=2000,
+        total_steps=100000,
+        lr_schedule="cosine",
+        batch_size=8,
+        gradient_accumulation_steps=8,
+        effective_batch_size=64,
+        use_amp=True,
+        amp_dtype="bfloat16",
+        save_every_steps=1000,
+        eval_every_steps=500,
+        keep_last_n_checkpoints=3,
+        seed=42,
+    ),
+    data=DataConfig(
+        max_seq_len=8192,
+        tokenizer_name="sentencepiece",
+        tokenizer_path="",
+        num_workers=4,
+        prefetch_factor=2,
+        pin_memory=True,
+        task_types=(
+            "reasoning",
+            "verification",
+            "critique",
+            "synthesis",
+            "ecology_analysis",
+            "multimodal_vision",
+            "bilingual_nlp",
         ),
         min_confidence=0.3,
         min_evidence_count=1,

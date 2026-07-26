@@ -1,0 +1,36 @@
+task_contract:
+  task_id: TASK-009
+  title: "Adaptive N Controller, Information-Gain Ranker, and Experiment Bundler"
+  objective:
+    problem: >
+      Stage 4 requires adaptive control of hypothesis population N_h, duplicate detection/merging,
+      information-gain ranking, and experiment bundling to reduce execution cost while maximizing discriminative information gain.
+    expected_outcome: >
+      A standard-library adaptive_n package providing AdaptiveNController, InformationGainRanker,
+      and ExperimentBundler with full unit test coverage.
+    non_goals:
+      - "Do not train student models or make external network calls."
+  constraints:
+    language: "Python 3.11+"
+    dependencies_allowed:
+      - "Python standard library"
+      - "Existing NPS Core immutable types"
+    dependencies_forbidden:
+      - "New production dependencies"
+  implementation:
+    assigned_role: local_coder
+    allowed_files:
+      - "src/nps_core/adaptive_n/**"
+      - "tests/unit/test_adaptive_n.py"
+      - "memory/02-decisions/ADR-0012-adaptive-n-experiment-designer.md"
+      - "memory/02-decisions/index.md"
+      - "memory/04-tasks/PROJECT-COMPLETION-MATRIX.md"
+      - "memory/05-evidence/TASK-009/**"
+      - "memory/07-sessions/**"
+      - "orchestration/codex/tasks/TASK-009.yaml"
+  validation:
+    acceptance_criteria:
+      - "AdaptiveNController calculates N_h adjustments based on ecology metrics and budget constraints."
+      - "InformationGainRanker ranks hypotheses by expected information gain."
+      - "ExperimentBundler produces bundled ExperimentContracts covering multiple hypotheses."
+      - "All unit tests pass and regression suite remains green."

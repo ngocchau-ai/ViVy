@@ -7,7 +7,7 @@ on a population of ThoughtStates.  Standard-library only; no I/O.
 from __future__ import annotations
 
 from dataclasses import dataclass
-from typing import Any, Iterable
+from typing import Iterable
 
 from nps_core.hypothesis_population.errors import (
     CycleDetectedError,

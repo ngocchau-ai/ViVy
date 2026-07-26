@@ -8,7 +8,6 @@ ThoughtEcology construction with all relation types, using the
 from __future__ import annotations
 
 import hashlib
-import json
 
 from nps_core.hypothesis_population import (
     PopulationSnapshot,

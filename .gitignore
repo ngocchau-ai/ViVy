@@ -14,9 +14,12 @@ logs/
 
 # Temporary build artifacts
 artifacts/tmp/
+build/
+dist/
 
 # pytest cache
 .pytest_cache/
+.pytest_basetemp/
 
 # ruff cache
 .ruff_cache/

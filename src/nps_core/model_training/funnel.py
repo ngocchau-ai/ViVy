@@ -7,8 +7,6 @@ completeness, and deduplication.  Standard-library only; no I/O.
 
 from __future__ import annotations
 
-import hashlib
-import json
 from collections import defaultdict
 from dataclasses import dataclass
 from typing import Any

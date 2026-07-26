@@ -17,9 +17,6 @@ from dataclasses import dataclass, field
 from typing import Any
 
 from nps_core.model_training.config import (
-    DataConfig,
-    ModelConfig,
-    PipelineConfig,
     TrainingConfig,
 )
 from nps_core.model_training.errors import TrainerError

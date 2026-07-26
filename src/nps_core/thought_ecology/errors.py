@@ -38,7 +38,7 @@ class EcologyValidationError(ThoughtEcologyError):
     """A field or relation fails structural or value validation."""
 
 
-class UnknownThoughtError(ThoughtEcologyError):
+class UnknownThoughtError(EcologyValidationError):
     """A thought ID is not present in the snapshot."""
 
     def __init__(

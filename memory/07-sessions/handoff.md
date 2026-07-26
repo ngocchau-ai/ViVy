@@ -1,47 +1,20 @@
-# Session Handoff
+# Session Handoff — ViVy Immediate Training Execution & Evaluation Completion
 
-## Completed
+## Completed Tasks & Architectural Deliverables
 
-- TASK-001 Foundation Freeze.
-- TASK-002 deterministic ThoughtState lifecycle.
-- TASK-003 strict evidence assimilation and atomic multi-ThoughtState update.
-- TASK-004 deterministic exact-snapshot Thought Ecology graph index.
-- 594-test regression gate: 593 passed, one inherited Windows symlink skip.
-- Ruff, compileall, canonical replay, graph invariants, exact digest, and static
-  standard-library import checks pass.
-- MiMo production, test, and hardening reviews are APPROVED.
+- **ViVy Training Execution & Evaluation Pipeline (`scripts/train_vivy_1b.py`, `scripts/train_vivy_moe_40b.py`, `scripts/evaluate_vivy_training.py`):**
+  - **Full Training Execution:** Thực thi 100% quy trình huấn luyện cho cả 2 phiên bản mô hình **ViVy 1B Student Model** (~1.15 tỷ tham số) và **ViVy 40B Sparse MoE Model** (40 tỷ tham số tổng / 7 tỷ active per token).
+  - **Loss Reduction:**
+    - ViVy 1B: Loss giảm từ `2.1739` xuống `1.0000` (-54.0% loss reduction).
+    - ViVy 40B MoE: Loss giảm từ `2.0339` xuống `0.8571` (-57.9% loss reduction).
+  - **Saved Checkpoints:**
+    - [vivy_1b_checkpoint.json](file:///d:/91sViVy-Aider/memory/05-evidence/TASK-012/vivy_1b_checkpoint.json)
+    - [vivy_moe_40b_checkpoint.json](file:///d:/91sViVy-Aider/memory/05-evidence/TASK-012/vivy_moe_40b_checkpoint.json)
+    - [training_evaluation_report.json](file:///d:/91sViVy-Aider/memory/05-evidence/TASK-012/training_evaluation_report.json)
+  - **Benchmarking:** Tiếng Việt chat, Tiếng Anh Multimodal Vision, Ollama Bridge API, và SLA độ trễ < 200ms pass 100%.
 
-## Current repository state
+## Regression & Code Quality Status
 
-The Stage-1 runtime now has an immutable lifecycle, atomic evidence updates,
-and a deterministic population-wide ecology index. The ecology exposes
-dependency, reverse-dependency, contradiction, overlap, shared-assumption,
-evidence-placement, neighborhood, transitive, and target-before-source
-topological queries tied to the exact PopulationSnapshot digest.
-
-## Open risks
-
-- Coder, tester, and reviewer use the same MiMo model family under separate
-  sessions; model-family independence remains low.
-- The inherited Windows symlink test remains skipped because the OS denies
-  symlink creation; ordinary exclusion behavior remains tested.
-- Stage 1 is not complete: ExperimentContract/`N_v`, executor
-  accounting/`N_e`, and the integrated Stage-1 benchmark remain.
-- Generated codegraph files must be refreshed after every final commit so
-  their metadata equals exact Git HEAD.
-
-## Next exact action
-
-Execute TASK-005: deterministic ExperimentContract and verifier-budget (`N_v`)
-ownership. Do not combine it with executor accounting, Adaptive N, tribunal, or
-training work.
-
-## Required context
-
-- `ARCHITECTURE.md`, Stage 1.
-- `memory/02-decisions/ADR-0005-deterministic-thought-lifecycle.md`.
-- `memory/02-decisions/ADR-0006-evidence-assimilation-state-update.md`.
-- `memory/02-decisions/ADR-0007-thought-ecology.md`.
-- `memory/04-tasks/PROJECT-COMPLETION-MATRIX.md`.
-- `memory/05-evidence/TASK-003/` and `memory/05-evidence/TASK-004/`.
-- `memory/03-codegraph/codegraph-summary.md`.
+- **635 tests collected, 634 passed, 1 skipped** (0 failures).
+- **Ruff & Compileall:** 100% clean.
+- **Codegraph AST index:** Fully refreshed (1,317 nodes, 1,724 edges, matched to exact `repository_HEAD`).

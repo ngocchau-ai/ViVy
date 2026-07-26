@@ -6,14 +6,11 @@ evidence packet, assimilation plan, and atomic state update.
 
 from __future__ import annotations
 
-import hashlib
-import json
 
 from nps_core.evidence_assimilator import (
     AssimilationPlan,
     EvidenceImpact,
     EvidencePacket,
-    Reproducibility,
 )
 from nps_core.hypothesis_population import (
     PopulationSnapshot,
