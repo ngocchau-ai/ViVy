@@ -1,8 +1,8 @@
 {
   "schema_version": "0.1",
   "status": "FRESH",
-  "repository_head": "98268064215b1d15c147b3432dfbb4ad723d530b",
-  "codegraph_commit": "98268064215b1d15c147b3432dfbb4ad723d530b",
+  "repository_head": "4eaed01d2fc06ff8f098ff8d997923c37eed368b",
+  "codegraph_commit": "4eaed01d2fc06ff8f098ff8d997923c37eed368b",
   "nodes": [
     {
       "id": "module:.pytest_basetemp.external0.hidden",
@@ -421,6 +421,46 @@
       "line": 1
     },
     {
+      "id": "module:nps_core.filter_funnel",
+      "kind": "module",
+      "name": "filter_funnel",
+      "qualified_name": "nps_core.filter_funnel",
+      "path": "src/nps_core/filter_funnel/__init__.py",
+      "line": 1
+    },
+    {
+      "id": "module:nps_core.filter_funnel.amplitude_analyzer",
+      "kind": "module",
+      "name": "amplitude_analyzer",
+      "qualified_name": "nps_core.filter_funnel.amplitude_analyzer",
+      "path": "src/nps_core/filter_funnel/amplitude_analyzer.py",
+      "line": 1
+    },
+    {
+      "id": "module:nps_core.filter_funnel.funnel",
+      "kind": "module",
+      "name": "funnel",
+      "qualified_name": "nps_core.filter_funnel.funnel",
+      "path": "src/nps_core/filter_funnel/funnel.py",
+      "line": 1
+    },
+    {
+      "id": "module:nps_core.filter_funnel.logic_filter",
+      "kind": "module",
+      "name": "logic_filter",
+      "qualified_name": "nps_core.filter_funnel.logic_filter",
+      "path": "src/nps_core/filter_funnel/logic_filter.py",
+      "line": 1
+    },
+    {
+      "id": "module:nps_core.filter_funnel.svd_decomposer",
+      "kind": "module",
+      "name": "svd_decomposer",
+      "qualified_name": "nps_core.filter_funnel.svd_decomposer",
+      "path": "src/nps_core/filter_funnel/svd_decomposer.py",
+      "line": 1
+    },
+    {
       "id": "module:nps_core.hypothesis_population",
       "kind": "module",
       "name": "hypothesis_population",
@@ -485,6 +525,14 @@
       "line": 1
     },
     {
+      "id": "module:nps_core.memory.associative_memory",
+      "kind": "module",
+      "name": "associative_memory",
+      "qualified_name": "nps_core.memory.associative_memory",
+      "path": "src/nps_core/memory/associative_memory.py",
+      "line": 1
+    },
+    {
       "id": "module:nps_core.model_training",
       "kind": "module",
       "name": "model_training",
@@ -498,6 +546,14 @@
       "name": "bridge",
       "qualified_name": "nps_core.model_training.bridge",
       "path": "src/nps_core/model_training/bridge.py",
+      "line": 1
+    },
+    {
+      "id": "module:nps_core.model_training.compressor",
+      "kind": "module",
+      "name": "compressor",
+      "qualified_name": "nps_core.model_training.compressor",
+      "path": "src/nps_core/model_training/compressor.py",
       "line": 1
     },
     {
@@ -546,6 +602,30 @@
       "name": "trainer",
       "qualified_name": "nps_core.model_training.trainer",
       "path": "src/nps_core/model_training/trainer.py",
+      "line": 1
+    },
+    {
+      "id": "module:nps_core.multimodal_clairvoyance",
+      "kind": "module",
+      "name": "multimodal_clairvoyance",
+      "qualified_name": "nps_core.multimodal_clairvoyance",
+      "path": "src/nps_core/multimodal_clairvoyance/__init__.py",
+      "line": 1
+    },
+    {
+      "id": "module:nps_core.multimodal_clairvoyance.audio_video_perception",
+      "kind": "module",
+      "name": "audio_video_perception",
+      "qualified_name": "nps_core.multimodal_clairvoyance.audio_video_perception",
+      "path": "src/nps_core/multimodal_clairvoyance/audio_video_perception.py",
+      "line": 1
+    },
+    {
+      "id": "module:nps_core.multimodal_clairvoyance.clairvoyance_engine",
+      "kind": "module",
+      "name": "clairvoyance_engine",
+      "qualified_name": "nps_core.multimodal_clairvoyance.clairvoyance_engine",
+      "path": "src/nps_core/multimodal_clairvoyance/clairvoyance_engine.py",
       "line": 1
     },
     {
@@ -725,11 +805,35 @@
       "line": 1
     },
     {
+      "id": "module:scripts.compress_vivy_40b_to_4b",
+      "kind": "module",
+      "name": "compress_vivy_40b_to_4b",
+      "qualified_name": "scripts.compress_vivy_40b_to_4b",
+      "path": "scripts/compress_vivy_40b_to_4b.py",
+      "line": 1
+    },
+    {
       "id": "module:scripts.evaluate_vivy_training",
       "kind": "module",
       "name": "evaluate_vivy_training",
       "qualified_name": "scripts.evaluate_vivy_training",
       "path": "scripts/evaluate_vivy_training.py",
+      "line": 1
+    },
+    {
+      "id": "module:scripts.export_gguf",
+      "kind": "module",
+      "name": "export_gguf",
+      "qualified_name": "scripts.export_gguf",
+      "path": "scripts/export_gguf.py",
+      "line": 1
+    },
+    {
+      "id": "module:scripts.generate_by_vivy_local",
+      "kind": "module",
+      "name": "generate_by_vivy_local",
+      "qualified_name": "scripts.generate_by_vivy_local",
+      "path": "scripts/generate_by_vivy_local.py",
       "line": 1
     },
     {
@@ -749,6 +853,38 @@
       "line": 1
     },
     {
+      "id": "module:scripts.start_deerflow_api",
+      "kind": "module",
+      "name": "start_deerflow_api",
+      "qualified_name": "scripts.start_deerflow_api",
+      "path": "scripts/start_deerflow_api.py",
+      "line": 1
+    },
+    {
+      "id": "module:scripts.test_clairvoyance_perception",
+      "kind": "module",
+      "name": "test_clairvoyance_perception",
+      "qualified_name": "scripts.test_clairvoyance_perception",
+      "path": "scripts/test_clairvoyance_perception.py",
+      "line": 1
+    },
+    {
+      "id": "module:scripts.train_lora",
+      "kind": "module",
+      "name": "train_lora",
+      "qualified_name": "scripts.train_lora",
+      "path": "scripts/train_lora.py",
+      "line": 1
+    },
+    {
+      "id": "module:scripts.train_moe_70b",
+      "kind": "module",
+      "name": "train_moe_70b",
+      "qualified_name": "scripts.train_moe_70b",
+      "path": "scripts/train_moe_70b.py",
+      "line": 1
+    },
+    {
       "id": "module:scripts.train_vivy_1b",
       "kind": "module",
       "name": "train_vivy_1b",
@@ -757,11 +893,27 @@
       "line": 1
     },
     {
+      "id": "module:scripts.train_vivy_core",
+      "kind": "module",
+      "name": "train_vivy_core",
+      "qualified_name": "scripts.train_vivy_core",
+      "path": "scripts/train_vivy_core.py",
+      "line": 1
+    },
+    {
       "id": "module:scripts.train_vivy_moe_40b",
       "kind": "module",
       "name": "train_vivy_moe_40b",
       "qualified_name": "scripts.train_vivy_moe_40b",
       "path": "scripts/train_vivy_moe_40b.py",
+      "line": 1
+    },
+    {
+      "id": "module:setup",
+      "kind": "module",
+      "name": "setup",
+      "qualified_name": "setup",
+      "path": "setup.py",
       "line": 1
     },
     {
@@ -781,6 +933,14 @@
       "line": 1
     },
     {
+      "id": "module:tests.benchmark.test_geometry_120story_octagonal_tower",
+      "kind": "module",
+      "name": "test_geometry_120story_octagonal_tower",
+      "qualified_name": "tests.benchmark.test_geometry_120story_octagonal_tower",
+      "path": "tests/benchmark/test_geometry_120story_octagonal_tower.py",
+      "line": 1
+    },
+    {
       "id": "module:tests.benchmark.test_multidomain_principal_benchmark",
       "kind": "module",
       "name": "test_multidomain_principal_benchmark",
@@ -794,6 +954,22 @@
       "name": "test_stage1_runtime_benchmark",
       "qualified_name": "tests.benchmark.test_stage1_runtime_benchmark",
       "path": "tests/benchmark/test_stage1_runtime_benchmark.py",
+      "line": 1
+    },
+    {
+      "id": "module:tests.integration.test_clairvoyance_pipeline",
+      "kind": "module",
+      "name": "test_clairvoyance_pipeline",
+      "qualified_name": "tests.integration.test_clairvoyance_pipeline",
+      "path": "tests/integration/test_clairvoyance_pipeline.py",
+      "line": 1
+    },
+    {
+      "id": "module:tests.integration.test_filter_funnel_integration",
+      "kind": "module",
+      "name": "test_filter_funnel_integration",
+      "qualified_name": "tests.integration.test_filter_funnel_integration",
+      "path": "tests/integration/test_filter_funnel_integration.py",
       "line": 1
     },
     {
@@ -845,6 +1021,14 @@
       "line": 1
     },
     {
+      "id": "module:tests.integration.test_vivy_4b_pipeline",
+      "kind": "module",
+      "name": "test_vivy_4b_pipeline",
+      "qualified_name": "tests.integration.test_vivy_4b_pipeline",
+      "path": "tests/integration/test_vivy_4b_pipeline.py",
+      "line": 1
+    },
+    {
       "id": "module:tests.integration.test_vivy_moe_40b_pipeline",
       "kind": "module",
       "name": "test_vivy_moe_40b_pipeline",
@@ -861,11 +1045,27 @@
       "line": 1
     },
     {
+      "id": "module:tests.unit.test_associative_memory",
+      "kind": "module",
+      "name": "test_associative_memory",
+      "qualified_name": "tests.unit.test_associative_memory",
+      "path": "tests/unit/test_associative_memory.py",
+      "line": 1
+    },
+    {
       "id": "module:tests.unit.test_atomic_state_update",
       "kind": "module",
       "name": "test_atomic_state_update",
       "qualified_name": "tests.unit.test_atomic_state_update",
       "path": "tests/unit/test_atomic_state_update.py",
+      "line": 1
+    },
+    {
+      "id": "module:tests.unit.test_auth_passkey",
+      "kind": "module",
+      "name": "test_auth_passkey",
+      "qualified_name": "tests.unit.test_auth_passkey",
+      "path": "tests/unit/test_auth_passkey.py",
       "line": 1
     },
     {
@@ -965,6 +1165,38 @@
       "line": 1
     },
     {
+      "id": "module:tests.unit.test_eyes_hands",
+      "kind": "module",
+      "name": "test_eyes_hands",
+      "qualified_name": "tests.unit.test_eyes_hands",
+      "path": "tests/unit/test_eyes_hands.py",
+      "line": 1
+    },
+    {
+      "id": "module:tests.unit.test_filter_funnel",
+      "kind": "module",
+      "name": "test_filter_funnel",
+      "qualified_name": "tests.unit.test_filter_funnel",
+      "path": "tests/unit/test_filter_funnel.py",
+      "line": 1
+    },
+    {
+      "id": "module:tests.unit.test_filter_funnel_pytorch",
+      "kind": "module",
+      "name": "test_filter_funnel_pytorch",
+      "qualified_name": "tests.unit.test_filter_funnel_pytorch",
+      "path": "tests/unit/test_filter_funnel_pytorch.py",
+      "line": 1
+    },
+    {
+      "id": "module:tests.unit.test_multimodal_clairvoyance",
+      "kind": "module",
+      "name": "test_multimodal_clairvoyance",
+      "qualified_name": "tests.unit.test_multimodal_clairvoyance",
+      "path": "tests/unit/test_multimodal_clairvoyance.py",
+      "line": 1
+    },
+    {
       "id": "module:tests.unit.test_schemas",
       "kind": "module",
       "name": "test_schemas",
@@ -1037,6 +1269,38 @@
       "line": 1
     },
     {
+      "id": "module:tests.unit.test_vivy_4b_compression",
+      "kind": "module",
+      "name": "test_vivy_4b_compression",
+      "qualified_name": "tests.unit.test_vivy_4b_compression",
+      "path": "tests/unit/test_vivy_4b_compression.py",
+      "line": 1
+    },
+    {
+      "id": "module:tests.unit.test_vivy_associative_memory",
+      "kind": "module",
+      "name": "test_vivy_associative_memory",
+      "qualified_name": "tests.unit.test_vivy_associative_memory",
+      "path": "tests/unit/test_vivy_associative_memory.py",
+      "line": 1
+    },
+    {
+      "id": "module:tests.unit.test_vivy_core",
+      "kind": "module",
+      "name": "test_vivy_core",
+      "qualified_name": "tests.unit.test_vivy_core",
+      "path": "tests/unit/test_vivy_core.py",
+      "line": 1
+    },
+    {
+      "id": "module:tests.unit.test_vivy_integration",
+      "kind": "module",
+      "name": "test_vivy_integration",
+      "qualified_name": "tests.unit.test_vivy_integration",
+      "path": "tests/unit/test_vivy_integration.py",
+      "line": 1
+    },
+    {
       "id": "module:tests.unit.test_vivy_moe",
       "kind": "module",
       "name": "test_vivy_moe",
@@ -1066,6 +1330,190 @@
       "name": "test_vivy_ollama",
       "qualified_name": "tests.unit.test_vivy_ollama",
       "path": "tests/unit/test_vivy_ollama.py",
+      "line": 1
+    },
+    {
+      "id": "module:vivy",
+      "kind": "module",
+      "name": "vivy",
+      "qualified_name": "vivy",
+      "path": "src/vivy/__init__.py",
+      "line": 1
+    },
+    {
+      "id": "module:vivy.api",
+      "kind": "module",
+      "name": "api",
+      "qualified_name": "vivy.api",
+      "path": "src/vivy/api/__init__.py",
+      "line": 1
+    },
+    {
+      "id": "module:vivy.api.deerflow_server",
+      "kind": "module",
+      "name": "deerflow_server",
+      "qualified_name": "vivy.api.deerflow_server",
+      "path": "src/vivy/api/deerflow_server.py",
+      "line": 1
+    },
+    {
+      "id": "module:vivy.api.router",
+      "kind": "module",
+      "name": "router",
+      "qualified_name": "vivy.api.router",
+      "path": "src/vivy/api/router.py",
+      "line": 1
+    },
+    {
+      "id": "module:vivy.auth",
+      "kind": "module",
+      "name": "auth",
+      "qualified_name": "vivy.auth",
+      "path": "src/vivy/auth/__init__.py",
+      "line": 1
+    },
+    {
+      "id": "module:vivy.auth.user_manager",
+      "kind": "module",
+      "name": "user_manager",
+      "qualified_name": "vivy.auth.user_manager",
+      "path": "src/vivy/auth/user_manager.py",
+      "line": 1
+    },
+    {
+      "id": "module:vivy.auth.webauthn_passkey",
+      "kind": "module",
+      "name": "webauthn_passkey",
+      "qualified_name": "vivy.auth.webauthn_passkey",
+      "path": "src/vivy/auth/webauthn_passkey.py",
+      "line": 1
+    },
+    {
+      "id": "module:vivy.core",
+      "kind": "module",
+      "name": "core",
+      "qualified_name": "vivy.core",
+      "path": "src/vivy/core/__init__.py",
+      "line": 1
+    },
+    {
+      "id": "module:vivy.core.associative_memory",
+      "kind": "module",
+      "name": "associative_memory",
+      "qualified_name": "vivy.core.associative_memory",
+      "path": "src/vivy/core/associative_memory.py",
+      "line": 1
+    },
+    {
+      "id": "module:vivy.core.inference",
+      "kind": "module",
+      "name": "inference",
+      "qualified_name": "vivy.core.inference",
+      "path": "src/vivy/core/inference.py",
+      "line": 1
+    },
+    {
+      "id": "module:vivy.core.model_loader",
+      "kind": "module",
+      "name": "model_loader",
+      "qualified_name": "vivy.core.model_loader",
+      "path": "src/vivy/core/model_loader.py",
+      "line": 1
+    },
+    {
+      "id": "module:vivy.core.moe_brain",
+      "kind": "module",
+      "name": "moe_brain",
+      "qualified_name": "vivy.core.moe_brain",
+      "path": "src/vivy/core/moe_brain.py",
+      "line": 1
+    },
+    {
+      "id": "module:vivy.core.prompts",
+      "kind": "module",
+      "name": "prompts",
+      "qualified_name": "vivy.core.prompts",
+      "path": "src/vivy/core/prompts.py",
+      "line": 1
+    },
+    {
+      "id": "module:vivy.core.vivy_brain",
+      "kind": "module",
+      "name": "vivy_brain",
+      "qualified_name": "vivy.core.vivy_brain",
+      "path": "src/vivy/core/vivy_brain.py",
+      "line": 1
+    },
+    {
+      "id": "module:vivy.eyes",
+      "kind": "module",
+      "name": "eyes",
+      "qualified_name": "vivy.eyes",
+      "path": "src/vivy/eyes/__init__.py",
+      "line": 1
+    },
+    {
+      "id": "module:vivy.eyes.mt5_collector",
+      "kind": "module",
+      "name": "mt5_collector",
+      "qualified_name": "vivy.eyes.mt5_collector",
+      "path": "src/vivy/eyes/mt5_collector.py",
+      "line": 1
+    },
+    {
+      "id": "module:vivy.eyes.news_bridge",
+      "kind": "module",
+      "name": "news_bridge",
+      "qualified_name": "vivy.eyes.news_bridge",
+      "path": "src/vivy/eyes/news_bridge.py",
+      "line": 1
+    },
+    {
+      "id": "module:vivy.hands",
+      "kind": "module",
+      "name": "hands",
+      "qualified_name": "vivy.hands",
+      "path": "src/vivy/hands/__init__.py",
+      "line": 1
+    },
+    {
+      "id": "module:vivy.hands.mt5_executor",
+      "kind": "module",
+      "name": "mt5_executor",
+      "qualified_name": "vivy.hands.mt5_executor",
+      "path": "src/vivy/hands/mt5_executor.py",
+      "line": 1
+    },
+    {
+      "id": "module:vivy.memory",
+      "kind": "module",
+      "name": "memory",
+      "qualified_name": "vivy.memory",
+      "path": "src/vivy/memory/__init__.py",
+      "line": 1
+    },
+    {
+      "id": "module:vivy.memory.vector_store",
+      "kind": "module",
+      "name": "vector_store",
+      "qualified_name": "vivy.memory.vector_store",
+      "path": "src/vivy/memory/vector_store.py",
+      "line": 1
+    },
+    {
+      "id": "module:vivy.self_improvement",
+      "kind": "module",
+      "name": "self_improvement",
+      "qualified_name": "vivy.self_improvement",
+      "path": "src/vivy/self_improvement/__init__.py",
+      "line": 1
+    },
+    {
+      "id": "module:vivy.self_improvement.feedback_logger",
+      "kind": "module",
+      "name": "feedback_logger",
+      "qualified_name": "vivy.self_improvement.feedback_logger",
+      "path": "src/vivy/self_improvement/feedback_logger.py",
       "line": 1
     },
     {
@@ -2717,6 +3165,246 @@
       "line": 37
     },
     {
+      "id": "symbol:nps_core.filter_funnel.amplitude_analyzer:AmplitudeAnalysisReport",
+      "kind": "class",
+      "name": "AmplitudeAnalysisReport",
+      "qualified_name": "nps_core.filter_funnel.amplitude_analyzer.AmplitudeAnalysisReport",
+      "path": "src/nps_core/filter_funnel/amplitude_analyzer.py",
+      "line": 43
+    },
+    {
+      "id": "symbol:nps_core.filter_funnel.amplitude_analyzer:AmplitudeAnalysisReport.to_dict",
+      "kind": "function",
+      "name": "to_dict",
+      "qualified_name": "nps_core.filter_funnel.amplitude_analyzer.AmplitudeAnalysisReport.to_dict",
+      "path": "src/nps_core/filter_funnel/amplitude_analyzer.py",
+      "line": 52
+    },
+    {
+      "id": "symbol:nps_core.filter_funnel.amplitude_analyzer:AmplitudeAnalyzer",
+      "kind": "class",
+      "name": "AmplitudeAnalyzer",
+      "qualified_name": "nps_core.filter_funnel.amplitude_analyzer.AmplitudeAnalyzer",
+      "path": "src/nps_core/filter_funnel/amplitude_analyzer.py",
+      "line": 62
+    },
+    {
+      "id": "symbol:nps_core.filter_funnel.amplitude_analyzer:AmplitudeAnalyzer.analyze",
+      "kind": "function",
+      "name": "analyze",
+      "qualified_name": "nps_core.filter_funnel.amplitude_analyzer.AmplitudeAnalyzer.analyze",
+      "path": "src/nps_core/filter_funnel/amplitude_analyzer.py",
+      "line": 89
+    },
+    {
+      "id": "symbol:nps_core.filter_funnel.amplitude_analyzer:AmplitudeAnalyzer.calculate_entropy",
+      "kind": "function",
+      "name": "calculate_entropy",
+      "qualified_name": "nps_core.filter_funnel.amplitude_analyzer.AmplitudeAnalyzer.calculate_entropy",
+      "path": "src/nps_core/filter_funnel/amplitude_analyzer.py",
+      "line": 80
+    },
+    {
+      "id": "symbol:nps_core.filter_funnel.amplitude_analyzer:AmplitudeAnalyzer.normalize_vector",
+      "kind": "function",
+      "name": "normalize_vector",
+      "qualified_name": "nps_core.filter_funnel.amplitude_analyzer.AmplitudeAnalyzer.normalize_vector",
+      "path": "src/nps_core/filter_funnel/amplitude_analyzer.py",
+      "line": 66
+    },
+    {
+      "id": "symbol:nps_core.filter_funnel.amplitude_analyzer:BasisStateAnalysis",
+      "kind": "class",
+      "name": "BasisStateAnalysis",
+      "qualified_name": "nps_core.filter_funnel.amplitude_analyzer.BasisStateAnalysis",
+      "path": "src/nps_core/filter_funnel/amplitude_analyzer.py",
+      "line": 23
+    },
+    {
+      "id": "symbol:nps_core.filter_funnel.amplitude_analyzer:BasisStateAnalysis.to_dict",
+      "kind": "function",
+      "name": "to_dict",
+      "qualified_name": "nps_core.filter_funnel.amplitude_analyzer.BasisStateAnalysis.to_dict",
+      "path": "src/nps_core/filter_funnel/amplitude_analyzer.py",
+      "line": 32
+    },
+    {
+      "id": "symbol:nps_core.filter_funnel.funnel:ExtractedThoughtPattern",
+      "kind": "class",
+      "name": "ExtractedThoughtPattern",
+      "qualified_name": "nps_core.filter_funnel.funnel.ExtractedThoughtPattern",
+      "path": "src/nps_core/filter_funnel/funnel.py",
+      "line": 35
+    },
+    {
+      "id": "symbol:nps_core.filter_funnel.funnel:ExtractedThoughtPattern.to_dict",
+      "kind": "function",
+      "name": "to_dict",
+      "qualified_name": "nps_core.filter_funnel.funnel.ExtractedThoughtPattern.to_dict",
+      "path": "src/nps_core/filter_funnel/funnel.py",
+      "line": 43
+    },
+    {
+      "id": "symbol:nps_core.filter_funnel.funnel:FilterFunnel",
+      "kind": "class",
+      "name": "FilterFunnel",
+      "qualified_name": "nps_core.filter_funnel.funnel.FilterFunnel",
+      "path": "src/nps_core/filter_funnel/funnel.py",
+      "line": 74
+    },
+    {
+      "id": "symbol:nps_core.filter_funnel.funnel:FilterFunnel.__init__",
+      "kind": "function",
+      "name": "__init__",
+      "qualified_name": "nps_core.filter_funnel.funnel.FilterFunnel.__init__",
+      "path": "src/nps_core/filter_funnel/funnel.py",
+      "line": 77
+    },
+    {
+      "id": "symbol:nps_core.filter_funnel.funnel:FilterFunnel.evaluate_state",
+      "kind": "function",
+      "name": "evaluate_state",
+      "qualified_name": "nps_core.filter_funnel.funnel.FilterFunnel.evaluate_state",
+      "path": "src/nps_core/filter_funnel/funnel.py",
+      "line": 87
+    },
+    {
+      "id": "symbol:nps_core.filter_funnel.funnel:FunnelResult",
+      "kind": "class",
+      "name": "FunnelResult",
+      "qualified_name": "nps_core.filter_funnel.funnel.FunnelResult",
+      "path": "src/nps_core/filter_funnel/funnel.py",
+      "line": 53
+    },
+    {
+      "id": "symbol:nps_core.filter_funnel.funnel:FunnelResult.to_dict",
+      "kind": "function",
+      "name": "to_dict",
+      "qualified_name": "nps_core.filter_funnel.funnel.FunnelResult.to_dict",
+      "path": "src/nps_core/filter_funnel/funnel.py",
+      "line": 63
+    },
+    {
+      "id": "symbol:nps_core.filter_funnel.funnel:FunnelSignal",
+      "kind": "class",
+      "name": "FunnelSignal",
+      "qualified_name": "nps_core.filter_funnel.funnel.FunnelSignal",
+      "path": "src/nps_core/filter_funnel/funnel.py",
+      "line": 25
+    },
+    {
+      "id": "symbol:nps_core.filter_funnel.logic_filter:EvaluatedStream",
+      "kind": "class",
+      "name": "EvaluatedStream",
+      "qualified_name": "nps_core.filter_funnel.logic_filter.EvaluatedStream",
+      "path": "src/nps_core/filter_funnel/logic_filter.py",
+      "line": 24
+    },
+    {
+      "id": "symbol:nps_core.filter_funnel.logic_filter:EvaluatedStream.to_dict",
+      "kind": "function",
+      "name": "to_dict",
+      "qualified_name": "nps_core.filter_funnel.logic_filter.EvaluatedStream.to_dict",
+      "path": "src/nps_core/filter_funnel/logic_filter.py",
+      "line": 33
+    },
+    {
+      "id": "symbol:nps_core.filter_funnel.logic_filter:LogicFilter",
+      "kind": "class",
+      "name": "LogicFilter",
+      "qualified_name": "nps_core.filter_funnel.logic_filter.LogicFilter",
+      "path": "src/nps_core/filter_funnel/logic_filter.py",
+      "line": 67
+    },
+    {
+      "id": "symbol:nps_core.filter_funnel.logic_filter:LogicFilter.calculate_brevity",
+      "kind": "function",
+      "name": "calculate_brevity",
+      "qualified_name": "nps_core.filter_funnel.logic_filter.LogicFilter.calculate_brevity",
+      "path": "src/nps_core/filter_funnel/logic_filter.py",
+      "line": 71
+    },
+    {
+      "id": "symbol:nps_core.filter_funnel.logic_filter:LogicFilter.evaluate_stream",
+      "kind": "function",
+      "name": "evaluate_stream",
+      "qualified_name": "nps_core.filter_funnel.logic_filter.LogicFilter.evaluate_stream",
+      "path": "src/nps_core/filter_funnel/logic_filter.py",
+      "line": 78
+    },
+    {
+      "id": "symbol:nps_core.filter_funnel.logic_filter:LogicFilter.filter_streams",
+      "kind": "function",
+      "name": "filter_streams",
+      "qualified_name": "nps_core.filter_funnel.logic_filter.LogicFilter.filter_streams",
+      "path": "src/nps_core/filter_funnel/logic_filter.py",
+      "line": 111
+    },
+    {
+      "id": "symbol:nps_core.filter_funnel.logic_filter:LogicFilterReport",
+      "kind": "class",
+      "name": "LogicFilterReport",
+      "qualified_name": "nps_core.filter_funnel.logic_filter.LogicFilterReport",
+      "path": "src/nps_core/filter_funnel/logic_filter.py",
+      "line": 46
+    },
+    {
+      "id": "symbol:nps_core.filter_funnel.logic_filter:LogicFilterReport.to_dict",
+      "kind": "function",
+      "name": "to_dict",
+      "qualified_name": "nps_core.filter_funnel.logic_filter.LogicFilterReport.to_dict",
+      "path": "src/nps_core/filter_funnel/logic_filter.py",
+      "line": 56
+    },
+    {
+      "id": "symbol:nps_core.filter_funnel.svd_decomposer:SVDDecomposer",
+      "kind": "class",
+      "name": "SVDDecomposer",
+      "qualified_name": "nps_core.filter_funnel.svd_decomposer.SVDDecomposer",
+      "path": "src/nps_core/filter_funnel/svd_decomposer.py",
+      "line": 40
+    },
+    {
+      "id": "symbol:nps_core.filter_funnel.svd_decomposer:SVDDecomposer._matrix_multiply_complex",
+      "kind": "function",
+      "name": "_matrix_multiply_complex",
+      "qualified_name": "nps_core.filter_funnel.svd_decomposer.SVDDecomposer._matrix_multiply_complex",
+      "path": "src/nps_core/filter_funnel/svd_decomposer.py",
+      "line": 44
+    },
+    {
+      "id": "symbol:nps_core.filter_funnel.svd_decomposer:SVDDecomposer.compute_svd_pure_python",
+      "kind": "function",
+      "name": "compute_svd_pure_python",
+      "qualified_name": "nps_core.filter_funnel.svd_decomposer.SVDDecomposer.compute_svd_pure_python",
+      "path": "src/nps_core/filter_funnel/svd_decomposer.py",
+      "line": 61
+    },
+    {
+      "id": "symbol:nps_core.filter_funnel.svd_decomposer:SVDDecomposer.decompose",
+      "kind": "function",
+      "name": "decompose",
+      "qualified_name": "nps_core.filter_funnel.svd_decomposer.SVDDecomposer.decompose",
+      "path": "src/nps_core/filter_funnel/svd_decomposer.py",
+      "line": 146
+    },
+    {
+      "id": "symbol:nps_core.filter_funnel.svd_decomposer:ThoughtStream",
+      "kind": "class",
+      "name": "ThoughtStream",
+      "qualified_name": "nps_core.filter_funnel.svd_decomposer.ThoughtStream",
+      "path": "src/nps_core/filter_funnel/svd_decomposer.py",
+      "line": 21
+    },
+    {
+      "id": "symbol:nps_core.filter_funnel.svd_decomposer:ThoughtStream.to_dict",
+      "kind": "function",
+      "name": "to_dict",
+      "qualified_name": "nps_core.filter_funnel.svd_decomposer.ThoughtStream.to_dict",
+      "path": "src/nps_core/filter_funnel/svd_decomposer.py",
+      "line": 30
+    },
+    {
       "id": "symbol:nps_core.hypothesis_population.errors:CycleDetectedError",
       "kind": "class",
       "name": "CycleDetectedError",
@@ -3509,6 +4197,78 @@
       "line": 131
     },
     {
+      "id": "symbol:nps_core.memory.associative_memory:PatternMatchResult",
+      "kind": "class",
+      "name": "PatternMatchResult",
+      "qualified_name": "nps_core.memory.associative_memory.PatternMatchResult",
+      "path": "src/nps_core/memory/associative_memory.py",
+      "line": 24
+    },
+    {
+      "id": "symbol:nps_core.memory.associative_memory:PatternMatchResult.to_dict",
+      "kind": "function",
+      "name": "to_dict",
+      "qualified_name": "nps_core.memory.associative_memory.PatternMatchResult.to_dict",
+      "path": "src/nps_core/memory/associative_memory.py",
+      "line": 31
+    },
+    {
+      "id": "symbol:nps_core.memory.associative_memory:QuantumAssociativeMemory",
+      "kind": "class",
+      "name": "QuantumAssociativeMemory",
+      "qualified_name": "nps_core.memory.associative_memory.QuantumAssociativeMemory",
+      "path": "src/nps_core/memory/associative_memory.py",
+      "line": 39
+    },
+    {
+      "id": "symbol:nps_core.memory.associative_memory:QuantumAssociativeMemory.__init__",
+      "kind": "function",
+      "name": "__init__",
+      "qualified_name": "nps_core.memory.associative_memory.QuantumAssociativeMemory.__init__",
+      "path": "src/nps_core/memory/associative_memory.py",
+      "line": 42
+    },
+    {
+      "id": "symbol:nps_core.memory.associative_memory:QuantumAssociativeMemory._normalize",
+      "kind": "function",
+      "name": "_normalize",
+      "qualified_name": "nps_core.memory.associative_memory.QuantumAssociativeMemory._normalize",
+      "path": "src/nps_core/memory/associative_memory.py",
+      "line": 60
+    },
+    {
+      "id": "symbol:nps_core.memory.associative_memory:QuantumAssociativeMemory._unitarize_weight_matrix",
+      "kind": "function",
+      "name": "_unitarize_weight_matrix",
+      "qualified_name": "nps_core.memory.associative_memory.QuantumAssociativeMemory._unitarize_weight_matrix",
+      "path": "src/nps_core/memory/associative_memory.py",
+      "line": 95
+    },
+    {
+      "id": "symbol:nps_core.memory.associative_memory:QuantumAssociativeMemory.pattern_count",
+      "kind": "function",
+      "name": "pattern_count",
+      "qualified_name": "nps_core.memory.associative_memory.QuantumAssociativeMemory.pattern_count",
+      "path": "src/nps_core/memory/associative_memory.py",
+      "line": 56
+    },
+    {
+      "id": "symbol:nps_core.memory.associative_memory:QuantumAssociativeMemory.query",
+      "kind": "function",
+      "name": "query",
+      "qualified_name": "nps_core.memory.associative_memory.QuantumAssociativeMemory.query",
+      "path": "src/nps_core/memory/associative_memory.py",
+      "line": 113
+    },
+    {
+      "id": "symbol:nps_core.memory.associative_memory:QuantumAssociativeMemory.store",
+      "kind": "function",
+      "name": "store",
+      "qualified_name": "nps_core.memory.associative_memory.QuantumAssociativeMemory.store",
+      "path": "src/nps_core/memory/associative_memory.py",
+      "line": 67
+    },
+    {
       "id": "symbol:nps_core.model_training.bridge:BridgeConfig",
       "kind": "class",
       "name": "BridgeConfig",
@@ -3651,6 +4411,94 @@
       "qualified_name": "nps_core.model_training.bridge.examples_to_jsonl",
       "path": "src/nps_core/model_training/bridge.py",
       "line": 639
+    },
+    {
+      "id": "symbol:nps_core.model_training.compressor:CompressionMetrics",
+      "kind": "class",
+      "name": "CompressionMetrics",
+      "qualified_name": "nps_core.model_training.compressor.CompressionMetrics",
+      "path": "src/nps_core/model_training/compressor.py",
+      "line": 163
+    },
+    {
+      "id": "symbol:nps_core.model_training.compressor:CompressionMetrics.to_dict",
+      "kind": "function",
+      "name": "to_dict",
+      "qualified_name": "nps_core.model_training.compressor.CompressionMetrics.to_dict",
+      "path": "src/nps_core/model_training/compressor.py",
+      "line": 173
+    },
+    {
+      "id": "symbol:nps_core.model_training.compressor:DomainFilterFunnel",
+      "kind": "class",
+      "name": "DomainFilterFunnel",
+      "qualified_name": "nps_core.model_training.compressor.DomainFilterFunnel",
+      "path": "src/nps_core/model_training/compressor.py",
+      "line": 82
+    },
+    {
+      "id": "symbol:nps_core.model_training.compressor:DomainFilterFunnel.classify_example_domain",
+      "kind": "function",
+      "name": "classify_example_domain",
+      "qualified_name": "nps_core.model_training.compressor.DomainFilterFunnel.classify_example_domain",
+      "path": "src/nps_core/model_training/compressor.py",
+      "line": 86
+    },
+    {
+      "id": "symbol:nps_core.model_training.compressor:DomainFilterFunnel.filter_and_prioritize",
+      "kind": "function",
+      "name": "filter_and_prioritize",
+      "qualified_name": "nps_core.model_training.compressor.DomainFilterFunnel.filter_and_prioritize",
+      "path": "src/nps_core/model_training/compressor.py",
+      "line": 101
+    },
+    {
+      "id": "symbol:nps_core.model_training.compressor:DomainFilterFunnel.filter_and_prioritize.score_fn",
+      "kind": "function",
+      "name": "score_fn",
+      "qualified_name": "nps_core.model_training.compressor.DomainFilterFunnel.filter_and_prioritize.score_fn",
+      "path": "src/nps_core/model_training/compressor.py",
+      "line": 148
+    },
+    {
+      "id": "symbol:nps_core.model_training.compressor:DomainFilterFunnelConfig",
+      "kind": "class",
+      "name": "DomainFilterFunnelConfig",
+      "qualified_name": "nps_core.model_training.compressor.DomainFilterFunnelConfig",
+      "path": "src/nps_core/model_training/compressor.py",
+      "line": 69
+    },
+    {
+      "id": "symbol:nps_core.model_training.compressor:DomainPriority",
+      "kind": "class",
+      "name": "DomainPriority",
+      "qualified_name": "nps_core.model_training.compressor.DomainPriority",
+      "path": "src/nps_core/model_training/compressor.py",
+      "line": 49
+    },
+    {
+      "id": "symbol:nps_core.model_training.compressor:DomainPriority.__post_init__",
+      "kind": "function",
+      "name": "__post_init__",
+      "qualified_name": "nps_core.model_training.compressor.DomainPriority.__post_init__",
+      "path": "src/nps_core/model_training/compressor.py",
+      "line": 57
+    },
+    {
+      "id": "symbol:nps_core.model_training.compressor:ModelCompressor",
+      "kind": "class",
+      "name": "ModelCompressor",
+      "qualified_name": "nps_core.model_training.compressor.ModelCompressor",
+      "path": "src/nps_core/model_training/compressor.py",
+      "line": 184
+    },
+    {
+      "id": "symbol:nps_core.model_training.compressor:ModelCompressor.compress_40b_to_4b",
+      "kind": "function",
+      "name": "compress_40b_to_4b",
+      "qualified_name": "nps_core.model_training.compressor.ModelCompressor.compress_40b_to_4b",
+      "path": "src/nps_core/model_training/compressor.py",
+      "line": 188
     },
     {
       "id": "symbol:nps_core.model_training.config:DataConfig",
@@ -4179,6 +5027,126 @@
       "qualified_name": "nps_core.model_training.trainer.train_step",
       "path": "src/nps_core/model_training/trainer.py",
       "line": 299
+    },
+    {
+      "id": "symbol:nps_core.multimodal_clairvoyance.audio_video_perception:AudioPayload",
+      "kind": "class",
+      "name": "AudioPayload",
+      "qualified_name": "nps_core.multimodal_clairvoyance.audio_video_perception.AudioPayload",
+      "path": "src/nps_core/multimodal_clairvoyance/audio_video_perception.py",
+      "line": 24
+    },
+    {
+      "id": "symbol:nps_core.multimodal_clairvoyance.audio_video_perception:AudioPayload.to_dict",
+      "kind": "function",
+      "name": "to_dict",
+      "qualified_name": "nps_core.multimodal_clairvoyance.audio_video_perception.AudioPayload.to_dict",
+      "path": "src/nps_core/multimodal_clairvoyance/audio_video_perception.py",
+      "line": 35
+    },
+    {
+      "id": "symbol:nps_core.multimodal_clairvoyance.audio_video_perception:AudioVideoEncoder",
+      "kind": "class",
+      "name": "AudioVideoEncoder",
+      "qualified_name": "nps_core.multimodal_clairvoyance.audio_video_perception.AudioVideoEncoder",
+      "path": "src/nps_core/multimodal_clairvoyance/audio_video_perception.py",
+      "line": 72
+    },
+    {
+      "id": "symbol:nps_core.multimodal_clairvoyance.audio_video_perception:AudioVideoEncoder.encode_audio_file",
+      "kind": "function",
+      "name": "encode_audio_file",
+      "qualified_name": "nps_core.multimodal_clairvoyance.audio_video_perception.AudioVideoEncoder.encode_audio_file",
+      "path": "src/nps_core/multimodal_clairvoyance/audio_video_perception.py",
+      "line": 76
+    },
+    {
+      "id": "symbol:nps_core.multimodal_clairvoyance.audio_video_perception:AudioVideoEncoder.encode_video_file",
+      "kind": "function",
+      "name": "encode_video_file",
+      "qualified_name": "nps_core.multimodal_clairvoyance.audio_video_perception.AudioVideoEncoder.encode_video_file",
+      "path": "src/nps_core/multimodal_clairvoyance/audio_video_perception.py",
+      "line": 106
+    },
+    {
+      "id": "symbol:nps_core.multimodal_clairvoyance.audio_video_perception:VideoPayload",
+      "kind": "class",
+      "name": "VideoPayload",
+      "qualified_name": "nps_core.multimodal_clairvoyance.audio_video_perception.VideoPayload",
+      "path": "src/nps_core/multimodal_clairvoyance/audio_video_perception.py",
+      "line": 48
+    },
+    {
+      "id": "symbol:nps_core.multimodal_clairvoyance.audio_video_perception:VideoPayload.to_dict",
+      "kind": "function",
+      "name": "to_dict",
+      "qualified_name": "nps_core.multimodal_clairvoyance.audio_video_perception.VideoPayload.to_dict",
+      "path": "src/nps_core/multimodal_clairvoyance/audio_video_perception.py",
+      "line": 60
+    },
+    {
+      "id": "symbol:nps_core.multimodal_clairvoyance.clairvoyance_engine:ClairvoyanceEngine",
+      "kind": "class",
+      "name": "ClairvoyanceEngine",
+      "qualified_name": "nps_core.multimodal_clairvoyance.clairvoyance_engine.ClairvoyanceEngine",
+      "path": "src/nps_core/multimodal_clairvoyance/clairvoyance_engine.py",
+      "line": 103
+    },
+    {
+      "id": "symbol:nps_core.multimodal_clairvoyance.clairvoyance_engine:ClairvoyanceEngine.process_multimodal_clairvoyance",
+      "kind": "function",
+      "name": "process_multimodal_clairvoyance",
+      "qualified_name": "nps_core.multimodal_clairvoyance.clairvoyance_engine.ClairvoyanceEngine.process_multimodal_clairvoyance",
+      "path": "src/nps_core/multimodal_clairvoyance/clairvoyance_engine.py",
+      "line": 107
+    },
+    {
+      "id": "symbol:nps_core.multimodal_clairvoyance.clairvoyance_engine:ClairvoyanceResponse",
+      "kind": "class",
+      "name": "ClairvoyanceResponse",
+      "qualified_name": "nps_core.multimodal_clairvoyance.clairvoyance_engine.ClairvoyanceResponse",
+      "path": "src/nps_core/multimodal_clairvoyance/clairvoyance_engine.py",
+      "line": 55
+    },
+    {
+      "id": "symbol:nps_core.multimodal_clairvoyance.clairvoyance_engine:ClairvoyanceState",
+      "kind": "class",
+      "name": "ClairvoyanceState",
+      "qualified_name": "nps_core.multimodal_clairvoyance.clairvoyance_engine.ClairvoyanceState",
+      "path": "src/nps_core/multimodal_clairvoyance/clairvoyance_engine.py",
+      "line": 33
+    },
+    {
+      "id": "symbol:nps_core.multimodal_clairvoyance.clairvoyance_engine:ClairvoyanceState.norm",
+      "kind": "function",
+      "name": "norm",
+      "qualified_name": "nps_core.multimodal_clairvoyance.clairvoyance_engine.ClairvoyanceState.norm",
+      "path": "src/nps_core/multimodal_clairvoyance/clairvoyance_engine.py",
+      "line": 43
+    },
+    {
+      "id": "symbol:nps_core.multimodal_clairvoyance.clairvoyance_engine:ClairvoyanceState.normalize",
+      "kind": "function",
+      "name": "normalize",
+      "qualified_name": "nps_core.multimodal_clairvoyance.clairvoyance_engine.ClairvoyanceState.normalize",
+      "path": "src/nps_core/multimodal_clairvoyance/clairvoyance_engine.py",
+      "line": 47
+    },
+    {
+      "id": "symbol:nps_core.multimodal_clairvoyance.clairvoyance_engine:SVDMultimodalDecomposer",
+      "kind": "class",
+      "name": "SVDMultimodalDecomposer",
+      "qualified_name": "nps_core.multimodal_clairvoyance.clairvoyance_engine.SVDMultimodalDecomposer",
+      "path": "src/nps_core/multimodal_clairvoyance/clairvoyance_engine.py",
+      "line": 70
+    },
+    {
+      "id": "symbol:nps_core.multimodal_clairvoyance.clairvoyance_engine:SVDMultimodalDecomposer.decompose_multimodal_tensor",
+      "kind": "function",
+      "name": "decompose_multimodal_tensor",
+      "qualified_name": "nps_core.multimodal_clairvoyance.clairvoyance_engine.SVDMultimodalDecomposer.decompose_multimodal_tensor",
+      "path": "src/nps_core/multimodal_clairvoyance/clairvoyance_engine.py",
+      "line": 74
     },
     {
       "id": "symbol:nps_core.state_update.engine:EvidenceUpdateRecord",
@@ -5002,7 +5970,7 @@
       "name": "ReproductionLog",
       "qualified_name": "nps_core.verification_tribunal.tribunal.ReproductionLog",
       "path": "src/nps_core/verification_tribunal/tribunal.py",
-      "line": 23
+      "line": 25
     },
     {
       "id": "symbol:nps_core.verification_tribunal.tribunal:ReproductionLog.to_dict",
@@ -5010,7 +5978,7 @@
       "name": "to_dict",
       "qualified_name": "nps_core.verification_tribunal.tribunal.ReproductionLog.to_dict",
       "path": "src/nps_core/verification_tribunal/tribunal.py",
-      "line": 32
+      "line": 34
     },
     {
       "id": "symbol:nps_core.verification_tribunal.tribunal:VerificationTribunal",
@@ -5018,7 +5986,7 @@
       "name": "VerificationTribunal",
       "qualified_name": "nps_core.verification_tribunal.tribunal.VerificationTribunal",
       "path": "src/nps_core/verification_tribunal/tribunal.py",
-      "line": 42
+      "line": 44
     },
     {
       "id": "symbol:nps_core.verification_tribunal.tribunal:VerificationTribunal.evaluate",
@@ -5026,7 +5994,15 @@
       "name": "evaluate",
       "qualified_name": "nps_core.verification_tribunal.tribunal.VerificationTribunal.evaluate",
       "path": "src/nps_core/verification_tribunal/tribunal.py",
-      "line": 46
+      "line": 48
+    },
+    {
+      "id": "symbol:nps_core.verification_tribunal.tribunal:VerificationTribunal.evaluate_with_filter_funnel",
+      "kind": "function",
+      "name": "evaluate_with_filter_funnel",
+      "qualified_name": "nps_core.verification_tribunal.tribunal.VerificationTribunal.evaluate_with_filter_funnel",
+      "path": "src/nps_core/verification_tribunal/tribunal.py",
+      "line": 73
     },
     {
       "id": "symbol:nps_core.vivy_interface.chat:ChatMessage",
@@ -5194,7 +6170,7 @@
       "name": "OllamaModelExporter",
       "qualified_name": "nps_core.vivy_ollama.exporter.OllamaModelExporter",
       "path": "src/nps_core/vivy_ollama/exporter.py",
-      "line": 17
+      "line": 18
     },
     {
       "id": "symbol:nps_core.vivy_ollama.exporter:OllamaModelExporter.export_modelfile",
@@ -5202,7 +6178,7 @@
       "name": "export_modelfile",
       "qualified_name": "nps_core.vivy_ollama.exporter.OllamaModelExporter.export_modelfile",
       "path": "src/nps_core/vivy_ollama/exporter.py",
-      "line": 50
+      "line": 56
     },
     {
       "id": "symbol:nps_core.vivy_ollama.exporter:OllamaModelExporter.generate_modelfile_content",
@@ -5210,7 +6186,7 @@
       "name": "generate_modelfile_content",
       "qualified_name": "nps_core.vivy_ollama.exporter.OllamaModelExporter.generate_modelfile_content",
       "path": "src/nps_core/vivy_ollama/exporter.py",
-      "line": 21
+      "line": 22
     },
     {
       "id": "symbol:nps_core.vivy_ollama.exporter:OllamaModelExporter.get_create_command",
@@ -5218,7 +6194,7 @@
       "name": "get_create_command",
       "qualified_name": "nps_core.vivy_ollama.exporter.OllamaModelExporter.get_create_command",
       "path": "src/nps_core/vivy_ollama/exporter.py",
-      "line": 59
+      "line": 73
     },
     {
       "id": "symbol:nps_core.vivy_ollama.server:OllamaViVyBridgeHandler",
@@ -5301,6 +6277,38 @@
       "line": 24
     },
     {
+      "id": "symbol:scripts.compress_vivy_40b_to_4b:generate_ollama_modelfile_4b",
+      "kind": "function",
+      "name": "generate_ollama_modelfile_4b",
+      "qualified_name": "scripts.compress_vivy_40b_to_4b.generate_ollama_modelfile_4b",
+      "path": "scripts/compress_vivy_40b_to_4b.py",
+      "line": 119
+    },
+    {
+      "id": "symbol:scripts.compress_vivy_40b_to_4b:generate_sample_dataset",
+      "kind": "function",
+      "name": "generate_sample_dataset",
+      "qualified_name": "scripts.compress_vivy_40b_to_4b.generate_sample_dataset",
+      "path": "scripts/compress_vivy_40b_to_4b.py",
+      "line": 41
+    },
+    {
+      "id": "symbol:scripts.compress_vivy_40b_to_4b:main",
+      "kind": "function",
+      "name": "main",
+      "qualified_name": "scripts.compress_vivy_40b_to_4b.main",
+      "path": "scripts/compress_vivy_40b_to_4b.py",
+      "line": 152
+    },
+    {
+      "id": "symbol:scripts.compress_vivy_40b_to_4b:make_example",
+      "kind": "function",
+      "name": "make_example",
+      "qualified_name": "scripts.compress_vivy_40b_to_4b.make_example",
+      "path": "scripts/compress_vivy_40b_to_4b.py",
+      "line": 30
+    },
+    {
       "id": "symbol:scripts.evaluate_vivy_training:evaluate_training",
       "kind": "function",
       "name": "evaluate_training",
@@ -5309,11 +6317,67 @@
       "line": 25
     },
     {
+      "id": "symbol:scripts.export_gguf:main",
+      "kind": "function",
+      "name": "main",
+      "qualified_name": "scripts.export_gguf.main",
+      "path": "scripts/export_gguf.py",
+      "line": 12
+    },
+    {
+      "id": "symbol:scripts.generate_by_vivy_local:call_vivy_ollama",
+      "kind": "function",
+      "name": "call_vivy_ollama",
+      "qualified_name": "scripts.generate_by_vivy_local.call_vivy_ollama",
+      "path": "scripts/generate_by_vivy_local.py",
+      "line": 21
+    },
+    {
+      "id": "symbol:scripts.generate_by_vivy_local:main",
+      "kind": "function",
+      "name": "main",
+      "qualified_name": "scripts.generate_by_vivy_local.main",
+      "path": "scripts/generate_by_vivy_local.py",
+      "line": 44
+    },
+    {
       "id": "symbol:scripts.package_vivy_ollama:main",
       "kind": "function",
       "name": "main",
       "qualified_name": "scripts.package_vivy_ollama.main",
       "path": "scripts/package_vivy_ollama.py",
+      "line": 22
+    },
+    {
+      "id": "symbol:scripts.start_deerflow_api:start_server",
+      "kind": "function",
+      "name": "start_server",
+      "qualified_name": "scripts.start_deerflow_api.start_server",
+      "path": "scripts/start_deerflow_api.py",
+      "line": 17
+    },
+    {
+      "id": "symbol:scripts.test_clairvoyance_perception:main",
+      "kind": "function",
+      "name": "main",
+      "qualified_name": "scripts.test_clairvoyance_perception.main",
+      "path": "scripts/test_clairvoyance_perception.py",
+      "line": 23
+    },
+    {
+      "id": "symbol:scripts.train_lora:main",
+      "kind": "function",
+      "name": "main",
+      "qualified_name": "scripts.train_lora.main",
+      "path": "scripts/train_lora.py",
+      "line": 14
+    },
+    {
+      "id": "symbol:scripts.train_moe_70b:run_moe_training",
+      "kind": "function",
+      "name": "run_moe_training",
+      "qualified_name": "scripts.train_moe_70b.run_moe_training",
+      "path": "scripts/train_moe_70b.py",
       "line": 22
     },
     {
@@ -5331,6 +6395,14 @@
       "qualified_name": "scripts.train_vivy_1b.run_training",
       "path": "scripts/train_vivy_1b.py",
       "line": 69
+    },
+    {
+      "id": "symbol:scripts.train_vivy_core:train_vivy_core",
+      "kind": "function",
+      "name": "train_vivy_core",
+      "qualified_name": "scripts.train_vivy_core.train_vivy_core",
+      "path": "scripts/train_vivy_core.py",
+      "line": 22
     },
     {
       "id": "symbol:scripts.train_vivy_moe_40b:_make_thought_dict",
@@ -5373,6 +6445,102 @@
       "line": 10
     },
     {
+      "id": "symbol:tests.benchmark.test_geometry_120story_octagonal_tower:DecomposedMicroTask",
+      "kind": "class",
+      "name": "DecomposedMicroTask",
+      "qualified_name": "tests.benchmark.test_geometry_120story_octagonal_tower.DecomposedMicroTask",
+      "path": "tests/benchmark/test_geometry_120story_octagonal_tower.py",
+      "line": 66
+    },
+    {
+      "id": "symbol:tests.benchmark.test_geometry_120story_octagonal_tower:DecomposedMicroTask.get_all_tasks",
+      "kind": "function",
+      "name": "get_all_tasks",
+      "qualified_name": "tests.benchmark.test_geometry_120story_octagonal_tower.DecomposedMicroTask.get_all_tasks",
+      "path": "tests/benchmark/test_geometry_120story_octagonal_tower.py",
+      "line": 70
+    },
+    {
+      "id": "symbol:tests.benchmark.test_geometry_120story_octagonal_tower:OctagonalGeometryMath",
+      "kind": "class",
+      "name": "OctagonalGeometryMath",
+      "qualified_name": "tests.benchmark.test_geometry_120story_octagonal_tower.OctagonalGeometryMath",
+      "path": "tests/benchmark/test_geometry_120story_octagonal_tower.py",
+      "line": 20
+    },
+    {
+      "id": "symbol:tests.benchmark.test_geometry_120story_octagonal_tower:OctagonalGeometryMath.calculate_floor_area",
+      "kind": "function",
+      "name": "calculate_floor_area",
+      "qualified_name": "tests.benchmark.test_geometry_120story_octagonal_tower.OctagonalGeometryMath.calculate_floor_area",
+      "path": "tests/benchmark/test_geometry_120story_octagonal_tower.py",
+      "line": 29
+    },
+    {
+      "id": "symbol:tests.benchmark.test_geometry_120story_octagonal_tower:OctagonalGeometryMath.calculate_side_length",
+      "kind": "function",
+      "name": "calculate_side_length",
+      "qualified_name": "tests.benchmark.test_geometry_120story_octagonal_tower.OctagonalGeometryMath.calculate_side_length",
+      "path": "tests/benchmark/test_geometry_120story_octagonal_tower.py",
+      "line": 24
+    },
+    {
+      "id": "symbol:tests.benchmark.test_geometry_120story_octagonal_tower:OctagonalGeometryMath.calculate_vertex_coordinates",
+      "kind": "function",
+      "name": "calculate_vertex_coordinates",
+      "qualified_name": "tests.benchmark.test_geometry_120story_octagonal_tower.OctagonalGeometryMath.calculate_vertex_coordinates",
+      "path": "tests/benchmark/test_geometry_120story_octagonal_tower.py",
+      "line": 34
+    },
+    {
+      "id": "symbol:tests.benchmark.test_geometry_120story_octagonal_tower:TowerFloorZone",
+      "kind": "class",
+      "name": "TowerFloorZone",
+      "qualified_name": "tests.benchmark.test_geometry_120story_octagonal_tower.TowerFloorZone",
+      "path": "tests/benchmark/test_geometry_120story_octagonal_tower.py",
+      "line": 45
+    },
+    {
+      "id": "symbol:tests.benchmark.test_geometry_120story_octagonal_tower:TowerFloorZone.get_zone_for_floor",
+      "kind": "function",
+      "name": "get_zone_for_floor",
+      "qualified_name": "tests.benchmark.test_geometry_120story_octagonal_tower.TowerFloorZone.get_zone_for_floor",
+      "path": "tests/benchmark/test_geometry_120story_octagonal_tower.py",
+      "line": 49
+    },
+    {
+      "id": "symbol:tests.benchmark.test_geometry_120story_octagonal_tower:test_120_floor_vertical_zoning",
+      "kind": "function",
+      "name": "test_120_floor_vertical_zoning",
+      "qualified_name": "tests.benchmark.test_geometry_120story_octagonal_tower.test_120_floor_vertical_zoning",
+      "path": "tests/benchmark/test_geometry_120story_octagonal_tower.py",
+      "line": 101
+    },
+    {
+      "id": "symbol:tests.benchmark.test_geometry_120story_octagonal_tower:test_decomposed_micro_tasks",
+      "kind": "function",
+      "name": "test_decomposed_micro_tasks",
+      "qualified_name": "tests.benchmark.test_geometry_120story_octagonal_tower.test_decomposed_micro_tasks",
+      "path": "tests/benchmark/test_geometry_120story_octagonal_tower.py",
+      "line": 113
+    },
+    {
+      "id": "symbol:tests.benchmark.test_geometry_120story_octagonal_tower:test_html_3d_viewer_artifact_exists",
+      "kind": "function",
+      "name": "test_html_3d_viewer_artifact_exists",
+      "qualified_name": "tests.benchmark.test_geometry_120story_octagonal_tower.test_html_3d_viewer_artifact_exists",
+      "path": "tests/benchmark/test_geometry_120story_octagonal_tower.py",
+      "line": 120
+    },
+    {
+      "id": "symbol:tests.benchmark.test_geometry_120story_octagonal_tower:test_octagonal_geometry_calculations",
+      "kind": "function",
+      "name": "test_octagonal_geometry_calculations",
+      "qualified_name": "tests.benchmark.test_geometry_120story_octagonal_tower.test_octagonal_geometry_calculations",
+      "path": "tests/benchmark/test_geometry_120story_octagonal_tower.py",
+      "line": 85
+    },
+    {
       "id": "symbol:tests.benchmark.test_multidomain_principal_benchmark:run_domain_pipeline",
       "kind": "function",
       "name": "run_domain_pipeline",
@@ -5403,6 +6571,30 @@
       "qualified_name": "tests.benchmark.test_stage1_runtime_benchmark.test_stage1_runtime_end_to_end_benchmark",
       "path": "tests/benchmark/test_stage1_runtime_benchmark.py",
       "line": 95
+    },
+    {
+      "id": "symbol:tests.integration.test_clairvoyance_pipeline:test_clairvoyance_pipeline_integration",
+      "kind": "function",
+      "name": "test_clairvoyance_pipeline_integration",
+      "qualified_name": "tests.integration.test_clairvoyance_pipeline.test_clairvoyance_pipeline_integration",
+      "path": "tests/integration/test_clairvoyance_pipeline.py",
+      "line": 11
+    },
+    {
+      "id": "symbol:tests.integration.test_filter_funnel_integration:make_packet",
+      "kind": "function",
+      "name": "make_packet",
+      "qualified_name": "tests.integration.test_filter_funnel_integration.make_packet",
+      "path": "tests/integration/test_filter_funnel_integration.py",
+      "line": 12
+    },
+    {
+      "id": "symbol:tests.integration.test_filter_funnel_integration:test_end_to_end_filter_funnel_memory_tribunal",
+      "kind": "function",
+      "name": "test_end_to_end_filter_funnel_memory_tribunal",
+      "qualified_name": "tests.integration.test_filter_funnel_integration.test_end_to_end_filter_funnel_memory_tribunal",
+      "path": "tests/integration/test_filter_funnel_integration.py",
+      "line": 31
     },
     {
       "id": "symbol:tests.integration.test_multi_hypothesis_evidence_update:_build_replacement",
@@ -5789,6 +6981,14 @@
       "line": 11
     },
     {
+      "id": "symbol:tests.integration.test_vivy_4b_pipeline:test_full_compression_pipeline_integration",
+      "kind": "function",
+      "name": "test_full_compression_pipeline_integration",
+      "qualified_name": "tests.integration.test_vivy_4b_pipeline.test_full_compression_pipeline_integration",
+      "path": "tests/integration/test_vivy_4b_pipeline.py",
+      "line": 10
+    },
+    {
       "id": "symbol:tests.integration.test_vivy_moe_40b_pipeline:test_vivy_moe_40b_full_pipeline",
       "kind": "function",
       "name": "test_vivy_moe_40b_full_pipeline",
@@ -5827,6 +7027,30 @@
       "qualified_name": "tests.unit.test_adaptive_n.test_information_gain_ranker",
       "path": "tests/unit/test_adaptive_n.py",
       "line": 85
+    },
+    {
+      "id": "symbol:tests.unit.test_associative_memory:test_associative_memory_empty_query",
+      "kind": "function",
+      "name": "test_associative_memory_empty_query",
+      "qualified_name": "tests.unit.test_associative_memory.test_associative_memory_empty_query",
+      "path": "tests/unit/test_associative_memory.py",
+      "line": 46
+    },
+    {
+      "id": "symbol:tests.unit.test_associative_memory:test_associative_memory_multiple_patterns",
+      "kind": "function",
+      "name": "test_associative_memory_multiple_patterns",
+      "qualified_name": "tests.unit.test_associative_memory.test_associative_memory_multiple_patterns",
+      "path": "tests/unit/test_associative_memory.py",
+      "line": 28
+    },
+    {
+      "id": "symbol:tests.unit.test_associative_memory:test_associative_memory_store_and_query",
+      "kind": "function",
+      "name": "test_associative_memory_store_and_query",
+      "qualified_name": "tests.unit.test_associative_memory.test_associative_memory_store_and_query",
+      "path": "tests/unit/test_associative_memory.py",
+      "line": 8
     },
     {
       "id": "symbol:tests.unit.test_atomic_state_update:TestApplyEvidenceTwoTargetSuccess",
@@ -6451,6 +7675,30 @@
       "qualified_name": "tests.unit.test_atomic_state_update.test_apply_evidence_rejects_invalid_record_metadata",
       "path": "tests/unit/test_atomic_state_update.py",
       "line": 1091
+    },
+    {
+      "id": "symbol:tests.unit.test_auth_passkey:test_session_invalidation_revoke_all",
+      "kind": "function",
+      "name": "test_session_invalidation_revoke_all",
+      "qualified_name": "tests.unit.test_auth_passkey.test_session_invalidation_revoke_all",
+      "path": "tests/unit/test_auth_passkey.py",
+      "line": 37
+    },
+    {
+      "id": "symbol:tests.unit.test_auth_passkey:test_user_authentication_manager",
+      "kind": "function",
+      "name": "test_user_authentication_manager",
+      "qualified_name": "tests.unit.test_auth_passkey.test_user_authentication_manager",
+      "path": "tests/unit/test_auth_passkey.py",
+      "line": 11
+    },
+    {
+      "id": "symbol:tests.unit.test_auth_passkey:test_webauthn_passkey_manager",
+      "kind": "function",
+      "name": "test_webauthn_passkey_manager",
+      "qualified_name": "tests.unit.test_auth_passkey.test_webauthn_passkey_manager",
+      "path": "tests/unit/test_auth_passkey.py",
+      "line": 57
     },
     {
       "id": "symbol:tests.unit.test_codegraph_build:codegraph",
@@ -8235,6 +9483,150 @@
       "qualified_name": "tests.unit.test_experiment_schema.validate_experiment",
       "path": "tests/unit/test_experiment_schema.py",
       "line": 14
+    },
+    {
+      "id": "symbol:tests.unit.test_eyes_hands:test_mt5_data_collector",
+      "kind": "function",
+      "name": "test_mt5_data_collector",
+      "qualified_name": "tests.unit.test_eyes_hands.test_mt5_data_collector",
+      "path": "tests/unit/test_eyes_hands.py",
+      "line": 20
+    },
+    {
+      "id": "symbol:tests.unit.test_eyes_hands:test_mt5_executor_no_gatekeepers",
+      "kind": "function",
+      "name": "test_mt5_executor_no_gatekeepers",
+      "qualified_name": "tests.unit.test_eyes_hands.test_mt5_executor_no_gatekeepers",
+      "path": "tests/unit/test_eyes_hands.py",
+      "line": 35
+    },
+    {
+      "id": "symbol:tests.unit.test_eyes_hands:test_news_bridge",
+      "kind": "function",
+      "name": "test_news_bridge",
+      "qualified_name": "tests.unit.test_eyes_hands.test_news_bridge",
+      "path": "tests/unit/test_eyes_hands.py",
+      "line": 28
+    },
+    {
+      "id": "symbol:tests.unit.test_eyes_hands:test_technical_indicator_engine",
+      "kind": "function",
+      "name": "test_technical_indicator_engine",
+      "qualified_name": "tests.unit.test_eyes_hands.test_technical_indicator_engine",
+      "path": "tests/unit/test_eyes_hands.py",
+      "line": 11
+    },
+    {
+      "id": "symbol:tests.unit.test_filter_funnel:test_amplitude_analyzer_destructive_interference",
+      "kind": "function",
+      "name": "test_amplitude_analyzer_destructive_interference",
+      "qualified_name": "tests.unit.test_filter_funnel.test_amplitude_analyzer_destructive_interference",
+      "path": "tests/unit/test_filter_funnel.py",
+      "line": 30
+    },
+    {
+      "id": "symbol:tests.unit.test_filter_funnel:test_amplitude_analyzer_entropy_and_normalization",
+      "kind": "function",
+      "name": "test_amplitude_analyzer_entropy_and_normalization",
+      "qualified_name": "tests.unit.test_filter_funnel.test_amplitude_analyzer_entropy_and_normalization",
+      "path": "tests/unit/test_filter_funnel.py",
+      "line": 19
+    },
+    {
+      "id": "symbol:tests.unit.test_filter_funnel:test_filter_funnel_backtrack_signal",
+      "kind": "function",
+      "name": "test_filter_funnel_backtrack_signal",
+      "qualified_name": "tests.unit.test_filter_funnel.test_filter_funnel_backtrack_signal",
+      "path": "tests/unit/test_filter_funnel.py",
+      "line": 88
+    },
+    {
+      "id": "symbol:tests.unit.test_filter_funnel:test_filter_funnel_full_pipeline_halt_signal",
+      "kind": "function",
+      "name": "test_filter_funnel_full_pipeline_halt_signal",
+      "qualified_name": "tests.unit.test_filter_funnel.test_filter_funnel_full_pipeline_halt_signal",
+      "path": "tests/unit/test_filter_funnel.py",
+      "line": 75
+    },
+    {
+      "id": "symbol:tests.unit.test_filter_funnel:test_logic_filter_evaluation",
+      "kind": "function",
+      "name": "test_logic_filter_evaluation",
+      "qualified_name": "tests.unit.test_filter_funnel.test_logic_filter_evaluation",
+      "path": "tests/unit/test_filter_funnel.py",
+      "line": 52
+    },
+    {
+      "id": "symbol:tests.unit.test_filter_funnel:test_svd_decomposer_stream_extraction",
+      "kind": "function",
+      "name": "test_svd_decomposer_stream_extraction",
+      "qualified_name": "tests.unit.test_filter_funnel.test_svd_decomposer_stream_extraction",
+      "path": "tests/unit/test_filter_funnel.py",
+      "line": 39
+    },
+    {
+      "id": "symbol:tests.unit.test_filter_funnel_pytorch:test_backtrack_on_high_entropy",
+      "kind": "function",
+      "name": "test_backtrack_on_high_entropy",
+      "qualified_name": "tests.unit.test_filter_funnel_pytorch.test_backtrack_on_high_entropy",
+      "path": "tests/unit/test_filter_funnel_pytorch.py",
+      "line": 25
+    },
+    {
+      "id": "symbol:tests.unit.test_filter_funnel_pytorch:test_destructive_interference_detection",
+      "kind": "function",
+      "name": "test_destructive_interference_detection",
+      "qualified_name": "tests.unit.test_filter_funnel_pytorch.test_destructive_interference_detection",
+      "path": "tests/unit/test_filter_funnel_pytorch.py",
+      "line": 9
+    },
+    {
+      "id": "symbol:tests.unit.test_filter_funnel_pytorch:test_halt_on_converged_state",
+      "kind": "function",
+      "name": "test_halt_on_converged_state",
+      "qualified_name": "tests.unit.test_filter_funnel_pytorch.test_halt_on_converged_state",
+      "path": "tests/unit/test_filter_funnel_pytorch.py",
+      "line": 18
+    },
+    {
+      "id": "symbol:tests.unit.test_filter_funnel_pytorch:test_vivy_quantum_core_initialization",
+      "kind": "function",
+      "name": "test_vivy_quantum_core_initialization",
+      "qualified_name": "tests.unit.test_filter_funnel_pytorch.test_vivy_quantum_core_initialization",
+      "path": "tests/unit/test_filter_funnel_pytorch.py",
+      "line": 4
+    },
+    {
+      "id": "symbol:tests.unit.test_multimodal_clairvoyance:test_audio_video_encoders",
+      "kind": "function",
+      "name": "test_audio_video_encoders",
+      "qualified_name": "tests.unit.test_multimodal_clairvoyance.test_audio_video_encoders",
+      "path": "tests/unit/test_multimodal_clairvoyance.py",
+      "line": 19
+    },
+    {
+      "id": "symbol:tests.unit.test_multimodal_clairvoyance:test_clairvoyance_engine_full_processing",
+      "kind": "function",
+      "name": "test_clairvoyance_engine_full_processing",
+      "qualified_name": "tests.unit.test_multimodal_clairvoyance.test_clairvoyance_engine_full_processing",
+      "path": "tests/unit/test_multimodal_clairvoyance.py",
+      "line": 51
+    },
+    {
+      "id": "symbol:tests.unit.test_multimodal_clairvoyance:test_clairvoyance_state_normalization",
+      "kind": "function",
+      "name": "test_clairvoyance_state_normalization",
+      "qualified_name": "tests.unit.test_multimodal_clairvoyance.test_clairvoyance_state_normalization",
+      "path": "tests/unit/test_multimodal_clairvoyance.py",
+      "line": 32
+    },
+    {
+      "id": "symbol:tests.unit.test_multimodal_clairvoyance:test_svd_multimodal_decomposer",
+      "kind": "function",
+      "name": "test_svd_multimodal_decomposer",
+      "qualified_name": "tests.unit.test_multimodal_clairvoyance.test_svd_multimodal_decomposer",
+      "path": "tests/unit/test_multimodal_clairvoyance.py",
+      "line": 38
     },
     {
       "id": "symbol:tests.unit.test_schemas:test_schema_properties",
@@ -10461,6 +11853,118 @@
       "line": 30
     },
     {
+      "id": "symbol:tests.unit.test_vivy_4b_compression:make_ex",
+      "kind": "function",
+      "name": "make_ex",
+      "qualified_name": "tests.unit.test_vivy_4b_compression.make_ex",
+      "path": "tests/unit/test_vivy_4b_compression.py",
+      "line": 17
+    },
+    {
+      "id": "symbol:tests.unit.test_vivy_4b_compression:test_domain_filter_funnel_classification_and_deduplication",
+      "kind": "function",
+      "name": "test_domain_filter_funnel_classification_and_deduplication",
+      "qualified_name": "tests.unit.test_vivy_4b_compression.test_domain_filter_funnel_classification_and_deduplication",
+      "path": "tests/unit/test_vivy_4b_compression.py",
+      "line": 51
+    },
+    {
+      "id": "symbol:tests.unit.test_vivy_4b_compression:test_domain_priority_weights",
+      "kind": "function",
+      "name": "test_domain_priority_weights",
+      "qualified_name": "tests.unit.test_vivy_4b_compression.test_domain_priority_weights",
+      "path": "tests/unit/test_vivy_4b_compression.py",
+      "line": 35
+    },
+    {
+      "id": "symbol:tests.unit.test_vivy_4b_compression:test_model_compact_4b_config",
+      "kind": "function",
+      "name": "test_model_compact_4b_config",
+      "qualified_name": "tests.unit.test_vivy_4b_compression.test_model_compact_4b_config",
+      "path": "tests/unit/test_vivy_4b_compression.py",
+      "line": 28
+    },
+    {
+      "id": "symbol:tests.unit.test_vivy_4b_compression:test_model_compressor_40b_to_4b",
+      "kind": "function",
+      "name": "test_model_compressor_40b_to_4b",
+      "qualified_name": "tests.unit.test_vivy_4b_compression.test_model_compressor_40b_to_4b",
+      "path": "tests/unit/test_vivy_4b_compression.py",
+      "line": 85
+    },
+    {
+      "id": "symbol:tests.unit.test_vivy_associative_memory:test_memory_initialization",
+      "kind": "function",
+      "name": "test_memory_initialization",
+      "qualified_name": "tests.unit.test_vivy_associative_memory.test_memory_initialization",
+      "path": "tests/unit/test_vivy_associative_memory.py",
+      "line": 4
+    },
+    {
+      "id": "symbol:tests.unit.test_vivy_associative_memory:test_memory_unitarization",
+      "kind": "function",
+      "name": "test_memory_unitarization",
+      "qualified_name": "tests.unit.test_vivy_associative_memory.test_memory_unitarization",
+      "path": "tests/unit/test_vivy_associative_memory.py",
+      "line": 22
+    },
+    {
+      "id": "symbol:tests.unit.test_vivy_associative_memory:test_store_and_query",
+      "kind": "function",
+      "name": "test_store_and_query",
+      "qualified_name": "tests.unit.test_vivy_associative_memory.test_store_and_query",
+      "path": "tests/unit/test_vivy_associative_memory.py",
+      "line": 9
+    },
+    {
+      "id": "symbol:tests.unit.test_vivy_core:test_inference_engine_reason_and_decide",
+      "kind": "function",
+      "name": "test_inference_engine_reason_and_decide",
+      "qualified_name": "tests.unit.test_vivy_core.test_inference_engine_reason_and_decide",
+      "path": "tests/unit/test_vivy_core.py",
+      "line": 28
+    },
+    {
+      "id": "symbol:tests.unit.test_vivy_core:test_isolated_prompts",
+      "kind": "function",
+      "name": "test_isolated_prompts",
+      "qualified_name": "tests.unit.test_vivy_core.test_isolated_prompts",
+      "path": "tests/unit/test_vivy_core.py",
+      "line": 21
+    },
+    {
+      "id": "symbol:tests.unit.test_vivy_core:test_model_loader_mock_engine",
+      "kind": "function",
+      "name": "test_model_loader_mock_engine",
+      "qualified_name": "tests.unit.test_vivy_core.test_model_loader_mock_engine",
+      "path": "tests/unit/test_vivy_core.py",
+      "line": 11
+    },
+    {
+      "id": "symbol:tests.unit.test_vivy_integration:test_api_health_check",
+      "kind": "function",
+      "name": "test_api_health_check",
+      "qualified_name": "tests.unit.test_vivy_integration.test_api_health_check",
+      "path": "tests/unit/test_vivy_integration.py",
+      "line": 11
+    },
+    {
+      "id": "symbol:tests.unit.test_vivy_integration:test_full_trade_cycle_execution",
+      "kind": "function",
+      "name": "test_full_trade_cycle_execution",
+      "qualified_name": "tests.unit.test_vivy_integration.test_full_trade_cycle_execution",
+      "path": "tests/unit/test_vivy_integration.py",
+      "line": 17
+    },
+    {
+      "id": "symbol:tests.unit.test_vivy_integration:test_self_improvement_feedback_loop",
+      "kind": "function",
+      "name": "test_self_improvement_feedback_loop",
+      "qualified_name": "tests.unit.test_vivy_integration.test_self_improvement_feedback_loop",
+      "path": "tests/unit/test_vivy_integration.py",
+      "line": 26
+    },
+    {
       "id": "symbol:tests.unit.test_vivy_moe:test_moe_config_compute_reduction",
       "kind": "function",
       "name": "test_moe_config_compute_reduction",
@@ -10539,6 +12043,782 @@
       "qualified_name": "tests.unit.test_vivy_ollama.test_ollama_model_exporter",
       "path": "tests/unit/test_vivy_ollama.py",
       "line": 14
+    },
+    {
+      "id": "symbol:vivy.api.deerflow_server:ChatCompletionRequest",
+      "kind": "class",
+      "name": "ChatCompletionRequest",
+      "qualified_name": "vivy.api.deerflow_server.ChatCompletionRequest",
+      "path": "src/vivy/api/deerflow_server.py",
+      "line": 34
+    },
+    {
+      "id": "symbol:vivy.api.deerflow_server:ChatMessage",
+      "kind": "class",
+      "name": "ChatMessage",
+      "qualified_name": "vivy.api.deerflow_server.ChatMessage",
+      "path": "src/vivy/api/deerflow_server.py",
+      "line": 30
+    },
+    {
+      "id": "symbol:vivy.api.deerflow_server:chat_completions",
+      "kind": "async_function",
+      "name": "chat_completions",
+      "qualified_name": "vivy.api.deerflow_server.chat_completions",
+      "path": "src/vivy/api/deerflow_server.py",
+      "line": 62
+    },
+    {
+      "id": "symbol:vivy.api.deerflow_server:health_check",
+      "kind": "async_function",
+      "name": "health_check",
+      "qualified_name": "vivy.api.deerflow_server.health_check",
+      "path": "src/vivy/api/deerflow_server.py",
+      "line": 123
+    },
+    {
+      "id": "symbol:vivy.api.deerflow_server:text_to_state",
+      "kind": "function",
+      "name": "text_to_state",
+      "qualified_name": "vivy.api.deerflow_server.text_to_state",
+      "path": "src/vivy/api/deerflow_server.py",
+      "line": 40
+    },
+    {
+      "id": "symbol:vivy.api.router:handle_health_check",
+      "kind": "function",
+      "name": "handle_health_check",
+      "qualified_name": "vivy.api.router.handle_health_check",
+      "path": "src/vivy/api/router.py",
+      "line": 22
+    },
+    {
+      "id": "symbol:vivy.api.router:handle_trade_cycle",
+      "kind": "function",
+      "name": "handle_trade_cycle",
+      "qualified_name": "vivy.api.router.handle_trade_cycle",
+      "path": "src/vivy/api/router.py",
+      "line": 31
+    },
+    {
+      "id": "symbol:vivy.auth.user_manager:User",
+      "kind": "class",
+      "name": "User",
+      "qualified_name": "vivy.auth.user_manager.User",
+      "path": "src/vivy/auth/user_manager.py",
+      "line": 21
+    },
+    {
+      "id": "symbol:vivy.auth.user_manager:UserAuthenticationManager",
+      "kind": "class",
+      "name": "UserAuthenticationManager",
+      "qualified_name": "vivy.auth.user_manager.UserAuthenticationManager",
+      "path": "src/vivy/auth/user_manager.py",
+      "line": 27
+    },
+    {
+      "id": "symbol:vivy.auth.user_manager:UserAuthenticationManager.__init__",
+      "kind": "function",
+      "name": "__init__",
+      "qualified_name": "vivy.auth.user_manager.UserAuthenticationManager.__init__",
+      "path": "src/vivy/auth/user_manager.py",
+      "line": 30
+    },
+    {
+      "id": "symbol:vivy.auth.user_manager:UserAuthenticationManager._hash_password",
+      "kind": "function",
+      "name": "_hash_password",
+      "qualified_name": "vivy.auth.user_manager.UserAuthenticationManager._hash_password",
+      "path": "src/vivy/auth/user_manager.py",
+      "line": 48
+    },
+    {
+      "id": "symbol:vivy.auth.user_manager:UserAuthenticationManager._init_db",
+      "kind": "function",
+      "name": "_init_db",
+      "qualified_name": "vivy.auth.user_manager.UserAuthenticationManager._init_db",
+      "path": "src/vivy/auth/user_manager.py",
+      "line": 36
+    },
+    {
+      "id": "symbol:vivy.auth.user_manager:UserAuthenticationManager._verify_password",
+      "kind": "function",
+      "name": "_verify_password",
+      "qualified_name": "vivy.auth.user_manager.UserAuthenticationManager._verify_password",
+      "path": "src/vivy/auth/user_manager.py",
+      "line": 58
+    },
+    {
+      "id": "symbol:vivy.auth.user_manager:UserAuthenticationManager.authenticate_user",
+      "kind": "function",
+      "name": "authenticate_user",
+      "qualified_name": "vivy.auth.user_manager.UserAuthenticationManager.authenticate_user",
+      "path": "src/vivy/auth/user_manager.py",
+      "line": 77
+    },
+    {
+      "id": "symbol:vivy.auth.user_manager:UserAuthenticationManager.create_jwt_token",
+      "kind": "function",
+      "name": "create_jwt_token",
+      "qualified_name": "vivy.auth.user_manager.UserAuthenticationManager.create_jwt_token",
+      "path": "src/vivy/auth/user_manager.py",
+      "line": 90
+    },
+    {
+      "id": "symbol:vivy.auth.user_manager:UserAuthenticationManager.create_jwt_token.b64url",
+      "kind": "function",
+      "name": "b64url",
+      "qualified_name": "vivy.auth.user_manager.UserAuthenticationManager.create_jwt_token.b64url",
+      "path": "src/vivy/auth/user_manager.py",
+      "line": 101
+    },
+    {
+      "id": "symbol:vivy.auth.user_manager:UserAuthenticationManager.register_user",
+      "kind": "function",
+      "name": "register_user",
+      "qualified_name": "vivy.auth.user_manager.UserAuthenticationManager.register_user",
+      "path": "src/vivy/auth/user_manager.py",
+      "line": 67
+    },
+    {
+      "id": "symbol:vivy.auth.user_manager:UserAuthenticationManager.revoke_all_sessions",
+      "kind": "function",
+      "name": "revoke_all_sessions",
+      "qualified_name": "vivy.auth.user_manager.UserAuthenticationManager.revoke_all_sessions",
+      "path": "src/vivy/auth/user_manager.py",
+      "line": 85
+    },
+    {
+      "id": "symbol:vivy.auth.user_manager:UserAuthenticationManager.verify_jwt_token",
+      "kind": "function",
+      "name": "verify_jwt_token",
+      "qualified_name": "vivy.auth.user_manager.UserAuthenticationManager.verify_jwt_token",
+      "path": "src/vivy/auth/user_manager.py",
+      "line": 114
+    },
+    {
+      "id": "symbol:vivy.auth.webauthn_passkey:PasskeyRegistrationOptions",
+      "kind": "class",
+      "name": "PasskeyRegistrationOptions",
+      "qualified_name": "vivy.auth.webauthn_passkey.PasskeyRegistrationOptions",
+      "path": "src/vivy/auth/webauthn_passkey.py",
+      "line": 11
+    },
+    {
+      "id": "symbol:vivy.auth.webauthn_passkey:WebAuthnPasskeyManager",
+      "kind": "class",
+      "name": "WebAuthnPasskeyManager",
+      "qualified_name": "vivy.auth.webauthn_passkey.WebAuthnPasskeyManager",
+      "path": "src/vivy/auth/webauthn_passkey.py",
+      "line": 18
+    },
+    {
+      "id": "symbol:vivy.auth.webauthn_passkey:WebAuthnPasskeyManager.__init__",
+      "kind": "function",
+      "name": "__init__",
+      "qualified_name": "vivy.auth.webauthn_passkey.WebAuthnPasskeyManager.__init__",
+      "path": "src/vivy/auth/webauthn_passkey.py",
+      "line": 21
+    },
+    {
+      "id": "symbol:vivy.auth.webauthn_passkey:WebAuthnPasskeyManager.generate_assertion_options",
+      "kind": "function",
+      "name": "generate_assertion_options",
+      "qualified_name": "vivy.auth.webauthn_passkey.WebAuthnPasskeyManager.generate_assertion_options",
+      "path": "src/vivy/auth/webauthn_passkey.py",
+      "line": 36
+    },
+    {
+      "id": "symbol:vivy.auth.webauthn_passkey:WebAuthnPasskeyManager.generate_registration_options",
+      "kind": "function",
+      "name": "generate_registration_options",
+      "qualified_name": "vivy.auth.webauthn_passkey.WebAuthnPasskeyManager.generate_registration_options",
+      "path": "src/vivy/auth/webauthn_passkey.py",
+      "line": 24
+    },
+    {
+      "id": "symbol:vivy.auth.webauthn_passkey:WebAuthnPasskeyManager.verify_1touch_login",
+      "kind": "function",
+      "name": "verify_1touch_login",
+      "qualified_name": "vivy.auth.webauthn_passkey.WebAuthnPasskeyManager.verify_1touch_login",
+      "path": "src/vivy/auth/webauthn_passkey.py",
+      "line": 45
+    },
+    {
+      "id": "symbol:vivy.core.associative_memory:QuantumAssociativeMemory",
+      "kind": "class",
+      "name": "QuantumAssociativeMemory",
+      "qualified_name": "vivy.core.associative_memory.QuantumAssociativeMemory",
+      "path": "src/vivy/core/associative_memory.py",
+      "line": 12
+    },
+    {
+      "id": "symbol:vivy.core.associative_memory:QuantumAssociativeMemory.__init__",
+      "kind": "function",
+      "name": "__init__",
+      "qualified_name": "vivy.core.associative_memory.QuantumAssociativeMemory.__init__",
+      "path": "src/vivy/core/associative_memory.py",
+      "line": 17
+    },
+    {
+      "id": "symbol:vivy.core.associative_memory:QuantumAssociativeMemory._make_unitary",
+      "kind": "function",
+      "name": "_make_unitary",
+      "qualified_name": "vivy.core.associative_memory.QuantumAssociativeMemory._make_unitary",
+      "path": "src/vivy/core/associative_memory.py",
+      "line": 60
+    },
+    {
+      "id": "symbol:vivy.core.associative_memory:QuantumAssociativeMemory.load_compressed",
+      "kind": "function",
+      "name": "load_compressed",
+      "qualified_name": "vivy.core.associative_memory.QuantumAssociativeMemory.load_compressed",
+      "path": "src/vivy/core/associative_memory.py",
+      "line": 92
+    },
+    {
+      "id": "symbol:vivy.core.associative_memory:QuantumAssociativeMemory.query",
+      "kind": "function",
+      "name": "query",
+      "qualified_name": "vivy.core.associative_memory.QuantumAssociativeMemory.query",
+      "path": "src/vivy/core/associative_memory.py",
+      "line": 41
+    },
+    {
+      "id": "symbol:vivy.core.associative_memory:QuantumAssociativeMemory.save_compressed",
+      "kind": "function",
+      "name": "save_compressed",
+      "qualified_name": "vivy.core.associative_memory.QuantumAssociativeMemory.save_compressed",
+      "path": "src/vivy/core/associative_memory.py",
+      "line": 68
+    },
+    {
+      "id": "symbol:vivy.core.associative_memory:QuantumAssociativeMemory.store",
+      "kind": "function",
+      "name": "store",
+      "qualified_name": "vivy.core.associative_memory.QuantumAssociativeMemory.store",
+      "path": "src/vivy/core/associative_memory.py",
+      "line": 23
+    },
+    {
+      "id": "symbol:vivy.core.inference:DecisionResult",
+      "kind": "class",
+      "name": "DecisionResult",
+      "qualified_name": "vivy.core.inference.DecisionResult",
+      "path": "src/vivy/core/inference.py",
+      "line": 17
+    },
+    {
+      "id": "symbol:vivy.core.inference:ViVyInferenceEngine",
+      "kind": "class",
+      "name": "ViVyInferenceEngine",
+      "qualified_name": "vivy.core.inference.ViVyInferenceEngine",
+      "path": "src/vivy/core/inference.py",
+      "line": 28
+    },
+    {
+      "id": "symbol:vivy.core.inference:ViVyInferenceEngine.__init__",
+      "kind": "function",
+      "name": "__init__",
+      "qualified_name": "vivy.core.inference.ViVyInferenceEngine.__init__",
+      "path": "src/vivy/core/inference.py",
+      "line": 31
+    },
+    {
+      "id": "symbol:vivy.core.inference:ViVyInferenceEngine.reason_and_decide",
+      "kind": "function",
+      "name": "reason_and_decide",
+      "qualified_name": "vivy.core.inference.ViVyInferenceEngine.reason_and_decide",
+      "path": "src/vivy/core/inference.py",
+      "line": 35
+    },
+    {
+      "id": "symbol:vivy.core.model_loader:GGUFLocalEngine",
+      "kind": "class",
+      "name": "GGUFLocalEngine",
+      "qualified_name": "vivy.core.model_loader.GGUFLocalEngine",
+      "path": "src/vivy/core/model_loader.py",
+      "line": 108
+    },
+    {
+      "id": "symbol:vivy.core.model_loader:GGUFLocalEngine.__init__",
+      "kind": "function",
+      "name": "__init__",
+      "qualified_name": "vivy.core.model_loader.GGUFLocalEngine.__init__",
+      "path": "src/vivy/core/model_loader.py",
+      "line": 111
+    },
+    {
+      "id": "symbol:vivy.core.model_loader:GGUFLocalEngine.generate",
+      "kind": "function",
+      "name": "generate",
+      "qualified_name": "vivy.core.model_loader.GGUFLocalEngine.generate",
+      "path": "src/vivy/core/model_loader.py",
+      "line": 125
+    },
+    {
+      "id": "symbol:vivy.core.model_loader:LocalModelEngine",
+      "kind": "class",
+      "name": "LocalModelEngine",
+      "qualified_name": "vivy.core.model_loader.LocalModelEngine",
+      "path": "src/vivy/core/model_loader.py",
+      "line": 32
+    },
+    {
+      "id": "symbol:vivy.core.model_loader:LocalModelEngine.generate",
+      "kind": "function",
+      "name": "generate",
+      "qualified_name": "vivy.core.model_loader.LocalModelEngine.generate",
+      "path": "src/vivy/core/model_loader.py",
+      "line": 35
+    },
+    {
+      "id": "symbol:vivy.core.model_loader:LocalModelEngine.generate_json",
+      "kind": "function",
+      "name": "generate_json",
+      "qualified_name": "vivy.core.model_loader.LocalModelEngine.generate_json",
+      "path": "src/vivy/core/model_loader.py",
+      "line": 38
+    },
+    {
+      "id": "symbol:vivy.core.model_loader:LocalModelLoader",
+      "kind": "class",
+      "name": "LocalModelLoader",
+      "qualified_name": "vivy.core.model_loader.LocalModelLoader",
+      "path": "src/vivy/core/model_loader.py",
+      "line": 167
+    },
+    {
+      "id": "symbol:vivy.core.model_loader:LocalModelLoader.load_engine",
+      "kind": "function",
+      "name": "load_engine",
+      "qualified_name": "vivy.core.model_loader.LocalModelLoader.load_engine",
+      "path": "src/vivy/core/model_loader.py",
+      "line": 171
+    },
+    {
+      "id": "symbol:vivy.core.model_loader:MockLocalEngine",
+      "kind": "class",
+      "name": "MockLocalEngine",
+      "qualified_name": "vivy.core.model_loader.MockLocalEngine",
+      "path": "src/vivy/core/model_loader.py",
+      "line": 55
+    },
+    {
+      "id": "symbol:vivy.core.model_loader:MockLocalEngine.__init__",
+      "kind": "function",
+      "name": "__init__",
+      "qualified_name": "vivy.core.model_loader.MockLocalEngine.__init__",
+      "path": "src/vivy/core/model_loader.py",
+      "line": 58
+    },
+    {
+      "id": "symbol:vivy.core.model_loader:MockLocalEngine.generate",
+      "kind": "function",
+      "name": "generate",
+      "qualified_name": "vivy.core.model_loader.MockLocalEngine.generate",
+      "path": "src/vivy/core/model_loader.py",
+      "line": 61
+    },
+    {
+      "id": "symbol:vivy.core.model_loader:ModelBackend",
+      "kind": "class",
+      "name": "ModelBackend",
+      "qualified_name": "vivy.core.model_loader.ModelBackend",
+      "path": "src/vivy/core/model_loader.py",
+      "line": 15
+    },
+    {
+      "id": "symbol:vivy.core.model_loader:ModelConfig",
+      "kind": "class",
+      "name": "ModelConfig",
+      "qualified_name": "vivy.core.model_loader.ModelConfig",
+      "path": "src/vivy/core/model_loader.py",
+      "line": 23
+    },
+    {
+      "id": "symbol:vivy.core.model_loader:NativePyTorchEngine",
+      "kind": "class",
+      "name": "NativePyTorchEngine",
+      "qualified_name": "vivy.core.model_loader.NativePyTorchEngine",
+      "path": "src/vivy/core/model_loader.py",
+      "line": 138
+    },
+    {
+      "id": "symbol:vivy.core.model_loader:NativePyTorchEngine.__init__",
+      "kind": "function",
+      "name": "__init__",
+      "qualified_name": "vivy.core.model_loader.NativePyTorchEngine.__init__",
+      "path": "src/vivy/core/model_loader.py",
+      "line": 141
+    },
+    {
+      "id": "symbol:vivy.core.model_loader:NativePyTorchEngine.generate",
+      "kind": "function",
+      "name": "generate",
+      "qualified_name": "vivy.core.model_loader.NativePyTorchEngine.generate",
+      "path": "src/vivy/core/model_loader.py",
+      "line": 149
+    },
+    {
+      "id": "symbol:vivy.core.model_loader:OllamaAPIEngine",
+      "kind": "class",
+      "name": "OllamaAPIEngine",
+      "qualified_name": "vivy.core.model_loader.OllamaAPIEngine",
+      "path": "src/vivy/core/model_loader.py",
+      "line": 75
+    },
+    {
+      "id": "symbol:vivy.core.model_loader:OllamaAPIEngine.__init__",
+      "kind": "function",
+      "name": "__init__",
+      "qualified_name": "vivy.core.model_loader.OllamaAPIEngine.__init__",
+      "path": "src/vivy/core/model_loader.py",
+      "line": 78
+    },
+    {
+      "id": "symbol:vivy.core.model_loader:OllamaAPIEngine.generate",
+      "kind": "function",
+      "name": "generate",
+      "qualified_name": "vivy.core.model_loader.OllamaAPIEngine.generate",
+      "path": "src/vivy/core/model_loader.py",
+      "line": 82
+    },
+    {
+      "id": "symbol:vivy.core.moe_brain:ViVyMoEQuantumCore",
+      "kind": "class",
+      "name": "ViVyMoEQuantumCore",
+      "qualified_name": "vivy.core.moe_brain.ViVyMoEQuantumCore",
+      "path": "src/vivy/core/moe_brain.py",
+      "line": 18
+    },
+    {
+      "id": "symbol:vivy.core.moe_brain:ViVyMoEQuantumCore.__init__",
+      "kind": "function",
+      "name": "__init__",
+      "qualified_name": "vivy.core.moe_brain.ViVyMoEQuantumCore.__init__",
+      "path": "src/vivy/core/moe_brain.py",
+      "line": 19
+    },
+    {
+      "id": "symbol:vivy.core.moe_brain:ViVyMoEQuantumCore._load_expert",
+      "kind": "function",
+      "name": "_load_expert",
+      "qualified_name": "vivy.core.moe_brain.ViVyMoEQuantumCore._load_expert",
+      "path": "src/vivy/core/moe_brain.py",
+      "line": 50
+    },
+    {
+      "id": "symbol:vivy.core.moe_brain:ViVyMoEQuantumCore._route",
+      "kind": "function",
+      "name": "_route",
+      "qualified_name": "vivy.core.moe_brain.ViVyMoEQuantumCore._route",
+      "path": "src/vivy/core/moe_brain.py",
+      "line": 35
+    },
+    {
+      "id": "symbol:vivy.core.moe_brain:ViVyMoEQuantumCore.process_state",
+      "kind": "function",
+      "name": "process_state",
+      "qualified_name": "vivy.core.moe_brain.ViVyMoEQuantumCore.process_state",
+      "path": "src/vivy/core/moe_brain.py",
+      "line": 69
+    },
+    {
+      "id": "symbol:vivy.core.moe_brain:ViVyMoEQuantumCore.train_expert",
+      "kind": "function",
+      "name": "train_expert",
+      "qualified_name": "vivy.core.moe_brain.ViVyMoEQuantumCore.train_expert",
+      "path": "src/vivy/core/moe_brain.py",
+      "line": 79
+    },
+    {
+      "id": "symbol:vivy.core.prompts:get_system_prompt",
+      "kind": "function",
+      "name": "get_system_prompt",
+      "qualified_name": "vivy.core.prompts.get_system_prompt",
+      "path": "src/vivy/core/prompts.py",
+      "line": 63
+    },
+    {
+      "id": "symbol:vivy.core.vivy_brain:FilterFunnelSignal",
+      "kind": "class",
+      "name": "FilterFunnelSignal",
+      "qualified_name": "vivy.core.vivy_brain.FilterFunnelSignal",
+      "path": "src/vivy/core/vivy_brain.py",
+      "line": 13
+    },
+    {
+      "id": "symbol:vivy.core.vivy_brain:ViVyQuantumCore",
+      "kind": "class",
+      "name": "ViVyQuantumCore",
+      "qualified_name": "vivy.core.vivy_brain.ViVyQuantumCore",
+      "path": "src/vivy/core/vivy_brain.py",
+      "line": 19
+    },
+    {
+      "id": "symbol:vivy.core.vivy_brain:ViVyQuantumCore.__init__",
+      "kind": "function",
+      "name": "__init__",
+      "qualified_name": "vivy.core.vivy_brain.ViVyQuantumCore.__init__",
+      "path": "src/vivy/core/vivy_brain.py",
+      "line": 25
+    },
+    {
+      "id": "symbol:vivy.core.vivy_brain:ViVyQuantumCore._level_1_amplitude_phase_analyzer",
+      "kind": "function",
+      "name": "_level_1_amplitude_phase_analyzer",
+      "qualified_name": "vivy.core.vivy_brain.ViVyQuantumCore._level_1_amplitude_phase_analyzer",
+      "path": "src/vivy/core/vivy_brain.py",
+      "line": 31
+    },
+    {
+      "id": "symbol:vivy.core.vivy_brain:ViVyQuantumCore._level_2_svd_stream_decomposer",
+      "kind": "function",
+      "name": "_level_2_svd_stream_decomposer",
+      "qualified_name": "vivy.core.vivy_brain.ViVyQuantumCore._level_2_svd_stream_decomposer",
+      "path": "src/vivy/core/vivy_brain.py",
+      "line": 68
+    },
+    {
+      "id": "symbol:vivy.core.vivy_brain:ViVyQuantumCore._level_3_evaluator_logic_filter",
+      "kind": "function",
+      "name": "_level_3_evaluator_logic_filter",
+      "qualified_name": "vivy.core.vivy_brain.ViVyQuantumCore._level_3_evaluator_logic_filter",
+      "path": "src/vivy/core/vivy_brain.py",
+      "line": 97
+    },
+    {
+      "id": "symbol:vivy.core.vivy_brain:ViVyQuantumCore._level_4_metacognitive_trigger",
+      "kind": "function",
+      "name": "_level_4_metacognitive_trigger",
+      "qualified_name": "vivy.core.vivy_brain.ViVyQuantumCore._level_4_metacognitive_trigger",
+      "path": "src/vivy/core/vivy_brain.py",
+      "line": 115
+    },
+    {
+      "id": "symbol:vivy.core.vivy_brain:ViVyQuantumCore.process_state",
+      "kind": "function",
+      "name": "process_state",
+      "qualified_name": "vivy.core.vivy_brain.ViVyQuantumCore.process_state",
+      "path": "src/vivy/core/vivy_brain.py",
+      "line": 130
+    },
+    {
+      "id": "symbol:vivy.eyes.mt5_collector:Candle",
+      "kind": "class",
+      "name": "Candle",
+      "qualified_name": "vivy.eyes.mt5_collector.Candle",
+      "path": "src/vivy/eyes/mt5_collector.py",
+      "line": 15
+    },
+    {
+      "id": "symbol:vivy.eyes.mt5_collector:MT5DataCollector",
+      "kind": "class",
+      "name": "MT5DataCollector",
+      "qualified_name": "vivy.eyes.mt5_collector.MT5DataCollector",
+      "path": "src/vivy/eyes/mt5_collector.py",
+      "line": 71
+    },
+    {
+      "id": "symbol:vivy.eyes.mt5_collector:MT5DataCollector.__init__",
+      "kind": "function",
+      "name": "__init__",
+      "qualified_name": "vivy.eyes.mt5_collector.MT5DataCollector.__init__",
+      "path": "src/vivy/eyes/mt5_collector.py",
+      "line": 74
+    },
+    {
+      "id": "symbol:vivy.eyes.mt5_collector:MT5DataCollector.get_market_snapshot",
+      "kind": "function",
+      "name": "get_market_snapshot",
+      "qualified_name": "vivy.eyes.mt5_collector.MT5DataCollector.get_market_snapshot",
+      "path": "src/vivy/eyes/mt5_collector.py",
+      "line": 77
+    },
+    {
+      "id": "symbol:vivy.eyes.mt5_collector:TechnicalIndicatorEngine",
+      "kind": "class",
+      "name": "TechnicalIndicatorEngine",
+      "qualified_name": "vivy.eyes.mt5_collector.TechnicalIndicatorEngine",
+      "path": "src/vivy/eyes/mt5_collector.py",
+      "line": 24
+    },
+    {
+      "id": "symbol:vivy.eyes.mt5_collector:TechnicalIndicatorEngine.calculate_atr",
+      "kind": "function",
+      "name": "calculate_atr",
+      "qualified_name": "vivy.eyes.mt5_collector.TechnicalIndicatorEngine.calculate_atr",
+      "path": "src/vivy/eyes/mt5_collector.py",
+      "line": 58
+    },
+    {
+      "id": "symbol:vivy.eyes.mt5_collector:TechnicalIndicatorEngine.calculate_ema",
+      "kind": "function",
+      "name": "calculate_ema",
+      "qualified_name": "vivy.eyes.mt5_collector.TechnicalIndicatorEngine.calculate_ema",
+      "path": "src/vivy/eyes/mt5_collector.py",
+      "line": 46
+    },
+    {
+      "id": "symbol:vivy.eyes.mt5_collector:TechnicalIndicatorEngine.calculate_rsi",
+      "kind": "function",
+      "name": "calculate_rsi",
+      "qualified_name": "vivy.eyes.mt5_collector.TechnicalIndicatorEngine.calculate_rsi",
+      "path": "src/vivy/eyes/mt5_collector.py",
+      "line": 28
+    },
+    {
+      "id": "symbol:vivy.eyes.news_bridge:MacroEvent",
+      "kind": "class",
+      "name": "MacroEvent",
+      "qualified_name": "vivy.eyes.news_bridge.MacroEvent",
+      "path": "src/vivy/eyes/news_bridge.py",
+      "line": 10
+    },
+    {
+      "id": "symbol:vivy.eyes.news_bridge:NewsBridge",
+      "kind": "class",
+      "name": "NewsBridge",
+      "qualified_name": "vivy.eyes.news_bridge.NewsBridge",
+      "path": "src/vivy/eyes/news_bridge.py",
+      "line": 19
+    },
+    {
+      "id": "symbol:vivy.eyes.news_bridge:NewsBridge.__init__",
+      "kind": "function",
+      "name": "__init__",
+      "qualified_name": "vivy.eyes.news_bridge.NewsBridge.__init__",
+      "path": "src/vivy/eyes/news_bridge.py",
+      "line": 22
+    },
+    {
+      "id": "symbol:vivy.eyes.news_bridge:NewsBridge.get_upcoming_events",
+      "kind": "function",
+      "name": "get_upcoming_events",
+      "qualified_name": "vivy.eyes.news_bridge.NewsBridge.get_upcoming_events",
+      "path": "src/vivy/eyes/news_bridge.py",
+      "line": 25
+    },
+    {
+      "id": "symbol:vivy.hands.mt5_executor:ExecutionReceipt",
+      "kind": "class",
+      "name": "ExecutionReceipt",
+      "qualified_name": "vivy.hands.mt5_executor.ExecutionReceipt",
+      "path": "src/vivy/hands/mt5_executor.py",
+      "line": 14
+    },
+    {
+      "id": "symbol:vivy.hands.mt5_executor:MT5Executor",
+      "kind": "class",
+      "name": "MT5Executor",
+      "qualified_name": "vivy.hands.mt5_executor.MT5Executor",
+      "path": "src/vivy/hands/mt5_executor.py",
+      "line": 23
+    },
+    {
+      "id": "symbol:vivy.hands.mt5_executor:MT5Executor.__init__",
+      "kind": "function",
+      "name": "__init__",
+      "qualified_name": "vivy.hands.mt5_executor.MT5Executor.__init__",
+      "path": "src/vivy/hands/mt5_executor.py",
+      "line": 31
+    },
+    {
+      "id": "symbol:vivy.hands.mt5_executor:MT5Executor.execute_decision",
+      "kind": "function",
+      "name": "execute_decision",
+      "qualified_name": "vivy.hands.mt5_executor.MT5Executor.execute_decision",
+      "path": "src/vivy/hands/mt5_executor.py",
+      "line": 35
+    },
+    {
+      "id": "symbol:vivy.memory.vector_store:TradeMemoryEntry",
+      "kind": "class",
+      "name": "TradeMemoryEntry",
+      "qualified_name": "vivy.memory.vector_store.TradeMemoryEntry",
+      "path": "src/vivy/memory/vector_store.py",
+      "line": 16
+    },
+    {
+      "id": "symbol:vivy.memory.vector_store:ViVyVectorMemory",
+      "kind": "class",
+      "name": "ViVyVectorMemory",
+      "qualified_name": "vivy.memory.vector_store.ViVyVectorMemory",
+      "path": "src/vivy/memory/vector_store.py",
+      "line": 26
+    },
+    {
+      "id": "symbol:vivy.memory.vector_store:ViVyVectorMemory.__init__",
+      "kind": "function",
+      "name": "__init__",
+      "qualified_name": "vivy.memory.vector_store.ViVyVectorMemory.__init__",
+      "path": "src/vivy/memory/vector_store.py",
+      "line": 29
+    },
+    {
+      "id": "symbol:vivy.memory.vector_store:ViVyVectorMemory._init_db",
+      "kind": "function",
+      "name": "_init_db",
+      "qualified_name": "vivy.memory.vector_store.ViVyVectorMemory._init_db",
+      "path": "src/vivy/memory/vector_store.py",
+      "line": 34
+    },
+    {
+      "id": "symbol:vivy.memory.vector_store:ViVyVectorMemory.add_lesson",
+      "kind": "function",
+      "name": "add_lesson",
+      "qualified_name": "vivy.memory.vector_store.ViVyVectorMemory.add_lesson",
+      "path": "src/vivy/memory/vector_store.py",
+      "line": 49
+    },
+    {
+      "id": "symbol:vivy.memory.vector_store:ViVyVectorMemory.get_all_lessons",
+      "kind": "function",
+      "name": "get_all_lessons",
+      "qualified_name": "vivy.memory.vector_store.ViVyVectorMemory.get_all_lessons",
+      "path": "src/vivy/memory/vector_store.py",
+      "line": 82
+    },
+    {
+      "id": "symbol:vivy.memory.vector_store:ViVyVectorMemory.query_lessons",
+      "kind": "function",
+      "name": "query_lessons",
+      "qualified_name": "vivy.memory.vector_store.ViVyVectorMemory.query_lessons",
+      "path": "src/vivy/memory/vector_store.py",
+      "line": 68
+    },
+    {
+      "id": "symbol:vivy.self_improvement.feedback_logger:FeedbackLogger",
+      "kind": "class",
+      "name": "FeedbackLogger",
+      "qualified_name": "vivy.self_improvement.feedback_logger.FeedbackLogger",
+      "path": "src/vivy/self_improvement/feedback_logger.py",
+      "line": 22
+    },
+    {
+      "id": "symbol:vivy.self_improvement.feedback_logger:FeedbackLogger.__init__",
+      "kind": "function",
+      "name": "__init__",
+      "qualified_name": "vivy.self_improvement.feedback_logger.FeedbackLogger.__init__",
+      "path": "src/vivy/self_improvement/feedback_logger.py",
+      "line": 25
+    },
+    {
+      "id": "symbol:vivy.self_improvement.feedback_logger:FeedbackLogger.log_trade_outcome",
+      "kind": "function",
+      "name": "log_trade_outcome",
+      "qualified_name": "vivy.self_improvement.feedback_logger.FeedbackLogger.log_trade_outcome",
+      "path": "src/vivy/self_improvement/feedback_logger.py",
+      "line": 28
+    },
+    {
+      "id": "symbol:vivy.self_improvement.feedback_logger:TradeOutcome",
+      "kind": "class",
+      "name": "TradeOutcome",
+      "qualified_name": "vivy.self_improvement.feedback_logger.TradeOutcome",
+      "path": "src/vivy/self_improvement/feedback_logger.py",
+      "line": 12
     }
   ],
   "edges": [
@@ -11573,6 +13853,156 @@
       "kind": "contains"
     },
     {
+      "source": "module:nps_core.filter_funnel.amplitude_analyzer",
+      "target": "symbol:nps_core.filter_funnel.amplitude_analyzer:AmplitudeAnalysisReport",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.filter_funnel.amplitude_analyzer",
+      "target": "symbol:nps_core.filter_funnel.amplitude_analyzer:AmplitudeAnalysisReport.to_dict",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.filter_funnel.amplitude_analyzer",
+      "target": "symbol:nps_core.filter_funnel.amplitude_analyzer:AmplitudeAnalyzer",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.filter_funnel.amplitude_analyzer",
+      "target": "symbol:nps_core.filter_funnel.amplitude_analyzer:AmplitudeAnalyzer.analyze",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.filter_funnel.amplitude_analyzer",
+      "target": "symbol:nps_core.filter_funnel.amplitude_analyzer:AmplitudeAnalyzer.calculate_entropy",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.filter_funnel.amplitude_analyzer",
+      "target": "symbol:nps_core.filter_funnel.amplitude_analyzer:AmplitudeAnalyzer.normalize_vector",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.filter_funnel.amplitude_analyzer",
+      "target": "symbol:nps_core.filter_funnel.amplitude_analyzer:BasisStateAnalysis",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.filter_funnel.amplitude_analyzer",
+      "target": "symbol:nps_core.filter_funnel.amplitude_analyzer:BasisStateAnalysis.to_dict",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.filter_funnel.funnel",
+      "target": "symbol:nps_core.filter_funnel.funnel:ExtractedThoughtPattern",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.filter_funnel.funnel",
+      "target": "symbol:nps_core.filter_funnel.funnel:ExtractedThoughtPattern.to_dict",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.filter_funnel.funnel",
+      "target": "symbol:nps_core.filter_funnel.funnel:FilterFunnel",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.filter_funnel.funnel",
+      "target": "symbol:nps_core.filter_funnel.funnel:FilterFunnel.__init__",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.filter_funnel.funnel",
+      "target": "symbol:nps_core.filter_funnel.funnel:FilterFunnel.evaluate_state",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.filter_funnel.funnel",
+      "target": "symbol:nps_core.filter_funnel.funnel:FunnelResult",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.filter_funnel.funnel",
+      "target": "symbol:nps_core.filter_funnel.funnel:FunnelResult.to_dict",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.filter_funnel.funnel",
+      "target": "symbol:nps_core.filter_funnel.funnel:FunnelSignal",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.filter_funnel.logic_filter",
+      "target": "symbol:nps_core.filter_funnel.logic_filter:EvaluatedStream",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.filter_funnel.logic_filter",
+      "target": "symbol:nps_core.filter_funnel.logic_filter:EvaluatedStream.to_dict",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.filter_funnel.logic_filter",
+      "target": "symbol:nps_core.filter_funnel.logic_filter:LogicFilter",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.filter_funnel.logic_filter",
+      "target": "symbol:nps_core.filter_funnel.logic_filter:LogicFilter.calculate_brevity",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.filter_funnel.logic_filter",
+      "target": "symbol:nps_core.filter_funnel.logic_filter:LogicFilter.evaluate_stream",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.filter_funnel.logic_filter",
+      "target": "symbol:nps_core.filter_funnel.logic_filter:LogicFilter.filter_streams",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.filter_funnel.logic_filter",
+      "target": "symbol:nps_core.filter_funnel.logic_filter:LogicFilterReport",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.filter_funnel.logic_filter",
+      "target": "symbol:nps_core.filter_funnel.logic_filter:LogicFilterReport.to_dict",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.filter_funnel.svd_decomposer",
+      "target": "symbol:nps_core.filter_funnel.svd_decomposer:SVDDecomposer",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.filter_funnel.svd_decomposer",
+      "target": "symbol:nps_core.filter_funnel.svd_decomposer:SVDDecomposer._matrix_multiply_complex",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.filter_funnel.svd_decomposer",
+      "target": "symbol:nps_core.filter_funnel.svd_decomposer:SVDDecomposer.compute_svd_pure_python",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.filter_funnel.svd_decomposer",
+      "target": "symbol:nps_core.filter_funnel.svd_decomposer:SVDDecomposer.decompose",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.filter_funnel.svd_decomposer",
+      "target": "symbol:nps_core.filter_funnel.svd_decomposer:ThoughtStream",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.filter_funnel.svd_decomposer",
+      "target": "symbol:nps_core.filter_funnel.svd_decomposer:ThoughtStream.to_dict",
+      "kind": "contains"
+    },
+    {
       "source": "module:nps_core.hypothesis_population.errors",
       "target": "symbol:nps_core.hypothesis_population.errors:CycleDetectedError",
       "kind": "contains"
@@ -12068,6 +14498,51 @@
       "kind": "contains"
     },
     {
+      "source": "module:nps_core.memory.associative_memory",
+      "target": "symbol:nps_core.memory.associative_memory:PatternMatchResult",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.memory.associative_memory",
+      "target": "symbol:nps_core.memory.associative_memory:PatternMatchResult.to_dict",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.memory.associative_memory",
+      "target": "symbol:nps_core.memory.associative_memory:QuantumAssociativeMemory",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.memory.associative_memory",
+      "target": "symbol:nps_core.memory.associative_memory:QuantumAssociativeMemory.__init__",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.memory.associative_memory",
+      "target": "symbol:nps_core.memory.associative_memory:QuantumAssociativeMemory._normalize",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.memory.associative_memory",
+      "target": "symbol:nps_core.memory.associative_memory:QuantumAssociativeMemory._unitarize_weight_matrix",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.memory.associative_memory",
+      "target": "symbol:nps_core.memory.associative_memory:QuantumAssociativeMemory.pattern_count",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.memory.associative_memory",
+      "target": "symbol:nps_core.memory.associative_memory:QuantumAssociativeMemory.query",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.memory.associative_memory",
+      "target": "symbol:nps_core.memory.associative_memory:QuantumAssociativeMemory.store",
+      "kind": "contains"
+    },
+    {
       "source": "module:nps_core.model_training.bridge",
       "target": "symbol:nps_core.model_training.bridge:BridgeConfig",
       "kind": "contains"
@@ -12155,6 +14630,61 @@
     {
       "source": "module:nps_core.model_training.bridge",
       "target": "symbol:nps_core.model_training.bridge:examples_to_jsonl",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.model_training.compressor",
+      "target": "symbol:nps_core.model_training.compressor:CompressionMetrics",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.model_training.compressor",
+      "target": "symbol:nps_core.model_training.compressor:CompressionMetrics.to_dict",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.model_training.compressor",
+      "target": "symbol:nps_core.model_training.compressor:DomainFilterFunnel",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.model_training.compressor",
+      "target": "symbol:nps_core.model_training.compressor:DomainFilterFunnel.classify_example_domain",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.model_training.compressor",
+      "target": "symbol:nps_core.model_training.compressor:DomainFilterFunnel.filter_and_prioritize",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.model_training.compressor",
+      "target": "symbol:nps_core.model_training.compressor:DomainFilterFunnel.filter_and_prioritize.score_fn",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.model_training.compressor",
+      "target": "symbol:nps_core.model_training.compressor:DomainFilterFunnelConfig",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.model_training.compressor",
+      "target": "symbol:nps_core.model_training.compressor:DomainPriority",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.model_training.compressor",
+      "target": "symbol:nps_core.model_training.compressor:DomainPriority.__post_init__",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.model_training.compressor",
+      "target": "symbol:nps_core.model_training.compressor:ModelCompressor",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.model_training.compressor",
+      "target": "symbol:nps_core.model_training.compressor:ModelCompressor.compress_40b_to_4b",
       "kind": "contains"
     },
     {
@@ -12485,6 +15015,81 @@
     {
       "source": "module:nps_core.model_training.trainer",
       "target": "symbol:nps_core.model_training.trainer:train_step",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.multimodal_clairvoyance.audio_video_perception",
+      "target": "symbol:nps_core.multimodal_clairvoyance.audio_video_perception:AudioPayload",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.multimodal_clairvoyance.audio_video_perception",
+      "target": "symbol:nps_core.multimodal_clairvoyance.audio_video_perception:AudioPayload.to_dict",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.multimodal_clairvoyance.audio_video_perception",
+      "target": "symbol:nps_core.multimodal_clairvoyance.audio_video_perception:AudioVideoEncoder",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.multimodal_clairvoyance.audio_video_perception",
+      "target": "symbol:nps_core.multimodal_clairvoyance.audio_video_perception:AudioVideoEncoder.encode_audio_file",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.multimodal_clairvoyance.audio_video_perception",
+      "target": "symbol:nps_core.multimodal_clairvoyance.audio_video_perception:AudioVideoEncoder.encode_video_file",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.multimodal_clairvoyance.audio_video_perception",
+      "target": "symbol:nps_core.multimodal_clairvoyance.audio_video_perception:VideoPayload",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.multimodal_clairvoyance.audio_video_perception",
+      "target": "symbol:nps_core.multimodal_clairvoyance.audio_video_perception:VideoPayload.to_dict",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.multimodal_clairvoyance.clairvoyance_engine",
+      "target": "symbol:nps_core.multimodal_clairvoyance.clairvoyance_engine:ClairvoyanceEngine",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.multimodal_clairvoyance.clairvoyance_engine",
+      "target": "symbol:nps_core.multimodal_clairvoyance.clairvoyance_engine:ClairvoyanceEngine.process_multimodal_clairvoyance",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.multimodal_clairvoyance.clairvoyance_engine",
+      "target": "symbol:nps_core.multimodal_clairvoyance.clairvoyance_engine:ClairvoyanceResponse",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.multimodal_clairvoyance.clairvoyance_engine",
+      "target": "symbol:nps_core.multimodal_clairvoyance.clairvoyance_engine:ClairvoyanceState",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.multimodal_clairvoyance.clairvoyance_engine",
+      "target": "symbol:nps_core.multimodal_clairvoyance.clairvoyance_engine:ClairvoyanceState.norm",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.multimodal_clairvoyance.clairvoyance_engine",
+      "target": "symbol:nps_core.multimodal_clairvoyance.clairvoyance_engine:ClairvoyanceState.normalize",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.multimodal_clairvoyance.clairvoyance_engine",
+      "target": "symbol:nps_core.multimodal_clairvoyance.clairvoyance_engine:SVDMultimodalDecomposer",
+      "kind": "contains"
+    },
+    {
+      "source": "module:nps_core.multimodal_clairvoyance.clairvoyance_engine",
+      "target": "symbol:nps_core.multimodal_clairvoyance.clairvoyance_engine:SVDMultimodalDecomposer.decompose_multimodal_tensor",
       "kind": "contains"
     },
     {
@@ -13018,6 +15623,11 @@
       "kind": "contains"
     },
     {
+      "source": "module:nps_core.verification_tribunal.tribunal",
+      "target": "symbol:nps_core.verification_tribunal.tribunal:VerificationTribunal.evaluate_with_filter_funnel",
+      "kind": "contains"
+    },
+    {
       "source": "module:nps_core.vivy_interface.chat",
       "target": "symbol:nps_core.vivy_interface.chat:ChatMessage",
       "kind": "contains"
@@ -13188,13 +15798,68 @@
       "kind": "contains"
     },
     {
+      "source": "module:scripts.compress_vivy_40b_to_4b",
+      "target": "symbol:scripts.compress_vivy_40b_to_4b:generate_ollama_modelfile_4b",
+      "kind": "contains"
+    },
+    {
+      "source": "module:scripts.compress_vivy_40b_to_4b",
+      "target": "symbol:scripts.compress_vivy_40b_to_4b:generate_sample_dataset",
+      "kind": "contains"
+    },
+    {
+      "source": "module:scripts.compress_vivy_40b_to_4b",
+      "target": "symbol:scripts.compress_vivy_40b_to_4b:main",
+      "kind": "contains"
+    },
+    {
+      "source": "module:scripts.compress_vivy_40b_to_4b",
+      "target": "symbol:scripts.compress_vivy_40b_to_4b:make_example",
+      "kind": "contains"
+    },
+    {
       "source": "module:scripts.evaluate_vivy_training",
       "target": "symbol:scripts.evaluate_vivy_training:evaluate_training",
       "kind": "contains"
     },
     {
+      "source": "module:scripts.export_gguf",
+      "target": "symbol:scripts.export_gguf:main",
+      "kind": "contains"
+    },
+    {
+      "source": "module:scripts.generate_by_vivy_local",
+      "target": "symbol:scripts.generate_by_vivy_local:call_vivy_ollama",
+      "kind": "contains"
+    },
+    {
+      "source": "module:scripts.generate_by_vivy_local",
+      "target": "symbol:scripts.generate_by_vivy_local:main",
+      "kind": "contains"
+    },
+    {
       "source": "module:scripts.package_vivy_ollama",
       "target": "symbol:scripts.package_vivy_ollama:main",
+      "kind": "contains"
+    },
+    {
+      "source": "module:scripts.start_deerflow_api",
+      "target": "symbol:scripts.start_deerflow_api:start_server",
+      "kind": "contains"
+    },
+    {
+      "source": "module:scripts.test_clairvoyance_perception",
+      "target": "symbol:scripts.test_clairvoyance_perception:main",
+      "kind": "contains"
+    },
+    {
+      "source": "module:scripts.train_lora",
+      "target": "symbol:scripts.train_lora:main",
+      "kind": "contains"
+    },
+    {
+      "source": "module:scripts.train_moe_70b",
+      "target": "symbol:scripts.train_moe_70b:run_moe_training",
       "kind": "contains"
     },
     {
@@ -13205,6 +15870,11 @@
     {
       "source": "module:scripts.train_vivy_1b",
       "target": "symbol:scripts.train_vivy_1b:run_training",
+      "kind": "contains"
+    },
+    {
+      "source": "module:scripts.train_vivy_core",
+      "target": "symbol:scripts.train_vivy_core:train_vivy_core",
       "kind": "contains"
     },
     {
@@ -13233,6 +15903,66 @@
       "kind": "contains"
     },
     {
+      "source": "module:tests.benchmark.test_geometry_120story_octagonal_tower",
+      "target": "symbol:tests.benchmark.test_geometry_120story_octagonal_tower:DecomposedMicroTask",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.benchmark.test_geometry_120story_octagonal_tower",
+      "target": "symbol:tests.benchmark.test_geometry_120story_octagonal_tower:DecomposedMicroTask.get_all_tasks",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.benchmark.test_geometry_120story_octagonal_tower",
+      "target": "symbol:tests.benchmark.test_geometry_120story_octagonal_tower:OctagonalGeometryMath",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.benchmark.test_geometry_120story_octagonal_tower",
+      "target": "symbol:tests.benchmark.test_geometry_120story_octagonal_tower:OctagonalGeometryMath.calculate_floor_area",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.benchmark.test_geometry_120story_octagonal_tower",
+      "target": "symbol:tests.benchmark.test_geometry_120story_octagonal_tower:OctagonalGeometryMath.calculate_side_length",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.benchmark.test_geometry_120story_octagonal_tower",
+      "target": "symbol:tests.benchmark.test_geometry_120story_octagonal_tower:OctagonalGeometryMath.calculate_vertex_coordinates",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.benchmark.test_geometry_120story_octagonal_tower",
+      "target": "symbol:tests.benchmark.test_geometry_120story_octagonal_tower:TowerFloorZone",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.benchmark.test_geometry_120story_octagonal_tower",
+      "target": "symbol:tests.benchmark.test_geometry_120story_octagonal_tower:TowerFloorZone.get_zone_for_floor",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.benchmark.test_geometry_120story_octagonal_tower",
+      "target": "symbol:tests.benchmark.test_geometry_120story_octagonal_tower:test_120_floor_vertical_zoning",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.benchmark.test_geometry_120story_octagonal_tower",
+      "target": "symbol:tests.benchmark.test_geometry_120story_octagonal_tower:test_decomposed_micro_tasks",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.benchmark.test_geometry_120story_octagonal_tower",
+      "target": "symbol:tests.benchmark.test_geometry_120story_octagonal_tower:test_html_3d_viewer_artifact_exists",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.benchmark.test_geometry_120story_octagonal_tower",
+      "target": "symbol:tests.benchmark.test_geometry_120story_octagonal_tower:test_octagonal_geometry_calculations",
+      "kind": "contains"
+    },
+    {
       "source": "module:tests.benchmark.test_multidomain_principal_benchmark",
       "target": "symbol:tests.benchmark.test_multidomain_principal_benchmark:run_domain_pipeline",
       "kind": "contains"
@@ -13250,6 +15980,21 @@
     {
       "source": "module:tests.benchmark.test_stage1_runtime_benchmark",
       "target": "symbol:tests.benchmark.test_stage1_runtime_benchmark:test_stage1_runtime_end_to_end_benchmark",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.integration.test_clairvoyance_pipeline",
+      "target": "symbol:tests.integration.test_clairvoyance_pipeline:test_clairvoyance_pipeline_integration",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.integration.test_filter_funnel_integration",
+      "target": "symbol:tests.integration.test_filter_funnel_integration:make_packet",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.integration.test_filter_funnel_integration",
+      "target": "symbol:tests.integration.test_filter_funnel_integration:test_end_to_end_filter_funnel_memory_tribunal",
       "kind": "contains"
     },
     {
@@ -13493,6 +16238,11 @@
       "kind": "contains"
     },
     {
+      "source": "module:tests.integration.test_vivy_4b_pipeline",
+      "target": "symbol:tests.integration.test_vivy_4b_pipeline:test_full_compression_pipeline_integration",
+      "kind": "contains"
+    },
+    {
       "source": "module:tests.integration.test_vivy_moe_40b_pipeline",
       "target": "symbol:tests.integration.test_vivy_moe_40b_pipeline:test_vivy_moe_40b_full_pipeline",
       "kind": "contains"
@@ -13515,6 +16265,21 @@
     {
       "source": "module:tests.unit.test_adaptive_n",
       "target": "symbol:tests.unit.test_adaptive_n:test_information_gain_ranker",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_associative_memory",
+      "target": "symbol:tests.unit.test_associative_memory:test_associative_memory_empty_query",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_associative_memory",
+      "target": "symbol:tests.unit.test_associative_memory:test_associative_memory_multiple_patterns",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_associative_memory",
+      "target": "symbol:tests.unit.test_associative_memory:test_associative_memory_store_and_query",
       "kind": "contains"
     },
     {
@@ -13905,6 +16670,21 @@
     {
       "source": "module:tests.unit.test_atomic_state_update",
       "target": "symbol:tests.unit.test_atomic_state_update:test_apply_evidence_rejects_invalid_record_metadata",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_auth_passkey",
+      "target": "symbol:tests.unit.test_auth_passkey:test_session_invalidation_revoke_all",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_auth_passkey",
+      "target": "symbol:tests.unit.test_auth_passkey:test_user_authentication_manager",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_auth_passkey",
+      "target": "symbol:tests.unit.test_auth_passkey:test_webauthn_passkey_manager",
       "kind": "contains"
     },
     {
@@ -15020,6 +17800,96 @@
     {
       "source": "module:tests.unit.test_experiment_schema",
       "target": "symbol:tests.unit.test_experiment_schema:validate_experiment",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_eyes_hands",
+      "target": "symbol:tests.unit.test_eyes_hands:test_mt5_data_collector",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_eyes_hands",
+      "target": "symbol:tests.unit.test_eyes_hands:test_mt5_executor_no_gatekeepers",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_eyes_hands",
+      "target": "symbol:tests.unit.test_eyes_hands:test_news_bridge",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_eyes_hands",
+      "target": "symbol:tests.unit.test_eyes_hands:test_technical_indicator_engine",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_filter_funnel",
+      "target": "symbol:tests.unit.test_filter_funnel:test_amplitude_analyzer_destructive_interference",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_filter_funnel",
+      "target": "symbol:tests.unit.test_filter_funnel:test_amplitude_analyzer_entropy_and_normalization",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_filter_funnel",
+      "target": "symbol:tests.unit.test_filter_funnel:test_filter_funnel_backtrack_signal",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_filter_funnel",
+      "target": "symbol:tests.unit.test_filter_funnel:test_filter_funnel_full_pipeline_halt_signal",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_filter_funnel",
+      "target": "symbol:tests.unit.test_filter_funnel:test_logic_filter_evaluation",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_filter_funnel",
+      "target": "symbol:tests.unit.test_filter_funnel:test_svd_decomposer_stream_extraction",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_filter_funnel_pytorch",
+      "target": "symbol:tests.unit.test_filter_funnel_pytorch:test_backtrack_on_high_entropy",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_filter_funnel_pytorch",
+      "target": "symbol:tests.unit.test_filter_funnel_pytorch:test_destructive_interference_detection",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_filter_funnel_pytorch",
+      "target": "symbol:tests.unit.test_filter_funnel_pytorch:test_halt_on_converged_state",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_filter_funnel_pytorch",
+      "target": "symbol:tests.unit.test_filter_funnel_pytorch:test_vivy_quantum_core_initialization",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_multimodal_clairvoyance",
+      "target": "symbol:tests.unit.test_multimodal_clairvoyance:test_audio_video_encoders",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_multimodal_clairvoyance",
+      "target": "symbol:tests.unit.test_multimodal_clairvoyance:test_clairvoyance_engine_full_processing",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_multimodal_clairvoyance",
+      "target": "symbol:tests.unit.test_multimodal_clairvoyance:test_clairvoyance_state_normalization",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_multimodal_clairvoyance",
+      "target": "symbol:tests.unit.test_multimodal_clairvoyance:test_svd_multimodal_decomposer",
       "kind": "contains"
     },
     {
@@ -16413,6 +19283,76 @@
       "kind": "contains"
     },
     {
+      "source": "module:tests.unit.test_vivy_4b_compression",
+      "target": "symbol:tests.unit.test_vivy_4b_compression:make_ex",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_vivy_4b_compression",
+      "target": "symbol:tests.unit.test_vivy_4b_compression:test_domain_filter_funnel_classification_and_deduplication",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_vivy_4b_compression",
+      "target": "symbol:tests.unit.test_vivy_4b_compression:test_domain_priority_weights",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_vivy_4b_compression",
+      "target": "symbol:tests.unit.test_vivy_4b_compression:test_model_compact_4b_config",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_vivy_4b_compression",
+      "target": "symbol:tests.unit.test_vivy_4b_compression:test_model_compressor_40b_to_4b",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_vivy_associative_memory",
+      "target": "symbol:tests.unit.test_vivy_associative_memory:test_memory_initialization",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_vivy_associative_memory",
+      "target": "symbol:tests.unit.test_vivy_associative_memory:test_memory_unitarization",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_vivy_associative_memory",
+      "target": "symbol:tests.unit.test_vivy_associative_memory:test_store_and_query",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_vivy_core",
+      "target": "symbol:tests.unit.test_vivy_core:test_inference_engine_reason_and_decide",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_vivy_core",
+      "target": "symbol:tests.unit.test_vivy_core:test_isolated_prompts",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_vivy_core",
+      "target": "symbol:tests.unit.test_vivy_core:test_model_loader_mock_engine",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_vivy_integration",
+      "target": "symbol:tests.unit.test_vivy_integration:test_api_health_check",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_vivy_integration",
+      "target": "symbol:tests.unit.test_vivy_integration:test_full_trade_cycle_execution",
+      "kind": "contains"
+    },
+    {
+      "source": "module:tests.unit.test_vivy_integration",
+      "target": "symbol:tests.unit.test_vivy_integration:test_self_improvement_feedback_loop",
+      "kind": "contains"
+    },
+    {
       "source": "module:tests.unit.test_vivy_moe",
       "target": "symbol:tests.unit.test_vivy_moe:test_moe_config_compute_reduction",
       "kind": "contains"
@@ -16460,6 +19400,491 @@
     {
       "source": "module:tests.unit.test_vivy_ollama",
       "target": "symbol:tests.unit.test_vivy_ollama:test_ollama_model_exporter",
+      "kind": "contains"
+    },
+    {
+      "source": "module:vivy.api.deerflow_server",
+      "target": "symbol:vivy.api.deerflow_server:ChatCompletionRequest",
+      "kind": "contains"
+    },
+    {
+      "source": "module:vivy.api.deerflow_server",
+      "target": "symbol:vivy.api.deerflow_server:ChatMessage",
+      "kind": "contains"
+    },
+    {
+      "source": "module:vivy.api.deerflow_server",
+      "target": "symbol:vivy.api.deerflow_server:chat_completions",
+      "kind": "contains"
+    },
+    {
+      "source": "module:vivy.api.deerflow_server",
+      "target": "symbol:vivy.api.deerflow_server:health_check",
+      "kind": "contains"
+    },
+    {
+      "source": "module:vivy.api.deerflow_server",
+      "target": "symbol:vivy.api.deerflow_server:text_to_state",
+      "kind": "contains"
+    },
+    {
+      "source": "module:vivy.api.router",
+      "target": "symbol:vivy.api.router:handle_health_check",
+      "kind": "contains"
+    },
+    {
+      "source": "module:vivy.api.router",
+      "target": "symbol:vivy.api.router:handle_trade_cycle",
+      "kind": "contains"
+    },
+    {
+      "source": "module:vivy.auth.user_manager",
+      "target": "symbol:vivy.auth.user_manager:User",
+      "kind": "contains"
+    },
+    {
+      "source": "module:vivy.auth.user_manager",
+      "target": "symbol:vivy.auth.user_manager:UserAuthenticationManager",
+      "kind": "contains"
+    },
+    {
+      "source": "module:vivy.auth.user_manager",
+      "target": "symbol:vivy.auth.user_manager:UserAuthenticationManager.__init__",
+      "kind": "contains"
+    },
+    {
+      "source": "module:vivy.auth.user_manager",
+      "target": "symbol:vivy.auth.user_manager:UserAuthenticationManager._hash_password",
+      "kind": "contains"
+    },
+    {
+      "source": "module:vivy.auth.user_manager",
+      "target": "symbol:vivy.auth.user_manager:UserAuthenticationManager._init_db",
+      "kind": "contains"
+    },
+    {
+      "source": "module:vivy.auth.user_manager",
+      "target": "symbol:vivy.auth.user_manager:UserAuthenticationManager._verify_password",
+      "kind": "contains"
+    },
+    {
+      "source": "module:vivy.auth.user_manager",
+      "target": "symbol:vivy.auth.user_manager:UserAuthenticationManager.authenticate_user",
+      "kind": "contains"
+    },
+    {
+      "source": "module:vivy.auth.user_manager",
+      "target": "symbol:vivy.auth.user_manager:UserAuthenticationManager.create_jwt_token",
+      "kind": "contains"
+    },
+    {
+      "source": "module:vivy.auth.user_manager",
+      "target": "symbol:vivy.auth.user_manager:UserAuthenticationManager.create_jwt_token.b64url",
+      "kind": "contains"
+    },
+    {
+      "source": "module:vivy.auth.user_manager",
+      "target": "symbol:vivy.auth.user_manager:UserAuthenticationManager.register_user",
+      "kind": "contains"
+    },
+    {
+      "source": "module:vivy.auth.user_manager",
+      "target": "symbol:vivy.auth.user_manager:UserAuthenticationManager.revoke_all_sessions",
+      "kind": "contains"
+    },
+    {
+      "source": "module:vivy.auth.user_manager",
+      "target": "symbol:vivy.auth.user_manager:UserAuthenticationManager.verify_jwt_token",
+      "kind": "contains"
+    },
+    {
+      "source": "module:vivy.auth.webauthn_passkey",
+      "target": "symbol:vivy.auth.webauthn_passkey:PasskeyRegistrationOptions",
+      "kind": "contains"
+    },
+    {
+      "source": "module:vivy.auth.webauthn_passkey",
+      "target": "symbol:vivy.auth.webauthn_passkey:WebAuthnPasskeyManager",
+      "kind": "contains"
+    },
+    {
+      "source": "module:vivy.auth.webauthn_passkey",
+      "target": "symbol:vivy.auth.webauthn_passkey:WebAuthnPasskeyManager.__init__",
+      "kind": "contains"
+    },
+    {
+      "source": "module:vivy.auth.webauthn_passkey",
+      "target": "symbol:vivy.auth.webauthn_passkey:WebAuthnPasskeyManager.generate_assertion_options",
+      "kind": "contains"
+    },
+    {
+      "source": "module:vivy.auth.webauthn_passkey",
+      "target": "symbol:vivy.auth.webauthn_passkey:WebAuthnPasskeyManager.generate_registration_options",
+      "kind": "contains"
+    },
+    {
+      "source": "module:vivy.auth.webauthn_passkey",
+      "target": "symbol:vivy.auth.webauthn_passkey:WebAuthnPasskeyManager.verify_1touch_login",
+      "kind": "contains"
+    },
+    {
+      "source": "module:vivy.core.associative_memory",
+      "target": "symbol:vivy.core.associative_memory:QuantumAssociativeMemory",
+      "kind": "contains"
+    },
+    {
+      "source": "module:vivy.core.associative_memory",
+      "target": "symbol:vivy.core.associative_memory:QuantumAssociativeMemory.__init__",
+      "kind": "contains"
+    },
+    {
+      "source": "module:vivy.core.associative_memory",
+      "target": "symbol:vivy.core.associative_memory:QuantumAssociativeMemory._make_unitary",
+      "kind": "contains"
+    },
+    {
+      "source": "module:vivy.core.associative_memory",
+      "target": "symbol:vivy.core.associative_memory:QuantumAssociativeMemory.load_compressed",
+      "kind": "contains"
+    },
+    {
+      "source": "module:vivy.core.associative_memory",
+      "target": "symbol:vivy.core.associative_memory:QuantumAssociativeMemory.query",
+      "kind": "contains"
+    },
+    {
+      "source": "module:vivy.core.associative_memory",
+      "target": "symbol:vivy.core.associative_memory:QuantumAssociativeMemory.save_compressed",
+      "kind": "contains"
+    },
+    {
+      "source": "module:vivy.core.associative_memory",
+      "target": "symbol:vivy.core.associative_memory:QuantumAssociativeMemory.store",
+      "kind": "contains"
+    },
+    {
+      "source": "module:vivy.core.inference",
+      "target": "symbol:vivy.core.inference:DecisionResult",
+      "kind": "contains"
+    },
+    {
+      "source": "module:vivy.core.inference",
+      "target": "symbol:vivy.core.inference:ViVyInferenceEngine",
+      "kind": "contains"
+    },
+    {
+      "source": "module:vivy.core.inference",
+      "target": "symbol:vivy.core.inference:ViVyInferenceEngine.__init__",
+      "kind": "contains"
+    },
+    {
+      "source": "module:vivy.core.inference",
+      "target": "symbol:vivy.core.inference:ViVyInferenceEngine.reason_and_decide",
+      "kind": "contains"
+    },
+    {
+      "source": "module:vivy.core.model_loader",
+      "target": "symbol:vivy.core.model_loader:GGUFLocalEngine",
+      "kind": "contains"
+    },
+    {
+      "source": "module:vivy.core.model_loader",
+      "target": "symbol:vivy.core.model_loader:GGUFLocalEngine.__init__",
+      "kind": "contains"
+    },
+    {
+      "source": "module:vivy.core.model_loader",
+      "target": "symbol:vivy.core.model_loader:GGUFLocalEngine.generate",
+      "kind": "contains"
+    },
+    {
+      "source": "module:vivy.core.model_loader",
+      "target": "symbol:vivy.core.model_loader:LocalModelEngine",
+      "kind": "contains"
+    },
+    {
+      "source": "module:vivy.core.model_loader",
+      "target": "symbol:vivy.core.model_loader:LocalModelEngine.generate",
+      "kind": "contains"
+    },
+    {
+      "source": "module:vivy.core.model_loader",
+      "target": "symbol:vivy.core.model_loader:LocalModelEngine.generate_json",
+      "kind": "contains"
+    },
+    {
+      "source": "module:vivy.core.model_loader",
+      "target": "symbol:vivy.core.model_loader:LocalModelLoader",
+      "kind": "contains"
+    },
+    {
+      "source": "module:vivy.core.model_loader",
+      "target": "symbol:vivy.core.model_loader:LocalModelLoader.load_engine",
+      "kind": "contains"
+    },
+    {
+      "source": "module:vivy.core.model_loader",
+      "target": "symbol:vivy.core.model_loader:MockLocalEngine",
+      "kind": "contains"
+    },
+    {
+      "source": "module:vivy.core.model_loader",
+      "target": "symbol:vivy.core.model_loader:MockLocalEngine.__init__",
+      "kind": "contains"
+    },
+    {
+      "source": "module:vivy.core.model_loader",
+      "target": "symbol:vivy.core.model_loader:MockLocalEngine.generate",
+      "kind": "contains"
+    },
+    {
+      "source": "module:vivy.core.model_loader",
+      "target": "symbol:vivy.core.model_loader:ModelBackend",
+      "kind": "contains"
+    },
+    {
+      "source": "module:vivy.core.model_loader",
+      "target": "symbol:vivy.core.model_loader:ModelConfig",
+      "kind": "contains"
+    },
+    {
+      "source": "module:vivy.core.model_loader",
+      "target": "symbol:vivy.core.model_loader:NativePyTorchEngine",
+      "kind": "contains"
+    },
+    {
+      "source": "module:vivy.core.model_loader",
+      "target": "symbol:vivy.core.model_loader:NativePyTorchEngine.__init__",
+      "kind": "contains"
+    },
+    {
+      "source": "module:vivy.core.model_loader",
+      "target": "symbol:vivy.core.model_loader:NativePyTorchEngine.generate",
+      "kind": "contains"
+    },
+    {
+      "source": "module:vivy.core.model_loader",
+      "target": "symbol:vivy.core.model_loader:OllamaAPIEngine",
+      "kind": "contains"
+    },
+    {
+      "source": "module:vivy.core.model_loader",
+      "target": "symbol:vivy.core.model_loader:OllamaAPIEngine.__init__",
+      "kind": "contains"
+    },
+    {
+      "source": "module:vivy.core.model_loader",
+      "target": "symbol:vivy.core.model_loader:OllamaAPIEngine.generate",
+      "kind": "contains"
+    },
+    {
+      "source": "module:vivy.core.moe_brain",
+      "target": "symbol:vivy.core.moe_brain:ViVyMoEQuantumCore",
+      "kind": "contains"
+    },
+    {
+      "source": "module:vivy.core.moe_brain",
+      "target": "symbol:vivy.core.moe_brain:ViVyMoEQuantumCore.__init__",
+      "kind": "contains"
+    },
+    {
+      "source": "module:vivy.core.moe_brain",
+      "target": "symbol:vivy.core.moe_brain:ViVyMoEQuantumCore._load_expert",
+      "kind": "contains"
+    },
+    {
+      "source": "module:vivy.core.moe_brain",
+      "target": "symbol:vivy.core.moe_brain:ViVyMoEQuantumCore._route",
+      "kind": "contains"
+    },
+    {
+      "source": "module:vivy.core.moe_brain",
+      "target": "symbol:vivy.core.moe_brain:ViVyMoEQuantumCore.process_state",
+      "kind": "contains"
+    },
+    {
+      "source": "module:vivy.core.moe_brain",
+      "target": "symbol:vivy.core.moe_brain:ViVyMoEQuantumCore.train_expert",
+      "kind": "contains"
+    },
+    {
+      "source": "module:vivy.core.prompts",
+      "target": "symbol:vivy.core.prompts:get_system_prompt",
+      "kind": "contains"
+    },
+    {
+      "source": "module:vivy.core.vivy_brain",
+      "target": "symbol:vivy.core.vivy_brain:FilterFunnelSignal",
+      "kind": "contains"
+    },
+    {
+      "source": "module:vivy.core.vivy_brain",
+      "target": "symbol:vivy.core.vivy_brain:ViVyQuantumCore",
+      "kind": "contains"
+    },
+    {
+      "source": "module:vivy.core.vivy_brain",
+      "target": "symbol:vivy.core.vivy_brain:ViVyQuantumCore.__init__",
+      "kind": "contains"
+    },
+    {
+      "source": "module:vivy.core.vivy_brain",
+      "target": "symbol:vivy.core.vivy_brain:ViVyQuantumCore._level_1_amplitude_phase_analyzer",
+      "kind": "contains"
+    },
+    {
+      "source": "module:vivy.core.vivy_brain",
+      "target": "symbol:vivy.core.vivy_brain:ViVyQuantumCore._level_2_svd_stream_decomposer",
+      "kind": "contains"
+    },
+    {
+      "source": "module:vivy.core.vivy_brain",
+      "target": "symbol:vivy.core.vivy_brain:ViVyQuantumCore._level_3_evaluator_logic_filter",
+      "kind": "contains"
+    },
+    {
+      "source": "module:vivy.core.vivy_brain",
+      "target": "symbol:vivy.core.vivy_brain:ViVyQuantumCore._level_4_metacognitive_trigger",
+      "kind": "contains"
+    },
+    {
+      "source": "module:vivy.core.vivy_brain",
+      "target": "symbol:vivy.core.vivy_brain:ViVyQuantumCore.process_state",
+      "kind": "contains"
+    },
+    {
+      "source": "module:vivy.eyes.mt5_collector",
+      "target": "symbol:vivy.eyes.mt5_collector:Candle",
+      "kind": "contains"
+    },
+    {
+      "source": "module:vivy.eyes.mt5_collector",
+      "target": "symbol:vivy.eyes.mt5_collector:MT5DataCollector",
+      "kind": "contains"
+    },
+    {
+      "source": "module:vivy.eyes.mt5_collector",
+      "target": "symbol:vivy.eyes.mt5_collector:MT5DataCollector.__init__",
+      "kind": "contains"
+    },
+    {
+      "source": "module:vivy.eyes.mt5_collector",
+      "target": "symbol:vivy.eyes.mt5_collector:MT5DataCollector.get_market_snapshot",
+      "kind": "contains"
+    },
+    {
+      "source": "module:vivy.eyes.mt5_collector",
+      "target": "symbol:vivy.eyes.mt5_collector:TechnicalIndicatorEngine",
+      "kind": "contains"
+    },
+    {
+      "source": "module:vivy.eyes.mt5_collector",
+      "target": "symbol:vivy.eyes.mt5_collector:TechnicalIndicatorEngine.calculate_atr",
+      "kind": "contains"
+    },
+    {
+      "source": "module:vivy.eyes.mt5_collector",
+      "target": "symbol:vivy.eyes.mt5_collector:TechnicalIndicatorEngine.calculate_ema",
+      "kind": "contains"
+    },
+    {
+      "source": "module:vivy.eyes.mt5_collector",
+      "target": "symbol:vivy.eyes.mt5_collector:TechnicalIndicatorEngine.calculate_rsi",
+      "kind": "contains"
+    },
+    {
+      "source": "module:vivy.eyes.news_bridge",
+      "target": "symbol:vivy.eyes.news_bridge:MacroEvent",
+      "kind": "contains"
+    },
+    {
+      "source": "module:vivy.eyes.news_bridge",
+      "target": "symbol:vivy.eyes.news_bridge:NewsBridge",
+      "kind": "contains"
+    },
+    {
+      "source": "module:vivy.eyes.news_bridge",
+      "target": "symbol:vivy.eyes.news_bridge:NewsBridge.__init__",
+      "kind": "contains"
+    },
+    {
+      "source": "module:vivy.eyes.news_bridge",
+      "target": "symbol:vivy.eyes.news_bridge:NewsBridge.get_upcoming_events",
+      "kind": "contains"
+    },
+    {
+      "source": "module:vivy.hands.mt5_executor",
+      "target": "symbol:vivy.hands.mt5_executor:ExecutionReceipt",
+      "kind": "contains"
+    },
+    {
+      "source": "module:vivy.hands.mt5_executor",
+      "target": "symbol:vivy.hands.mt5_executor:MT5Executor",
+      "kind": "contains"
+    },
+    {
+      "source": "module:vivy.hands.mt5_executor",
+      "target": "symbol:vivy.hands.mt5_executor:MT5Executor.__init__",
+      "kind": "contains"
+    },
+    {
+      "source": "module:vivy.hands.mt5_executor",
+      "target": "symbol:vivy.hands.mt5_executor:MT5Executor.execute_decision",
+      "kind": "contains"
+    },
+    {
+      "source": "module:vivy.memory.vector_store",
+      "target": "symbol:vivy.memory.vector_store:TradeMemoryEntry",
+      "kind": "contains"
+    },
+    {
+      "source": "module:vivy.memory.vector_store",
+      "target": "symbol:vivy.memory.vector_store:ViVyVectorMemory",
+      "kind": "contains"
+    },
+    {
+      "source": "module:vivy.memory.vector_store",
+      "target": "symbol:vivy.memory.vector_store:ViVyVectorMemory.__init__",
+      "kind": "contains"
+    },
+    {
+      "source": "module:vivy.memory.vector_store",
+      "target": "symbol:vivy.memory.vector_store:ViVyVectorMemory._init_db",
+      "kind": "contains"
+    },
+    {
+      "source": "module:vivy.memory.vector_store",
+      "target": "symbol:vivy.memory.vector_store:ViVyVectorMemory.add_lesson",
+      "kind": "contains"
+    },
+    {
+      "source": "module:vivy.memory.vector_store",
+      "target": "symbol:vivy.memory.vector_store:ViVyVectorMemory.get_all_lessons",
+      "kind": "contains"
+    },
+    {
+      "source": "module:vivy.memory.vector_store",
+      "target": "symbol:vivy.memory.vector_store:ViVyVectorMemory.query_lessons",
+      "kind": "contains"
+    },
+    {
+      "source": "module:vivy.self_improvement.feedback_logger",
+      "target": "symbol:vivy.self_improvement.feedback_logger:FeedbackLogger",
+      "kind": "contains"
+    },
+    {
+      "source": "module:vivy.self_improvement.feedback_logger",
+      "target": "symbol:vivy.self_improvement.feedback_logger:FeedbackLogger.__init__",
+      "kind": "contains"
+    },
+    {
+      "source": "module:vivy.self_improvement.feedback_logger",
+      "target": "symbol:vivy.self_improvement.feedback_logger:FeedbackLogger.log_trade_outcome",
+      "kind": "contains"
+    },
+    {
+      "source": "module:vivy.self_improvement.feedback_logger",
+      "target": "symbol:vivy.self_improvement.feedback_logger:TradeOutcome",
       "kind": "contains"
     },
     {
@@ -17173,6 +20598,131 @@
       "kind": "imports"
     },
     {
+      "source": "module:nps_core.filter_funnel",
+      "target": "import:nps_core.filter_funnel.amplitude_analyzer",
+      "kind": "imports"
+    },
+    {
+      "source": "module:nps_core.filter_funnel",
+      "target": "import:nps_core.filter_funnel.funnel",
+      "kind": "imports"
+    },
+    {
+      "source": "module:nps_core.filter_funnel",
+      "target": "import:nps_core.filter_funnel.logic_filter",
+      "kind": "imports"
+    },
+    {
+      "source": "module:nps_core.filter_funnel",
+      "target": "import:nps_core.filter_funnel.svd_decomposer",
+      "kind": "imports"
+    },
+    {
+      "source": "module:nps_core.filter_funnel.amplitude_analyzer",
+      "target": "import:__future__",
+      "kind": "imports"
+    },
+    {
+      "source": "module:nps_core.filter_funnel.amplitude_analyzer",
+      "target": "import:cmath",
+      "kind": "imports"
+    },
+    {
+      "source": "module:nps_core.filter_funnel.amplitude_analyzer",
+      "target": "import:dataclasses",
+      "kind": "imports"
+    },
+    {
+      "source": "module:nps_core.filter_funnel.amplitude_analyzer",
+      "target": "import:math",
+      "kind": "imports"
+    },
+    {
+      "source": "module:nps_core.filter_funnel.amplitude_analyzer",
+      "target": "import:typing",
+      "kind": "imports"
+    },
+    {
+      "source": "module:nps_core.filter_funnel.funnel",
+      "target": "import:__future__",
+      "kind": "imports"
+    },
+    {
+      "source": "module:nps_core.filter_funnel.funnel",
+      "target": "import:dataclasses",
+      "kind": "imports"
+    },
+    {
+      "source": "module:nps_core.filter_funnel.funnel",
+      "target": "import:enum",
+      "kind": "imports"
+    },
+    {
+      "source": "module:nps_core.filter_funnel.funnel",
+      "target": "import:nps_core.filter_funnel.amplitude_analyzer",
+      "kind": "imports"
+    },
+    {
+      "source": "module:nps_core.filter_funnel.funnel",
+      "target": "import:nps_core.filter_funnel.logic_filter",
+      "kind": "imports"
+    },
+    {
+      "source": "module:nps_core.filter_funnel.funnel",
+      "target": "import:nps_core.filter_funnel.svd_decomposer",
+      "kind": "imports"
+    },
+    {
+      "source": "module:nps_core.filter_funnel.funnel",
+      "target": "import:typing",
+      "kind": "imports"
+    },
+    {
+      "source": "module:nps_core.filter_funnel.logic_filter",
+      "target": "import:__future__",
+      "kind": "imports"
+    },
+    {
+      "source": "module:nps_core.filter_funnel.logic_filter",
+      "target": "import:cmath",
+      "kind": "imports"
+    },
+    {
+      "source": "module:nps_core.filter_funnel.logic_filter",
+      "target": "import:dataclasses",
+      "kind": "imports"
+    },
+    {
+      "source": "module:nps_core.filter_funnel.logic_filter",
+      "target": "import:nps_core.filter_funnel.svd_decomposer",
+      "kind": "imports"
+    },
+    {
+      "source": "module:nps_core.filter_funnel.logic_filter",
+      "target": "import:typing",
+      "kind": "imports"
+    },
+    {
+      "source": "module:nps_core.filter_funnel.svd_decomposer",
+      "target": "import:__future__",
+      "kind": "imports"
+    },
+    {
+      "source": "module:nps_core.filter_funnel.svd_decomposer",
+      "target": "import:dataclasses",
+      "kind": "imports"
+    },
+    {
+      "source": "module:nps_core.filter_funnel.svd_decomposer",
+      "target": "import:math",
+      "kind": "imports"
+    },
+    {
+      "source": "module:nps_core.filter_funnel.svd_decomposer",
+      "target": "import:typing",
+      "kind": "imports"
+    },
+    {
       "source": "module:nps_core.hypothesis_population",
       "target": "import:__future__",
       "kind": "imports"
@@ -17338,8 +20888,48 @@
       "kind": "imports"
     },
     {
+      "source": "module:nps_core.memory",
+      "target": "import:nps_core.memory.associative_memory",
+      "kind": "imports"
+    },
+    {
+      "source": "module:nps_core.memory.associative_memory",
+      "target": "import:__future__",
+      "kind": "imports"
+    },
+    {
+      "source": "module:nps_core.memory.associative_memory",
+      "target": "import:cmath",
+      "kind": "imports"
+    },
+    {
+      "source": "module:nps_core.memory.associative_memory",
+      "target": "import:dataclasses",
+      "kind": "imports"
+    },
+    {
+      "source": "module:nps_core.memory.associative_memory",
+      "target": "import:math",
+      "kind": "imports"
+    },
+    {
+      "source": "module:nps_core.memory.associative_memory",
+      "target": "import:nps_core.filter_funnel.svd_decomposer",
+      "kind": "imports"
+    },
+    {
+      "source": "module:nps_core.memory.associative_memory",
+      "target": "import:typing",
+      "kind": "imports"
+    },
+    {
       "source": "module:nps_core.model_training",
       "target": "import:nps_core.model_training.bridge",
+      "kind": "imports"
+    },
+    {
+      "source": "module:nps_core.model_training",
+      "target": "import:nps_core.model_training.compressor",
       "kind": "imports"
     },
     {
@@ -17419,6 +21009,51 @@
     },
     {
       "source": "module:nps_core.model_training.bridge",
+      "target": "import:typing",
+      "kind": "imports"
+    },
+    {
+      "source": "module:nps_core.model_training.compressor",
+      "target": "import:__future__",
+      "kind": "imports"
+    },
+    {
+      "source": "module:nps_core.model_training.compressor",
+      "target": "import:dataclasses",
+      "kind": "imports"
+    },
+    {
+      "source": "module:nps_core.model_training.compressor",
+      "target": "import:math",
+      "kind": "imports"
+    },
+    {
+      "source": "module:nps_core.model_training.compressor",
+      "target": "import:nps_core.filter_funnel",
+      "kind": "imports"
+    },
+    {
+      "source": "module:nps_core.model_training.compressor",
+      "target": "import:nps_core.model_training.bridge",
+      "kind": "imports"
+    },
+    {
+      "source": "module:nps_core.model_training.compressor",
+      "target": "import:nps_core.model_training.config",
+      "kind": "imports"
+    },
+    {
+      "source": "module:nps_core.model_training.compressor",
+      "target": "import:nps_core.model_training.errors",
+      "kind": "imports"
+    },
+    {
+      "source": "module:nps_core.model_training.compressor",
+      "target": "import:nps_core.model_training.moe",
+      "kind": "imports"
+    },
+    {
+      "source": "module:nps_core.model_training.compressor",
       "target": "import:typing",
       "kind": "imports"
     },
@@ -17569,6 +21204,91 @@
     },
     {
       "source": "module:nps_core.model_training.trainer",
+      "target": "import:typing",
+      "kind": "imports"
+    },
+    {
+      "source": "module:nps_core.multimodal_clairvoyance",
+      "target": "import:nps_core.multimodal_clairvoyance.audio_video_perception",
+      "kind": "imports"
+    },
+    {
+      "source": "module:nps_core.multimodal_clairvoyance",
+      "target": "import:nps_core.multimodal_clairvoyance.clairvoyance_engine",
+      "kind": "imports"
+    },
+    {
+      "source": "module:nps_core.multimodal_clairvoyance.audio_video_perception",
+      "target": "import:__future__",
+      "kind": "imports"
+    },
+    {
+      "source": "module:nps_core.multimodal_clairvoyance.audio_video_perception",
+      "target": "import:dataclasses",
+      "kind": "imports"
+    },
+    {
+      "source": "module:nps_core.multimodal_clairvoyance.audio_video_perception",
+      "target": "import:hashlib",
+      "kind": "imports"
+    },
+    {
+      "source": "module:nps_core.multimodal_clairvoyance.audio_video_perception",
+      "target": "import:math",
+      "kind": "imports"
+    },
+    {
+      "source": "module:nps_core.multimodal_clairvoyance.audio_video_perception",
+      "target": "import:pathlib",
+      "kind": "imports"
+    },
+    {
+      "source": "module:nps_core.multimodal_clairvoyance.audio_video_perception",
+      "target": "import:typing",
+      "kind": "imports"
+    },
+    {
+      "source": "module:nps_core.multimodal_clairvoyance.clairvoyance_engine",
+      "target": "import:__future__",
+      "kind": "imports"
+    },
+    {
+      "source": "module:nps_core.multimodal_clairvoyance.clairvoyance_engine",
+      "target": "import:cmath",
+      "kind": "imports"
+    },
+    {
+      "source": "module:nps_core.multimodal_clairvoyance.clairvoyance_engine",
+      "target": "import:dataclasses",
+      "kind": "imports"
+    },
+    {
+      "source": "module:nps_core.multimodal_clairvoyance.clairvoyance_engine",
+      "target": "import:math",
+      "kind": "imports"
+    },
+    {
+      "source": "module:nps_core.multimodal_clairvoyance.clairvoyance_engine",
+      "target": "import:nps_core.filter_funnel",
+      "kind": "imports"
+    },
+    {
+      "source": "module:nps_core.multimodal_clairvoyance.clairvoyance_engine",
+      "target": "import:nps_core.multimodal_clairvoyance.audio_video_perception",
+      "kind": "imports"
+    },
+    {
+      "source": "module:nps_core.multimodal_clairvoyance.clairvoyance_engine",
+      "target": "import:nps_core.vivy_interface.vision",
+      "kind": "imports"
+    },
+    {
+      "source": "module:nps_core.multimodal_clairvoyance.clairvoyance_engine",
+      "target": "import:pathlib",
+      "kind": "imports"
+    },
+    {
+      "source": "module:nps_core.multimodal_clairvoyance.clairvoyance_engine",
       "target": "import:typing",
       "kind": "imports"
     },
@@ -17829,6 +21549,11 @@
     },
     {
       "source": "module:nps_core.verification_tribunal.tribunal",
+      "target": "import:nps_core.filter_funnel",
+      "kind": "imports"
+    },
+    {
+      "source": "module:nps_core.verification_tribunal.tribunal",
       "target": "import:nps_core.hypothesis_population",
       "kind": "imports"
     },
@@ -18073,6 +21798,41 @@
       "kind": "imports"
     },
     {
+      "source": "module:scripts.compress_vivy_40b_to_4b",
+      "target": "import:__future__",
+      "kind": "imports"
+    },
+    {
+      "source": "module:scripts.compress_vivy_40b_to_4b",
+      "target": "import:json",
+      "kind": "imports"
+    },
+    {
+      "source": "module:scripts.compress_vivy_40b_to_4b",
+      "target": "import:nps_core.model_training.bridge",
+      "kind": "imports"
+    },
+    {
+      "source": "module:scripts.compress_vivy_40b_to_4b",
+      "target": "import:nps_core.model_training.compressor",
+      "kind": "imports"
+    },
+    {
+      "source": "module:scripts.compress_vivy_40b_to_4b",
+      "target": "import:nps_core.model_training.moe",
+      "kind": "imports"
+    },
+    {
+      "source": "module:scripts.compress_vivy_40b_to_4b",
+      "target": "import:pathlib",
+      "kind": "imports"
+    },
+    {
+      "source": "module:scripts.compress_vivy_40b_to_4b",
+      "target": "import:sys",
+      "kind": "imports"
+    },
+    {
       "source": "module:scripts.evaluate_vivy_training",
       "target": "import:__future__",
       "kind": "imports"
@@ -18105,6 +21865,51 @@
     {
       "source": "module:scripts.evaluate_vivy_training",
       "target": "import:time",
+      "kind": "imports"
+    },
+    {
+      "source": "module:scripts.export_gguf",
+      "target": "import:argparse",
+      "kind": "imports"
+    },
+    {
+      "source": "module:scripts.export_gguf",
+      "target": "import:os",
+      "kind": "imports"
+    },
+    {
+      "source": "module:scripts.export_gguf",
+      "target": "import:subprocess",
+      "kind": "imports"
+    },
+    {
+      "source": "module:scripts.export_gguf",
+      "target": "import:sys",
+      "kind": "imports"
+    },
+    {
+      "source": "module:scripts.generate_by_vivy_local",
+      "target": "import:__future__",
+      "kind": "imports"
+    },
+    {
+      "source": "module:scripts.generate_by_vivy_local",
+      "target": "import:json",
+      "kind": "imports"
+    },
+    {
+      "source": "module:scripts.generate_by_vivy_local",
+      "target": "import:pathlib",
+      "kind": "imports"
+    },
+    {
+      "source": "module:scripts.generate_by_vivy_local",
+      "target": "import:sys",
+      "kind": "imports"
+    },
+    {
+      "source": "module:scripts.generate_by_vivy_local",
+      "target": "import:urllib.request",
       "kind": "imports"
     },
     {
@@ -18143,6 +21948,111 @@
       "kind": "imports"
     },
     {
+      "source": "module:scripts.start_deerflow_api",
+      "target": "import:logging",
+      "kind": "imports"
+    },
+    {
+      "source": "module:scripts.start_deerflow_api",
+      "target": "import:os",
+      "kind": "imports"
+    },
+    {
+      "source": "module:scripts.start_deerflow_api",
+      "target": "import:sys",
+      "kind": "imports"
+    },
+    {
+      "source": "module:scripts.start_deerflow_api",
+      "target": "import:uvicorn",
+      "kind": "imports"
+    },
+    {
+      "source": "module:scripts.test_clairvoyance_perception",
+      "target": "import:__future__",
+      "kind": "imports"
+    },
+    {
+      "source": "module:scripts.test_clairvoyance_perception",
+      "target": "import:json",
+      "kind": "imports"
+    },
+    {
+      "source": "module:scripts.test_clairvoyance_perception",
+      "target": "import:nps_core.multimodal_clairvoyance",
+      "kind": "imports"
+    },
+    {
+      "source": "module:scripts.test_clairvoyance_perception",
+      "target": "import:pathlib",
+      "kind": "imports"
+    },
+    {
+      "source": "module:scripts.test_clairvoyance_perception",
+      "target": "import:sys",
+      "kind": "imports"
+    },
+    {
+      "source": "module:scripts.train_lora",
+      "target": "import:argparse",
+      "kind": "imports"
+    },
+    {
+      "source": "module:scripts.train_lora",
+      "target": "import:logging",
+      "kind": "imports"
+    },
+    {
+      "source": "module:scripts.train_lora",
+      "target": "import:os",
+      "kind": "imports"
+    },
+    {
+      "source": "module:scripts.train_lora",
+      "target": "import:peft",
+      "kind": "imports"
+    },
+    {
+      "source": "module:scripts.train_lora",
+      "target": "import:sys",
+      "kind": "imports"
+    },
+    {
+      "source": "module:scripts.train_lora",
+      "target": "import:torch",
+      "kind": "imports"
+    },
+    {
+      "source": "module:scripts.train_lora",
+      "target": "import:transformers",
+      "kind": "imports"
+    },
+    {
+      "source": "module:scripts.train_moe_70b",
+      "target": "import:logging",
+      "kind": "imports"
+    },
+    {
+      "source": "module:scripts.train_moe_70b",
+      "target": "import:numpy",
+      "kind": "imports"
+    },
+    {
+      "source": "module:scripts.train_moe_70b",
+      "target": "import:os",
+      "kind": "imports"
+    },
+    {
+      "source": "module:scripts.train_moe_70b",
+      "target": "import:sys",
+      "kind": "imports"
+    },
+    {
+      "source": "module:scripts.train_moe_70b",
+      "target": "import:vivy.core.moe_brain",
+      "kind": "imports"
+    },
+    {
       "source": "module:scripts.train_vivy_1b",
       "target": "import:__future__",
       "kind": "imports"
@@ -18183,6 +22093,31 @@
       "kind": "imports"
     },
     {
+      "source": "module:scripts.train_vivy_core",
+      "target": "import:logging",
+      "kind": "imports"
+    },
+    {
+      "source": "module:scripts.train_vivy_core",
+      "target": "import:numpy",
+      "kind": "imports"
+    },
+    {
+      "source": "module:scripts.train_vivy_core",
+      "target": "import:os",
+      "kind": "imports"
+    },
+    {
+      "source": "module:scripts.train_vivy_core",
+      "target": "import:sys",
+      "kind": "imports"
+    },
+    {
+      "source": "module:scripts.train_vivy_core",
+      "target": "import:vivy.core.vivy_brain",
+      "kind": "imports"
+    },
+    {
       "source": "module:scripts.train_vivy_moe_40b",
       "target": "import:__future__",
       "kind": "imports"
@@ -18220,6 +22155,11 @@
     {
       "source": "module:scripts.train_vivy_moe_40b",
       "target": "import:time",
+      "kind": "imports"
+    },
+    {
+      "source": "module:setup",
+      "target": "import:setuptools",
       "kind": "imports"
     },
     {
@@ -18250,6 +22190,26 @@
     {
       "source": "module:tests.benchmark.test_context_capsule_benchmark",
       "target": "import:time",
+      "kind": "imports"
+    },
+    {
+      "source": "module:tests.benchmark.test_geometry_120story_octagonal_tower",
+      "target": "import:__future__",
+      "kind": "imports"
+    },
+    {
+      "source": "module:tests.benchmark.test_geometry_120story_octagonal_tower",
+      "target": "import:math",
+      "kind": "imports"
+    },
+    {
+      "source": "module:tests.benchmark.test_geometry_120story_octagonal_tower",
+      "target": "import:pathlib",
+      "kind": "imports"
+    },
+    {
+      "source": "module:tests.benchmark.test_geometry_120story_octagonal_tower",
+      "target": "import:pytest",
       "kind": "imports"
     },
     {
@@ -18350,6 +22310,56 @@
     {
       "source": "module:tests.benchmark.test_stage1_runtime_benchmark",
       "target": "import:time",
+      "kind": "imports"
+    },
+    {
+      "source": "module:tests.integration.test_clairvoyance_pipeline",
+      "target": "import:__future__",
+      "kind": "imports"
+    },
+    {
+      "source": "module:tests.integration.test_clairvoyance_pipeline",
+      "target": "import:nps_core.multimodal_clairvoyance",
+      "kind": "imports"
+    },
+    {
+      "source": "module:tests.integration.test_clairvoyance_pipeline",
+      "target": "import:pathlib",
+      "kind": "imports"
+    },
+    {
+      "source": "module:tests.integration.test_clairvoyance_pipeline",
+      "target": "import:pytest",
+      "kind": "imports"
+    },
+    {
+      "source": "module:tests.integration.test_filter_funnel_integration",
+      "target": "import:nps_core.evidence_assimilator",
+      "kind": "imports"
+    },
+    {
+      "source": "module:tests.integration.test_filter_funnel_integration",
+      "target": "import:nps_core.filter_funnel",
+      "kind": "imports"
+    },
+    {
+      "source": "module:tests.integration.test_filter_funnel_integration",
+      "target": "import:nps_core.hypothesis_population",
+      "kind": "imports"
+    },
+    {
+      "source": "module:tests.integration.test_filter_funnel_integration",
+      "target": "import:nps_core.memory",
+      "kind": "imports"
+    },
+    {
+      "source": "module:tests.integration.test_filter_funnel_integration",
+      "target": "import:nps_core.verification_tribunal",
+      "kind": "imports"
+    },
+    {
+      "source": "module:tests.integration.test_filter_funnel_integration",
+      "target": "import:pytest",
       "kind": "imports"
     },
     {
@@ -18483,6 +22493,26 @@
       "kind": "imports"
     },
     {
+      "source": "module:tests.integration.test_vivy_4b_pipeline",
+      "target": "import:nps_core.model_training.bridge",
+      "kind": "imports"
+    },
+    {
+      "source": "module:tests.integration.test_vivy_4b_pipeline",
+      "target": "import:nps_core.model_training.compressor",
+      "kind": "imports"
+    },
+    {
+      "source": "module:tests.integration.test_vivy_4b_pipeline",
+      "target": "import:pytest",
+      "kind": "imports"
+    },
+    {
+      "source": "module:tests.integration.test_vivy_4b_pipeline",
+      "target": "import:scripts.compress_vivy_40b_to_4b",
+      "kind": "imports"
+    },
+    {
       "source": "module:tests.integration.test_vivy_moe_40b_pipeline",
       "target": "import:__future__",
       "kind": "imports"
@@ -18529,6 +22559,16 @@
     },
     {
       "source": "module:tests.unit.test_adaptive_n",
+      "target": "import:pytest",
+      "kind": "imports"
+    },
+    {
+      "source": "module:tests.unit.test_associative_memory",
+      "target": "import:nps_core.memory",
+      "kind": "imports"
+    },
+    {
+      "source": "module:tests.unit.test_associative_memory",
       "target": "import:pytest",
       "kind": "imports"
     },
@@ -18590,6 +22630,26 @@
     {
       "source": "module:tests.unit.test_atomic_state_update",
       "target": "import:typing",
+      "kind": "imports"
+    },
+    {
+      "source": "module:tests.unit.test_auth_passkey",
+      "target": "import:pytest",
+      "kind": "imports"
+    },
+    {
+      "source": "module:tests.unit.test_auth_passkey",
+      "target": "import:time",
+      "kind": "imports"
+    },
+    {
+      "source": "module:tests.unit.test_auth_passkey",
+      "target": "import:vivy.auth.user_manager",
+      "kind": "imports"
+    },
+    {
+      "source": "module:tests.unit.test_auth_passkey",
+      "target": "import:vivy.auth.webauthn_passkey",
       "kind": "imports"
     },
     {
@@ -18873,6 +22933,76 @@
       "kind": "imports"
     },
     {
+      "source": "module:tests.unit.test_eyes_hands",
+      "target": "import:pytest",
+      "kind": "imports"
+    },
+    {
+      "source": "module:tests.unit.test_eyes_hands",
+      "target": "import:vivy.eyes.mt5_collector",
+      "kind": "imports"
+    },
+    {
+      "source": "module:tests.unit.test_eyes_hands",
+      "target": "import:vivy.eyes.news_bridge",
+      "kind": "imports"
+    },
+    {
+      "source": "module:tests.unit.test_eyes_hands",
+      "target": "import:vivy.hands.mt5_executor",
+      "kind": "imports"
+    },
+    {
+      "source": "module:tests.unit.test_filter_funnel",
+      "target": "import:math",
+      "kind": "imports"
+    },
+    {
+      "source": "module:tests.unit.test_filter_funnel",
+      "target": "import:nps_core.filter_funnel",
+      "kind": "imports"
+    },
+    {
+      "source": "module:tests.unit.test_filter_funnel",
+      "target": "import:pytest",
+      "kind": "imports"
+    },
+    {
+      "source": "module:tests.unit.test_filter_funnel_pytorch",
+      "target": "import:numpy",
+      "kind": "imports"
+    },
+    {
+      "source": "module:tests.unit.test_filter_funnel_pytorch",
+      "target": "import:vivy.core.vivy_brain",
+      "kind": "imports"
+    },
+    {
+      "source": "module:tests.unit.test_multimodal_clairvoyance",
+      "target": "import:__future__",
+      "kind": "imports"
+    },
+    {
+      "source": "module:tests.unit.test_multimodal_clairvoyance",
+      "target": "import:math",
+      "kind": "imports"
+    },
+    {
+      "source": "module:tests.unit.test_multimodal_clairvoyance",
+      "target": "import:nps_core.multimodal_clairvoyance",
+      "kind": "imports"
+    },
+    {
+      "source": "module:tests.unit.test_multimodal_clairvoyance",
+      "target": "import:pathlib",
+      "kind": "imports"
+    },
+    {
+      "source": "module:tests.unit.test_multimodal_clairvoyance",
+      "target": "import:pytest",
+      "kind": "imports"
+    },
+    {
       "source": "module:tests.unit.test_schemas",
       "target": "import:json",
       "kind": "imports"
@@ -19113,6 +23243,76 @@
       "kind": "imports"
     },
     {
+      "source": "module:tests.unit.test_vivy_4b_compression",
+      "target": "import:nps_core.model_training.bridge",
+      "kind": "imports"
+    },
+    {
+      "source": "module:tests.unit.test_vivy_4b_compression",
+      "target": "import:nps_core.model_training.compressor",
+      "kind": "imports"
+    },
+    {
+      "source": "module:tests.unit.test_vivy_4b_compression",
+      "target": "import:nps_core.model_training.moe",
+      "kind": "imports"
+    },
+    {
+      "source": "module:tests.unit.test_vivy_4b_compression",
+      "target": "import:pytest",
+      "kind": "imports"
+    },
+    {
+      "source": "module:tests.unit.test_vivy_associative_memory",
+      "target": "import:numpy",
+      "kind": "imports"
+    },
+    {
+      "source": "module:tests.unit.test_vivy_associative_memory",
+      "target": "import:vivy.core.associative_memory",
+      "kind": "imports"
+    },
+    {
+      "source": "module:tests.unit.test_vivy_core",
+      "target": "import:pytest",
+      "kind": "imports"
+    },
+    {
+      "source": "module:tests.unit.test_vivy_core",
+      "target": "import:vivy.core.inference",
+      "kind": "imports"
+    },
+    {
+      "source": "module:tests.unit.test_vivy_core",
+      "target": "import:vivy.core.model_loader",
+      "kind": "imports"
+    },
+    {
+      "source": "module:tests.unit.test_vivy_core",
+      "target": "import:vivy.core.prompts",
+      "kind": "imports"
+    },
+    {
+      "source": "module:tests.unit.test_vivy_integration",
+      "target": "import:pytest",
+      "kind": "imports"
+    },
+    {
+      "source": "module:tests.unit.test_vivy_integration",
+      "target": "import:vivy.api.router",
+      "kind": "imports"
+    },
+    {
+      "source": "module:tests.unit.test_vivy_integration",
+      "target": "import:vivy.memory.vector_store",
+      "kind": "imports"
+    },
+    {
+      "source": "module:tests.unit.test_vivy_integration",
+      "target": "import:vivy.self_improvement.feedback_logger",
+      "kind": "imports"
+    },
+    {
       "source": "module:tests.unit.test_vivy_moe",
       "target": "import:__future__",
       "kind": "imports"
@@ -19160,6 +23360,386 @@
     {
       "source": "module:tests.unit.test_vivy_ollama",
       "target": "import:pathlib",
+      "kind": "imports"
+    },
+    {
+      "source": "module:vivy.api.deerflow_server",
+      "target": "import:fastapi",
+      "kind": "imports"
+    },
+    {
+      "source": "module:vivy.api.deerflow_server",
+      "target": "import:hashlib",
+      "kind": "imports"
+    },
+    {
+      "source": "module:vivy.api.deerflow_server",
+      "target": "import:logging",
+      "kind": "imports"
+    },
+    {
+      "source": "module:vivy.api.deerflow_server",
+      "target": "import:numpy",
+      "kind": "imports"
+    },
+    {
+      "source": "module:vivy.api.deerflow_server",
+      "target": "import:pydantic",
+      "kind": "imports"
+    },
+    {
+      "source": "module:vivy.api.deerflow_server",
+      "target": "import:typing",
+      "kind": "imports"
+    },
+    {
+      "source": "module:vivy.api.deerflow_server",
+      "target": "import:vivy.core.moe_brain",
+      "kind": "imports"
+    },
+    {
+      "source": "module:vivy.api.deerflow_server",
+      "target": "import:vivy.core.vivy_brain",
+      "kind": "imports"
+    },
+    {
+      "source": "module:vivy.api.router",
+      "target": "import:typing",
+      "kind": "imports"
+    },
+    {
+      "source": "module:vivy.api.router",
+      "target": "import:vivy.core.inference",
+      "kind": "imports"
+    },
+    {
+      "source": "module:vivy.api.router",
+      "target": "import:vivy.core.model_loader",
+      "kind": "imports"
+    },
+    {
+      "source": "module:vivy.api.router",
+      "target": "import:vivy.eyes.mt5_collector",
+      "kind": "imports"
+    },
+    {
+      "source": "module:vivy.api.router",
+      "target": "import:vivy.hands.mt5_executor",
+      "kind": "imports"
+    },
+    {
+      "source": "module:vivy.api.router",
+      "target": "import:vivy.memory.vector_store",
+      "kind": "imports"
+    },
+    {
+      "source": "module:vivy.auth.user_manager",
+      "target": "import:base64",
+      "kind": "imports"
+    },
+    {
+      "source": "module:vivy.auth.user_manager",
+      "target": "import:dataclasses",
+      "kind": "imports"
+    },
+    {
+      "source": "module:vivy.auth.user_manager",
+      "target": "import:datetime",
+      "kind": "imports"
+    },
+    {
+      "source": "module:vivy.auth.user_manager",
+      "target": "import:hashlib",
+      "kind": "imports"
+    },
+    {
+      "source": "module:vivy.auth.user_manager",
+      "target": "import:hmac",
+      "kind": "imports"
+    },
+    {
+      "source": "module:vivy.auth.user_manager",
+      "target": "import:json",
+      "kind": "imports"
+    },
+    {
+      "source": "module:vivy.auth.user_manager",
+      "target": "import:logging",
+      "kind": "imports"
+    },
+    {
+      "source": "module:vivy.auth.user_manager",
+      "target": "import:os",
+      "kind": "imports"
+    },
+    {
+      "source": "module:vivy.auth.user_manager",
+      "target": "import:passlib.hash",
+      "kind": "imports"
+    },
+    {
+      "source": "module:vivy.auth.user_manager",
+      "target": "import:sqlite3",
+      "kind": "imports"
+    },
+    {
+      "source": "module:vivy.auth.user_manager",
+      "target": "import:typing",
+      "kind": "imports"
+    },
+    {
+      "source": "module:vivy.auth.webauthn_passkey",
+      "target": "import:dataclasses",
+      "kind": "imports"
+    },
+    {
+      "source": "module:vivy.auth.webauthn_passkey",
+      "target": "import:secrets",
+      "kind": "imports"
+    },
+    {
+      "source": "module:vivy.auth.webauthn_passkey",
+      "target": "import:typing",
+      "kind": "imports"
+    },
+    {
+      "source": "module:vivy.core.associative_memory",
+      "target": "import:numpy",
+      "kind": "imports"
+    },
+    {
+      "source": "module:vivy.core.associative_memory",
+      "target": "import:os",
+      "kind": "imports"
+    },
+    {
+      "source": "module:vivy.core.associative_memory",
+      "target": "import:scipy.linalg",
+      "kind": "imports"
+    },
+    {
+      "source": "module:vivy.core.associative_memory",
+      "target": "import:scipy.sparse.linalg",
+      "kind": "imports"
+    },
+    {
+      "source": "module:vivy.core.inference",
+      "target": "import:dataclasses",
+      "kind": "imports"
+    },
+    {
+      "source": "module:vivy.core.inference",
+      "target": "import:json",
+      "kind": "imports"
+    },
+    {
+      "source": "module:vivy.core.inference",
+      "target": "import:logging",
+      "kind": "imports"
+    },
+    {
+      "source": "module:vivy.core.inference",
+      "target": "import:typing",
+      "kind": "imports"
+    },
+    {
+      "source": "module:vivy.core.inference",
+      "target": "import:vivy.core.model_loader",
+      "kind": "imports"
+    },
+    {
+      "source": "module:vivy.core.inference",
+      "target": "import:vivy.core.prompts",
+      "kind": "imports"
+    },
+    {
+      "source": "module:vivy.core.model_loader",
+      "target": "import:.vivy_brain",
+      "kind": "imports"
+    },
+    {
+      "source": "module:vivy.core.model_loader",
+      "target": "import:dataclasses",
+      "kind": "imports"
+    },
+    {
+      "source": "module:vivy.core.model_loader",
+      "target": "import:enum",
+      "kind": "imports"
+    },
+    {
+      "source": "module:vivy.core.model_loader",
+      "target": "import:json",
+      "kind": "imports"
+    },
+    {
+      "source": "module:vivy.core.model_loader",
+      "target": "import:llama_cpp",
+      "kind": "imports"
+    },
+    {
+      "source": "module:vivy.core.model_loader",
+      "target": "import:logging",
+      "kind": "imports"
+    },
+    {
+      "source": "module:vivy.core.model_loader",
+      "target": "import:numpy",
+      "kind": "imports"
+    },
+    {
+      "source": "module:vivy.core.model_loader",
+      "target": "import:os",
+      "kind": "imports"
+    },
+    {
+      "source": "module:vivy.core.model_loader",
+      "target": "import:typing",
+      "kind": "imports"
+    },
+    {
+      "source": "module:vivy.core.model_loader",
+      "target": "import:urllib.request",
+      "kind": "imports"
+    },
+    {
+      "source": "module:vivy.core.moe_brain",
+      "target": "import:.vivy_brain",
+      "kind": "imports"
+    },
+    {
+      "source": "module:vivy.core.moe_brain",
+      "target": "import:logging",
+      "kind": "imports"
+    },
+    {
+      "source": "module:vivy.core.moe_brain",
+      "target": "import:numpy",
+      "kind": "imports"
+    },
+    {
+      "source": "module:vivy.core.moe_brain",
+      "target": "import:os",
+      "kind": "imports"
+    },
+    {
+      "source": "module:vivy.core.moe_brain",
+      "target": "import:typing",
+      "kind": "imports"
+    },
+    {
+      "source": "module:vivy.core.prompts",
+      "target": "import:typing",
+      "kind": "imports"
+    },
+    {
+      "source": "module:vivy.core.vivy_brain",
+      "target": "import:.associative_memory",
+      "kind": "imports"
+    },
+    {
+      "source": "module:vivy.core.vivy_brain",
+      "target": "import:numpy",
+      "kind": "imports"
+    },
+    {
+      "source": "module:vivy.core.vivy_brain",
+      "target": "import:scipy.linalg",
+      "kind": "imports"
+    },
+    {
+      "source": "module:vivy.core.vivy_brain",
+      "target": "import:typing",
+      "kind": "imports"
+    },
+    {
+      "source": "module:vivy.eyes.mt5_collector",
+      "target": "import:dataclasses",
+      "kind": "imports"
+    },
+    {
+      "source": "module:vivy.eyes.mt5_collector",
+      "target": "import:logging",
+      "kind": "imports"
+    },
+    {
+      "source": "module:vivy.eyes.mt5_collector",
+      "target": "import:math",
+      "kind": "imports"
+    },
+    {
+      "source": "module:vivy.eyes.mt5_collector",
+      "target": "import:typing",
+      "kind": "imports"
+    },
+    {
+      "source": "module:vivy.eyes.news_bridge",
+      "target": "import:dataclasses",
+      "kind": "imports"
+    },
+    {
+      "source": "module:vivy.eyes.news_bridge",
+      "target": "import:typing",
+      "kind": "imports"
+    },
+    {
+      "source": "module:vivy.hands.mt5_executor",
+      "target": "import:dataclasses",
+      "kind": "imports"
+    },
+    {
+      "source": "module:vivy.hands.mt5_executor",
+      "target": "import:logging",
+      "kind": "imports"
+    },
+    {
+      "source": "module:vivy.hands.mt5_executor",
+      "target": "import:typing",
+      "kind": "imports"
+    },
+    {
+      "source": "module:vivy.memory.vector_store",
+      "target": "import:dataclasses",
+      "kind": "imports"
+    },
+    {
+      "source": "module:vivy.memory.vector_store",
+      "target": "import:json",
+      "kind": "imports"
+    },
+    {
+      "source": "module:vivy.memory.vector_store",
+      "target": "import:logging",
+      "kind": "imports"
+    },
+    {
+      "source": "module:vivy.memory.vector_store",
+      "target": "import:sqlite3",
+      "kind": "imports"
+    },
+    {
+      "source": "module:vivy.memory.vector_store",
+      "target": "import:typing",
+      "kind": "imports"
+    },
+    {
+      "source": "module:vivy.self_improvement.feedback_logger",
+      "target": "import:dataclasses",
+      "kind": "imports"
+    },
+    {
+      "source": "module:vivy.self_improvement.feedback_logger",
+      "target": "import:typing",
+      "kind": "imports"
+    },
+    {
+      "source": "module:vivy.self_improvement.feedback_logger",
+      "target": "import:uuid",
+      "kind": "imports"
+    },
+    {
+      "source": "module:vivy.self_improvement.feedback_logger",
+      "target": "import:vivy.memory.vector_store",
       "kind": "imports"
     }
   ],

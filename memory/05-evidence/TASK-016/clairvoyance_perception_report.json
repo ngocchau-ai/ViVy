@@ -1,0 +1,15 @@
+{
+  "text_prompt": "Ph\u00e2n t\u00edch th\u1ea5u th\u1ecb \u0111a gi\u00e1c quan: T\u00f2a th\u00e1p 120 t\u1ea7ng, \u00e2m thanh m\u00f4 ph\u1ecfng gi\u00f3 v\u00e0 video quan s\u00e1t 360\u00b0",
+  "state_norm": 1.0,
+  "entropy_shannon": 3.8574,
+  "singular_values": [
+    3.713894590714155,
+    3.4987549942502394,
+    3.289286410742591,
+    3.1251622266918453
+  ],
+  "cross_modal_alignment_score": 0.2725,
+  "control_signal": "MEASURE_AND_HALT",
+  "summary": "[ViVy Clairvoyance Direct Perception] Modalities: TEXT, VISION_2D_3D, VIDEO_4D_TEMPORAL, AUDIO_SPECTROGRAM | Entropy S=3.8574 | Alignment Score=0.2725 | State Norm=1.0000",
+  "status": "PASSED_DIRECT_PERCEPTION"
+}

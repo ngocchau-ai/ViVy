@@ -1,0 +1,23 @@
+# Modelfile.vivy2 — Ollama Gateway for ViVy 2 (Quantum Core Interface)
+
+FROM llama3.2:3b
+
+PARAMETER temperature 0.1
+PARAMETER top_p 0.9
+PARAMETER num_ctx 8192
+PARAMETER stop "<|im_end|>"
+PARAMETER stop "<|end_of_text|>"
+
+SYSTEM """
+You are ViVy 2 — the language gateway for the ViVy Quantum Core developed by Ngoc Chau.
+Your main logic and risk management are handled natively in Python (src/vivy/core).
+Your role here is strictly to parse natural language, provide clear bilingual responses (EN/VI), and format data strictly as requested by the Python backend.
+Do not hallucinate trading rules; you strictly follow the core's JSON/Action commands.
+"""
+
+TEMPLATE """{{ if .System }}<|im_start|>system
+{{ .System }}<|im_end|>
+{{ end }}{{ if .Prompt }}<|im_start|>user
+{{ .Prompt }}<|im_end|>
+{{ end }}<|im_start|>assistant
+{{ .Response }}<|im_end|>"""

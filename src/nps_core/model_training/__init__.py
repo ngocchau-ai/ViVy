@@ -1,10 +1,7 @@
 """Model training pipeline for NPS Core.
 
 Provides bridge (ThoughtState -> TrainingExample), funnel (quality filtering),
-config (1B-parameter transformer), and trainer (PyTorch training loop).
-
-The bridge and funnel modules are standard-library-only.
-The trainer module optionally imports PyTorch.
+config (1B/40B/4B transformer), trainer, and compressor (40B -> 4B distillation).
 """
 
 from nps_core.model_training.bridge import (
@@ -21,6 +18,16 @@ from nps_core.model_training.bridge import (
     bridge_thought_verification,
     examples_to_jsonl,
 )
+
+from nps_core.model_training.compressor import (
+    MODEL_COMPACT_4B,
+    CompressionMetrics,
+    DomainFilterFunnel,
+    DomainFilterFunnelConfig,
+    DomainPriority,
+    ModelCompressor,
+)
+
 from nps_core.model_training.config import (
     MODEL_1B,
     MODEL_MOE_40B,
@@ -29,6 +36,7 @@ from nps_core.model_training.config import (
     PipelineConfig,
     TrainingConfig,
 )
+
 from nps_core.model_training.errors import (
     BridgeError,
     ConfigError,
@@ -36,6 +44,7 @@ from nps_core.model_training.errors import (
     ModelTrainingError,
     TrainerError,
 )
+
 from nps_core.model_training.funnel import (
     FunnelConfig,
     FunnelResult,
@@ -45,6 +54,18 @@ from nps_core.model_training.funnel import (
     rank_by_quality,
     score_example,
 )
+
+from nps_core.model_training.moe import (
+    MoEConfig,
+    MoERouter,
+)
+
+from nps_core.model_training.student import (
+    LatencyEvaluator,
+    StudentProposalEngine,
+    StudentTrainingConfig,
+)
+
 from nps_core.model_training.trainer import (
     TrainMetrics,
     TrainingState,
@@ -56,16 +77,6 @@ from nps_core.model_training.trainer import (
     train_step,
 )
 
-from nps_core.model_training.moe import (
-    MoEConfig,
-    MoERouter,
-)
-from nps_core.model_training.student import (
-    LatencyEvaluator,
-    StudentProposalEngine,
-    StudentTrainingConfig,
-)
-
 __all__ = [
     # errors
     "ModelTrainingError",
@@ -73,9 +84,15 @@ __all__ = [
     "FunnelError",
     "ConfigError",
     "TrainerError",
-    # moe
+    # moe & compressor
     "MoEConfig",
     "MoERouter",
+    "MODEL_COMPACT_4B",
+    "DomainPriority",
+    "DomainFilterFunnelConfig",
+    "DomainFilterFunnel",
+    "CompressionMetrics",
+    "ModelCompressor",
     # student
     "StudentTrainingConfig",
     "StudentProposalEngine",
@@ -111,9 +128,9 @@ __all__ = [
     # trainer
     "TrainingState",
     "TrainMetrics",
+    "get_learning_rate",
     "create_optimizer",
     "create_scheduler",
-    "get_learning_rate",
     "train_step",
     "save_checkpoint",
     "load_checkpoint",
