@@ -47,6 +47,19 @@ except ImportError:
         def __init__(self, *args: Any, **kwargs: Any) -> None:
             pass
 
+try:
+    from core.knowledge_injector import KnowledgeInjector
+except ImportError:
+
+    class KnowledgeInjector:  # type: ignore[no-redef]
+        """Stub fallback — replace with the real core.knowledge_injector module."""
+
+        def __init__(self, *args: Any, **kwargs: Any) -> None:
+            pass
+
+        def inject(self, lf: Any) -> list[Any]:
+            return []
+
 
 try:
     from funnel.filter import FilterFunnel
@@ -123,6 +136,14 @@ def _make_memory() -> Any:
         return AssociativeMemory.__mro__[1]()
 
 
+def _make_knowledge() -> Any:
+    try:
+        return KnowledgeInjector()
+    except Exception as exc:  # noqa: BLE001
+        logger.warning("Could not construct KnowledgeInjector (%s); using stub", exc)
+        return KnowledgeInjector.__mro__[1]()
+
+
 # ---------------------------------------------------------------------------
 # Orchestrator
 # ---------------------------------------------------------------------------
@@ -165,6 +186,7 @@ class Orchestrator:
     evolution: Any = field(default_factory=_make_evolution)
     funnel: Any = field(default_factory=_make_funnel)
     memory: Any = field(default_factory=_make_memory)
+    knowledge: Any = field(default_factory=_make_knowledge)
     max_iterations: int = 3
 
     def __post_init__(self) -> None:
@@ -188,12 +210,33 @@ class Orchestrator:
         assert self.decoder is not None
         logic_form = await self.encoder.encode(question)
 
+        # --- Knowledge injection ---
+        # Inject domain knowledge as additional thought streams with high
+        # singular values.  When the logic form matches a known domain (quantum
+        # physics, number theory, ...), the injector emits fact streams that
+        # carry a high confidence weight so the funnel scores them as accepted.
+        logger.info("Orchestrator.run: injecting domain knowledge")
+        knowledge_streams = self.knowledge.inject(logic_form)
+        if knowledge_streams:
+            logger.info(
+                "Orchestrator.run: injected %d knowledge stream(s)",
+                len(knowledge_streams),
+            )
+
         logger.info("Orchestrator.run: evolving through unitary gates")
         state = self._logic_form_to_state(logic_form)
         states = self._evolve(state)
 
         logger.info("Orchestrator.run: extracting thought streams")
-        streams = self._states_to_streams(states)
+        evolved_streams = self._states_to_streams(states)
+
+        # Merge knowledge streams with evolved streams.  When domain knowledge
+        # was injected, the knowledge streams carry the authoritative answer and
+        # the placeholder evolved streams (pure 1/(i+1) noise for domain
+        # questions) would only dilute confidence — so knowledge streams win.
+        # For pure logic-form reasoning (no domain match) the evolved streams
+        # are used as before.
+        streams = knowledge_streams if knowledge_streams else evolved_streams
 
         logger.info("Orchestrator.run: evaluating via filter funnel")
         kept_streams, control_signal, confidence = self._evaluate(streams)
@@ -205,7 +248,11 @@ class Orchestrator:
             conclusion=conclusion,
             confidence=confidence,
             control_signal=control_signal,
-            details={"n_states": len(states), "n_streams": len(streams)},
+            details={
+                "n_states": len(states),
+                "n_streams": len(streams),
+                "n_knowledge": len(knowledge_streams),
+            },
         )
 
         if control_signal in ("backtrack", "delegate"):

@@ -22,6 +22,7 @@ from .gates import (
     tensor_product_gate,
     toffoli,
 )
+from .knowledge_injector import DomainFact, KnowledgeInjector
 from .mps import MPS
 from .state import QuantumState
 from .svd_streams import (
@@ -53,6 +54,9 @@ __all__ = [
     # evolution
     "UnitaryEvolution",
     "GateSchedule",
+    # knowledge
+    "KnowledgeInjector",
+    "DomainFact",
     # svd_streams
     "extract_thought_streams",
     "ThoughtStream",

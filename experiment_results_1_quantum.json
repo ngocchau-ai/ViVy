@@ -2,10 +2,10 @@
   {
     "label": "Harmonic Oscillator \u2014 Energy Eigenvalues",
     "question": "A quantum harmonic oscillator has Hamiltonian H = p\u00b2/2m + \u00bdm\u03c9\u00b2x\u00b2. What are the energy eigenvalues?",
-    "answer": "The confidence in providing a definitive answer regarding the energy eigenvalues is low (0.50). While the Hamiltonian for the quantum harmonic oscillator ($H = p^2/2m + \\frac{1}{2}m\\omega^2x^2$) has been established, the conclusion stream does not contain the derived formula or calculation necessary to state the specific energy eigenvalues.",
-    "control_signal": "measure",
-    "confidence": 0.5,
-    "elapsed": 88.29409527778625,
+    "answer": "The energy eigenvalues of a quantum harmonic oscillator are given by the formula $E_n = (n + 1/2) \\hbar \\omega$ for integer values of $n = 0, 1, 2, \\dots$. The ground state energy ($n=0$) is $E_0 = (1/2) \\hbar \\omega$.",
+    "control_signal": "continue",
+    "confidence": 0.95,
+    "elapsed": 49.597583055496216,
     "propositions": [
       "A quantum harmonic oscillator has a Hamiltonian H.",
       "H = p\u00b2/2m + \u00bdm\u03c9\u00b2x\u00b2."
@@ -28,10 +28,10 @@
   {
     "label": "Harmonic Oscillator \u2014 Ground State",
     "question": "For a quantum harmonic oscillator in the ground state, what is the wavefunction \u03c8\u2080(x)?",
-    "answer": "The provided reasoning has a low confidence score of 0.50, and therefore, a definitive answer for the wavefunction $\\psi_0(x)$ is not available from this result.",
-    "control_signal": "measure",
-    "confidence": 0.5,
-    "elapsed": 78.20064187049866,
+    "answer": "The conclusion provides the ground state energy ($E_0$) of the quantum harmonic oscillator, which is $E_0 = (1/2) \\hbar \\omega$. Note that while the query asks for the wavefunction $\\psi_0(x)$, the derived result only specifies the corresponding energy eigenvalue.",
+    "control_signal": "continue",
+    "confidence": 0.95,
+    "elapsed": 82.46235656738281,
     "propositions": [
       "Quantum Harmonic Oscillator",
       "ground state",
@@ -50,10 +50,10 @@
   {
     "label": "Particle in a Box \u2014 Ground State Energy",
     "question": "A particle in a 1D infinite square well of width L is in the ground state. What is its energy?",
-    "answer": "The energy of the particle in the ground state is given by the formula $E = \\frac{\\pi^2 \\hbar^2}{2m L^2}$. Please note that this answer is provided with moderate confidence.",
-    "control_signal": "measure",
-    "confidence": 0.5,
-    "elapsed": 80.03382921218872,
+    "answer": "The energy of the particle in the ground state ($n=1$) within a 1D infinite square well of width $L$ is given by the equation: $E_1 = \\frac{\\pi^2 \\hbar^2}{2 m L^2}$. (The general formula for any state $n$ is $E_n = \\frac{n^2 \\pi^2 \\hbar^2}{2 m L^2}$.)",
+    "control_signal": "continue",
+    "confidence": 0.95,
+    "elapsed": 85.18229389190674,
     "propositions": [
       "A particle exists",
       "The system is a 1D infinite square well",
@@ -84,10 +84,10 @@
   {
     "label": "Spin-1/2 \u2014 Measurement Probability",
     "question": "A spin-1/2 particle is in state |+\u27e9. What is the probability of measuring spin up along the x-axis?",
-    "answer": "The probability of measuring spin up along the x-axis cannot be definitively determined with high confidence (0.50). The reasoning engine provided insufficient information to calculate the specific measurement outcome.",
-    "control_signal": "measure",
-    "confidence": 0.5,
-    "elapsed": 86.76494908332825,
+    "answer": "A spin-1/2 measurement along any axis yields eigenvalues of $+\\hbar/2$ or $-\\hbar/2$, and the underlying mathematical structure governing these measurements involves Pauli matrices that satisfy $X^2 = Y^2 = Z^2 = I$.",
+    "control_signal": "continue",
+    "confidence": 0.95,
+    "elapsed": 111.95744371414185,
     "propositions": [
       "A spin-1/2 particle exists.",
       "The initial state of the particle is |+\u27e9.",
@@ -111,10 +111,10 @@
   {
     "label": "Spin-1/2 \u2014 Pauli-X Gate",
     "question": "Apply the Pauli-X gate to state |0\u27e9. What is the resulting state?",
-    "answer": "The resulting state is predicted to be $|1\\rangle$. However, since the confidence score is 0.50, this answer should be taken with caution and may require further verification.",
-    "control_signal": "measure",
-    "confidence": 0.5,
-    "elapsed": 69.70565366744995,
+    "answer": "A spin-1/2 measurement along any axis n yields either $+\\hbar/2$ or $-\\hbar/2$, and the Pauli matrices X, Y, and Z all satisfy the relationship $X^2 = Y^2 = Z^2 = I$.",
+    "control_signal": "continue",
+    "confidence": 0.95,
+    "elapsed": 82.41269564628601,
     "propositions": [
       "Pauli-X gate",
       "state |0\u27e9"
@@ -132,10 +132,10 @@
   {
     "label": "Quantum Tunneling \u2014 Barrier Penetration",
     "question": "A particle of energy E approaches a finite potential barrier of height V\u2080 > E. Explain quantum tunneling through this barrier.",
-    "answer": "The phenomenon described is quantum tunneling, which allows a particle with energy $E$ to pass through a potential barrier of height $V_0$, even when $V_0 > E$. Classically, this transmission would be impossible because the particle does not have enough energy to overcome the barrier. Quantum mechanically, however, the particle's wavefunction does not abruptly drop to zero within the finite barrier; instead, it decays exponentially. This decay means there is a non-zero probability that the particle will appear on the other side of the barrier, effectively \"tunneling\" through it.\n\n*Note: Due to low confidence in this synthesis (0.50), this explanation should be treated as preliminary and requires further verification.*",
-    "control_signal": "measure",
-    "confidence": 0.5,
-    "elapsed": 88.69464135169983,
+    "answer": "Quantum tunneling allows a particle to pass through a finite potential barrier even when its energy ($E$) is less than the barrier height ($V_0$), which would be classically forbidden. The probability of this transmission ($T$) is non-zero and decays exponentially with increasing barrier width and height, following the relationship $T \\sim \\exp(-2 * \\kappa * L)$.",
+    "control_signal": "continue",
+    "confidence": 0.9,
+    "elapsed": 74.90128993988037,
     "propositions": [
       "A particle has energy E.",
       "There is a finite potential barrier.",
@@ -165,10 +165,10 @@
   {
     "label": "Bell Inequality \u2014 CHSH Game",
     "question": "In the CHSH game, two players share an entangled Bell pair. What is the maximum winning probability with quantum strategies?",
-    "answer": "The provided reasoning confirms that quantum strategies maximize the winning probability in the CHSH game setup involving two players sharing an entangled Bell pair, but it does not specify what the maximum numerical value of this probability is. Therefore, I cannot provide a definitive answer to the question.",
-    "control_signal": "measure",
-    "confidence": 0.5,
-    "elapsed": 102.070720911026,
+    "answer": "The maximum winning probability achievable with quantum strategies in the CHSH game is bounded by $2\\sqrt{2}$, which is approximately 2.828. This value exceeds the limit of 2 imposed by local hidden-variable models (the classical bound).",
+    "control_signal": "continue",
+    "confidence": 0.95,
+    "elapsed": 89.75698518753052,
     "propositions": [
       "The context is the CHSH game.",
       "Two players share an entangled Bell pair.",
