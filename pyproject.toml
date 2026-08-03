@@ -16,6 +16,9 @@ dev = [
     "mypy>=1.10",
 ]
 
+[tool.setuptools.packages.find]
+include = ["core*", "funnel*", "llm_bridge*", "memory*", "orchestrator*", "benchmarks*"]
+
 [tool.pytest.ini_options]
 asyncio_mode = "auto"
 testpaths = ["tests"]
