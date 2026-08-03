@@ -26,8 +26,8 @@ try:
 except ImportError:
     pass
 
+# ruff: noqa: E402 — sys.path insert before imports
 from llm_bridge.client import LLMClient
-from llm_bridge.decoder import CoreResult
 from orchestrator.integration import solve_problem_verbose
 
 
@@ -147,7 +147,7 @@ async def main():
     # Save results
     with open("experiment_results_1_quantum.json", "w") as f:
         json.dump(results, f, indent=2, default=str)
-    print(f"\nResults saved to experiment_results_1_quantum.json")
+    print("\nResults saved to experiment_results_1_quantum.json")
 
 
 if __name__ == "__main__":
