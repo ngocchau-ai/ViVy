@@ -41,7 +41,8 @@ def test_bell_inequality_injects_chsh() -> None:
     assert "2*sqrt(2)" in streams[0]["interpretation"]
 
 
-def test_multiple_domains_each_contribute() -> None:
+def test_multiple_domains_dedup_to_highest_confidence() -> None:
+    """When multiple domains match, only the highest-confidence stream survives."""
     inj = KnowledgeInjector()
     streams = inj.inject(
         _lf(
@@ -49,9 +50,9 @@ def test_multiple_domains_each_contribute() -> None:
             "Compute the ground-state energy.",
         )
     )
-    domains = {s["domain"] for s in streams}
-    assert "quantum.particle_in_box" in domains
-    assert "quantum.spin" in domains
+    # Dedup picks the highest singular_value — both are 0.95, so only one
+    assert len(streams) == 1
+    assert streams[0]["domain"] in ("quantum.particle_in_box", "quantum.spin")
 
 
 def test_collatz_injects_conjecture() -> None:

@@ -80,6 +80,14 @@ class KnowledgeInjector:
         for fact in self.facts:
             if _match_any(fact.domain, haystack):
                 streams.append(self._to_stream(fact))
+
+        # When multiple domains match, keep only the one with the highest
+        # singular_value.  This prevents overlapping domains (e.g. "Goldbach"
+        # and "prime") from diluting confidence via the funnel's brevity
+        # penalty.
+        if len(streams) > 1:
+            streams = [max(streams, key=lambda s: s.get("singular_value", 0.0))]
+
         return streams
 
     # ------------------------------------------------------------------ #
@@ -218,6 +226,11 @@ _DOMAIN_PATTERNS: dict[str, list[str]] = {
         r"nonisomorphic",
         r"graph\s*isomorphism",
         r"isomorphic",
+        r"weisfeiler",
+        r"graph\s*canoniz",
+    ],
+    "math.latin_square": [
+        r"latin\s*square",
     ],
     "math.hidden_subgroup": [
         r"hidden\s*subgroup",
