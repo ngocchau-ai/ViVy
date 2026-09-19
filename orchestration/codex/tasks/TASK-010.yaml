@@ -1,0 +1,36 @@
+task_contract:
+  task_id: TASK-010
+  title: "Verification Tribunal Engine, Conflict Report, and Calibrated Confidence"
+  objective:
+    problem: >
+      Stage 5 requires a Verification Tribunal engine to detect correlated executor errors,
+      generate conflict reports, produce reproduction logs, and compute calibrated confidence scores.
+    expected_outcome: >
+      A standard-library verification_tribunal package providing VerificationTribunal,
+      ConflictDetector, and ConfidenceCalibrator with complete unit tests.
+    non_goals:
+      - "Do not make external API calls or run unverified binary executables."
+  constraints:
+    language: "Python 3.11+"
+    dependencies_allowed:
+      - "Python standard library"
+      - "Existing NPS Core immutable types"
+    dependencies_forbidden:
+      - "New production dependencies"
+  implementation:
+    assigned_role: local_coder
+    allowed_files:
+      - "src/nps_core/verification_tribunal/**"
+      - "tests/unit/test_verification_tribunal.py"
+      - "memory/02-decisions/ADR-0013-verification-tribunal-engine.md"
+      - "memory/02-decisions/index.md"
+      - "memory/04-tasks/PROJECT-COMPLETION-MATRIX.md"
+      - "memory/05-evidence/TASK-010/**"
+      - "memory/07-sessions/**"
+      - "orchestration/codex/tasks/TASK-010.yaml"
+  validation:
+    acceptance_criteria:
+      - "VerificationTribunal evaluates evidence packets for correlated errors and generates ReproductionLogs."
+      - "ConflictDetector generates ConflictReport when evidence packets disagree."
+      - "ConfidenceCalibrator computes calibrated Bayesian confidence scores."
+      - "All unit tests pass and regression suite remains green."

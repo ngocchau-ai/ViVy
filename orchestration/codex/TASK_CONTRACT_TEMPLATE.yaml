@@ -1,0 +1,38 @@
+task_contract:
+  task_id: TASK-XXXX
+  title: ""
+  objective:
+    problem: ""
+    expected_outcome: ""
+    non_goals: []
+  context:
+    architecture_refs: []
+    codegraph_nodes: []
+    relevant_files: []
+    prior_decisions: []
+  constraints:
+    language: ""
+    dependencies_allowed: []
+    dependencies_forbidden: []
+    performance_budget: {}
+    security_requirements: []
+    compatibility_requirements: []
+  implementation:
+    assigned_role: local_coder
+    allowed_files: []
+    forbidden_files: []
+    expected_artifacts: []
+  validation:
+    acceptance_criteria: []
+    required_tests: []
+    regression_checks: []
+    evidence_schema: evidence_packet_v1
+  token_budget:
+    max_context_tokens: 12000
+    max_output_tokens: 6000
+    required_summary_mode: diff_first
+  completion:
+    status: open
+    reviewer: local_reviewer
+    codegraph_refresh_required: true
+    memory_update_required: true

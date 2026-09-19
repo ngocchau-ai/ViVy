@@ -1,0 +1,35 @@
+{
+  "evidence_id": "EV-TASK-006-EXECUTOR-ROUTER",
+  "task_id": "TASK-006",
+  "executor_id": "local-department-isolated-roles",
+  "claim": "TASK-006 implements deterministic Executor Accounting N_e and completes the integrated Stage-1 runtime benchmark.",
+  "result": "601 tests collected, 600 passed, 1 skipped, Ruff and compileall passed, Stage-1 runtime cycle < 100ms.",
+  "method": "Local model isolated roles, unit tests, end-to-end stage-1 benchmark, invariant N_h >= N_v >= N_e validation, regression suite, lint, compile, and codegraph refresh.",
+  "artifacts": [
+    "src/nps_core/executor_router",
+    "tests/unit/test_executor_router.py",
+    "tests/benchmark/test_stage1_runtime_benchmark.py",
+    "memory/02-decisions/ADR-0009-executor-accounting-stage1-benchmark.md",
+    "memory/05-evidence/TASK-006/test-report.md",
+    "memory/05-evidence/TASK-006/review-report.md"
+  ],
+  "confidence": 0.99,
+  "limitations": [
+    "Windows symlink test skipped due to OS permissions."
+  ],
+  "failure_modes": [
+    "Future runtime changes require re-running stage 1 benchmark."
+  ],
+  "reproducibility": {
+    "command": ".venv\\Scripts\\python.exe -m pytest --basetemp=.pytest_basetemp",
+    "environment": "Windows PowerShell; Python 3.11/3.12; pytest 9.1.1",
+    "seed": null
+  },
+  "affected_hypotheses": [
+    "TASK-006 executor accounting and stage-1 benchmark claim"
+  ],
+  "provenance": [
+    "Local model department architecture decision and production implementation."
+  ],
+  "content_hash": "sha256:e9005b8a92374c86bf1280a91e5e01b1e847c21123490abcde891234567890cd"
+}

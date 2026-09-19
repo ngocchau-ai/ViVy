@@ -1,0 +1,135 @@
+task_contract:
+  task_id: TASK-005
+  title: "Deterministic Experiment Contract and Verifier-Budget Accounting"
+  objective:
+    problem: >
+      Stage 1 has immutable hypotheses, atomic evidence updates, and a
+      population ecology, but no executable schema-compatible experiment
+      contract or explicit verifier-demand count N_v.
+    expected_outcome: >
+      A standard-library-only immutable experiment-contract runtime and exact
+      verification portfolio that groups caller-supplied uncertainty needs,
+      accounts N_v independently from N_h and N_e, validates against an exact
+      PopulationSnapshot, and serializes deterministically.
+    non_goals:
+      - "Do not modify experiment.schema.json or ThoughtState V1."
+      - "Do not infer experiments, outcomes, information gain, or confidence."
+      - "Do not implement Adaptive N branch/merge/prune policy."
+      - "Do not select or dispatch executors or implement N_e."
+      - "Do not implement Verification Tribunal behavior."
+  context:
+    architecture_refs:
+      - "ARCHITECTURE.md#4-ba-gia-tri-n-tach-biet"
+      - "ARCHITECTURE.md#6-kien-truc-he-thong"
+      - "ARCHITECTURE.md#13-cac-data-contract-chinh"
+      - "ARCHITECTURE.md#giai-doan-1-deterministic-runtime-prototype"
+    codegraph_nodes:
+      - "module:nps_core.experiment_designer"
+      - "module:nps_core.hypothesis_population"
+      - "module:nps_core.thought_ecology"
+    relevant_files:
+      - "schemas/experiment.schema.json"
+      - "schemas/thought_state.schema.json"
+      - "src/nps_core/hypothesis_population/thought_state.py"
+      - "src/nps_core/hypothesis_population/lifecycle.py"
+      - "src/nps_core/thought_ecology/index.py"
+      - "memory/04-tasks/PROJECT-COMPLETION-MATRIX.md"
+    prior_decisions:
+      - "memory/02-decisions/ADR-0004-python-foundation.md"
+      - "memory/02-decisions/ADR-0005-deterministic-thought-lifecycle.md"
+      - "memory/02-decisions/ADR-0007-thought-ecology.md"
+  constraints:
+    language: "Python 3.11+"
+    dependencies_allowed:
+      - "Python standard library"
+      - "Existing NPS Core immutable types"
+      - "Existing pytest development dependency"
+    dependencies_forbidden:
+      - "New production dependencies"
+      - "Runtime jsonschema, network, filesystem, database, clock, UUID or random calls"
+      - "Semantic ranking, experiment inference, executor selection or dispatch"
+    security_requirements:
+      - "Unknown, duplicate, stale and structurally forged references fail closed."
+      - "Caller-supplied budgets reject bool, non-finite and negative values."
+      - "Invalid construction leaves PopulationSnapshot byte-identical."
+    compatibility_requirements:
+      - "Windows PowerShell"
+      - "Linux shell"
+      - "UTF-8 repository content"
+      - "Existing experiment.schema.json remains byte-unchanged"
+  implementation:
+    assigned_role: mimo_coder
+    allowed_files:
+      - "src/nps_core/experiment_designer/**"
+      - "tests/unit/test_experiment_contract.py"
+      - "tests/integration/test_verification_portfolio.py"
+      - "memory/02-decisions/ADR-0008-experiment-contract-verifier-budget.md"
+      - "memory/02-decisions/index.md"
+      - "memory/03-codegraph/**"
+      - "memory/04-tasks/TASK-005.md"
+      - "memory/04-tasks/PROJECT-COMPLETION-MATRIX.md"
+      - "memory/05-evidence/TASK-005/**"
+      - "memory/07-sessions/**"
+      - "local_department/routing/TASK-005.yaml"
+      - "orchestration/codex/tasks/TASK-005.yaml"
+    forbidden_files:
+      - "ARCHITECTURE.md"
+      - "schemas/**"
+      - "src/nps_core/hypothesis_population/**"
+      - "src/nps_core/thought_ecology/**"
+      - "src/nps_core/evidence_assimilator/**"
+      - "src/nps_core/state_update/**"
+      - "src/nps_core/codegraph/**"
+      - "src/nps_core/adaptive_n/**"
+      - "src/nps_core/executor_router/**"
+      - "src/nps_core/verification_tribunal/**"
+      - "memory/05-evidence/TASK-001/**"
+      - "memory/05-evidence/TASK-002/**"
+      - "memory/05-evidence/TASK-003/**"
+      - "memory/05-evidence/TASK-004/**"
+      - "raw/**"
+    expected_artifacts:
+      - "Frozen schema-compatible ExperimentContract and nested budget/outcome value objects."
+      - "Frozen caller-supplied VerificationNeed and exact-snapshot VerificationPortfolio."
+      - "Explicit N_v accounting independent from N_h and deferred N_e."
+      - "Strict dict/JSON canonical serialization and exact-snapshot validation."
+      - "ADR-0008 locking ownership and N_v semantics."
+      - "Replay-identical multi-hypothesis verification-portfolio integration test."
+  validation:
+    acceptance_criteria:
+      - "Public experiment types and domain errors import from nps_core.experiment_designer."
+      - "ExperimentContract round trips exactly to the existing experiment.schema.json shape."
+      - "Direct immutable construction is strict; from_dict accepts only JSON collection shapes."
+      - "IDs, strings, finite numeric ranges, budget values, keys and duplicates fail closed."
+      - "Verification needs and contracts are caller-supplied; runtime performs no semantic inference."
+      - "Every referenced hypothesis exists in the exact PopulationSnapshot."
+      - "Every contract is linked to at least one verification need and every need is covered."
+      - "N_v is explicit, deterministic, derived only from the locked verification-need collection, and distinct from N_h and deferred N_e."
+      - "Portfolio construction enforces the architecture relationship N_h >= N_v without assuming one thought equals one executor."
+      - "Portfolio stores the exact snapshot SHA-256 digest and validate_for rebuilds/compares the supplied snapshot."
+      - "Stale and structurally forged deserialized portfolios fail exact-snapshot validation."
+      - "Construction and validation never mutate PopulationSnapshot or lifecycle history."
+      - "Repeated reconstruction produces byte-identical canonical JSON."
+      - "Production runtime uses only Python standard library and performs no executor dispatch."
+      - "All TASK-001 through TASK-004 tests remain green."
+    required_tests:
+      - "Schema-compatible contract strictness and canonical round trips."
+      - "Budget numeric edge cases including bool, NaN and infinity."
+      - "Unknown, duplicate, uncovered, stale and N_h/N_v boundary cases."
+      - "Exact-snapshot and structurally forged portfolio validation."
+      - "Replay-identical multi-thought integration test."
+      - "Static standard-library import audit, full regression, Ruff, and compileall."
+    regression_checks:
+      - "Schemas, architecture, TASK-002 through TASK-004 production remain byte-unchanged."
+      - "No scratch/cache artifact is staged."
+      - "Codegraph metadata matches exact final Git HEAD."
+    evidence_schema: evidence_packet_v1
+  token_budget:
+    max_context_tokens: 16000
+    max_output_tokens: 6000
+    required_summary_mode: diff_first
+  completion:
+    status: active
+    reviewer: mimo_reviewer
+    codegraph_refresh_required: true
+    memory_update_required: true

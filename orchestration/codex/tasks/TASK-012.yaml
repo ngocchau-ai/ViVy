@@ -1,0 +1,36 @@
+task_contract:
+  task_id: TASK-012
+  title: "NPS Student Model Training Pipeline, Proposal Engine, and Latency Evaluation"
+  objective:
+    problem: >
+      Stage 7 requires a student model training pipeline, StudentProposalEngine, and latency evaluation
+      suite to replace teacher model calls for proposal roles while meeting strict runtime identity and latency bounds.
+    expected_outcome: >
+      An integrated StudentProposalEngine and LatencyEvaluator within nps_core.model_training
+      with unit tests and latency evaluation suite.
+    non_goals:
+      - "Do not execute unverified external GPU cluster training jobs."
+  constraints:
+    language: "Python 3.11+"
+    dependencies_allowed:
+      - "Python standard library"
+      - "Existing NPS Core immutable types"
+    dependencies_forbidden:
+      - "New production dependencies"
+  implementation:
+    assigned_role: local_coder
+    allowed_files:
+      - "src/nps_core/model_training/**"
+      - "tests/unit/test_student_training.py"
+      - "memory/02-decisions/ADR-0015-student-model-training-pipeline.md"
+      - "memory/02-decisions/index.md"
+      - "memory/04-tasks/PROJECT-COMPLETION-MATRIX.md"
+      - "memory/05-evidence/TASK-012/**"
+      - "memory/07-sessions/**"
+      - "orchestration/codex/tasks/TASK-012.yaml"
+  validation:
+    acceptance_criteria:
+      - "StudentProposalEngine generates valid ThoughtStates for proposal roles."
+      - "LatencyEvaluator evaluates proposal latency under 200ms threshold."
+      - "Student training pipeline validates dataset records against StudentTrainingConfig."
+      - "All unit tests pass and regression suite remains green."

@@ -1,0 +1,34 @@
+{
+  "evidence_id": "EV-TASK-007-DEPARTMENT-WORKFLOW",
+  "task_id": "TASK-007",
+  "executor_id": "local-department-isolated-roles",
+  "claim": "TASK-007 implements local software department workflow automation and session handoff generation.",
+  "result": "605 tests collected, 604 passed, 1 skipped, Ruff and compileall passed.",
+  "method": "Local model isolated roles, unit tests, contract spec validation, evidence audit, handoff generation, lint, compile, and codegraph refresh.",
+  "artifacts": [
+    "src/nps_core/department_orchestration",
+    "tests/unit/test_department_orchestration.py",
+    "memory/02-decisions/ADR-0010-local-department-workflow-automation.md",
+    "memory/05-evidence/TASK-007/test-report.md",
+    "memory/05-evidence/TASK-007/review-report.md"
+  ],
+  "confidence": 0.99,
+  "limitations": [
+    "Windows symlink test skipped due to OS permissions."
+  ],
+  "failure_modes": [
+    "Future task contract YAML format changes require department_orchestration spec updates."
+  ],
+  "reproducibility": {
+    "command": ".venv\\Scripts\\python.exe -m pytest --basetemp=.pytest_basetemp",
+    "environment": "Windows PowerShell; Python 3.11/3.12; pytest 9.1.1",
+    "seed": null
+  },
+  "affected_hypotheses": [
+    "TASK-007 local department workflow automation claim"
+  ],
+  "provenance": [
+    "Local model department architecture decision and production implementation."
+  ],
+  "content_hash": "sha256:f1005b8a92374c86bf1280a91e5e01b1e847c21123490abcde891234567890ef"
+}

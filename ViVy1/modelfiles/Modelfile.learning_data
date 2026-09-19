@@ -1,0 +1,9 @@
+# Modelfile.vivy — DEPRECATED
+#
+# This file is deprecated as per the Architectural requirement to build the 
+# ViVy Core Brain entirely from scratch in PyTorch without relying on external 
+# Llama / Ollama weights.
+#
+# The Core Reasoning Engine now resides in `src/vivy/core/vivy_brain.py` and 
+# operates natively using N-Thought Population Reasoning, SVD Stream Decomposition, 
+# and Quantum-Inspired Associative Memory.

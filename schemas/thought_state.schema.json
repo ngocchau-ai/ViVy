@@ -1,0 +1,173 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://nps-core.local/schemas/thought_state.schema.json",
+  "title": "ThoughtState",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "thought_id",
+    "parent_ids",
+    "created_at",
+    "interpretation",
+    "hypothesis",
+    "assumptions",
+    "evidence",
+    "metrics",
+    "verification_plan",
+    "executor_profile",
+    "graph",
+    "status"
+  ],
+  "$defs": {
+    "nonEmptyString": {
+      "type": "string",
+      "minLength": 1
+    },
+    "stringArray": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/nonEmptyString" },
+      "uniqueItems": true
+    },
+    "confidence": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "assumption": {
+      "type": "object",
+      "properties": {
+        "assumption_id": { "$ref": "#/$defs/nonEmptyString" },
+        "statement": { "$ref": "#/$defs/nonEmptyString" },
+        "confidence": { "$ref": "#/$defs/confidence" },
+        "source": { "$ref": "#/$defs/nonEmptyString" }
+      },
+      "required": ["assumption_id", "statement", "confidence", "source"],
+      "additionalProperties": false
+    }
+  },
+  "properties": {
+    "thought_id": {
+      "type": "string",
+      "pattern": "^THOUGHT-[A-Za-z0-9._-]+$"
+    },
+    "parent_ids": { "$ref": "#/$defs/stringArray" },
+    "created_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "interpretation": {
+      "type": "object",
+      "properties": {
+        "summary": { "$ref": "#/$defs/nonEmptyString" },
+        "scope": { "$ref": "#/$defs/nonEmptyString" },
+        "excluded_scope": { "$ref": "#/$defs/stringArray" }
+      },
+      "required": ["summary", "scope", "excluded_scope"],
+      "additionalProperties": false
+    },
+    "hypothesis": {
+      "type": "object",
+      "properties": {
+        "claim": { "$ref": "#/$defs/nonEmptyString" },
+        "predicted_observations": { "$ref": "#/$defs/stringArray" },
+        "falsification_conditions": { "$ref": "#/$defs/stringArray" }
+      },
+      "required": ["claim", "predicted_observations", "falsification_conditions"],
+      "additionalProperties": false
+    },
+    "assumptions": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/assumption" }
+    },
+    "evidence": {
+      "type": "object",
+      "properties": {
+        "supporting": { "$ref": "#/$defs/stringArray" },
+        "opposing": { "$ref": "#/$defs/stringArray" },
+        "unresolved": { "$ref": "#/$defs/stringArray" }
+      },
+      "required": ["supporting", "opposing", "unresolved"],
+      "additionalProperties": false
+    },
+    "metrics": {
+      "type": "object",
+      "properties": {
+        "confidence": { "$ref": "#/$defs/confidence" },
+        "novelty": { "$ref": "#/$defs/confidence" },
+        "diversity": { "$ref": "#/$defs/confidence" },
+        "expected_value": { "$ref": "#/$defs/confidence" },
+        "information_need": { "$ref": "#/$defs/confidence" },
+        "risk_if_wrong": { "$ref": "#/$defs/confidence" },
+        "execution_cost": { "$ref": "#/$defs/confidence" }
+      },
+      "required": [
+        "confidence",
+        "novelty",
+        "diversity",
+        "expected_value",
+        "information_need",
+        "risk_if_wrong",
+        "execution_cost"
+      ],
+      "additionalProperties": false
+    },
+    "verification_plan": {
+      "type": "object",
+      "properties": {
+        "questions": { "$ref": "#/$defs/stringArray" },
+        "required_experiments": { "$ref": "#/$defs/stringArray" },
+        "acceptable_evidence": { "$ref": "#/$defs/stringArray" },
+        "rejection_threshold": { "$ref": "#/$defs/confidence" }
+      },
+      "required": ["questions", "required_experiments", "acceptable_evidence", "rejection_threshold"],
+      "additionalProperties": false
+    },
+    "executor_profile": {
+      "type": "object",
+      "properties": {
+        "skills": { "$ref": "#/$defs/stringArray" },
+        "tool_requirements": { "$ref": "#/$defs/stringArray" },
+        "preferred_model_class": { "$ref": "#/$defs/nonEmptyString" },
+        "independence_requirements": { "$ref": "#/$defs/stringArray" }
+      },
+      "required": ["skills", "tool_requirements", "preferred_model_class", "independence_requirements"],
+      "additionalProperties": false
+    },
+    "graph": {
+      "type": "object",
+      "properties": {
+        "dependencies": { "$ref": "#/$defs/stringArray" },
+        "contradictions": { "$ref": "#/$defs/stringArray" },
+        "overlaps": { "$ref": "#/$defs/stringArray" }
+      },
+      "required": ["dependencies", "contradictions", "overlaps"],
+      "additionalProperties": false
+    },
+    "status": {
+      "type": "object",
+      "properties": {
+        "state": {
+          "enum": [
+            "active",
+            "queued",
+            "testing",
+            "partially_verified",
+            "verified",
+            "rejected",
+            "merged",
+            "dormant"
+          ]
+        },
+        "allowed_values": {
+          "type": "array",
+          "items": {
+            "enum": ["active", "queued", "testing", "partially_verified", "verified", "rejected", "merged", "dormant"]
+          },
+          "uniqueItems": true
+        }
+      },
+      "required": ["state", "allowed_values"],
+      "additionalProperties": false
+    }
+  }
+}
