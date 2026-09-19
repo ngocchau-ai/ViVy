@@ -160,23 +160,29 @@ def main() -> None:
     # Override env vars from CLI args
     if args.server:
         os.environ["VIVY_LLAMA_URL"] = args.server
+    else:
+        os.environ.setdefault("VIVY_LLAMA_URL", "http://127.0.0.1:11434")
     if args.model:
         os.environ["VIVY_MODEL"] = args.model
+    else:
+        os.environ.setdefault("VIVY_MODEL", "vivy-final:v1")
 
     # Build ViVy
     bridge = LlamaCppBridge()
 
     # Health check
     if not bridge.health():
-        print(f"[ERROR] Cannot connect to llama-server at {bridge.config.base_url}")
-        print("  Start llama-server first:")
-        print("    llama-server -m models/gemma-4-e4b-q4_k_m.gguf -c 32768 --port 8080 --jinja")
+        print(f"[ERROR] Cannot connect to Ollama at {bridge.config.base_url}")
+        print("  Make sure Ollama is running:")
+        print("    ollama serve")
+        print("  And that vivy-final:v1 is built:")
+        print("    ollama create vivy-final:v1 -f Modelfile.vivy")
         sys.exit(1)
 
-    print(f"[OK] Connected to llama-server at {bridge.config.base_url}")
+    print(f"[OK] Connected to Ollama at {bridge.config.base_url}")
     models = bridge.list_models()
     if models:
-        print(f"[OK] Available models: {', '.join(models)}")
+        print(f"[OK] Available models: {', '.join(models[:5])}")
 
     vivy = VivyInferenceLoop.from_env()
     # Replace bridge with health-checked one

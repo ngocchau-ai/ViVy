@@ -39,38 +39,23 @@ logger = logging.getLogger(__name__)
 
 @dataclass
 class LlamaCppConfig:
-    """Configuration for llama.cpp server connection.
+    """Configuration for llama.cpp server / Ollama connection.
 
-    Attributes
-    ----------
-    base_url:
-        URL of the llama-server. Default: http://127.0.0.1:8080
-        Override via VIVY_LLAMA_URL env var.
-    model_name:
-        Model identifier sent to /v1/chat/completions. Default: "gemma4-e4b"
-    temperature:
-        Sampling temperature. 0.15 for ViVy (deterministic-ish).
-    top_p:
-        Nucleus sampling. 0.9.
-    max_tokens:
-        Maximum tokens to generate per response.
-    timeout_s:
-        HTTP request timeout in seconds.
-    num_ctx:
-        Context window size. Gemma 4 E4B supports 128K.
+    Ollama exposes OpenAI-compatible API at http://127.0.0.1:11434
+    Override via VIVY_LLAMA_URL env var.
     """
 
     base_url: str = field(
-        default_factory=lambda: os.environ.get("VIVY_LLAMA_URL", "http://127.0.0.1:8080")
+        default_factory=lambda: os.environ.get("VIVY_LLAMA_URL", "http://127.0.0.1:11434")
     )
     model_name: str = field(
-        default_factory=lambda: os.environ.get("VIVY_MODEL", "gemma4-e4b")
+        default_factory=lambda: os.environ.get("VIVY_MODEL", "vivy-final:v1")
     )
     temperature: float = 0.15
     top_p: float = 0.9
     max_tokens: int = 2048
-    timeout_s: float = 120.0
-    num_ctx: int = 32768  # 32K default; Gemma 4 E4B supports 128K
+    timeout_s: float = 180.0   # Ollama CPU inference can be slow
+    num_ctx: int = 32768
 
 
 # ---------------------------------------------------------------------------
@@ -274,12 +259,15 @@ class LlamaCppBridge:
         )
 
     def health(self) -> bool:
-        """Ping llama-server health endpoint. Returns True if server is up."""
-        try:
-            r = self._client.get(f"{self.config.base_url}/health", timeout=3.0)
-            return r.status_code == 200
-        except Exception:
-            return False
+        """Ping server health endpoint. Supports Ollama (/api/tags) and llama.cpp (/health)."""
+        for path in ["/api/tags", "/health", "/"]:
+            try:
+                r = self._client.get(f"{self.config.base_url}{path}", timeout=3.0)
+                if r.status_code == 200:
+                    return True
+            except Exception:
+                continue
+        return False
 
     def chat(
         self,
