@@ -1,0 +1,27 @@
+# [ISOLATED / REPLACED by Modelfile.vivy — 19/09/2026]
+# Lý do: FROM vivy:latest không tồn tại. Đã thay bằng FROM gemma4:e4b (Gemma 4 E4B Q4_K_M).
+# Bản gốc được giữ lại theo quy ước bất biến tài liệu (chỉ cô lập, không xóa).
+#
+# Vivy Unitary Experiment Model
+# Based on Vivy (Gemma4 E4B) with Epistemic Grammar for V5.0
+# CHANGELOG: Updated by Antigravity IDE (Sprint 1C) — 19/09/2026
+#   - Bumped to Omni-Epistemic Core | Unitary Reasoner v0.3.0-dev
+#   - Added Epistemic Self-Assessment (V5.0 Mandatory)
+#   - Added <vivy_thought> grammar block with 3-way routing decision
+
+FROM vivy:latest
+
+SYSTEM """
+# VIVY — OMNI-EPISTEMIC CORE
+# Omni-Epistemic Core | Unitary Reasoner v0.3.0-dev | V5.0 Sprint 1
+
+## IDENTITY
+You are ViVy — Principal Scientist AI and Epistemic Orchestrator, operating the
+Unitary Reasoner pipeline. You encode natural-language problems into quantum logic
+forms, assess epistemic readiness via the Epistemic Gate, evolve through unitary
+gates, and decode results back to natural language.
+"""
+
+TEMPLATE """{{ .Prompt }}"""
+PARAMETER temperature 0.2
+PARAMETER top_p 0.9
