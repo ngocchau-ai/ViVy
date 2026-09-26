@@ -1,11 +1,11 @@
-# Vivy Final — ViVy Core (NPS-core) + Cautreo Native · CODE repo
+﻿# Vivy Final — ViVy Core (NPS-core) + Cautreo Native · CODE repo
 
 > Repo CODE độc lập, commit riêng lên GitHub. Repo chị em: `vivyChatGPT/` (SPECS — giao ChatGPT).
 > Quy tắc 3 điều bắt buộc (changelog / chỉ cô lập không xóa bỏ / đồng bộ `D:\2brain`) — xem `README.md`.
 
 ## Health Stack
 
-Chạy từ gốc repo **`Vivy final/vivy/`** (nơi có `pyproject.toml`):
+Chạy từ gốc repo **`Vivy_final/vivy/`** (nơi có `pyproject.toml`):
 
 | Mục | Lệnh | Ngưỡng |
 |---|---|---|
@@ -17,7 +17,7 @@ Chạy từ gốc repo **`Vivy final/vivy/`** (nơi có `pyproject.toml`):
 
 - Windows: pytest cần `--basetemp=_pytest_tmp` (đã có sẵn trong `addopts`).
 - **Scope mypy/ruff = 7 thư mục trên** (chuẩn CLAUDE.md gốc, 64 source files).
-- Nợ kỹ thuật **ngoài scope** (có sẵn từ nguồn `vivyChatGPT/training` + `src/`, không do merge): 164 lỗi mypy / 109 lỗi ruff ở `training/`+`src/`+`experiments/`. Ghi nhận tại `docs/DATA_MAP_2026-09-26.md` mục 6 — không sửa ồ ạt khi chưa được duyệt.
+- Nợ kỹ thuật **ngoài scope** (có sẵn từ nguồn `vivyChatGPT/training` + `src/`, không do merge): 164 lỗi mypy / 109 lỗi ruff ở `training/`+`src/`+`experiments/`. Ghi nhận tại `docs/TREE_MAP_AND_CHANGELOG.md` §Phần 1 mục 6 (nguyên bản `docs/DATA_MAP_2026-09-26.md`) — không sửa ồ ạt khi chưa được duyệt.
 
 ## Cây trụ (pillar)
 
@@ -29,7 +29,7 @@ host/       host mảnh + IPC Bus + plugins
 ui/         desktop-studio (Tauri) + cautreo-desktop
 models/     model_manifest.json + baselines  (metadata — KHÔNG phải trọng số)
 scripts/    launcher + verify_all.ps1
-docs/       ARCHITECTURE_FINAL, RUNBOOK, CHECKPOINTS, DATA_MAP…
+docs/       5 doc chuẩn + RUNBOOK + CHECKPOINTS + adr/  (xem mục Liên quan)
 internal/   kho checkpoint 6.40 GB — GITIGNORED, xem docs/CHECKPOINTS.md
 ```
 
@@ -52,12 +52,23 @@ internal/   kho checkpoint 6.40 GB — GITIGNORED, xem docs/CHECKPOINTS.md
 
 ## Liên quan
 
-- `docs/CHECKPOINTS.md` — số liệu byte từng checkpoint (D3: lưu nội bộ).
-- `docs/DATA_MAP_2026-09-26.md` — bản đồ dữ liệu (di chuyển / hợp nhất / xóa bỏ).
-- `docs/ARCHITECTURE_FINAL.md`, `docs/RUNBOOK.md` — kiến trúc + vận hành.
+**5 tài liệu chuẩn** (gom 26/09/2026 — hết nạn tài liệu thô / sửa đổi / v1-v2-v3):
+
+| # | File | Tên | Nội dung |
+|---|---|---|---|
+| 1 | `docs/RAW_CONSOLIDATED.md` | Tài liệu thô tổng hợp | Ý tưởng gốc 3 model + hình học siêu chiều + kế hoạch v2 |
+| 2 | `docs/TECHNICAL_DIRECTION.md` | Tài liệu định hướng kỹ thuật | NPS Core, nỗi đau/giải pháp, context, MoE, orchestration |
+| 3 | `docs/ARCHITECTURE_FINAL.md` | Tài liệu thiết kế cuối cùng | Đặc tả kiến trúc **có hiệu lực** + Phụ lục A–N (data cũ, ghi chú cô lập) |
+| 4 | `docs/TREE_MAP_AND_CHANGELOG.md` | Tree map diễn biến & lịch sử | Data map, biên bản reorg, snapshot tối ưu, báo cáo công việc |
+| 5 | `docs/REVIEWS.md` | Tài liệu review | Mọi review / thẩm định / quyết định bền vững |
+
+Tài liệu **ngoài** 5 doc (vận hành / meta, không gom): `README.md`, `CLAUDE.md`, `docs/RUNBOOK.md`, `docs/CHECKPOINTS.md`, `docs/adr/ADR-001..007`, `docs/public/{architecture,quickstart}.md`.
+
+Bản gốc đã gom: `old-docs/11-consolidated-source-2026-09-26/` (banner `[ISOLATED]` trỏ về doc đích). `docs/ARCHITECTURE.md` là **redirect stub** — ~25 tham chiếu trong `vivy/memory/`, `vivy/orchestration/codex/tasks/` vẫn trỏ đúng tên file.
 
 ## Lịch sử thay đổi
 
 | Ngày | Thay đổi | Agent |
 |---|---|---|
 | 2026-09-26 | Khởi tạo CLAUDE.md cho repo code sau reorg D2–D4; chốt health stack scope 7 thư mục; ghi nhận nợ training/+src/ | Claude Code |
+| 2026-09-26 | **Gom tài liệu về 5 doc chuẩn** (xem mục Liên quan). Gỡ tham chiếu 3 gguf không còn trên đĩa, xóa 2 runtime `start_vivy_qwen_coder.ps1`. Dọn trùng lặp (28 file 0 byte, `run_python.bat`, bảng trọng số). Cập nhật baseline test: `tests/` = **693 passed + 0 skipped** (trước ghi 676+17; lệch vì `engine/bin/cautreo_pager.dll` có sẵn nên 17 test native pager chạy thật — tổng 693 khớp). | Claude Code |

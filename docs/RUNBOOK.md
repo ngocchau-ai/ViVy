@@ -13,7 +13,7 @@
 ### Lệnh 1: Kiểm Tra Toàn Diện Hệ Thống (Pre-flight Sanity Check)
 Kiểm tra tính toàn vẹn của binaries, models, Python core và kết nối C-ABI:
 ```powershell
-cd "d:\91s_Vivy\Vivy final"
+cd "d:\91s_Vivy\Vivy_final"
 .\scripts\verify_all.ps1
 ```
 *Kết quả kỳ vọng:* `Summary: 11 PASSED, 0 FAILED - ALL GATES CLEARED`.
@@ -21,7 +21,7 @@ cd "d:\91s_Vivy\Vivy final"
 ### Lệnh 2: Khởi Chạy ViVy Core Hợp Nhất (Soul + Vessel)
 Khởi động phiên làm việc tương tác có kích hoạt Cautreo In-Process Memory:
 ```powershell
-cd "d:\91s_Vivy\Vivy final"
+cd "d:\91s_Vivy\Vivy_final"
 .\scripts\start_vivy_unified.ps1
 ```
 
@@ -33,15 +33,15 @@ Cautreo có thể vận hành độc lập hoàn toàn mà không cần Python:
 
 ### Chế độ 1: Tương Tác Dòng Lệnh Trực Tiếp (CLI Chat)
 ```powershell
-cd "d:\91s_Vivy\Vivy final\engine\bin"
-.\cautreo.exe chat --model "..\..\models\gemma4-e4b.gguf"
+cd "d:\91s_Vivy\Vivy_final\engine\bin"
+.\cautreo.exe chat --model "D:\models\gemma4-e4b\vivy-gemma-e4b-q4km.gguf"
 ```
 
 ### Chế độ 2: Máy Chủ OpenAI-Compatible API (Port 8080)
 Khởi chạy server phục vụ Antigravity IDE, Cursor, hoặc WebUI:
 ```powershell
-cd "d:\91s_Vivy\Vivy final\engine\bin"
-.\cautreo-server.exe --port 8080 --model "..\..\models\gemma4-e4b.gguf"
+cd "d:\91s_Vivy\Vivy_final\engine\bin"
+.\cautreo-server.exe --port 8080 --model "D:\models\gemma4-e4b\vivy-gemma-e4b-q4km.gguf"
 ```
 *Endpoint kiểm tra sức khỏe:* `http://127.0.0.1:8080/health`  
 *Endpoint chat chuẩn:* `http://127.0.0.1:8080/v1/chat/completions`
@@ -68,6 +68,7 @@ Từ phiên bản ViVy Final, mọi tác vụ gắn skill HoH do **ViVy Final** 
 
 ### 4.1. Khởi chạy nhiệm vụ HoH với ViVy Final
 ```powershell
+cd "d:\91s_Vivy"
 python .agents/skills/hoh-vivy-default/scripts/vivy_call.py `
   --task "Xây dựng tính năng mới" `
   --workspace "d:\91s_Vivy"
@@ -76,6 +77,7 @@ python .agents/skills/hoh-vivy-default/scripts/vivy_call.py `
 
 ### 4.2. Antigravity Chấm Điểm & Ghi Nhật Ký Cautreo
 ```powershell
+cd "d:\91s_Vivy"
 python .agents/skills/hoh-vivy-default/scripts/hoh_scoring_journal.py `
   --task-id "task_001" `
   --progress 0.95 `
@@ -110,3 +112,4 @@ Khi kết thúc nhiệm vụ và rơi vào trạng thái chờ, chu trình Dream
 |:---|:---|:---|
 | Antigravity IDE | 21/09/2026 17:15 ICT | Khởi tạo tài liệu RUNBOOK.md hướng dẫn vận hành 1 chạm cho ViVy final. |
 | Antigravity IDE (HoH ViVy Final Transition) | 21/09/2026 17:40 ICT | Bổ sung Mục 4: Quy trình vận hành HoH Default Agent, Antigravity Scoring Journal vào Cautreo Library, và Dream Engine Standby Cycle. |
+| Claude Code | 26/09/2026 | Đồng bộ đường dẫn sau đổi tên thư mục `Vivy final` → `Vivy_final`: (1) path trọng số `../../models/gemma4-e4b.gguf` → `D:\models\gemma4-e4b\vivy-gemma-e4b-q4km.gguf` theo `models/model_manifest.json`; (2) thêm `cd "d:\91s_Vivy"` trước lệnh Mục 4 vì `.agents/` nằm ở workspace cha, không trong `Vivy_final/`. Đường dẫn cũ `[ISOLATED]` trong commit trước của mục 2. |

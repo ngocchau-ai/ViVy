@@ -1,8 +1,8 @@
-# Kho Checkpoint nội bộ — Hướng dẫn độc lập
+﻿# Kho Checkpoint nội bộ — Hướng dẫn độc lập
 
 > **Phạm vi:** tài liệu này mô tả **toàn bộ trọng số/checkpoint của ViVy core + Cautreo** đang lưu **nội bộ** (ngoài git). Đây là hướng dẫn độc lập để khôi phục, đối chiếu số liệu và biết vì sao chúng **không** nằm trong repo GitHub.
 >
-> **Ngày chốt số liệu:** 2026-09-26 · **Vị trí gốc:** `Vivy final/internal/` (gitignored)
+> **Ngày chốt số liệu:** 2026-09-26 · **Vị trí gốc:** `Vivy_final/internal/` (gitignored)
 
 ---
 
@@ -74,7 +74,7 @@
 
 ---
 
-## 6. Cây vị trí trong `Vivy final/internal/`
+## 6. Cây vị trí trong `Vivy_final/internal/`
 
 ```
 internal/                          ← gitignore toàn bộ
@@ -100,8 +100,8 @@ internal/                          ← gitignore toàn bộ
 
 ## 7. Cách khôi phục / sử dụng
 
-1. **Repo chỉ chứa code.** Clone `Vivy final` về máy không mang theo trọng số.
-2. **Chép kho nội bộ** từ bản lưu `Vivy final/internal/` (hoặc backup ngoài) vào đúng cây ở mục 6.
+1. **Repo chỉ chứa code.** Clone `Vivy_final` về máy không mang theo trọng số.
+2. **Chép kho nội bộ** từ bản lưu `Vivy_final/internal/` (hoặc backup ngoài) vào đúng cây ở mục 6.
 3. **Kiểm tra toàn vẹn bằng dung lượng byte** ở bảng mục 2–4 (SHA-256 không nằm trong manifest reorg — manifest chỉ hash file text/code).
 4. **Nạp checkpoint:**
    - Core ViVy: `vivy_core_tinyllama.pt` (có backbone) hoặc `vivy_core_standalone.pt` (độc lập).
@@ -122,6 +122,6 @@ internal/                          ← gitignore toàn bộ
 
 ## 9. Liên quan
 
-- `docs/DATA_MAP_2026-09-26.md` — bản đồ dữ liệu: cái gì đã di về đâu, cái gì đã xóa (ghi rõ nhóm bị xóa, **không** gồm nội dung ngoài phạm vi).
+- `docs/TREE_MAP_AND_CHANGELOG.md` §Phần 1 — bản đồ dữ liệu: cái gì đã di về đâu, cái gì đã xóa (ghi rõ nhóm bị xóa, **không** gồm nội dung ngoài phạm vi). Nguyên bản `docs/DATA_MAP_2026-09-26.md` đã gom vào doc này 26/09/2026.
 - `../.gitignore` — danh sách pattern chặn trọng số.
 - `../vivy/pyproject.toml` — health-stack (`mypy` 7 thư mục, `ruff`, `pytest`).
