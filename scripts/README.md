@@ -3,7 +3,7 @@
 > [!IMPORTANT]
 > **Đây là bản MIRROR CÓ CHỦ ĐÍCH — KHÔNG được "dọn trùng lặp".**
 >
-> Bộ 20 script vận hành này **hiện diện đầy đủ, byte-identical tại CẢ 2 repo**:
+> Bộ 22 script vận hành này **hiện diện đầy đủ, byte-identical tại CẢ 2 repo**:
 >
 > | Repo | Vai trò | Cam kết |
 > |:---|:---|:---|
@@ -26,7 +26,7 @@
 
 ---
 
-## Danh mục 20 script vận hành (2026-09-26)
+## Danh mục 22 script vận hành (2026-09-26)
 
 ### Khởi động / vận hành runtime
 | Script | Loại | Chức năng |
@@ -34,6 +34,7 @@
 | `start_vivy_unified.ps1` | PowerShell | Khởi động ViVy unified (runtime chính) |
 | `start_vivy_gemma4.ps1` | PowerShell | Khởi động ViVy với Gemma 4 E4B Q4_K_M |
 | `start_vivy_qwen_coder.ps1` | PowerShell | Khởi động ViVy với Qwen Coder |
+| `start_vivy_qwen27b.ps1` | PowerShell | Khởi động ViVy với Qwen 2.5 27B *(bổ sung D5.2 — target model khác `qwen_coder`)* |
 | `start_desktop.ps1` | PowerShell | Khởi động Desktop Studio (Tauri + Vite) |
 | `vivy_call.bat` | Batch | Gọi nhanh ViVy từ CLI |
 | `vivy_health_check.bat` | Batch | Kiểm tra sức khỏe ViVy nhanh |
@@ -45,7 +46,8 @@
 | Script | Loại | Chức năng |
 |:---|:---|:---|
 | `verify_all.ps1` | PowerShell | Chạy full health stack (mypy + ruff + pytest) |
-| `verify_cautreo.py` | Python | Xác minh Cautreo C-ABI binding |
+| `verify_cautreo.py` | Python | Xác minh Cautreo C-ABI binding (**stub nhanh**, 18 dòng) |
+| `verify_vivy_cautreo_readiness.py` | Python | **Xác minh E2E đầy đủ** (223 dòng) *(bổ sung D5.2)*: (1) Codex Findings Remediation P1 & P2, (2) Cautreo C-ABI in-process Memory & Score Graph, (3) Parallel Decomposition & Compression Input Pipeline, (4) ViVy Inference Loop Context Budget 2048 & Intuition Digest, (5) Dream Engine `LUCID_STANDBY` cycle |
 | `run_91sh_workflow_e2e.py` | Python | E2E test adapter `cautreo_91sh_workflow` |
 | `test_direct_codex_call.py` | Python | Probe gọi thẳng Codex |
 
@@ -65,13 +67,13 @@
 ## Kiểm tra mirror
 
 ```powershell
-# Từ workspace root — so SHA-256 20 file giữa 2 repo
-$h = 1..20; Get-ChildItem "Vivy final\scripts" -File | ForEach-Object {
+# Từ workspace root — so SHA-256 toàn bộ file giữa 2 repo
+Get-ChildItem "Vivy final\scripts" -File | ForEach-Object {
   $a = (Get-FileHash $_.FullName).Hash
   $b = (Get-FileHash ("vivyChatGPT\scripts\" + $_.Name)).Hash
   [PSCustomObject]@{ Name=$_.Name; Match=($a -eq $b) }
 } | Where-Object { -not $_.Match }
-# -> rỗng nghĩa là mirror OK (20/20 khớp)
+# -> rỗng nghĩa là mirror OK
 ```
 
 ---
@@ -81,3 +83,4 @@ $h = 1..20; Get-ChildItem "Vivy final\scripts" -File | ForEach-Object {
 | Agent | Thời Gian | Hành Động |
 |:---|:---|:---|
 | Claude Code (D5) | 26/09/2026 | Tạo bản mirror 20 script vận hành vào cả 2 repo (SHA-256 khớp 20/20); viết hướng dẫn chống truy cập chéo; phân biệt với `reorg-tooling/` (dùng một lần) trong `old-docs/10-workspace-docs/`. |
+| Claude Code (D5.2) | 26/09/2026 | **Kéo thêm 2 script từ `unitary-reasoner/scripts/`** (phát hiện khi audit coverage): `verify_vivy_cautreo_readiness.py` (bộ E2E 223 dòng — trước đó repo chỉ có stub 18 dòng) và `start_vivy_qwen27b.ps1` (target model khác `qwen_coder`). Mirror 20 → **22**, SHA-256 khớp cả 3 bản (unitary-reasoner + 2 repo). Lý do: đúng cam kết *"script vận hành cần đầy đủ ở cả 2 repo"*. Các script training/benchmark/experiment của `unitary-reasoner/` **vẫn để ngoài** theo *"không phải mang tất cả"*. |
