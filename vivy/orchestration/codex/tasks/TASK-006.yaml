@@ -1,0 +1,45 @@
+task_contract:
+  task_id: TASK-006
+  title: "Deterministic Executor Accounting (N_e) and Stage-1 Runtime Benchmark"
+  objective:
+    problem: >
+      Stage 1 has ThoughtState lifecycle, atomic evidence assimilation, thought ecology,
+      and ExperimentContract/N_v accounting, but lacks deterministic executor accounting N_e
+      and an integrated end-to-end Stage-1 benchmark.
+    expected_outcome: >
+      A standard-library-only executor router and accounting module in executor_router,
+      enforcing the core architecture invariant N_h >= N_v >= N_e, along with a deterministic
+      end-to-end Stage-1 benchmark suite.
+    non_goals:
+      - "Do not implement Adaptive N branch/merge/prune policy."
+      - "Do not train LLM models or make external network calls."
+      - "Do not implement Verification Tribunal full calibration."
+  constraints:
+    language: "Python 3.11+"
+    dependencies_allowed:
+      - "Python standard library"
+      - "Existing NPS Core immutable types"
+      - "Existing pytest development dependency"
+    dependencies_forbidden:
+      - "New production dependencies"
+      - "Network or filesystem I/O in runtime"
+  implementation:
+    assigned_role: local_coder
+    allowed_files:
+      - "src/nps_core/executor_router/**"
+      - "tests/unit/test_executor_router.py"
+      - "tests/benchmark/test_stage1_runtime_benchmark.py"
+      - "memory/02-decisions/ADR-0009-executor-accounting-stage1-benchmark.md"
+      - "memory/02-decisions/index.md"
+      - "memory/04-tasks/TASK-006.md"
+      - "memory/04-tasks/PROJECT-COMPLETION-MATRIX.md"
+      - "memory/05-evidence/TASK-006/**"
+      - "memory/07-sessions/**"
+      - "orchestration/codex/tasks/TASK-006.yaml"
+  validation:
+    acceptance_criteria:
+      - "ExecutorAccounting and ExecutorRouter import cleanly from nps_core.executor_router."
+      - "N_e is explicitly accounted and enforced: N_h >= N_v >= N_e."
+      - "Router maps ExperimentContracts to ExecutorAllocations deterministically."
+      - "Stage-1 integrated benchmark executes end-to-end from ThoughtState creation through ExperimentContract, Executor Routing, Evidence Assimilation, and Thought Ecology indexing."
+      - "All 595+ regression tests remain green."

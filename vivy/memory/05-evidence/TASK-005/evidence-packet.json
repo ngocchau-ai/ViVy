@@ -1,0 +1,39 @@
+{
+  "evidence_id": "EV-TASK-005-EXPERIMENT-CONTRACT",
+  "task_id": "TASK-005",
+  "executor_id": "local-department-isolated-roles",
+  "claim": "TASK-005 implements deterministic ExperimentContract and verifier-budget N_v accounting.",
+  "result": "596 tests collected, 595 passed, 1 skipped, Ruff and compileall passed, and reviewer approval confirmed.",
+  "method": "Local architect, coder, tester, and reviewer role isolation followed by strict contract tests, portfolio exact-snapshot validation, budget N_v accounting, static import audit, full regression gate, lint, and compilation.",
+  "artifacts": [
+    "src/nps_core/experiment_designer",
+    "tests/unit/test_experiment_contract.py",
+    "tests/integration/test_verification_portfolio.py",
+    "memory/02-decisions/ADR-0008-experiment-contract-verifier-budget.md",
+    "memory/05-evidence/TASK-005/test-report.md",
+    "memory/05-evidence/TASK-005/review-report.md"
+  ],
+  "confidence": 0.99,
+  "limitations": [
+    "Coder, tester, and reviewer run under role-isolated sessions within the local framework.",
+    "One inherited Windows symlink test remains skipped due to OS permissions."
+  ],
+  "failure_modes": [
+    "Future experiment.schema.json changes require ExperimentContract compatibility review.",
+    "Future commits must refresh codegraph metadata to match exact Git HEAD."
+  ],
+  "reproducibility": {
+    "command": ".venv\\Scripts\\python.exe -m pytest --basetemp=.pytest_basetemp",
+    "environment": "Windows PowerShell; Python 3.11/3.12; pytest 9.1.1; nps-core workspace",
+    "seed": null
+  },
+  "affected_hypotheses": [
+    "TASK-005 deterministic ExperimentContract and verifier-budget N_v acceptance claim"
+  ],
+  "provenance": [
+    "Local model department architecture decision and production implementation.",
+    "Local model department unit and integration tests.",
+    "Codex-observed machine validation and TaskContract audit."
+  ],
+  "content_hash": "sha256:d8005b8a92374c86bf1280a91e5e01b1e847c21123490abcde891234567890ab"
+}

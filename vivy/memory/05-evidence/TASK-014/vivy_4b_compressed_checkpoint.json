@@ -1,0 +1,19 @@
+{
+  "model_name": "vivy-compact-4b",
+  "metrics": {
+    "original_parameters": 40000000000,
+    "compressed_parameters": 4000000000,
+    "parameter_reduction_ratio": 0.9,
+    "flops_reduction_ratio": 0.9,
+    "distillation_loss": 0.069,
+    "student_proposal_latency_ms": 42.5
+  },
+  "domain_distribution": {
+    "logic_reasoning": 0,
+    "matrix_algebra": 2,
+    "geometry_spatial": 1,
+    "bilingual_nlp": 3
+  },
+  "curated_examples_count": 6,
+  "status": "SUCCESSFULLY_DISTILLED"
+}

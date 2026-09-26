@@ -1,0 +1,36 @@
+task_contract:
+  task_id: TASK-011
+  title: "Distillation Dataset Builder, Contamination-Safe Splitter, and Replay Manifest"
+  objective:
+    problem: >
+      Stage 6 requires a versioned dataset extraction pipeline capturing transition events,
+      rejected hypotheses, routing rationale, and provenance into contamination-safe train/val/test splits.
+    expected_outcome: >
+      A standard-library distillation_dataset package providing DatasetBuilder, DatasetSplitter,
+      and ReplayManifest with complete unit tests.
+    non_goals:
+      - "Do not run neural net training."
+  constraints:
+    language: "Python 3.11+"
+    dependencies_allowed:
+      - "Python standard library"
+      - "Existing NPS Core immutable types"
+    dependencies_forbidden:
+      - "New production dependencies"
+  implementation:
+    assigned_role: local_coder
+    allowed_files:
+      - "src/nps_core/distillation_dataset/**"
+      - "tests/unit/test_distillation_dataset.py"
+      - "memory/02-decisions/ADR-0014-distillation-dataset-builder.md"
+      - "memory/02-decisions/index.md"
+      - "memory/04-tasks/PROJECT-COMPLETION-MATRIX.md"
+      - "memory/05-evidence/TASK-011/**"
+      - "memory/07-sessions/**"
+      - "orchestration/codex/tasks/TASK-011.yaml"
+  validation:
+    acceptance_criteria:
+      - "DatasetBuilder extracts transition events and rejected hypotheses into dataset records."
+      - "DatasetSplitter creates contamination-safe deterministic train/val/test splits."
+      - "ReplayManifest produces versioned JSON manifest and SHA-256 digest."
+      - "All unit tests pass and regression suite remains green."

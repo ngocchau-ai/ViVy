@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trình Trực quan hóa 3D Chi tiết Nội kết cấu Tháp 8 Cạnh Trung Đông 120 Tầng — ViVy Geometry Engine</title>
+  <!-- Three.js & OrbitControls via CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+  <style>
+    :root {
+      --bg-dark: #070a12;
+      --panel-bg: rgba(13, 20, 36, 0.88);
+      --border-gold: rgba(212, 175, 55, 0.45);
+      --accent-gold: #d4af37;
+      --accent-cyan: #00f0ff;
+      --accent-red: #ff4757;
+      --accent-green: #2ed573;
+      --text-main: #f1f5f9;
+      --text-muted: #94a3b8;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    }
+
+    body {
+      background-color: var(--bg-dark);
+      color: var(--text-main);
+      overflow: hidden;
+      width: 100vw;
+      height: 100vh;
+    }
+
+    #webgl-container {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+    }
+
+    /* Header Banner */
+    header {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      z-index: 10;
+      background: var(--panel-bg);
+      border: 1px solid var(--border-gold);
+      border-radius: 12px;
+      padding: 16px 24px;
+      backdrop-filter: blur(12px);
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+    }
+
+    header h1 {
+      font-size: 18px;
+      color: var(--accent-gold);
+      letter-spacing: 1px;
+      margin-bottom: 4px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    header p {
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+
+    /* Controls Sidebar */
+    .controls-panel {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      z-index: 10;
+      width: 340px;
+      background: var(--panel-bg);
+      border: 1px solid var(--border-gold);
+      border-radius: 12px;
+      padding: 20px;
+      backdrop-filter: blur(12px);
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      max-height: calc(100vh - 40px);
+      overflow-y: auto;
+    }
+
+    .panel-title {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--accent-gold);
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      border-bottom: 1px solid var(--border-gold);
+      padding-bottom: 8px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .btn-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+    }
+
+    button {
+      background: rgba(212, 175, 55, 0.08);
+      border: 1px solid var(--border-gold);
+      color: var(--text-main);
+      padding: 8px 10px;
+      border-radius: 6px;
+      font-size: 11px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+    }
+
+    button:hover, button.active {
+      background: var(--accent-gold);
+      color: #000;
+      font-weight: 700;
+      box-shadow: 0 0 12px rgba(212, 175, 55, 0.5);
+    }
+
+    .control-group {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .control-group label {
+      font-size: 11px;
+      color: var(--text-muted);
+      display: flex;
+      justify-content: space-between;
+    }
+
+    select, input[type="range"] {
+      width: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      border: 1px solid var(--border-gold);
+      color: var(--text-main);
+      padding: 6px 10px;
+      border-radius: 6px;
+      outline: none;
+      font-size: 12px;
+    }
+
+    /* Live HUD Metrics */
+    .hud-panel {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      z-index: 10;
+      background: var(--panel-bg);
+      border: 1px solid var(--border-gold);
+      border-radius: 12px;
+      padding: 16px 20px;
+      backdrop-filter: blur(12px);
+      display: grid;
+      grid-template-columns: repeat(5, 125px);
+      gap: 16px;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+    }
+
+    .metric-card {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .metric-value {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--accent-cyan);
+    }
+
+    .metric-label {
+      font-size: 10px;
+      color: var(--text-muted);
+    }
+
+    /* Floor Detail Inspection Panel (Popup Modal) */
+    .detail-inspector {
+      position: absolute;
+      bottom: 100px;
+      right: 20px;
+      z-index: 10;
+      width: 340px;
+      background: var(--panel-bg);
+      border: 1px solid var(--accent-cyan);
+      border-radius: 12px;
+      padding: 18px;
+      backdrop-filter: blur(12px);
+      box-shadow: 0 10px 40px rgba(0, 240, 255, 0.2);
+    }
+
+    .inspector-header {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--accent-cyan);
+      border-bottom: 1px solid rgba(0, 240, 255, 0.3);
+      padding-bottom: 6px;
+      margin-bottom: 10px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .inspector-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      font-size: 11px;
+    }
+
+    .inspector-item {
+      background: rgba(0, 0, 0, 0.4);
+      padding: 6px 8px;
+      border-radius: 4px;
+      border-left: 2px solid var(--accent-gold);
+    }
+
+    .inspector-item strong {
+      color: var(--text-main);
+      display: block;
+    }
+
+    .inspector-item span {
+      color: var(--accent-cyan);
+    }
+
+    /* Loading Screen */
+    #loader {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: var(--bg-dark);
+      z-index: 100;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      transition: opacity 0.5s ease;
+    }
+
+    .spinner {
+      width: 48px;
+      height: 48px;
+      border: 4px solid rgba(212, 175, 55, 0.2);
+      border-top-color: var(--accent-gold);
+      border-radius: 50%;
+      animation: spin 1s infinite linear;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Loading Screen -->
+  <div id="loader">
+    <div class="spinner"></div>
+    <div style="color: var(--accent-gold); font-weight: 600;">Đang dựng chi tiết Kết cấu Nội thất Tháp 8 Cạnh Trung Đông 120 Tầng...</div>
+  </div>
+
+  <!-- WebGL Canvas Container -->
+  <div id="webgl-container"></div>
+
+  <!-- Header Banner -->
+  <header>
+    <h1>🏛️ ViVy 3D Structural Engine — Tháp 8 Cạnh Trung Đông</h1>
+    <p>Chi tiết Nội kết cấu, Lõi Bê tông, Trục Thang máy & Mặt cắt 120 Tầng (Cao 600m)</p>
+  </header>
+
+  <!-- Controls Sidebar -->
+  <div class="controls-panel">
+    <div class="panel-title">
+      <span>Bảng Điều Khiển Chi Tiết</span>
+      <span style="color:var(--accent-cyan); font-size:11px;">120 Tầng Nội Kết Cấu</span>
+    </div>
+
+    <!-- Cutaway / Cross-Section Mode -->
+    <div class="control-group">
+      <button id="btn-cutaway" class="active">✂️ Tắt/Mở Mặt Cắt Nội Thất (Cutaway)</button>
+    </div>
+
+    <div class="control-group">
+      <label>Độ mở Mặt cắt (Cutaway Angle): <span id="cut-val" style="color:var(--accent-gold)">180°</span></label>
+      <input type="range" id="slider-cutaway" min="0" max="270" value="180">
+    </div>
+
+    <!-- Toggle Component Visibility -->
+    <div class="panel-title" style="margin-top:4px;">Hiển Thị Thành Phần Kết Cấu</div>
+    <div class="btn-grid">
+      <button id="btn-toggle-core" class="active">🏢 Lõi Bê Tông (Core)</button>
+      <button id="btn-toggle-floors" class="active">🥞 120 Sàn Tầng (Slabs)</button>
+      <button id="btn-toggle-columns" class="active">🏛️ 8 Cột Mega-Columns</button>
+      <button id="btn-toggle-outriggers" class="active">🏗️ Hệ Giằng Outrigger</button>
+      <button id="btn-toggle-glass" class="active">🪟 Kính Mashrabiya</button>
+      <button id="btn-toggle-gardens" class="active">🌿 Vườn Treo Oasis</button>
+    </div>
+
+    <!-- View Modes -->
+    <div class="panel-title" style="margin-top:4px;">Chế Độ Hiển Thị & Ánh Sáng</div>
+    <div class="btn-grid">
+      <button id="btn-day-night">🌙 Chế độ Ban đêm</button>
+      <button id="btn-auto-rotate">🔄 Xoay Tự động</button>
+      <button id="btn-wireframe">🌐 Khung Dây (Wireframe)</button>
+      <button id="btn-reset-cam">🎯 Reset Camera</button>
+    </div>
+
+    <!-- Floor Inspection Slider -->
+    <div class="control-group">
+      <label for="slider-floor">Soi Chi Tiết Tầng: <span id="floor-val" style="color:var(--accent-cyan)">Tầng 106 (Sky Deck)</span></label>
+      <input type="range" id="slider-floor" min="1" max="120" value="106">
+    </div>
+  </div>
+
+  <!-- Live HUD Metrics -->
+  <div class="hud-panel">
+    <div class="metric-card">
+      <div class="metric-value">600 m</div>
+      <div class="metric-label">Chiều cao Tổng thể</div>
+    </div>
+    <div class="metric-card">
+      <div class="metric-value">120 Tầng</div>
+      <div class="metric-label">Số Tầng Nổi</div>
+    </div>
+    <div class="metric-card">
+      <div class="metric-value">16 m</div>
+      <div class="metric-label">Đường kính Lõi Bê Tông</div>
+    </div>
+    <div class="metric-card">
+      <div class="metric-value">3 Cụm</div>
+      <div class="metric-label">Hệ Giằng Outrigger</div>
+    </div>
+    <div class="metric-card">
+      <div class="metric-value" id="hud-area">724 m²</div>
+      <div class="metric-label">Diện tích Mặt bằng Sàn</div>
+    </div>
+  </div>
+
+  <!-- Detailed Inspection Panel (Floor Info Popup) -->
+  <div class="detail-inspector" id="inspector-popup">
+    <div class="inspector-header">
+      <span id="insp-floor-title">🏢 THÔNG SỐ CHI TIẾT TẦNG 106</span>
+      <span style="color:var(--accent-gold)" id="insp-zone-tag">SKY DECK</span>
+    </div>
+    <div class="inspector-grid">
+      <div class="inspector-item">
+        <strong>Cao độ z:</strong>
+        <span id="insp-z-height">530.0 m</span>
+      </div>
+      <div class="inspector-item">
+        <strong>Bán kính R(z):</strong>
+        <span id="insp-radius">16.0 m</span>
+      </div>
+      <div class="inspector-item">
+        <strong>Cạnh Bát giác a(z):</strong>
+        <span id="insp-side">13.26 m</span>
+      </div>
+      <div class="inspector-item">
+        <strong>Diện tích Sàn:</strong>
+        <span id="insp-area">724 m²</span>
+      </div>
+      <div class="inspector-item">
+        <strong>Trục Thang máy:</strong>
+        <span>4 Trục Thang Tốc độ cao</span>
+      </div>
+      <div class="inspector-item">
+        <strong>Lam Mashrabiya:</strong>
+        <span>Kính Cường lực + Chắn nắng 8 Cạnh</span>
+      </div>
+      <div class="inspector-item" style="grid-column: span 2;">
+        <strong>Chức năng Chi tiết:</strong>
+        <span id="insp-desc" style="color:var(--text-main);">Đài Quan Sát 360°, Kính Nhìn Xuyên Không, Nhà Hàng Hoàng Gia Ả Rập</span>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // ---------------------------------------------------------------------------
+    // THREE.JS SCENE & CAMERA SETUP
+    // ---------------------------------------------------------------------------
+
+    const container = document.getElementById('webgl-container');
+    const scene = new THREE.Scene();
+    scene.background = new THREE.Color(0x070a12);
+    scene.fog = new THREE.FogExp2(0x070a12, 0.0006);
+
+    const camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 1, 3500);
+    camera.position.set(280, 320, 420);
+
+    const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+    renderer.shadowMap.enabled = true;
+    renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+    renderer.localClippingEnabled = true; // Enable local clipping for cutaway section!
+    container.appendChild(renderer.domElement);
+
+    const controls = new THREE.OrbitControls(camera, renderer.domElement);
+    controls.enableDamping = true;
+    controls.dampingFactor = 0.05;
+    controls.maxPolarAngle = Math.PI / 2 - 0.01;
+    controls.target.set(0, 220, 0);
+
+    // Local Clipping Plane for Cutaway Cross-Section
+    const clipPlane = new THREE.Plane(new THREE.Vector3(-1, 0, 0), 0);
+
+    // ---------------------------------------------------------------------------
+    // LIGHTING & ENVIRONMENT
+    // ---------------------------------------------------------------------------
+
+    const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
+    scene.add(ambientLight);
+
+    const sunLight = new THREE.DirectionalLight(0xfffaed, 1.2);
+    sunLight.position.set(300, 500, 200);
+    sunLight.castShadow = true;
+    sunLight.shadow.mapSize.width = 2048;
+    sunLight.shadow.mapSize.height = 2048;
+    scene.add(sunLight);
+
+    const coreLight = new THREE.PointLight(0x00f0ff, 2.5, 450);
+    coreLight.position.set(0, 300, 0);
+    scene.add(coreLight);
+
+    const beaconLight = new THREE.PointLight(0xd4af37, 3, 500);
+    beaconLight.position.set(0, 595, 0);
+    scene.add(beaconLight);
+
+    // ---------------------------------------------------------------------------
+    // MATERIAL DEFINITIONS
+    // ---------------------------------------------------------------------------
+
+    const concreteCoreMat = new THREE.MeshStandardMaterial({
+      color: 0x808e9b,
+      roughness: 0.8,
+      metalness: 0.2,
+      side: THREE.DoubleSide
+    });
+
+    const floorSlabMat = new THREE.MeshStandardMaterial({
+      color: 0x3c6382,
+      roughness: 0.6,
+      metalness: 0.3,
+      side: THREE.DoubleSide
+    });
+
+    const megaColumnMat = new THREE.MeshStandardMaterial({
+      color: 0xd4af37,
+      roughness: 0.3,
+      metalness: 0.85
+    });
+
+    const outriggerTrussMat = new THREE.MeshStandardMaterial({
+      color: 0xff4757,
+      roughness: 0.4,
+      metalness: 0.8
+    });
+
+    const glassFacadeMat = new THREE.MeshPhysicalMaterial({
+      color: 0x4a90e2,
+      metalness: 0.2,
+      roughness: 0.1,
+      transmission: 0.7,
+      transparent: true,
+      opacity: 0.6,
+      clippingPlanes: [clipPlane], // Cutaway Enabled on Glass Outer Shell!
+      clipShadows: true,
+      side: THREE.DoubleSide
+    });
+
+    const highlightFloorMat = new THREE.MeshBasicMaterial({
+      color: 0x00f0ff,
+      wireframe: true
+    });
+
+    // ---------------------------------------------------------------------------
+    // MODEL GENERATION ENGINE (INTERNAL STRUCTURE & EXTERIOR MASHRA BIYA)
+    // ---------------------------------------------------------------------------
+
+    const towerGroup = new THREE.Group();
+
+    // Helper: 8-sided Regular Octagon Shape
+    function createOctagonShape(radius) {
+      const shape = new THREE.Shape();
+      for (let i = 0; i < 8; i++) {
+        const angle = (i * Math.PI) / 4;
+        const x = radius * Math.cos(angle);
+        const y = radius * Math.sin(angle);
+        if (i === 0) shape.moveTo(x, y);
+        else shape.lineTo(x, y);
+      }
+      shape.closePath();
+      return shape;
+    }
+
+    // 1. Ground Plaza & Reflected Pools
+    const plazaGeo = new THREE.PlaneGeometry(900, 900);
+    const plazaMat = new THREE.MeshStandardMaterial({ color: 0x0f172a, roughness: 0.8 });
+    const plaza = new THREE.Mesh(plazaGeo, plazaMat);
+    plaza.rotation.x = -Math.PI / 2;
+    plaza.receiveShadow = true;
+    scene.add(plaza);
+
+    // Khatam 8-Pointed Star Plaza Inlay
+    const starShape = createOctagonShape(120);
+    const starGeo = new THREE.ShapeGeometry(starShape);
+    const starMat = new THREE.MeshStandardMaterial({ color: 0x1e293b, roughness: 0.4 });
+    const starMesh = new THREE.Mesh(starGeo, starMat);
+    starMesh.rotation.x = -Math.PI / 2;
+    starMesh.position.y = 0.5;
+    scene.add(starMesh);
+
+    // 2. Central Reinforced Concrete Core (Lõi Bê Tông 16m) extending 540m
+    const coreRadius = 8.0; // 16m diameter
+    const coreHeight = 540.0;
+    const coreGeo = new THREE.CylinderGeometry(coreRadius, coreRadius, coreHeight, 16);
+    const coreMesh = new THREE.Mesh(coreGeo, concreteCoreMat);
+    coreMesh.position.y = coreHeight / 2;
+    coreMesh.castShadow = true;
+    coreMesh.receiveShadow = true;
+    towerGroup.add(coreMesh);
+
+    // Add 4 Elevator Shaft lines inside core
+    const shaftMat = new THREE.MeshBasicMaterial({ color: 0x00f0ff, wireframe: true });
+    for (let i = 0; i < 4; i++) {
+      const angle = (i * Math.PI) / 2;
+      const shaftX = Math.cos(angle) * 4.5;
+      const shaftZ = Math.sin(angle) * 4.5;
+      const shaftGeo = new THREE.BoxGeometry(3, coreHeight, 3);
+      const shaftMesh = new THREE.Mesh(shaftGeo, shaftMat);
+      shaftMesh.position.set(shaftX, coreHeight / 2, shaftZ);
+      towerGroup.add(shaftMesh);
+    }
+
+    // 3. 120 Individual Floor Slabs (120 Sàn Tầng)
+    const floorSlabGroup = new THREE.Group();
+    const floorHeight = 4.5; // meters per floor
+
+    for (let floor = 1; floor <= 120; floor++) {
+      let radius = 40.0;
+      if (floor > 30 && floor <= 60) radius = 32.0;
+      else if (floor > 60 && floor <= 90) radius = 24.0;
+      else if (floor > 90 && floor <= 115) radius = 16.0;
+      else if (floor > 115) radius = 8.0;
+
+      const floorY = floor * floorHeight;
+      const slabShape = createOctagonShape(radius);
+      const slabGeo = new THREE.ShapeGeometry(slabShape);
+      const slabMesh = new THREE.Mesh(slabGeo, floorSlabMat);
+      slabMesh.rotation.x = -Math.PI / 2;
+      slabMesh.position.y = floorY;
+      slabMesh.userData = { floorNumber: floor, radius: radius };
+
+      floorSlabGroup.add(slabMesh);
+    }
+    towerGroup.add(floorSlabGroup);
+
+    // 4. Outrigger Structural Steel Trusses at Floors 30, 60, 90
+    const outriggerGroup = new THREE.Group();
+    const outriggerFloors = [30, 60, 90];
+
+    outriggerFloors.forEach(fl => {
+      const flY = fl * floorHeight;
+      let radius = fl <= 30 ? 40 : fl <= 60 ? 32 : 24;
+
+      for (let i = 0; i < 8; i++) {
+        const angle = (i * Math.PI) / 4;
+        const endX = Math.cos(angle) * radius;
+        const endZ = Math.sin(angle) * radius;
+
+        const trussGeo = new THREE.BoxGeometry(radius - 8, 3, 2);
+        const trussMesh = new THREE.Mesh(trussGeo, outriggerTrussMat);
+        trussMesh.position.set(endX / 2 + Math.cos(angle) * 4, flY, endZ / 2 + Math.sin(angle) * 4);
+        trussMesh.rotation.y = angle;
+        outriggerGroup.add(trussMesh);
+      }
+    });
+    towerGroup.add(outriggerGroup);
+
+    // 5. Exterior Glass Curtain Wall with Mashrabiya Lattice (5 Setback Zones)
+    const setbackZones = [
+      { start: 1, end: 30, radius: 40, name: "Podium & Lower Commercial" },
+      { start: 31, end: 60, radius: 32, name: "Mid Commercial & Residential" },
+      { start: 61, end: 90, radius: 24, name: "High Residential & Palace Hotel" },
+      { start: 91, end: 115, radius: 16, name: "Royal Suites & Sky Deck" },
+      { start: 116, end: 120, radius: 8, name: "Mechanical Plant & Spire" }
+    ];
+
+    const glassGroup = new THREE.Group();
+    const megaColumnGroup = new THREE.Group();
+
+    let currentY = 0;
+    setbackZones.forEach((zone) => {
+      const numFloors = zone.end - zone.start + 1;
+      const zoneHeight = numFloors * floorHeight;
+      const shape = createOctagonShape(zone.radius);
+
+      const extrudeSettings = {
+        depth: zoneHeight,
+        bevelEnabled: true,
+        bevelSegments: 2,
+        steps: numFloors,
+        bevelSize: 0.4,
+        bevelThickness: 0.4
+      };
+
+      const geometry = new THREE.ExtrudeGeometry(shape, extrudeSettings);
+      geometry.rotateX(Math.PI / 2);
+
+      const mesh = new THREE.Mesh(geometry, glassFacadeMat);
+      mesh.position.y = currentY + zoneHeight;
+      mesh.castShadow = true;
+      mesh.receiveShadow = true;
+      glassGroup.add(mesh);
+
+      // Add 8 Mega Columns on vertices
+      for (let i = 0; i < 8; i++) {
+        const angle = (i * Math.PI) / 4;
+        const colX = zone.radius * Math.cos(angle);
+        const colZ = zone.radius * Math.sin(angle);
+
+        const colGeo = new THREE.CylinderGeometry(1.0, 1.0, zoneHeight, 8);
+        const colMesh = new THREE.Mesh(colGeo, megaColumnMat);
+        colMesh.position.set(colX, currentY + zoneHeight / 2, colZ);
+        megaColumnGroup.add(colMesh);
+      }
+
+      currentY += zoneHeight;
+    });
+
+    towerGroup.add(glassGroup);
+    towerGroup.add(megaColumnGroup);
+
+    // 6. Spire Pinnacle Top (Floors 116 - 120)
+    const spireGeo = new THREE.ConeGeometry(8, 60, 8);
+    const spireMat = new THREE.MeshStandardMaterial({ color: 0xd4af37, metalness: 0.95, roughness: 0.1 });
+    const spire = new THREE.Mesh(spireGeo, spireMat);
+    spire.position.y = currentY + 30;
+    towerGroup.add(spire);
+
+    // 7. Sky Gardens at Setbacks (Floors 31, 61, 91)
+    const gardenGroup = new THREE.Group();
+    const gardenMat = new THREE.MeshStandardMaterial({ color: 0x2ed573, roughness: 0.9 });
+    const gardenFloors = [31, 61, 91];
+
+    gardenFloors.forEach(fl => {
+      const flY = fl * floorHeight;
+      let radius = fl === 31 ? 38 : fl === 61 ? 30 : 22;
+      const gRingShape = createOctagonShape(radius);
+      const gGeo = new THREE.ShapeGeometry(gRingShape);
+      const gMesh = new THREE.Mesh(gGeo, gardenMat);
+      gMesh.rotation.x = -Math.PI / 2;
+      gMesh.position.y = flY + 0.2;
+      gardenGroup.add(gMesh);
+    });
+    towerGroup.add(gardenGroup);
+
+    scene.add(towerGroup);
+
+    // Hide Loader
+    document.getElementById('loader').style.opacity = '0';
+    setTimeout(() => document.getElementById('loader').style.display = 'none', 500);
+
+    // ---------------------------------------------------------------------------
+    // CONTROLS & EVENT HANDLERS
+    // ---------------------------------------------------------------------------
+
+    let isCutawayActive = true;
+    let isNight = true;
+    let isAutoRotate = false;
+    let isWireframe = false;
+
+    // Cutaway Toggle
+    document.getElementById('btn-cutaway').addEventListener('click', (e) => {
+      isCutawayActive = !isCutawayActive;
+      renderer.localClippingEnabled = isCutawayActive;
+      e.target.classList.toggle('active', isCutawayActive);
+    });
+
+    document.getElementById('slider-cutaway').addEventListener('input', (e) => {
+      const angleDeg = parseInt(e.target.value);
+      document.getElementById('cut-val').innerText = `${angleDeg}°`;
+      const angleRad = (angleDeg * Math.PI) / 180;
+      clipPlane.normal.set(-Math.cos(angleRad), 0, -Math.sin(angleRad));
+    });
+
+    // Visibility Toggles
+    document.getElementById('btn-toggle-core').addEventListener('click', (e) => {
+      coreMesh.visible = !coreMesh.visible;
+      e.target.classList.toggle('active', coreMesh.visible);
+    });
+
+    document.getElementById('btn-toggle-floors').addEventListener('click', (e) => {
+      floorSlabGroup.visible = !floorSlabGroup.visible;
+      e.target.classList.toggle('active', floorSlabGroup.visible);
+    });
+
+    document.getElementById('btn-toggle-columns').addEventListener('click', (e) => {
+      megaColumnGroup.visible = !megaColumnGroup.visible;
+      e.target.classList.toggle('active', megaColumnGroup.visible);
+    });
+
+    document.getElementById('btn-toggle-outriggers').addEventListener('click', (e) => {
+      outriggerGroup.visible = !outriggerGroup.visible;
+      e.target.classList.toggle('active', outriggerGroup.visible);
+    });
+
+    document.getElementById('btn-toggle-glass').addEventListener('click', (e) => {
+      glassGroup.visible = !glassGroup.visible;
+      e.target.classList.toggle('active', glassGroup.visible);
+    });
+
+    document.getElementById('btn-toggle-gardens').addEventListener('click', (e) => {
+      gardenGroup.visible = !gardenGroup.visible;
+      e.target.classList.toggle('active', gardenGroup.visible);
+    });
+
+    // Lighting & Environment
+    document.getElementById('btn-day-night').addEventListener('click', () => {
+      isNight = !isNight;
+      if (isNight) {
+        scene.background.setHex(0x070a12);
+        scene.fog.color.setHex(0x070a12);
+        sunLight.intensity = 0.3;
+        ambientLight.intensity = 0.3;
+        document.getElementById('btn-day-night').innerText = '☀️ Chế độ Ban ngày';
+      } else {
+        scene.background.setHex(0x70a1ff);
+        scene.fog.color.setHex(0x70a1ff);
+        sunLight.intensity = 1.3;
+        ambientLight.intensity = 0.8;
+        document.getElementById('btn-day-night').innerText = '🌙 Chế độ Ban đêm';
+      }
+    });
+
+    document.getElementById('btn-auto-rotate').addEventListener('click', () => {
+      isAutoRotate = !isAutoRotate;
+      controls.autoRotate = isAutoRotate;
+      controls.autoRotateSpeed = 1.5;
+    });
+
+    document.getElementById('btn-wireframe').addEventListener('click', () => {
+      isWireframe = !isWireframe;
+      floorSlabMat.wireframe = isWireframe;
+      concreteCoreMat.wireframe = isWireframe;
+    });
+
+    document.getElementById('btn-reset-cam').addEventListener('click', () => {
+      camera.position.set(280, 320, 420);
+      controls.target.set(0, 220, 0);
+    });
+
+    // Floor Inspection Slider Update
+    document.getElementById('slider-floor').addEventListener('input', (e) => {
+      const fl = parseInt(e.target.value);
+      updateInspectorPopup(fl);
+    });
+
+    function updateInspectorPopup(fl) {
+      let zoneTag = "PODIUM";
+      let radius = 40.0;
+      let desc = "Trung Tâm Thương Mại, Sảnh Khách & Giếng Trời Bát Giác";
+
+      if (fl >= 11 && fl <= 40) {
+        zoneTag = "COMMERCIAL";
+        radius = 32.0;
+        desc = "Văn Phòng Tài Chính Hạng A, Trung Tâm Công Nghệ & Khu Giảng Đường";
+      } else if (fl >= 41 && fl <= 75) {
+        zoneTag = "RESIDENTIAL";
+        radius = 24.0;
+        desc = "Căn Hộ Hạng Sang, Vườn Treo Babylon & Hồ Bơi Bát Giác";
+      } else if (fl >= 76 && fl <= 105) {
+        zoneTag = "PALACE HOTEL";
+        radius = 24.0;
+        desc = "Khách Sạn Hoàng Gia 7★, Biệt Thự Sky Villa & Thượng Uyển";
+      } else if (fl >= 106 && fl <= 115) {
+        zoneTag = "SKY DECK";
+        radius = 16.0;
+        desc = "Đài Quan Sát 360°, Kính Nhìn Xuyên Không & Nhà Hàng Hoàng Gia";
+      } else if (fl >= 116) {
+        zoneTag = "SPIRE";
+        radius = 8.0;
+        desc = "Trạm Kỹ Thuật Cơ Điện MEP & Chóp Tháp Kim Ngân";
+      }
+
+      const heightZ = (fl * 4.5).toFixed(1);
+      const sideLen = (2.0 * radius * Math.tan(Math.PI / 8)).toFixed(2);
+      const area = Math.round(2 * Math.sqrt(2) * radius * radius);
+
+      document.getElementById('floor-val').innerText = `Tầng ${fl} (${zoneTag})`;
+      document.getElementById('insp-floor-title').innerText = `🏢 THÔNG SỐ CHI TIẾT TẦNG ${fl}`;
+      document.getElementById('insp-zone-tag').innerText = zoneTag;
+      document.getElementById('insp-z-height').innerText = `${heightZ} m`;
+      document.getElementById('insp-radius').innerText = `${radius.toFixed(1)} m`;
+      document.getElementById('insp-side').innerText = `${sideLen} m`;
+      document.getElementById('insp-area').innerText = `${area.toLocaleString()} m²`;
+      document.getElementById('insp-desc').innerText = desc;
+      document.getElementById('hud-area').innerText = `${area.toLocaleString()} m²`;
+
+      // Animate Camera to focus on target floor Y height
+      const targetY = fl * 4.5;
+      controls.target.set(0, targetY, 0);
+    }
+
+    // Initialize Popup for Floor 106
+    updateInspectorPopup(106);
+
+    // ---------------------------------------------------------------------------
+    // ANIMATION LOOP
+    // ---------------------------------------------------------------------------
+
+    function animate() {
+      requestAnimationFrame(animate);
+      controls.update();
+
+      // Pulsing Beacon Light
+      beaconLight.intensity = 2.0 + Math.sin(Date.now() * 0.006) * 1.0;
+
+      renderer.render(scene, camera);
+    }
+
+    window.addEventListener('resize', () => {
+      camera.aspect = window.innerWidth / window.innerHeight;
+      camera.updateProjectionMatrix();
+      renderer.setSize(window.innerWidth, window.innerHeight);
+    });
+
+    animate();
+  </script>
+</body>
+</html>

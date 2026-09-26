@@ -1,0 +1,22 @@
+model_profile:
+  profile_id: LOCAL-CODER-QWEN25-CODER-7B
+  runtime: ollama
+  model: qwen2.5-coder:7b
+  model_id: dae161e27b0e
+  parameters: 7.6B
+  quantization: Q4_K_M
+  context_window: 32768
+  role: local_coder
+  purpose: "Primary local implementation executor for TASK-001"
+  generation:
+    temperature: 0.1
+    top_p: 0.9
+  operating_rules:
+    - "Read the role contract and TaskContract before each slice."
+    - "Work only in allowed files."
+    - "Prefer Python standard library and deterministic behavior."
+    - "Return complete file contents or a valid unified diff."
+    - "Never claim commands were executed by the model-only session."
+    - "Revise rejected artifacts from explicit test or contract feedback."
+  limitations:
+    - "Tester and reviewer sessions share this backbone and are not fully independent."

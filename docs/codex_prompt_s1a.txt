@@ -1,0 +1,40 @@
+IMPORTANT: Do NOT read ~/.claude/, ~/.agents/, .claude/skills/, or agents/. Focus on repository code only.
+
+Task: Implement EpistemicGate for ViVy V5.0 - Sprint 1A
+
+Working directory: d:\91s- Tái cấu trúc lân thứ 4\unitary-reasoner
+
+STEP 1: Create the file `orchestrator/epistemic_gate.py` with the following implementation:
+
+The module defines EpistemicDecision (str enum with values EXECUTE_DIRECTLY, NEED_KNOWLEDGE_FORAGING, DELEGATE_MODEL), GateContext dataclass (fields: task_description str, confidence_threshold float=0.7, unknown_entities list[str]=field(default_factory=list), metadata dict=field(default_factory=dict)), GateResult dataclass (fields: decision EpistemicDecision, confidence float, unknown_entities list[str], rationale str, suggested_modality Optional[str]=None, suggested_model Optional[str]=None), and EpistemicGate class.
+
+EpistemicGate.__init__(self, confidence_threshold: float = 0.7) stores the threshold.
+
+EpistemicGate.assess(self, state: QuantumState, context: GateContext) -> GateResult:
+  - calls _compute_confidence(state) -> float (use state.norm(), clamp to [0.0, 1.0])
+  - calls _detect_unknown_entities(state, context) -> list[str] (returns list(context.unknown_entities))
+  - if confidence >= self.confidence_threshold and not unknown_entities: return EXECUTE_DIRECTLY result
+  - elif unknown_entities: return NEED_KNOWLEDGE_FORAGING result with suggested_modality='text'
+  - else: return DELEGATE_MODEL result with suggested_model='general'
+
+Import: from core.state import QuantumState. All code must pass ruff and mypy.
+
+STEP 2: Update orchestrator/engine.py
+- Import EpistemicGate, GateContext, EpistemicDecision from orchestrator.epistemic_gate
+- In the main pipeline method (encode->evolve->evaluate->decode), INSERT after evolve():
+    gate = EpistemicGate()
+    ctx = GateContext(task_description=str(task) if task else "")
+    gate_result = gate.assess(evolved_state, ctx)
+    if gate_result.decision == EpistemicDecision.NEED_KNOWLEDGE_FORAGING:
+        pass  # Sprint 2: trigger foraging loop
+    elif gate_result.decision == EpistemicDecision.DELEGATE_MODEL:
+        pass  # Sprint 2: route to model_router
+    # EXECUTE_DIRECTLY: proceed normally
+
+STEP 3: Update orchestrator/__init__.py to export EpistemicGate, GateContext, GateResult, EpistemicDecision.
+
+STEP 4: Run `python -m ruff check .` and report errors.
+
+STEP 5: Run `python -m mypy orchestrator/epistemic_gate.py` and report errors.
+
+STEP 6: Run `python -m pytest tests/ -x -q` and report PASS/FAIL count.

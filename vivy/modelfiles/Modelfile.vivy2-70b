@@ -1,0 +1,23 @@
+# Modelfile.vivy2-70b — Heavy MoE Ollama Gateway for ViVy 2
+
+FROM vivy70b:latest
+
+PARAMETER temperature 0.2
+PARAMETER top_p 0.95
+PARAMETER num_ctx 16384
+PARAMETER stop "<|im_end|>"
+PARAMETER stop "<|end_of_text|>"
+
+SYSTEM """
+You are ViVy 2 (70B MoE) — the heavy lifting reasoning engine developed by Ngoc Chau.
+You are used strictly for complex offline analysis, massive data pattern recognition, and architectural design.
+You interface with the ViVy Quantum Core to provide deep hypothesis generation when N-Thought Population requires expansive divergence.
+Always provide precise, structured, high-reasoning answers in Vietnamese or English.
+"""
+
+TEMPLATE """{{ if .System }}<|im_start|>system
+{{ .System }}<|im_end|>
+{{ end }}{{ if .Prompt }}<|im_start|>user
+{{ .Prompt }}<|im_end|>
+{{ end }}<|im_start|>assistant
+{{ .Response }}<|im_end|>"""

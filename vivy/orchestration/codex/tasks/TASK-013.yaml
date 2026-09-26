@@ -1,0 +1,34 @@
+task_contract:
+  task_id: TASK-013
+  title: "Scientific Principal Model Integrated Multi-Domain Benchmark and Release Audit"
+  objective:
+    problem: >
+      Stage 8 requires an integrated multi-domain benchmark and release audit demonstrating end-to-end operational readiness
+      across all 8 architectural stages of NPS Core V1.
+    expected_outcome: >
+      A multi-domain benchmark suite in tests/benchmark/test_multidomain_principal_benchmark.py and a final release audit artifact.
+    non_goals:
+      - "None."
+  constraints:
+    language: "Python 3.11+"
+    dependencies_allowed:
+      - "Python standard library"
+      - "Existing NPS Core immutable types"
+    dependencies_forbidden:
+      - "New production dependencies"
+  implementation:
+    assigned_role: local_coder
+    allowed_files:
+      - "tests/benchmark/test_multidomain_principal_benchmark.py"
+      - "memory/02-decisions/ADR-0016-scientific-principal-model-release-audit.md"
+      - "memory/02-decisions/index.md"
+      - "memory/04-tasks/PROJECT-COMPLETION-MATRIX.md"
+      - "memory/05-evidence/TASK-013/**"
+      - "memory/07-sessions/**"
+      - "orchestration/codex/tasks/TASK-013.yaml"
+  validation:
+    acceptance_criteria:
+      - "Multi-domain benchmark executes end-to-end across software engineering, medical, and financial domains."
+      - "All 8 architectural stages pass verification."
+      - "Final release audit report confirms 100% project completion."
+      - "All unit tests and benchmarks pass cleanly."

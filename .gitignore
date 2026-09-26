@@ -1,0 +1,74 @@
+# Vivy final — GitHub-ready ignore (2026-09-26)
+# Rule: repo holds CODE + SPEC + text evidence only. Never weights, secrets, caches, binaries.
+
+# ── Secrets (MUST never commit) ─────────────────────────────────
+.env
+.env.*
+*.key
+*.pem
+*.p12
+secrets.*
+credentials.*
+
+# ── Model weights / checkpoints (GitHub blocks >100 MB) ─────────
+*.pt
+*.pth
+*.bin
+*.gguf
+*.safetensors
+*.ckpt
+*.onnx
+
+# ── Numpy / expert payloads (internal store only) ───────────────
+*.npy
+*.npz
+
+# ── Internal checkpoint store (see docs/CHECKPOINTS.md) ─────────
+internal/
+
+# ── Native build binaries (rebuild from engine/src/) ────────────
+engine/bin/*.exe
+engine/bin/*.dll
+engine/bin/*.so
+engine/bin/*.dylib
+*.exe
+!engine/bin/.gitkeep
+
+# ── Python / tooling caches ─────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.egg-info/
+.mypy_cache/
+.ruff_cache/
+.pytest_cache/
+_pytest_tmp/
+.venv/
+venv/
+htmlcov/
+.coverage
+coverage.xml
+
+# ── Node / UI build output ──────────────────────────────────────
+node_modules/
+dist/
+build/
+target/
+ui/**/out/
+ui/**/.next/
+*.tsbuildinfo
+
+# ── Editor / OS noise ───────────────────────────────────────────
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ── Local runtime artifacts ─────────────────────────────────────
+*.log
+.vivy_activity.jsonl
+*.tmp
+*.bak
+*.bak.*
+scratchpad/
+context_store.db

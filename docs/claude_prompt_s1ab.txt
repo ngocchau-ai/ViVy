@@ -1,0 +1,163 @@
+IMPORTANT: Do NOT read ~/.claude/, ~/.agents/, .claude/skills/, or agents/. Focus on repository code only.
+
+You are an execution worker for ViVy V5.0 Sprint 1. Two tasks: S1-A (implementation) then S1-B (test suite).
+
+Working directory: d:\91s- Tái cấu trúc lân thứ 4\unitary-reasoner
+
+=== TASK S1-A: Implement EpistemicGate ===
+
+Create the file orchestrator/epistemic_gate.py with exactly this content:
+
+from __future__ import annotations
+from dataclasses import dataclass, field
+from enum import Enum
+from typing import Optional
+from core.state import QuantumState
+
+
+class EpistemicDecision(str, Enum):
+    EXECUTE_DIRECTLY = "EXECUTE_DIRECTLY"
+    NEED_KNOWLEDGE_FORAGING = "NEED_KNOWLEDGE_FORAGING"
+    DELEGATE_MODEL = "DELEGATE_MODEL"
+
+
+@dataclass
+class GateContext:
+    task_description: str
+    confidence_threshold: float = 0.7
+    unknown_entities: list[str] = field(default_factory=list)
+    metadata: dict = field(default_factory=dict)  # type: ignore[type-arg]
+
+
+@dataclass
+class GateResult:
+    decision: EpistemicDecision
+    confidence: float
+    unknown_entities: list[str]
+    rationale: str
+    suggested_modality: Optional[str] = None
+    suggested_model: Optional[str] = None
+
+
+class EpistemicGate:
+    """Blocking epistemic assessment gate between evolve and evaluate.
+
+    V5.0 Architecture:
+        encode -> evolve -> [EPISTEMIC GATE] -> evaluate -> decode
+
+    The gate emits one of three decisions:
+        EXECUTE_DIRECTLY: high confidence, no unknowns - proceed
+        NEED_KNOWLEDGE_FORAGING: unknown entities detected - acquire knowledge first
+        DELEGATE_MODEL: low confidence, no foraging path - route to specialist
+    """
+
+    def __init__(self, confidence_threshold: float = 0.7) -> None:
+        self.confidence_threshold = confidence_threshold
+
+    def assess(self, state: QuantumState, context: GateContext) -> GateResult:
+        """Assess epistemic state and return routing decision.
+
+        This is the BLOCKING step replacing parallel funnel execution.
+        Must be called between evolve() and evaluate() in the orchestrator.
+        """
+        confidence = self._compute_confidence(state)
+        unknown_entities = self._detect_unknown_entities(state, context)
+
+        if confidence >= self.confidence_threshold and not unknown_entities:
+            return GateResult(
+                decision=EpistemicDecision.EXECUTE_DIRECTLY,
+                confidence=confidence,
+                unknown_entities=[],
+                rationale=f"Confidence {confidence:.2f} >= threshold {self.confidence_threshold:.2f}",
+            )
+
+        if unknown_entities:
+            return GateResult(
+                decision=EpistemicDecision.NEED_KNOWLEDGE_FORAGING,
+                confidence=confidence,
+                unknown_entities=unknown_entities,
+                rationale=f"Unknown entities detected: {unknown_entities}",
+                suggested_modality="text",
+            )
+
+        return GateResult(
+            decision=EpistemicDecision.DELEGATE_MODEL,
+            confidence=confidence,
+            unknown_entities=[],
+            rationale=f"Confidence {confidence:.2f} below threshold, no foraging target",
+            suggested_model="general",
+        )
+
+    def _compute_confidence(self, state: QuantumState) -> float:
+        """Derive confidence from state norm, clamped to [0.0, 1.0]."""
+        try:
+            norm = float(state.norm())
+            return min(1.0, max(0.0, norm))
+        except Exception:
+            return 0.0
+
+    def _detect_unknown_entities(
+        self, state: QuantumState, context: GateContext
+    ) -> list[str]:
+        """Return unknown entities from context (populated by encoder in V5.0)."""
+        return list(context.unknown_entities)
+
+---
+
+After creating that file, update orchestrator/__init__.py to export EpistemicGate, GateContext, GateResult, EpistemicDecision from orchestrator.epistemic_gate.
+
+Then update orchestrator/engine.py: find the main pipeline method that calls encode, evolve, evaluate, decode. Import EpistemicGate, GateContext, EpistemicDecision from orchestrator.epistemic_gate. Insert a blocking gate call AFTER evolve and BEFORE evaluate. The gate call should be:
+    gate = EpistemicGate()
+    ctx = GateContext(task_description=str(task) if task else "")
+    gate_result = gate.assess(evolved_state_variable, ctx)
+    if gate_result.decision == EpistemicDecision.NEED_KNOWLEDGE_FORAGING:
+        pass  # Sprint 2: trigger foraging loop
+    elif gate_result.decision == EpistemicDecision.DELEGATE_MODEL:
+        pass  # Sprint 2: route to model_router
+    # EXECUTE_DIRECTLY: proceed normally
+
+Use the actual variable names from the existing engine.py code.
+
+=== TASK S1-B: Write 20 Tests ===
+
+After S1-A is complete, create tests/test_epistemic_gate.py with 20 tests:
+
+GROUP 1 - Unit tests for EpistemicGate.assess() (8 tests):
+Use a mock or minimal QuantumState. Check state.norm() can return 1.0 for high confidence.
+Write test functions following the existing test style in tests/.
+
+1. test_high_confidence_no_unknowns_returns_execute_directly
+2. test_confidence_below_threshold_returns_delegate_model
+3. test_unknown_entities_triggers_foraging
+4. test_confidence_threshold_is_configurable
+5. test_gate_result_has_rationale_string
+6. test_gate_result_has_confidence_float_between_0_and_1
+7. test_unknown_entities_list_preserved_in_foraging_result
+8. test_suggested_model_set_in_delegate_result
+
+GROUP 2 - Integration tests (7 tests):
+9. test_gate_context_task_description_stored
+10. test_execute_directly_confidence_above_threshold
+11. test_foraging_suggested_modality_is_text
+12. test_delegate_result_suggested_model_is_general
+13. test_gate_runs_with_empty_task_description
+14. test_gate_context_unknown_entities_passed_through
+15. test_gate_result_is_dataclass
+
+GROUP 3 - Edge cases (5 tests):
+16. test_confidence_clamped_to_1_even_if_norm_exceeds_1
+17. test_confidence_clamped_to_0_when_norm_is_negative
+18. test_epistemic_decision_values_are_strings
+19. test_gate_assess_returns_gate_result_type
+20. test_gate_with_multiple_unknown_entities
+
+=== FINAL STEP ===
+
+Run: python -m pytest tests/test_epistemic_gate.py -v
+Report PASS/FAIL count.
+
+Run: python -m ruff check orchestrator/epistemic_gate.py tests/test_epistemic_gate.py
+Report errors count.
+
+Run: python -m mypy orchestrator/epistemic_gate.py
+Report errors count.

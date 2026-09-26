@@ -1,0 +1,70 @@
+"""Ollama API Client for ViVy AI Model.
+
+Provides Ollama protocol payload formatting and API communication methods.
+Standard-library only.
+"""
+
+from __future__ import annotations
+
+import base64
+from pathlib import Path
+from typing import Any
+
+from nps_core.vivy_interface import (
+    MultimodalResponse,
+    VisionEncoder,
+    ViVyMultimodalEngine,
+)
+
+__all__ = [
+    "OllamaViVyClient",
+]
+
+
+class OllamaViVyClient:
+    """Client for communicating with ViVy via Ollama API."""
+
+    def __init__(self, endpoint: str = "http://localhost:11434", model_name: str = "vivy:latest") -> None:
+        self.endpoint = endpoint.rstrip("/")
+        self.model_name = model_name
+
+    def format_chat_payload(
+        self,
+        prompt: str,
+        image_path: str | None = None,
+        stream: bool = False,
+    ) -> dict[str, Any]:
+        """Format request body according to Ollama /api/chat protocol."""
+        msg: dict[str, Any] = {"role": "user", "content": prompt}
+        if image_path and Path(image_path).exists():
+            data = Path(image_path).read_bytes()
+            b64_str = base64.b64encode(data).decode("utf-8")
+            msg["images"] = [b64_str]
+
+        return {
+            "model": self.model_name,
+            "messages": [msg],
+            "stream": stream,
+        }
+
+    def process_local_reasoning(
+        self,
+        prompt: str,
+        image_path: str | None = None,
+    ) -> dict[str, Any]:
+        """Process query through ViVy engine and return Ollama-formatted response dict."""
+        image_payload = VisionEncoder.from_file(image_path) if image_path else None
+        res: MultimodalResponse = ViVyMultimodalEngine.process(prompt, image=image_payload)
+
+        return {
+            "model": self.model_name,
+            "created_at": "2026-07-25T10:48:00Z",
+            "message": {
+                "role": "assistant",
+                "content": res.response_text,
+            },
+            "done": True,
+            "thought_chain": list(res.thought_chain),
+            "detected_language": res.detected_language,
+            "visual_summary": res.visual_summary,
+        }

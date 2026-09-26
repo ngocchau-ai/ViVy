@@ -1,0 +1,81 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://nps-core.local/schemas/experiment.schema.json",
+  "title": "ExperimentContract",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["experiment"],
+  "properties": {
+    "experiment": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "experiment_id",
+        "objective",
+        "hypotheses_tested",
+        "discriminating_outcomes",
+        "method",
+        "executor_requirements",
+        "cost_budget",
+        "stop_conditions",
+        "expected_information_gain",
+        "acceptance_schema"
+      ],
+      "properties": {
+        "experiment_id": {
+          "type": "string",
+          "pattern": "^EXP-[A-Za-z0-9._-]+$"
+        },
+        "objective": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "hypotheses_tested": {
+          "$ref": "#/$defs/stringArray"
+        },
+        "discriminating_outcomes": {
+          "type": "object",
+          "minProperties": 1,
+          "additionalProperties": {
+            "$ref": "#/$defs/nonEmptyString"
+          }
+        },
+        "method": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "executor_requirements": {
+          "$ref": "#/$defs/stringArray"
+        },
+        "cost_budget": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "number",
+            "minimum": 0
+          }
+        },
+        "stop_conditions": {
+          "$ref": "#/$defs/stringArray"
+        },
+        "expected_information_gain": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "acceptance_schema": {
+          "$ref": "#/$defs/nonEmptyString"
+        }
+      }
+    }
+  },
+  "$defs": {
+    "nonEmptyString": {
+      "type": "string",
+      "minLength": 1
+    },
+    "stringArray": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/nonEmptyString"
+      }
+    }
+  }
+}

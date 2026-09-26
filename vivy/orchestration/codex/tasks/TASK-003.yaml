@@ -1,0 +1,139 @@
+task_contract:
+  task_id: TASK-003
+  title: "Evidence Assimilation and Atomic Multi-Thought State Update"
+  objective:
+    problem: >
+      Stage 1 can execute ThoughtState lifecycle transitions but cannot parse
+      EvidencePacket V1, attach one evidence item to several affected
+      hypotheses, or apply those state changes atomically.
+    expected_outcome: >
+      Standard-library-only immutable EvidencePacket and impact models,
+      deterministic evidence normalization, and an atomic state-update engine
+      that replaces every affected ThoughtState together or none, preserves
+      lineage, records provenance and produces a replayable audit record.
+    non_goals:
+      - "Không sửa EvidencePacket hoặc ThoughtState V1 schemas."
+      - "Không tự tính confidence, semantic relevance hoặc evidence quality."
+      - "Không triển khai Thought Ecology graph store."
+      - "Không xây Verification Tribunal, executor routing hoặc model calls."
+      - "Không thiết kế ExperimentContract hoặc Adaptive N trong task này."
+      - "Không sửa lifecycle create/branch/merge/prune của TASK-002."
+  context:
+    architecture_refs:
+      - "ARCHITECTURE.md#13-1-evidence-packet"
+      - "ARCHITECTURE.md#6-kien-truc-he-thong"
+      - "ARCHITECTURE.md#giai-doan-1-deterministic-runtime-prototype"
+      - "ARCHITECTURE.md#19-nguyen-tac-bat-bien"
+    codegraph_nodes:
+      - "module:nps_core.evidence_assimilator"
+      - "module:nps_core.state_update"
+      - "module:nps_core.hypothesis_population"
+    relevant_files:
+      - "schemas/evidence_packet.schema.json"
+      - "schemas/thought_state.schema.json"
+      - "src/nps_core/hypothesis_population/thought_state.py"
+      - "src/nps_core/hypothesis_population/lifecycle.py"
+      - "memory/04-tasks/PROJECT-COMPLETION-MATRIX.md"
+    prior_decisions:
+      - "memory/02-decisions/ADR-0001-architecture-baseline.md"
+      - "memory/02-decisions/ADR-0004-python-foundation.md"
+      - "memory/02-decisions/ADR-0005-deterministic-thought-lifecycle.md"
+  constraints:
+    language: "Python 3.11+"
+    dependencies_allowed:
+      - "Python standard library"
+      - "Existing pytest and jsonschema development dependencies"
+    dependencies_forbidden:
+      - "Runtime jsonschema dependency"
+      - "Runtime model, network, database or filesystem calls"
+      - "Clock, UUID or random identity generation"
+      - "Implicit confidence arithmetic or semantic classification"
+      - "New production dependencies"
+    security_requirements:
+      - "Deserialization cannot import or instantiate arbitrary classes."
+      - "The complete update batch is validated before a new snapshot exists."
+      - "Invalid provenance, target, replacement or impact leaves the prior snapshot byte-identical."
+    compatibility_requirements:
+      - "Windows PowerShell"
+      - "Linux shell"
+      - "UTF-8 repository content"
+      - "EvidencePacket V1 and ThoughtState V1 schema-compatible plain dictionaries"
+  implementation:
+    assigned_role: mimo_coder
+    allowed_files:
+      - "src/nps_core/evidence_assimilator/**"
+      - "src/nps_core/state_update/**"
+      - "tests/unit/test_evidence_packet_model.py"
+      - "tests/unit/test_evidence_assimilation.py"
+      - "tests/unit/test_atomic_state_update.py"
+      - "tests/integration/test_multi_hypothesis_evidence_update.py"
+      - "memory/02-decisions/ADR-0006-evidence-assimilation-state-update.md"
+      - "memory/02-decisions/index.md"
+      - "memory/03-codegraph/**"
+      - "memory/04-tasks/TASK-003.md"
+      - "memory/04-tasks/PROJECT-COMPLETION-MATRIX.md"
+      - "memory/05-evidence/TASK-003/**"
+      - "memory/07-sessions/**"
+      - "local_department/routing/TASK-003.yaml"
+      - "orchestration/codex/tasks/TASK-003.yaml"
+    forbidden_files:
+      - "ARCHITECTURE.md"
+      - "schemas/**"
+      - "src/nps_core/hypothesis_population/**"
+      - "src/nps_core/codegraph/**"
+      - "src/nps_core/thought_ecology/**"
+      - "src/nps_core/adaptive_n/**"
+      - "src/nps_core/experiment_designer/**"
+      - "src/nps_core/verification_tribunal/**"
+      - "src/nps_core/executor_router/**"
+      - "memory/00-identity/**"
+      - "memory/05-evidence/TASK-001/**"
+      - "memory/05-evidence/TASK-002/**"
+      - "raw/**"
+    expected_artifacts:
+      - "Immutable strict EvidencePacket V1 model and canonical serialization."
+      - "Immutable per-hypothesis EvidenceImpact and normalized assimilation plan."
+      - "Atomic multi-ThoughtState replacement engine preserving lineage."
+      - "Deterministic EvidenceUpdateRecord with caller-supplied identity/time and state digests."
+      - "ADR-0006 locking evidence_assimilator/state_update ownership."
+      - "End-to-end one-packet-to-multiple-hypotheses replay test."
+  validation:
+    acceptance_criteria:
+      - "Public evidence and update types import from nps_core.evidence_assimilator and nps_core.state_update."
+      - "EvidencePacket parses and serializes losslessly to a dictionary accepted by EvidencePacket V1."
+      - "Malformed keys/types, bool-as-number, non-finite/out-of-range confidence, invalid reproducibility seed and empty required strings fail with stable domain errors."
+      - "Runtime enforces non-empty provenance, at least one unique affected hypothesis and unique artifact/provenance entries even where the base schema is less strict."
+      - "Impact classification is exactly supporting, opposing or unresolved and is caller-supplied per hypothesis."
+      - "The impact target set exactly matches EvidencePacket.affected_hypotheses after deterministic set comparison."
+      - "Every target exists and is non-terminal; replacements retain thought_id, parent_ids and created_at."
+      - "State update revalidates target existence, terminal status and prior evidence absence against the exact snapshot being updated, so a deserialized or stale plan cannot bypass validation."
+      - "Replacement preserves interpretation, hypothesis, assumptions, executor profile and graph; it may change evidence, metrics, verification plan and status."
+      - "The selected evidence bucket equals its prior tuple plus the evidence ID appended once; the other two buckets remain exactly unchanged."
+      - "Confidence or status changes are accepted only from the complete caller-supplied replacement; runtime performs no arithmetic or inference."
+      - "All replacements are applied atomically to one new PopulationSnapshot and the prior snapshot/history remain byte-identical."
+      - "A deterministic record contains caller-supplied record ID/timestamp/actor, sorted affected IDs, packet content hash and SHA-256 prior/result state digests."
+      - "Repeated input and replay produce byte-identical packet, record and snapshot canonical JSON."
+      - "Production runtime uses only Python standard library and performs no executor dispatch."
+      - "All TASK-001 and TASK-002 tests remain green."
+    required_tests:
+      - "EvidencePacket strict validation, V1 schema compatibility and lossless/canonical round trips."
+      - "Provenance, affected-hypothesis and impact validation."
+      - "Atomic multi-target success and representative failure immutability."
+      - "Replacement boundary and exact evidence-bucket semantics."
+      - "Unknown, duplicate, terminal, missing and extra target rejection."
+      - "Replay-identical multi-hypothesis integration test."
+      - "Static standard-library import audit, full regression and Ruff."
+    regression_checks:
+      - "Schemas, architecture and TASK-002 implementation remain byte-unchanged."
+      - "No scratch/cache artifact is staged."
+      - "Codegraph metadata matches exact final Git HEAD."
+    evidence_schema: evidence_packet_v1
+  token_budget:
+    max_context_tokens: 16000
+    max_output_tokens: 6000
+    required_summary_mode: diff_first
+  completion:
+    status: complete
+    reviewer: mimo_reviewer
+    codegraph_refresh_required: true
+    memory_update_required: true

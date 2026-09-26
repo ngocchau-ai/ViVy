@@ -1,0 +1,46 @@
+routing:
+  task_id: TASK-003
+  strategy: sequential_role_isolation
+  authorization:
+    source: explicit_user_instruction
+    decision: "Use prepaid MiMo API and keep the local model unloaded."
+  transport:
+    requested: hermes_mcp
+    hermes_mcp_available: false
+    selected: direct_mimo_api
+  implementation:
+    role: mimo_coder
+    runtime: mimo_api
+    provider: xiaomi_mimo_token_plan
+    model: mimo-v2.5-pro
+    thinking: disabled
+    slices:
+      - architecture_decision_and_public_contract
+      - evidence_packet_value_model
+      - assimilation_plan
+      - atomic_state_update
+      - integration_and_hardening
+  validation:
+    tester:
+      role: mimo_tester
+      runtime: mimo_api
+      model: mimo-v2.5-pro
+      isolated_session: true
+    reviewer:
+      role: mimo_reviewer
+      runtime: mimo_api
+      model: mimo-v2.5-pro
+      isolated_session: true
+  independence:
+    level: low
+    reason: "Coder, tester and reviewer use the same MiMo model family."
+    mitigation:
+      - "Separate role prompts and API sessions."
+      - "Use JSON Schema and executable replay tests as primary evidence."
+      - "Require exact file/line findings and a fresh final re-review."
+      - "Codex checks TaskContract and closure gates without self-approving code."
+  completion:
+    status: complete
+    production_review: approved
+    test_review: approved_after_remediation
+    local_model_loaded: false

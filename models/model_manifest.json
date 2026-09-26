@@ -1,0 +1,120 @@
+{
+  "manifest_version": "1.2.0",
+  "updated_at": "2026-09-23T11:30:00+07:00",
+  "orchestrator_core": "gemma4-e4b",
+  "models": [
+    {
+      "id": "gemma4-e4b",
+      "filename": "vivy-gemma-e4b-q4km.gguf",
+      "full_path": "D:\\models\\gemma4-e4b\\vivy-gemma-e4b-q4km.gguf",
+      "role": "COGNITIVE_REASONER",
+      "is_active_soul": true,
+      "status": "ACTIVE_COGNITIVE_SOUL",
+      "size_gb": 8.95,
+      "quant": "Q4_K_M",
+      "context_window_target": 2048,
+      "tags": [
+        "ARCH_SPEC_AND_PLAN",
+        "EPISTEMIC_REASONING",
+        "TASK_DECOMPOSITION",
+        "ORCHESTRATION_AND_QA",
+        "KNOWLEDGE_FORAGING"
+      ],
+      "strengths": "Tư duy hệ thống, phân rã bài toán, đánh giá rủi ro, điều phối HoH, củng cố tri thức Dream",
+      "benchmark": "Epistemic Rigor 99.2% | CPU Speed ~14 tok/s @ Port 8080"
+    },
+    {
+      "id": "qwen2-vl-72b",
+      "filename": "Qwen2-VL-72B-Instruct-Q4_K_M.gguf",
+      "full_path": "D:\\models\\qwen2-vl-72b\\Qwen2-VL-72B-Instruct-Q4_K_M.gguf",
+      "mmproj_path": "D:\\models\\qwen2-vl-72b\\mmproj-Qwen2-VL-72B-Instruct-f16.gguf",
+      "role": "MULTIMODAL_KNOWLEDGE_POOL",
+      "is_active_soul": false,
+      "status": "DOWNLOADED_ON_DISK",
+      "size_gb": 44.16,
+      "quant": "Q4_K_M",
+      "context_window_target": 4096,
+      "tags": [
+        "MULTIMODAL_IMAGE_REASONING",
+        "DESKTOP_GUI_VISION",
+        "CHART_ANALYSIS",
+        "DOC_UNDERSTANDING"
+      ],
+      "strengths": "Thị giác đa phương thức, biểu đồ tài chính Trading, giao diện máy tính CUA Desktop, đọc tài liệu phức tạp",
+      "benchmark": "MMBench 84.5 | DocVQA 94.2 | 72B Top-K Salience via Cautreo Cartography"
+    },
+    {
+      "id": "qwen2.5-coder-7b-instruct",
+      "filename": "qwen2.5-coder-7b-instruct-q4_k_m.gguf",
+      "role": "TECHNICAL_CODE_SPECIALIST",
+      "is_active_soul": false,
+      "status": "AVAILABLE_ON_DEMAND",
+      "size_gb": 4.68,
+      "quant": "Q4_K_M",
+      "context_window_target": 2048,
+      "tags": [
+        "NATIVE_SYSTEM_CODING",
+        "C_ABI_POINTERS",
+        "REFACTOR_AND_TESTING",
+        "PYTEST_SUITES",
+        "ALGORITHM_IMPLEMENTATION"
+      ],
+      "strengths": "Viết mã nguồn C/C++ native, ctypes memory binding, pointer arithmetic, refactor code lớn, unit test pytest",
+      "benchmark": "HumanEval 88.4 | CPU Speed ~8-12 tok/s"
+    },
+    {
+      "id": "vivy-1.5b-reflex",
+      "filename": "vivy_1.5b_q4km.gguf",
+      "role": "CUA_DESKTOP_REFLEX_CONTROLLER",
+      "is_active_soul": false,
+      "status": "ROADMAP_PROPOSED",
+      "size_gb": 0.95,
+      "quant": "Q4_K_M",
+      "context_window_target": 2048,
+      "tags": [
+        "CUA_DESKTOP_AUTOMATION",
+        "BOUNDED_CANDIDATE_SELECTION",
+        "FAST_REFLEX_ACTION",
+        "FOCUS_LESS_EXECUTION"
+      ],
+      "strengths": "Phản xạ thao tác máy tính cực nhanh (<300ms), chọn ứng viên đóng không ảo giác, nạp trong 2GB RAM Cautreo",
+      "benchmark": "Target CPU Speed >45 tok/s | Proper Scoring Calibrated"
+    },
+    {
+      "id": "vivy2",
+      "filename": "vivy2.gguf",
+      "role": "FAST_BASELINE_PARSER",
+      "is_active_soul": false,
+      "status": "ISOLATED_ARCHIVED",
+      "size_gb": 1.88,
+      "quant": "Q4_K_M",
+      "tags": [
+        "FAST_DATA_PARSING"
+      ],
+      "strengths": "[ISOLATED - 21/09/2026] Đã giải phóng dung lượng cho Qwen2-VL-72B"
+    },
+    {
+      "id": "qwen3.8-27b",
+      "filename": "qwen3.8-27b.gguf",
+      "role": "DEEP_ANALYTICAL_RESEARCH",
+      "is_active_soul": false,
+      "status": "ISOLATED_ARCHIVED",
+      "size_gb": 6.77,
+      "quant": "IQ2_XXS",
+      "tags": [
+        "DEEP_SYNTHESIS"
+      ],
+      "strengths": "[ISOLATED - 21/09/2026] Đã giải phóng dung lượng cho Qwen2-VL-72B"
+    }
+  ],
+  "task_archetype_mapping": {
+    "ARCH_SPEC_AND_PLAN": "gemma4-e4b",
+    "KNOWLEDGE_FORAGING": "gemma4-e4b",
+    "DYNAMIC_ORCHESTRATION_QA": "gemma4-e4b",
+    "NATIVE_SYSTEM_CODING": "qwen2.5-coder-7b-instruct",
+    "REFACTOR_AND_TESTING": "qwen2.5-coder-7b-instruct",
+    "MULTIMODAL_IMAGE_REASONING": "qwen2-vl-72b",
+    "DESKTOP_GUI_VISION": "qwen2-vl-72b",
+    "CUA_DESKTOP_AUTOMATION": "vivy-1.5b-reflex"
+  }
+}

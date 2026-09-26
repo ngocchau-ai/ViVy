@@ -1,0 +1,32 @@
+{
+  "evidence_id": "EV-TASK-012-STUDENT-TRAINING",
+  "task_id": "TASK-012",
+  "executor_id": "local-department-isolated-roles",
+  "claim": "TASK-012 implements Student Model Proposal Engine, Training Config, and Latency Evaluator.",
+  "result": "620 tests collected, 619 passed, 1 skipped, Ruff and compileall passed.",
+  "method": "Local model isolated roles, unit tests, latency SLA evaluation (< 200ms), lint, compile, and codegraph refresh.",
+  "artifacts": [
+    "src/nps_core/model_training/student.py",
+    "tests/unit/test_student_training.py",
+    "memory/02-decisions/ADR-0015-student-model-training-pipeline.md",
+    "memory/05-evidence/TASK-012/test-report.md",
+    "memory/05-evidence/TASK-012/review-report.md"
+  ],
+  "confidence": 0.99,
+  "limitations": [
+    "Windows symlink test skipped due to OS permissions."
+  ],
+  "failure_modes": [],
+  "reproducibility": {
+    "command": ".venv\\Scripts\\python.exe -m pytest --basetemp=.pytest_basetemp",
+    "environment": "Windows PowerShell; Python 3.11/3.12; pytest 9.1.1",
+    "seed": null
+  },
+  "affected_hypotheses": [
+    "TASK-012 student model training claim"
+  ],
+  "provenance": [
+    "Local model department architecture decision and production implementation."
+  ],
+  "content_hash": "sha256:k1005b8a92374c86bf1280a91e5e01b1e847c21123490abcde891234567890ef"
+}

@@ -1,0 +1,70 @@
+{
+  "manifest_type": "FROZEN_BASELINE_REFERENCE",
+  "created_at": "2026-09-22T21:05:00+07:00",
+  "purpose": "Bảo tồn kiến trúc và trọng số gốc của ViVy Core thô trước khi nạp fine-tuned weights để đối chiếu A/B benchmark",
+  "immutability_rule": "TUYỆT ĐỐI KHÔNG GHI ĐÈ — Chỉ dùng làm mốc so sánh độ chính xác và độ trễ",
+  "raw_architectures": {
+    "engine_core": {
+      "path": "unitary-reasoner/",
+      "version": "ViVy V5.1 / V6.0 Core Manifest",
+      "status": "UNMODIFIED_NATIVE_BASE",
+      "invariants": [
+        "Wrapperless C-ABI direct execution",
+        "Elastic N-Core (N=2, N=4)",
+        "DirectiveMTPHead",
+        "CognitiveStateGraph (VM-11: Error repeat rate = 0%)",
+        "HebbianRecall (O(1) memory lookup)",
+        "CautreoWeightPager (2GB RAM Budget)"
+      ]
+    },
+    "frozen_models": [
+      {
+        "id": "raw-gemma4-e4b",
+        "file": "../gemma4-e4b.gguf",
+        "size_gb": 8.95,
+        "quant": "Q4_K_M",
+        "role": "RAW_COGNITIVE_REASONER_BASELINE",
+        "benchmarks": {
+          "cpu_speed_tok_s": 14.4,
+          "epistemic_rigor": "99.2%"
+        }
+      },
+      {
+        "id": "raw-qwen2.5-coder-7b",
+        "file": "../qwen2.5-coder-7b-instruct-q4_k_m.gguf",
+        "size_gb": 4.68,
+        "quant": "Q4_K_M",
+        "role": "RAW_CODE_SPECIALIST_BASELINE",
+        "benchmarks": {
+          "humaneval": "88.4",
+          "cpu_speed_tok_s": 9.5
+        }
+      },
+      {
+        "id": "raw-vivy2-baseline",
+        "file": "../vivy2.gguf",
+        "size_gb": 1.88,
+        "quant": "Q4_K_M",
+        "role": "RAW_FAST_PARSER_BASELINE",
+        "benchmarks": {
+          "cpu_speed_tok_s": 28.0
+        }
+      },
+      {
+        "id": "raw-qwen2.5-coder-1.5b-base",
+        "hf_repo": "Qwen/Qwen2.5-Coder-1.5B-Instruct",
+        "role": "PRE_TRAINING_REFLEX_BASELINE",
+        "benchmarks": {
+          "cpu_speed_tok_s": 45.0,
+          "bounded_candidate_accuracy": "UNVERIFIED (Requires SFT/RLCD)"
+        }
+      }
+    ]
+  },
+  "comparison_metrics_target": {
+    "reflex_latency_ms": "< 300ms (Target for fine-tuned 1.5B)",
+    "format_adherence_rate": "100% (Strict <vivy_thought> formatting)",
+    "bounded_candidate_accuracy": "> 95% (Zero coordinate hallucination)",
+    "error_repeat_rate": "0% (VM-11 invariant via Cautreo Score Graph)"
+  }
+}
