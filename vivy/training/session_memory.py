@@ -1,9 +1,9 @@
-"""C10 — session-isolated memory store (put/get/delete, version, TTL, restart).
+﻿"""C10 — session-isolated memory store (put/get/delete, version, TTL, restart).
 
 Acceptance-plan C10.1: correctness put/get/delete-isolation theo session,
 Unicode, long values, overwrite/version, TTL, restart và concurrent access.
 
-Semantics follow `Vivy final/engine/include/context_memory.h` (CT_MEMORY_*),
+Semantics follow `engine/include/context_memory.h` (CT_MEMORY_*),
 with an explicit session namespace so two sessions sharing one hub cannot
 leak keys, versions, or deletes into each other.
 

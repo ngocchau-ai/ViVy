@@ -1,4 +1,4 @@
-"""model_catalog.py — Autonomous Local Model Discovery & Capability Tagging.
+﻿"""model_catalog.py — Autonomous Local Model Discovery & Capability Tagging.
 
 Triển khai cơ chế quét kho mô hình (models/), nhận diện năng lực và gán nhãn
 cho ViVy (Lõi nhận thức Gemma 4EB) khi khởi động, giúp ViVy:
@@ -167,9 +167,9 @@ class ModelCatalogScanner:
                 cand_paths.append(Path(env_m.strip()))
             cand_paths.extend([
                 Path(__file__).resolve().parent.parent.parent / "models",
-                Path("Vivy final/models"),
+                Path("Vivy_final/models"),
                 Path("models"),
-                Path("../Vivy final/models"),
+                Path("../Vivy_final/models"),
             ])
             self.models_dir = next((p for p in cand_paths if p.is_dir()), Path("models"))
 

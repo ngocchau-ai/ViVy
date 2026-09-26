@@ -19,8 +19,9 @@ from pathlib import Path
 WORKSPACE_ROOT = Path(__file__).resolve().parent.parent.parent
 # Compatibility bridge: the packaged Final track still imports the shared
 # OpenAI-compatible LLM client from the active unitary-reasoner track.
+# 2026-09-26: runtime packages live under vivy/ (reorg D2/D5), not core/.
 sys.path.insert(0, str(WORKSPACE_ROOT.parent / "unitary-reasoner"))
-sys.path.insert(0, str(WORKSPACE_ROOT / "core"))
+sys.path.insert(0, str(WORKSPACE_ROOT / "vivy"))
 
 from engine.dream_engine import VivyDreamEngine  # noqa: E402
 from integration.cautreo_binding import (  # noqa: E402
@@ -39,12 +40,13 @@ from integration.vivy_inference_loop import (  # noqa: E402
 def verify_codex_remediations() -> dict[str, bool]:
     results = {}
 
-    # Check 1: Qwen2.5-Coder model artifact presence
-    coder_path = WORKSPACE_ROOT / "models" / "qwen2.5-coder-7b-instruct-q4_k_m.gguf"
-    exists = coder_path.is_file()
-    size_mb = (coder_path.stat().st_size / (1024 * 1024)) if exists else 0
-    results["qwen_coder_artifact_present"] = exists and size_mb > 4000
-    print(f"[CODEX-P1-1] Qwen2.5-Coder artifact: {'FOUND' if exists else 'MISSING'} ({size_mb:.1f} MB)")
+    # [ISOLATED 26/09/2026] Check 1 "Qwen2.5-Coder model artifact presence" — GỠ BỎ.
+    # `qwen2.5-coder-7b-instruct-q4_k_m.gguf` không tồn tại trên đĩa và user chỉ thị
+    # xóa tham chiếu; kéo theo xóa 2 runtime `start_vivy_qwen_coder.ps1`. Check này
+    # luôn trả MISSING nên vô nghĩa. Không gỡ trắng: giữ tên check trong results để
+    # các consumer cũ không KeyError.
+    results["qwen_coder_artifact_present"] = False
+    print("[CODEX-P1-1] Qwen2.5-Coder artifact: [ISOLATED 26/09/2026] gguf đã gỡ — check này bị loại bỏ")
 
     # Check 2: ElasticNCore audit boundary
     from engine.elastic_n_core import ElasticNCore

@@ -3,6 +3,7 @@
   "created_at": "2026-09-22T21:05:00+07:00",
   "purpose": "Bảo tồn kiến trúc và trọng số gốc của ViVy Core thô trước khi nạp fine-tuned weights để đối chiếu A/B benchmark",
   "immutability_rule": "TUYỆT ĐỐI KHÔNG GHI ĐÈ — Chỉ dùng làm mốc so sánh độ chính xác và độ trễ",
+  "isolated_notes_2026-09-26": "[ISOLATED 26/09/2026] CÁC ĐƯỜNG DẪN `file` DƯỚI ĐÂY LÀ HỒ SƠ BASELINE LỊCH SỬ, KHÔNG PHẢI ĐÍCH NẠP. Không ghi đè entry theo immutability_rule — chỉ bổ sung ghi chú này. (1) `../gemma4-e4b.gguf` sai tên: bản thật là `D:\\models\\gemma4-e4b\\vivy-gemma-e4b-q4km.gguf`. (2) `../qwen2.5-coder-7b-instruct-q4_k_m.gguf` KHÔNG tồn tại trên đĩa — user chỉ thị gỡ tham chiếu (2026-09-26), kéo theo xóa 2 runtime `start_vivy_qwen_coder.ps1`. (3) `../vivy2.gguf` đã giải phóng NVMe 21/09/2026 (`ISOLATED_ARCHIVED`). Nguồn sự thật về vị trí trọng số: `models/model_manifest.json` (`full_path`) + `MODEL_ROOT = D:\models`.",
   "raw_architectures": {
     "engine_core": {
       "path": "unitary-reasoner/",

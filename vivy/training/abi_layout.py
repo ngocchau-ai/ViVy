@@ -1,11 +1,11 @@
-"""C10 — C-ABI layout / ownership / error-propagation contract.
+﻿"""C10 — C-ABI layout / ownership / error-propagation contract.
 
 Acceptance-plan C10.2: verify ABI layout/ownership/lifetime, error propagation;
 DLL load được KHÔNG được coi là memory path đúng.
 
-Contract source: `Vivy final/engine/include/context_memory.h`.
+Contract source: `engine/include/context_memory.h`.
 This module checks the Python ctypes view of those structs (as used by
-`Vivy final/core/integration/cautreo_binding.py`) against the header, and
+`vivy/integration/cautreo_binding.py`) against the header, and
 defines the ownership rules a wrapper must follow (borrowed get → copy out).
 
 Changelog:

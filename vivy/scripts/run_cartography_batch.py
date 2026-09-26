@@ -1,6 +1,16 @@
-"""
+﻿"""
 Batch Knowledge Cartographer for existing models in the workspace.
 Scans models, builds CoarseKnowledgeAtlas, and exports .catlas files.
+
+[ISOLATED 26/09/2026] GIỮ LÀM TÀI LIỆU SO SÁNH / THAM KHẢO — CẢ 3 PATH DƯỚI ĐÂY ĐỀU SAI.
+  - `models_to_scan[0]` → `D:\\Vivy1\\artifacts\\kaggle_gemma\\...` : path cũ.
+    Bản thật: `D:\\models\\gemma4-e4b\\vivy-gemma-e4b-q4km.gguf`.
+  - `models_to_scan[1]` → `qwen2.5-coder-7b-instruct-q4_k_m.gguf` : KHÔNG tồn tại,
+    user chỉ thị gỡ tham chiếu 26/09/2026 (kéo theo xóa 2 runtime qwen_coder).
+  - `models_to_scan[2]` → `vivy2.gguf` : đã giải phóng NVMe 21/09/2026.
+  - `ws / "atlases"` : sau reorg D2/D5 atlas sống ở `cautreo/atlases/`, không phải `vivy/atlases/`.
+Giữ nguyên để đối chiếu cách build CoarseKnowledgeAtlas. Nguồn sự thật về trọng số:
+`models/model_manifest.json` (`full_path`) + `MODEL_ROOT = D:\\models`.
 """
 
 import sys
@@ -26,8 +36,8 @@ def main():
 
     models_to_scan = [
         ("gemma4-e4b", 48, r"D:\Vivy1\artifacts\kaggle_gemma\vivy-gemma-e4b-q4km.gguf"),
-        ("qwen2.5-coder-7b", 28, r"D:\91s_Vivy\Vivy final\models\qwen2.5-coder-7b-instruct-q4_k_m.gguf"),
-        ("vivy2", 24, r"D:\91s_Vivy\Vivy final\models\vivy2.gguf"),
+        ("qwen2.5-coder-7b", 28, r"D:\91s_Vivy\Vivy_final\models\qwen2.5-coder-7b-instruct-q4_k_m.gguf"),
+        ("vivy2", 24, r"D:\91s_Vivy\Vivy_final\models\vivy2.gguf"),
     ]
 
     for model_id, layers, path in models_to_scan:

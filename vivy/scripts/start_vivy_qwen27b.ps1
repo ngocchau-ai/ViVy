@@ -1,4 +1,8 @@
 # start_vivy_qwen27b.ps1
+# [ISOLATED 26/09/2026] GIỮ LÀM TÀI LIỆU SO SÁNH / THAM KHẢO — KHÔNG CHẠY ĐƯỢC.
+#   - `qwen3.8-27b.gguf` đã bị gỡ (ISOLATED_ARCHIVED 21/09/2026, giải phóng NVMe cho Qwen2-VL-72B).
+#   - User chỉ thị 26/09/2026: gỡ tham chiếu gguf không còn dùng. Bản này giữ nguyên
+#     để đối chiếu cách khởi động llama-server trước khi model bị archive.
 # Khởi động ViVy với Qwen3.8-27B IQ2_XXS qua llama-server
 #
 # Changelog:

@@ -1,4 +1,4 @@
-# scripts/ — Bộ Script Vận Hành (Operational Toolkit)
+﻿# scripts/ — Bộ Script Vận Hành (Operational Toolkit)
 
 > [!IMPORTANT]
 > **Đây là bản MIRROR CÓ CHỦ ĐÍCH — KHÔNG được "dọn trùng lặp".**
@@ -7,7 +7,7 @@
 >
 > | Repo | Vai trò | Cam kết |
 > |:---|:---|:---|
-> | `Vivy final/scripts/` | **CODE** (ViVy Core + Cautreo Native) | commit độc lập |
+> | `Vivy_final/scripts/` | **CODE** (ViVy Core + Cautreo Native) | commit độc lập |
 > | `vivyChatGPT/scripts/` | **SPECS** (đặc tả, giao ChatGPT) | commit độc lập |
 >
 > **Lý do (quyết định D5, 26/09/2026):** hai repo được giao cho hai agent/đầu mối
@@ -26,21 +26,22 @@
 
 ---
 
-## Danh mục 22 script vận hành (2026-09-26)
+## Danh mục script vận hành (cập nhật 2026-09-26)
 
 ### Khởi động / vận hành runtime
 | Script | Loại | Chức năng |
 |:---|:---|:---|
 | `start_vivy_unified.ps1` | PowerShell | Khởi động ViVy unified (runtime chính) |
 | `start_vivy_gemma4.ps1` | PowerShell | Khởi động ViVy với Gemma 4 E4B Q4_K_M |
-| `start_vivy_qwen_coder.ps1` | PowerShell | Khởi động ViVy với Qwen Coder |
-| `start_vivy_qwen27b.ps1` | PowerShell | Khởi động ViVy với Qwen 2.5 27B *(bổ sung D5.2 — target model khác `qwen_coder`)* |
+| `start_vivy_qwen27b.ps1` | PowerShell | `[ISOLATED 26/09/2026]` Giữ làm tài liệu so sánh — target `qwen3.8-27b.gguf` đã archived, và bản này còn giả định path `D:\Vivy1\.llama-build\bin\llama-server.exe` (sai). Bản sống: `vivy/scripts/start_vivy_qwen27b.ps1`. |
 | `start_desktop.ps1` | PowerShell | Khởi động Desktop Studio (Tauri + Vite) |
 | `vivy_call.bat` | Batch | Gọi nhanh ViVy từ CLI |
 | `vivy_health_check.bat` | Batch | Kiểm tra sức khỏe ViVy nhanh |
-| `py_runner.bat` | Batch | Runner Python có kiểm soát |
-| `run_python.bat` | Batch | Chạy Python script trong môi trường dự án |
+| `py_runner.bat` | Batch | Runner Python có kiểm soát (**bản sống**) |
+| `run_python.bat` | Batch | `[ISOLATED 26/09/2026]` Trùng byte với `py_runner.bat` (MD5 `07-FE-BD`) → redirect sang `py_runner.bat`. Giữ để không vỡ caller. |
 | `convert_to_physical.bat` | Batch | Chuyển đổi sang chế độ physical |
+
+> **[ISOLATED 26/09/2026]** `start_vivy_qwen_coder.ps1` **đã xóa** — trọng số `qwen2.5-coder-7b-instruct-q4_k_m.gguf` không tồn tại trên đĩa (user chỉ thị 26/09/2026), kéo theo gỡ tham chiếu trong `verify_vivy_cautreo_readiness.py` và `models/baselines/*`. Xem `models/baselines/README.md` mục `[ISOLATED]`.
 
 ### Kiểm thử / xác minh
 | Script | Loại | Chức năng |
@@ -68,7 +69,7 @@
 
 ```powershell
 # Từ workspace root — so SHA-256 toàn bộ file giữa 2 repo
-Get-ChildItem "Vivy final\scripts" -File | ForEach-Object {
+Get-ChildItem "Vivy_final\scripts" -File | ForEach-Object {
   $a = (Get-FileHash $_.FullName).Hash
   $b = (Get-FileHash ("vivyChatGPT\scripts\" + $_.Name)).Hash
   [PSCustomObject]@{ Name=$_.Name; Match=($a -eq $b) }

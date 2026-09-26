@@ -1,4 +1,4 @@
-# Vivy final — GitHub-ready ignore (2026-09-26)
+# Vivy_final — GitHub-ready ignore (2026-09-26)
 # Rule: repo holds CODE + SPEC + text evidence only. Never weights, secrets, caches, binaries.
 
 # ── Secrets (MUST never commit) ─────────────────────────────────

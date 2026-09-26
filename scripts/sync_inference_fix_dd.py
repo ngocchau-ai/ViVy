@@ -1,4 +1,4 @@
-import os
+﻿import os
 
 content = """# Durable Decision — HoH Inference Timeout, Empty Content & Reasoning Resolution
 
@@ -19,7 +19,7 @@ Codex phản hồi:
 - `/health`: PASS
 - `/v1/models`: PASS
 - Direct API retry / HoH vivy_call.py: Treo / không trả nội dung (empty content).
-- Blocker: Chưa có directive hợp lệ của ViVy nên Codex chưa thể bắt đầu thiết kế desktop app `cautreo_dsk` hoặc sao chép source `Vivy final`.
+- Blocker: Chưa có directive hợp lệ của ViVy nên Codex chưa thể bắt đầu thiết kế desktop app `cautreo_dsk` hoặc sao chép source `Vivy_final`.
 
 **Nguyên nhân kỹ thuật cốt lõi phát hiện:**
 1. **Lỗi rỗng `message.content`**: Llama-server mặc định trích xuất suy luận vào trường `message.reasoning_content` và để trống `message.content = ""`. Các client OpenAI tiêu chuẩn (như Codex CLI, standard SDK) chỉ đọc trường `content`, do đó nhận về chuỗi rỗng.

@@ -1,5 +1,13 @@
 """
 bench_qwen27b.py — Evaluation script: Qwen3.8-27B vs Gemma4 E4B
+
+[ISOLATED 26/09/2026] GIỮ LÀM TÀI LIỆU SO SÁNH / THAM KHẢO.
+Script này giả định `qwen3.8-27b` còn sống — thực tế gguf đã `ISOLATED_ARCHIVED`
+21/09/2026 (giải phóng NVMe cho Qwen2-VL-72B) và bị gỡ tham chiếu sống 26/09/2026.
+Giữ nguyên để đối chiếu cách đo 3 benchmark + ngưỡng ra quyết định PASS/FAIL
+(>= 2 tok/s, epistemic block OK, tool call OK). Không dùng làm đích nạp model.
+Nguồn sự thật về trọng số: `models/model_manifest.json` (`full_path`, `status`).
+
 Chạy 3 benchmark tasks, đo speed và quality, ra quyết định.
 
 Usage:

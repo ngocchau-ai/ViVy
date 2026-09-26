@@ -1,4 +1,13 @@
-"""run_vivy_benchmark_suite.py — Bộ Benchmark Đánh Giá Thực Tiễn ViVy Final V1.0.
+﻿"""run_vivy_benchmark_suite.py — Bộ Benchmark Đánh Giá Thực Tiễn ViVy Final V1.0.
+
+[ISOLATED 26/09/2026] GIỮ LÀM TÀI LIỆU SO SÁNH / THAM KHẢO.
+Script này còn 2 giả định layout cũ:
+  1. `sys.path.insert(... / "unitary-reasoner")` — package runtime đã hợp nhất vào `vivy/`.
+  2. Test 3 nạp `WORKSPACE_ROOT/"models"/"gemma4-e4b.gguf"` và
+     `"qwen2.5-coder-7b-instruct-q4_k_m.gguf"` — cả hai sai: repo `models/` chỉ giữ
+     metadata, trọng số sống ở `MODEL_ROOT = D:\models` (xem `models/model_manifest.json`),
+     và gguf qwen2.5-coder đã bị user chỉ thị gỡ (26/09/2026).
+Giữ nguyên để đối chiếu cách đo 5 benchmark; không dùng làm đích nạp model.
 
 Triển khai 5 phương án benchmark chuẩn hóa để bóc trần toàn diện các điểm yếu:
 1. Benchmark 1: Epistemic Calibration & Overconfidence Stress-Test
@@ -343,7 +352,7 @@ def benchmark_cpu_latency_and_resources() -> BenchmarkResult:
         weaknesses.append(f"Parallel pipeline decomposition latency high: {pipe_ms:.2f}ms")
 
     # Test 3: Memory footprint verification (Checking models on disk exist and are <= 10GB per active model)
-    models_dir = WORKSPACE_ROOT / "Vivy final" / "models"
+    models_dir = WORKSPACE_ROOT / "models"
     gemma_path = models_dir / "gemma4-e4b.gguf"
     qwen_path = models_dir / "qwen2.5-coder-7b-instruct-q4_k_m.gguf"
 
@@ -360,7 +369,7 @@ def benchmark_cpu_latency_and_resources() -> BenchmarkResult:
         else:
             weaknesses.append("Model weights exceed safe single-model allocation on 16GB RAM.")
     else:
-        weaknesses.append("Required model weights missing from Vivy final/models.")
+        weaknesses.append("Required model weights missing from models/ (see model_manifest.json full_path).")
 
     score = (passed / total) * 100
     return BenchmarkResult(

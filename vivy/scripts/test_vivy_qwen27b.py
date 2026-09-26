@@ -1,6 +1,12 @@
 """
 test_vivy_qwen27b.py — Validate ViVy connection với Qwen3.8-27B
 
+[ISOLATED 26/09/2026] GIỮ LÀM TÀI LIỆU SO SÁNH / THAM KHẢO.
+Script này giả định `qwen3.8-27b` còn sống — thực tế gguf đã `ISOLATED_ARCHIVED`
+21/09/2026 và bị gỡ tham chiếu sống 26/09/2026. Giữ nguyên để đối chiếu cách
+validate kết nối ViVy ↔ llama-server. Không dùng làm đích nạp model.
+Nguồn sự thật về trọng số: `models/model_manifest.json` (`full_path`, `status`).
+
 Chạy sau khi llama-server khởi động xong:
     python scripts/test_vivy_qwen27b.py
 

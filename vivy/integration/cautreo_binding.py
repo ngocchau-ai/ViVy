@@ -1,4 +1,4 @@
-"""
+﻿"""
 cautreo_binding.py — ViVy Native In-Process C-ABI Binding for CAUTREO Engine.
 
 Cung cấp kết nối trực tiếp (In-Process Direct Binding) giữa
@@ -132,11 +132,11 @@ class _CtMemoryOptions(ctypes.Structure):
 def _find_cautreo_dll() -> str | None:
     """Locate cautreo.dll in known build directories."""
     candidates = [
-        # 2026-09-26 repo layout: vivy/integration/ -> Vivy final/engine/bin/
+        # 2026-09-26 repo layout: vivy/integration/ -> Vivy_final/engine/bin/
         Path(__file__).resolve().parent.parent.parent / "engine" / "bin" / "cautreo.dll",
-        Path("D:/91s_Vivy/Vivy final/engine/bin/cautreo.dll"),
+        Path("D:/91s_Vivy/Vivy_final/engine/bin/cautreo.dll"),
         # [ISOLATED 26/09/2026] legacy relative from unitary-reasoner/integration/ — kept as fallback
-        Path(__file__).parent.parent.parent / "Vivy final" / "engine" / "bin" / "cautreo.dll",
+        Path(__file__).parent.parent.parent / "Vivy_final" / "engine" / "bin" / "cautreo.dll",
         Path("D:/cautreov2/build/cautreo.dll"),
         Path(os.environ.get("CAUTREO_DLL_PATH", "")),
         Path(__file__).parent.parent.parent / "cautreov2" / "build" / "cautreo.dll",
@@ -173,10 +173,10 @@ is_cautreo_available = is_native_cautreo_available
 def _find_pager_dll() -> str | None:
     """Locate cautreo_pager.dll in known build directories."""
     candidates = [
-        # 2026-09-26 repo layout: vivy/integration/ -> Vivy final/engine/bin/
+        # 2026-09-26 repo layout: vivy/integration/ -> Vivy_final/engine/bin/
         Path(__file__).resolve().parent.parent.parent / "engine" / "bin" / "cautreo_pager.dll",
         # [ISOLATED 26/09/2026] legacy relative from unitary-reasoner/integration/ — kept as fallback
-        Path(__file__).parent.parent.parent / "Vivy final" / "engine" / "bin" / "cautreo_pager.dll",
+        Path(__file__).parent.parent.parent / "Vivy_final" / "engine" / "bin" / "cautreo_pager.dll",
         Path(os.environ.get("CAUTREO_PAGER_DLL_PATH", "")),
     ]
     for p in candidates:

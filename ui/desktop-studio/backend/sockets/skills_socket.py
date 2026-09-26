@@ -33,7 +33,7 @@ class SkillsSocket:
                 "id": "hoh-vivy-default",
                 "name": "HoH × ViVy Final Flow",
                 "description": "Luồng agent mặc định HoH × ViVy Final, tự động nạp Intuition Digest và chấm điểm Cautreo.",
-                "keywords": ["hoh vivy", "vivy session", "vivy final"],
+                "keywords": ["hoh vivy", "vivy session", "vivy final", "vivy_final"],
                 "badge": "DEFAULT",
             },
             {

@@ -1,4 +1,10 @@
-"""verify_vivy_cautreo_readiness.py
+﻿"""verify_vivy_cautreo_readiness.py
+
+[ISOLATED 26/09/2026] BẢN NÀY GIỮ LÀM TÀI LIỆU SO SÁNH / THAM KHẢO.
+Bản vận hành thật: `vivy/scripts/verify_vivy_cautreo_readiness.py`.
+Bản này còn 2 giả định layout cũ: (1) `WORKSPACE_ROOT/unitary-reasoner` trong
+sys.path, (2) trỏ trọng số theo `Vivy_final/models/` — cả hai đều sai sau reorg
+D2/D5. Giữ nguyên để đối chiếu cách sửa.
 
 Comprehensive end-to-end verification of ViVy Final and Cautreo Engine:
 1. Verification of Codex Findings Remediation (P1 & P2 fixes)
@@ -34,12 +40,11 @@ from integration.vivy_inference_loop import (  # noqa: E402
 def verify_codex_remediations() -> dict[str, bool]:
     results = {}
 
-    # Check 1: Qwen2.5-Coder model artifact presence
-    coder_path = WORKSPACE_ROOT / "Vivy final" / "models" / "qwen2.5-coder-7b-instruct-q4_k_m.gguf"
-    exists = coder_path.is_file()
-    size_mb = (coder_path.stat().st_size / (1024 * 1024)) if exists else 0
-    results["qwen_coder_artifact_present"] = exists and size_mb > 4000
-    print(f"[CODEX-P1-1] Qwen2.5-Coder artifact: {'FOUND' if exists else 'MISSING'} ({size_mb:.1f} MB)")
+    # [ISOLATED 26/09/2026] Check 1 "Qwen2.5-Coder model artifact presence" — GỠ BỎ.
+    # `qwen2.5-coder-7b-instruct-q4_k_m.gguf` không tồn tại trên đĩa và user chỉ thị
+    # xóa tham chiếu; kéo theo xóa 2 runtime `start_vivy_qwen_coder.ps1`.
+    results["qwen_coder_artifact_present"] = False
+    print("[CODEX-P1-1] Qwen2.5-Coder artifact: [ISOLATED 26/09/2026] gguf đã gỡ — check này bị loại bỏ")
 
     # Check 2: ElasticNCore audit boundary
     from engine.elastic_n_core import ElasticNCore

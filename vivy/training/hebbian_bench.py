@@ -1,10 +1,10 @@
-"""C10 — multi-size Hebbian recall benchmark (W@x vs node-ID scan).
+﻿"""C10 — multi-size Hebbian recall benchmark (W@x vs node-ID scan).
 
 Acceptance-plan C10.3: benchmark nhiều kích thước graph, không suy O(1) từ
 hai điểm. Tách W@x và node-ID scan; report fixed dimensions.
 
 Operator is W = Y @ pinv(X) (Moore–Penrose), matching
-`Vivy final/core/memory/hebbian_recall.py`. This bench measures that operator
+`vivy/memory/hebbian_recall.py`. This bench measures that operator
 at many n and reports a wall-clock distribution per path — it does not claim
 a complexity class from the numbers.
 

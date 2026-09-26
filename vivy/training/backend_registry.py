@@ -1,4 +1,4 @@
-"""C01 backend registry — real backends only, every request tagged, no silent fallback.
+﻿"""C01 backend registry — real backends only, every request tagged, no silent fallback.
 
 Enumerates the real inference surfaces in this workspace:
   * llama-server  (llama.cpp / Ollama OpenAI-compatible HTTP, default :8080)
@@ -70,7 +70,7 @@ def enumerate_backends(*, decoding: Mapping[str, Any] | None = None) -> list[Reg
                 model_hash="",  # filled by live probe when /v1/models is reachable
                 config_hash=chash,
                 base_url=llama_url,
-                extra={"bridge": "Vivy final/core/integration/llama_cpp_bridge.py",
+                extra={"bridge": "vivy/integration/llama_cpp_bridge.py",
                        "thinking_budget_default": 1024},
             ),
             describe="llama.cpp / Ollama OpenAI-compatible HTTP server (C01 reference candidate)",

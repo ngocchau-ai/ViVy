@@ -1,4 +1,8 @@
 # start_vivy_gemma4.ps1
+# [ISOLATED 26/09/2026] BẢN CŨ HƠN — GIỮ LÀM TÀI LIỆU SO SÁNH.
+#   Bản vận hành: `vivy/scripts/start_vivy_gemma4.ps1` (có thêm commit 23/09/2026
+#   nâng --reasoning-budget lên 1024 cho P1 Dynamic Thinking Budget).
+#   Bản này dừng ở --reasoning-budget 384 (static hard cap).
 # Fallback: Khởi động ViVy với Gemma4 E4B GGUF (nhanh hơn, đã proven)
 #
 # Changelog:

@@ -1,4 +1,4 @@
-import os
+﻿import os
 
 content = """# Durable Decision — Codex Review Resolution, Model ID Standardization & Python Runtime Recovery
 
@@ -35,7 +35,7 @@ Sau báo cáo rà soát của Codex (VIVY_HOH_STATUS_FOR_ANTIGRAVITY.md và ANTI
      + `D:\\91s_Vivy\\scripts\\py_runner.bat`
      + `D:\\91s_Vivy\\scripts\\vivy_health_check.bat`
      + `D:\\91s_Vivy\\scripts\\vivy_call.bat`
-   - Cập nhật `Vivy final/scripts/verify_all.ps1` ưu tiên nhận diện `D:\\91s_Vivy\\.venv\\Scripts\\python.exe`.
+   - Cập nhật `Vivy_final/scripts/verify_all.ps1` ưu tiên nhận diện `D:\\91s_Vivy\\.venv\\Scripts\\python.exe`.
 
 ---
 
