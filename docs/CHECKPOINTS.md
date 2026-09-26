@@ -23,10 +23,12 @@
 
 | File | Dung lượng (byte) | Dung lượng đọc | Ngày tạo | Ghi chú |
 |---|---:|---:|---|---|
-| `checkpoints/checkpoints/observation_learning/vivy_final.pt` | 2,383,247,654 | **2.383 GB** | 2026-08-01 | Trọng số cuối của kỳ observation_learning |
-| `checkpoints/checkpoints/observation_learning/vivy_best.pt` | 2,383,247,435 | **2.383 GB** | 2026-08-01 | Best-ckpt theo metric cùng kỳ (chênh 219 B so với final) |
-| `checkpoints/checkpoints/vivy_core_tinyllama.pt` | 1,091,087,236 | **1.091 GB** | 2026-08-01 | Core ViVy trên backbone TinyLLaMA |
-| `checkpoints/checkpoints/vivy_core_standalone.pt` | 153,587,163 | **153.6 MB** | 2026-08-01 | Core standalone (không backbone ngoài) |
+| `checkpoints/observation_learning/vivy_final.pt` | 2,383,247,654 | **2.383 GB** | 2026-08-01 | Trọng số cuối của kỳ observation_learning |
+| `checkpoints/observation_learning/vivy_best.pt` | 2,383,247,435 | **2.383 GB** | 2026-08-01 | Best-ckpt theo metric cùng kỳ (chênh 219 B so với final) |
+| `checkpoints/vivy_core_tinyllama.pt` | 1,091,087,236 | **1.091 GB** | 2026-08-01 | Core ViVy trên backbone TinyLLaMA |
+| `checkpoints/vivy_core_standalone.pt` | 153,587,163 | **153.6 MB** | 2026-08-01 | Core standalone (không backbone ngoài) |
+
+> `[REPLACED 26/09/2026]` Đường dẫn cũ là `checkpoints/checkpoints/…` (lồng dư một cấp do copy giữ nguyên cây nguồn `core-room/`). Đã gỡ phẳng — xem mục 8. **Nội dung và byte không đổi** (SHA-256 khớp 4/4).
 
 **Tổng 4 file chính:** 5,917,969,488 byte ≈ **5.92 GB** (≈ 92.4% dung lượng kho).
 
@@ -77,12 +79,11 @@
 ```
 internal/                          ← gitignore toàn bộ
 ├── checkpoints/
-│   ├── checkpoints/
-│   │   ├── observation_learning/
-│   │   │   ├── vivy_best.pt       (2,383,247,435 B)
-│   │   │   └── vivy_final.pt      (2,383,247,654 B)
-│   │   ├── vivy_core_standalone.pt (153,587,163 B)
-│   │   └── vivy_core_tinyllama.pt  (1,091,087,236 B)
+│   ├── observation_learning/
+│   │   ├── vivy_best.pt       (2,383,247,435 B)
+│   │   └── vivy_final.pt      (2,383,247,654 B)
+│   ├── vivy_core_standalone.pt (153,587,163 B)
+│   ├── vivy_core_tinyllama.pt  (1,091,087,236 B)
 │   └── models/
 │       ├── 70b/model_compressed.pt | vivy_70b_trained.pt
 │       ├── spatial/spatial_model.pt | spatial_module.pt
@@ -93,7 +94,7 @@ internal/                          ← gitignore toàn bộ
 └── vivy_core_memory.npy
 ```
 
-> Tầng `checkpoints/checkpoints/` là **giữ nguyên cấu trúc nguồn** (`core-room/vivy-beta-by-mimocode/checkpoints/…`) — không phải lỗi đánh máy.
+> `[REPLACED 26/09/2026]` Cây cũ có thêm tầng `checkpoints/checkpoints/` — **giữ nguyên cấu trúc nguồn** `core-room/vivy-beta-by-mimocode/checkpoints/…`. Đã gỡ phẳng theo lệnh user (*"dọn luôn cái checkpoints/checkpoints bị lồng"*). Xem mục 8.
 
 ---
 
@@ -115,6 +116,7 @@ internal/                          ← gitignore toàn bộ
 | Ngày | Thay đổi | Người/Agent |
 |---|---|---|
 | 2026-09-26 | Chốt số liệu toàn kho (81 file / 6.40 GB), lập hướng dẫn độc lập theo quyết định D3 — checkpoint lưu nội bộ, kèm số liệu khi commit | Claude Code (reorg Vivy+Cautreo) |
+| 2026-09-26 | **Gỡ phẳng tầng lồng `checkpoints/checkpoints/` → `checkpoints/`** (lệnh user). Quét 2.137 file trước khi đụng: **0 tham chiếu từ code**, chỉ tài liệu/manifest. Hash trước–sau khớp **4/4**, tổng kho **6,401,192,939 B giữ nguyên**, 81 file giữ nguyên. Cập nhật bảng mục 2 + cây mục 6. | Claude Code (D5.3) |
 
 ---
 
