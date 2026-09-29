@@ -4,6 +4,10 @@ Read-only. Does not rewrite datasets and does not invent labels/outcomes.
 
 Changelog:
     24/09/2026 (Claude Code — P2 C03): Initial.
+    29/09/2026 (Claude Code — WP-6/O-10/F-H01): owns FABRICATED_EVIDENCE_LABELS;
+        detects the two row schemas (ChatML ``messages`` vs typed
+        ``context_state``/``candidates``) instead of silently auditing a
+        ChatML row as if it were typed and reporting zeros.
 """
 from __future__ import annotations
 
@@ -32,7 +36,23 @@ class AuditReport:
     near_duplicate_cross_split: list[dict[str, Any]] = field(default_factory=list)
     fixture_suspects: list[str] = field(default_factory=list)
     missing_evidence_multiline_truncation: list[str] = field(default_factory=list)
+    # --- WP-6 / O-10 / F-H01 -------------------------------------------------
+    n_schema_chatml: int = 0
+    n_schema_typed: int = 0
+    n_fabricated_evidence: int = 0
+    fabricated_evidence_rows: list[str] = field(default_factory=list)
+    n_missing_evidence_receipt: int = 0
+    missing_evidence_receipt_rows: list[str] = field(default_factory=list)
     notes: list[str] = field(default_factory=list)
+
+    @property
+    def has_fabricated_labels(self) -> bool:
+        return self.n_fabricated_evidence > 0
+
+    @property
+    def exportable(self) -> bool:
+        """T9: 0 nhãn bịa, và mọi mẫu có evidence_receipt_id."""
+        return not self.has_fabricated_labels and self.n_missing_evidence_receipt == 0
 
     def to_dict(self) -> dict[str, Any]:
         return {
@@ -48,8 +68,114 @@ class AuditReport:
             "group_cross_split": self.group_cross_split,
             "near_duplicate_cross_split": self.near_duplicate_cross_split,
             "fixture_suspects": self.fixture_suspects,
+            "n_schema_chatml": self.n_schema_chatml,
+            "n_schema_typed": self.n_schema_typed,
+            "n_fabricated_evidence": self.n_fabricated_evidence,
+            "fabricated_evidence_rows": self.fabricated_evidence_rows,
+            "n_missing_evidence_receipt": self.n_missing_evidence_receipt,
+            "missing_evidence_receipt_rows": self.missing_evidence_receipt_rows,
+            "exportable": self.exportable,
             "notes": self.notes,
         }
+
+
+# --- WP-6 / O-10 / F-H01 — fabricated hard-evidence labels --------------------
+#
+# These three strings were written by the pre-WP-6 extractor as constants into
+# every sample's ``Expected_Evidence``, regardless of what the source record
+# actually contained.  None of them names a real gate in any real system, and
+# none was ever measured.  They are never legitimate — receipt or not.
+#
+# This tuple is the single source of truth: the extractor refuses to emit
+# them, the audit flags them, and tests/test_no_fabricated_labels.py fails
+# the build when they show up in a live SFT set.
+FABRICATED_EVIDENCE_LABELS: tuple[str, ...] = (
+    "AST_VALID_AND_TEST_PASS",
+    "COGNITIVE_CONSENSUS_VERIFIED",
+    "MULTIMODAL_GROUNDING_VERIFIED",
+)
+
+#: ``capture_id_matched: True`` is a real check name, so it is legitimate when
+#: the source record reports it.  The extractor wrote it unconditionally; that
+#: specific emission is what WP-6 stops.  It is not in FABRICATED_EVIDENCE_LABELS
+#: because a record that genuinely observed a match may say so.
+ALWAYS_TRUE_CHECK_ASSERTIONS: tuple[str, ...] = (
+    "capture_id_matched: True",
+)
+
+#: What ``Expected_Evidence`` says when no receipt backs it.  Not a claim.
+UNVERIFIED_EVIDENCE = "UNVERIFIED"
+
+#: Marker a sample must carry to be exportable (T9).
+EVIDENCE_RECEIPT_FIELD = "evidence_receipt_id"
+
+
+def detect_schema(row: Mapping[str, Any]) -> str:
+    """``"chatml"`` (messages/source/reward) or ``"typed"`` (context_state/candidates).
+
+    The two schemas were being fed to the same auditor, which read a ChatML
+    row as a typed row with every field missing and reported a wall of zeros
+    that looked like a clean bill of health.  Detecting the shape is the fix.
+    """
+    if "messages" in row and "context_state" not in row:
+        return "chatml"
+    if "conversations" in row and "context_state" not in row:
+        return "chatml"
+    return "typed"
+
+
+def chatml_assistant_text(row: Mapping[str, Any]) -> str:
+    """Assistant text of a ChatML/ShareGPT row ("" when there is none)."""
+    messages = row.get("messages")
+    if not isinstance(messages, list):
+        messages = row.get("conversations")
+    if not isinstance(messages, list):
+        return ""
+    parts: list[str] = []
+    for message in messages:
+        if not isinstance(message, Mapping):
+            continue
+        role = message.get("role") or message.get("from")
+        if role in ("assistant", "gpt"):
+            content = message.get("content", message.get("value", ""))
+            if isinstance(content, str):
+                parts.append(content)
+    return "\n".join(parts)
+
+
+def find_fabricated_labels(text: str) -> list[str]:
+    """Return the fabricated hard-evidence labels present in *text*."""
+    return [label for label in FABRICATED_EVIDENCE_LABELS if label in (text or "")]
+
+
+#: A migration id is provenance, not verification — ``legacy_to_typed.migrate``
+#: stamps one on every row it touches.  It must not satisfy the T9 receipt rule.
+MIGRATION_ID_PREFIX = "legacy-"
+
+
+def evidence_receipt_of(row: Mapping[str, Any]) -> str | None:
+    """The receipt that actually backs this row's label, or None.
+
+    Checked in descending order of strength.  ``legacy-*`` migration ids are
+    skipped on purpose: every migrated row has one, so counting them would make
+    the T9 receipt rule vacuous on exactly the set that needs it most.
+    """
+    provenance = row.get("provenance") if isinstance(row.get("provenance"), Mapping) else {}
+    review = row.get("review") if isinstance(row.get("review"), Mapping) else {}
+    candidates: list[Any] = [
+        row.get(EVIDENCE_RECEIPT_FIELD),
+        review.get("independent_receipt_id"),
+        provenance.get("review_receipt_id"),
+        provenance.get("receipt_id"),
+        row.get("receipt_id"),
+    ]
+    for candidate in candidates:
+        if isinstance(candidate, str) and candidate.strip():
+            text = candidate.strip()
+            if text.startswith(MIGRATION_ID_PREFIX):
+                continue
+            return text
+    return None
 
 
 _TEMPLATE = re.compile(r"execute automated bounded workspace task", re.I)
@@ -73,11 +199,34 @@ def audit_rows(rows: Sequence[Mapping[str, Any]], *, near_dup_threshold: int = 8
 
     for index, row in enumerate(rows):
         report.n_rows = index + 1
+        schema = detect_schema(row)
+        if schema == "chatml":
+            report.n_schema_chatml += 1
+        else:
+            report.n_schema_typed += 1
+
         provenance = row.get("provenance") if isinstance(row.get("provenance"), Mapping) else {}
         if provenance.get("receipt_id") and provenance.get("source_file_sha256"):
             report.n_with_provenance += 1
         else:
             report.n_missing_provenance += 1
+
+        # WP-6 / T9: a sample without a backing receipt is not exportable.
+        if evidence_receipt_of(row) is None:
+            report.n_missing_evidence_receipt += 1
+            report.missing_evidence_receipt_rows.append(f"row:{index}")
+
+        # WP-6 / F-H01: fabricated hard-evidence labels, in whichever field the
+        # schema puts them — assistant text for ChatML, evidence_required for typed.
+        if schema == "chatml":
+            haystack = chatml_assistant_text(row)
+        else:
+            evidence_list = row.get("evidence_required") or []
+            haystack = "\n".join(str(e) for e in evidence_list)
+        found = find_fabricated_labels(haystack)
+        if found:
+            report.n_fabricated_evidence += 1
+            report.fabricated_evidence_rows.append(f"row:{index}:{','.join(found)}")
 
         selected = row.get("selected_candidate") or (row.get("review") or {}).get("gold_selected_candidate")
         if selected:
@@ -128,6 +277,16 @@ def audit_rows(rows: Sequence[Mapping[str, Any]], *, near_dup_threshold: int = 8
             "C03: rows still holding only the first-line capture_id_matched artifact "
             "were extracted with the pre-v2 regex; re-migrate for full Expected_Evidence."
         )
+    if report.n_schema_chatml and report.n_schema_typed:
+        report.notes.append(
+            "WP-6: mixed schemas in one file — chatml rows carry no context_state/"
+            "candidates and cannot be scored as typed rows. Split the sets."
+        )
+    if report.has_fabricated_labels:
+        report.notes.append(
+            "WP-6/F-H01: fabricated hard-evidence labels present. These strings are "
+            "asserted without a receipt and must not reach SFT."
+        )
     report.notes.append(
         "selection labels and observed outcomes are separate sets; "
         "n_selection_labels is not decision-quality evidence."
@@ -142,3 +301,30 @@ def audit_file(path: str | Path) -> AuditReport:
         if line.strip()
     ]
     return audit_rows(rows)
+
+
+class FabricatedLabelError(ValueError):
+    """Raised when a sample would export a hard-evidence claim with no receipt."""
+
+
+def assert_exportable(rows: Sequence[Mapping[str, Any]]) -> AuditReport:
+    """T9 gate: raise unless every row is clean and receipt-backed.
+
+    This is the pipeline wiring point. ``DatasetExtractor.export_jsonl`` calls
+    it before writing, so a fabricated label cannot reach an SFT set even if
+    an ingest path regresses.
+    """
+    report = audit_rows(rows)
+    if report.has_fabricated_labels:
+        raise FabricatedLabelError(
+            f"{report.n_fabricated_evidence} row(s) assert hard-evidence labels with "
+            f"no receipt: {report.fabricated_evidence_rows[:5]} — see "
+            f"FABRICATED_EVIDENCE_LABELS in training/dataset_audit.py"
+        )
+    if report.n_missing_evidence_receipt:
+        raise FabricatedLabelError(
+            f"{report.n_missing_evidence_receipt} row(s) have no {EVIDENCE_RECEIPT_FIELD} "
+            f"({report.missing_evidence_receipt_rows[:5]}) — T9 requires every exported "
+            f"sample to be receipt-backed or dropped"
+        )
+    return report

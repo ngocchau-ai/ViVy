@@ -9,6 +9,9 @@ Score (ordinal/utility) is not a probability.
 
 Changelog:
     24/09/2026 (Claude Code — P1/P2 C02): Initial.
+    29/09/2026 (Claude Code — WP-6/O-10): named the ChatML-vs-typed schema
+        split and made the typed APIs refuse a ChatML row with
+        :class:`SchemaMismatchError` instead of a misleading field error.
 """
 from __future__ import annotations
 
@@ -37,6 +40,49 @@ ABSTAIN_POLICIES = frozenset({
 HALT_ACTIONS = frozenset({"halt", "abort", "cand_halt", "no_action", "wait"})
 
 RECEIPT_ID_RE = re.compile(r"^(human-accept|oracle|legacy|shadow|c01)-[0-9a-f]{4,64}$")
+
+# --- WP-6 / O-10 — the two row schemas, and the wall between them ------------
+#
+# ``dataset_extractor`` emits ChatML (``messages`` / ``source`` / ``reward``).
+# This contract, ``dataset_audit`` and every gate downstream expect typed rows
+# (``context_state`` / ``candidates`` / ``provenance``).  Feeding one to the
+# other used to fail with "candidates must be a list", which reads like a
+# corrupt row rather than a wrong schema.  Naming the schema is the fix; the
+# conversion itself lives in ``training.legacy_to_typed.migrate``.
+SCHEMA_CHATML = "chatml"
+SCHEMA_TYPED = "typed"
+
+#: Fields that only ever exist on a typed row.
+_TYPED_ONLY_FIELDS = ("context_state", "candidates", "decision_type", "provenance")
+
+
+def detect_schema(record: Mapping[str, Any]) -> str:
+    """``SCHEMA_CHATML`` or ``SCHEMA_TYPED``.  Same rule as dataset_audit."""
+    if "messages" in record and "context_state" not in record:
+        return SCHEMA_CHATML
+    if "conversations" in record and "context_state" not in record:
+        return SCHEMA_CHATML
+    return SCHEMA_TYPED
+
+
+class SchemaMismatchError(ValueError):
+    """A ChatML row was handed to a typed-row API (or the reverse)."""
+
+
+def require_typed(record: Mapping[str, Any], *, api: str = "decision contract") -> Mapping[str, Any]:
+    """Return *record* if it is typed; raise :class:`SchemaMismatchError` if not.
+
+    Call this at every boundary that feeds a row to ``validate_decision_input``
+    / ``validate_decision_label``.  It turns a shape error into a named one.
+    """
+    schema = detect_schema(record)
+    if schema == SCHEMA_CHATML:
+        raise SchemaMismatchError(
+            f"{api} expects a typed row (one of {sorted(_TYPED_ONLY_FIELDS)}); "
+            f"got a ChatML row (messages/conversations). "
+            f"Migrate it first: training.legacy_to_typed.migrate(...)"
+        )
+    return record
 
 
 def _is_number(value: Any) -> bool:
@@ -100,6 +146,7 @@ FORBIDDEN_INPUT_FIELDS = frozenset({
 def validate_decision_input(record: Mapping[str, Any]) -> DecisionInput:
     if not isinstance(record, Mapping):
         raise ValueError("DecisionInput must be a mapping")
+    require_typed(record, api="validate_decision_input")
     leaked = FORBIDDEN_INPUT_FIELDS.intersection(record.keys())
     if leaked:
         raise ValueError(f"DecisionInput must not carry label fields: {sorted(leaked)}")
@@ -150,6 +197,7 @@ def decision_input_from_record(record: Mapping[str, Any]) -> DecisionInput:
 
     Use this at the prediction boundary. Do not pass the raw row to a model.
     """
+    require_typed(record, api="decision_input_from_record")
     candidates = []
     for candidate in record.get("candidates", []) or []:
         if isinstance(candidate, Mapping):
@@ -269,6 +317,7 @@ class DecisionLabel:
 
 
 def validate_decision_label(record: Mapping[str, Any]) -> DecisionLabel:
+    require_typed(record, api="validate_decision_label")
     review = record.get("review") if isinstance(record.get("review"), Mapping) else record
     if not isinstance(review, Mapping):
         raise ValueError("DecisionLabel must be a mapping or record.review mapping")

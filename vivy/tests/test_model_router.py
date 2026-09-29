@@ -251,13 +251,22 @@ def test_model_router_custom_model_map() -> None:
 
 
 def test_model_router_coding_specialist_default() -> None:
-    """ModelRouter routes CODING and MATH to specialist coder and REASONING to reasoner."""
+    """ModelRouter routes CODING/MATH/REASONING to the only runnable text model.
+
+    [REROUTED 26/09/2026] Trước đây CODING/MATH default sang ``qwen2.5-coder:7b``
+    và test bắt ``coding_model != reasoning_model``. Trọng số coder chưa từng có
+    trên đĩa, nên dual-default là một lời nói dối routing. Chỉ còn gemma4-e4b
+    gánh text/code. Tách specialist vẫn hoạt động qua ``specialist_client`` /
+    ``VIVY_CODER_URL`` — xem ``test_model_router_specialist_client_dual_backend``.
+    """
     client = _MockLLMClient()
     router = ModelRouter(client)
     coding_model = router.select_model(TaskType.CODING)
+    math_model = router.select_model(TaskType.MATH)
     reasoning_model = router.select_model(TaskType.REASONING)
-    assert "coder" in coding_model.lower() or "qwen" in coding_model.lower()
-    assert coding_model != reasoning_model
+    assert coding_model == "gemma4-e4b"
+    assert math_model == "gemma4-e4b"
+    assert reasoning_model == "gemma4-e4b"
 
 
 @pytest.mark.asyncio

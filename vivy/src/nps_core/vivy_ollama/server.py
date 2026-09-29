@@ -1,13 +1,27 @@
-"""Ollama Protocol HTTP Bridge Server for ViVy.
+"""Ollama Protocol HTTP Bridge Server for ViVy.   [ISOLATED — not a real model]
 
-Provides a lightweight standard-library HTTP server implementing Ollama API endpoints:
-- /api/tags (Lists installed models: vivy:latest)
-- /api/show (Model details & Modelfile)
-- /api/chat (Interactive chat endpoint)
-- /api/generate (Generation endpoint)
-- /api/version (Ollama version emulation)
+[ISOLATED 29/09/2026 · WP-5 / O-12 / F-F05] — answers without a model
+=====================================================================
 
-Allows any Ollama client (Open-WebUI, Ollama CLI, LangChain, etc.) to talk to ViVy.
+This is a real HTTP server speaking the Ollama wire protocol, and it lies
+about what is behind it.  `/api/tags` advertises a fabricated model card
+(``size: 2147483648``, ``parameter_size: "1.15B"``, ``parent_model:
+"llama3.2:3b"``, ``digest: "sha256:vivy1b000…"``) for a model that does not
+exist.  `/api/chat` and `/api/generate` return a **bilingual template** from
+``ViVyMultimodalEngine`` dressed in the Ollama response envelope, so any real
+Ollama client (Open-WebUI, Ollama CLI, LangChain) will display it as model
+output.  No model is loaded, called, or even referenced.
+
+STATUS (29/09/2026)
+    * **`[ISOLATED]`** — kept for the research branch (D-2), **not** a
+      product path.  To become a real proxy it must forward to an actual
+      backend and report the real model-id.
+    * Every response now carries ``simulated_response: True`` and
+      ``model_call_made: False``; the fabricated model card is tagged
+      ``SIMULATED_CARD``.
+    * **Cấm tiêm vào prompt** — content from this server must not be pasted
+      into a model prompt as measured evidence.
+
 Standard-library only.
 """
 
@@ -46,27 +60,39 @@ class OllamaViVyBridgeHandler(BaseHTTPRequestHandler):
     def do_GET(self) -> None:
         if self.path in ("/api/tags", "/api/tags/"):
             self._send_json({
+                # [ISOLATED 29/09/2026 · WP-5] every field below the name is
+                # fabricated.  There is no GGUF, no 1.15B model, no digest.
                 "models": [
                     {
                         "name": "vivy:latest",
                         "model": "vivy:latest",
                         "modified_at": "2026-07-25T10:48:00Z",
-                        "size": 2147483648,
-                        "digest": "sha256:vivy1b00000000000000000000000000000000000000000000000000000000",
+                        "size": None,
+                        "digest": None,
+                        "SIMULATED_CARD": True,
+                        "note": (
+                            "[ISOLATED] No model file exists. size/digest/parameter_size "
+                            "were invented (see git history for the old card)."
+                        ),
                         "details": {
-                            "parent_model": "llama3.2:3b",
-                            "format": "gguf",
-                            "family": "llama",
-                            "parameter_size": "1.15B",
-                            "quantization_level": "Q4_K_M"
-                        }
+                            "parent_model": None,
+                            "format": None,
+                            "family": None,
+                            "parameter_size": "UNMEASURED",
+                            "quantization_level": None,
+                        },
                     }
-                ]
+                ],
+                "model_call_made": False,
+                "simulated_response": True,
             })
         elif self.path in ("/api/version", "/api/version/"):
-            self._send_json({"version": "0.3.14-vivy"})
+            self._send_json({"version": "0.3.14-vivy", "simulated_response": True})
         else:
-            self._send_json({"status": "ViVy Ollama Protocol Bridge Online"}, status=200)
+            self._send_json(
+                {"status": "ViVy Ollama Protocol Bridge Online (ISOLATED — no model behind it)"},
+                status=200,
+            )
 
     def do_POST(self) -> None:
         content_length = int(self.headers.get("Content-Length", 0))
@@ -82,7 +108,10 @@ class OllamaViVyBridgeHandler(BaseHTTPRequestHandler):
                 "modelfile": modelfile_str,
                 "parameters": "temperature 0.2\nstop \"<|im_end|>\"",
                 "template": "{{ .System }}\n{{ .Prompt }}",
-                "details": {"family": "llama", "parameter_size": "1.15B"}
+                # [REPLACED 29/09/2026 WP-5] was: {"family": "llama", "parameter_size": "1.15B"}
+                "details": {"family": None, "parameter_size": "UNMEASURED"},
+                "model_call_made": False,
+                "simulated_response": True
             })
         elif self.path in ("/api/chat", "/api/chat/", "/api/generate", "/api/generate/"):
             prompt = ""
@@ -103,14 +132,23 @@ class OllamaViVyBridgeHandler(BaseHTTPRequestHandler):
                 "response": res.response_text,
                 "done": True,
                 "thought_chain": list(res.thought_chain),
-                "detected_language": res.detected_language
+                "detected_language": res.detected_language,
+                # [ADDED 29/09/2026 · WP-5] a real Ollama client will still
+                # render `response`, but anything inspecting the envelope can
+                # now see it is a template, not model output.
+                "model_call_made": False,
+                "simulated_response": True,
+                "note": (
+                    "[ISOLATED] Template reply. No model was loaded or called; "
+                    "this bridge has no backend."
+                ),
             })
         else:
             self._send_json({"error": "endpoint not found"}, status=404)
 
 
 class OllamaViVyBridgeServer:
-    """Server manager for running Ollama ViVy protocol HTTP bridge."""
+    """Server manager for running Ollama ViVy protocol HTTP bridge.  [ISOLATED]"""
 
     def __init__(self, host: str = "127.0.0.1", port: int = 11434) -> None:
         self.host = host
@@ -126,3 +164,24 @@ class OllamaViVyBridgeServer:
         if self.server:
             self.server.server_close()
             self.server = None
+
+
+# [ISOLATED 29/09/2026 · WP-5 / F-F05] — the old fabricated model card,
+# preserved verbatim.  It advertised a 2 GB GGUF with a 1.15B parameter count
+# and a fake sha256 digest for a model that does not exist anywhere on disk.
+# Must not be restored to the live /api/tags handler above.
+#
+#     {
+#         "name": "vivy:latest",
+#         "model": "vivy:latest",
+#         "modified_at": "2026-07-25T10:48:00Z",
+#         "size": 2147483648,
+#         "digest": "sha256:vivy1b0000000000000000000000000000000000000000000000000000000",
+#         "details": {
+#             "parent_model": "llama3.2:3b",
+#             "format": "gguf",
+#             "family": "llama",
+#             "parameter_size": "1.15B",
+#             "quantization_level": "Q4_K_M"
+#         }
+#     }

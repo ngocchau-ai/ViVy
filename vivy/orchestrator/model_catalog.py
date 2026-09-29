@@ -1,4 +1,4 @@
-﻿"""model_catalog.py — Autonomous Local Model Discovery & Capability Tagging.
+"""model_catalog.py — Autonomous Local Model Discovery & Capability Tagging.
 
 Triển khai cơ chế quét kho mô hình (models/), nhận diện năng lực và gán nhãn
 cho ViVy (Lõi nhận thức Gemma 4EB) khi khởi động, giúp ViVy:
@@ -271,9 +271,9 @@ class ModelCatalogScanner:
             TaskArchetype.ARCH_SPEC_AND_PLAN: "gemma4-e4b",
             TaskArchetype.KNOWLEDGE_FORAGING: "gemma4-e4b",
             TaskArchetype.DYNAMIC_ORCHESTRATION_QA: "gemma4-e4b",
-            TaskArchetype.NATIVE_SYSTEM_CODING: "qwen2.5-coder:7b",
-            TaskArchetype.REFACTOR_AND_TESTING: "qwen2.5-coder:7b",
-            TaskArchetype.FAST_DATA_PARSING: "vivy2",
+            TaskArchetype.NATIVE_SYSTEM_CODING: "gemma4-e4b",
+            TaskArchetype.REFACTOR_AND_TESTING: "gemma4-e4b",
+            TaskArchetype.FAST_DATA_PARSING: "gemma4-e4b",
             TaskArchetype.MULTIMODAL_IMAGE_REASONING: "qwen2-vl-72b",
             TaskArchetype.DESKTOP_GUI_VISION: "qwen2-vl-72b",
         }
@@ -371,15 +371,15 @@ def classify_task_archetype(
     ]
     code_hits = sum(1 for ind in code_indicators if ind in upper_prompt)
     if code_hits >= 1 and any(k in upper_prompt for k in ["C NATIVE", "MÃ NGUỒN C", "ASSEMBLY", "KERNEL", "CTYPES", "C-ABI", "CON TRỎ", "VOID*"]):
-        model = catalog.get_specialist_for_task(TaskArchetype.NATIVE_SYSTEM_CODING) if catalog else "qwen2.5-coder-7b-instruct"
+        model = catalog.get_specialist_for_task(TaskArchetype.NATIVE_SYSTEM_CODING) if catalog else "gemma4-e4b"
         return (TaskArchetype.NATIVE_SYSTEM_CODING, model, f"Detected low-level system indicator ({code_hits} hits)")
     if code_hits >= 2:
-        model = catalog.get_specialist_for_task(TaskArchetype.NATIVE_SYSTEM_CODING) if catalog else "qwen2.5-coder-7b-instruct"
+        model = catalog.get_specialist_for_task(TaskArchetype.NATIVE_SYSTEM_CODING) if catalog else "gemma4-e4b"
         return (TaskArchetype.NATIVE_SYSTEM_CODING, model, f"Detected {code_hits} low-level system indicators")
 
     # Kiểm tra refactor/testing
     if any(k in upper_prompt for k in ["PYTEST", "UNIT TEST", "TÁI CẤU TRÚC", "REFACTOR", "BUGFIX"]):
-        model = catalog.get_specialist_for_task(TaskArchetype.REFACTOR_AND_TESTING) if catalog else "qwen2.5-coder-7b-instruct"
+        model = catalog.get_specialist_for_task(TaskArchetype.REFACTOR_AND_TESTING) if catalog else "gemma4-e4b"
         return (TaskArchetype.REFACTOR_AND_TESTING, model, "Matched refactoring/testing indicators")
 
     # Kiểm tra QA / Chấm điểm

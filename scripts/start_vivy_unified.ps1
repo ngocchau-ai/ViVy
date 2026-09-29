@@ -10,7 +10,7 @@ Write-Host "============================================================" -Foreg
 $ScriptDir = Split-Path -Parent $MyInvocation.MyCommand.Path
 $RootDir   = Resolve-Path "$ScriptDir\.."
 $EngineDir = "$RootDir\engine\bin"
-$CoreDir   = "$RootDir\core"
+$CoreDir   = "$RootDir\vivy"   # [FIXED 26/09/2026] package runtime là vivy/, không còn core/
 $ModelsDir = "$RootDir\models"
 
 # 1. Environment configuration
@@ -18,7 +18,9 @@ $env:PYTHONIOENCODING = "utf-8"
 $env:CAUTREO_DLL_PATH = "$EngineDir\cautreo.dll"
 $env:VIVY_LLAMA_URL   = "http://127.0.0.1:8080"
 $env:VIVY_MODEL       = "gemma4-e4b"
-$env:VIVY_CODER_MODEL = "qwen2.5-coder:7b"
+# [REROUTED 26/09/2026] qwen2.5-coder:7b chưa từng có gguf trên đĩa. Chỉ có
+# gemma4-e4b gánh text/code. Đặt VIVY_CODER_URL nếu có specialist server riêng.
+$env:VIVY_CODER_MODEL = "gemma4-e4b"
 
 Write-Host "[1/3] Environment configured:" -ForegroundColor Green
 Write-Host "      • Native DLL   : $env:CAUTREO_DLL_PATH"

@@ -1,4 +1,4 @@
-﻿# ViVy Final Core V1.0 & Cautreo Native Engine — Toàn Văn Đặc Tả Kiến Trúc Hệ Thống Cuối Cùng
+# ViVy Final Core V1.0 & Cautreo Native Engine — Toàn Văn Đặc Tả Kiến Trúc Hệ Thống Cuối Cùng
 
 > [!IMPORTANT]
 > **QUY ƯỚC BẮT BUỘC DÀNH CHO AGENT KẾ THỪA & CHỈNH SỬA TÀI LIỆU:**
@@ -95,8 +95,10 @@ Kiến trúc thống nhất được xác lập trên mô hình **Tam Giác Nh�
 - **`memory/hebbian_recall.py`:** Bộ nhớ liên kết Hebbian truy xuất nhanh các bài học kinh nghiệm (complexity claim: see benchmark receipt).
 - **`orchestrator/model_router.py` & `model_catalog.py`:** Multi-Model Router phân luồng tự động:
   - `TaskArchetype.ARCH_SPEC_AND_PLAN`, `KNOWLEDGE_FORAGING`, `DYNAMIC_ORCHESTRATION_QA` $\rightarrow$ `gemma4-e4b` (Active Cognitive Soul @ Port 8080).
-  - `TaskArchetype.NATIVE_SYSTEM_CODING`, `REFACTOR_AND_TESTING` $\rightarrow$ `qwen2.5-coder-7b-instruct` (Technical Code Specialist).
+  - `TaskArchetype.NATIVE_SYSTEM_CODING`, `REFACTOR_AND_TESTING`, `FAST_DATA_PARSING` $\rightarrow$ `gemma4-e4b`.
+    *[REROUTED 26/09/2026]* trước đây trỏ `qwen2.5-coder-7b-instruct` (Technical Code Specialist) — model này **không có trọng số trên đĩa**, nên `DELEGATE_MODEL` không thể hoàn tất. `gemma4-e4b` gánh luôn việc code. Specialist riêng vẫn nhận qua `VIVY_CODER_URL` / `specialist_client`.
   - `TaskArchetype.MULTIMODAL_IMAGE_REASONING`, `DESKTOP_GUI_VISION` $\rightarrow$ `qwen2-vl-72b` (Deep Multimodal Knowledge Pool kết nối qua Cautreo Cartography Atlas).
+  - `TaskArchetype.CUA_DESKTOP_AUTOMATION` $\rightarrow$ `qwen2-vl-72b`. *[REROUTED 26/09/2026]* trước đây trỏ `vivy-1.5b-reflex` (`ROADMAP_PROPOSED`, chưa có gguf).
 - **`integration/cautreo_binding.py`:** Cầu nối C-ABI ctypes in-process binding tới `cautreo.dll` kèm bộ phân trang `CautreoWeightPager`.
 - **`integration/cautreo_cartographer.py`:** Quản lý bản đồ tri thức 4 lục địa nạp từ `.catlas` file.
 - **`integration/preflight_steering.py`:** Bơm Hard Negative Constraints ngăn chặn lỗi lặp lại VM-11.

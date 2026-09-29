@@ -1,4 +1,4 @@
-﻿"""C10 — multi-size Hebbian recall benchmark (W@x vs node-ID scan).
+"""C10 — multi-size Hebbian recall benchmark (W@x vs node-ID scan).
 
 Acceptance-plan C10.3: benchmark nhiều kích thước graph, không suy O(1) từ
 hai điểm. Tách W@x và node-ID scan; report fixed dimensions.

@@ -1,4 +1,4 @@
-﻿import os
+import os
 
 content = """# Durable Decision — Codex Review Resolution, Model ID Standardization & Python Runtime Recovery
 

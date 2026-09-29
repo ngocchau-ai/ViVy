@@ -1,4 +1,4 @@
-﻿"""
+"""
 Batch Knowledge Cartographer for existing models in the workspace.
 Scans models, builds CoarseKnowledgeAtlas, and exports .catlas files.
 

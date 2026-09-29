@@ -61,9 +61,14 @@ def _model_matches(requested: str, available: str) -> bool:
     )
 
 # Default model mapping — override via environment or config
+# [REROUTED 26/09/2026] CODING/MATH từng default `"qwen2.5-coder:7b"` — gguf đó
+# không bao giờ tồn tại trên đĩa (xem model_manifest.json
+# task_archetype_mapping_note_2026-09-26). Chỉ có 2 model thật: gemma4-e4b
+# (text/code) + qwen2-vl-72b (vision). Specialist riêng vẫn nhận qua
+# `VIVY_CODER_URL` / `specialist_client` (xem _get_client_for_task).
 _DEFAULT_MODEL_MAP: dict[TaskType, str] = {
-    TaskType.CODING: os.environ.get("VIVY_CODER_MODEL", "qwen2.5-coder:7b"),
-    TaskType.MATH: os.environ.get("VIVY_CODER_MODEL", "qwen2.5-coder:7b"),
+    TaskType.CODING: os.environ.get("VIVY_CODER_MODEL", "gemma4-e4b"),
+    TaskType.MATH: os.environ.get("VIVY_CODER_MODEL", "gemma4-e4b"),
     TaskType.REASONING: os.environ.get("VIVY_MODEL", "gemma4-e4b"),
     TaskType.GENERAL: os.environ.get("VIVY_MODEL", "gemma4-e4b"),
     TaskType.ANALYSIS: os.environ.get("VIVY_MODEL", "gemma4-e4b"),

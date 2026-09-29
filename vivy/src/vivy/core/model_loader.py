@@ -12,6 +12,44 @@ from typing import Any
 logger = logging.getLogger(__name__)
 
 
+# ---------------------------------------------------------------------------
+# Fail-loud errors and the mock-engine gate
+# [REPLACED 29/09/2026] this module used to fall back to MockLocalEngine whenever
+# llama_cpp was missing and whenever the backend name was unknown (F-A07 / G-02).
+# A trade cycle must never silently run on a fake engine that hardcodes BUY GOLD.
+# ---------------------------------------------------------------------------
+
+MOCK_OPT_IN_ENV = "VIVY_ALLOW_MOCK_ENGINE"
+
+
+class EngineUnavailableError(RuntimeError):
+    """A real local engine could not be constructed (missing dep, bad weights)."""
+
+
+class UnsupportedBackendError(ValueError):
+    """``config.backend`` is not a known, constructible backend."""
+
+
+def mock_engine_allowed(allow_mock: bool | None = None) -> bool:
+    """Return True when MockLocalEngine may be constructed.
+
+    ``allow_mock=True`` opts in explicitly (tests).  ``False`` refuses.
+    ``None`` (default) falls back to the ``VIVY_ALLOW_MOCK_ENGINE`` env opt-in.
+    """
+    if allow_mock is not None:
+        return bool(allow_mock)
+    return os.environ.get(MOCK_OPT_IN_ENV, "").strip().lower() in {"1", "true", "yes", "on"}
+
+
+def _require_mock_allowed(context: str, allow_mock: bool | None = None) -> None:
+    if not mock_engine_allowed(allow_mock):
+        raise EngineUnavailableError(
+            f"MockLocalEngine is banned outside explicit opt-in ({context}). "
+            f"Pass allow_mock=True in tests, or set {MOCK_OPT_IN_ENV}=1 for a "
+            "deliberate non-production run. Production must use a real engine."
+        )
+
+
 class ModelBackend(StrEnum):
     VIVY_NATIVE_PYTORCH = "vivy_native_pytorch"  # The new core reasoning engine
     GGUF_LOCAL = "gguf_local"                    # Legacy/fallback
@@ -53,7 +91,12 @@ class LocalModelEngine:
 
 
 class MockLocalEngine(LocalModelEngine):
-    """Fallback engine for testing without local GPU/weights installed."""
+    """[TEST DOUBLE] canned-response engine — banned in production.
+
+    Retained because tests need a deterministic engine.  It always answers
+    ``BUY GOLD`` with a fabricated confidence, so it must never reach a live
+    trade cycle.  Construction is gated by :func:`mock_engine_allowed`.
+    """
 
     def __init__(self, config: ModelConfig):
         self.config = config
@@ -106,26 +149,35 @@ class OllamaAPIEngine(LocalModelEngine):
 
 
 class GGUFLocalEngine(LocalModelEngine):
-    """Direct GGUF model loader via llama-cpp-python."""
+    """Direct GGUF model loader via llama-cpp-python.
+
+    [REPLACED 29/09/2026] a missing ``llama_cpp`` used to set ``self.llm = None``
+    and ``generate`` silently answered via ``MockLocalEngine``.  Both paths now
+    raise :class:`EngineUnavailableError`.
+    """
 
     def __init__(self, config: ModelConfig):
         self.config = config
         try:
             from llama_cpp import Llama
+        except ImportError as exc:
+            raise EngineUnavailableError(
+                "llama_cpp is not installed; GGUFLocalEngine cannot run. "
+                "Install llama-cpp-python, or select a different backend."
+            ) from exc
+        try:
             self.llm = Llama(
                 model_path=config.model_path_or_name,
                 n_ctx=config.context_window,
                 n_gpu_layers=config.gpu_layers,
                 verbose=False
             )
-        except ImportError:
-            logger.warning("llama_cpp module not installed. Falling back to MockEngine.")
-            self.llm = None
+        except Exception as exc:
+            raise EngineUnavailableError(
+                f"failed to load GGUF model {config.model_path_or_name!r}: {exc}"
+            ) from exc
 
     def generate(self, prompt: str, system_prompt: str | None = None) -> str:
-        if self.llm is None:
-            return MockLocalEngine(self.config).generate(prompt, system_prompt)
-
         full_prompt = f"System: {system_prompt}\nUser: {prompt}\nAssistant:" if system_prompt else prompt
         output = self.llm(
             full_prompt,
@@ -169,14 +221,23 @@ class LocalModelLoader:
     """Factory loader for ViVy Local AI Engine."""
 
     @staticmethod
-    def load_engine(config: ModelConfig) -> LocalModelEngine:
+    def load_engine(config: ModelConfig, *, allow_mock: bool | None = None) -> LocalModelEngine:
+        """Build the engine named by ``config.backend``.
+
+        [REPLACED 29/09/2026] the old body returned ``MockLocalEngine`` for every
+        unknown backend.  Unknown backends now raise, and MOCK requires an
+        explicit opt-in (``allow_mock=True`` or ``VIVY_ALLOW_MOCK_ENGINE=1``).
+        """
         if config.backend == ModelBackend.VIVY_NATIVE_PYTORCH:
             return NativePyTorchEngine(config)
-        elif config.backend == ModelBackend.GGUF_LOCAL:
+        if config.backend == ModelBackend.GGUF_LOCAL:
             return GGUFLocalEngine(config)
-        elif config.backend == ModelBackend.OLLAMA_API:
+        if config.backend == ModelBackend.OLLAMA_API:
             return OllamaAPIEngine(config)
-        elif config.backend == ModelBackend.MOCK:
+        if config.backend == ModelBackend.MOCK:
+            _require_mock_allowed("ModelBackend.MOCK", allow_mock)
             return MockLocalEngine(config)
-        else:
-            return MockLocalEngine(config)
+        raise UnsupportedBackendError(
+            f"unknown model backend {config.backend!r}; expected one of "
+            f"{', '.join(b.value for b in ModelBackend)}"
+        )

@@ -24,6 +24,13 @@ include = ["core*", "funnel*", "llm_bridge*", "memory*", "orchestrator*", "bench
 asyncio_mode = "auto"
 testpaths = ["tests", "training"]
 addopts = "--basetemp=_pytest_tmp"
+# [ADDED 29/09/2026 · WP-4 / T10] src/ was never on sys.path, so every test of
+# the trading line (`vivy.hands`, `vivy.core`, `vivy.api`) died at import and
+# sat behind tests/unit/conftest.py's collect_ignore_glob.  RiskGate cannot be
+# accepted on "60 adversarial orders → 0 leak" if the gate is untestable.
+# `src/` holds only the `vivy.*` and `nps_core.*` packages, so this cannot
+# collide with the top-level health-stack packages (core/, engine/, memory/…).
+pythonpath = ["src"]
 
 [tool.ruff]
 line-length = 88

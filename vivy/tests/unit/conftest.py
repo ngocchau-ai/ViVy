@@ -40,7 +40,11 @@ collect_ignore_glob = [
     "test_evidence_packet_model.py",
     "test_executor_router.py",
     "test_experiment_contract.py",
-    "test_eyes_hands.py",
+    # [REMOVED FROM IGNORE 29/09/2026 · WP-4] "test_eyes_hands.py",
+    # "test_vivy_core.py" — these two import `vivy.*`, which was unimportable
+    # while `src/` was off sys.path.  `pyproject.toml` now sets
+    # `pythonpath = ["src"]`, so they collect cleanly and are live again.
+    # test_eyes_hands.py carries the WP-4 RiskGate assertions (ADR-008).
     "test_filter_funnel.py",
     "test_filter_funnel_pytorch.py",
     "test_multimodal_clairvoyance.py",
@@ -52,10 +56,13 @@ collect_ignore_glob = [
     "test_vivy_1b_training.py",
     "test_vivy_4b_compression.py",
     "test_vivy_associative_memory.py",
-    "test_vivy_core.py",
+    # [REMOVED FROM IGNORE 29/09/2026 · WP-4] "test_vivy_core.py" — see above.
     "test_vivy_integration.py",
     "test_vivy_moe.py",
     "test_vivy_moe_40b_training.py",
-    "test_vivy_multimodal_interface.py",
+    # [REMOVED FROM IGNORE 29/09/2026 · WP-5 / F-F01…F-F02] the file pinned the
+    # fabrication (`width == 1024` on a non-existent path). It has been
+    # rewritten to spec with a receipt in its own docstring, so it now runs.
+    # "test_vivy_multimodal_interface.py",
     "test_vivy_ollama.py",
 ]

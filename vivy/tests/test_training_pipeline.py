@@ -6,6 +6,8 @@ import json
 import os
 from unittest.mock import MagicMock
 
+import pytest
+
 from training.dataset_extractor import DatasetExtractor, TrainingSample
 from training.teacher_critic import CriticEvaluation, TeacherCritic
 
@@ -29,6 +31,18 @@ def test_training_sample_formats():
 
 
 def test_dataset_extractor_from_activity_log(tmp_path):
+    """[REWRITTEN 29/09/2026 · WP-6/F-H01 · hard rule #4 receipt]
+
+    Receipt for the rewrite: these tests used to pin the *fabrication*.  The
+    old fixture produced one sample whose ``Expected_Evidence`` was the
+    hardcoded ``AST_VALID_AND_TEST_PASS`` and whose reward was ``1.0 if status
+    != "ERROR"`` — i.e. it asserted that a run with no receipt and no evidence
+    field was a fully-verified positive sample.  That is exactly the F-H01
+    defect the plan removes, and the old assertion is not a spec any more.
+    New spec (plan WP-6 acceptance / T9): a record with no ``evidence_receipt_id``
+    yields **no** sample; adding a receipt yields one, whose evidence text comes
+    from the record (or says ``UNVERIFIED``) and is never a constant.
+    """
     log_file = tmp_path / "activity.jsonl"
     records = [
         {"event": "inference_start", "session_id": "s1", "input_type": "str"},
@@ -39,13 +53,33 @@ def test_dataset_extractor_from_activity_log(tmp_path):
         for r in records:
             f.write(json.dumps(r) + "\n")
 
+    # No receipt -> nothing to train on.  Not crashing is not being verified.
+    assert DatasetExtractor.extract_from_activity_log(str(log_file)) == []
+
+    records[-1]["evidence_receipt_id"] = "oracle-deadbeefcafe"
+    records[-1]["expected_evidence"] = "pytest passed (42 tests)"
+    with open(log_file, "w", encoding="utf-8") as f:
+        for r in records:
+            f.write(json.dumps(r) + "\n")
+
     samples = DatasetExtractor.extract_from_activity_log(str(log_file))
     assert len(samples) == 1
     assert samples[0].source == "cautreo_activity"
+    assert samples[0].evidence_receipt_id == "oracle-deadbeefcafe"
     assert "EXECUTE_DIRECTLY" in samples[0].assistant_response
+    assert "pytest passed (42 tests)" in samples[0].assistant_response
+    assert "AST_VALID_AND_TEST_PASS" not in samples[0].assistant_response
 
 
 def test_dataset_extractor_verdict_and_llava():
+    """[REWRITTEN 29/09/2026 · WP-6/F-H01 · hard rule #4 receipt]
+
+    Receipt: the old form asserted one sample per path with no receipt at all,
+    and the LLaVA sample's evidence was the hardcoded
+    ``MULTIMODAL_GROUNDING_VERIFIED``.  New spec (T9): no receipt -> dropped;
+    with a receipt the gate name is the record's own field and a missing one
+    says ``UNVERIFIED`` instead of defaulting to a constant.
+    """
     verdict_data = [
         {
             "context_state": "MT5 script syntax error in OnTick()",
@@ -53,28 +87,52 @@ def test_dataset_extractor_verdict_and_llava():
             "verdict": "PASS",
             "score": 0.95,
             "acceptance_gate": "MQL5_COMPILER_PASS",
+            "evidence_receipt_id": "oracle-deadbeefcafe",
         },
         {
             "context_state": "Unknown state",
             "proposed_action": "Do random action",
             "verdict": "FAIL",
             "score": 0.2,
+            "evidence_receipt_id": "oracle-deadbeefcafe",
+        },
+        {
+            "context_state": "MT5 script syntax error in OnTick()",
+            "proposed_action": "Fix variable scope in OnTick() handler",
+            "verdict": "PASS",
+            "score": 0.95,
+            "acceptance_gate": "MQL5_COMPILER_PASS",
+            # no receipt -> dropped
         },
     ]
     samples = DatasetExtractor.ingest_verdict_pairs(verdict_data)
-    assert len(samples) == 1  # only high score >= 0.7 accepted
+    assert len(samples) == 1  # high score AND receipt backed
     assert samples[0].source == "verdict_2.0"
+    assert samples[0].evidence_receipt_id == "oracle-deadbeefcafe"
     assert "MQL5_COMPILER_PASS" in samples[0].assistant_response
 
     llava_data = [
-        {"instruction": "Analyze this chart snapshot", "response": "Action: Bullish breakout on M15"},
+        {"instruction": "Analyze this chart snapshot", "response": "Action: Bullish breakout on M15",
+         "evidence_receipt_id": "oracle-deadbeefcafe"},
+        {"instruction": "No receipt here", "response": "should be dropped"},
     ]
     llava_samples = DatasetExtractor.ingest_llava_traces(llava_data)
     assert len(llava_samples) == 1
     assert llava_samples[0].source == "llava_multimodal"
+    assert llava_samples[0].evidence_receipt_id == "oracle-deadbeefcafe"
+    assert "MULTIMODAL_GROUNDING_VERIFIED" not in llava_samples[0].assistant_response
+    assert "UNVERIFIED" in llava_samples[0].assistant_response
 
 
 def test_dataset_extractor_cua_trajectories():
+    """[REWRITTEN 29/09/2026 · WP-6/F-H01 · hard rule #4 receipt]
+
+    Receipt: the old form asserted a CUA sample whose ``Expected_Evidence``
+    carried the hardcoded ``capture_id_matched: True`` even though the record
+    never ran that check.  New spec (T9): a trajectory with no receipt is
+    dropped whatever its ``reward`` says, and a check the record did not report
+    is written as ``NOT_CHECKED``, not as a pass.
+    """
     cua_records = [
         {
             "goal": "Click submit button on checkout form",
@@ -87,32 +145,80 @@ def test_dataset_extractor_cua_trajectories():
             "postcondition": "Order confirmed and receipt displayed",
             "postcondition_passed": True,
             "reward": 0.95,
+            "evidence_receipt_id": "oracle-deadbeefcafe",
         },
         {
             "goal": "Unsafe action",
             "candidates": [{"id": "cand_01", "description": "Do unsafe"}],
             "selected_id": "cand_01",
             "reward": 0.2,  # Should be filtered out (< 0.7)
+            "evidence_receipt_id": "oracle-deadbeefcafe",
+        },
+        {
+            "goal": "High reward but unbacked",
+            "candidates": [{"id": "cand_01", "description": "do it", "action": "click"}],
+            "selected_id": "cand_01",
+            "postcondition": "done",
+            "postcondition_passed": True,
+            "reward": 0.95,  # no receipt -> dropped
         },
     ]
 
     samples = DatasetExtractor.ingest_cua_trajectories(cua_records)
     assert len(samples) == 1
     assert samples[0].source == "cua_bounded_trajectory"
+    assert samples[0].evidence_receipt_id == "oracle-deadbeefcafe"
     assert "BOUNDED_SELECTION" in samples[0].assistant_response
     assert "cand_01" in samples[0].assistant_response
     assert "Order confirmed" in samples[0].assistant_response
+    assert "capture_id_matched: True" not in samples[0].assistant_response
+    assert "capture_id_matched: NOT_CHECKED" in samples[0].assistant_response
 
+
+def test_dataset_extractor_cua_reports_a_real_capture_result(tmp_path):
+    """A record that actually reports the check keeps its own value."""
+    cua_records = [
+        {
+            "goal": "g",
+            "screen_context": "s",
+            "candidates": [{"id": "cand_01", "description": "d", "action": "click"}],
+            "selected_id": "cand_01",
+            "postcondition": "done",
+            "reward": 0.95,
+            "capture_id_matched": False,
+            "evidence_receipt_id": "oracle-deadbeefcafe",
+        },
+    ]
+    samples = DatasetExtractor.ingest_cua_trajectories(cua_records)
+    assert len(samples) == 1
+    assert "capture_id_matched: False" in samples[0].assistant_response
 
 
 def test_dataset_extractor_export(tmp_path):
+    """[REWRITTEN 29/09/2026 · WP-6/F-H01 · hard rule #4 receipt]
+
+    Receipt: the old form exported a hand-built ``TrainingSample`` with no
+    receipt and asserted ``count == 1``.  New spec (T9): ``export_jsonl`` runs
+    ``assert_exportable`` on the serialized rows and refuses anything that is
+    not receipt-backed, so a hand-built sample cannot reach an SFT file.
+    """
     sample = TrainingSample(
         system_prompt="sys",
         user_prompt="usr",
         assistant_response="ast",
     )
     out_file = tmp_path / "out.jsonl"
-    count = DatasetExtractor.export_jsonl([sample], str(out_file))
+    with pytest.raises(Exception, match="evidence_receipt_id"):
+        DatasetExtractor.export_jsonl([sample], str(out_file))
+    assert not out_file.exists()
+
+    backed = TrainingSample(
+        system_prompt="sys",
+        user_prompt="usr",
+        assistant_response="Expected_Evidence: UNVERIFIED",
+        evidence_receipt_id="oracle-deadbeefcafe",
+    )
+    count = DatasetExtractor.export_jsonl([backed], str(out_file))
     assert count == 1
     assert os.path.exists(out_file)
 

@@ -2318,7 +2318,7 @@ This is what AI ownership means in practice:
 
 2. **Kiến trúc Mắt - Tay Chuẩn (`src/vivy/eyes` & `src/vivy/hands`):**
    - **Mắt (Eyes):** Thu thập dữ liệu nến OHLC, RSI, EMA, ATR, rổ lệnh MT5, và tin tức kinh tế vĩ mô.
-   - **Tay (Hands):** Chuyển tiếp và gửi lệnh thô (`BUY`, `SELL`, `MODIFY`, `CLOSE`, `CANCEL`) trực tiếp tới MT5 Terminal. CẤM tuyệt đối bộ lọc cản hay gác cổng lập trình cứng trong Python.
+   - **Tay (Hands):** Chuyển tiếp và gửi lệnh thô (`BUY`, `SELL`, `MODIFY`, `CLOSE`, `CANCEL`) trực tiếp tới MT5 Terminal. ~~CẤM tuyệt đối bộ lọc cản hay gác cổng lập trình cứng trong Python.~~ **[REPLACED 29/09/2026 · D-3 / ADR-008]** — lệnh đi qua **RiskGate** (`vivy/src/vivy/hands/risk_gate.py`): một lớp **đồng minh an toàn**, fail-closed, **không** phải bộ lọc chiến lược. Nó từ chối lệnh vật lý không hợp lệ (volume ≤0/NaN/Inf, thiếu SL/TP, SL/TP sai phía giá, symbol lạ, vượt trần khối lượng, thiếu giá tham chiếu) và **không bao giờ** quyết định vào lệnh/thoát lệnh/timing. Mặc định **paper trading**. Xem `docs/adr/ADR-008-risk-gate.md`. Đo lường trước khi đổi: 0/30 lệnh đối kháng bị chặn (G-01/G-02/G-03).
 
 3. **Bộ nhớ & Tự Hoàn Thiện (`src/vivy/memory` & `src/vivy/self_improvement`):**
    - **Associative Vector Memory:** SQLite/FAISS vector store lưu giữ các mẫu giao dịch và bài học kinh nghiệm past trades.
@@ -2347,7 +2347,7 @@ This is what AI ownership means in practice:
            │
            │ (Sinh Structured JSON Decision: Thought + Action)
            ▼
-   [ Hands Module ]  (mt5_executor - Không có gác cổng logic)
+   [ Hands Module ]  (mt5_executor - RiskGate fail-closed)
            │
            │ (Gửi Lệnh Thô)
            ▼
@@ -2356,6 +2356,8 @@ This is what AI ownership means in practice:
            ▼
 [ Self-Improvement ] (Ghi log PnL & Cập nhật bài học quá khứ vào Memory)
 ```
+
+> **[REPLACED 29/09/2026 · D-3 / ADR-008]** sơ đồ trên từng ghi `Hands = không có gác cổng logic` / `No Gatekeeper`. Chủ dự án **đã ghi đè** triết lý đó (D-3): mọi lệnh đi qua **RiskGate** (fail-closed, **đồng minh an toàn**, không phải bộ lọc chiến lược). Xem `docs/adr/ADR-008-risk-gate.md`. Đo lưỡng trước khi đổi: 0/30 lệnh đối kháng bị chặn.
 
 ---
 
@@ -2414,7 +2416,7 @@ Sản phẩm **91sViVy** được thiết kế dựa trên triết lý **Mắt -
  ┌───────────────┐           ┌───────────────┐           ┌───────────────┐
  │  MẮT (EYES)   │           │ CENTRAL BRAIN │           │ TAY (HANDS)   │
  │ Market/News   │──────────►│ ViVy Local AI │──────────►│ MT5 Executor  │
- │  Perception   │           │    Engine     │           │ No Gatekeeper │
+ │  Perception   │           │    Engine     │           │  +RiskGate    │
  └───────────────┘           └───────┬───────┘           └───────────────┘
                                      │
          ┌───────────────────────────┼───────────────────────────┐
@@ -2424,6 +2426,8 @@ Sản phẩm **91sViVy** được thiết kế dựa trên triết lý **Mắt -
  │ Vector/SQLite │           │ Argon2id/JWT  │           │ Feedback PnL  │
  └───────────────┘           └───────────────┘           └───────────────┘
 ```
+
+> **[REPLACED 29/09/2026 · D-3 / ADR-008]** sơ đồ trên từng ghi `Hands = không có gác cổng logic` / `No Gatekeeper`. Chủ dự án **đã ghi đè** triết lý đó (D-3): mọi lệnh đi qua **RiskGate** (fail-closed, **đồng minh an toàn**, không phải bộ lọc chiến lược). Xem `docs/adr/ADR-008-risk-gate.md`. Đo lưỡng trước khi đổi: 0/30 lệnh đối kháng bị chặn.
 
 ---
 
@@ -2436,7 +2440,7 @@ Sản phẩm **91sViVy** được thiết kế dựa trên triết lý **Mắt -
 | **Inference Engine** | [inference.py](file:///d:/91sViVy-Aider/src/vivy/core/inference.py) | Engine suy luận sinh ra Transparent Reasoning & Structured JSON decision. | Sinh JSON chuẩn định dạng `thought`, `action`, `symbol`, `volume`, `stop_loss`, `take_profit`. |
 | **Mắt (Data Collector)** | [mt5_collector.py](file:///d:/91sViVy-Aider/src/vivy/eyes/mt5_collector.py) | Thu thập giá nến OHLC, rổ lệnh hiện tại, chỉ báo RSI, EMA 20/50, ATR 14. | Không chứa logic quyết định. |
 | **Mắt (News Bridge)** | [news_bridge.py](file:///d:/91sViVy-Aider/src/vivy/eyes/news_bridge.py) | Cầu nối thu thập dữ liệu vĩ mô và tin tức kinh tế. | Cung cấp thông tin vĩ mô cho AI. |
-| **Tay (MT5 Executor)** | [mt5_executor.py](file:///d:/91sViVy-Aider/src/vivy/hands/mt5_executor.py) | Chuyển tiếp và gửi lệnh thô (`BUY`, `SELL`, `MODIFY`, `CLOSE`) trực tiếp tới MT5 Terminal. | **CẤM tuyệt đối bộ lọc cản hay gác cổng lập trình cứng (No Programmatic Gatekeepers)**. |
+| **Tay (MT5 Executor)** | [mt5_executor.py](file:///d:/91sViVy-Aider/src/vivy/hands/mt5_executor.py) | Chuyển tiếp và gửi lệnh thô (`BUY`, `SELL`, `MODIFY`, `CLOSE`) trực tiếp tới MT5 Terminal. | ~~**CẤM tuyệt đối bộ lọc cản hay gác cổng lập trình cứng (No Programmatic Gatekeepers)**.~~ **[REPLACED 29/09/2026 · D-3 / ADR-008]** — mọi lệnh đi qua **RiskGate** (fail-closed, giấy phép an toàn **không** phải bộ lọc chiến lược). Mặc định paper trading. |
 | **Vector Memory** | [vector_store.py](file:///d:/91sViVy-Aider/src/vivy/memory/vector_store.py) | Bộ nhớ lưu vết trade lessons và thu hồi 1-touch intuition context. | SQLite/Vector local storage. |
 | **Auth & Passkey** | [user_manager.py](file:///d:/91sViVy-Aider/src/vivy/auth/user_manager.py)<br>[webauthn_passkey.py](file:///d:/91sViVy-Aider/src/vivy/auth/webauthn_passkey.py) | Mã hóa Argon2id/SHA256, JWT Token generation/verification, Session invalidation, và WebAuthn 1-touch passkey login. | Vô hiệu hóa session tức thì khi có lệnh revocation. |
 | **API Server** | [router.py](file:///d:/91sViVy-Aider/src/vivy/api/router.py) | Điều phối REST API, WebSockets và chạy chu kỳ trade cycle tự động. | FastAPI lightweight open source. |
@@ -2467,10 +2471,12 @@ Hệ thống quản trị phiên làm việc (Session Management) hỗ trợ **V
    │
    ├─► [Brain] ViVyInferenceEngine xử lý context, ra quyết định JSON.
    │
-   ├─► [Hands] MT5Executor gửi lệnh trực tiếp lên MT5 (Không có gác cổng cứng).
+   ├─► [Hands] MT5Executor chạy lệnh qua RiskGate (fail-closed) rồi mới lên MT5.
    │
    └─► [Self-Improvement] FeedbackLogger lưu kết quả PnL vào Memory.
 ```
+
+> **[REPLACED 29/09/2026 · D-3 / ADR-008]** sơ đồ trên từng ghi `Hands = không có gác cổng logic` / `No Gatekeeper`. Chủ dự án **đã ghi đè** triết lý đó (D-3): mọi lệnh đi qua **RiskGate** (fail-closed, **đồng minh an toàn**, không phải bộ lọc chiến lược). Xem `docs/adr/ADR-008-risk-gate.md`. Đo lưỡng trước khi đổi: 0/30 lệnh đối kháng bị chặn.
 
 ---
 

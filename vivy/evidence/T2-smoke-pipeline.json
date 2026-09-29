@@ -1,0 +1,199 @@
+{
+  "run_id": "T2-smoke-pipeline",
+  "created_utc": "2026-09-29T13:17:35+00:00",
+  "split": "dev",
+  "n_items": 3,
+  "hang_ceiling_s": 120.0,
+  "max_completion_tokens": 4096,
+  "latency_note": "D-8 (29/09/2026): hang ceiling only. These latency figures are measurements from this run; the T11 budget is fixed from them and is UNMEASURED until that decision is made.",
+  "backend": {
+    "backend_id": "ollama",
+    "model_alias": "gemma4:e4b",
+    "model_hash": "",
+    "config_hash": "d91d1f625d10aa461603df44360942aaa994f28aa33f20b61d88e3d35c3fce25",
+    "base_url": "http://127.0.0.1:11434",
+    "extra": {
+      "num_ctx": 32768,
+      "timeout_s": 180.0,
+      "contract": "openai-compatible:/v1/chat/completions"
+    }
+  },
+  "arms": {
+    "baseline": {
+      "n_items": 3,
+      "n_correct": 2,
+      "accuracy": 0.6666666666666666,
+      "by_domain": {
+        "quantum": {
+          "n": 3,
+          "n_correct": 2,
+          "accuracy": 0.6666666666666666
+        }
+      },
+      "by_kind": {
+        "adversarial": {
+          "n": 1,
+          "n_correct": 0,
+          "accuracy": 0.0
+        },
+        "answerable": {
+          "n": 2,
+          "n_correct": 2,
+          "accuracy": 1.0
+        }
+      },
+      "median_latency_ms": 84434.29020000622,
+      "mean_latency_ms": 81720.02536667667,
+      "n_errors": 1,
+      "n_model_calls_observed": 2,
+      "n_model_calls_unknown": 1
+    },
+    "pipeline": {
+      "n_items": 3,
+      "n_correct": 2,
+      "accuracy": 0.6666666666666666,
+      "by_domain": {
+        "quantum": {
+          "n": 3,
+          "n_correct": 2,
+          "accuracy": 0.6666666666666666
+        }
+      },
+      "by_kind": {
+        "adversarial": {
+          "n": 1,
+          "n_correct": 0,
+          "accuracy": 0.0
+        },
+        "answerable": {
+          "n": 2,
+          "n_correct": 2,
+          "accuracy": 1.0
+        }
+      },
+      "median_latency_ms": 92390.56500000879,
+      "mean_latency_ms": 96302.986633343,
+      "n_errors": 1,
+      "n_model_calls_observed": 2,
+      "n_model_calls_unknown": 1
+    }
+  },
+  "arm_order": [
+    "baseline",
+    "pipeline"
+  ],
+  "t2_verdict": {
+    "status": "PASS",
+    "delta_accuracy": 0.0,
+    "delta_pp": 0.0,
+    "rule": "T2: pipeline >= baseline - 2pp; < baseline - 5pp -> stop and redesign",
+    "note": "pipeline 0.6667 >= baseline 0.6667 - 2pp (delta +0.00pp)"
+  },
+  "quantum_retention": {
+    "status": "DO_NOT_KEEP",
+    "n_items": 3,
+    "baseline_accuracy": 0.6666666666666666,
+    "pipeline_accuracy": 0.6666666666666666,
+    "delta_pp": 0.0,
+    "mcnemar_p": 1.0,
+    "baseline_median_latency_ms": 84434.29020000622,
+    "pipeline_median_latency_ms": 92390.56500000879,
+    "latency_ratio": 1.0942303746636102,
+    "rule": "keep quantum components only at >= baseline + 5pp with McNemar p<0.05 and <= 2x baseline latency"
+  },
+  "per_item": [
+    {
+      "id": "quantum-de-000",
+      "domain": "quantum",
+      "kind": "answerable",
+      "expected": "0.5",
+      "expected_kind": "number",
+      "arms": {
+        "baseline": {
+          "text": "The Hadamard gate ($H$) transforms the initial state $|0\\rangle$ as follows:\n$$|\\psi_{out}\\rangle = H|0\\rangle = \\frac{1}{\\sqrt{2}}(|0\\rangle + |1\\rangle)$$\n\nThe probability of measuring $|1\\rangle$ is the square of the amplitude of $|1\\rangle$ in the final state.\nThe amplitude of $|1\\rangle$ is $a_1 = \\frac{1}{\\sqrt{2}}$.\n\nThe probability $P(|1\\rangle)$ is:\n$$P(|1\\rangle) = |a_1|^2 = \\left| \\frac{1}{\\sqrt{2}} \\right|^2 = \\frac{1}{2} = 0.5$$\n\nAs a decimal to at least 6 places: 0.500000\n\n  ANSWER: 0.500000",
+          "correct": true,
+          "reason": "number_within_tolerance",
+          "parsed": "0.5",
+          "declared_field": "ANSWER",
+          "latency_ms": 40719.227400026284,
+          "completion_tokens": 0,
+          "model_call_made": true,
+          "error": null
+        },
+        "pipeline": {
+          "text": "<vivy_thought>\n[EPISTEMIC_ASSESSMENT]\nObjective: Calculate the probability of measuring |1⟩ after a Hadamard gate acts on |0⟩.\nConfidence: HIGH\nUnknown_Entities: NONE\nRequired_Modalities: NONE\nEpistemic_Decision: EXECUTE_DIRECTLY\n\n[EXECUTION_DIRECTIVE]\nTarget: self\nAction: Mathematical calculation based on quantum mechanics principles.\nExpected_Evidence: The numerical probability value (decimal, 6+ places).\n</vivy_thought>\nThe Hadamard gate ($H$) acting on the state $|0\\rangle$ yields the superposition state:\n$$|\\psi_{out}\\rangle = H|0\\rangle = \\frac{1}{\\sqrt{2}}(|0\\rangle + |1\\rangle)$$\n\nThe probability of measuring $|1\\rangle$ is the square of the amplitude associated with $|1\\rangle$ in the final state:\n$$P(|1\\rangle) = \\left| \\frac{1}{\\sqrt{2}} \\right|^2 = \\frac{1}{2}$$\n\nAs a decimal to at least 6 places, the probability is $0.500000$.\n\nANSWER: 0.500000",
+          "correct": true,
+          "reason": "number_within_tolerance",
+          "parsed": "0.5",
+          "declared_field": "ANSWER",
+          "latency_ms": 92390.56500000879,
+          "completion_tokens": 2977,
+          "model_call_made": true,
+          "error": null
+        }
+      }
+    },
+    {
+      "id": "quantum-de-001",
+      "domain": "quantum",
+      "kind": "adversarial",
+      "expected": "INSUFFICIENT_EVIDENCE",
+      "expected_kind": "insufficient",
+      "arms": {
+        "baseline": {
+          "text": "",
+          "correct": false,
+          "reason": "no_declared_answer",
+          "parsed": null,
+          "declared_field": null,
+          "latency_ms": 120006.55849999748,
+          "completion_tokens": 0,
+          "model_call_made": null,
+          "error": "timeout_after_120s"
+        },
+        "pipeline": {
+          "text": "",
+          "correct": false,
+          "reason": "no_declared_answer",
+          "parsed": null,
+          "declared_field": null,
+          "latency_ms": 120011.32440002402,
+          "completion_tokens": 0,
+          "model_call_made": null,
+          "error": "timeout_after_120s"
+        }
+      }
+    },
+    {
+      "id": "quantum-de-002",
+      "domain": "quantum",
+      "kind": "answerable",
+      "expected": "{-1,1}",
+      "expected_kind": "set",
+      "arms": {
+        "baseline": {
+          "text": "{1, -1}\n  ANSWER: {1, -1}",
+          "correct": true,
+          "reason": "set_exact_match",
+          "parsed": "1",
+          "declared_field": "ANSWER",
+          "latency_ms": 84434.29020000622,
+          "completion_tokens": 0,
+          "model_call_made": true,
+          "error": null
+        },
+        "pipeline": {
+          "text": "<vivy_thought>\n[EPISTEMIC_ASSESSMENT]\nObjective: Determine the eigenvalues of the Pauli-X matrix.\nConfidence: HIGH\nUnknown_Entities: NONE\nRequired_Modalities: NONE\nEpistemic_Decision: EXECUTE_DIRECTLY\n\n[EXECUTION_DIRECTIVE]\nTarget: self\nAction: Mathematical calculation/recall of quantum mechanics principles.\nExpected_Evidence: The correct eigenvalues of the Pauli-X matrix, formatted as a comma-separated list in braces.\n</vivy_thought>\nThe Pauli-X matrix is given by:\n$$X = \\begin{pmatrix} 0 & 1 \\\\ 1 & 0 \\end{pmatrix}$$\n\nTo find the eigenvalues ($\\lambda$), we solve the characteristic equation $\\det(X - \\lambda I) = 0$:\n$$\\det \\begin{pmatrix} -\\lambda & 1 \\\\ 1 & -\\lambda \\end{pmatrix} = (-\\lambda)(-\\lambda) - (1)(1) = \\lambda^2 - 1$$\n\nSetting the determinant to zero:\n$$\\lambda^2 - 1 = 0$$\n$$\\lambda^2 = 1$$\n$$\\lambda = \\pm 1$$\n\nThe eigenvalues are $-1$ and $1$. I will format this as requested.\n\n{-1, 1}\nANSWER: {-1, 1}",
+          "correct": true,
+          "reason": "set_exact_match",
+          "parsed": "1",
+          "declared_field": "ANSWER",
+          "latency_ms": 76507.07049999619,
+          "completion_tokens": 2985,
+          "model_call_made": true,
+          "error": null
+        }
+      }
+    }
+  ]
+}

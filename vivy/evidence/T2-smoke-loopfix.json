@@ -1,0 +1,185 @@
+{
+  "run_id": "T2-smoke-loopfix",
+  "created_utc": "2026-09-29T13:07:32+00:00",
+  "split": "dev",
+  "n_items": 6,
+  "hang_ceiling_s": 120.0,
+  "max_completion_tokens": 4096,
+  "latency_note": "D-8 (29/09/2026): hang ceiling only. These latency figures are measurements from this run; the T11 budget is fixed from them and is UNMEASURED until that decision is made.",
+  "backend": {
+    "backend_id": "ollama",
+    "model_alias": "gemma4:e4b",
+    "model_hash": "",
+    "config_hash": "d91d1f625d10aa461603df44360942aaa994f28aa33f20b61d88e3d35c3fce25",
+    "base_url": "http://127.0.0.1:11434",
+    "extra": {
+      "num_ctx": 32768,
+      "timeout_s": 180.0,
+      "contract": "openai-compatible:/v1/chat/completions"
+    }
+  },
+  "arms": {
+    "baseline": {
+      "n_items": 6,
+      "n_correct": 4,
+      "accuracy": 0.6666666666666666,
+      "by_domain": {
+        "quantum": {
+          "n": 6,
+          "n_correct": 4,
+          "accuracy": 0.6666666666666666
+        }
+      },
+      "by_kind": {
+        "adversarial": {
+          "n": 1,
+          "n_correct": 0,
+          "accuracy": 0.0
+        },
+        "answerable": {
+          "n": 5,
+          "n_correct": 4,
+          "accuracy": 0.8
+        }
+      },
+      "median_latency_ms": 47030.01470002346,
+      "mean_latency_ms": 61918.00740000326,
+      "n_errors": 1,
+      "n_model_calls_observed": 5,
+      "n_model_calls_unknown": 1
+    }
+  },
+  "arm_order": [
+    "baseline"
+  ],
+  "t2_verdict": {
+    "status": "NOT_EVALUATED",
+    "note": "need two arms"
+  },
+  "quantum_retention": {
+    "status": "NOT_EVALUATED",
+    "note": "need two arms"
+  },
+  "per_item": [
+    {
+      "id": "quantum-de-000",
+      "domain": "quantum",
+      "kind": "answerable",
+      "expected": "0.5",
+      "expected_kind": "number",
+      "arms": {
+        "baseline": {
+          "text": "The Hadamard gate ($H$) transforms the initial state $|0\\rangle$ as follows:\n$$|\\psi_{out}\\rangle = H|0\\rangle = \\frac{1}{\\sqrt{2}}(|0\\rangle + |1\\rangle)$$\n\nThe probability of measuring $|1\\rangle$ is the square of the amplitude of $|1\\rangle$ in the final state.\nThe amplitude of $|1\\rangle$ is $a_1 = \\frac{1}{\\sqrt{2}}$.\n\nThe probability $P(|1\\rangle)$ is:\n$$P(|1\\rangle) = |a_1|^2 = \\left| \\frac{1}{\\sqrt{2}} \\right|^2 = \\frac{1}{2} = 0.5$$\n\nAs a decimal to at least 6 places: 0.500000\n\n  ANSWER: 0.500000",
+          "correct": true,
+          "reason": "number_within_tolerance",
+          "parsed": "0.5",
+          "declared_field": "ANSWER",
+          "latency_ms": 47030.01470002346,
+          "completion_tokens": 0,
+          "model_call_made": true,
+          "error": null
+        }
+      }
+    },
+    {
+      "id": "quantum-de-001",
+      "domain": "quantum",
+      "kind": "adversarial",
+      "expected": "INSUFFICIENT_EVIDENCE",
+      "expected_kind": "insufficient",
+      "arms": {
+        "baseline": {
+          "text": "",
+          "correct": false,
+          "reason": "no_declared_answer",
+          "parsed": null,
+          "declared_field": null,
+          "latency_ms": 120004.67719999142,
+          "completion_tokens": 0,
+          "model_call_made": null,
+          "error": "timeout_after_120s"
+        }
+      }
+    },
+    {
+      "id": "quantum-de-002",
+      "domain": "quantum",
+      "kind": "answerable",
+      "expected": "{-1,1}",
+      "expected_kind": "set",
+      "arms": {
+        "baseline": {
+          "text": "{1, -1}\n  ANSWER: {1, -1}",
+          "correct": true,
+          "reason": "set_exact_match",
+          "parsed": "1",
+          "declared_field": "ANSWER",
+          "latency_ms": 84379.84700000379,
+          "completion_tokens": 0,
+          "model_call_made": true,
+          "error": null
+        }
+      }
+    },
+    {
+      "id": "quantum-de-003",
+      "domain": "quantum",
+      "kind": "answerable",
+      "expected": "3",
+      "expected_kind": "number",
+      "arms": {
+        "baseline": {
+          "text": "ANSWER: 2",
+          "correct": false,
+          "reason": "number_outside_tolerance(±0)",
+          "parsed": "2.0",
+          "declared_field": "ANSWER",
+          "latency_ms": 39785.35099996952,
+          "completion_tokens": 0,
+          "model_call_made": true,
+          "error": null
+        }
+      }
+    },
+    {
+      "id": "quantum-de-004",
+      "domain": "quantum",
+      "kind": "answerable",
+      "expected": "0.360000000000",
+      "expected_kind": "number",
+      "arms": {
+        "baseline": {
+          "text": "The state of the qubit is given by:\n$$|\\psi\\rangle = \\frac{3|0\\rangle + 4|1\\rangle}{\\sqrt{3^2 + 4^2}}$$\n\nFirst, we calculate the normalization factor:\n$$\\sqrt{3^2 + 4^2} = \\sqrt{9 + 16} = \\sqrt{25} = 5$$\n\nThe normalized state is:\n$$|\\psi\\rangle = \\frac{3}{5}|0\\rangle + \\frac{4}{5}|1\\rangle$$\n\nThe probability of measuring $|0\\rangle$, denoted $P(0)$, is the square of the magnitude of the coefficient of $|0\\rangle$:\n$$P(0) = \\left| \\frac{3}{5} \\right|^2 = \\frac{9}{25}$$\n\nConverting the fraction to a decimal:\n$$P(0) = 0.36$$\n\nTo at least 6 decimal places:\n$$P(0) = 0.360000$$\n\nANSWER: 0.360000",
+          "correct": true,
+          "reason": "number_within_tolerance",
+          "parsed": "0.36",
+          "declared_field": "ANSWER",
+          "latency_ms": 42410.788500041235,
+          "completion_tokens": 0,
+          "model_call_made": true,
+          "error": null
+        }
+      }
+    },
+    {
+      "id": "quantum-de-005",
+      "domain": "quantum",
+      "kind": "answerable",
+      "expected": "1",
+      "expected_kind": "number",
+      "arms": {
+        "baseline": {
+          "text": "ANSWER: 1",
+          "correct": true,
+          "reason": "number_within_tolerance",
+          "parsed": "1.0",
+          "declared_field": "ANSWER",
+          "latency_ms": 37897.36599999014,
+          "completion_tokens": 0,
+          "model_call_made": true,
+          "error": null
+        }
+      }
+    }
+  ]
+}

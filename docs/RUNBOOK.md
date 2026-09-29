@@ -52,12 +52,18 @@ cd "d:\91s_Vivy\Vivy_final\engine\bin"
 
 ViVy Core tự động điều phối giữa hai mô hình:
 1. **Lập luận nhận thức (Cognitive Reasoner):** `gemma4-e4b` (Gemma 4 E4B Q4_K_M ~8.95GB).
-2. **Lập trình kỹ thuật (Technical Specialist):** `qwen2.5-coder:7b` (Qwen 2.5 Coder 7B ~4.7GB qua Ollama hoặc Cautreo).
+2. **Đa phương thức (Multimodal Pool):** `qwen2-vl-72b` (Qwen2-VL-72B Q4_K_M ~44.16GB) — vision / DOC / CUA.
+
+> **[REROUTED 26/09/2026]** Technical Specialist `qwen2.5-coder:7b` **không có trọng số trên đĩa**
+> (gguf chưa từng tải; runtime `start_vivy_qwen_coder.ps1` đã xóa). Việc code/refactor do
+> `gemma4-e4b` đảm nhiệm. Specialist riêng vẫn nhận qua `VIVY_CODER_URL` nếu có server.
+> Xem `models/model_manifest.json` → `task_archetype_mapping_note_2026-09-26`.
 
 *Cấu hình biến môi trường tùy chỉnh:*
 ```powershell
 $env:VIVY_MODEL       = "gemma4-e4b"
-$env:VIVY_CODER_MODEL = "qwen2.5-coder:7b"
+$env:VIVY_CODER_MODEL = "gemma4-e4b"     # chỉ có 1 model text/code trên đĩa
+# $env:VIVY_CODER_URL = "http://127.0.0.1:8081"   # tùy chọn: specialist server riêng
 ```
 
 ---

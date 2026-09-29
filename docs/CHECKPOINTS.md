@@ -1,4 +1,4 @@
-﻿# Kho Checkpoint nội bộ — Hướng dẫn độc lập
+# Kho Checkpoint nội bộ — Hướng dẫn độc lập
 
 > **Phạm vi:** tài liệu này mô tả **toàn bộ trọng số/checkpoint của ViVy core + Cautreo** đang lưu **nội bộ** (ngoài git). Đây là hướng dẫn độc lập để khôi phục, đối chiếu số liệu và biết vì sao chúng **không** nằm trong repo GitHub.
 >

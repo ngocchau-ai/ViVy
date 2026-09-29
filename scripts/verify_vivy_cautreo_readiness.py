@@ -1,4 +1,4 @@
-﻿"""verify_vivy_cautreo_readiness.py
+"""verify_vivy_cautreo_readiness.py
 
 [ISOLATED 26/09/2026] BẢN NÀY GIỮ LÀM TÀI LIỆU SO SÁNH / THAM KHẢO.
 Bản vận hành thật: `vivy/scripts/verify_vivy_cautreo_readiness.py`.
@@ -43,7 +43,9 @@ def verify_codex_remediations() -> dict[str, bool]:
     # [ISOLATED 26/09/2026] Check 1 "Qwen2.5-Coder model artifact presence" — GỠ BỎ.
     # `qwen2.5-coder-7b-instruct-q4_k_m.gguf` không tồn tại trên đĩa và user chỉ thị
     # xóa tham chiếu; kéo theo xóa 2 runtime `start_vivy_qwen_coder.ps1`.
-    results["qwen_coder_artifact_present"] = False
+    # [FIXED 27/09/2026] Ngừng ghi key này vào `results` — bản copy này là bản so sánh,
+    # bản vận hành thật đã sửa; xem `vivy/scripts/verify_vivy_cautreo_readiness.py`.
+    # Key chết luôn False sẽ làm FAIL OVERALL VERDICT vĩnh viễn qua `all(values)`.
     print("[CODEX-P1-1] Qwen2.5-Coder artifact: [ISOLATED 26/09/2026] gguf đã gỡ — check này bị loại bỏ")
 
     # Check 2: ElasticNCore audit boundary

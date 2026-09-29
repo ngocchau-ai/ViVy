@@ -1,4 +1,4 @@
-﻿"""
+"""
 cautreo_binding.py — ViVy Native In-Process C-ABI Binding for CAUTREO Engine.
 
 Cung cấp kết nối trực tiếp (In-Process Direct Binding) giữa

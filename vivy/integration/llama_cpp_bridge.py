@@ -27,13 +27,17 @@ Changelog:
     23/09/2026 (Claude Code — P1 Dynamic Thinking Budget): Per-request thinking
         budget via orchestrator.thinking_budget (0/384/1024). # [ISOLATED 23/09/2026]
         prior payload: 'chat_template_kwargs={"enable_thinking": False}' hardcoded.
+    29/09/2026 (Claude Code — WP-3 / O-04): Config nay lấy từ
+        llm_bridge.backend.LLMBackend — MỘT cấu hình URL / model-id / timeout /
+        num_ctx (F-A09). Timeout tách riêng LLMTimeoutError (không gộp vào lỗi
+        suy luận). ChatResponse mang backend_id + model_id để mọi receipt ghi
+        đúng model đã trả lời (F-B06).
 """
 
 from __future__ import annotations
 
 import json
 import logging
-import os
 import re
 import time
 from dataclasses import dataclass, field
@@ -41,6 +45,7 @@ from typing import Any
 
 import httpx
 
+from llm_bridge.backend import LLMBackend, LLMTimeoutError
 from orchestrator.thinking_budget import (
     build_thinking_payload_fields,
     resolve_budget_from,
@@ -158,23 +163,42 @@ def _extract_content(message: dict[str, Any]) -> str:
 
 @dataclass
 class LlamaCppConfig:
-    """Configuration for llama.cpp server / Ollama connection.
+    """Configuration for the OpenAI-compatible model server.
 
-    Active ViVy Final exposes OpenAI-compatible API at http://127.0.0.1:8080.
-    Override via VIVY_LLAMA_URL env var.
+    [REPLACED 29/09/2026 · WP-3 / F-A09] the values used to be read straight
+    from env vars here, in parallel with ``llm_bridge.client`` and
+    ``training.backend_registry`` — three sources of truth for one model.  They
+    now come from ``llm_bridge.backend.LLMBackend`` (one URL, one model-id, one
+    timeout, one num_ctx).  Field names are unchanged so existing callers and
+    launchers keep working.
+
+    The endpoint is OpenAI-compatible ``/v1/chat/completions`` at
+    ``http://127.0.0.1:8080`` by default (``VIVY_LLAMA_URL``).  That contract is
+    served by llama-server / Ollama during development and by ``cautreo-server``
+    after the D-4 parity measurement — see ``llm_bridge.backend``.
     """
 
-    base_url: str = field(
-        default_factory=lambda: os.environ.get("VIVY_LLAMA_URL", "http://127.0.0.1:8080")
-    )
-    model_name: str = field(
-        default_factory=lambda: os.environ.get("VIVY_MODEL", "gemma4-e4b")
-    )
-    temperature: float = 0.15
-    top_p: float = 0.9
-    max_tokens: int = 2048
-    timeout_s: float = 180.0   # Ollama CPU inference can be slow
-    num_ctx: int = 32768
+    base_url: str = field(default_factory=lambda: LLMBackend.from_env().base_url)
+    model_name: str = field(default_factory=lambda: LLMBackend.from_env().model_id)
+    temperature: float = field(default_factory=lambda: LLMBackend.from_env().temperature)
+    top_p: float = field(default_factory=lambda: LLMBackend.from_env().top_p)
+    max_tokens: int = field(default_factory=lambda: LLMBackend.from_env().max_tokens)
+    timeout_s: float = field(default_factory=lambda: LLMBackend.from_env().timeout_s)
+    num_ctx: int = field(default_factory=lambda: LLMBackend.from_env().num_ctx)
+    backend: LLMBackend = field(default_factory=LLMBackend.from_env)
+
+    def __post_init__(self) -> None:
+        # Keep the explicit values the caller passed; only fill the identity
+        # fields that are allowed to be blank.  The backend object is the SSOT
+        # for *defaults*, never an override of a caller's choice.
+        if not self.base_url:
+            self.base_url = self.backend.base_url
+        if not self.model_name:
+            self.model_name = self.backend.model_id
+
+    def identity(self) -> dict[str, Any]:
+        """Receipt shard naming the backend and model that will answer."""
+        return self.backend.with_model(self.model_name).identity()
 
 
 # ---------------------------------------------------------------------------
@@ -250,6 +274,14 @@ class ChatResponse:
         Mirrors CAUTREO boundary contract: process success ≠ semantic cognition.
     delegate_reason:
         Human-readable reason for delegation (set when is_delegate=True).
+    delegate_kind:
+        [WP-3 29/09/2026] "timeout" | "unavailable" | "error" | "" — timeout is
+        reported separately from an inference failure (acceptance: *"timeout báo
+        riêng khỏi lỗi suy luận"*).  Empty on a successful response.
+    backend_id / model_id:
+        [WP-3 29/09/2026] what actually served this response (F-B06).  Every
+        downstream receipt must carry these so an answer can never be filed
+        under a model that did not produce it.
     """
 
     content: str
@@ -261,6 +293,9 @@ class ChatResponse:
     raw: dict[str, Any]
     is_delegate: bool = False
     delegate_reason: str = ""
+    delegate_kind: str = ""
+    backend_id: str = ""
+    model_id: str = ""
 
     @property
     def has_tool_calls(self) -> bool:
@@ -272,7 +307,13 @@ class ChatResponse:
 # ---------------------------------------------------------------------------
 
 
-def _make_delegate_response(reason: str, elapsed_ms: float = 0.0) -> ChatResponse:
+def _make_delegate_response(
+    reason: str,
+    elapsed_ms: float = 0.0,
+    kind: str = "error",
+    backend_id: str = "",
+    model_id: str = "",
+) -> ChatResponse:
     """Create a DELEGATE ChatResponse — used when llama-server is unavailable.
 
     CAUTREO contract: nếu native inference backend fails, fail-fast và emit
@@ -280,6 +321,10 @@ def _make_delegate_response(reason: str, elapsed_ms: float = 0.0) -> ChatRespons
 
     This is NOT an error response — it's a structured signal that the inference
     path must be rerouted. Process failure ≠ cognitive failure.
+
+    ``kind`` separates a timeout from any other failure (WP-3): a slow model is
+    not a wrong model, and a latency budget cannot be measured if both land in
+    the same bucket.
     """
     return ChatResponse(
         content=f"DELEGATE: {reason}",
@@ -288,9 +333,12 @@ def _make_delegate_response(reason: str, elapsed_ms: float = 0.0) -> ChatRespons
         prompt_tokens=0,
         completion_tokens=0,
         elapsed_ms=elapsed_ms,
-        raw={"delegate": True, "reason": reason},
+        raw={"delegate": True, "reason": reason, "kind": kind},
         is_delegate=True,
         delegate_reason=reason,
+        delegate_kind=kind,
+        backend_id=backend_id,
+        model_id=model_id,
     )
 
 
@@ -483,6 +531,12 @@ class LlamaCppBridge:
                 headers={"Content-Type": "application/json"},
             )
             response.raise_for_status()
+        except httpx.TimeoutException as exc:
+            # WP-3: timeout is its own verdict, never filed as a reasoning error.
+            raise LLMTimeoutError(
+                f"LlamaCppBridge: request timed out after {self.config.timeout_s}s "
+                f"(model={target_model}, url={self.config.base_url})"
+            ) from exc
         except httpx.HTTPStatusError as e:
             raise RuntimeError(
                 f"LlamaCppBridge: HTTP {e.response.status_code} from llama-server: {e.response.text[:200]}"
@@ -524,6 +578,11 @@ class LlamaCppBridge:
             completion_tokens=usage.get("completion_tokens", 0),
             elapsed_ms=elapsed_ms,
             raw=raw,
+            backend_id=self.config.backend.backend_id,
+            # Prefer the id the server echoed back: that is the model that
+            # actually answered (F-B06 — never file another model's output
+            # under the requested identity).
+            model_id=str(raw.get("model") or target_model),
         )
 
     def _chat_streaming(self, payload: dict[str, Any], t0: float) -> ChatResponse:
@@ -618,7 +677,18 @@ class LlamaCppBridge:
             completion_tokens=completion_tokens,
             elapsed_ms=elapsed_ms,
             raw={"streamed": True},
+            backend_id=self.config.backend.backend_id,
+            model_id=str(payload.get("model") or self.config.model_name),
         )
+
+    def backend_identity(self) -> dict[str, Any]:
+        """Receipt shard: which backend and model will answer the next call.
+
+        [WP-3 29/09/2026] every receipt carries this (F-A09 / F-B06).  Callers
+        should stamp it into ActivityLog / evidence packets rather than naming
+        a model by hand.
+        """
+        return self.config.identity()
 
     def list_models(self) -> list[str]:
         """List models available on the llama-server."""
@@ -682,6 +752,8 @@ class LlamaCppBridge:
         or is_delegate=True with delegate_reason on failure.
         """
         t0 = time.perf_counter()
+        backend_id = self.config.backend.backend_id
+        model_id = model or self.config.model_name
         try:
             return self.chat(
                 messages=messages,
@@ -692,20 +764,40 @@ class LlamaCppBridge:
                 thinking_budget=thinking_budget,
                 epistemic_decision=epistemic_decision,
             )
-        except RuntimeError as e:
+        except LLMTimeoutError as e:
+            # WP-3 acceptance: "timeout báo riêng khỏi lỗi suy luận".
             elapsed_ms = (time.perf_counter() - t0) * 1000
             reason = str(e)
             logger.warning(
-                "LlamaCppBridge.chat_safe: DELEGATE — %s (%.0fms)", reason[:120], elapsed_ms
+                "LlamaCppBridge.chat_safe: DELEGATE(timeout) — %s (%.0fms)",
+                reason[:120], elapsed_ms,
             )
-            return _make_delegate_response(reason=reason, elapsed_ms=elapsed_ms)
+            return _make_delegate_response(
+                reason=reason, elapsed_ms=elapsed_ms, kind="timeout",
+                backend_id=backend_id, model_id=model_id,
+            )
+        except RuntimeError as e:
+            elapsed_ms = (time.perf_counter() - t0) * 1000
+            reason = str(e)
+            kind = "unavailable" if "Cannot connect" in reason else "error"
+            logger.warning(
+                "LlamaCppBridge.chat_safe: DELEGATE(%s) — %s (%.0fms)",
+                kind, reason[:120], elapsed_ms,
+            )
+            return _make_delegate_response(
+                reason=reason, elapsed_ms=elapsed_ms, kind=kind,
+                backend_id=backend_id, model_id=model_id,
+            )
         except Exception as e:  # noqa: BLE001
             elapsed_ms = (time.perf_counter() - t0) * 1000
             reason = f"Unexpected: {type(e).__name__}: {e}"
             logger.error(
                 "LlamaCppBridge.chat_safe: DELEGATE (unexpected) — %s", reason[:120]
             )
-            return _make_delegate_response(reason=reason, elapsed_ms=elapsed_ms)
+            return _make_delegate_response(
+                reason=reason, elapsed_ms=elapsed_ms, kind="error",
+                backend_id=backend_id, model_id=model_id,
+            )
 
     def fallback_to_delegate(self, reason: str) -> ChatResponse:
         """Explicitly emit a DELEGATE signal (e.g., caller detects model output is wrong).
@@ -715,7 +807,12 @@ class LlamaCppBridge:
         CAUTREO pattern: UNVERIFIED → DELEGATE, not a crash.
         """
         logger.info("LlamaCppBridge.fallback_to_delegate: reason=%s", reason[:80])
-        return _make_delegate_response(reason=reason)
+        return _make_delegate_response(
+            reason=reason,
+            kind="error",
+            backend_id=self.config.backend.backend_id,
+            model_id=self.config.model_name,
+        )
 
     def __enter__(self) -> LlamaCppBridge:
         return self

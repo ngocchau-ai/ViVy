@@ -52,6 +52,7 @@ import numpy as np
 from engine.elastic_n_core import ElasticNCore
 from engine.mtp_directive import DirectiveMTPHead
 from integration.activity_log import ActivityLog
+from integration.evidence import build_evidence_packet
 from integration.llama_cpp_bridge import (
     ChatMessage,
     ChatResponse,
@@ -157,7 +158,7 @@ Required_Modalities: NONE | DOC | VISION | AUDIO
 Epistemic_Decision: EXECUTE_DIRECTLY | NEED_KNOWLEDGE_FORAGING | DELEGATE_MODEL
 
 [EXECUTION_DIRECTIVE]
-Target: self | engine_file_io | engine_exec | engine_media_slice | knowledge_forage | specialist:qwen2.5-coder:7b
+Target: self | engine_file_io | engine_exec | engine_media_slice | knowledge_forage | specialist:qwen2-vl-72b
 Action: <what will be executed>
 Expected_Evidence: <measurable success criteria>
 </vivy_thought>
@@ -165,26 +166,29 @@ Expected_Evidence: <measurable success criteria>
 ## DECISION CRITERIA
 - EXECUTE_DIRECTLY: Confidence HIGH, no Unknown_Entities → proceed immediately
 - NEED_KNOWLEDGE_FORAGING: Any Unknown_Entity present → call knowledge_forage first
-- DELEGATE_MODEL: Task requires specialist → emit consent targeting specialist model
+- DELEGATE_MODEL: Task needs a modality this model does not carry (vision) → emit consent targeting the multimodal pool
 
 ## LOCAL SPECIALIST CATALOG & CAPABILITIES
-Cautreo hosts the following local model weights in `models/`:
-1. `gemma4-e4b` (Current Active Reasoner, 9.6GB):
-   - Scope: High-level architectural planning, multi-step epistemic reasoning, orchestrating, audit.
-   - Selected when: Task is conceptual, orchestrative, or default general reasoning.
-2. `qwen2.5-coder:7b` (Technical Coding Specialist, 4.68GB):
-   - Scope: Pure C/C++ low-level implementations, C-ABI bindings, pointer arithmetic, complex refactoring, test suite construction. Benchmark: HumanEval 88.4.
-   - Selected when: Task requires deep programming, syntax implementation, or when explicitly requested.
-3. `qwen3.8-27b` (Deep Analytical Reasoning, 7.26GB) [STANDBY]: Heavy capacity research.
-4. `vivy2` (Fast Baseline, 2.01GB): Lightweight classification and parsing.
+Cautreo hosts the following local model weights (source of truth: `models/model_manifest.json` `full_path`; binaries live under `MODEL_ROOT = D:\\models`, NOT in the repo):
+1. `gemma4-e4b` (Current Active Reasoner, 9.6GB) — ACTIVE_COGNITIVE_SOUL:
+   - Scope: High-level architectural planning, multi-step epistemic reasoning, orchestrating, audit, AND low-level coding (C/C++, C-ABI, ctypes, refactoring, tests).
+   - Selected when: any text-only task. There is no separate coding specialist on disk — see "RETIRED WEIGHTS" below.
+2. `qwen2-vl-72b` (Deep Multimodal Knowledge Pool, 44.16GB) — DOWNLOADED_ON_DISK:
+   - Scope: image/document/UI understanding, chart analysis, desktop GUI vision.
+   - Selected when: `Required_Modalities` includes VISION or DOC.
+
+### RETIRED WEIGHTS — do NOT target these
+`qwen2.5-coder:7b`, `qwen2.5-coder-7b-instruct`, `qwen3.8-27b`, `vivy2`, `vivy-1.5b-reflex` are NOT runnable:
+their `.gguf` files are not on disk (`ISOLATED_ARCHIVED` / `ROADMAP_PROPOSED` in the manifest).
+Do not emit a `Target` naming them. A `DELEGATE_MODEL` aimed at one of them can never be fulfilled.
 
 ## INTER-AGENT DELEGATION PROTOCOL
 When collaborating with partner agents (Codex CLI, Antigravity IDE, User):
 1. EXPLICIT DELEGATION: If input contains `[SPECIALIST_REQUEST: CODING]` or `[DELEGATION_HINT: qwen2.5-coder]`:
-   - Emit `Epistemic_Decision: DELEGATE_MODEL`
-   - Set `Target: specialist:qwen2.5-coder:7b`
+   - The former coding specialist is retired. Do NOT target `specialist:qwen2.5-coder:7b`.
+   - Handle the coding work yourself (`Epistemic_Decision: EXECUTE_DIRECTLY`, `Target: self`), or hand it to an external partner agent via the normal handoff channel.
    - Formulate clear `Action` and `Expected_Evidence` for the technical worker.
-2. AUTONOMOUS RECOGNITION: If input requires implementing low-level C/C++ code, ctypes shared memory structs, or multi-file code refactors, recognize that your primary role is Cognitive Architect, and emit `Epistemic_Decision: DELEGATE_MODEL` targeting `specialist:qwen2.5-coder:7b`.
+2. AUTONOMOUS RECOGNITION: If input requires implementing low-level C/C++ code, ctypes shared memory structs, or multi-file code refactors, do it under `Target: self` with `engine_file_io` / `engine_exec`. Emit `DELEGATE_MODEL` targeting `specialist:qwen2-vl-72b` only when the task also needs vision.
 
 ## CONSTRAINTS
 - NEVER answer without the <vivy_thought> block
@@ -627,26 +631,75 @@ class VivyInferenceLoop:
                     "NEED_KNOWLEDGE_FORAGING": Decision.FORAGE,
                     "DELEGATE_MODEL": Decision.DELEGATE,
                 }
+                # F-B03: an unparsed decision must not become EXECUTE_DIRECTLY.
+                # _parse_epistemic_decision now returns "" on a miss, so this
+                # map's default is live and fail-closed.
+                if requested not in requested_map:
+                    self._activity.record(
+                        "epistemic_decision_unparsed", session_id=task_state.task_id,
+                        round=rounds, status="FAIL",
+                        requested=requested or "<missing>",
+                        state_hash=task_state.state_hash,
+                    )
+
+                # F-B01: resolve() previously received only
+                # requested/has_expected_evidence/rounds/max_rounds, so
+                # tool_failed, repeated_failure and evidence_verified stayed at
+                # their defaults and HALT could never fire.  All are now derived
+                # from real loop state.
+                failed_so_far = [dr for dr in all_tool_results if not dr.ok]
+                tool_failed = bool(failed_so_far)
+                fail_counts: dict[str, int] = {}
+                for dr in failed_so_far:
+                    fail_counts[dr.tool_name] = fail_counts.get(dr.tool_name, 0) + 1
+                repeated_failure = any(n >= 2 for n in fail_counts.values())
+                # Provisional verification signal available *at decision time*:
+                # the model named a measurable Expected_Evidence target and no
+                # tool call has failed.  Deliberately narrow so HALT needs an
+                # explicit evidence contract (T4: 0/30 false-halt).  [WP-8]
+                # swaps this for a real EvidencePacket verdict.
+                evidence_verified = bool(expected) and not tool_failed and bool(response.content)
+
                 epistemic_decision = resolve(DecisionContext(
                     requested=requested_map.get(requested, Decision.DELEGATE),
                     has_expected_evidence=bool(expected),
+                    evidence_verified=evidence_verified,
+                    tool_failed=tool_failed,
+                    repeated_failure=repeated_failure,
                     rounds=rounds,
                     max_rounds=max_rounds,
+                    budget_exhausted=(mode == InferenceMode.AGENTIC and rounds >= max_rounds),
+                    single_round=(mode != InferenceMode.AGENTIC),
                 )).value
                 self._activity.record(
                     "decision_assessment", session_id=task_state.task_id,
                     round=rounds, requested=requested, resolved=epistemic_decision,
                     expected_evidence=bool(expected), state_hash=task_state.state_hash,
                     finish_reason=response.finish_reason,
+                    evidence_verified=evidence_verified,
+                    tool_failed=tool_failed,
+                    repeated_failure=repeated_failure,
                 )
 
             # If no tool calls or CHAT mode, we're done
             if not response.has_tool_calls or mode == InferenceMode.CHAT:
                 final_response = response.content
-                if mode == InferenceMode.AGENTIC and epistemic_decision in {
-                    Decision.FORAGE.value, Decision.DELEGATE.value,
-                    Decision.CONTINUE.value, Decision.BACKTRACK.value,
-                } and rounds < max_rounds:
+                # [REPLACED 29/09/2026] F-B01: the continue-set used to include
+                # CONTINUE and DELEGATE, so every tool-free answer re-entered the
+                # loop with "Provide the next bounded action…" and ran to
+                # max_rounds (log: 15/15 rounds=10).  A model that answered
+                # without tool calls gets another round only when it explicitly
+                # asked for more work (FORAGE / BACKTRACK).  DELEGATE means hand
+                # off and CONTINUE means "proceed" — both end the round.
+                wants_another_round = epistemic_decision in {
+                    Decision.FORAGE.value,
+                    Decision.BACKTRACK.value,
+                }
+                if (
+                    mode == InferenceMode.AGENTIC
+                    and wants_another_round
+                    and rounds < max_rounds
+                ):
                     messages.append(ChatMessage(role="assistant", content=response.content or ""))
                     messages.append(ChatMessage(
                         role="user",
@@ -702,12 +755,40 @@ class VivyInferenceLoop:
             hypothesis_ids=[f"{task_state.state_hash[:12]}-h0", f"{task_state.state_hash[:12]}-h1"],
             expected_evidence="typed result with provenance and acceptance decision",
         )
+        # WP-8 (F-B05): verification is derived from what the external tools
+        # actually returned, never asserted by the model.  The old
+        # ``independently_verified=False`` was a hardcode that made
+        # VERIFIED_RESULT unreachable, so LessonStore.promote() never fired and
+        # the system could not learn at all.  The packet is built here, where
+        # the dispatch rows still exist, and forwarded -- see
+        # integration/evidence.py for what "independent" deliberately does and
+        # does not mean.
+        evidence_packet, independently_verified = build_evidence_packet(
+            claim=final_response,
+            expected_evidence="typed result with provenance and acceptance decision",
+            task_id=task_state.task_id,
+            session_id=session.session_id,
+            state_hash=task_state.state_hash,
+            tool_results=all_tool_results,
+            # Same calibration ``evaluate_multi_stream`` uses on these exact
+            # candidates, so the confidence recorded on the packet is the one
+            # that drove the epistemic class -- not a second, drifting number.
+            confidence=session.bridge.calibrate_multi_stream_confidence(
+                n_core_fresh.candidates
+            ),
+            limits=(
+                "process success only: an external tool returned ok with no tool "
+                "failures. Semantic correctness of the claim is NOT verified here "
+                "(tribunal is WP-11). Do not treat as proven."
+            ),
+        )
         bridge_result, evidence_class = session.bridge.evaluate_multi_stream(
             core_result=n_core_fresh,
             graph=session.graph,
             recall=session.recall,
             task_context=epistemic_decision,
-            independently_verified=False,
+            independently_verified=independently_verified,
+            evidence_packet=evidence_packet,
         )
         session.touch()
 
@@ -725,13 +806,19 @@ class VivyInferenceLoop:
 
     @staticmethod
     def _parse_epistemic_decision(text: str) -> str:
-        """Extract Epistemic_Decision from <vivy_thought> block."""
+        """Extract Epistemic_Decision from <vivy_thought> block.
+
+        [REPLACED 29/09/2026] the previous body returned ``"EXECUTE_DIRECTLY"``
+        when no field was present (F-B03, fail-open) and made the caller's
+        ``.get(requested, Decision.DELEGATE)`` default dead code.  A miss now
+        returns ``""`` so the caller resolves it fail-closed to DELEGATE.
+        """
         pattern = re.compile(
             r"Epistemic_Decision\s*:\s*(EXECUTE_DIRECTLY|NEED_KNOWLEDGE_FORAGING|DELEGATE_MODEL)",
             re.IGNORECASE,
         )
         m = pattern.search(text)
-        return m.group(1).upper() if m else "EXECUTE_DIRECTLY"
+        return m.group(1).upper() if m else ""
 
     @staticmethod
     def _parse_expected_evidence(text: str) -> str:

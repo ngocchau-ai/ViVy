@@ -1,4 +1,4 @@
-﻿# Cautreo Desktop UI — bàn điều khiển cơ thể
+# Cautreo Desktop UI — bàn điều khiển cơ thể
 
 Bản mẫu giao diện cho spec `docs/superpowers/specs/2026-09-25-cautreo-desktop-ui-design.md`.
 **Greenfield** — không dựa trên `Vivy_final/desktop/` (xem D2).

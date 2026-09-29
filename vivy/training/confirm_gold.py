@@ -112,6 +112,7 @@ def confirm(
             "reviewer": reviewer,
             "reviewed_at": reviewed_at,
             "independent_receipt_id": independent_receipt_id,
+            "label_quality": "independently_reviewed",
             "status": "REVIEWED",
         })
         q_row["review"] = review
@@ -131,8 +132,13 @@ def confirm(
             reviewer = f"oracle_{RULE_VERSION}"
             reviewed_at = "oracle-auto-reviewed"
             gold_outcome = "unknown"
+            # [REPLACED 29/09/2026 · WP-6 / F-H02] was kind="human-accept".
+            # The oracle is not a human reviewer.  Stamping a machine decision
+            # with a human-accept receipt id made it indistinguishable from a
+            # human sign-off downstream (decision_contract.verify_receipt_linkage
+            # and promote_reviewed both key off the id prefix).
             independent_receipt_id = make_receipt_id(
-                kind="human-accept",
+                kind="oracle",
                 payload={
                     "proposal_receipt_id": t_row.get("proposal_receipt_id"),
                     "legacy_receipt_id": t_row.get("legacy_receipt_id"),
@@ -150,6 +156,9 @@ def confirm(
                 "reviewer": reviewer,
                 "reviewed_at": reviewed_at,
                 "independent_receipt_id": independent_receipt_id,
+                # oracle_confirmed, not independently_reviewed — the contract
+                # already distinguishes these; say which one this is.
+                "label_quality": "oracle_confirmed",
                 "status": "REVIEWED",
             }
             reviewed += 1

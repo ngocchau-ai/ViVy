@@ -112,12 +112,41 @@ python scripts/run_vivy.py --mode batch \
 
 ## Environment Variables
 
+Một cấu hình duy nhất cho backend LLM — xem `llm_bridge/backend.py` và
+[`ADR-007`](../adr/ADR-007-llm-backend.md).
+
 | Variable | Default | Mô tả |
 |:---|:---:|:---|
-| `VIVY_LLAMA_URL` | `http://127.0.0.1:11434` | Ollama server URL |
-| `VIVY_MODEL` | `vivy-final:v1` | Model name |
+| `VIVY_LLAMA_URL` | `http://127.0.0.1:8080` | Server root của API tương thích OpenAI (**không** kèm `/v1`) |
+| `VIVY_MODEL` | `gemma4-e4b` | Model-id sẽ trả lời — được ghi vào mọi receipt |
+| `VIVY_BACKEND_ID` | `llama-server` | Nhãn backend cho receipt (`llama-server` / `cautreo-server`) |
+| `VIVY_LLM_TIMEOUT_S` | `180` | Timeout mỗi request (giây) — báo riêng khỏi lỗi suy luận |
+| `VIVY_LLM_NUM_CTX` | `32768` | Context window |
+| `VIVY_API_KEY` | *(rỗng)* | Bearer token — để trống với server local |
 | `VIVY_MAX_ROUNDS` | `10` | Max agentic loop rounds |
 | `VIVY_HIDDEN_DIM` | `64` | Hidden dimension cho N-Core |
+
+> **[REPLACED 29/09/2026 · WP-3]** Bảng trước ghi `VIVY_LLAMA_URL` mặc định
+> `http://127.0.0.1:11434` và `VIVY_MODEL` là `vivy-final:v1` — **sai** so với
+> code và launcher (dùng `8080` / `gemma4:e4b`). `11434` là port native của
+> Ollama; runtime nói chuyện với bề mặt tương thích OpenAI trên `8080`.
+> Các biến `UNITARY_API_BASE` / `UNITARY_DEFAULT_MODEL` / `UNITARY_MODEL_LIST`
+> nay `[ISOLATED]` — cấu hình đi qua `LLMBackend` một đường duy nhất.
+
+### Backend nào trả lời? (Ollama hay Cautreo?)
+
+**Một hợp đồng, một cấu hình** — API tương thích OpenAI `/v1/chat/completions`.
+
+* **Hiện tại (phát triển):** `llama-server` / Ollama phục vụ `gemma4:e4b` tại
+  `http://127.0.0.1:8080`. Đây là backend tham chiếu.
+* **Sau phép đo parity (D-4):** `cautreo-server.exe` phục vụ cùng hợp đồng.
+  Đổi backend = đổi `VIVY_LLAMA_URL` / `VIVY_MODEL`, không sửa code.
+
+Hai doc này (`quickstart`, `architecture`) trước đây bán flow Ollama trong khi
+`docs/ARCHITECTURE_FINAL.md` tuyên bố độc lập Ollama qua Cautreo C-ABI. Cả hai
+nay nói cùng một điều: **độc lập Ollama là đích triển khai**, chưa phải đường
+đang chạy. Việc chuyển sang Cautreo **được đo**, không được giả định — xem
+`training/backend_registry.py` (`role="isolated-unverified"` cho native-cautreo).
 
 ---
 
@@ -146,15 +175,19 @@ print(f"Tokens used: {result.llm_tokens_used}")
 
 ## Troubleshooting
 
-### "Cannot connect to Ollama"
+### "Cannot connect to llama-server"
 
 ```bash
-# Check Ollama running
-curl http://127.0.0.1:11434/api/tags
+# Check the OpenAI-compatible endpoint is up (port 8080, không phải 11434)
+curl http://127.0.0.1:8080/v1/models
 
-# Start if not running
+# Nếu đang dùng Ollama, đảm bảo nó phục vụ OpenAI-compatible API:
 ollama serve
+# rồi trỏ VIVY_LLAMA_URL vào đúng cổng đã mở
 ```
+
+> Lỗi **timeout** được báo riêng (`LLMTimeoutError` / `delegate_kind="timeout"`)
+> — đó là vấn đề ngân sách độ trễ, không phải lỗi suy luận.
 
 ### "Model vivy-final:v1 not found"
 

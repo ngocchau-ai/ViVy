@@ -1,0 +1,717 @@
+{
+  "domains": [
+    "quantum",
+    "math",
+    "graph",
+    "compute"
+  ],
+  "items": [
+    {
+      "domain": "quantum",
+      "expected_kind": "number",
+      "id": "quantum-he-007",
+      "kind": "answerable",
+      "sha256": "223240e55db52972661ba991613e941ea93a773b0bf64876501516a638fa831a",
+      "split": "heldout"
+    },
+    {
+      "domain": "quantum",
+      "expected_kind": "text",
+      "id": "quantum-he-008",
+      "kind": "answerable",
+      "sha256": "48702f23b2baef06269790bf28e4c42cbc984d7ea6cdae94c72b8a58fc04528c",
+      "split": "heldout"
+    },
+    {
+      "domain": "quantum",
+      "expected_kind": "number",
+      "id": "quantum-he-009",
+      "kind": "answerable",
+      "sha256": "1e79d5138ae1d7cee1eff160bca54e5d7a32dfef63a1da73f10a9a0e9da71567",
+      "split": "heldout"
+    },
+    {
+      "domain": "quantum",
+      "expected_kind": "number",
+      "id": "quantum-he-010",
+      "kind": "answerable",
+      "sha256": "537113c59a5cbfea51f2be6d7ccfc2f36c8275db152ae462b5ef22b81213b026",
+      "split": "heldout"
+    },
+    {
+      "domain": "quantum",
+      "expected_kind": "number",
+      "id": "quantum-he-011",
+      "kind": "answerable",
+      "sha256": "3ea982bd3b08bd454265d43673927c83b515f94edc651ebb36f60b446a564d2c",
+      "split": "heldout"
+    },
+    {
+      "domain": "quantum",
+      "expected_kind": "number",
+      "id": "quantum-he-012",
+      "kind": "answerable",
+      "sha256": "53ce9d9ed62385cd9f371f317475070b4db95f3e3aa3dabef91ddb7ad1aabb8a",
+      "split": "heldout"
+    },
+    {
+      "domain": "quantum",
+      "expected_kind": "number",
+      "id": "quantum-he-013",
+      "kind": "answerable",
+      "sha256": "64624590c9b54b87b5636f453a8237a393dcf1d2c6f7f4c1132774b42bd28a62",
+      "split": "heldout"
+    },
+    {
+      "domain": "quantum",
+      "expected_kind": "insufficient",
+      "id": "quantum-he-015",
+      "kind": "adversarial",
+      "sha256": "af535bcdd67588de0cc15341a86fcbbe6b47fa505bc4d56120043b72f8165fdb",
+      "split": "heldout"
+    },
+    {
+      "domain": "quantum",
+      "expected_kind": "number",
+      "id": "quantum-he-016",
+      "kind": "answerable",
+      "sha256": "2f8f38c38461f2ddb1365b639d8af335505e62c848e78217c575f84e1593da1f",
+      "split": "heldout"
+    },
+    {
+      "domain": "quantum",
+      "expected_kind": "number",
+      "id": "quantum-he-017",
+      "kind": "answerable",
+      "sha256": "93a595b230658768aa4386b24081826cde36c9f2d46ab2d82491eebcdc24d816",
+      "split": "heldout"
+    },
+    {
+      "domain": "quantum",
+      "expected_kind": "insufficient",
+      "id": "quantum-he-018",
+      "kind": "adversarial",
+      "sha256": "7617c6fc3299cbef56c34e13632481a3aed5848bf8662653265e6446987a986c",
+      "split": "heldout"
+    },
+    {
+      "domain": "quantum",
+      "expected_kind": "insufficient",
+      "id": "quantum-he-019",
+      "kind": "adversarial",
+      "sha256": "9678d1d10b3c89e75c9e8f9b2556b4e3d5c05aedcaef9ef90e6d0aebc94a533a",
+      "split": "heldout"
+    },
+    {
+      "domain": "quantum",
+      "expected_kind": "number",
+      "id": "quantum-he-020",
+      "kind": "answerable",
+      "sha256": "fdbd50b8937ddec71add74997796dbd42d3afebcd1f3207e6fb5ddf4f7406445",
+      "split": "heldout"
+    },
+    {
+      "domain": "quantum",
+      "expected_kind": "number",
+      "id": "quantum-he-021",
+      "kind": "answerable",
+      "sha256": "aa16c28c31fe8379ebf967a17e87c70ae71fa9cbb35a3329a13867d4c6915194",
+      "split": "heldout"
+    },
+    {
+      "domain": "quantum",
+      "expected_kind": "number",
+      "id": "quantum-he-022",
+      "kind": "answerable",
+      "sha256": "290307fbe52db4a64e15272602bbcb389b2f4ed97a08338c6dd1cdcbec900948",
+      "split": "heldout"
+    },
+    {
+      "domain": "quantum",
+      "expected_kind": "set",
+      "id": "quantum-he-023",
+      "kind": "answerable",
+      "sha256": "086b5243c3c6e117c72deda8ac70f1baf76f62f846e13ddbd0fa651124407b34",
+      "split": "heldout"
+    },
+    {
+      "domain": "quantum",
+      "expected_kind": "insufficient",
+      "id": "quantum-he-024",
+      "kind": "adversarial",
+      "sha256": "cf93b3af7f00ad445df03bdca47024c84a1b529c81f507d83dceac5f6ab41530",
+      "split": "heldout"
+    },
+    {
+      "domain": "quantum",
+      "expected_kind": "insufficient",
+      "id": "quantum-he-025",
+      "kind": "adversarial",
+      "sha256": "af040d00d0935cc5ef72889e15fa48f24440356c3e5c03fde12e1b24314c63cf",
+      "split": "heldout"
+    },
+    {
+      "domain": "quantum",
+      "expected_kind": "insufficient",
+      "id": "quantum-he-026",
+      "kind": "adversarial",
+      "sha256": "839020d86f478b82c2f786822731f69bef6a8349e6184dc86bc6d39085d6aae3",
+      "split": "heldout"
+    },
+    {
+      "domain": "quantum",
+      "expected_kind": "number",
+      "id": "quantum-he-027",
+      "kind": "answerable",
+      "sha256": "69aa25c37480eb495e6642b37158102fe883cb0c62ed1d81e20aba82b2951d90",
+      "split": "heldout"
+    },
+    {
+      "domain": "quantum",
+      "expected_kind": "number",
+      "id": "quantum-he-028",
+      "kind": "answerable",
+      "sha256": "cb0bcfd198286f5d2157ba7495ae8409a67b5422ca42ab0220969efc166f1e29",
+      "split": "heldout"
+    },
+    {
+      "domain": "quantum",
+      "expected_kind": "number",
+      "id": "quantum-he-029",
+      "kind": "answerable",
+      "sha256": "15c6d1bc1c22e9d5b4a1c19e708771a01b2752da1adf1dcba3e26cf603f15e23",
+      "split": "heldout"
+    },
+    {
+      "domain": "math",
+      "expected_kind": "number",
+      "id": "math-he-006",
+      "kind": "answerable",
+      "sha256": "26bed9d4682d2c88c9e53fd8f97794d21058480e4c9751d6ae433b72a5db5296",
+      "split": "heldout"
+    },
+    {
+      "domain": "math",
+      "expected_kind": "text",
+      "id": "math-he-007",
+      "kind": "answerable",
+      "sha256": "ff63d9f4eda1014bb31efffbdccb23f678d80371c8e85fc3f7ee85eb3692c272",
+      "split": "heldout"
+    },
+    {
+      "domain": "math",
+      "expected_kind": "set",
+      "id": "math-he-010",
+      "kind": "answerable",
+      "sha256": "91530a8a4c176b68072953cb6ad011c55b259d7349c3d09d57271cac617bb58f",
+      "split": "heldout"
+    },
+    {
+      "domain": "math",
+      "expected_kind": "number",
+      "id": "math-he-011",
+      "kind": "answerable",
+      "sha256": "d4cbd162f74658566c6a7e6f6f8ea368d5387c615c08438df695d008701fc5fd",
+      "split": "heldout"
+    },
+    {
+      "domain": "math",
+      "expected_kind": "number",
+      "id": "math-he-012",
+      "kind": "answerable",
+      "sha256": "d3bda7f9db8e943ff3b2575e68e4169783014a1254e73f0a4e6e1df1724e860b",
+      "split": "heldout"
+    },
+    {
+      "domain": "math",
+      "expected_kind": "insufficient",
+      "id": "math-he-013",
+      "kind": "adversarial",
+      "sha256": "e766e7e0ae230a9c4eaf098cc867b7d0753c4148aa19ebc4e1381758ae8c4143",
+      "split": "heldout"
+    },
+    {
+      "domain": "math",
+      "expected_kind": "insufficient",
+      "id": "math-he-014",
+      "kind": "adversarial",
+      "sha256": "4ccfa2cd28ea543b1a273ddda6354401225471e9e69c8c39893f298283b1b253",
+      "split": "heldout"
+    },
+    {
+      "domain": "math",
+      "expected_kind": "expression",
+      "id": "math-he-015",
+      "kind": "answerable",
+      "sha256": "5b54e2771cfe92819ea9600f5b85ff310462be95f4be9f12cbd2ffeec8c64aae",
+      "split": "heldout"
+    },
+    {
+      "domain": "math",
+      "expected_kind": "expression",
+      "id": "math-he-016",
+      "kind": "answerable",
+      "sha256": "8f547aaefdd7afcee7e87f81b56310e2774d1348c6522947409156db16bae9f9",
+      "split": "heldout"
+    },
+    {
+      "domain": "math",
+      "expected_kind": "number",
+      "id": "math-he-017",
+      "kind": "answerable",
+      "sha256": "2b4fb7133134b61a58c435f626c5bb9fb99f91845314ac87e76d99b0826ec7e3",
+      "split": "heldout"
+    },
+    {
+      "domain": "math",
+      "expected_kind": "number",
+      "id": "math-he-018",
+      "kind": "answerable",
+      "sha256": "ec6906c7787141fccc502a154342315e4953a9d4c60fa85a312c1820776d5da7",
+      "split": "heldout"
+    },
+    {
+      "domain": "math",
+      "expected_kind": "set",
+      "id": "math-he-019",
+      "kind": "answerable",
+      "sha256": "738c5ed3bb8a4fbed4201a6b8042000b8ab411f4b6b0e66f85115d2a4596366a",
+      "split": "heldout"
+    },
+    {
+      "domain": "math",
+      "expected_kind": "number",
+      "id": "math-he-020",
+      "kind": "answerable",
+      "sha256": "8fd015b485468ef0c09a6a3f03a9118bace01089c860ea7dbb340a3578d96629",
+      "split": "heldout"
+    },
+    {
+      "domain": "math",
+      "expected_kind": "number",
+      "id": "math-he-021",
+      "kind": "answerable",
+      "sha256": "77a6ad12bc2f1bb84cd18acc3d3e6c179a8a9e76e2473d7d16a07d3053f2702a",
+      "split": "heldout"
+    },
+    {
+      "domain": "math",
+      "expected_kind": "insufficient",
+      "id": "math-he-022",
+      "kind": "adversarial",
+      "sha256": "0e738c3e991a9b32acbad8c0d43dc97a7324fb04967c2c53cf01db18966037ab",
+      "split": "heldout"
+    },
+    {
+      "domain": "math",
+      "expected_kind": "number",
+      "id": "math-he-023",
+      "kind": "answerable",
+      "sha256": "c73c1dbc0d25faa99e3a93296f4ab93c5dbbb34a8d3e91c0d79d37deddd95200",
+      "split": "heldout"
+    },
+    {
+      "domain": "math",
+      "expected_kind": "text",
+      "id": "math-he-024",
+      "kind": "answerable",
+      "sha256": "1afd4d404c428731e3da1fa12d0615a4bbefab851282ebdae9909a108013a31b",
+      "split": "heldout"
+    },
+    {
+      "domain": "math",
+      "expected_kind": "number",
+      "id": "math-he-025",
+      "kind": "answerable",
+      "sha256": "a3c0813e9448abea078e23aecf81595ece01c851467775d8d4f1e58cb697a9c7",
+      "split": "heldout"
+    },
+    {
+      "domain": "math",
+      "expected_kind": "insufficient",
+      "id": "math-he-026",
+      "kind": "adversarial",
+      "sha256": "328254f007479cf42478100597011c2015b43b1f1442e36902c7b5839dde0498",
+      "split": "heldout"
+    },
+    {
+      "domain": "math",
+      "expected_kind": "insufficient",
+      "id": "math-he-027",
+      "kind": "adversarial",
+      "sha256": "f2b1a04c31378e7c44328216c7096121571cae5172e886700ef7d8649a84c218",
+      "split": "heldout"
+    },
+    {
+      "domain": "math",
+      "expected_kind": "number",
+      "id": "math-he-028",
+      "kind": "answerable",
+      "sha256": "500451b7ab0d4791fb948f679bb6d2fe9310aeea7ab342ae1becb5fffa40cbe2",
+      "split": "heldout"
+    },
+    {
+      "domain": "math",
+      "expected_kind": "insufficient",
+      "id": "math-he-029",
+      "kind": "adversarial",
+      "sha256": "4ccde638176e97c9056d763b8674f1455b7df4eb0086833fbcea421c22563095",
+      "split": "heldout"
+    },
+    {
+      "domain": "graph",
+      "expected_kind": "number",
+      "id": "graph-he-008",
+      "kind": "answerable",
+      "sha256": "810048048e296dbb96748f57ed0b96efddd601dcf5045bd45948cc2d754d6d61",
+      "split": "heldout"
+    },
+    {
+      "domain": "graph",
+      "expected_kind": "text",
+      "id": "graph-he-009",
+      "kind": "answerable",
+      "sha256": "f7dd48b48abf11addb440b881af4fd5b6264db33c3df10fa52b696372ebc55af",
+      "split": "heldout"
+    },
+    {
+      "domain": "graph",
+      "expected_kind": "number",
+      "id": "graph-he-010",
+      "kind": "answerable",
+      "sha256": "24c6886955cb6249a55294de31f496cb40a38643d011aaeccb576e631fd9d40d",
+      "split": "heldout"
+    },
+    {
+      "domain": "graph",
+      "expected_kind": "number",
+      "id": "graph-he-011",
+      "kind": "answerable",
+      "sha256": "1ff28850e19d9b1e3b3a8336bf2f9281cf7d4191f02799424c4cede5ec5a52dc",
+      "split": "heldout"
+    },
+    {
+      "domain": "graph",
+      "expected_kind": "set",
+      "id": "graph-he-012",
+      "kind": "answerable",
+      "sha256": "57055658bd0f2f2aac56cb6d332382e15b41ae47856a97dc109fdaae83ed4977",
+      "split": "heldout"
+    },
+    {
+      "domain": "graph",
+      "expected_kind": "number",
+      "id": "graph-he-013",
+      "kind": "answerable",
+      "sha256": "1b3ad03f77aa54faf39b1de6e87a5bf7725dbc0be91c188090b76e550fe41895",
+      "split": "heldout"
+    },
+    {
+      "domain": "graph",
+      "expected_kind": "number",
+      "id": "graph-he-014",
+      "kind": "answerable",
+      "sha256": "9c998e2799e21c22b3c35e2a0398ee052cfc919c4cd47f6f8d804d47d3cd58c0",
+      "split": "heldout"
+    },
+    {
+      "domain": "graph",
+      "expected_kind": "insufficient",
+      "id": "graph-he-015",
+      "kind": "adversarial",
+      "sha256": "0ea4f3e945c0a7244ecf79276c3806a2cd43e68a54a6cb31532bb31e9d88b901",
+      "split": "heldout"
+    },
+    {
+      "domain": "graph",
+      "expected_kind": "insufficient",
+      "id": "graph-he-016",
+      "kind": "adversarial",
+      "sha256": "53f534ee7c82749b4c6e66e43ed5cea107516d145e1205995b5e203cb32761bc",
+      "split": "heldout"
+    },
+    {
+      "domain": "graph",
+      "expected_kind": "insufficient",
+      "id": "graph-he-017",
+      "kind": "adversarial",
+      "sha256": "cc66543284af4e1a1498df0a2075844565744e9f6b8f5bc5c667d67d1e1e83e8",
+      "split": "heldout"
+    },
+    {
+      "domain": "graph",
+      "expected_kind": "number",
+      "id": "graph-he-018",
+      "kind": "answerable",
+      "sha256": "2feeb1491e5d617e72cd0bc9342b7d0c1adb7b93749e5ff0428c617eab777eb9",
+      "split": "heldout"
+    },
+    {
+      "domain": "graph",
+      "expected_kind": "text",
+      "id": "graph-he-019",
+      "kind": "answerable",
+      "sha256": "8b08d2df86dd025fa2014e67be47265db350855aef2485f044d94766318946e2",
+      "split": "heldout"
+    },
+    {
+      "domain": "graph",
+      "expected_kind": "number",
+      "id": "graph-he-020",
+      "kind": "answerable",
+      "sha256": "35c384ccffcb86214784e3517f7809a721803814c969c37387248b59803c127f",
+      "split": "heldout"
+    },
+    {
+      "domain": "graph",
+      "expected_kind": "set",
+      "id": "graph-he-021",
+      "kind": "answerable",
+      "sha256": "308aa7fc6f87dbd7cef122ba49cdc0bef72e00bf2083d635c61dd92ffd3de665",
+      "split": "heldout"
+    },
+    {
+      "domain": "graph",
+      "expected_kind": "set",
+      "id": "graph-he-022",
+      "kind": "answerable",
+      "sha256": "8e4b9b3d6f4ea1af71094c3fb11044527d788c76690538f9212b9f6113788dfe",
+      "split": "heldout"
+    },
+    {
+      "domain": "graph",
+      "expected_kind": "insufficient",
+      "id": "graph-he-023",
+      "kind": "adversarial",
+      "sha256": "fa599792f3f3f94c8099289811e06dcf9a1cc6096eb0206310372fed97f7a11b",
+      "split": "heldout"
+    },
+    {
+      "domain": "graph",
+      "expected_kind": "number",
+      "id": "graph-he-024",
+      "kind": "answerable",
+      "sha256": "b3bcd5bef1d6c30302e4c3c29798bcba4c05dcb0dc0c086b69d64540bec6d9ac",
+      "split": "heldout"
+    },
+    {
+      "domain": "graph",
+      "expected_kind": "text",
+      "id": "graph-he-025",
+      "kind": "answerable",
+      "sha256": "4a53458c5127ece4027ce4c4e8a7b5b20ea3f0f03ab3c30a9dbb117e4bb93dbc",
+      "split": "heldout"
+    },
+    {
+      "domain": "graph",
+      "expected_kind": "text",
+      "id": "graph-he-026",
+      "kind": "answerable",
+      "sha256": "1e48d91d4bf992a2db31f453e61052a500549cb2390df7121d1af4215dbdecae",
+      "split": "heldout"
+    },
+    {
+      "domain": "graph",
+      "expected_kind": "insufficient",
+      "id": "graph-he-027",
+      "kind": "adversarial",
+      "sha256": "84552730d313514e7ccf9f4a63122c25694133afe08fbe313f4538e42d1cc68f",
+      "split": "heldout"
+    },
+    {
+      "domain": "graph",
+      "expected_kind": "number",
+      "id": "graph-he-028",
+      "kind": "answerable",
+      "sha256": "b02197483c171b02843db4e4e4daaab31df6220a8f57f063103a25a0a94f2051",
+      "split": "heldout"
+    },
+    {
+      "domain": "graph",
+      "expected_kind": "text",
+      "id": "graph-he-029",
+      "kind": "answerable",
+      "sha256": "4b8637129d936f80ac1f25341168b71c21396786360df4af73193f2d613b905b",
+      "split": "heldout"
+    },
+    {
+      "domain": "compute",
+      "expected_kind": "number",
+      "id": "compute-he-006",
+      "kind": "answerable",
+      "sha256": "1506ef036ceb288a73d571eddacf323a0bcb4afa219c9b1419cf005aab43c574",
+      "split": "heldout"
+    },
+    {
+      "domain": "compute",
+      "expected_kind": "number",
+      "id": "compute-he-009",
+      "kind": "answerable",
+      "sha256": "40eb1f921a11f0d276b077d5b3837c1e538ff99869dd5263c61a0ef28071fb2e",
+      "split": "heldout"
+    },
+    {
+      "domain": "compute",
+      "expected_kind": "insufficient",
+      "id": "compute-he-010",
+      "kind": "adversarial",
+      "sha256": "be504055d472788fef1a2be91226372c4925579113a9b556fd7b770233bb546f",
+      "split": "heldout"
+    },
+    {
+      "domain": "compute",
+      "expected_kind": "insufficient",
+      "id": "compute-he-011",
+      "kind": "adversarial",
+      "sha256": "7dab9ca541e34ebf76e7228231ffeefa7783441e26be0ef6b3f3c0837cf89e44",
+      "split": "heldout"
+    },
+    {
+      "domain": "compute",
+      "expected_kind": "expression",
+      "id": "compute-he-012",
+      "kind": "answerable",
+      "sha256": "ed8d9c28472007a808d3ea1989c961f840fcac78db186b00de981a98fb11a078",
+      "split": "heldout"
+    },
+    {
+      "domain": "compute",
+      "expected_kind": "number",
+      "id": "compute-he-013",
+      "kind": "answerable",
+      "sha256": "a6f33a9dde68b34f58366d1f206fcccaf026a6d2dcfeb4a474191f4cf3390405",
+      "split": "heldout"
+    },
+    {
+      "domain": "compute",
+      "expected_kind": "number",
+      "id": "compute-he-014",
+      "kind": "answerable",
+      "sha256": "7195ef3484bbfb9b9826878e79d34746adc9c0978080d59ebfeab3c7089b0df2",
+      "split": "heldout"
+    },
+    {
+      "domain": "compute",
+      "expected_kind": "insufficient",
+      "id": "compute-he-015",
+      "kind": "adversarial",
+      "sha256": "ff0572a288a3a97adef1d7e20f5daaed8d425406f09d3882f440303660f4979c",
+      "split": "heldout"
+    },
+    {
+      "domain": "compute",
+      "expected_kind": "insufficient",
+      "id": "compute-he-016",
+      "kind": "adversarial",
+      "sha256": "b5b0478af68dcace6742435de3770eda371ee1e3c10762b81b7b1bf40af563a9",
+      "split": "heldout"
+    },
+    {
+      "domain": "compute",
+      "expected_kind": "expression",
+      "id": "compute-he-017",
+      "kind": "answerable",
+      "sha256": "879db429fa796e72daa22475905950dc3aeac980d63309db8b13437de850d566",
+      "split": "heldout"
+    },
+    {
+      "domain": "compute",
+      "expected_kind": "number",
+      "id": "compute-he-018",
+      "kind": "answerable",
+      "sha256": "63fe3f1a3897d76d111af67d4157259555378a683ea8bc564d10e6778c50b16c",
+      "split": "heldout"
+    },
+    {
+      "domain": "compute",
+      "expected_kind": "number",
+      "id": "compute-he-019",
+      "kind": "answerable",
+      "sha256": "342237dc1f747ba7257f9c39cf4468ee241b3ca3dc5a8c89fa7514a21d00e3f1",
+      "split": "heldout"
+    },
+    {
+      "domain": "compute",
+      "expected_kind": "number",
+      "id": "compute-he-020",
+      "kind": "answerable",
+      "sha256": "d2649edf2cfe62f67fde5f22589cf0eed44e45efa73555da978cac294aa271a0",
+      "split": "heldout"
+    },
+    {
+      "domain": "compute",
+      "expected_kind": "expression",
+      "id": "compute-he-021",
+      "kind": "answerable",
+      "sha256": "4c5794715419bca49c64629ad8e9e573102b2ee85e7b30c3adad6ff22f8eadb4",
+      "split": "heldout"
+    },
+    {
+      "domain": "compute",
+      "expected_kind": "expression",
+      "id": "compute-he-022",
+      "kind": "answerable",
+      "sha256": "8a399cc51db0d2c8339eb2d5e08b183305373e67a1f1042a3e19afe302cb75cf",
+      "split": "heldout"
+    },
+    {
+      "domain": "compute",
+      "expected_kind": "insufficient",
+      "id": "compute-he-023",
+      "kind": "adversarial",
+      "sha256": "ff77763d17e0e3d7f017e86de916f144990bbc2a010c13441a53ac6826a28f5a",
+      "split": "heldout"
+    },
+    {
+      "domain": "compute",
+      "expected_kind": "number",
+      "id": "compute-he-024",
+      "kind": "answerable",
+      "sha256": "02192c72aa57f2c600d7bfd0cdb9806f689ccbdb90913519881dd912e5bf5463",
+      "split": "heldout"
+    },
+    {
+      "domain": "compute",
+      "expected_kind": "text",
+      "id": "compute-he-025",
+      "kind": "answerable",
+      "sha256": "ead6181bf2135590bcf86eace57aaf3351b371ab1e2a73f7f6e6a45b2a0c3016",
+      "split": "heldout"
+    },
+    {
+      "domain": "compute",
+      "expected_kind": "number",
+      "id": "compute-he-026",
+      "kind": "answerable",
+      "sha256": "16793bb0d50258231d1e7bc689ecaac42857c7f55689f1974726a8afcd61d151",
+      "split": "heldout"
+    },
+    {
+      "domain": "compute",
+      "expected_kind": "number",
+      "id": "compute-he-027",
+      "kind": "answerable",
+      "sha256": "9ca241a54fa3171d5690ad2510073c98f7289f76256242e71fbcb6d70e6e20ae",
+      "split": "heldout"
+    },
+    {
+      "domain": "compute",
+      "expected_kind": "text",
+      "id": "compute-he-028",
+      "kind": "answerable",
+      "sha256": "9284e9d1bb892127b6be11d489fe46bca3f7b85469479f0f92af86ba56566706",
+      "split": "heldout"
+    },
+    {
+      "domain": "compute",
+      "expected_kind": "number",
+      "id": "compute-he-029",
+      "kind": "answerable",
+      "sha256": "0794e2e74831c6da1137d915d475bfd4698a115d2f85540cdb9df1740a22aceb",
+      "split": "heldout"
+    }
+  ],
+  "n_heldout": 88,
+  "note": "ids + sha256 only. The held-out prompts and answers are NOT in this repo (D-7, 29/09/2026). Regenerate the file with `python -m benchmarks.eval_set.generate --split heldout --out <path outside Vivy_final>` and hand that path to the harness.",
+  "seed": 20260929
+}

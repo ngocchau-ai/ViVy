@@ -9,8 +9,10 @@ Write-Host "============================================================" -Foreg
 $ScriptDir = Split-Path -Parent $MyInvocation.MyCommand.Path
 $RootDir   = Resolve-Path "$ScriptDir\.."
 $EngineDir = "$RootDir\engine\bin"
-$CoreDir   = "$RootDir\core"
-$AtlasesDir = "$RootDir\atlases"
+# [FIXED 26/09/2026] Đường dẫn chết sau reorg: package runtime nằm ở `vivy/`
+# (không còn `core/`), atlases nằm ở `cautreo/atlases/` (không còn `atlases/`).
+$CoreDir   = "$RootDir\vivy"
+$AtlasesDir = "$RootDir\cautreo\atlases"
 $ModelsManifestDir = "$RootDir\models"
 
 # Resolve Model Root (Priority: $env:MODEL_ROOT -> D:\models -> $RootDir\models)

@@ -43,9 +43,14 @@ def verify_codex_remediations() -> dict[str, bool]:
     # [ISOLATED 26/09/2026] Check 1 "Qwen2.5-Coder model artifact presence" — GỠ BỎ.
     # `qwen2.5-coder-7b-instruct-q4_k_m.gguf` không tồn tại trên đĩa và user chỉ thị
     # xóa tham chiếu; kéo theo xóa 2 runtime `start_vivy_qwen_coder.ps1`. Check này
-    # luôn trả MISSING nên vô nghĩa. Không gỡ trắng: giữ tên check trong results để
-    # các consumer cũ không KeyError.
-    results["qwen_coder_artifact_present"] = False
+    # luôn trả MISSING nên vô nghĩa.
+    # [FIXED 27/09/2026] Ngừng ghi key này vào `results`. Trước đây ghi
+    # `results["qwen_coder_artifact_present"] = False` để giữ tên (tránh KeyError),
+    # nhưng `main()` chấm bằng `all(sub_results.values())` — một key chết luôn False
+    # làm FAIL nhóm Codex Remediation và OVERALL VERDICT vĩnh viễn, dù 2 check thật
+    # (n_core_boundary_declared, cautreo_dll_available) đều PASS. Grep toàn repo cho
+    # thấy không có consumer nào đọc key này. Key đã bị loại bỏ thì không được vào
+    # phép chấm điểm; dòng print giữ làm audit trail.
     print("[CODEX-P1-1] Qwen2.5-Coder artifact: [ISOLATED 26/09/2026] gguf đã gỡ — check này bị loại bỏ")
 
     # Check 2: ElasticNCore audit boundary

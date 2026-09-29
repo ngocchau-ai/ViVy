@@ -4,6 +4,7 @@ Matches limitation entries against the receipt directory. Flags:
   - a limitation that references a ``claim_type`` + ``receipt_id`` where the receipt is missing
   - a stale limitation whose receipt no longer exists
   - a limitation entry with a receipt reference that cannot be resolved
+  - a limitation entry with **no** receipt reference at all
 
 CLI:
     python -m training.check_known_limits \\
@@ -17,6 +18,9 @@ Exit codes:
 
 Changelog:
     24/09/2026 (Claude Code — Plan 1 D4): Initial.
+    29/09/2026 (Claude Code — WP-6/O-10/F-H04): an entry with no receipt ref
+        used to loop over an empty list and silently pass.  It now FAILs.
+        A limitation with no provenance is exactly the claim Gate 9 bans.
 """
 from __future__ import annotations
 
@@ -78,6 +82,15 @@ def check_known_limits(
     problems: list[str] = []
     checked = 0
     for entry in entries:
+        # [FIXED 29/09/2026 · WP-6 / F-H04] an entry with no receipt ref used to
+        # iterate an empty list and come back clean.  That was a silent pass for
+        # a limitation with zero provenance.
+        if not entry["receipt_refs"]:
+            problems.append(
+                f"{entry['id']} ({entry['label']}): no receipt reference at all — "
+                f"a limitation without provenance cannot be checked and must not pass"
+            )
+            continue
         for ref in entry["receipt_refs"]:
             checked += 1
             ref_name = Path(ref).name

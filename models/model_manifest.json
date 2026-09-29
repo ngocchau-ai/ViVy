@@ -1,6 +1,6 @@
 {
   "manifest_version": "1.2.0",
-  "updated_at": "2026-09-23T11:30:00+07:00",
+  "updated_at": "2026-09-29T00:00:00+07:00",
   "orchestrator_core": "gemma4-e4b",
   "models": [
     {
@@ -21,7 +21,12 @@
         "KNOWLEDGE_FORAGING"
       ],
       "strengths": "Tư duy hệ thống, phân rã bài toán, đánh giá rủi ro, điều phối HoH, củng cố tri thức Dream",
-      "benchmark": "Epistemic Rigor 99.2% | CPU Speed ~14 tok/s @ Port 8080"
+      "benchmark": "[UNMEASURED] Epistemic Rigor 99.2% | CPU Speed ~14 tok/s @ Port 8080",
+      "benchmark_status": "UNMEASURED",
+      "benchmark_receipt": null,
+      "benchmark_note": "[UNMEASURED 29/09/2026 WP-5 / F-F07] No receipt exists for these numbers. They were written as marketing copy, never benchmarked in this repo. Replace with a receipt path once WP-7 harness runs. See docs/CAPABILITY_LEDGER.md.",
+      "strengths_status": "UNMEASURED",
+      "strengths_note": "[UNMEASURED 29/09/2026 WP-5] qualitative claim, no measurement. Numbers inside it (if any) are unmeasured targets."
     },
     {
       "id": "qwen2-vl-72b",
@@ -41,7 +46,12 @@
         "DOC_UNDERSTANDING"
       ],
       "strengths": "Thị giác đa phương thức, biểu đồ tài chính Trading, giao diện máy tính CUA Desktop, đọc tài liệu phức tạp",
-      "benchmark": "MMBench 84.5 | DocVQA 94.2 | 72B Top-K Salience via Cautreo Cartography"
+      "benchmark": "[UNMEASURED] MMBench 84.5 | DocVQA 94.2 | 72B Top-K Salience via Cautreo Cartography",
+      "benchmark_status": "UNMEASURED",
+      "benchmark_receipt": null,
+      "benchmark_note": "[UNMEASURED 29/09/2026 WP-5 / F-F07] No receipt exists for these numbers. They were written as marketing copy, never benchmarked in this repo. Replace with a receipt path once WP-7 harness runs. See docs/CAPABILITY_LEDGER.md.",
+      "strengths_status": "UNMEASURED",
+      "strengths_note": "[UNMEASURED 29/09/2026 WP-5] qualitative claim, no measurement. Numbers inside it (if any) are unmeasured targets."
     },
     {
       "id": "qwen2.5-coder-7b-instruct",
@@ -60,7 +70,12 @@
         "ALGORITHM_IMPLEMENTATION"
       ],
       "strengths": "Viết mã nguồn C/C++ native, ctypes memory binding, pointer arithmetic, refactor code lớn, unit test pytest",
-      "benchmark": "HumanEval 88.4 | CPU Speed ~8-12 tok/s"
+      "benchmark": "[UNMEASURED] HumanEval 88.4 | CPU Speed ~8-12 tok/s",
+      "benchmark_status": "UNMEASURED",
+      "benchmark_receipt": null,
+      "benchmark_note": "[UNMEASURED 29/09/2026 WP-5 / F-F07] No receipt exists for these numbers. They were written as marketing copy, never benchmarked in this repo. Replace with a receipt path once WP-7 harness runs. See docs/CAPABILITY_LEDGER.md.",
+      "strengths_status": "UNMEASURED",
+      "strengths_note": "[UNMEASURED 29/09/2026 WP-5] qualitative claim, no measurement. Numbers inside it (if any) are unmeasured targets."
     },
     {
       "id": "vivy-1.5b-reflex",
@@ -78,7 +93,12 @@
         "FOCUS_LESS_EXECUTION"
       ],
       "strengths": "Phản xạ thao tác máy tính cực nhanh (<300ms), chọn ứng viên đóng không ảo giác, nạp trong 2GB RAM Cautreo",
-      "benchmark": "Target CPU Speed >45 tok/s | Proper Scoring Calibrated"
+      "benchmark": "[UNMEASURED] Target CPU Speed >45 tok/s | Proper Scoring Calibrated",
+      "benchmark_status": "UNMEASURED",
+      "benchmark_receipt": null,
+      "benchmark_note": "[UNMEASURED 29/09/2026 WP-5 / F-F07] No receipt exists for these numbers. They were written as marketing copy, never benchmarked in this repo. Replace with a receipt path once WP-7 harness runs. See docs/CAPABILITY_LEDGER.md.",
+      "strengths_status": "UNMEASURED",
+      "strengths_note": "[UNMEASURED 29/09/2026 WP-5] qualitative claim, no measurement. Numbers inside it (if any) are unmeasured targets."
     },
     {
       "id": "vivy2",
@@ -111,10 +131,14 @@
     "ARCH_SPEC_AND_PLAN": "gemma4-e4b",
     "KNOWLEDGE_FORAGING": "gemma4-e4b",
     "DYNAMIC_ORCHESTRATION_QA": "gemma4-e4b",
-    "NATIVE_SYSTEM_CODING": "qwen2.5-coder-7b-instruct",
-    "REFACTOR_AND_TESTING": "qwen2.5-coder-7b-instruct",
+    "NATIVE_SYSTEM_CODING": "gemma4-e4b",
+    "REFACTOR_AND_TESTING": "gemma4-e4b",
+    "FAST_DATA_PARSING": "gemma4-e4b",
     "MULTIMODAL_IMAGE_REASONING": "qwen2-vl-72b",
     "DESKTOP_GUI_VISION": "qwen2-vl-72b",
-    "CUA_DESKTOP_AUTOMATION": "vivy-1.5b-reflex"
-  }
+    "CUA_DESKTOP_AUTOMATION": "qwen2-vl-72b"
+  },
+  "task_archetype_mapping_note_2026-09-26": "[REROUTED 26/09/2026] Ba archetype từng trỏ vào model KHÔNG có trọng số trên đĩa: NATIVE_SYSTEM_CODING + REFACTOR_AND_TESTING -> qwen2.5-coder-7b-instruct (gguf chưa từng tồn tại; runtime start_vivy_qwen_coder.ps1 đã xóa), CUA_DESKTOP_AUTOMATION -> vivy-1.5b-reflex (ROADMAP_PROPOSED). Đã reroute về 2 model THẬT: gemma4-e4b (ACTIVE_COGNITIVE_SOUL, 9.6GB) gánh việc text/code, qwen2-vl-72b (DOWNLOADED_ON_DISK, 44.16GB) gánh vision/CUA. Các entry `models[]` giữ nguyên trạng thái ISOLATED_ARCHIVED / ROADMAP_PROPOSED làm hồ sơ lịch sử — chỉ mapping bị sửa. Nguồn sự thật trọng số: `full_path` bên dưới + MODEL_ROOT = D:\\models.",
+  "capability_ledger_ref": "docs/CAPABILITY_LEDGER.md",
+  "unmeasured_claims_policy": "[ADDED 29/09/2026 WP-5] Any field whose value is not backed by a receipt path must carry status UNMEASURED. Gate 9: 0 capability claims without a real model call or a receipt."
 }

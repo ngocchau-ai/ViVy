@@ -1,4 +1,4 @@
-﻿"""C10 — C-ABI layout / ownership / error-propagation contract.
+"""C10 — C-ABI layout / ownership / error-propagation contract.
 
 Acceptance-plan C10.2: verify ABI layout/ownership/lifetime, error propagation;
 DLL load được KHÔNG được coi là memory path đúng.

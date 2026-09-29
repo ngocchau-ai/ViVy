@@ -1,4 +1,4 @@
-﻿"""C10 — session-isolated memory store (put/get/delete, version, TTL, restart).
+"""C10 — session-isolated memory store (put/get/delete, version, TTL, restart).
 
 Acceptance-plan C10.1: correctness put/get/delete-isolation theo session,
 Unicode, long values, overwrite/version, TTL, restart và concurrent access.

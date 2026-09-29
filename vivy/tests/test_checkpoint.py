@@ -7,11 +7,13 @@ from __future__ import annotations
 import os
 import shutil
 import time
+from dataclasses import asdict
 from pathlib import Path
 
 import numpy as np
 
 from integration.checkpoint_manager import CheckpointManager
+from integration.evidence import EvidencePacket
 from integration.lesson_store import LessonStore
 from memory.cognitive_graph import CognitiveStateGraph, NodeType
 from memory.hebbian_recall import HebbianRecall
@@ -19,6 +21,37 @@ from orchestrator.graph_bridge import EvidenceClass
 
 # Use a local temp dir to avoid Windows AppData permission issues
 _TEST_TMP = Path("_pytest_tmp")
+
+
+def _evidence_provenance() -> dict[str, object]:
+    """A complete, valid evidence payload for a promotion.
+
+    [REPLACED 29/09/2026] WP-8 / T8.  These tests used to pass ``provenance={}``
+    and still expect an ACCEPTED lesson.  Gate 7's own contract says *"Promotion
+    records provenance, scope, confidence, and validation"*, so an empty
+    provenance is a wrong promotion -- and T8 asks for zero of those on replay.
+    ``LessonStore.promote`` is now fail-closed on missing evidence.
+
+    Every assertion below is unchanged; only the fixture is corrected to meet
+    the contract the tests were already relying on.  The three reject tests
+    also take this fixture now, so they fail for the reason they name
+    (``evidence_class``), not incidentally for a missing-evidence reject.
+    """
+    packet = EvidencePacket(
+        claim="Test fixture claim.",
+        evidence_ids=("ev_test_1",),
+        source="test_checkpoint",
+        expected_evidence="a typed observation from an external tool",
+        actual_observation="tool_engine_file_io returned ok",
+        acceptance="ACCEPTED: 1/1 external observation(s) succeeded",
+        confidence=0.85,
+        limits="fixture only: process success, not semantic verification",
+        task_id="task_test",
+        session_id="sess_test",
+        state_hash="hash_test_abc",
+    )
+    assert packet.valid_for_promotion(), "fixture must itself satisfy Gate 7"
+    return {"evidence": asdict(packet), "node_ids": ["n1"], "rounds": 1}
 
 
 def _mktemp() -> Path:
@@ -166,7 +199,7 @@ class TestLessonStore:
             store = LessonStore(store_path=d / "lessons.jsonl")
             lesson = store.promote(
                 session_id="sess_a", content="The sky is blue.",
-                evidence_class=EvidenceClass.VERIFIED_RESULT, confidence=0.82, provenance={},
+                evidence_class=EvidenceClass.VERIFIED_RESULT, confidence=0.82, provenance=_evidence_provenance(),
             )
             assert lesson is not None
             assert lesson.evidence_class == EvidenceClass.VERIFIED_RESULT.name
@@ -179,7 +212,7 @@ class TestLessonStore:
             store = LessonStore(store_path=d / "lessons.jsonl")
             lesson = store.promote(
                 session_id="sess_a", content="Guessed fact.",
-                evidence_class=EvidenceClass.FAST_SIGNAL, confidence=0.2, provenance={},
+                evidence_class=EvidenceClass.FAST_SIGNAL, confidence=0.2, provenance=_evidence_provenance(),
             )
             assert lesson is None
         finally:
@@ -191,7 +224,7 @@ class TestLessonStore:
             store = LessonStore(store_path=d / "lessons.jsonl")
             lesson = store.promote(
                 session_id="sess_a", content="Probably true.",
-                evidence_class=EvidenceClass.PROVISIONAL_RESULT, confidence=0.55, provenance={},
+                evidence_class=EvidenceClass.PROVISIONAL_RESULT, confidence=0.55, provenance=_evidence_provenance(),
             )
             assert lesson is None
         finally:
@@ -204,7 +237,7 @@ class TestLessonStore:
             s1 = LessonStore(store_path=p)
             lesson = s1.promote(
                 session_id="sess_b", content="Persistent fact.",
-                evidence_class=EvidenceClass.VERIFIED_RESULT, confidence=0.9, provenance={},
+                evidence_class=EvidenceClass.VERIFIED_RESULT, confidence=0.9, provenance=_evidence_provenance(),
             )
             assert lesson is not None
             s2 = LessonStore(store_path=p)
@@ -219,7 +252,7 @@ class TestLessonStore:
             store = LessonStore(store_path=d / "lessons.jsonl")
             lesson = store.promote(
                 session_id="sess_c", content="Old fact.",
-                evidence_class=EvidenceClass.VERIFIED_RESULT, confidence=0.75, provenance={},
+                evidence_class=EvidenceClass.VERIFIED_RESULT, confidence=0.75, provenance=_evidence_provenance(),
             )
             assert lesson is not None
             ok = store.isolate(lesson.lesson_id, reason="Superseded.")
@@ -236,11 +269,11 @@ class TestLessonStore:
             store = LessonStore(store_path=d / "lessons.jsonl")
             l1 = store.promote(
                 session_id="sess_d", content="Active fact.",
-                evidence_class=EvidenceClass.VERIFIED_RESULT, confidence=0.8, provenance={},
+                evidence_class=EvidenceClass.VERIFIED_RESULT, confidence=0.8, provenance=_evidence_provenance(),
             )
             l2 = store.promote(
                 session_id="sess_d", content="Soon isolated.",
-                evidence_class=EvidenceClass.VERIFIED_RESULT, confidence=0.75, provenance={},
+                evidence_class=EvidenceClass.VERIFIED_RESULT, confidence=0.75, provenance=_evidence_provenance(),
             )
             store.isolate(l2.lesson_id, "outdated")
             active = store.list_active()
@@ -257,11 +290,47 @@ class TestLessonStore:
             for i in range(3):
                 store.promote(
                     session_id="count_sess", content=f"Fact {i}",
-                    evidence_class=EvidenceClass.VERIFIED_RESULT, confidence=0.8, provenance={},
+                    evidence_class=EvidenceClass.VERIFIED_RESULT, confidence=0.8, provenance=_evidence_provenance(),
                 )
             counts = store.count()
             assert counts["total"] == 3
             assert counts["active"] == 3
             assert counts["isolated"] == 0
+        finally:
+            _rm(d)
+
+    def test_promote_with_empty_provenance_is_rejected(self):
+        """[NEW 29/09/2026] WP-8 / T8 -- fail-closed, not fail-open.
+
+        Before this, ``promote(..., provenance={})`` returned a lesson.  Gate 7
+        requires the promotion to record provenance and validation, so that was
+        a wrong promotion and would show up as one on any replay log.
+        """
+        d = _mktemp()
+        try:
+            store = LessonStore(store_path=d / "lessons.jsonl")
+            lesson = store.promote(
+                session_id="sess_empty", content="Unsupported fact.",
+                evidence_class=EvidenceClass.VERIFIED_RESULT, confidence=0.9,
+                provenance={},
+            )
+            assert lesson is None
+            assert store.count()["total"] == 0
+        finally:
+            _rm(d)
+
+    def test_promote_with_incomplete_evidence_is_rejected(self):
+        """[NEW 29/09/2026] WP-8 / T8 -- an evidence key that is present but
+        empty must reject exactly like a missing one."""
+        d = _mktemp()
+        try:
+            store = LessonStore(store_path=d / "lessons.jsonl")
+            lesson = store.promote(
+                session_id="sess_incomplete", content="Half-supported fact.",
+                evidence_class=EvidenceClass.VERIFIED_RESULT, confidence=0.9,
+                provenance={"evidence": {"claim": "only a claim"}},
+            )
+            assert lesson is None
+            assert store.count()["total"] == 0
         finally:
             _rm(d)

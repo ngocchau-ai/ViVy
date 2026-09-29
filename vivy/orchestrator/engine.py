@@ -8,9 +8,10 @@ V5.0 (Sprint 2D — 19/09/2026): Wired ModelRouter into DELEGATE_MODEL branch.
 When EpistemicGate emits DELEGATE_MODEL, Orchestrator builds a DirectiveTaskContract
 and dispatches via ModelRouter. Result is stored in CoreResult.details.
 
-Uses try/except imports for the core, memory, and funnel modules so that the
-orchestrator can be imported and tested even when those modules are stubs or
-not yet fully implemented.
+Wiring is fail-fast [REPLACED 29/09/2026]: core, memory and funnel are required
+imports.  The previous ``try/except ImportError -> stub`` pattern let the pipeline
+silently degrade to no-ops when a sibling module was missing or renamed (F-A07).
+Startup wiring is receipted by :mod:`orchestrator.wiring_report`.
 """
 
 from __future__ import annotations
@@ -19,11 +20,13 @@ import logging
 from dataclasses import dataclass, field
 from typing import Any
 
-import numpy as np
-
+from core.evolution import UnitaryEvolution
+from core.knowledge_injector import KnowledgeInjector
+from funnel.filter import FilterFunnel
 from llm_bridge.client import LLMClient
 from llm_bridge.decoder import CoreResult, Decoder
 from llm_bridge.encoder import Encoder, LogicForm
+from memory.associative import AssociativeMemory
 from orchestrator.directive_contract import (
     DirectiveTaskContract,
     EvidenceCriteria,
@@ -39,127 +42,38 @@ from orchestrator.model_router import ModelRouter
 logger = logging.getLogger(__name__)
 
 # ---------------------------------------------------------------------------
-# Stub / fallback imports for sibling modules
-# ---------------------------------------------------------------------------
-
-try:
-    from core.evolution import UnitaryEvolution
-    from core.state import QuantumState
-except ImportError:
-
-    class UnitaryEvolution:  # type: ignore[no-redef]
-        """Stub fallback — replace with the real core.evolution module."""
-
-        def __init__(self, *args: Any, **kwargs: Any) -> None:
-            logger.warning("Using stub UnitaryEvolution")
-
-        def step(self, state: Any, gate_sequence: Any) -> Any:
-            return state
-
-        def evolve(self, state: Any, n_steps: int) -> list[Any]:
-            return [state] * n_steps
-
-    class QuantumState:  # type: ignore[no-redef]
-        """Stub fallback for QuantumState."""
-
-        def __init__(self, *args: Any, **kwargs: Any) -> None:
-            pass
-
-try:
-    from core.knowledge_injector import KnowledgeInjector
-except ImportError:
-
-    class KnowledgeInjector:  # type: ignore[no-redef]
-        """Stub fallback — replace with the real core.knowledge_injector module."""
-
-        def __init__(self, *args: Any, **kwargs: Any) -> None:
-            pass
-
-        def inject(self, lf: Any) -> list[Any]:
-            return []
-
-
-try:
-    from funnel.filter import FilterFunnel
-except ImportError:
-
-    class FilterFunnel:  # type: ignore[no-redef]
-        """Stub fallback — replace with the real funnel.filter module."""
-
-        def __init__(self, *args: Any, **kwargs: Any) -> None:
-            logger.warning("Using stub FilterFunnel")
-
-        def evaluate(self, streams: Any) -> tuple[Any, str, float]:
-            return streams, "continue", 0.9
-
-
-try:
-    from memory.associative import AssociativeMemory
-except ImportError:
-
-    class AssociativeMemory:  # type: ignore[no-redef]
-        """Stub fallback — replace with the real memory.associative module."""
-
-        def __init__(self, *args: Any, **kwargs: Any) -> None:
-            logger.warning("Using stub AssociativeMemory")
-
-        def store(self, x: Any, y: Any, eta: float = 0.1) -> None:
-            pass
-
-        def query(self, x: Any) -> tuple[Any, float]:
-            return x, 0.5
-
-
-# ---------------------------------------------------------------------------
-# Component factories — instantiate the real module when possible, otherwise fall
-# back to a stub so the orchestrator always constructs cleanly.
+# Sibling modules above are REQUIRED.  [ISOLATED 29/09/2026] the try/except
+# ImportError -> stub block that used to live here is preserved in git history;
+# it let a missing/renamed sibling silently become a no-op (F-A07, ADR-005
+# violation via the ``__mro__[1]()`` object() factory).  Imports now fail loud.
 # ---------------------------------------------------------------------------
 
 
-def _make_evolution() -> Any:
-    """Return a UnitaryEvolution — the real module is always available."""
-    try:
-        evo = UnitaryEvolution()
-        # Verify: can we construct and call evolve with an empty schedule?
-        evo.evolve(QuantumState(np.array([1.0, 0.0])), n_steps=0)
-        return evo
-    except Exception as exc:  # noqa: BLE001
-        logger.warning("Could not construct UnitaryEvolution (%s); using stub", exc)
-        return _StubEvolution()
+# ---------------------------------------------------------------------------
+# Component factories — construct the real module or raise.  No silent
+# fallback: a wiring failure must surface at construction time so that
+# orchestrator.wiring_report can receipt it as MISSING rather than pretend.
+# ---------------------------------------------------------------------------
 
 
-class _StubEvolution:
-    """Fallback stub — used when the real UnitaryEvolution cannot be constructed."""
-
-    def step(self, state: Any, gate_sequence: Any) -> Any:
-        return state
-
-    def evolve(self, state: Any, n_steps: int) -> list[Any]:
-        return [state] * n_steps
+def _make_evolution() -> UnitaryEvolution:
+    """Return a real :class:`UnitaryEvolution` (raises on failure)."""
+    return UnitaryEvolution()
 
 
-def _make_funnel() -> Any:
-    try:
-        return FilterFunnel()
-    except Exception as exc:  # noqa: BLE001
-        logger.warning("Could not construct FilterFunnel (%s); using stub", exc)
-        return FilterFunnel.__mro__[1]()
+def _make_funnel() -> FilterFunnel:
+    """Return a real :class:`FilterFunnel` (raises on failure)."""
+    return FilterFunnel()
 
 
-def _make_memory() -> Any:
-    try:
-        return AssociativeMemory(dim=8)
-    except Exception as exc:  # noqa: BLE001
-        logger.warning("Could not construct AssociativeMemory (%s); using stub", exc)
-        return AssociativeMemory.__mro__[1]()
+def _make_memory() -> AssociativeMemory:
+    """Return a real :class:`AssociativeMemory` (raises on failure)."""
+    return AssociativeMemory(dim=8)
 
 
-def _make_knowledge() -> Any:
-    try:
-        return KnowledgeInjector()
-    except Exception as exc:  # noqa: BLE001
-        logger.warning("Could not construct KnowledgeInjector (%s); using stub", exc)
-        return KnowledgeInjector.__mro__[1]()
+def _make_knowledge() -> KnowledgeInjector:
+    """Return a real :class:`KnowledgeInjector` (raises on failure)."""
+    return KnowledgeInjector()
 
 
 # ---------------------------------------------------------------------------
@@ -191,11 +105,11 @@ class Orchestrator:
     decoder:
         Decoder instance.  Created from *llm_client* if not provided.
     evolution:
-        Unitary evolution engine.  Defaults to a stub.
+        Unitary evolution engine.  Defaults to a real ``UnitaryEvolution``.
     funnel:
-        Filter funnel.  Defaults to a stub.
+        Filter funnel.  Defaults to a real ``FilterFunnel``.
     memory:
-        Associative memory.  Defaults to a stub.
+        Associative memory.  Defaults to a real ``AssociativeMemory``.
     max_iterations:
         Maximum number of encode → evolve → evaluate cycles.
     """
@@ -368,13 +282,15 @@ class Orchestrator:
             return states
 
     def _evaluate(self, streams: list[Any]) -> tuple[Any, str, float]:
-        """Run the filter funnel, tolerating signature differences."""
-        try:
-            kept, signal, confidence = self.funnel.evaluate(streams)
-            return kept, signal, confidence
-        except Exception as exc:  # noqa: BLE001
-            logger.warning("funnel.evaluate failed (%s); using stub verdict", exc)
-            return streams, "continue", 0.9
+        """Run the filter funnel.
+
+        [REPLACED 29/09/2026] the previous body swallowed every exception and
+        returned a fabricated ``("continue", 0.9)`` verdict (F-A07).  A failed
+        funnel evaluation is now an incident: it propagates so the caller can
+        surface it, and it is never converted into a confident continue.
+        """
+        kept, signal, confidence = self.funnel.evaluate(streams)
+        return kept, signal, confidence
 
     def _states_to_streams(self, states: list[Any]) -> list[Any]:
         """Convert evolution states into thought-stream objects.

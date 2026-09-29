@@ -1,4 +1,4 @@
-﻿# Kho Lưu Trữ Bản Gốc ViVy Core Thô (Frozen Baseline Core Archive)
+# Kho Lưu Trữ Bản Gốc ViVy Core Thô (Frozen Baseline Core Archive)
 
 > [!IMPORTANT]
 > **QUY ƯỚC BẮT BUỘC DÀNH CHO AGENT KẾ THỪA & CHỈNH SỬA TÀI LIỆU:**

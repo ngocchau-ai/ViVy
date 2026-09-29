@@ -32,7 +32,8 @@ ViVy được xây dựng trên 3 nguyên tắc cốt lõi:
                      │ directive (pre-computed)
            ┌─────────▼──────────┐
            │   Gemma 4 E4B      │  ← LLM: Text+Vision+Audio, 128K ctx
-           │  (Ollama server)   │    Native tool calling + MTP
+           │ (OpenAI-compat API)│    Native tool calling + MTP
+           │  :8080 · 1 backend │    llama-server hôm nay → cautreo-server
            └─────────┬──────────┘
                      │ response + tool_calls
            ┌─────────▼──────────┐

@@ -129,11 +129,25 @@ class LessonStore:
             )
             return None
 
-        if "evidence" in provenance:
-            packet = evidence_from_mapping(provenance.get("evidence", {}))
-            if not packet.valid_for_promotion():
-                logger.warning("LessonStore.promote: REJECTED -- incomplete independent evidence")
-                return None
+        # [REPLACED 29/09/2026] WP-8.  The old body validated ``provenance["evidence"]``
+        # only *when that key was present*, so ``promote(..., provenance={})``
+        # sailed through.  That is a wrong promotion: Gate 7 requires the
+        # promotion to record provenance and validation, and T8 asks for zero
+        # wrong promotions on replay.  Missing evidence is now the same reject
+        # as incomplete evidence -- fail-closed, not fail-open.
+        if "evidence" not in provenance:
+            logger.warning(
+                "LessonStore.promote: REJECTED -- provenance carries no evidence "
+                "(Gate 7 requires provenance + validation on every promotion). "
+                "session=%s content=%.60s",
+                session_id[:8],
+                content,
+            )
+            return None
+        packet = evidence_from_mapping(provenance.get("evidence", {}))
+        if not packet.valid_for_promotion():
+            logger.warning("LessonStore.promote: REJECTED -- incomplete independent evidence")
+            return None
 
         lesson = Lesson(
             lesson_id=uuid.uuid4().hex[:16],

@@ -1,4 +1,4 @@
-﻿# scripts/ — Bộ Script Vận Hành (Operational Toolkit)
+# scripts/ — Bộ Script Vận Hành (Operational Toolkit)
 
 > [!IMPORTANT]
 > **Đây là bản MIRROR CÓ CHỦ ĐÍCH — KHÔNG được "dọn trùng lặp".**

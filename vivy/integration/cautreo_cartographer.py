@@ -31,6 +31,7 @@ import math
 import struct
 import time
 from dataclasses import asdict, dataclass, field
+from typing import Any
 
 logger = logging.getLogger(__name__)
 
@@ -104,7 +105,14 @@ CANONICAL_DOMAIN_PROBES: list[str] = [
 
 @dataclass
 class AtlasNode:
-    """Represents a structural layer or expert block mapped by Cautreo."""
+    """Represents a structural layer or expert block mapped by Cautreo.
+
+    [UPDATED 29/09/2026 · WP-5 / F-C07] when produced by
+    ``CautreoCartographer.scan_model`` this node is **SIMULATED**: its concept
+    seeds, domain scores and salience indices are computed from loop indices
+    and from ``model_id`` substrings, never from model weights.  See
+    ``simulated`` / ``weights_read``.
+    """
 
     layer_index: int
     block_name: str
@@ -115,6 +123,10 @@ class AtlasNode:
     full_ram_mb: float = 120.0
     sparse_ram_mb: float = 12.0
     dominant_domain: str = "general"
+    #: [ADDED 29/09/2026 · WP-5] True = derived from formulas, not weights.
+    simulated: bool = False
+    weights_read: bool = False
+    """Always False for ``scan_model`` output.  No tensor is ever opened."""
 
     def match_score(self, task_query: str) -> float:
         """Calculate match affinity between a query string and this node."""
@@ -148,7 +160,12 @@ class AtlasNode:
 
 @dataclass
 class CoarseKnowledgeAtlas:
-    """Global Cognitive Cartography Atlas for an LLM (30B - 100B)."""
+    """Global Cognitive Cartography Atlas for an LLM (30B - 100B).
+
+    [UPDATED 29/09/2026 · WP-5 / F-C07] an atlas produced by ``scan_model``
+    carries ``simulated=True``.  Its contents **must not be injected into a
+    model prompt** as measured knowledge — see ``render_for_prompt``.
+    """
 
     model_id: str
     total_layers: int
@@ -157,6 +174,27 @@ class CoarseKnowledgeAtlas:
     ram_buffer_limit_bytes: int = int(1.6 * 1024 * 1024 * 1024)
     created_at_ms: int = field(default_factory=lambda: int(time.time() * 1000))
     version: str = "2.0.0"
+    #: [ADDED 29/09/2026 · WP-5] True when nothing was read from disk.
+    simulated: bool = False
+    weights_read: bool = False
+    prompt_injection_allowed: bool = False
+    """Hard gate.  ``scan_model`` output may never be pasted into a prompt."""
+
+    def render_for_prompt(self, *args: Any, **kwargs: Any) -> str:
+        """Deliberately unusable.  Raises — this atlas is not prompt evidence.
+
+        [ADDED 29/09/2026 · WP-5 / O-12] the review found this atlas's output
+        being treated as knowledge about a model.  It is a synthetic map.  The
+        ban is enforced in code, not only in a comment (INV-01: every patch
+        carries a test — see ``tests/test_capability_honesty.py``).
+        """
+        raise RuntimeError(
+            "CautreoCartographer atlas is SIMULATED and must NOT be injected "
+            "into a model prompt. It was derived from loop indices and model_id "
+            f"substrings, not from weights (model_id={self.model_id!r}, "
+            f"simulated={self.simulated}, weights_read={self.weights_read}). "
+            "See docs/CAPABILITY_LEDGER.md."
+        )
 
     def query(self, task_query: str, top_k: int = 3) -> list[tuple[AtlasNode, float]]:
         """Return the top-k layers/slices with highest affinity for the query."""
@@ -379,12 +417,46 @@ class CautreoCartographer:
         total_layers: int = 80,
         model_path: str = "",
     ) -> CoarseKnowledgeAtlas:
-        """Scan a 30B - 100B model layer by layer under the 10% RAM ceiling."""
+        """Build a **SIMULATED** knowledge atlas for a model.  Reads no weights.
+
+        [REPLACED 29/09/2026 · WP-5 / O-12 / F-C07]
+        ------------------------------------------------
+        The docstring used to say *"Scan a 30B - 100B model layer by layer under
+        the 10% RAM ceiling."*  It does not scan anything:
+
+        * ``model_path`` is accepted and **never read** (no ``open``, no
+          ``mmap``, no tensor load anywhere in this method).
+        * ``slice_bytes = 120 * 1024 * 1024`` is a hardcoded constant labelled
+          "Simulate streaming 1 layer block FFN".
+        * The dominant domain is assigned from **layer-depth thresholds**
+          (20% / 45% / 75%) against a fixed ``concept_seeds`` table.
+        * ``dummy_row_sums = [(sin(l_idx*0.1 + i) + 1.2) * 0.5 …]`` — a formula
+          in the loop index.  Variable name says it.
+        * ``high_salience_indices = list(range(0, top_k_count))`` with
+          ``total_neurons = 28672 if "70b" in model_id else 14336``.  The
+          "high-salience neurons" are the first N integers, and N comes from a
+          substring match on the model's *name*.
+
+        Two different checkpoints with the same ``model_id`` string produce
+        identical atlases.  The review called it F-C07.
+
+        Returns an atlas flagged ``simulated=True`` / ``weights_read=False``.
+        Its ``render_for_prompt`` **raises** — the output must not be injected
+        into a model prompt.
+        """
+        # [ISOLATED 29/09/2026] `model_path` was already ignored; it is kept in
+        # the signature for caller compatibility and explicitly discarded here
+        # so the next reader cannot think it is used.
+        _ = model_path
+
         atlas = CoarseKnowledgeAtlas(
             model_id=model_id,
             total_layers=total_layers,
             hardware_ram_total_bytes=self.hardware_ram_bytes,
             ram_buffer_limit_bytes=self.max_buffer_bytes,
+            simulated=True,
+            weights_read=False,
+            prompt_injection_allowed=False,
         )
 
         logger.info(
@@ -400,11 +472,13 @@ class CautreoCartographer:
                 logger.info("Paused streaming at layer %d due to RAM pressure; flushing buffer", l_idx)
                 self.current_buffer_bytes = 0
 
-            # Simulate streaming 1 layer block FFN (120MB)
+            # [SIMULATED 29/09/2026 · WP-5] not a stream — a constant.
             slice_bytes = 120 * 1024 * 1024
             self.current_buffer_bytes = slice_bytes
 
-            # 1. Determine dominant domain by layer depth
+            # 1. Determine dominant domain by layer depth  [SIMULATED] — this
+            #    is a lookup on `l_idx / total_layers`, not a property of any
+            #    weight tensor.  Same for the concept_seeds table below.
             if l_idx < total_layers * 0.20:
                 dom_domain = "syntax_system"
                 concept_seeds = ["python_asyncio", "cpp_metaprogramming", "grammar_syntax", "token_flow"]
@@ -422,6 +496,9 @@ class CautreoCartographer:
             top_concepts = [f"{s}_L{l_idx}" for s in concept_seeds]
 
             # 3. Compute 50 Canonical Domain Probes scores
+            #    [SIMULATED 29/09/2026 · WP-5] `dummy_row_sums` is a formula in
+            #    `l_idx` and `i`.  The name was always honest; the callers were
+            #    not.  These scores describe nothing about the model.
             domain_scores: dict[str, float] = {}
             dummy_row_sums = [(math.sin(l_idx * 0.1 + i) + 1.2) * 0.5 for i in range(16)]
 
@@ -439,6 +516,10 @@ class CautreoCartographer:
                 domain_scores[probe] = round(energy, 4)
 
             # 4. Extract Top-10% High-Salience Neurons (Sparsity ~90%)
+            #    [SIMULATED 29/09/2026 · WP-5] these are NOT extracted from
+            #    weights.  `total_neurons` is guessed from a substring of the
+            #    model NAME ("70b"/"100b"), and the "high-salience indices"
+            #    are literally `range(0, top_k_count)` — the first N integers.
             total_neurons = 28672 if "70b" in model_id.lower() or "100b" in model_id.lower() else 14336
             top_k_count = int(total_neurons * 0.10)
             high_salience_indices = list(range(0, top_k_count))
@@ -453,6 +534,8 @@ class CautreoCartographer:
                 full_ram_mb=120.0,
                 sparse_ram_mb=12.0,  # 10% RAM only
                 dominant_domain=dom_domain,
+                simulated=True,
+                weights_read=False,
             )
             atlas.nodes[l_idx] = node
 
@@ -460,7 +543,8 @@ class CautreoCartographer:
             self.current_buffer_bytes = 0
 
         logger.info(
-            "Completed Cartography Atlas for %s: %d layers mapped successfully.",
+            "Completed SIMULATED Cartography Atlas for %s: %d layers synthesised "
+            "(no weights read; model_path was ignored). See docs/CAPABILITY_LEDGER.md.",
             model_id,
             len(atlas.nodes),
         )

@@ -1,7 +1,11 @@
 """ViVy Interactive Chat Session Manager.
 
-Maintains multi-turn chat sessions with vision and bilingual support.
+Maintains multi-turn chat sessions over text and image **metadata**.
 Standard-library only.
+
+[UPDATED 29/09/2026 · WP-5 / F-F01] — a missing image path now raises instead
+of silently fabricating a payload.  Callers that deliberately want the old
+simulated behaviour pass ``allow_simulated=True`` to ``send_message``.
 """
 
 from __future__ import annotations
@@ -51,9 +55,19 @@ class ViVyChatSession:
         text: str,
         image_path: str | None = None,
         timestamp: str = "2026-07-25T10:42:00Z",
+        *,
+        allow_simulated: bool = False,
     ) -> MultimodalResponse:
-        """Send user message (with optional image) and return ViVy response."""
-        image_payload = VisionEncoder.from_file(image_path) if image_path else None
+        """Send user message (with optional image) and return ViVy response.
+
+        Raises ``FileNotFoundError`` if ``image_path`` does not exist and
+        ``allow_simulated`` is False — see ``vision.VisionEncoder.from_file``.
+        """
+        image_payload = (
+            VisionEncoder.from_file(image_path, allow_simulated=allow_simulated)
+            if image_path
+            else None
+        )
 
         # Record user message
         user_msg = ChatMessage(

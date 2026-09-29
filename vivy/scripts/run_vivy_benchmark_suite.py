@@ -1,4 +1,4 @@
-﻿"""run_vivy_benchmark_suite.py — Bộ Benchmark Đánh Giá Thực Tiễn ViVy Final V1.0.
+"""run_vivy_benchmark_suite.py — Bộ Benchmark Đánh Giá Thực Tiễn ViVy Final V1.0.
 
 [ISOLATED 26/09/2026] GIỮ LÀM TÀI LIỆU SO SÁNH / THAM KHẢO.
 Script này còn 2 giả định layout cũ:

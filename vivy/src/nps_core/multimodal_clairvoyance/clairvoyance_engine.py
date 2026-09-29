@@ -1,7 +1,32 @@
-"""Native Multimodal Clairvoyance Engine for ViVy AI.
+"""Native Multimodal Clairvoyance Engine for ViVy AI.   [ISOLATED · SIMULATED]
 
-Encodes visual, temporal video, and audio spectrogram signals directly into
-Noetic State Complex Vectors |ψ_clairvoyance⟩ ∈ ℂᵈ without external standalone converters.
+[ISOLATED 29/09/2026 · WP-5 / O-12 / F-F03] — SIMULATED, not perception
+========================================================================
+
+The module docstring used to say this *"Encodes visual, temporal video, and
+audio spectrogram signals directly into Noetic State Complex Vectors … without
+external standalone converters"*, and its summary string claimed modalities
+`VISION_2D_3D`, `VIDEO_4D_TEMPORAL`, `AUDIO_SPECTROGRAM` under the heading
+`[ViVy Clairvoyance Direct Perception]`.
+
+**Nothing in this directory reads a pixel, a frame, or an audio sample.**
+The "spatial features" are `abs(cos(i * 0.5))` of a loop index; the "spectral
+features" are `abs(sin(i * 0.7))` of the same index.  The amplitude vector is
+built from a formula that depends only on `dim`, not on the input.  Two
+identical calls with different files produce the same state, because the
+files never enter the computation.  The review called it F-F03.
+
+STATUS (29/09/2026)
+    * **`[ISOLATED]`** — retained for the research branch (decision D-2),
+      not wired into any product path.
+    * **`SIMULATED`** — every value this module returns is synthetic.  The
+      returned `ClairvoyanceResponse` carries `simulated=True` and the summary
+      is prefixed `SIMULATED`, so nothing downstream can present it as
+      perception.
+    * **Cấm tiêm vào prompt** — the output of this module must not be pasted
+      into a model prompt as if it were measured evidence (same rule as
+      `integration/cautreo_cartographer.py::scan_model`).
+
 Standard-library only.
 """
 
@@ -11,6 +36,7 @@ import cmath
 import math
 from dataclasses import dataclass, field
 from pathlib import Path
+from typing import Any
 
 from nps_core.filter_funnel import AmplitudeAnalyzer
 from nps_core.multimodal_clairvoyance.audio_video_perception import (
@@ -52,7 +78,11 @@ class ClairvoyanceState:
 
 @dataclass(frozen=True, slots=True)
 class ClairvoyanceResponse:
-    """Response returned by ClairvoyanceEngine multi-sensory perception."""
+    """Response returned by ClairvoyanceEngine multi-sensory **simulation**.
+
+    Every numeric field is synthetic.  ``simulated`` is True for every
+    instance this module produces; there is no real-perception path.
+    """
 
     text_prompt: str
     image_payload: ImagePayload | None
@@ -64,6 +94,30 @@ class ClairvoyanceResponse:
     cross_modal_alignment_score: float
     control_signal: str
     clairvoyance_perception_summary: str
+    #: [ADDED 29/09/2026 · WP-5] Always True.  Nothing here measured the input.
+    simulated: bool = True
+    pixels_read: bool = False
+    audio_samples_read: bool = False
+    video_frames_read: bool = False
+
+    @property
+    def is_simulated(self) -> bool:
+        return self.simulated
+
+    def to_dict(self) -> dict[str, Any]:
+        return {
+            "text_prompt": self.text_prompt,
+            "state_norm": self.state_norm,
+            "entropy_shannon": self.entropy_shannon,
+            "singular_values": list(self.singular_values),
+            "cross_modal_alignment_score": self.cross_modal_alignment_score,
+            "control_signal": self.control_signal,
+            "clairvoyance_perception_summary": self.clairvoyance_perception_summary,
+            "simulated": self.simulated,
+            "pixels_read": self.pixels_read,
+            "audio_samples_read": self.audio_samples_read,
+            "video_frames_read": self.video_frames_read,
+        }
 
 
 class SVDMultimodalDecomposer:
@@ -100,7 +154,11 @@ class SVDMultimodalDecomposer:
 
 
 class ClairvoyanceEngine:
-    """Native Multimodal Perception Engine processing Vision, Video, and Audio directly."""
+    """**SIMULATED** multi-sensory state builder — see the module docstring.
+
+    This is not a perception engine.  It returns synthetic numbers derived
+    from loop indices.  Kept for research (D-2), `[ISOLATED]` from product.
+    """
 
     @staticmethod
     def process_multimodal_clairvoyance(
@@ -109,14 +167,37 @@ class ClairvoyanceEngine:
         video_path: str | Path | None = None,
         audio_path: str | Path | None = None,
     ) -> ClairvoyanceResponse:
-        """Process multi-sensory prompt natively without external converters."""
+        """Build a synthetic multi-sensory state.  SIMULATED — reads no media.
 
-        # 1. Parse optional payloads
-        image_payload = VisionEncoder.from_file(image_path) if image_path else None
-        video_payload = AudioVideoEncoder.encode_video_file(video_path) if video_path else None
-        audio_payload = AudioVideoEncoder.encode_audio_file(audio_path) if audio_path else None
+        ``allow_simulated=True`` is deliberate: this whole path is simulation,
+        so a missing file is a valid input rather than an error.  The returned
+        payload is flagged accordingly by ``VisionEncoder``.
+        """
+
+        # 1. Parse optional payloads (metadata only — nothing is decoded).
+        #    allow_simulated=True is deliberate for all three: this whole path
+        #    is SIMULATED, so a missing file is a valid input here.
+        image_payload = (
+            VisionEncoder.from_file(image_path, allow_simulated=True) if image_path else None
+        )
+        video_payload = (
+            AudioVideoEncoder.encode_video_file(video_path, allow_simulated=True)
+            if video_path
+            else None
+        )
+        audio_payload = (
+            AudioVideoEncoder.encode_audio_file(audio_path, allow_simulated=True)
+            if audio_path
+            else None
+        )
 
         # 2. Build Complex Amplitude State Vector |ψ_clairvoyance⟩
+        # 2. Build Complex Amplitude State Vector |ψ_clairvoyance⟩
+        #
+        # [SIMULATED 29/09/2026 · WP-5] every value below is a function of the
+        # loop index `i` and of whether a payload object exists — never of the
+        # media the path names.  Swapping `image_path` for a different file
+        # yields an identical state.
         dim = 16
         amplitudes = []
         spatial_feats = []
@@ -170,7 +251,8 @@ class ClairvoyanceEngine:
             modalities.append("AUDIO_SPECTROGRAM")
 
         summary = (
-            f"[ViVy Clairvoyance Direct Perception] Modalities: {', '.join(modalities)} | "
+            f"[SIMULATED · ViVy Clairvoyance — synthetic state, NO media was decoded] "
+            f"Declared modalities (presence flags only): {', '.join(modalities)} | "
             f"Entropy S={entropy:.4f} | Alignment Score={alignment_score:.4f} | "
             f"State Norm={state.norm:.4f}"
         )
@@ -188,4 +270,21 @@ class ClairvoyanceEngine:
             cross_modal_alignment_score=alignment_score,
             control_signal=control_signal,
             clairvoyance_perception_summary=summary,
+            # Explicit — do not rely on the dataclass default staying True.
+            simulated=True,
+            pixels_read=False,
+            audio_samples_read=False,
+            video_frames_read=False,
         )
+
+
+# [ISOLATED 29/09/2026 · WP-5 / F-F03] — the old summary line, preserved
+# verbatim.  It claimed "Direct Perception" and named modalities that were
+# never fed any signal.  Must not be restored to the live code above.
+#
+#     f"[ViVy Clairvoyance Direct Perception] Modalities: {', '.join(modalities)} | "
+#     f"Entropy S={entropy:.4f} | Alignment Score={alignment_score:.4f} | "
+#     f"State Norm={state.norm:.4f}"
+#
+# ...and the modalities list that dressed presence flags up as perception:
+#     "VISION_2D_3D", "VIDEO_4D_TEMPORAL", "AUDIO_SPECTROGRAM"

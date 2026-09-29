@@ -1,4 +1,4 @@
-﻿"""C01 backend registry — real backends only, every request tagged, no silent fallback.
+"""C01 backend registry — real backends only, every request tagged, no silent fallback.
 
 Enumerates the real inference surfaces in this workspace:
   * llama-server  (llama.cpp / Ollama OpenAI-compatible HTTP, default :8080)

@@ -1,4 +1,4 @@
-﻿import os
+import os
 
 content = """# Durable Decision — HoH Inference Timeout, Empty Content & Reasoning Resolution
 

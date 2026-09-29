@@ -18,8 +18,11 @@ def test_model_catalog_scanner():
     assert "qwen2.5-coder-7b-instruct" in catalog.models or "qwen2.5-coder:7b" in catalog.models
 
     # Test archetype mapping
+    # [REROUTED 26/09/2026] coding archetype now targets a model that exists on disk
+    # (qwen2.5-coder gguf was never present). See model_manifest.json
+    # task_archetype_mapping_note_2026-09-26.
     coding_model = catalog.get_specialist_for_task(TaskArchetype.NATIVE_SYSTEM_CODING)
-    assert "coder" in coding_model.lower() or "qwen" in coding_model.lower()
+    assert coding_model == "gemma4-e4b"
 
 
 def test_classify_task_archetype_explicit_signals():
@@ -30,7 +33,7 @@ def test_classify_task_archetype_explicit_signals():
     p1 = "[TASK: C_ABI] Xây dựng struct ct_context_memory"
     arch1, model1, exp1 = classify_task_archetype(p1, catalog)
     assert arch1 == TaskArchetype.NATIVE_SYSTEM_CODING
-    assert "coder" in model1.lower() or "qwen" in model1.lower()
+    assert model1 == "gemma4-e4b"
 
     # Explicit Plan signal
     p2 = "[TASK: PLAN] Thiết kế kiến trúc phân rã 91s"
@@ -47,7 +50,7 @@ def test_classify_task_archetype_implicit_context():
     p1 = "Cần viết C-ABI và ctypes bindings cho cautreo.dll thao tác con trỏ pointer malloc"
     arch1, model1, exp1 = classify_task_archetype(p1, catalog)
     assert arch1 == TaskArchetype.NATIVE_SYSTEM_CODING
-    assert "coder" in model1.lower() or "qwen" in model1.lower()
+    assert model1 == "gemma4-e4b"
 
     # Implicit general cognitive plan
     p2 = "Phân tích và đánh giá rủi ro chiến lược sản phẩm"
