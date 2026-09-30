@@ -410,6 +410,10 @@ class ItemScore:
     expected: str
     expected_kind: str
     arms: dict[str, dict[str, Any]] = field(default_factory=dict)
+    #: Per-definition confidence scores (O-05/T3).  Populated when ``--t3``
+    #: is active; empty dict otherwise.  Keys are definition names from
+    #: ``benchmarks.calibration.features.EXTRACTORS``.
+    confidence_by_definition: dict[str, float] = field(default_factory=dict)
 
 
 def _is_ceiling_hit(arm_row: dict[str, Any]) -> bool:
@@ -580,6 +584,7 @@ def run_eval(
     backend_identity: dict[str, Any] | None = None,
     split: str = "dev",
     ceiling_s: float = HANG_CEILING_S,
+    t3: bool = False,
 ) -> dict[str, Any]:
     """Score every item on every arm and assemble the receipt payload."""
     scores: list[ItemScore] = []
@@ -633,6 +638,40 @@ def run_eval(
         else {"status": "NOT_EVALUATED", "note": "need two arms"}
     )
 
+    t3_verdict: dict[str, Any] | None = None
+    if t3:
+        # T3 requires per-item confidence scores populated via extract_all.
+        # If no item carries confidence data, the verdict is NOT_MEASURED.
+        has_conf = any(s.confidence_by_definition for s in scores)
+        if has_conf:
+            from benchmarks.calibration.evaluate import run_t3_evaluation
+            from benchmarks.calibration.features import EXTRACTORS
+
+            def_names = list(EXTRACTORS.keys())
+            scores_by_def: dict[str, list[float]] = {d: [] for d in def_names}
+            labels: list[int] = []
+            for s in scores:
+                labels.append(
+                    1 if any(a.get("correct") for a in s.arms.values()) else 0
+                )
+                for d in def_names:
+                    scores_by_def[d].append(s.confidence_by_definition.get(d, 0.0))
+
+            n = len(labels)
+            # Use first half as dev, second half as heldout (interleaved for balance)
+            dev_idx = list(range(0, n, 2))
+            heldout_idx = list(range(1, n, 2))
+            if dev_idx and heldout_idx:
+                tv = run_t3_evaluation(
+                    scores_by_def, labels,
+                    dev_indices=dev_idx, heldout_indices=heldout_idx,
+                )
+                t3_verdict = tv.to_dict()
+            else:
+                t3_verdict = {"status": "NOT_MEASURED", "note": "insufficient items for dev/heldout split"}
+        else:
+            t3_verdict = {"status": "NOT_MEASURED", "note": "no confidence_by_definition data on any item"}
+
     return {
         "run_id": run_id,
         "created_utc": datetime.now(UTC).isoformat(timespec="seconds"),
@@ -650,6 +689,7 @@ def run_eval(
         "arm_order": arm_names,
         "t2_verdict": verdict,
         "quantum_retention": retention,
+        "t3_verdict": t3_verdict,
         "per_item": [asdict(s) for s in scores],
     }
 
@@ -716,6 +756,8 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--limit", type=int, default=0,
                         help="score only the first N items (smoke runs)")
     parser.add_argument("--ceiling", type=float, default=HANG_CEILING_S)
+    parser.add_argument("--t3", action="store_true", default=False,
+                        help="run O-05/T3 confidence calibration evaluation")
     args = parser.parse_args(argv)
 
     try:
@@ -748,6 +790,7 @@ def main(argv: list[str] | None = None) -> int:
         backend_identity=LLMBackend.from_env().identity(),
         split=args.split,
         ceiling_s=args.ceiling,
+        t3=args.t3,
     )
     receipt = write_receipt(payload, Path(args.receipt_dir))
 
@@ -767,6 +810,9 @@ def main(argv: list[str] | None = None) -> int:
                   f"({s['n_correct_uncensored']}/{s['n_uncensored']})")
     v = payload["t2_verdict"]
     print(f"T2 verdict  {v.get('status')}  {v.get('note', '')}")
+    t3v = payload.get("t3_verdict")
+    if t3v is not None:
+        print(f"T3 verdict  {t3v.get('status', '?')}  selected={t3v.get('selected', '?')}")
     q = payload["quantum_retention"]
     if q.get("status") not in (None, "NOT_EVALUATED"):
         print(f"quantum     {q['status']}  Δ{q.get('delta_pp', 0):+.2f}pp  "

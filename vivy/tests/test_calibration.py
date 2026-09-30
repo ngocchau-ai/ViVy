@@ -376,3 +376,43 @@ class TestT3Evaluation:
                 dev_indices=list(range(10)),
                 heldout_indices=[],
             )
+
+
+# ---------------------------------------------------------------------------
+# 7. Harness integration
+# ---------------------------------------------------------------------------
+
+
+class TestHarnessIntegration:
+    def test_item_score_has_confidence_field(self) -> None:
+        from benchmarks.harness import ItemScore
+
+        score = ItemScore(
+            id="test-1",
+            domain="arith",
+            kind="exact",
+            expected="4",
+            expected_kind="string",
+            confidence_by_definition={"schmidt_spectrum": 0.7, "verifier": 1.0},
+        )
+        assert score.confidence_by_definition["schmidt_spectrum"] == 0.7
+        assert score.confidence_by_definition["verifier"] == 1.0
+
+    def test_t3_verdict_in_receipt_shape(self) -> None:
+        from benchmarks.calibration.evaluate import DefinitionMetrics, T3Verdict
+
+        verdict = T3Verdict(
+            selected="verifier",
+            status="FALLBACK",
+            metrics={
+                "d": DefinitionMetrics(
+                    definition="d", ece=0.2, auroc=0.5, brier=0.3,
+                    n_items=10, passes=False,
+                )
+            },
+            isotonic_model={},
+        )
+        d = verdict.to_dict()
+        assert d["selected"] == "verifier"
+        assert d["status"] == "FALLBACK"
+        assert "ece" in d["metrics"]["d"]
