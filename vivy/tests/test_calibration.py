@@ -121,3 +121,61 @@ class TestBrier:
         from benchmarks.calibration.metrics import brier_score
 
         assert brier_score([], []) == 0.0
+
+
+# ---------------------------------------------------------------------------
+# 4. Isotonic regression (PAV)
+# ---------------------------------------------------------------------------
+
+
+class TestIsotonic:
+    def test_already_monotonic_returns_labels(self) -> None:
+        from benchmarks.calibration.isotonic import isotonic_regression
+
+        model = isotonic_regression([0.1, 0.3, 0.5, 0.7], [0, 0, 1, 1])
+        assert model.predict(0.0) == pytest.approx(0.0)
+        assert model.predict(0.2) == pytest.approx(0.0)
+        assert model.predict(0.6) == pytest.approx(1.0)
+        assert model.predict(0.9) == pytest.approx(1.0)
+
+    def test_needs_pooling(self) -> None:
+        from benchmarks.calibration.isotonic import isotonic_regression
+
+        # labels 1,0,1 -> PAV merges first two (1>0) to [0.5,0.5,1.0]
+        # error: 0.25+0.25+0 = 0.5 (lower than all-pooled 2/3 = 0.667)
+        model = isotonic_regression([0.1, 0.2, 0.3], [1, 0, 1])
+        assert model.predict(0.0) == pytest.approx(0.5)
+        assert model.predict(0.15) == pytest.approx(0.5)
+        assert model.predict(0.25) == pytest.approx(1.0)
+        assert model.predict(0.5) == pytest.approx(1.0)
+
+    def test_constant_labels(self) -> None:
+        from benchmarks.calibration.isotonic import isotonic_regression
+
+        model = isotonic_regression([0.1, 0.5, 0.9], [1, 1, 1])
+        for s in (0.0, 0.5, 1.0):
+            assert model.predict(s) == pytest.approx(1.0)
+
+    def test_single_sample(self) -> None:
+        from benchmarks.calibration.isotonic import isotonic_regression
+
+        model = isotonic_regression([0.5], [1])
+        assert model.predict(0.3) == pytest.approx(1.0)
+
+    def test_monotonicity_invariant(self) -> None:
+        from benchmarks.calibration.isotonic import isotonic_regression
+
+        model = isotonic_regression([0.1, 0.2, 0.3, 0.4], [1, 0, 1, 0])
+        scores = [0.0, 0.15, 0.25, 0.35, 0.5]
+        values = [model.predict(s) for s in scores]
+        for i in range(len(values) - 1):
+            assert values[i] <= values[i + 1], f"non-monotonic at {scores[i]}: {values}"
+
+    def test_output_is_json_safe(self) -> None:
+        from benchmarks.calibration.isotonic import isotonic_regression
+
+        model = isotonic_regression([0.1, 0.5, 0.9], [0, 1, 1])
+        d = model.to_dict()
+        assert isinstance(d["thresholds"], list)
+        assert isinstance(d["values"], list)
+        assert all(isinstance(v, float) for v in d["values"])

@@ -7,6 +7,7 @@ Changelog:
     30/09/2026 (Claude Code — O-05/T3): Initial.
 """
 
+from benchmarks.calibration.isotonic import IsotonicModel, isotonic_regression
 from benchmarks.calibration.metrics import (
     auroc,
     brier_score,
@@ -14,7 +15,9 @@ from benchmarks.calibration.metrics import (
 )
 
 __all__ = [
+    "IsotonicModel",
     "auroc",
     "brier_score",
     "expected_calibration_error",
+    "isotonic_regression",
 ]
