@@ -90,7 +90,7 @@ def isotonic_regression(
 
     # Build model: threshold = rightmost score in block, value = block mean
     model = IsotonicModel()
-    for start, end, sum_labels, count in blocks:
+    for _start, end, sum_labels, count in blocks:
         model.thresholds.append(sorted_scores[end])
         model.values.append(round(sum_labels / count, 6))
     return model
