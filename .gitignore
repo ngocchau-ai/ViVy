@@ -4,6 +4,7 @@
 # ── Secrets (MUST never commit) ─────────────────────────────────
 .env
 .env.*
+!.env.example
 *.key
 *.pem
 *.p12
@@ -37,16 +38,24 @@ engine/bin/*.dylib
 # ── Python / tooling caches ─────────────────────────────────────
 __pycache__/
 *.py[cod]
+*.pyo
+*.pyd
 *.egg-info/
+*.egg
+.eggs/
 .mypy_cache/
 .ruff_cache/
 .pytest_cache/
 _pytest_tmp/
 .venv/
 venv/
+env/
+ENV/
 htmlcov/
 .coverage
+.coverage.*
 coverage.xml
+.tox/
 
 # ── Node / UI build output ──────────────────────────────────────
 node_modules/
@@ -60,15 +69,44 @@ ui/**/.next/
 # ── Editor / OS noise ───────────────────────────────────────────
 .idea/
 .vscode/
+*.swp
+*.swo
+*~
 .DS_Store
 Thumbs.db
 desktop.ini
 
 # ── Local runtime artifacts ─────────────────────────────────────
 *.log
-.vivy_activity.jsonl
 *.tmp
 *.bak
 *.bak.*
 scratchpad/
 context_store.db
+.vivy_activity.jsonl
+.vivy_last_response.json
+.vivy_session_*.json
+
+# ── llama.cpp prebuilt binaries ─────────────────────────────────
+llama.cpp/
+llama-server.exe
+llama-cli.exe
+
+# ── Experiment data & results (internal, not for public repo) ───
+experiment_results_*.json
+experiments/
+benchmarks/results/
+*.jsonl
+
+# ── Build / dist artifacts ──────────────────────────────────────
+unitary_reasoner.egg-info/
+*.whl
+*.tar.gz
+
+# ── Internal working docs (prompts, delegation contracts, plans) ─
+docs/claude_prompt_*.txt
+docs/codex_prompt_*.txt
+DELEGATION_CONTRACT_*.md
+PLAN_*.md
+PLAN_3DAY.md
+PLAN_PHASE0.md

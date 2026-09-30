@@ -1,0 +1,50 @@
+routing:
+  task_id: TASK-002
+  strategy: sequential_role_isolation
+  authorization:
+    source: explicit_user_instruction
+    decision: >
+      Replace the local coding runtime with the prepaid MiMo API to reduce
+      workstation load and preserve Codex capacity for orchestration.
+  transport:
+    requested: hermes_mcp
+    hermes_mcp_available: false
+    selected: direct_mimo_api
+    reason: >
+      No Hermes MCP server or callable Hermes tool was exposed in the active
+      Codex runtime; direct MiMo API was the bounded authorized fallback.
+  implementation:
+    role: mimo_coder
+    runtime: mimo_api
+    provider: xiaomi_mimo_token_plan
+    model: mimo-v2.5-pro
+    thinking: disabled
+    slices:
+      - adr_and_public_api
+      - thought_state_value_model
+      - population_lifecycle
+      - lifecycle_tests_and_hardening
+  validation:
+    tester:
+      role: mimo_tester
+      runtime: mimo_api
+      model: mimo-v2.5-pro
+      isolated_session: true
+    reviewer:
+      role: mimo_reviewer
+      runtime: mimo_api
+      model: mimo-v2.5-pro
+      isolated_session: true
+  local_device:
+    prior_model: qwen2.5-coder:7b
+    prior_runtime: ollama
+    unloaded: true
+    reason: "Avoid sustained local CPU saturation during TASK-002."
+  independence:
+    level: low
+    reason: "Coder, tester and reviewer use the same MiMo model family."
+    mitigation:
+      - "Separate role prompts and isolated sessions."
+      - "Use the ThoughtState schema validator and executable tests as primary evidence."
+      - "Require reviewer findings to cite exact code and test evidence."
+      - "Codex verifies the TaskContract but does not approve implementation."

@@ -1,0 +1,104 @@
+{
+  "model_name": "ViVy-1B-Student",
+  "estimated_parameters": 1147766784,
+  "manifest_digest": "463716f45fceb4a6275bee7c89a6db9d6680c74efa3f293582422ef0a31a0ef6",
+  "training_state": {
+    "global_step": 10,
+    "epoch": 0,
+    "total_tokens": 20480,
+    "best_loss": 1.0,
+    "best_step": 10,
+    "metrics_history": [
+      {
+        "step": 1,
+        "epoch": 0,
+        "loss": 2.173913,
+        "learning_rate": 1.5e-07,
+        "grad_norm": 0.85,
+        "tokens_per_second": 136533.33,
+        "elapsed_seconds": 0.01
+      },
+      {
+        "step": 2,
+        "epoch": 0,
+        "loss": 1.923077,
+        "learning_rate": 3e-07,
+        "grad_norm": 0.85,
+        "tokens_per_second": 136533.33,
+        "elapsed_seconds": 0.01
+      },
+      {
+        "step": 3,
+        "epoch": 0,
+        "loss": 1.724138,
+        "learning_rate": 4.5e-07,
+        "grad_norm": 0.85,
+        "tokens_per_second": 136533.33,
+        "elapsed_seconds": 0.01
+      },
+      {
+        "step": 4,
+        "epoch": 0,
+        "loss": 1.5625,
+        "learning_rate": 6e-07,
+        "grad_norm": 0.85,
+        "tokens_per_second": 136533.33,
+        "elapsed_seconds": 0.01
+      },
+      {
+        "step": 5,
+        "epoch": 0,
+        "loss": 1.428571,
+        "learning_rate": 7.499999999999999e-07,
+        "grad_norm": 0.85,
+        "tokens_per_second": 136533.33,
+        "elapsed_seconds": 0.01
+      },
+      {
+        "step": 6,
+        "epoch": 0,
+        "loss": 1.315789,
+        "learning_rate": 9e-07,
+        "grad_norm": 0.85,
+        "tokens_per_second": 136533.33,
+        "elapsed_seconds": 0.01
+      },
+      {
+        "step": 7,
+        "epoch": 0,
+        "loss": 1.219512,
+        "learning_rate": 1.05e-06,
+        "grad_norm": 0.85,
+        "tokens_per_second": 136533.33,
+        "elapsed_seconds": 0.01
+      },
+      {
+        "step": 8,
+        "epoch": 0,
+        "loss": 1.136364,
+        "learning_rate": 1.2e-06,
+        "grad_norm": 0.85,
+        "tokens_per_second": 136533.33,
+        "elapsed_seconds": 0.01
+      },
+      {
+        "step": 9,
+        "epoch": 0,
+        "loss": 1.06383,
+        "learning_rate": 1.3499999999999998e-06,
+        "grad_norm": 0.85,
+        "tokens_per_second": 136533.33,
+        "elapsed_seconds": 0.01
+      },
+      {
+        "step": 10,
+        "epoch": 0,
+        "loss": 1.0,
+        "learning_rate": 1.4999999999999998e-06,
+        "grad_norm": 0.85,
+        "tokens_per_second": 136533.33,
+        "elapsed_seconds": 0.01
+      }
+    ]
+  }
+}

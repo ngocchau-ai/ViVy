@@ -1,0 +1,21 @@
+model_profile:
+  profile_id: LOCAL-CODER-QWEN25-CODER-3B
+  runtime: ollama
+  model: qwen2.5-coder:3b
+  role: local_coder
+  purpose: "Deterministic Python implementation for bounded task slices"
+  generation:
+    temperature: 0.1
+    top_p: 0.9
+  operating_rules:
+    - "Read the role contract and TaskContract before each slice."
+    - "Work only in allowed files."
+    - "Prefer Python standard library and deterministic behavior."
+    - "Run focused tests after each applied slice."
+    - "Return changed files, commands, results, assumptions and uncertainties."
+  provenance:
+    selected_after:
+      model: qwen2.5:0.5b
+      rejection_reason: "Failed two packaging-generation attempts."
+  limitations:
+    - "Coder, tester and reviewer sessions share a backbone and are not fully independent."

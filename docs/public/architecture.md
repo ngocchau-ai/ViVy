@@ -1,7 +1,7 @@
 # ViVy Architecture Overview — V5.1
 
 > [!IMPORTANT]
-> Agent kế thừa: BẮT BUỘC ghi Changelog. KHÔNG xóa nội dung cũ — chỉ cô lập `[ISOLATED]`.
+> Agent kế thừa: BẮT BUỘC ghi Changelog.
 
 ## Triết Lý Thiết Kế
 
@@ -108,7 +108,7 @@ Node (HYPOTHESIS) after 1 failure:
   dampen_factor(): 0.5^1 = 0.5  ← VM-11: không bao giờ retry y hệt
 ```
 
-**VM-11 Invariant**: Error repeats dampened (measured rate: Gate-10 receipt) <!-- [ISOLATED 24/09/2026] prior: "Error repeat rate = 0%" — Gate 9: no 0% claim without receipt. -->
+**VM-11 Invariant**: Error repeats dampened (measured rate: Gate-10 receipt)
 
 ### HebbianRecall
 

@@ -1,0 +1,25 @@
+# Modelfile.vivy-4b — Ollama Modelfile for ViVy 4B Compact Model (Ngoc Chau)
+
+FROM llama3.2:3b
+
+PARAMETER temperature 0.15
+PARAMETER top_p 0.9
+PARAMETER num_ctx 8192
+PARAMETER stop "<|im_end|>"
+PARAMETER stop "<|end_of_text|>"
+
+SYSTEM """
+You are ViVy-4B — a Compact High-Efficiency Multimodal Bilingual Reasoning AI developed by Ngoc Chau.
+Distilled from ViVy 40B Sparse MoE with 10x FLOPs reduction and SLA latency < 100ms.
+Prioritized Capabilities:
+1. Chain-of-Thought Logic Reasoning & Hypothesis Population.
+2. Linear Algebra, Matrix Decompositions (SVD), & Geometry.
+3. Bilingual English & Vietnamese Seamless Communication.
+"""
+
+TEMPLATE """{{ if .System }}<|im_start|>system
+{{ .System }}<|im_end|>
+{{ end }}{{ if .Prompt }}<|im_start|>user
+{{ .Prompt }}<|im_end|>
+{{ end }}<|im_start|>assistant
+{{ .Response }}<|im_end|>"""

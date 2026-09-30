@@ -1,0 +1,25 @@
+{
+  "timestamp": "2026-07-25T11:15:00Z",
+  "models": {
+    "vivy_1b": {
+      "parameters": 1147766784,
+      "initial_loss": 2.173913,
+      "final_loss": 1.0,
+      "status": "CONVERGED"
+    },
+    "vivy_moe_40b": {
+      "total_parameters": 40000000000,
+      "active_parameters": 7000000000,
+      "compute_reduction_ratio": 0.825,
+      "initial_loss": 2.033898,
+      "final_loss": 0.857143,
+      "status": "CONVERGED"
+    }
+  },
+  "evaluation_benchmarks": {
+    "vietnamese_chat": "PASSED",
+    "english_multimodal_vision": "PASSED",
+    "ollama_api_bridge": "PASSED",
+    "latency_sla_under_200ms": "PASSED"
+  }
+}

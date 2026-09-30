@@ -126,14 +126,7 @@ Một cấu hình duy nhất cho backend LLM — xem `llm_bridge/backend.py` và
 | `VIVY_MAX_ROUNDS` | `10` | Max agentic loop rounds |
 | `VIVY_HIDDEN_DIM` | `64` | Hidden dimension cho N-Core |
 
-> **[REPLACED 29/09/2026 · WP-3]** Bảng trước ghi `VIVY_LLAMA_URL` mặc định
-> `http://127.0.0.1:11434` và `VIVY_MODEL` là `vivy-final:v1` — **sai** so với
-> code và launcher (dùng `8080` / `gemma4:e4b`). `11434` là port native của
-> Ollama; runtime nói chuyện với bề mặt tương thích OpenAI trên `8080`.
-> Các biến `UNITARY_API_BASE` / `UNITARY_DEFAULT_MODEL` / `UNITARY_MODEL_LIST`
-> nay `[ISOLATED]` — cấu hình đi qua `LLMBackend` một đường duy nhất.
-
-### Backend nào trả lời? (Ollama hay Cautreo?)
+### Backend nào trả lời?
 
 **Một hợp đồng, một cấu hình** — API tương thích OpenAI `/v1/chat/completions`.
 
@@ -141,12 +134,6 @@ Một cấu hình duy nhất cho backend LLM — xem `llm_bridge/backend.py` và
   `http://127.0.0.1:8080`. Đây là backend tham chiếu.
 * **Sau phép đo parity (D-4):** `cautreo-server.exe` phục vụ cùng hợp đồng.
   Đổi backend = đổi `VIVY_LLAMA_URL` / `VIVY_MODEL`, không sửa code.
-
-Hai doc này (`quickstart`, `architecture`) trước đây bán flow Ollama trong khi
-`docs/ARCHITECTURE_FINAL.md` tuyên bố độc lập Ollama qua Cautreo C-ABI. Cả hai
-nay nói cùng một điều: **độc lập Ollama là đích triển khai**, chưa phải đường
-đang chạy. Việc chuyển sang Cautreo **được đo**, không được giả định — xem
-`training/backend_registry.py` (`role="isolated-unverified"` cho native-cautreo).
 
 ---
 
@@ -178,7 +165,7 @@ print(f"Tokens used: {result.llm_tokens_used}")
 ### "Cannot connect to llama-server"
 
 ```bash
-# Check the OpenAI-compatible endpoint is up (port 8080, không phải 11434)
+# Check the OpenAI-compatible endpoint is up (port 8080)
 curl http://127.0.0.1:8080/v1/models
 
 # Nếu đang dùng Ollama, đảm bảo nó phục vụ OpenAI-compatible API:
@@ -189,7 +176,7 @@ ollama serve
 > Lỗi **timeout** được báo riêng (`LLMTimeoutError` / `delegate_kind="timeout"`)
 > — đó là vấn đề ngân sách độ trễ, không phải lỗi suy luận.
 
-### "Model vivy-final:v1 not found"
+### "Model not found"
 
 ```bash
 ollama create vivy-final:v1 -f Modelfile.vivy
@@ -205,6 +192,6 @@ ViVy trên CPU với 9.6GB model: ~30-60s/response bình thường.
 ### Python import error
 
 ```bash
-# Đảm bảo đang ở thư mục unitary-reasoner/
+# Đảm bảo đang ở thư mục project
 pip install -e ".[dev]"
 ```

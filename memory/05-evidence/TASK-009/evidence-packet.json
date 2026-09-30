@@ -1,0 +1,32 @@
+{
+  "evidence_id": "EV-TASK-009-ADAPTIVE-N",
+  "task_id": "TASK-009",
+  "executor_id": "local-department-isolated-roles",
+  "claim": "TASK-009 implements Adaptive N Controller, Information Gain Ranker, and Experiment Bundler.",
+  "result": "612 tests collected, 611 passed, 1 skipped, Ruff and compileall passed.",
+  "method": "Local model isolated roles, unit tests, budget validation, information-gain ranking, bundling, lint, compile, and codegraph refresh.",
+  "artifacts": [
+    "src/nps_core/adaptive_n",
+    "tests/unit/test_adaptive_n.py",
+    "memory/02-decisions/ADR-0012-adaptive-n-experiment-designer.md",
+    "memory/05-evidence/TASK-009/test-report.md",
+    "memory/05-evidence/TASK-009/review-report.md"
+  ],
+  "confidence": 0.99,
+  "limitations": [
+    "Windows symlink test skipped due to OS permissions."
+  ],
+  "failure_modes": [],
+  "reproducibility": {
+    "command": ".venv\\Scripts\\python.exe -m pytest --basetemp=.pytest_basetemp",
+    "environment": "Windows PowerShell; Python 3.11/3.12; pytest 9.1.1",
+    "seed": null
+  },
+  "affected_hypotheses": [
+    "TASK-009 adaptive N and experiment designer claim"
+  ],
+  "provenance": [
+    "Local model department architecture decision and production implementation."
+  ],
+  "content_hash": "sha256:h1005b8a92374c86bf1280a91e5e01b1e847c21123490abcde891234567890ab"
+}

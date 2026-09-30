@@ -1,0 +1,137 @@
+task_contract:
+  task_id: TASK-004
+  title: "Deterministic Thought Ecology Graph Index"
+  objective:
+    problem: >
+      Stage 1 now has immutable ThoughtState lifecycle and atomic evidence
+      updates, but it cannot validate or query the population-wide dependency,
+      contradiction, overlap, shared-assumption, and evidence-impact ecology.
+    expected_outcome: >
+      A standard-library-only immutable ThoughtEcology index built from an
+      exact PopulationSnapshot, with strict typed relations, deterministic
+      canonical serialization, graph invariant enforcement, stable queries,
+      exact-snapshot validation, and replay-identical reconstruction.
+    non_goals:
+      - "Do not modify ThoughtState V1 or any JSON schema."
+      - "Do not infer semantic similarity, contradiction, or confidence."
+      - "Do not mutate PopulationSnapshot or lifecycle history."
+      - "Do not implement Adaptive N, experiment design, tribunal, or routing."
+      - "Do not dispatch models, tools, executors, network, database, or files."
+  context:
+    architecture_refs:
+      - "ARCHITECTURE.md#6-kien-truc-he-thong"
+      - "ARCHITECTURE.md#21-workflow-chuan-cho-moi-task-nghien-cuu"
+      - "ARCHITECTURE.md#giai-doan-1-deterministic-runtime-prototype"
+    codegraph_nodes:
+      - "module:nps_core.thought_ecology"
+      - "module:nps_core.hypothesis_population"
+      - "module:nps_core.evidence_assimilator"
+      - "module:nps_core.state_update"
+    relevant_files:
+      - "schemas/thought_state.schema.json"
+      - "src/nps_core/hypothesis_population/thought_state.py"
+      - "src/nps_core/hypothesis_population/lifecycle.py"
+      - "src/nps_core/evidence_assimilator/impact.py"
+      - "src/nps_core/state_update/engine.py"
+      - "memory/04-tasks/PROJECT-COMPLETION-MATRIX.md"
+    prior_decisions:
+      - "memory/02-decisions/ADR-0004-python-foundation.md"
+      - "memory/02-decisions/ADR-0005-deterministic-thought-lifecycle.md"
+      - "memory/02-decisions/ADR-0006-evidence-assimilation-state-update.md"
+  constraints:
+    language: "Python 3.11+"
+    dependencies_allowed:
+      - "Python standard library"
+      - "Existing NPS Core immutable types"
+      - "Existing pytest development dependency"
+    dependencies_forbidden:
+      - "New production dependencies"
+      - "Runtime jsonschema, network, filesystem, database, clock, UUID or random calls"
+      - "Semantic or confidence inference"
+    security_requirements:
+      - "Unknown/self graph references and dependency cycles fail closed."
+      - "Deserialized ecology cannot bypass exact-snapshot validation."
+      - "Invalid ecology construction leaves the PopulationSnapshot byte-identical."
+    compatibility_requirements:
+      - "Windows PowerShell"
+      - "Linux shell"
+      - "UTF-8 repository content"
+      - "Existing ThoughtState V1 graph fields remain byte-unchanged"
+  implementation:
+    assigned_role: mimo_coder
+    allowed_files:
+      - "src/nps_core/thought_ecology/**"
+      - "tests/unit/test_thought_ecology.py"
+      - "tests/integration/test_thought_ecology_population.py"
+      - "memory/02-decisions/ADR-0007-thought-ecology.md"
+      - "memory/02-decisions/index.md"
+      - "memory/03-codegraph/**"
+      - "memory/04-tasks/TASK-004.md"
+      - "memory/04-tasks/PROJECT-COMPLETION-MATRIX.md"
+      - "memory/05-evidence/TASK-004/**"
+      - "memory/07-sessions/**"
+      - "local_department/routing/TASK-004.yaml"
+      - "orchestration/codex/tasks/TASK-004.yaml"
+    forbidden_files:
+      - "ARCHITECTURE.md"
+      - "schemas/**"
+      - "src/nps_core/hypothesis_population/**"
+      - "src/nps_core/evidence_assimilator/**"
+      - "src/nps_core/state_update/**"
+      - "src/nps_core/codegraph/**"
+      - "src/nps_core/adaptive_n/**"
+      - "src/nps_core/experiment_designer/**"
+      - "src/nps_core/verification_tribunal/**"
+      - "src/nps_core/executor_router/**"
+      - "memory/05-evidence/TASK-001/**"
+      - "memory/05-evidence/TASK-002/**"
+      - "memory/05-evidence/TASK-003/**"
+      - "raw/**"
+    expected_artifacts:
+      - "Frozen typed dependency, contradiction, overlap, shared-assumption, and evidence-impact relations."
+      - "Immutable ThoughtEcology index tied to an exact PopulationSnapshot digest."
+      - "Deterministic immediate, reverse, neighborhood, transitive, and topological queries."
+      - "Strict dict/JSON canonical serialization and exact-snapshot revalidation."
+      - "ADR-0007 locking graph ownership and invariant semantics."
+      - "Replay-identical population ecology integration test."
+  validation:
+    acceptance_criteria:
+      - "Public ecology types and domain errors import from nps_core.thought_ecology."
+      - "The index contains every snapshot thought exactly once in lexical order."
+      - "ThoughtState.graph.dependencies creates directed edges; contradictions and overlaps create canonical undirected pairs."
+      - "Reciprocal symmetric declarations collapse to one edge; one-sided declarations are accepted and normalized."
+      - "Unknown or self graph references fail with stable domain errors."
+      - "Dependency cycles, including multi-node cycles, fail deterministically."
+      - "Shared-assumption links are derived only from equal assumption_id and equal complete assumption payload; conflicting reuse of an ID fails."
+      - "Evidence-impact links preserve caller-supplied thought ID and bucket classification without inference."
+      - "The same evidence ID in multiple buckets of one thought is rejected as ambiguous."
+      - "Immediate dependencies, reverse dependents, contradictions, overlaps, shared-assumption neighbors, evidence placements, full neighborhood, transitive dependencies, and topological order are deterministic."
+      - "A frozen ecology serializes losslessly to strict plain dictionaries and canonical JSON."
+      - "Direct tuple-typed construction is strict; from_dict requires JSON lists."
+      - "Ecology stores SHA-256 of the exact snapshot canonical JSON and validate_for rebuilds/compares the exact supplied snapshot."
+      - "A stale or structurally forged deserialized ecology fails exact-snapshot validation."
+      - "Construction, failed queries, and validation never mutate the PopulationSnapshot or history."
+      - "Repeated build/replay produces byte-identical ecology canonical JSON."
+      - "Production runtime uses only Python standard library and performs no executor dispatch."
+      - "All TASK-001 through TASK-003 tests remain green."
+    required_tests:
+      - "Strict relation/index direct and dict/JSON validation."
+      - "Unknown, self, duplicate normalization and dependency-cycle cases."
+      - "Shared assumption and evidence impact derivation/conflict cases."
+      - "All deterministic query forms and exact-snapshot validation."
+      - "Replay-identical multi-thought integration test."
+      - "Static standard-library import audit, full regression, Ruff, and compileall."
+    regression_checks:
+      - "Schemas, architecture, TASK-002 and TASK-003 production remain byte-unchanged."
+      - "No scratch/cache artifact is staged."
+      - "Codegraph metadata matches exact final Git HEAD."
+    evidence_schema: evidence_packet_v1
+  token_budget:
+    max_context_tokens: 16000
+    max_output_tokens: 6000
+    required_summary_mode: diff_first
+  completion:
+    status: complete
+    reviewer: mimo_reviewer
+    codegraph_refresh_required: true
+    memory_update_required: true

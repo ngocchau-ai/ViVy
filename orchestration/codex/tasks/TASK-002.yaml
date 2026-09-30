@@ -1,0 +1,145 @@
+task_contract:
+  task_id: TASK-002
+  title: "Deterministic ThoughtState Lifecycle Core"
+  objective:
+    problem: >
+      Foundation Freeze mới chỉ cung cấp ThoughtState schema và package
+      skeleton; NPS Core chưa có executable core model cho deterministic
+      ThoughtState lifecycle.
+    expected_outcome: >
+      Một immutable, schema-compatible ThoughtState model và population
+      lifecycle dùng Python standard library, chạy end-to-end
+      create/branch/merge/prune với deterministic canonical serialization,
+      referential integrity và audit history mà không cần model inference.
+    non_goals:
+      - "Không train hoặc gọi language model."
+      - "Không xây full autonomous system hoặc executor dispatch thật."
+      - "Không thêm database, network service hoặc persistence layer."
+      - "Không dùng semantic embedding cho merge/prune."
+      - "Không sửa bốn JSON Schema V1 hoặc architecture baseline."
+      - "Không ingest EvidencePacket hoặc cập nhật nhiều hypothesis trong task này."
+      - "Không tạo ExperimentContract hoặc experiment selection trong task này."
+      - "Không triển khai Thought Ecology graph store ngoài lineage cần cho lifecycle."
+      - "Không triển khai N_v/N_e accounting, executor routing hoặc Adaptive N policy."
+  context:
+    architecture_refs:
+      - "ARCHITECTURE.md#3-don-vi-co-ban-thought-state"
+      - "ARCHITECTURE.md#4-ba-gia-tri-n-tach-biet"
+      - "ARCHITECTURE.md#5-adaptive-n-controller"
+      - "ARCHITECTURE.md#giai-doan-1-deterministic-runtime-prototype"
+      - "ARCHITECTURE.md#25-uu-tien-trien-khai-ngay"
+    codegraph_nodes:
+      - "module:nps_core.hypothesis_population"
+      - "module:nps_core.state_update"
+    relevant_files:
+      - "schemas/thought_state.schema.json"
+      - "memory/00-identity/non-negotiables.md"
+      - "memory/01-architecture/module-map.md"
+      - "memory/01-architecture/runtime-loop.md"
+      - "memory/03-codegraph/codegraph-summary.md"
+      - "memory/07-sessions/handoff.md"
+    prior_decisions:
+      - "memory/02-decisions/ADR-0001-architecture-baseline.md"
+      - "memory/02-decisions/ADR-0002-codex-local-boundary.md"
+      - "memory/02-decisions/ADR-0003-memory-codegraph.md"
+      - "memory/02-decisions/ADR-0004-python-foundation.md"
+  constraints:
+    language: "Python 3.11+"
+    dependencies_allowed:
+      - "Python standard library"
+      - "Existing pytest and jsonschema development dependencies"
+    dependencies_forbidden:
+      - "Runtime network calls"
+      - "Hosted or local model inference from production code"
+      - "Databases and persistence frameworks"
+      - "Nondeterministic UUID, random, or wall-clock generation"
+      - "New production dependencies"
+    performance_budget:
+      lifecycle_100_thoughts_seconds: 1
+    security_requirements:
+      - "Deserialization must not import or instantiate arbitrary classes."
+      - "Inputs must be validated before constructing a new immutable snapshot."
+      - "Invalid lifecycle transitions must leave the prior snapshot unchanged."
+    compatibility_requirements:
+      - "Windows PowerShell"
+      - "Linux shell"
+      - "UTF-8 repository content"
+      - "ThoughtState V1 schema-compatible plain-dict serialization"
+  implementation:
+    assigned_role: mimo_coder
+    allowed_files:
+      - "src/nps_core/hypothesis_population/**"
+      - "tests/unit/test_thought_state_model.py"
+      - "tests/unit/test_thought_lifecycle.py"
+      - "tests/integration/test_thought_lifecycle_end_to_end.py"
+      - "memory/02-decisions/ADR-0005-deterministic-thought-lifecycle.md"
+      - "memory/02-decisions/index.md"
+      - "memory/03-codegraph/**"
+      - "memory/04-tasks/TASK-002.md"
+      - "memory/05-evidence/TASK-002/**"
+      - "memory/07-sessions/**"
+      - "local_department/routing/TASK-002.yaml"
+      - "orchestration/codex/tasks/TASK-002.yaml"
+    forbidden_files:
+      - "ARCHITECTURE.md"
+      - "schemas/**"
+      - "src/nps_core/codegraph/**"
+      - "src/nps_core/state_update/**"
+      - "src/nps_core/thought_ecology/**"
+      - "src/nps_core/adaptive_n/**"
+      - "src/nps_core/experiment_designer/**"
+      - "src/nps_core/evidence_assimilator/**"
+      - "memory/00-identity/**"
+      - "memory/02-decisions/ADR-0001-architecture-baseline.md"
+      - "memory/02-decisions/ADR-0002-codex-local-boundary.md"
+      - "memory/02-decisions/ADR-0003-memory-codegraph.md"
+      - "memory/02-decisions/ADR-0004-python-foundation.md"
+      - "memory/05-evidence/TASK-001/**"
+      - "raw/**"
+    expected_artifacts:
+      - "Validated immutable ThoughtState V1 value model with lossless schema-compatible serialization."
+      - "Immutable population snapshot and deterministic create/branch/merge/prune lifecycle."
+      - "Deterministic, serializable transition audit history."
+      - "ADR-0005 locking module ownership, merge responsibility and prune disposition."
+      - "End-to-end deterministic ThoughtState lifecycle test."
+  validation:
+    acceptance_criteria:
+      - "Public ThoughtState lifecycle types import from nps_core.hypothesis_population."
+      - "ThoughtState parses and serializes losslessly to dictionaries accepted by the V1 schema."
+      - "Invalid identifiers, confidence values, statuses, missing fields, duplicate IDs and invalid references fail with stable domain errors."
+      - "All identities and timestamps are caller supplied; repeated inputs produce equal states and byte-identical canonical JSON."
+      - "Create, branch, merge and prune run end-to-end without mutating prior snapshots."
+      - "Branch records exactly one existing parent, prevents self/unknown references and never mutates the parent."
+      - "Merge requires at least two distinct non-terminal sources, is source-order independent, marks sources merged and creates one active caller-supplied result."
+      - "Merge never invents semantic content or confidence arithmetic; caller supplies the complete merged ThoughtState content."
+      - "Prune requires a non-empty reason and an explicit ADR-approved disposition of rejected or dormant."
+      - "Every transition is atomic and records a deterministic audit event without hidden clock, UUID or randomness."
+      - "Replay of the same initial data and transition sequence produces byte-identical snapshot and history JSON."
+      - "Lineage references have no dangling IDs, self-links or cycles."
+      - "Lifecycle code never dispatches executors or treats one ThoughtState as one executor."
+      - "Production runtime has no dependency beyond Python standard library."
+      - "Existing TASK-001 tests remain green."
+    required_tests:
+      - "ThoughtState validation, lossless round-trip and V1 schema compatibility."
+      - "Canonical JSON byte determinism."
+      - "Create/branch/merge/prune lifecycle, input immutability and atomic failure."
+      - "Branch unknown/self-reference rejection and lineage cycle protection."
+      - "Merge order independence, source status updates and duplicate/terminal rejection."
+      - "Prune reason/disposition validation and repeated-terminal rejection."
+      - "Replay-identical end-to-end lifecycle integration test."
+      - "Static import check proving production lifecycle uses standard library only."
+      - "Full regression suite and Ruff."
+    regression_checks:
+      - "Four V1 schemas and architecture documents remain byte-unchanged."
+      - "No generated cache or scratch artifact is staged."
+      - "Codegraph metadata matches exact final Git HEAD."
+    evidence_schema: evidence_packet_v1
+  token_budget:
+    max_context_tokens: 12000
+    max_output_tokens: 6000
+    required_summary_mode: diff_first
+  completion:
+    status: complete
+    reviewer: mimo_reviewer
+    codegraph_refresh_required: true
+    memory_update_required: true

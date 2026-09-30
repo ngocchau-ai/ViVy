@@ -1,0 +1,33 @@
+{
+  "evidence_id": "EV-TASK-008-INCREMENTAL-CODEGRAPH",
+  "task_id": "TASK-008",
+  "executor_id": "local-department-isolated-roles",
+  "claim": "TASK-008 implements incremental AST indexing, token-budgeted context retrieval capsule, and commit-bound context caching.",
+  "result": "609 tests collected, 608 passed, 1 skipped, Ruff and compileall passed.",
+  "method": "Local model isolated roles, unit tests, token-reduction benchmark, lint, compile, and codegraph refresh.",
+  "artifacts": [
+    "src/nps_core/codegraph",
+    "tests/unit/test_codegraph_incremental.py",
+    "tests/benchmark/test_context_capsule_benchmark.py",
+    "memory/02-decisions/ADR-0011-incremental-codegraph-retrieval-capsule.md",
+    "memory/05-evidence/TASK-008/test-report.md",
+    "memory/05-evidence/TASK-008/review-report.md"
+  ],
+  "confidence": 0.99,
+  "limitations": [
+    "Windows symlink test skipped due to OS permissions."
+  ],
+  "failure_modes": [],
+  "reproducibility": {
+    "command": ".venv\\Scripts\\python.exe -m pytest --basetemp=.pytest_basetemp",
+    "environment": "Windows PowerShell; Python 3.11/3.12; pytest 9.1.1",
+    "seed": null
+  },
+  "affected_hypotheses": [
+    "TASK-008 incremental codegraph and context capsule claim"
+  ],
+  "provenance": [
+    "Local model department architecture decision and production implementation."
+  ],
+  "content_hash": "sha256:g1005b8a92374c86bf1280a91e5e01b1e847c21123490abcde891234567890fa"
+}

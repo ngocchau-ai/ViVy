@@ -1,0 +1,32 @@
+{
+  "evidence_id": "EV-TASK-013-RELEASE-AUDIT",
+  "task_id": "TASK-013",
+  "executor_id": "local-department-isolated-roles",
+  "claim": "TASK-013 completes multi-domain principal model benchmarks and final release audit for NPS Core V1.",
+  "result": "621 tests collected, 620 passed, 1 skipped, Ruff and compileall passed, 100% project exit criteria fulfilled.",
+  "method": "Local model isolated roles, unit tests, multi-domain pipeline benchmark, release audit verification, lint, compile, and codegraph refresh.",
+  "artifacts": [
+    "tests/benchmark/test_multidomain_principal_benchmark.py",
+    "memory/02-decisions/ADR-0016-scientific-principal-model-release-audit.md",
+    "memory/05-evidence/TASK-013/release-audit.md",
+    "memory/05-evidence/TASK-013/test-report.md",
+    "memory/05-evidence/TASK-013/review-report.md"
+  ],
+  "confidence": 1.0,
+  "limitations": [
+    "Windows symlink test skipped due to OS permissions."
+  ],
+  "failure_modes": [],
+  "reproducibility": {
+    "command": ".venv\\Scripts\\python.exe -m pytest --basetemp=.pytest_basetemp",
+    "environment": "Windows PowerShell; Python 3.11/3.12; pytest 9.1.1",
+    "seed": null
+  },
+  "affected_hypotheses": [
+    "NPS Core V1 complete release audit claim"
+  ],
+  "provenance": [
+    "Local model department architecture decision and production implementation."
+  ],
+  "content_hash": "sha256:l1005b8a92374c86bf1280a91e5e01b1e847c21123490abcde891234567890fa"
+}

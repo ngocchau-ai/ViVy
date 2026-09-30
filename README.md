@@ -93,7 +93,177 @@ Tài liệu vận hành / meta (nằm ngoài 5 doc):
 
 *   [docs/RUNBOOK.md](docs/RUNBOOK.md) — Cẩm nang hướng dẫn vận hành độc lập Cautreo và vận hành hợp nhất ViVy.
 *   [docs/CHECKPOINTS.md](docs/CHECKPOINTS.md) — Hướng dẫn độc lập kho checkpoint nội bộ (6.40 GB, 81 file) kèm số liệu byte.
-*   [docs/adr/](docs/adr/) — ADR-001..007 (qubit, MPS, SVD, memory, evolution, control signals, LLM backend).
+*   [docs/adr/](docs/adr/) — ADR-001..008 (qubit, MPS, SVD, memory, evolution, control signals, LLM backend, risk gate).
 *   [CLAUDE.md](CLAUDE.md) — Health stack + quy tắc cho agent kế thừa.
 
 > **[ISOLATED 26/09/2026]** Các tài liệu riêng lẻ (`INTRODUCTION.md`, `PAIN_POINTS_AND_SOLUTIONS.md`, `CONTEXT_STRATEGY.md`, `SYSTEM_KNOWLEDGE_MAP.md`, `TEST_CHAIN_PLAN.md`, `VIVY_MOE_*`, `VIVY_CORE_MANIFEST.md`, `OCTAGONAL_TOWER_*`, `DELEGATION_CONTRACT_*`, `TRAINING_AGENT_GUIDE.md`, `DATA_MAP_2026-09-26.md`, `plans/*`) đã gom vào 5 doc trên. Bản gốc ở `old-docs/11-consolidated-source-2026-09-26/` kèm banner `[ISOLATED]` trỏ về doc đích. `docs/ARCHITECTURE.md` giữ làm **redirect stub** vì ~25 tham chiếu vẫn trỏ theo tên file đó.
+
+---
+
+## Public README (from GitHub)
+
+> **[MERGED 30/09/2026]** — Nội dung public README từ `origin/main` được giữ nguyên bên dưới, không xóa bỏ. Xem mục Changelog cho lịch sử đầy đủ.
+
+<div align="center">
+
+<h1>ViVy</h1>
+<p><strong>Your own AI. Runs local. Thinks like Jev.</strong></p>
+
+<p>
+  <a href="#architecture">Architecture</a> ·
+  <a href="#quickstart">Quickstart</a> ·
+  <a href="#why-own-your-ai">Why Own Your AI</a> ·
+  <a href="#benchmarks">Benchmarks</a> ·
+  <a href="#roadmap">Roadmap</a>
+</p>
+
+</div>
+
+---
+
+### What is ViVy?
+
+**ViVy** is a local AI core that gives you a model with the same architectural advantages as Jev — the Jamba-style parallel hypothesis evaluator — running entirely on your own hardware, under your own control, with no cloud dependency.
+
+While cloud AI products charge per token and retain your data, ViVy runs **on your machine, offline, forever**.
+
+> *"You don't rent intelligence. You own it."*
+
+### ViVy is NOT a chatbot wrapper
+
+| Feature | Typical local AI | **ViVy** |
+|:---|:---:|:---:|
+| Runs offline | ✅ | ✅ |
+| Multi-turn conversation | ✅ | ✅ |
+| Tool calling / function use | ❌ | ✅ |
+| **Jev-style parallel hypothesis** | ❌ | ✅ |
+| **Cognitive memory (Thought Ecology)** | ❌ | ✅ |
+| **Never repeats failed actions (VM-11)** | ❌ | ✅ |
+| **Directive-first (knows action before generating)** | ❌ | ✅ |
+| Multimodal: Text + Vision + Audio | ❌ | ✅ |
+| **You own the weights** | ✅ | ✅ |
+
+---
+
+### The Jev Architecture
+
+ViVy's **ElasticNCore** is directly inspired by the Jev model — a Jamba-style architecture that evaluates multiple hypotheses in parallel within a single GEMM pass, then routes to the best candidate.
+
+**Result**: ViVy completes tasks faster than the same base model running without the ElasticNCore wrapper — not because token generation is faster, but because it picks the *right action immediately* instead of thinking out loud.
+
+### The DirectiveMTPHead
+
+Before the LLM generates a single output token, ViVy already knows *what kind of action* it will take. The **DirectiveMTPHead** emits an opcode at the front of the reasoning pass:
+
+```
+EXECUTE     → Do it directly
+FORAGE      → Gather more information first
+DELEGATE    → Hand off to a specialized worker
+```
+
+---
+
+### Why Own Your AI?
+
+| | Cloud AI | **ViVy (local)** |
+|:---|:---|:---|
+| **Cost** | $0.01–$0.06 per 1K tokens (ongoing) | One-time hardware cost |
+| **Privacy** | Your prompts → their servers | Never leaves your machine |
+| **Availability** | API downtime, rate limits | Always on |
+| **Control** | Model updates without your consent | You freeze the version |
+| **Data ownership** | Contractually ambiguous | 100% yours |
+| **Latency** | 200ms–2000ms network round-trip | Local RAM/VRAM speed |
+| **Vendor lock-in** | Switching costs every major release | Swap model in 1 line |
+
+---
+
+### What ViVy Can Do
+
+#### Agentic Mode — Tool Calling
+
+```python
+from integration.vivy_inference_loop import VivyInferenceLoop, InferenceMode
+
+vivy = VivyInferenceLoop.from_env()
+result = vivy.infer(
+    "Read my project README and suggest the 3 most critical missing sections",
+    session_id="my_session",
+    mode=InferenceMode.AGENTIC,
+)
+print(result.response_text)
+```
+
+#### Multimodal — Vision
+
+```python
+result = vivy.infer(
+    "Describe what's in this diagram and identify any architectural anti-patterns",
+    session_id="vision_session",
+    mode=InferenceMode.AGENTIC,
+    image_path="architecture_diagram.png",
+)
+```
+
+---
+
+### Model Independence
+
+ViVy works with any OpenAI-compatible endpoint. One environment variable switches providers:
+
+```bash
+# Local llama.cpp server
+export VIVY_LLAMA_URL=http://127.0.0.1:8080
+export VIVY_MODEL=gemma-4-e4b
+
+# Any OpenAI-compatible API
+export VIVY_LLAMA_URL=https://your-endpoint.com
+export VIVY_MODEL=your-model-name
+```
+
+**ViVy's engine layer never changes.** Only the weights beneath it do.
+
+---
+
+### Roadmap
+
+- [x] **V1.0** — ElasticNCore + CognitiveStateGraph + Gemma 4 E4B integration
+- [x] **V1.0** — VM-11 zero-error-repeat enforcement
+- [x] **V1.0** — Multimodal adapter (Text + Vision + Audio)
+- [x] **V1.0** — HoH × ViVy agent flow (Antigravity IDE coordinator)
+- [ ] **V1.1** — Forager module (autonomous web + file knowledge retrieval)
+- [ ] **V1.2** — Persistent cross-session CognitiveStateGraph (disk-backed)
+- [ ] **V2.0** — Nemotron Nano Omni integration (Video modality)
+- [ ] **V2.0** — Real-time audio streaming (push-to-talk interface)
+
+---
+
+### Invariants (Never Break)
+
+These properties are enforced at the architecture level, not by configuration:
+
+1. **No framework wrappers** inside the engine — no LangChain, AutoGen, Haystack
+2. **VM-11**: Error repeat rate = 0% (CognitiveStateGraph error dampening)
+3. **Directive-first**: ViVy knows its action type before generating output
+4. **ViVy never self-declares COMPLETE** — requires human or Coordinator confirmation
+5. **Session isolation**: Each session has its own CognitiveStateGraph instance
+
+---
+
+### License
+
+- **ViVy Core**: [MIT License](LICENSE)
+- **Gemma 4 E4B** (base model): [Apache 2.0](https://ai.google.dev/gemma/terms) — Google DeepMind
+
+---
+
+### About
+
+Built by [Ngọc Châu](https://github.com/ngocchau-ai) as part of the **91s AI** project.
+
+> *ViVy doesn't just answer your questions. It owns the problem.*
+
+---
+
+<div align="center">
+<sub>ViVy Final Core V1.0 · MIT License · Made in Vietnam 🇻🇳</sub>
+</div>
