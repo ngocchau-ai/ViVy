@@ -4,7 +4,6 @@ from __future__ import annotations
 
 import pytest
 
-
 # ---------------------------------------------------------------------------
 # 1. ECE
 # ---------------------------------------------------------------------------
@@ -179,3 +178,113 @@ class TestIsotonic:
         assert isinstance(d["thresholds"], list)
         assert isinstance(d["values"], list)
         assert all(isinstance(v, float) for v in d["values"])
+
+
+# ---------------------------------------------------------------------------
+# 5. Feature extractors
+# ---------------------------------------------------------------------------
+
+
+def _make_ctx(**overrides: object) -> object:
+    """Build a FeatureContext with sensible defaults."""
+    from benchmarks.calibration.features import FeatureContext
+
+    defaults = dict(
+        item_id="test-1",
+        question="What is 2+2?",
+        model_reply="ANSWER: 4",
+        tool_results=[{"ok": True}],
+        parsed_answer="4",
+        funnel_confidence=0.7,
+        state_norm=0.9,
+        llm_confidence=0.85,
+        ncore_min_score=0.6,
+        prior_confidence=0.5,
+        supporting_count=2,
+        opposing_count=0,
+        k_samples=["ANSWER: 4"] * 5,
+    )
+    defaults.update(overrides)
+    return FeatureContext(**defaults)  # type: ignore[arg-type]
+
+
+class TestExtractors:
+    def test_all_scores_in_unit_interval(self) -> None:
+        from benchmarks.calibration.features import EXTRACTORS
+
+        ctx = _make_ctx()
+        for name, fn in EXTRACTORS.items():
+            score = fn(ctx)  # type: ignore[arg-type]
+            assert 0.0 <= score <= 1.0, f"{name} returned {score}"
+
+    def test_missing_signal_returns_zero(self) -> None:
+        from benchmarks.calibration.features import EXTRACTORS
+
+        ctx = _make_ctx(funnel_confidence=None)
+        assert EXTRACTORS["schmidt_spectrum"](ctx) == 0.0  # type: ignore[arg-type]
+        ctx2 = _make_ctx(state_norm=None)
+        assert EXTRACTORS["state_norm"](ctx2) == 0.0  # type: ignore[arg-type]
+        ctx3 = _make_ctx(llm_confidence=None)
+        assert EXTRACTORS["llm_declared"](ctx3) == 0.0  # type: ignore[arg-type]
+        ctx4 = _make_ctx(ncore_min_score=None)
+        assert EXTRACTORS["ncore_min"](ctx4) == 0.0  # type: ignore[arg-type]
+
+    def test_self_consistency_partial_agreement(self) -> None:
+        from benchmarks.calibration.features import EXTRACTORS
+
+        # 3 out of 5 say "4", 2 say "5" -> 0.6
+        ctx = _make_ctx(k_samples=["ANSWER: 4"] * 3 + ["ANSWER: 5"] * 2)
+        assert EXTRACTORS["self_consistency"](ctx) == pytest.approx(0.6)  # type: ignore[arg-type]
+
+    def test_self_consistency_empty_returns_zero(self) -> None:
+        from benchmarks.calibration.features import EXTRACTORS
+
+        ctx = _make_ctx(k_samples=None)
+        assert EXTRACTORS["self_consistency"](ctx) == 0.0  # type: ignore[arg-type]
+
+    def test_verifier_all_ok(self) -> None:
+        from benchmarks.calibration.features import EXTRACTORS
+
+        ctx = _make_ctx(tool_results=[{"ok": True}, {"ok": True}])
+        assert EXTRACTORS["verifier"](ctx) == 1.0  # type: ignore[arg-type]
+
+    def test_verifier_has_failure(self) -> None:
+        from benchmarks.calibration.features import EXTRACTORS
+
+        ctx = _make_ctx(tool_results=[{"ok": True}, {"ok": False}])
+        assert EXTRACTORS["verifier"](ctx) == 0.0  # type: ignore[arg-type]
+
+    def test_verifier_no_tools(self) -> None:
+        from benchmarks.calibration.features import EXTRACTORS
+
+        ctx = _make_ctx(tool_results=None)
+        assert EXTRACTORS["verifier"](ctx) == 0.0  # type: ignore[arg-type]
+
+    def test_linear_tribunal_formula(self) -> None:
+        from benchmarks.calibration.features import EXTRACTORS
+
+        # prior=0.5, support=2, oppose=0, weight=0.1 -> 0.5 + 0.2 = 0.7
+        ctx = _make_ctx(prior_confidence=0.5, supporting_count=2, opposing_count=0)
+        assert EXTRACTORS["linear_tribunal"](ctx) == pytest.approx(0.7)  # type: ignore[arg-type]
+
+    def test_linear_tribunal_missing_returns_zero(self) -> None:
+        from benchmarks.calibration.features import EXTRACTORS
+
+        ctx = _make_ctx(prior_confidence=None, supporting_count=None, opposing_count=None)
+        assert EXTRACTORS["linear_tribunal"](ctx) == 0.0  # type: ignore[arg-type]
+
+    def test_extract_all_returns_all_seven(self) -> None:
+        from benchmarks.calibration.features import extract_all
+
+        ctx = _make_ctx()
+        result = extract_all(ctx)  # type: ignore[arg-type]
+        assert set(result.keys()) == {
+            "schmidt_spectrum",
+            "state_norm",
+            "llm_declared",
+            "ncore_min",
+            "linear_tribunal",
+            "self_consistency",
+            "verifier",
+        }
+        assert all(0.0 <= v <= 1.0 for v in result.values())

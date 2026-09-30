@@ -7,6 +7,7 @@ Changelog:
     30/09/2026 (Claude Code — O-05/T3): Initial.
 """
 
+from benchmarks.calibration.features import EXTRACTORS, FeatureContext, extract_all
 from benchmarks.calibration.isotonic import IsotonicModel, isotonic_regression
 from benchmarks.calibration.metrics import (
     auroc,
@@ -15,9 +16,12 @@ from benchmarks.calibration.metrics import (
 )
 
 __all__ = [
+    "EXTRACTORS",
+    "FeatureContext",
     "IsotonicModel",
     "auroc",
     "brier_score",
     "expected_calibration_error",
+    "extract_all",
     "isotonic_regression",
 ]
