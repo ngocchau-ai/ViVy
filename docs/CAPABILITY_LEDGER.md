@@ -65,7 +65,7 @@
 | U-06 | `HumanEval 88.4` | `model_manifest.json` qwen2.5-coder-7b | `UNMEASURED` | — | Chạy HumanEval + ghi run |
 | U-07 | `CPU Speed ~8-12 tok/s` | `model_manifest.json` qwen2.5-coder-7b | `UNMEASURED` | — | Đo thật |
 | U-08 | `Target CPU Speed >45 tok/s` | `model_manifest.json` vivy-1.5b-reflex | `UNMEASURED` | — | Model **chưa tồn tại** (`ROADMAP_PROPOSED`) — không được nói như có |
-| U-09 | `Proper Scoring Calibrated` | `model_manifest.json` vivy-1.5b-reflex | `UNMEASURED` | — | Cần calibration curve (WP-9) |
+| U-09 | `Proper Scoring Calibrated` | `model_manifest.json` vivy-1.5b-reflex | `UNMEASURED` → closable via `evidence/T3-<run_id>.json` (WP-9/O-05) | `benchmarks/calibration/evaluate.py` T3Verdict | Run `python benchmarks/harness.py --t3` to produce receipt |
 | U-10 | `Phản xạ <300ms` | `model_manifest.json` vivy-1.5b-reflex `strengths` | `UNMEASURED` | — | Đo latency thật; model chưa có |
 
 ### 2.2 Kiến trúc / hệ thống
