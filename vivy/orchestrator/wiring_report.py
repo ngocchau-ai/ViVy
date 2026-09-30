@@ -35,6 +35,7 @@ __all__ = [
     "WiringReport",
     "WiringStatus",
     "build_wiring_report",
+    "ensure_production_wiring",
 ]
 
 
@@ -252,3 +253,19 @@ def build_wiring_report(*, probe_trading: bool = True) -> WiringReport:
     if probe_trading:
         components.append(_probe_trading_engine())
     return WiringReport(components=components)
+
+
+def ensure_production_wiring(
+    *, probe_trading: bool = True, log: Any | None = None
+) -> WiringReport:
+    """Build the wiring report, receipt it, and refuse to boot if unwired.
+
+    One call for production entry points: probe → record → fail-fast.  The
+    receipt is written **before** the raise so a refused boot still leaves an
+    audit trail.  This is the WP-1 / O-01 gate that was specified but never
+    hooked into startup.
+    """
+    report = build_wiring_report(probe_trading=probe_trading)
+    report.record(log)
+    report.raise_if_unwired()
+    return report

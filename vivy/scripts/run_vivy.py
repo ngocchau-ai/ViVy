@@ -29,6 +29,7 @@ sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from integration.llama_cpp_bridge import LlamaCppBridge
 from integration.vivy_inference_loop import InferenceMode, VivyInferenceLoop
+from orchestrator.wiring_report import ensure_production_wiring
 
 logging.basicConfig(
     level=logging.INFO,
@@ -168,6 +169,10 @@ def main() -> None:
         os.environ["VIVY_MODEL"] = args.model
     else:
         os.environ.setdefault("VIVY_MODEL", "gemma4-e4b")
+
+    # WP-1 / O-01: refuse to boot on silent stubs.  Runs before the bridge so
+    # a broken wiring is reported even when the LLM server is down.
+    ensure_production_wiring()
 
     # Build ViVy
     bridge = LlamaCppBridge()
