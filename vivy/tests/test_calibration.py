@@ -288,3 +288,91 @@ class TestExtractors:
             "verifier",
         }
         assert all(0.0 <= v <= 1.0 for v in result.values())
+
+
+# ---------------------------------------------------------------------------
+# 6. T3 evaluation pipeline
+# ---------------------------------------------------------------------------
+
+
+class TestT3Evaluation:
+    def test_one_definition_passes(self) -> None:
+        from benchmarks.calibration.evaluate import run_t3_evaluation
+
+        scores = {
+            "def_good": [0.9] * 20 + [0.1] * 20,
+            "def_bad": [0.5] * 40,
+        }
+        labels = [1] * 20 + [0] * 20
+        dev = list(range(10)) + list(range(20, 30))
+        heldout = list(range(10, 20)) + list(range(30, 40))
+
+        verdict = run_t3_evaluation(scores, labels, dev_indices=dev, heldout_indices=heldout)
+        assert verdict.selected == "def_good"
+        assert verdict.status == "PASS"
+        assert verdict.metrics["def_good"].passes is True
+
+    def test_none_pass_falls_back_to_verifier(self) -> None:
+        from benchmarks.calibration.evaluate import run_t3_evaluation
+
+        # All definitions produce constant 0.5 — AUROC = 0.5 < 0.70
+        scores = {f"def_{i}": [0.5] * 40 for i in range(7)}
+        labels = [1] * 20 + [0] * 20
+        dev = list(range(20))
+        heldout = list(range(20, 40))
+
+        verdict = run_t3_evaluation(scores, labels, dev_indices=dev, heldout_indices=heldout)
+        assert verdict.selected == "verifier"
+        assert verdict.status == "FALLBACK"
+
+    def test_first_passing_definition_selected(self) -> None:
+        from benchmarks.calibration.evaluate import run_t3_evaluation
+
+        scores = {
+            "a": [0.9] * 20 + [0.1] * 20,
+            "b": [0.9] * 20 + [0.1] * 20,
+        }
+        labels = [1] * 20 + [0] * 20
+        # Interleave: dev gets 10 pos + 10 neg, heldout gets 10 pos + 10 neg
+        dev = list(range(10)) + list(range(20, 30))
+        heldout = list(range(10, 20)) + list(range(30, 40))
+
+        verdict = run_t3_evaluation(scores, labels, dev_indices=dev, heldout_indices=heldout)
+        assert verdict.selected == "a"
+
+    def test_verdict_serializable(self) -> None:
+        from benchmarks.calibration.evaluate import run_t3_evaluation
+
+        scores = {"d": [0.9] * 10 + [0.1] * 10}
+        labels = [1] * 10 + [0] * 10
+        dev = list(range(10))
+        heldout = list(range(10, 20))
+
+        verdict = run_t3_evaluation(scores, labels, dev_indices=dev, heldout_indices=heldout)
+        d = verdict.to_dict()
+        assert "selected" in d
+        assert "status" in d
+        assert "metrics" in d
+        assert "isotonic_model" in d
+
+    def test_empty_dev_raises(self) -> None:
+        from benchmarks.calibration.evaluate import run_t3_evaluation
+
+        with pytest.raises(ValueError, match="dev"):
+            run_t3_evaluation(
+                {"d": [0.5] * 10},
+                [1] * 10,
+                dev_indices=[],
+                heldout_indices=list(range(10)),
+            )
+
+    def test_empty_heldout_raises(self) -> None:
+        from benchmarks.calibration.evaluate import run_t3_evaluation
+
+        with pytest.raises(ValueError, match="heldout"):
+            run_t3_evaluation(
+                {"d": [0.5] * 10},
+                [1] * 10,
+                dev_indices=list(range(10)),
+                heldout_indices=[],
+            )
