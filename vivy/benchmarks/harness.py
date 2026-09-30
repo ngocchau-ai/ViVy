@@ -421,6 +421,22 @@ def _is_ceiling_hit(arm_row: dict[str, Any]) -> bool:
     return error.startswith("timeout_after_")
 
 
+def t3_correctness_labels(
+    scores: Sequence[ItemScore], *, arm: str
+) -> list[int]:
+    """Extract binary correctness labels for T3 calibration.
+
+    Labels reflect the **named arm's** correctness, not "any arm" — T3
+    calibrates a confidence definition against the outcome of the arm
+    that produced that confidence.  Missing arm rows are fail-closed 0.
+    """
+    labels: list[int] = []
+    for s in scores:
+        row = s.arms.get(arm, {})
+        labels.append(1 if row.get("correct") else 0)
+    return labels
+
+
 def _summarise(scores: list[ItemScore], arm: str) -> dict[str, Any]:
     n = len(scores)
     correct = [bool(s.arms.get(arm, {}).get("correct")) for s in scores]
@@ -649,16 +665,13 @@ def run_eval(
 
             def_names = list(EXTRACTORS.keys())
             scores_by_def: dict[str, list[float]] = {d: [] for d in def_names}
-            labels: list[int] = []
+            labels = t3_correctness_labels(scores, arm=pipeline_name)
             for s in scores:
-                labels.append(
-                    1 if any(a.get("correct") for a in s.arms.values()) else 0
-                )
                 for d in def_names:
                     scores_by_def[d].append(s.confidence_by_definition.get(d, 0.0))
 
             n = len(labels)
-            # Use first half as dev, second half as heldout (interleaved for balance)
+            # Interleaved split for class balance (even→dev, odd→heldout)
             dev_idx = list(range(0, n, 2))
             heldout_idx = list(range(1, n, 2))
             if dev_idx and heldout_idx:

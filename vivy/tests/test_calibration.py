@@ -416,3 +416,48 @@ class TestHarnessIntegration:
         assert d["selected"] == "verifier"
         assert d["status"] == "FALLBACK"
         assert "ece" in d["metrics"]["d"]
+
+
+class TestHarnessT3Labels:
+    def test_label_uses_named_arm_not_any_arm(self) -> None:
+        """T3 label must reflect the named arm's correctness, not 'any arm'.
+
+        If baseline is correct but pipeline is wrong, label must be 0 —
+        T3 calibrates the pipeline's confidence against the pipeline's outcome.
+        """
+        from benchmarks.harness import ItemScore, t3_correctness_labels
+
+        s = ItemScore(
+            id="x", domain="d", kind="k", expected="1", expected_kind="number",
+            arms={
+                "baseline": {"correct": True},
+                "pipeline": {"correct": False},
+            },
+        )
+        labels = t3_correctness_labels([s], arm="pipeline")
+        assert labels == [0], (
+            "label must be pipeline correctness (0), not any-arm (would be 1)"
+        )
+
+    def test_label_uses_named_arm_when_correct(self) -> None:
+        from benchmarks.harness import ItemScore, t3_correctness_labels
+
+        s = ItemScore(
+            id="x", domain="d", kind="k", expected="1", expected_kind="number",
+            arms={
+                "baseline": {"correct": False},
+                "pipeline": {"correct": True},
+            },
+        )
+        labels = t3_correctness_labels([s], arm="pipeline")
+        assert labels == [1]
+
+    def test_label_missing_arm_defaults_zero(self) -> None:
+        from benchmarks.harness import ItemScore, t3_correctness_labels
+
+        s = ItemScore(
+            id="x", domain="d", kind="k", expected="1", expected_kind="number",
+            arms={"baseline": {"correct": True}},
+        )
+        labels = t3_correctness_labels([s], arm="pipeline")
+        assert labels == [0], "missing arm must be 0 (fail-closed)"
