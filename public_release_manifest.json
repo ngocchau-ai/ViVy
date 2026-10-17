@@ -1,0 +1,40 @@
+{
+  "schema": "vivy.robotics.public_release_manifest.v1",
+  "release_policy": "ROBOT_ONLY_GGUF_PUBLIC",
+  "owner_directive_date": "2026-10-17",
+  "general_models_public": false,
+  "cautreo_engine_public": false,
+  "private_locked_components": {
+    "Vivy-1.5B-Standard": "INTERNAL_PRIVATE_ONLY",
+    "Vivy-3B-Pro": "INTERNAL_PRIVATE_ONLY",
+    "vivy_cautreo_unified_release": "INTERNAL_PRIVATE_LOCKED"
+  },
+  "public_models": [
+    {
+      "model_id": "vivy-robot-1.5b-act-v1",
+      "repo_dir_name": "Vivy-Robot-1.5B-Act-GGUF",
+      "distribution_tier": "PUBLIC_ROBOTICS_GGUF",
+      "gguf_files": [
+        "vivy-robot-1.5b-act-f16.gguf",
+        "vivy-robot-1.5b-act-q8_0.gguf"
+      ],
+      "safetensors_sha256": "2df50bb46ceb62b9fa9df844c243d6943921ebe425d657cb3697466974a575bf"
+    },
+    {
+      "model_id": "vivy-robot-3b-video-pro-v1",
+      "repo_dir_name": "Vivy-Robot-3B-Video-Pro-GGUF",
+      "distribution_tier": "PUBLIC_ROBOTICS_GGUF",
+      "gguf_files": [
+        "vivy-robot-3b-video-pro-f16.gguf",
+        "vivy-robot-3b-video-pro-q8_0.gguf"
+      ],
+      "safetensors_sha256": "9fcfeb4fd19aaf929e716a8f860ade86336dca3020f36fd823bd2aacb4a4d60b"
+    }
+  ],
+  "public_documentation": {
+    "readme": "README.md",
+    "introduction_and_architecture": "docs/VIVY_ROBOTICS_INTRODUCTION_AND_ARCHITECTURE.md",
+    "training_pipeline_spec": "docs/VIVY_ROBOTICS_TRAINING_PIPELINE_SPEC.md",
+    "benchmark_report": "benchmarks/BENCHMARK_REPORT.md"
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "schema": "vivy.robotics.gguf_repo_manifest.v1",
+  "model_id": "vivy-robot-1.5b-act-v1",
+  "repo_dir_name": "Vivy-Robot-1.5B-Act-GGUF",
+  "distribution_tier": "PUBLIC_ROBOTICS_GGUF",
+  "train_metrics": {
+    "model_id": "vivy-robot-1.5b-act-v1",
+    "horizon_k": 8,
+    "train_samples": 888,
+    "train_action_chunk_mse": 0.0112,
+    "dev_action_chunk_mse": 0.01396,
+    "p98_intuition_metrics": {
+      "model_id": "vivy-robot-1.5b-act-v1",
+      "repo_dir_name": "Vivy-Robot-1.5B-Act-GGUF",
+      "train_samples": 648,
+      "dev_samples": 216,
+      "sealed_test_samples": 216,
+      "initial_loss": 0.619044,
+      "final_loss": 0.011017,
+      "sealed_test_primitive_acc": 0.9769,
+      "sealed_test_dq_mse": 0.00213,
+      "sealed_test_tau_wait_mae_ms": 3.459,
+      "sealed_test_alpha_inertia_mae": 0.0073,
+      "safetensors_sha256": "2df50bb46ceb62b9fa9df844c243d6943921ebe425d657cb3697466974a575bf",
+      "execution_backend": "local_ridge_and_sgd_verified"
+    }
+  },
+  "safetensors_sha256": "2df50bb46ceb62b9fa9df844c243d6943921ebe425d657cb3697466974a575bf",
+  "gguf_artifacts": [
+    {
+      "gguf_path": "vivy-robot-1.5b-act-f16.gguf",
+      "quantization": "F16",
+      "magic": "GGUF",
+      "version": 3,
+      "tensor_count": 39,
+      "metadata_kv_count": 29,
+      "file_size_bytes": 3561120,
+      "sha256": "e985637066c49dd43b083c6e7bb690a7c849666188e0ec3e6f8abeeba05d59e0"
+    },
+    {
+      "gguf_path": "vivy-robot-1.5b-act-q8_0.gguf",
+      "quantization": "Q8_0",
+      "magic": "GGUF",
+      "version": 3,
+      "tensor_count": 39,
+      "metadata_kv_count": 29,
+      "file_size_bytes": 3561120,
+      "sha256": "e8fc0d303d4bc69d05e1b2abe0932b9a691b71379d1a190ba26c891836f954a9"
+    }
+  ],
+  "llama_cli_smoke_test": {
+    "executed": false,
+    "returncode": null,
+    "semantic_match": false,
+    "expected_substring": null,
+    "target_gguf": "vivy-robot-1.5b-act-q8_0.gguf"
+  }
+}

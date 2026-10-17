@@ -1,0 +1,48 @@
+{
+  "architectures": [
+    "LlamaForCausalLM"
+  ],
+  "attention_bias": false,
+  "attention_dropout": 0.0,
+  "bos_token_id": 1,
+  "dtype": "float32",
+  "eos_token_id": 2,
+  "head_dim": 32,
+  "hidden_act": "silu",
+  "hidden_size": 192,
+  "initializer_range": 0.02,
+  "intermediate_size": 512,
+  "max_position_embeddings": 256,
+  "mlp_bias": false,
+  "model_type": "llama",
+  "num_attention_heads": 6,
+  "num_hidden_layers": 4,
+  "num_key_value_heads": 2,
+  "pad_token_id": 0,
+  "pretraining_tp": 1,
+  "rms_norm_eps": 1e-05,
+  "rope_parameters": {
+    "rope_theta": 10000.0,
+    "rope_type": "default"
+  },
+  "tie_word_embeddings": false,
+  "transformers_version": "5.18.0",
+  "use_cache": true,
+  "vocab_size": 512,
+  "rope_theta": 10000.0,
+  "vivy_robotics_extension": {
+    "model_id": "vivy-robot-1.5b-act-v1",
+    "repo_dir_name": "Vivy-Robot-1.5B-Act-GGUF",
+    "tier": "1.5b_act",
+    "action_chunk_horizon": 8,
+    "temporal_decay_lambda": 0.25,
+    "modalities": [
+      "proprioception_8dof",
+      "cartesian_waypoint",
+      "dagger_perturbation_recovery"
+    ],
+    "distribution_tier": "PUBLIC_ROBOTICS_GGUF",
+    "public_release_allowed": true,
+    "safetensors_sha256": "2df50bb46ceb62b9fa9df844c243d6943921ebe425d657cb3697466974a575bf"
+  }
+}
