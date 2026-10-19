@@ -2,7 +2,7 @@
   "schema": "vivy.v6.github_public_release_manifest.v6_7",
   "repository": "ngocchau-ai/ViVy",
   "release_tag": "v6.7-Causal-Intuition-Blind-Top1",
-  "updated_at_utc": "2026-10-19T13:38:56.560899+00:00",
+  "updated_at_utc": "2026-10-19T14:43:41.584328+00:00",
   "v67_safetensors_verification": {
     "Vivy-R-Vision-3B-GGUF": {
       "file": "vivy_r_vision_3b_v67_causal_instinct.safetensors",
@@ -23,15 +23,35 @@
       "sha256": "0045f9857816f057418c382c1f709ee6600ffd5c9dc8a8467c319de36157725f"
     }
   },
-  "total_files": 117,
+  "total_files": 125,
   "files": {
     "benchmarks/BENCHMARK_REPORT.md": {
-      "size_bytes": 5813,
-      "sha256": "a17077c11778f703ed3a62f8c7af2f91af4aa39d730293d4014e0b8bcfe0abbc"
+      "size_bytes": 6652,
+      "sha256": "39ab822540d6bffbc01e47ce9cc2dfe171393b9280f953f79aefe4d739d949e4"
+    },
+    "benchmarks/vivy_code2video_168_hyperframes_bundle.zip": {
+      "size_bytes": 163172,
+      "sha256": "2c8fa240746ad2e84997767fe0fabdeb793bd08939cf0924455cba8233ca7f5f"
+    },
+    "benchmarks/vivy_code2video_168_manifest.json": {
+      "size_bytes": 51149,
+      "sha256": "925541f5ddd14b9a19ac11d81a042384b213c89d862d785f15d26c2ad41daaf5"
+    },
+    "checkpoints/vivy_code2video_top3_instinct.safetensors": {
+      "size_bytes": 15000,
+      "sha256": "1ba7547bc1baed1d8dd7c31b379094d2b30d9df2fff3d03868b997c3ebf32c22"
+    },
+    "checkpoints/vivy_kaggle_code2video_linux_receipt.json": {
+      "size_bytes": 1844,
+      "sha256": "12bd4caae4ec5498fe160df1a6f55a21d5418d7812d360eae857599116ad24c2"
+    },
+    "checkpoints/vivy_kaggle_code2video_top3_receipt.json": {
+      "size_bytes": 19402,
+      "sha256": "e731686b765c5e7c8efcf1a8265caa708a6fe6ac5ced7b7cab9f327138b0607d"
     },
     "checkpoints/vivy_v67_causal_intuition_release_receipt.json": {
-      "size_bytes": 4375,
-      "sha256": "6dd36cce0f006793bb84571aaea65340e56c4146800f2659b9c91902c891d31e"
+      "size_bytes": 4327,
+      "sha256": "53f332889a1cd8562a6256d514cbd377213ab967ce328caa446eb5312598836e"
     },
     "docs/INHERITANCE_AND_R_SERIES_ARCHITECTURE.md": {
       "size_bytes": 7014,
@@ -57,6 +77,10 @@
       "size_bytes": 17058,
       "sha256": "d596bf2cabbd75762c13140dc9c880a3a5830d0d65a237a330d1906f0e728325"
     },
+    "docs/VIVY_KAGGLE_HEYGEN_CODE2VIDEO_TOP3_MASTER_PLAN.md": {
+      "size_bytes": 17178,
+      "sha256": "2f0e9f9d774dbed38662493a1624d8584c798a593cb331e572715c811e752d28"
+    },
     "docs/VIVY_MODEL_UPDATE_TRAINING_AND_3X_TOP3_BENCHMARK_REVIEW.md": {
       "size_bytes": 16152,
       "sha256": "0391e07d68e62a5f31c4302d0738f376397d2a5df4f0d77b6f7558e7bb4fa772"
@@ -70,8 +94,8 @@
       "sha256": "f95432769aa788558450cdbb35b16707aa09b33611dec8a966dbf98de51bddb7"
     },
     "docs/VIVY_R_VISION_3B_PUBLIC_INTRODUCTION_AND_SPECIFICATION.md": {
-      "size_bytes": 27748,
-      "sha256": "f8b9d5099b851b530b557a8be2a1a16292d3515d267dc7ac222a9169b5174805"
+      "size_bytes": 30747,
+      "sha256": "388fb0061f0d430c88d28d8832fd9267b765769270cc74034e5cb7553623b28c"
     },
     "docs/VIVY_STRATIFIED_GOAL_MASTERY_AND_NL_BRIEF_SPEC.md": {
       "size_bytes": 8692,
@@ -82,8 +106,8 @@
       "sha256": "bd3af549831c098994ae7fe1763309184b00277cc3a8f35ce331a682634e4b70"
     },
     "README.md": {
-      "size_bytes": 10964,
-      "sha256": "85205d03ee9a872009c669b7858376fb2c82b70a6e163973f6eaca3f5ca325c6"
+      "size_bytes": 12722,
+      "sha256": "03ed2cee8a85dfebe2154bc502f1ffdc33e4878bdd56cc719df8c975d6441727"
     },
     "Vivy-R-Finance-3B-GGUF/.gitattributes": {
       "size_bytes": 138,
@@ -156,6 +180,10 @@
     "Vivy-R-Finance-3B-GGUF/tokenizer.json": {
       "size_bytes": 264,
       "sha256": "4f5c684129ae3abc361ba6a03726532075b1efe193939940860d853c0c75a13e"
+    },
+    "Vivy-R-Finance-3B-GGUF/vivy-r-finance-3b-q4_k_m.gguf": {
+      "size_bytes": 2104932800,
+      "sha256": "44523f0cdaf4772fc2f83fec60fbfefdb2c3430bc8c3ccef792df24ef6d5e140"
     },
     "Vivy-R-Finance-3B-GGUF/vivy_autopoietic_harness_instinct.safetensors": {
       "size_bytes": 10664,
@@ -418,8 +446,8 @@
       "sha256": "db4b902e9d513a4c2582f51ca62fc48bf01f932b2e815337c82f749d20352c05"
     },
     "Vivy-R-Vision-3B-GGUF/README.md": {
-      "size_bytes": 28257,
-      "sha256": "61a39a95a17a585f395ad187bdaba9ae136614ede234b742217a7c046f9ae573"
+      "size_bytes": 31267,
+      "sha256": "db18bb2bba663f852d2d8fc0d336ab4541399323e0c98adaa0eeb9cbe6c281ba"
     },
     "Vivy-R-Vision-3B-GGUF/tokenizer.json": {
       "size_bytes": 262,
@@ -432,6 +460,10 @@
     "Vivy-R-Vision-3B-GGUF/vivy_autopoietic_harness_instinct.safetensors": {
       "size_bytes": 10664,
       "sha256": "c27beb2ba58790c61610158603a20d17c685ff38ca9ea769ba6dcf9f670f2225"
+    },
+    "Vivy-R-Vision-3B-GGUF/vivy_code2video_top3_instinct.safetensors": {
+      "size_bytes": 15000,
+      "sha256": "1ba7547bc1baed1d8dd7c31b379094d2b30d9df2fff3d03868b997c3ebf32c22"
     },
     "Vivy-R-Vision-3B-GGUF/vivy_evolution_memory_ledger.json": {
       "size_bytes": 14958,

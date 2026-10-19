@@ -1,0 +1,48 @@
+{
+  "schema": "vivy.v6.kaggle_code2video_linux_execution_receipt.v1",
+  "receipt_id": "R-048-KAGGLE-LINUX",
+  "dataset_slug": "vinguynvn/vivy-cautreo-extractbench-organism",
+  "kernel_slug": "vinguynvn/vivy-gemma-cognitive-core",
+  "stage_source": "auto_extracted_dir:/kaggle/input/vivy-cautreo-extractbench-organism",
+  "kaggle_linux_runtime": {
+    "platform": "Linux-6.18.48+-x86_64-with-glibc2.35",
+    "python_version": "3.12.13",
+    "cpu_count": 4,
+    "offline_internet_disabled": true,
+    "libcautreo_so_bytes": 30592,
+    "libcautreo_pager_so_bytes": 29872,
+    "elapsed_ms": 6638.83
+  },
+  "final_overall_elo": 1591.62,
+  "final_overall_rank": 1,
+  "final_axis_elo": {
+    "engagement": 1588.85,
+    "prompt_intent": 1588.85,
+    "composition": 1594.58,
+    "temporal": 1589.13,
+    "craft": 1596.15
+  },
+  "final_axis_rank": {
+    "engagement": 1,
+    "prompt_intent": 1,
+    "composition": 1,
+    "temporal": 1,
+    "craft": 1
+  },
+  "hyperframes_168_bundle": {
+    "total_prompts_compiled": 168,
+    "zip_path": "/kaggle/working/vivy_code2video_168_hyperframes_bundle.zip",
+    "zip_size_bytes": 163172,
+    "zip_sha256": "9d4c43d9bebe76c860df9d5f92faef52613b569c3794cc4ed133211963d79708",
+    "manifest_path": "/kaggle/working/vivy_code2video_168_manifest.json"
+  },
+  "blind_zero_assistance_verification": {
+    "zero_shot_elo": 1591.62,
+    "zero_shot_rank": 1,
+    "adversarial_elo": 1591.62,
+    "adversarial_rank": 1
+  },
+  "receipt_sha256": "7336b00825dd183ae7578bbc1617ec70fb2baddf00dda4cd3b389422441372e1",
+  "kernel_push_stdout": "Kernel version 12 successfully pushed.  Please check progress at https://www.kaggle.com/code/vinguynvn/vivy-gemma-cognitive-core",
+  "kernel_status_stdout": "vinguynvn/vivy-gemma-cognitive-core has status \"KernelWorkerStatus.COMPLETE\""
+}

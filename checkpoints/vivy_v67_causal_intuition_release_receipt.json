@@ -2,12 +2,12 @@
   "schema": "vivy.v6.v67_causal_intuition_release_receipt.v1",
   "receipt_id": "R-043-V67-PACKAGE",
   "v67_release_version": "v6.7-Causal-Intuition-Blind-Top1-R043",
-  "packaged_at_utc": "2026-10-19T13:27:39.743985+00:00",
-  "elapsed_sec": 0.2412,
+  "packaged_at_utc": "2026-10-19T14:29:57.919279+00:00",
+  "elapsed_sec": 0.1842,
   "bundled_blind_instinct_files": [
-    "D:\\91s_Vivy\\Vivy.v6\\artifacts\\vbench_blind_retest_r042\\vivy_r041_vbench_top3_instinct.safetensors",
-    "D:\\91s_Vivy\\Vivy.v6\\artifacts\\vbench_blind_retest_r042\\vivy_r042_vbench_adversarial_instinct.safetensors",
-    "D:\\91s_Vivy\\Vivy.v6\\artifacts\\vbench_blind_retest_r042\\exp4_tri_pillar_blind_retake\\vivy_r042_tri_pillar_blind_instinct.safetensors",
+    "D:\\91s_Vivy\\Vivy.v6\\models\\r_series\\checkpoints\\vivy_r041_vbench_top3_instinct.safetensors",
+    "D:\\91s_Vivy\\Vivy.v6\\models\\r_series\\checkpoints\\vivy_r042_vbench_adversarial_instinct.safetensors",
+    "D:\\91s_Vivy\\Vivy.v6\\models\\r_series\\checkpoints\\vivy_r042_tri_pillar_blind_instinct.safetensors",
     "D:\\91s_Vivy\\Vivy.v6\\artifacts\\unseen_physbench_r043\\vivy_r043_physbench_unseen_instinct.safetensors",
     "D:\\91s_Vivy\\Vivy.v6\\artifacts\\unseen_physbench_r043\\vivy_r043_physbench_adversarial_instinct.safetensors"
   ],

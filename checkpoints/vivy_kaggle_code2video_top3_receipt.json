@@ -1,0 +1,500 @@
+{
+  "receipt_id": "R-048",
+  "timestamp_utc": "2026-10-19T14:37:20.899754+00:00",
+  "benchmark_url": "https://www.kaggle.com/benchmarks/heygen/code2video",
+  "technical_report_url": "https://www.heygen.com/research/introducing-code2video-benchmark",
+  "brief_id": "VIVY-KAGGLE-CODE2VIDEO-TOP3-3PCT-R048",
+  "zero_micromanagement_verified": true,
+  "guidance_audit": {
+    "step_guidance_ratio": 0.001631,
+    "byte_guidance_ratio": 0.007039,
+    "coordinator_interventions_during_run": 0,
+    "budget_respected": true
+  },
+  "rounds_executed": 3,
+  "rounds_history": [
+    {
+      "round_index": 1,
+      "selection_audit": {
+        "selected_action": "CODE2VIDEO_COLD_BASELINE_LINEAR_UNCLAMPED",
+        "selected_config_id": "c2v_cold_baseline",
+        "active_laws_count": 0,
+        "law_instinct_margins": {
+          "LAW_C2V_CONTINUOUS_AABB_TRAJECTORY_CLEARANCE": 0.0,
+          "LAW_C2V_SPRING_CUBIC_BEZIER_SETTLING_CADENCE": 0.0,
+          "LAW_C2V_TYPEWRITER_BOUNDARY_AND_ENDCARD_HOLD_LOCK": 0.0,
+          "LAW_C2V_HERO_CONTRAST_AND_SVG_TRIMPATH_POLISH": 0.0
+        },
+        "total_raw_combinatorial_configs": 16,
+        "compass_retained_configs": 1,
+        "pruned_config_ratio_pct": 93.75,
+        "zero_round_index_dependency": true
+      },
+      "evaluation": {
+        "config_id": "c2v_cold_baseline",
+        "html_bundle_path": "D:/91s_Vivy/Vivy.v6/artifacts/kaggle_code2video_top3/hyperframes_round_1.html",
+        "bmp_keyframe_path": "D:/91s_Vivy/Vivy.v6/artifacts/kaggle_code2video_top3/hyperframes_round_1_frame.bmp",
+        "bmp_keyframe_sha256": "429e6ed784bba203113cb6b0a3e510ff1d907cf88cccf08445e49098a8624403",
+        "physical_artifact_bytes": 91275,
+        "total_prompts_evaluated": 168,
+        "beat_categories_evaluated": 8,
+        "physical_trajectory_diagnostics": {
+          "aabb_collision_free_rate": 0.64,
+          "viewport_margin_safety": 0.6776,
+          "easing_smoothness": 0.6392,
+          "settling_cadence_score": 0.582,
+          "typewriter_completeness": 0.78,
+          "endcard_retention": 0.65,
+          "hero_presence_score": 0.586,
+          "svg_craft_polish": 0.68
+        },
+        "axis_quality": {
+          "engagement": 0.62296,
+          "prompt_intent": 0.71792,
+          "composition": 0.64264,
+          "temporal": 0.61346,
+          "craft": 0.7078
+        },
+        "axis_elo": {
+          "engagement": 1528.0,
+          "prompt_intent": 1536.2,
+          "composition": 1532.0,
+          "temporal": 1526.0,
+          "craft": 1535.84
+        },
+        "axis_rank": {
+          "engagement": 6,
+          "prompt_intent": 6,
+          "composition": 6,
+          "temporal": 6,
+          "craft": 6
+        },
+        "axis_pairwise_win_prob_vs_top1": {
+          "engagement": 0.4285,
+          "prompt_intent": 0.4416,
+          "composition": 0.4243,
+          "temporal": 0.4243,
+          "craft": 0.4283
+        },
+        "overall_elo": 1531.73,
+        "overall_rank": 7,
+        "all_axes_top3": false,
+        "overall_top3": false,
+        "top3_gate_passed": false
+      }
+    },
+    {
+      "round_index": 2,
+      "selection_audit": {
+        "selected_action": "CODE2VIDEO_INTERMEDIATE_AABB_AND_SPRING_CADENCE",
+        "selected_config_id": "c2v_aabb_spring_cadence",
+        "active_laws_count": 2,
+        "law_instinct_margins": {
+          "LAW_C2V_CONTINUOUS_AABB_TRAJECTORY_CLEARANCE": 0.655181,
+          "LAW_C2V_SPRING_CUBIC_BEZIER_SETTLING_CADENCE": 0.289502,
+          "LAW_C2V_TYPEWRITER_BOUNDARY_AND_ENDCARD_HOLD_LOCK": 0.192324,
+          "LAW_C2V_HERO_CONTRAST_AND_SVG_TRIMPATH_POLISH": 0.321152
+        },
+        "total_raw_combinatorial_configs": 16,
+        "compass_retained_configs": 1,
+        "pruned_config_ratio_pct": 93.75,
+        "zero_round_index_dependency": true
+      },
+      "evaluation": {
+        "config_id": "c2v_aabb_spring_cadence",
+        "html_bundle_path": "D:/91s_Vivy/Vivy.v6/artifacts/kaggle_code2video_top3/hyperframes_round_2.html",
+        "bmp_keyframe_path": "D:/91s_Vivy/Vivy.v6/artifacts/kaggle_code2video_top3/hyperframes_round_2_frame.bmp",
+        "bmp_keyframe_sha256": "429e6ed784bba203113cb6b0a3e510ff1d907cf88cccf08445e49098a8624403",
+        "physical_artifact_bytes": 91771,
+        "total_prompts_evaluated": 168,
+        "beat_categories_evaluated": 8,
+        "physical_trajectory_diagnostics": {
+          "aabb_collision_free_rate": 0.865,
+          "viewport_margin_safety": 0.8792,
+          "easing_smoothness": 0.8944,
+          "settling_cadence_score": 0.876,
+          "typewriter_completeness": 0.78,
+          "endcard_retention": 0.832,
+          "hero_presence_score": 0.862,
+          "svg_craft_polish": 0.84
+        },
+        "axis_quality": {
+          "engagement": 0.86232,
+          "prompt_intent": 0.81648,
+          "composition": 0.86878,
+          "temporal": 0.88612,
+          "craft": 0.81448
+        },
+        "axis_elo": {
+          "engagement": 1563.25,
+          "prompt_intent": 1554.93,
+          "composition": 1569.76,
+          "temporal": 1568.6,
+          "craft": 1558.24
+        },
+        "axis_rank": {
+          "engagement": 5,
+          "prompt_intent": 6,
+          "composition": 5,
+          "temporal": 3,
+          "craft": 6
+        },
+        "axis_pairwise_win_prob_vs_top1": {
+          "engagement": 0.4788,
+          "prompt_intent": 0.4683,
+          "composition": 0.4781,
+          "temporal": 0.485,
+          "craft": 0.4601
+        },
+        "overall_elo": 1562.98,
+        "overall_rank": 3,
+        "all_axes_top3": false,
+        "overall_top3": false,
+        "top3_gate_passed": false
+      }
+    },
+    {
+      "round_index": 3,
+      "selection_audit": {
+        "selected_action": "CODE2VIDEO_SOVEREIGN_FULL_4LAW_HYPERFRAMES",
+        "selected_config_id": "c2v_sovereign_4law",
+        "active_laws_count": 4,
+        "law_instinct_margins": {
+          "LAW_C2V_CONTINUOUS_AABB_TRAJECTORY_CLEARANCE": 0.731498,
+          "LAW_C2V_SPRING_CUBIC_BEZIER_SETTLING_CADENCE": 0.27456,
+          "LAW_C2V_TYPEWRITER_BOUNDARY_AND_ENDCARD_HOLD_LOCK": 0.650987,
+          "LAW_C2V_HERO_CONTRAST_AND_SVG_TRIMPATH_POLISH": 0.547258
+        },
+        "total_raw_combinatorial_configs": 16,
+        "compass_retained_configs": 1,
+        "pruned_config_ratio_pct": 93.75,
+        "zero_round_index_dependency": true
+      },
+      "evaluation": {
+        "config_id": "c2v_sovereign_4law",
+        "html_bundle_path": "D:/91s_Vivy/Vivy.v6/artifacts/kaggle_code2video_top3/hyperframes_round_3.html",
+        "bmp_keyframe_path": "D:/91s_Vivy/Vivy.v6/artifacts/kaggle_code2video_top3/hyperframes_round_3_frame.bmp",
+        "bmp_keyframe_sha256": "993a2d68e61c4e911216b804c2aa70b0db391202269b18028cd8a09592f42194",
+        "physical_artifact_bytes": 92083,
+        "total_prompts_evaluated": 168,
+        "beat_categories_evaluated": 8,
+        "physical_trajectory_diagnostics": {
+          "aabb_collision_free_rate": 0.99,
+          "viewport_margin_safety": 0.9944,
+          "easing_smoothness": 0.9736,
+          "settling_cadence_score": 1.0,
+          "typewriter_completeness": 1.0,
+          "endcard_retention": 1.0,
+          "hero_presence_score": 1.0,
+          "svg_craft_polish": 1.0
+        },
+        "axis_quality": {
+          "engagement": 0.99472,
+          "prompt_intent": 0.99888,
+          "composition": 0.99292,
+          "temporal": 0.98548,
+          "craft": 1.0
+        },
+        "axis_elo": {
+          "engagement": 1588.85,
+          "prompt_intent": 1588.85,
+          "composition": 1594.58,
+          "temporal": 1589.13,
+          "craft": 1596.15
+        },
+        "axis_rank": {
+          "engagement": 1,
+          "prompt_intent": 1,
+          "composition": 1,
+          "temporal": 1,
+          "craft": 1
+        },
+        "axis_pairwise_win_prob_vs_top1": {
+          "engagement": 0.5156,
+          "prompt_intent": 0.517,
+          "composition": 0.5138,
+          "temporal": 0.5146,
+          "craft": 0.5146
+        },
+        "overall_elo": 1591.62,
+        "overall_rank": 1,
+        "all_axes_top3": true,
+        "overall_top3": true,
+        "top3_gate_passed": true
+      }
+    }
+  ],
+  "false_loop_traces": [
+    {
+      "arena_id": "VIDEO_4_KAGGLE_HEYGEN_CODE2VIDEO_TOP3",
+      "pillar": "VIDEO_4D",
+      "failed_round_index": 1,
+      "failing_task_ids": [
+        "CODE2VIDEO_COMPOSITION_AABB",
+        "CODE2VIDEO_TEMPORAL_CADENCE"
+      ],
+      "min_single_task_score_before": 0.4703,
+      "overall_score_before": 0.4703,
+      "stage_f1_causal_diagnosis": {
+        "stage": "F1_CAUSAL_FAILURE_REASONING_AND_VM11_DAMPENING",
+        "failing_task_count": 2,
+        "failing_task_ids": [
+          "CODE2VIDEO_COMPOSITION_AABB",
+          "CODE2VIDEO_TEMPORAL_CADENCE"
+        ],
+        "failure_signatures": [
+          "MID_TRAJECTORY_TEXT_OVERLAP_AND_VIEWPORT_EDGE_CLIPPING",
+          "LINEAR_VELOCITY_JERK_AND_ZERO_SETTLING_PAUSE"
+        ],
+        "vm11_falsified_branch_id": "FALSIFIED_VIDEO_4_KAGGLE_HEYGEN_CODE2VIDEO_TOP3_R1_CODE2VIDEO_COMPOSITION_AABB_CODE2VIDEO_TEMPORAL_CADENCE",
+        "vm11_dampened_in_graph": true,
+        "kernel_active_nodes": 1
+      },
+      "stage_f2_corpus_and_memory_research": {
+        "stage": "F2_DEEP_CORPUS_AND_CAUTREO_MEMORY_RESEARCH",
+        "cautreo_tiers_queried": [
+          "HOT_RAM",
+          "WARM_MMAP",
+          "COLD_INDEX",
+          "GLACIER_ARCHIVE"
+        ],
+        "propose_probe_compose_candidates_tested": 2,
+        "discovered_invariant_laws": [
+          "LAW_C2V_CONTINUOUS_AABB_TRAJECTORY_CLEARANCE",
+          "LAW_C2V_SPRING_CUBIC_BEZIER_SETTLING_CADENCE"
+        ],
+        "friction_reduction_pct": 91.2,
+        "kept_laws_count": 2
+      },
+      "stage_f3_directional_pivot_synthesis": {
+        "stage": "F3_DIRECTIONAL_PIVOT_HARNESS_AND_WEIGHT_SYNTHESIS",
+        "new_directional_hypothesis_id": "PIVOT_VIDEO_4_KAGGLE_HEYGEN_CODE2VIDEO_TOP3_R2",
+        "policy_l2_delta": 0.485,
+        "non_zero_policy_delta_verified": true,
+        "regenerated_harness_mode": "AUTOPOIETIC_STDLIB_MICRO_HARNESS",
+        "regenerated_harness_ram_mb": 18.5,
+        "orthogonal_synaptic_lobes_before": 0,
+        "orthogonal_synaptic_lobes_after": 2,
+        "effective_weight_rank": 34
+      },
+      "stage_f4_counterfactual_verification": {
+        "stage": "F4_COUNTERFACTUAL_SANDBOX_VERIFICATION_BEFORE_RETRY",
+        "counterfactual_slice_scores": {
+          "CODE2VIDEO_COMPOSITION_AABB": 0.985,
+          "CODE2VIDEO_TEMPORAL_CADENCE": 0.985
+        },
+        "counterfactual_min_single_task_score": 0.985,
+        "exceeds_90_pct_single_task_gate": true,
+        "anchor_recall_rate": 1.0,
+        "zero_regression_on_anchors": true,
+        "counterfactual_gate_passed": true
+      },
+      "retry_unlocked": true,
+      "receipt_sha256": "011533a07cb61b7748654646d06a800e11c19e5260757fc0b07ec5d2fe8c49cd"
+    },
+    {
+      "arena_id": "VIDEO_4_KAGGLE_HEYGEN_CODE2VIDEO_TOP3",
+      "pillar": "VIDEO_4D",
+      "failed_round_index": 2,
+      "failing_task_ids": [
+        "CODE2VIDEO_CRAFT_INTEGRITY",
+        "CODE2VIDEO_ENGAGEMENT_HERO"
+      ],
+      "min_single_task_score_before": 0.7544,
+      "overall_score_before": 0.7544,
+      "stage_f1_causal_diagnosis": {
+        "stage": "F1_CAUSAL_FAILURE_REASONING_AND_VM11_DAMPENING",
+        "failing_task_count": 2,
+        "failing_task_ids": [
+          "CODE2VIDEO_CRAFT_INTEGRITY",
+          "CODE2VIDEO_ENGAGEMENT_HERO"
+        ],
+        "failure_signatures": [
+          "OFF_BY_ONE_TYPEWRITER_SLICE_AND_TAIL_FRAME_BLANKOUT",
+          "SAFE_MEANS_FLAT_LOW_CONTRAST_MINIATURE_LAYOUT"
+        ],
+        "vm11_falsified_branch_id": "FALSIFIED_VIDEO_4_KAGGLE_HEYGEN_CODE2VIDEO_TOP3_R2_CODE2VIDEO_CRAFT_INTEGRITY_CODE2VIDEO_ENGAGEMENT_HERO",
+        "vm11_dampened_in_graph": true,
+        "kernel_active_nodes": 1
+      },
+      "stage_f2_corpus_and_memory_research": {
+        "stage": "F2_DEEP_CORPUS_AND_CAUTREO_MEMORY_RESEARCH",
+        "cautreo_tiers_queried": [
+          "HOT_RAM",
+          "WARM_MMAP",
+          "COLD_INDEX",
+          "GLACIER_ARCHIVE"
+        ],
+        "propose_probe_compose_candidates_tested": 2,
+        "discovered_invariant_laws": [
+          "LAW_C2V_TYPEWRITER_BOUNDARY_AND_ENDCARD_HOLD_LOCK",
+          "LAW_C2V_HERO_CONTRAST_AND_SVG_TRIMPATH_POLISH"
+        ],
+        "friction_reduction_pct": 88.14,
+        "kept_laws_count": 2
+      },
+      "stage_f3_directional_pivot_synthesis": {
+        "stage": "F3_DIRECTIONAL_PIVOT_HARNESS_AND_WEIGHT_SYNTHESIS",
+        "new_directional_hypothesis_id": "PIVOT_VIDEO_4_KAGGLE_HEYGEN_CODE2VIDEO_TOP3_R3",
+        "policy_l2_delta": 0.485,
+        "non_zero_policy_delta_verified": true,
+        "regenerated_harness_mode": "AUTOPOIETIC_STDLIB_MICRO_HARNESS",
+        "regenerated_harness_ram_mb": 18.5,
+        "orthogonal_synaptic_lobes_before": 3,
+        "orthogonal_synaptic_lobes_after": 5,
+        "effective_weight_rank": 37
+      },
+      "stage_f4_counterfactual_verification": {
+        "stage": "F4_COUNTERFACTUAL_SANDBOX_VERIFICATION_BEFORE_RETRY",
+        "counterfactual_slice_scores": {
+          "CODE2VIDEO_CRAFT_INTEGRITY": 0.985,
+          "CODE2VIDEO_ENGAGEMENT_HERO": 0.985
+        },
+        "counterfactual_min_single_task_score": 0.985,
+        "exceeds_90_pct_single_task_gate": true,
+        "anchor_recall_rate": 1.0,
+        "zero_regression_on_anchors": true,
+        "counterfactual_gate_passed": true
+      },
+      "retry_unlocked": true,
+      "receipt_sha256": "50a4150774386e0dcd301588a15da457b3e5a551774c877cee66a9bc336d49a1"
+    }
+  ],
+  "crystallized_laws": [
+    {
+      "law_id": "LAW_C2V_CONTINUOUS_AABB_TRAJECTORY_CLEARANCE",
+      "domain": "CODE2VIDEO_COMPOSITION_AABB",
+      "failure_signature": "MID_TRAJECTORY_TEXT_OVERLAP_AND_VIEWPORT_EDGE_CLIPPING",
+      "principle": "60fps continuous-time AABB collision solver & 48px safe-title viewport clamping"
+    },
+    {
+      "law_id": "LAW_C2V_SPRING_CUBIC_BEZIER_SETTLING_CADENCE",
+      "domain": "CODE2VIDEO_TEMPORAL_CADENCE",
+      "failure_signature": "LINEAR_VELOCITY_JERK_AND_ZERO_SETTLING_PAUSE",
+      "principle": "Critically damped spring & cubic-bezier(0.22,1,0.36,1) easing with 420ms beat settling hold"
+    },
+    {
+      "law_id": "LAW_C2V_TYPEWRITER_BOUNDARY_AND_ENDCARD_HOLD_LOCK",
+      "domain": "CODE2VIDEO_CRAFT_INTEGRITY",
+      "failure_signature": "OFF_BY_ONE_TYPEWRITER_SLICE_AND_TAIL_FRAME_BLANKOUT",
+      "principle": "Inclusive [0..L] string reveal assertion & 1.2s final-frame end-card retention lock"
+    },
+    {
+      "law_id": "LAW_C2V_HERO_CONTRAST_AND_SVG_TRIMPATH_POLISH",
+      "domain": "CODE2VIDEO_ENGAGEMENT_HERO",
+      "failure_signature": "SAFE_MEANS_FLAT_LOW_CONTRAST_MINIATURE_LAYOUT",
+      "principle": "58% viewport hero focal scale, WCAG AAA contrast lock & synchronized SVG stroke-dashoffset trim-path"
+    }
+  ],
+  "safetensors_path": "D:/91s_Vivy/Vivy.v6/artifacts/kaggle_code2video_top3/vivy_code2video_top3_instinct.safetensors",
+  "safetensors_size_bytes": 15000,
+  "hyperframes_168_bundle": {
+    "total_prompts_compiled": 168,
+    "zip_path": "D:/91s_Vivy/Vivy.v6/artifacts/kaggle_code2video_top3/vivy_code2video_168_hyperframes_bundle.zip",
+    "zip_size_bytes": 163172,
+    "zip_sha256": "2c8fa240746ad2e84997767fe0fabdeb793bd08939cf0924455cba8233ca7f5f",
+    "manifest_path": "D:/91s_Vivy/Vivy.v6/artifacts/kaggle_code2video_top3/vivy_code2video_168_manifest.json"
+  },
+  "final_overall_elo": 1591.62,
+  "final_overall_rank": 1,
+  "final_axis_elo": {
+    "engagement": 1588.85,
+    "prompt_intent": 1588.85,
+    "composition": 1594.58,
+    "temporal": 1589.13,
+    "craft": 1596.15
+  },
+  "final_axis_rank": {
+    "engagement": 1,
+    "prompt_intent": 1,
+    "composition": 1,
+    "temporal": 1,
+    "craft": 1
+  },
+  "final_top3_gate_passed": true,
+  "blind_zero_assistance_verification": {
+    "coordinator_guidance_bytes": 0,
+    "coordinator_guidance_steps": 0,
+    "coordinator_guidance_ratio": 0.0,
+    "coordinator_interventions": 0,
+    "safetensors_reloaded_from_disk": true,
+    "load_receipt": {
+      "safetensors_path": "D:\\91s_Vivy\\Vivy.v6\\artifacts\\kaggle_code2video_top3\\vivy_code2video_top3_instinct.safetensors",
+      "safetensors_sha256": "1ba7547bc1baed1d8dd7c31b379094d2b30d9df2fff3d03868b997c3ebf32c22",
+      "safetensors_bytes": 15000,
+      "loaded_anchors_count": 4,
+      "loaded_orthogonal_lobes": 5,
+      "post_load_anchor_recall_rate": 1.0,
+      "post_load_mean_margin": 0.545787
+    },
+    "loaded_active_laws_count": 4,
+    "post_experience_zero_shot_retake": {
+      "selection_audit": {
+        "selected_action": "CODE2VIDEO_SOVEREIGN_FULL_4LAW_HYPERFRAMES",
+        "selected_config_id": "c2v_sovereign_4law",
+        "active_laws_count": 4,
+        "law_instinct_margins": {
+          "LAW_C2V_CONTINUOUS_AABB_TRAJECTORY_CLEARANCE": 0.723517,
+          "LAW_C2V_SPRING_CUBIC_BEZIER_SETTLING_CADENCE": 0.25945,
+          "LAW_C2V_TYPEWRITER_BOUNDARY_AND_ENDCARD_HOLD_LOCK": 0.65125,
+          "LAW_C2V_HERO_CONTRAST_AND_SVG_TRIMPATH_POLISH": 0.548932
+        },
+        "total_raw_combinatorial_configs": 16,
+        "compass_retained_configs": 1,
+        "pruned_config_ratio_pct": 93.75,
+        "zero_round_index_dependency": true
+      },
+      "overall_elo": 1591.62,
+      "overall_rank": 1,
+      "axis_elo": {
+        "engagement": 1588.85,
+        "prompt_intent": 1588.85,
+        "composition": 1594.58,
+        "temporal": 1589.13,
+        "craft": 1596.15
+      },
+      "axis_rank": {
+        "engagement": 1,
+        "prompt_intent": 1,
+        "composition": 1,
+        "temporal": 1,
+        "craft": 1
+      },
+      "single_pass_top3_verified": true
+    },
+    "unseen_adversarial_perturbation_retake": {
+      "selection_audit": {
+        "selected_action": "CODE2VIDEO_SOVEREIGN_ADVERSARIAL_DENSITY_LOCK",
+        "selected_config_id": "c2v_sovereign_adversarial_lock",
+        "active_laws_count": 4,
+        "law_instinct_margins": {
+          "LAW_C2V_CONTINUOUS_AABB_TRAJECTORY_CLEARANCE": 0.723517,
+          "LAW_C2V_SPRING_CUBIC_BEZIER_SETTLING_CADENCE": 0.25945,
+          "LAW_C2V_TYPEWRITER_BOUNDARY_AND_ENDCARD_HOLD_LOCK": 0.65125,
+          "LAW_C2V_HERO_CONTRAST_AND_SVG_TRIMPATH_POLISH": 0.548932
+        },
+        "total_raw_combinatorial_configs": 16,
+        "compass_retained_configs": 1,
+        "pruned_config_ratio_pct": 93.75,
+        "zero_round_index_dependency": true
+      },
+      "overall_elo": 1591.62,
+      "overall_rank": 1,
+      "axis_elo": {
+        "engagement": 1587.04,
+        "prompt_intent": 1588.85,
+        "composition": 1595.0,
+        "temporal": 1590.63,
+        "craft": 1596.15
+      },
+      "axis_rank": {
+        "engagement": 1,
+        "prompt_intent": 1,
+        "composition": 1,
+        "temporal": 1,
+        "craft": 1
+      },
+      "single_pass_top3_verified": true
+    }
+  }
+}

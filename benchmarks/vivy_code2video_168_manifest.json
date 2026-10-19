@@ -1,0 +1,1365 @@
+{
+  "schema": "vivy.v6.code2video_168_hyperframes_manifest.v1",
+  "benchmark_url": "https://www.kaggle.com/benchmarks/heygen/code2video",
+  "config_id": "c2v_sovereign_4law",
+  "total_prompts_compiled": 168,
+  "beat_counts": {
+    "Key feature": 61,
+    "Product intro": 29,
+    "Hook": 19,
+    "Benefits": 18,
+    "Call to action": 15,
+    "Brand outro": 13,
+    "Problem": 7,
+    "Social proof": 6
+  },
+  "zip_path": "D:/91s_Vivy/Vivy.v6/artifacts/kaggle_code2video_top3/vivy_code2video_168_hyperframes_bundle.zip",
+  "zip_size_bytes": 163172,
+  "zip_sha256": "2c8fa240746ad2e84997767fe0fabdeb793bd08939cf0924455cba8233ca7f5f",
+  "entries": [
+    {
+      "prompt_index": 1,
+      "brief_id": "c2v_001_key_feature_01",
+      "beat_category": "Key feature",
+      "archive_path": "hyperframes_168/c2v_001_key_feature_01.html",
+      "bytes": 1469,
+      "sha256": "c50b25b5d91ee83012d91f4c4767187904d20261b8d2c2e2ef93ed78ef72a8a1"
+    },
+    {
+      "prompt_index": 2,
+      "brief_id": "c2v_002_key_feature_02",
+      "beat_category": "Key feature",
+      "archive_path": "hyperframes_168/c2v_002_key_feature_02.html",
+      "bytes": 1469,
+      "sha256": "1c094823562fc1f2bbcfe5222c1c5cbb6dff93f319474a275b9625eb7ceadebf"
+    },
+    {
+      "prompt_index": 3,
+      "brief_id": "c2v_003_key_feature_03",
+      "beat_category": "Key feature",
+      "archive_path": "hyperframes_168/c2v_003_key_feature_03.html",
+      "bytes": 1469,
+      "sha256": "2adfcd707cc1e3730bcb9d96586fac9ed8da76433860df252d4fdb432c6dc043"
+    },
+    {
+      "prompt_index": 4,
+      "brief_id": "c2v_004_key_feature_04",
+      "beat_category": "Key feature",
+      "archive_path": "hyperframes_168/c2v_004_key_feature_04.html",
+      "bytes": 1469,
+      "sha256": "574d1e24cf4cc85b4bf6879db0895791a89759a80bb6415745fa1313701adeb0"
+    },
+    {
+      "prompt_index": 5,
+      "brief_id": "c2v_005_key_feature_05",
+      "beat_category": "Key feature",
+      "archive_path": "hyperframes_168/c2v_005_key_feature_05.html",
+      "bytes": 1469,
+      "sha256": "a718ddd73ae3544b03a67a76e79fa20c7856e2bd363de49bbc6b8cb3f22acf18"
+    },
+    {
+      "prompt_index": 6,
+      "brief_id": "c2v_006_key_feature_06",
+      "beat_category": "Key feature",
+      "archive_path": "hyperframes_168/c2v_006_key_feature_06.html",
+      "bytes": 1469,
+      "sha256": "87ba70cce26e21988e9771da41d4f9d42401365b5c80aca3ef8b1ea5d6270367"
+    },
+    {
+      "prompt_index": 7,
+      "brief_id": "c2v_007_key_feature_07",
+      "beat_category": "Key feature",
+      "archive_path": "hyperframes_168/c2v_007_key_feature_07.html",
+      "bytes": 1469,
+      "sha256": "748aea65d37572c5c4efd8c3a13e062accaf18ca2694edba311ddaa6c0924ec2"
+    },
+    {
+      "prompt_index": 8,
+      "brief_id": "c2v_008_key_feature_08",
+      "beat_category": "Key feature",
+      "archive_path": "hyperframes_168/c2v_008_key_feature_08.html",
+      "bytes": 1469,
+      "sha256": "e02628e1138fcf24d68ee94d0781c4346f8cf20c91c68ac11676b6837a97c777"
+    },
+    {
+      "prompt_index": 9,
+      "brief_id": "c2v_009_key_feature_09",
+      "beat_category": "Key feature",
+      "archive_path": "hyperframes_168/c2v_009_key_feature_09.html",
+      "bytes": 1469,
+      "sha256": "c30bcb8fde4655a64354784acd169d0dc17b7fc3b5fb55f0d380cf9f0bf5deaa"
+    },
+    {
+      "prompt_index": 10,
+      "brief_id": "c2v_010_key_feature_10",
+      "beat_category": "Key feature",
+      "archive_path": "hyperframes_168/c2v_010_key_feature_10.html",
+      "bytes": 1471,
+      "sha256": "a287f460fa91ff807b4e45faacaa6861710d0bd344302d84cc57a77e97e8868f"
+    },
+    {
+      "prompt_index": 11,
+      "brief_id": "c2v_011_key_feature_11",
+      "beat_category": "Key feature",
+      "archive_path": "hyperframes_168/c2v_011_key_feature_11.html",
+      "bytes": 1471,
+      "sha256": "7d065791cfa5d50d150f3658614e4052e64e6bda9cab2c42aeb28599b89a529c"
+    },
+    {
+      "prompt_index": 12,
+      "brief_id": "c2v_012_key_feature_12",
+      "beat_category": "Key feature",
+      "archive_path": "hyperframes_168/c2v_012_key_feature_12.html",
+      "bytes": 1471,
+      "sha256": "f244e623d2c22960249286dbe24cad41ca81e553e065b8cd6464217f0b0497bd"
+    },
+    {
+      "prompt_index": 13,
+      "brief_id": "c2v_013_key_feature_13",
+      "beat_category": "Key feature",
+      "archive_path": "hyperframes_168/c2v_013_key_feature_13.html",
+      "bytes": 1471,
+      "sha256": "56cbfe3e207e18593a16f0ba4221ef6ffc77b85b60ce15e3e602de4663018767"
+    },
+    {
+      "prompt_index": 14,
+      "brief_id": "c2v_014_key_feature_14",
+      "beat_category": "Key feature",
+      "archive_path": "hyperframes_168/c2v_014_key_feature_14.html",
+      "bytes": 1471,
+      "sha256": "688563beb363651bd88085387c24095b5cf9d1df3bcef8906d45bc799765c107"
+    },
+    {
+      "prompt_index": 15,
+      "brief_id": "c2v_015_key_feature_15",
+      "beat_category": "Key feature",
+      "archive_path": "hyperframes_168/c2v_015_key_feature_15.html",
+      "bytes": 1471,
+      "sha256": "c6fd96dd2710fbef7ce31c1956333548d4e921f91b05c480c40fc711d4a20535"
+    },
+    {
+      "prompt_index": 16,
+      "brief_id": "c2v_016_key_feature_16",
+      "beat_category": "Key feature",
+      "archive_path": "hyperframes_168/c2v_016_key_feature_16.html",
+      "bytes": 1471,
+      "sha256": "f9e86929e2e22029a9c26a0d2f495284c5448690bb93cc0068bf054162068510"
+    },
+    {
+      "prompt_index": 17,
+      "brief_id": "c2v_017_key_feature_17",
+      "beat_category": "Key feature",
+      "archive_path": "hyperframes_168/c2v_017_key_feature_17.html",
+      "bytes": 1471,
+      "sha256": "d2711cdb3b4f7a350b3ae9682c4d29b3c4fdade650b678dd2d205efbccfe090e"
+    },
+    {
+      "prompt_index": 18,
+      "brief_id": "c2v_018_key_feature_18",
+      "beat_category": "Key feature",
+      "archive_path": "hyperframes_168/c2v_018_key_feature_18.html",
+      "bytes": 1471,
+      "sha256": "73a7319b9725594262d202b160e58093dfe14f228c7cf6fb34522132ce1efa31"
+    },
+    {
+      "prompt_index": 19,
+      "brief_id": "c2v_019_key_feature_19",
+      "beat_category": "Key feature",
+      "archive_path": "hyperframes_168/c2v_019_key_feature_19.html",
+      "bytes": 1471,
+      "sha256": "9c009dc04a01a09efbf781156817c4e9da71d2706f28d0626e1b9f4d7cf5a49c"
+    },
+    {
+      "prompt_index": 20,
+      "brief_id": "c2v_020_key_feature_20",
+      "beat_category": "Key feature",
+      "archive_path": "hyperframes_168/c2v_020_key_feature_20.html",
+      "bytes": 1471,
+      "sha256": "c7816e84f31f48f953ba88f0ddf94660f0d5e886e9879e676fd330054888b48e"
+    },
+    {
+      "prompt_index": 21,
+      "brief_id": "c2v_021_key_feature_21",
+      "beat_category": "Key feature",
+      "archive_path": "hyperframes_168/c2v_021_key_feature_21.html",
+      "bytes": 1471,
+      "sha256": "08f69293645dacd702323e02afa59649ca0d8ab9c6bf5c12adbc74ea4ef94363"
+    },
+    {
+      "prompt_index": 22,
+      "brief_id": "c2v_022_key_feature_22",
+      "beat_category": "Key feature",
+      "archive_path": "hyperframes_168/c2v_022_key_feature_22.html",
+      "bytes": 1471,
+      "sha256": "a14c7400f43638516b21d9816fe994903820b60e8698e5f4386bd8612fc3f13a"
+    },
+    {
+      "prompt_index": 23,
+      "brief_id": "c2v_023_key_feature_23",
+      "beat_category": "Key feature",
+      "archive_path": "hyperframes_168/c2v_023_key_feature_23.html",
+      "bytes": 1471,
+      "sha256": "1cbfc45bef2f098217921d56dd3461b06ad60a4dd25a4895d92cfd0669abcb45"
+    },
+    {
+      "prompt_index": 24,
+      "brief_id": "c2v_024_key_feature_24",
+      "beat_category": "Key feature",
+      "archive_path": "hyperframes_168/c2v_024_key_feature_24.html",
+      "bytes": 1471,
+      "sha256": "1f53a537f7924de29dc52d21e3c5b1f0a05c712e10379191722ca40d671a30ab"
+    },
+    {
+      "prompt_index": 25,
+      "brief_id": "c2v_025_key_feature_25",
+      "beat_category": "Key feature",
+      "archive_path": "hyperframes_168/c2v_025_key_feature_25.html",
+      "bytes": 1471,
+      "sha256": "465106a30e7e59afc25bb3c6d8872f41bb089acd194bd97a831d5b520f9d5b69"
+    },
+    {
+      "prompt_index": 26,
+      "brief_id": "c2v_026_key_feature_26",
+      "beat_category": "Key feature",
+      "archive_path": "hyperframes_168/c2v_026_key_feature_26.html",
+      "bytes": 1471,
+      "sha256": "276301110d06ab0776c56090cfe6177ece531c2de552bf885f762097c31f0bfa"
+    },
+    {
+      "prompt_index": 27,
+      "brief_id": "c2v_027_key_feature_27",
+      "beat_category": "Key feature",
+      "archive_path": "hyperframes_168/c2v_027_key_feature_27.html",
+      "bytes": 1471,
+      "sha256": "539d608c272db841de481d11a1597513872fd18ae36073165ef7064dbfb7e015"
+    },
+    {
+      "prompt_index": 28,
+      "brief_id": "c2v_028_key_feature_28",
+      "beat_category": "Key feature",
+      "archive_path": "hyperframes_168/c2v_028_key_feature_28.html",
+      "bytes": 1471,
+      "sha256": "c5fa936359544c66f9d3ffdc9e8ff14f78909032a8b14becd1f8c81a40ce39a9"
+    },
+    {
+      "prompt_index": 29,
+      "brief_id": "c2v_029_key_feature_29",
+      "beat_category": "Key feature",
+      "archive_path": "hyperframes_168/c2v_029_key_feature_29.html",
+      "bytes": 1471,
+      "sha256": "528fa3198222b46503d93bcdc65e8c9593b37637adaa3c082b7ffbee1fd1b256"
+    },
+    {
+      "prompt_index": 30,
+      "brief_id": "c2v_030_key_feature_30",
+      "beat_category": "Key feature",
+      "archive_path": "hyperframes_168/c2v_030_key_feature_30.html",
+      "bytes": 1471,
+      "sha256": "f7e6e729a5f56132493073ddef944e8599ad229375fd620c065186a9cc6bd057"
+    },
+    {
+      "prompt_index": 31,
+      "brief_id": "c2v_031_key_feature_31",
+      "beat_category": "Key feature",
+      "archive_path": "hyperframes_168/c2v_031_key_feature_31.html",
+      "bytes": 1471,
+      "sha256": "6bd4da1e1c72bd27a6d98fc0fad638c92c5e423c719e9ec0e77b304638298dd3"
+    },
+    {
+      "prompt_index": 32,
+      "brief_id": "c2v_032_key_feature_32",
+      "beat_category": "Key feature",
+      "archive_path": "hyperframes_168/c2v_032_key_feature_32.html",
+      "bytes": 1471,
+      "sha256": "b094570dbaadf153db3dba919f52ae5f8f198c35abd181961e43ea713ed99fed"
+    },
+    {
+      "prompt_index": 33,
+      "brief_id": "c2v_033_key_feature_33",
+      "beat_category": "Key feature",
+      "archive_path": "hyperframes_168/c2v_033_key_feature_33.html",
+      "bytes": 1471,
+      "sha256": "94a1449a53fc1f4049dcf80da1e6c6178a0559faad9c3815ac5edb2b9bcd00d6"
+    },
+    {
+      "prompt_index": 34,
+      "brief_id": "c2v_034_key_feature_34",
+      "beat_category": "Key feature",
+      "archive_path": "hyperframes_168/c2v_034_key_feature_34.html",
+      "bytes": 1471,
+      "sha256": "c87323914dcd9eb44f4b01cde93018fe8ff59daa899c92287e8a1cbfcc92556e"
+    },
+    {
+      "prompt_index": 35,
+      "brief_id": "c2v_035_key_feature_35",
+      "beat_category": "Key feature",
+      "archive_path": "hyperframes_168/c2v_035_key_feature_35.html",
+      "bytes": 1471,
+      "sha256": "328610497bf56bdb9c815f8ef6e3c62ea9b7b3971d6bb663574c38b483081579"
+    },
+    {
+      "prompt_index": 36,
+      "brief_id": "c2v_036_key_feature_36",
+      "beat_category": "Key feature",
+      "archive_path": "hyperframes_168/c2v_036_key_feature_36.html",
+      "bytes": 1471,
+      "sha256": "d5254fda7a9ea15d299ac45dcebcf2ec8270180c1b2b444bbf6710ca4571c98d"
+    },
+    {
+      "prompt_index": 37,
+      "brief_id": "c2v_037_key_feature_37",
+      "beat_category": "Key feature",
+      "archive_path": "hyperframes_168/c2v_037_key_feature_37.html",
+      "bytes": 1471,
+      "sha256": "b30b22893976180708e3fe51d9083db60f8c426f588ece7bd142650e99705ec4"
+    },
+    {
+      "prompt_index": 38,
+      "brief_id": "c2v_038_key_feature_38",
+      "beat_category": "Key feature",
+      "archive_path": "hyperframes_168/c2v_038_key_feature_38.html",
+      "bytes": 1471,
+      "sha256": "4527bea4b2f4856383cb51f94c7269d14428abaa35e90f7f691df197a96ffe92"
+    },
+    {
+      "prompt_index": 39,
+      "brief_id": "c2v_039_key_feature_39",
+      "beat_category": "Key feature",
+      "archive_path": "hyperframes_168/c2v_039_key_feature_39.html",
+      "bytes": 1471,
+      "sha256": "c84409c23e721a470cc3e8c0e5089b586cd9af2b85b21369b357caddfc3d5bd3"
+    },
+    {
+      "prompt_index": 40,
+      "brief_id": "c2v_040_key_feature_40",
+      "beat_category": "Key feature",
+      "archive_path": "hyperframes_168/c2v_040_key_feature_40.html",
+      "bytes": 1471,
+      "sha256": "1f3f21856d243908fbe3607f833ebde16cf21f23b4bb9c6f872b8fe78a12bcd1"
+    },
+    {
+      "prompt_index": 41,
+      "brief_id": "c2v_041_key_feature_41",
+      "beat_category": "Key feature",
+      "archive_path": "hyperframes_168/c2v_041_key_feature_41.html",
+      "bytes": 1471,
+      "sha256": "ff9bae4045bae96af654550f149577fe85fd17ee78d11b95d7112ae6761beab8"
+    },
+    {
+      "prompt_index": 42,
+      "brief_id": "c2v_042_key_feature_42",
+      "beat_category": "Key feature",
+      "archive_path": "hyperframes_168/c2v_042_key_feature_42.html",
+      "bytes": 1471,
+      "sha256": "c508cf0c1b82dd5fabc78e0a6f115d6a5cb4fb9b2b1a10975a2aa0da4e581834"
+    },
+    {
+      "prompt_index": 43,
+      "brief_id": "c2v_043_key_feature_43",
+      "beat_category": "Key feature",
+      "archive_path": "hyperframes_168/c2v_043_key_feature_43.html",
+      "bytes": 1471,
+      "sha256": "1d4c3d37b5c4d7030a6bee4708d06324587190cdbf1a3136159d6fcd8ad36e84"
+    },
+    {
+      "prompt_index": 44,
+      "brief_id": "c2v_044_key_feature_44",
+      "beat_category": "Key feature",
+      "archive_path": "hyperframes_168/c2v_044_key_feature_44.html",
+      "bytes": 1471,
+      "sha256": "06ded30742a1cd105275396a456598877590159851e178c5e93081acf5584714"
+    },
+    {
+      "prompt_index": 45,
+      "brief_id": "c2v_045_key_feature_45",
+      "beat_category": "Key feature",
+      "archive_path": "hyperframes_168/c2v_045_key_feature_45.html",
+      "bytes": 1471,
+      "sha256": "c1fd6f580a230a3353edcb1219de5282389a0535b939f44020addd124dc3c1e7"
+    },
+    {
+      "prompt_index": 46,
+      "brief_id": "c2v_046_key_feature_46",
+      "beat_category": "Key feature",
+      "archive_path": "hyperframes_168/c2v_046_key_feature_46.html",
+      "bytes": 1471,
+      "sha256": "905e9133b19bed62d28fc6e2efb7605cdf98773754a60e3aeb9151419aba5ba4"
+    },
+    {
+      "prompt_index": 47,
+      "brief_id": "c2v_047_key_feature_47",
+      "beat_category": "Key feature",
+      "archive_path": "hyperframes_168/c2v_047_key_feature_47.html",
+      "bytes": 1471,
+      "sha256": "73a309b21eff747b5f0c0b7cfb5cec6a88121e14c8b0bbfb564e38411e123b84"
+    },
+    {
+      "prompt_index": 48,
+      "brief_id": "c2v_048_key_feature_48",
+      "beat_category": "Key feature",
+      "archive_path": "hyperframes_168/c2v_048_key_feature_48.html",
+      "bytes": 1471,
+      "sha256": "29c9fb2e9620c3e6bbb6c0a7f943a251a1d4ec752346a692d3dec3cf0cf22dd0"
+    },
+    {
+      "prompt_index": 49,
+      "brief_id": "c2v_049_key_feature_49",
+      "beat_category": "Key feature",
+      "archive_path": "hyperframes_168/c2v_049_key_feature_49.html",
+      "bytes": 1471,
+      "sha256": "f241a9b7fe9b7b9b115229821a1aa403b5794be1f1d3760fd29532575ad4ea73"
+    },
+    {
+      "prompt_index": 50,
+      "brief_id": "c2v_050_key_feature_50",
+      "beat_category": "Key feature",
+      "archive_path": "hyperframes_168/c2v_050_key_feature_50.html",
+      "bytes": 1471,
+      "sha256": "085493d3da90947c5dbac21f84adf92db93aef182d8952a143b1727042362d5e"
+    },
+    {
+      "prompt_index": 51,
+      "brief_id": "c2v_051_key_feature_51",
+      "beat_category": "Key feature",
+      "archive_path": "hyperframes_168/c2v_051_key_feature_51.html",
+      "bytes": 1471,
+      "sha256": "d46b40a0f23bf07e9f747060581244827923e68d1fe9b61c12c61f525c01a004"
+    },
+    {
+      "prompt_index": 52,
+      "brief_id": "c2v_052_key_feature_52",
+      "beat_category": "Key feature",
+      "archive_path": "hyperframes_168/c2v_052_key_feature_52.html",
+      "bytes": 1471,
+      "sha256": "d1e01057f0843b6a9a9a977d6720a2919fca5a85ee9f6205cab4f4081182eff3"
+    },
+    {
+      "prompt_index": 53,
+      "brief_id": "c2v_053_key_feature_53",
+      "beat_category": "Key feature",
+      "archive_path": "hyperframes_168/c2v_053_key_feature_53.html",
+      "bytes": 1471,
+      "sha256": "45c7ff347071ed39c037ed019f8996fe6924178213cd529ef8e2925cfd2be9ee"
+    },
+    {
+      "prompt_index": 54,
+      "brief_id": "c2v_054_key_feature_54",
+      "beat_category": "Key feature",
+      "archive_path": "hyperframes_168/c2v_054_key_feature_54.html",
+      "bytes": 1471,
+      "sha256": "50eb13b130a2a7a5175b016c75a05806866fefa40bbba067de88b55c44f590f9"
+    },
+    {
+      "prompt_index": 55,
+      "brief_id": "c2v_055_key_feature_55",
+      "beat_category": "Key feature",
+      "archive_path": "hyperframes_168/c2v_055_key_feature_55.html",
+      "bytes": 1471,
+      "sha256": "78888e323f500ec022dcb5fd449bdfbed59b21ecb65a5c208c5d95d74c28f5de"
+    },
+    {
+      "prompt_index": 56,
+      "brief_id": "c2v_056_key_feature_56",
+      "beat_category": "Key feature",
+      "archive_path": "hyperframes_168/c2v_056_key_feature_56.html",
+      "bytes": 1471,
+      "sha256": "c999404911dad8cbcc08fa24fe9ecf241ac863fe2963a0d5bcfa8e593482025d"
+    },
+    {
+      "prompt_index": 57,
+      "brief_id": "c2v_057_key_feature_57",
+      "beat_category": "Key feature",
+      "archive_path": "hyperframes_168/c2v_057_key_feature_57.html",
+      "bytes": 1471,
+      "sha256": "ce2f9b7acd5f375cf233cbbc5c85ffc84326693e7ea15f2a6e46af8a417313b1"
+    },
+    {
+      "prompt_index": 58,
+      "brief_id": "c2v_058_key_feature_58",
+      "beat_category": "Key feature",
+      "archive_path": "hyperframes_168/c2v_058_key_feature_58.html",
+      "bytes": 1471,
+      "sha256": "df386d54917ece8f42d304ea2a791c8c7262eb62c4648df455eab74e46a06e49"
+    },
+    {
+      "prompt_index": 59,
+      "brief_id": "c2v_059_key_feature_59",
+      "beat_category": "Key feature",
+      "archive_path": "hyperframes_168/c2v_059_key_feature_59.html",
+      "bytes": 1471,
+      "sha256": "b06de1eee6947dc64a8555e8e56f51097f6a00a3cfe045a4b4ca3f9bd526c161"
+    },
+    {
+      "prompt_index": 60,
+      "brief_id": "c2v_060_key_feature_60",
+      "beat_category": "Key feature",
+      "archive_path": "hyperframes_168/c2v_060_key_feature_60.html",
+      "bytes": 1471,
+      "sha256": "64b3f95a45ad324932dcdc41a525b86c43eaf8c2e4690f621dc30961a9d8914e"
+    },
+    {
+      "prompt_index": 61,
+      "brief_id": "c2v_061_key_feature_61",
+      "beat_category": "Key feature",
+      "archive_path": "hyperframes_168/c2v_061_key_feature_61.html",
+      "bytes": 1471,
+      "sha256": "18f018338f30425cf4f74104f00d90374dccdfe14b7a84afbcceb51679943f17"
+    },
+    {
+      "prompt_index": 62,
+      "brief_id": "c2v_062_product_intro_01",
+      "beat_category": "Product intro",
+      "archive_path": "hyperframes_168/c2v_062_product_intro_01.html",
+      "bytes": 1479,
+      "sha256": "c3a52980f2cbfac1cde3d4a35e6a9d808b2613cdb1a09844ec8409be42956e8e"
+    },
+    {
+      "prompt_index": 63,
+      "brief_id": "c2v_063_product_intro_02",
+      "beat_category": "Product intro",
+      "archive_path": "hyperframes_168/c2v_063_product_intro_02.html",
+      "bytes": 1479,
+      "sha256": "c0892ddfa08ddcfc6115c83f8569de5e1550ecef7e82c204ccb6945f2f4287ef"
+    },
+    {
+      "prompt_index": 64,
+      "brief_id": "c2v_064_product_intro_03",
+      "beat_category": "Product intro",
+      "archive_path": "hyperframes_168/c2v_064_product_intro_03.html",
+      "bytes": 1479,
+      "sha256": "af4c8382fa165ebf74880e79204b45a0b2f67ef94c06a86fd824c69a6c127222"
+    },
+    {
+      "prompt_index": 65,
+      "brief_id": "c2v_065_product_intro_04",
+      "beat_category": "Product intro",
+      "archive_path": "hyperframes_168/c2v_065_product_intro_04.html",
+      "bytes": 1479,
+      "sha256": "fa98286c56a1ba2b29323a4be5edd21ad99511e7265be913bc79d149f207b9bc"
+    },
+    {
+      "prompt_index": 66,
+      "brief_id": "c2v_066_product_intro_05",
+      "beat_category": "Product intro",
+      "archive_path": "hyperframes_168/c2v_066_product_intro_05.html",
+      "bytes": 1479,
+      "sha256": "4237d82c673516c5099b0c0c82b0c1efa18260c03d0fe18f8a53ebf8aabc1327"
+    },
+    {
+      "prompt_index": 67,
+      "brief_id": "c2v_067_product_intro_06",
+      "beat_category": "Product intro",
+      "archive_path": "hyperframes_168/c2v_067_product_intro_06.html",
+      "bytes": 1479,
+      "sha256": "0a458d0b971cbac89621d9bbf5d55a5241fb673c78520867b97ea7e54493c622"
+    },
+    {
+      "prompt_index": 68,
+      "brief_id": "c2v_068_product_intro_07",
+      "beat_category": "Product intro",
+      "archive_path": "hyperframes_168/c2v_068_product_intro_07.html",
+      "bytes": 1479,
+      "sha256": "ddfa4119aabc716bf88a04ea1e69a7ffbcb9d0bd500a6f1faa8a027e112267e6"
+    },
+    {
+      "prompt_index": 69,
+      "brief_id": "c2v_069_product_intro_08",
+      "beat_category": "Product intro",
+      "archive_path": "hyperframes_168/c2v_069_product_intro_08.html",
+      "bytes": 1479,
+      "sha256": "997f797af5388118f30194b720221eb838bcb3a3aff8157648c692aac8940bac"
+    },
+    {
+      "prompt_index": 70,
+      "brief_id": "c2v_070_product_intro_09",
+      "beat_category": "Product intro",
+      "archive_path": "hyperframes_168/c2v_070_product_intro_09.html",
+      "bytes": 1479,
+      "sha256": "8686b5ef11e9d5e7d387ec937be38a67a3645a83a52001940043e2b94a8db7fb"
+    },
+    {
+      "prompt_index": 71,
+      "brief_id": "c2v_071_product_intro_10",
+      "beat_category": "Product intro",
+      "archive_path": "hyperframes_168/c2v_071_product_intro_10.html",
+      "bytes": 1479,
+      "sha256": "15985a6630f07b6d27d8fab2f8806667857ec4e665e994ad83929b8625aaa0d6"
+    },
+    {
+      "prompt_index": 72,
+      "brief_id": "c2v_072_product_intro_11",
+      "beat_category": "Product intro",
+      "archive_path": "hyperframes_168/c2v_072_product_intro_11.html",
+      "bytes": 1479,
+      "sha256": "62c9cfb2c56a4b5212c8ecfd8bc8fc4f120181e33e3a1bab10ff656ac5345adf"
+    },
+    {
+      "prompt_index": 73,
+      "brief_id": "c2v_073_product_intro_12",
+      "beat_category": "Product intro",
+      "archive_path": "hyperframes_168/c2v_073_product_intro_12.html",
+      "bytes": 1479,
+      "sha256": "90d039a53223ff99e9b4d05d6d1ec6322c9b1313d5be83a74b5518a791a867cd"
+    },
+    {
+      "prompt_index": 74,
+      "brief_id": "c2v_074_product_intro_13",
+      "beat_category": "Product intro",
+      "archive_path": "hyperframes_168/c2v_074_product_intro_13.html",
+      "bytes": 1479,
+      "sha256": "66debd6ba872881af417279ed85feaf85fcdce01cd2397940f9c97e7b49e39d6"
+    },
+    {
+      "prompt_index": 75,
+      "brief_id": "c2v_075_product_intro_14",
+      "beat_category": "Product intro",
+      "archive_path": "hyperframes_168/c2v_075_product_intro_14.html",
+      "bytes": 1479,
+      "sha256": "f7e780600ca89428b76f07c036550b92f23a17db632773a9b13e41ff86067f38"
+    },
+    {
+      "prompt_index": 76,
+      "brief_id": "c2v_076_product_intro_15",
+      "beat_category": "Product intro",
+      "archive_path": "hyperframes_168/c2v_076_product_intro_15.html",
+      "bytes": 1479,
+      "sha256": "0ffc5def346138f00b070a9add93546953498f2ecfecbeafbb39208a6e063d0f"
+    },
+    {
+      "prompt_index": 77,
+      "brief_id": "c2v_077_product_intro_16",
+      "beat_category": "Product intro",
+      "archive_path": "hyperframes_168/c2v_077_product_intro_16.html",
+      "bytes": 1479,
+      "sha256": "f66b23d39b0a46b1b7b493d2ab88fb4428fee47fe391b6ef4ad37d35b94322ab"
+    },
+    {
+      "prompt_index": 78,
+      "brief_id": "c2v_078_product_intro_17",
+      "beat_category": "Product intro",
+      "archive_path": "hyperframes_168/c2v_078_product_intro_17.html",
+      "bytes": 1479,
+      "sha256": "caad7d06cec928c8f9794b515d277219a27e4fdc8837679cb63b0475aa4b34de"
+    },
+    {
+      "prompt_index": 79,
+      "brief_id": "c2v_079_product_intro_18",
+      "beat_category": "Product intro",
+      "archive_path": "hyperframes_168/c2v_079_product_intro_18.html",
+      "bytes": 1479,
+      "sha256": "27635fb3ae9d333564714703f80401b88d9b6739ba1e614a7b465b5f38523ff6"
+    },
+    {
+      "prompt_index": 80,
+      "brief_id": "c2v_080_product_intro_19",
+      "beat_category": "Product intro",
+      "archive_path": "hyperframes_168/c2v_080_product_intro_19.html",
+      "bytes": 1479,
+      "sha256": "1b5844e3ff77fe7bd30a4f6d3f680a6495ed095d4c79e750c9813beb8d78db91"
+    },
+    {
+      "prompt_index": 81,
+      "brief_id": "c2v_081_product_intro_20",
+      "beat_category": "Product intro",
+      "archive_path": "hyperframes_168/c2v_081_product_intro_20.html",
+      "bytes": 1479,
+      "sha256": "7d6cad3dcf58200a8d49a36e424191ce7360a6614e28790e1681361327f8ff30"
+    },
+    {
+      "prompt_index": 82,
+      "brief_id": "c2v_082_product_intro_21",
+      "beat_category": "Product intro",
+      "archive_path": "hyperframes_168/c2v_082_product_intro_21.html",
+      "bytes": 1479,
+      "sha256": "764e145aa3c1f768acbbcc97119902f08753edd1e3ece89bd9f4bd1fb69bf93b"
+    },
+    {
+      "prompt_index": 83,
+      "brief_id": "c2v_083_product_intro_22",
+      "beat_category": "Product intro",
+      "archive_path": "hyperframes_168/c2v_083_product_intro_22.html",
+      "bytes": 1479,
+      "sha256": "c7fcdb49382ccc980bc09d771778cb942214628d3c29b4f348c863979964f958"
+    },
+    {
+      "prompt_index": 84,
+      "brief_id": "c2v_084_product_intro_23",
+      "beat_category": "Product intro",
+      "archive_path": "hyperframes_168/c2v_084_product_intro_23.html",
+      "bytes": 1479,
+      "sha256": "8587ab077e7ee33cc152bff6e534d085ab4f683491169977b87ca39fe7378a3b"
+    },
+    {
+      "prompt_index": 85,
+      "brief_id": "c2v_085_product_intro_24",
+      "beat_category": "Product intro",
+      "archive_path": "hyperframes_168/c2v_085_product_intro_24.html",
+      "bytes": 1479,
+      "sha256": "227835cf7c5ebf6e3f06df865a4ecfe5aba04485a1e777b5b2c17eaa380cb498"
+    },
+    {
+      "prompt_index": 86,
+      "brief_id": "c2v_086_product_intro_25",
+      "beat_category": "Product intro",
+      "archive_path": "hyperframes_168/c2v_086_product_intro_25.html",
+      "bytes": 1479,
+      "sha256": "9466658b7f02f58c2ebe0c4c9f981a4f5df3597d761aea55fcc64702f82398a5"
+    },
+    {
+      "prompt_index": 87,
+      "brief_id": "c2v_087_product_intro_26",
+      "beat_category": "Product intro",
+      "archive_path": "hyperframes_168/c2v_087_product_intro_26.html",
+      "bytes": 1479,
+      "sha256": "570d13e5f1477315107ba88b64f0cbb1270d99d3e98f32b6d568888de76a49cd"
+    },
+    {
+      "prompt_index": 88,
+      "brief_id": "c2v_088_product_intro_27",
+      "beat_category": "Product intro",
+      "archive_path": "hyperframes_168/c2v_088_product_intro_27.html",
+      "bytes": 1479,
+      "sha256": "89dedd05a553d5393135d2969ced3e87452912dd059ac2fbf935fe1cabe9bbf1"
+    },
+    {
+      "prompt_index": 89,
+      "brief_id": "c2v_089_product_intro_28",
+      "beat_category": "Product intro",
+      "archive_path": "hyperframes_168/c2v_089_product_intro_28.html",
+      "bytes": 1479,
+      "sha256": "dadc280f4d76347c125bf8ea79d0c5b4c020d1f0609f906f126fd7797047c78e"
+    },
+    {
+      "prompt_index": 90,
+      "brief_id": "c2v_090_product_intro_29",
+      "beat_category": "Product intro",
+      "archive_path": "hyperframes_168/c2v_090_product_intro_29.html",
+      "bytes": 1479,
+      "sha256": "8ff087bdb2fb160148c16b801b52659c662e92d5cd434b8c282ea5c395f5ca4a"
+    },
+    {
+      "prompt_index": 91,
+      "brief_id": "c2v_091_hook_01",
+      "beat_category": "Hook",
+      "archive_path": "hyperframes_168/c2v_091_hook_01.html",
+      "bytes": 1443,
+      "sha256": "b4b8003ccc38b1d41f35eaf621b0aa9cdd06fe191ba7fe35c9e2322a767ec20d"
+    },
+    {
+      "prompt_index": 92,
+      "brief_id": "c2v_092_hook_02",
+      "beat_category": "Hook",
+      "archive_path": "hyperframes_168/c2v_092_hook_02.html",
+      "bytes": 1443,
+      "sha256": "223b31198d31be1a70509e84793ed260b9ee11e58ff599bddfb61d73599366df"
+    },
+    {
+      "prompt_index": 93,
+      "brief_id": "c2v_093_hook_03",
+      "beat_category": "Hook",
+      "archive_path": "hyperframes_168/c2v_093_hook_03.html",
+      "bytes": 1443,
+      "sha256": "84d5f4d6f90fe3dabbf7ebaad3064a91eb3a853115f28388498347e6b37b4d09"
+    },
+    {
+      "prompt_index": 94,
+      "brief_id": "c2v_094_hook_04",
+      "beat_category": "Hook",
+      "archive_path": "hyperframes_168/c2v_094_hook_04.html",
+      "bytes": 1443,
+      "sha256": "063d60430ad4e9a1540038d666497826793cd18295f8157867dbb346a02d9559"
+    },
+    {
+      "prompt_index": 95,
+      "brief_id": "c2v_095_hook_05",
+      "beat_category": "Hook",
+      "archive_path": "hyperframes_168/c2v_095_hook_05.html",
+      "bytes": 1443,
+      "sha256": "31dd0d77d7fa2e236f934cb8e5b921d4d9e75f7f190b861917e526f721808930"
+    },
+    {
+      "prompt_index": 96,
+      "brief_id": "c2v_096_hook_06",
+      "beat_category": "Hook",
+      "archive_path": "hyperframes_168/c2v_096_hook_06.html",
+      "bytes": 1443,
+      "sha256": "a3572daae0c69ec5a2e99a266c0d16f086680989f68868b182c73e648e6bcb4d"
+    },
+    {
+      "prompt_index": 97,
+      "brief_id": "c2v_097_hook_07",
+      "beat_category": "Hook",
+      "archive_path": "hyperframes_168/c2v_097_hook_07.html",
+      "bytes": 1443,
+      "sha256": "cad4a7d759306785bde0ebec27ffa5ce9ae5321b52b45775bb248780632d954e"
+    },
+    {
+      "prompt_index": 98,
+      "brief_id": "c2v_098_hook_08",
+      "beat_category": "Hook",
+      "archive_path": "hyperframes_168/c2v_098_hook_08.html",
+      "bytes": 1443,
+      "sha256": "efcd83937321ff585a281b8511ec0fbeaae864f9a51409e2b84999144c5d468f"
+    },
+    {
+      "prompt_index": 99,
+      "brief_id": "c2v_099_hook_09",
+      "beat_category": "Hook",
+      "archive_path": "hyperframes_168/c2v_099_hook_09.html",
+      "bytes": 1443,
+      "sha256": "5560b403ff08167ff69556f25308bb5a44efdebc1bbcf19f28e88b00a1b1b84a"
+    },
+    {
+      "prompt_index": 100,
+      "brief_id": "c2v_100_hook_10",
+      "beat_category": "Hook",
+      "archive_path": "hyperframes_168/c2v_100_hook_10.html",
+      "bytes": 1445,
+      "sha256": "4e82b40f30ff2a5345f63d92f2a7ec22a3809a6b47c74879e1207852ed6cc8cd"
+    },
+    {
+      "prompt_index": 101,
+      "brief_id": "c2v_101_hook_11",
+      "beat_category": "Hook",
+      "archive_path": "hyperframes_168/c2v_101_hook_11.html",
+      "bytes": 1445,
+      "sha256": "4e609201ea26029bdb0f64526baee6ea3de14d3356556496e5deb23f8601e291"
+    },
+    {
+      "prompt_index": 102,
+      "brief_id": "c2v_102_hook_12",
+      "beat_category": "Hook",
+      "archive_path": "hyperframes_168/c2v_102_hook_12.html",
+      "bytes": 1445,
+      "sha256": "ea4ac810e81e5d847e387634e73299817312cbd1b8ded34e4a21c5bece447189"
+    },
+    {
+      "prompt_index": 103,
+      "brief_id": "c2v_103_hook_13",
+      "beat_category": "Hook",
+      "archive_path": "hyperframes_168/c2v_103_hook_13.html",
+      "bytes": 1445,
+      "sha256": "050e3e43e2db444a5aa8710f5752b90c6f30e7f599ab84244d67f2cca619da59"
+    },
+    {
+      "prompt_index": 104,
+      "brief_id": "c2v_104_hook_14",
+      "beat_category": "Hook",
+      "archive_path": "hyperframes_168/c2v_104_hook_14.html",
+      "bytes": 1445,
+      "sha256": "7083cb157d348f7e0d125587de15dab296cb2fc969d0427cb31f0fe357588673"
+    },
+    {
+      "prompt_index": 105,
+      "brief_id": "c2v_105_hook_15",
+      "beat_category": "Hook",
+      "archive_path": "hyperframes_168/c2v_105_hook_15.html",
+      "bytes": 1445,
+      "sha256": "bb7e561ae37a683331f3ffa634e72f9912c138e9050b677cd37067cd18eca5f6"
+    },
+    {
+      "prompt_index": 106,
+      "brief_id": "c2v_106_hook_16",
+      "beat_category": "Hook",
+      "archive_path": "hyperframes_168/c2v_106_hook_16.html",
+      "bytes": 1445,
+      "sha256": "65009f5aa59a3f742c92a9b5aaad5fe313be7545c483b393af4c57b00457a44e"
+    },
+    {
+      "prompt_index": 107,
+      "brief_id": "c2v_107_hook_17",
+      "beat_category": "Hook",
+      "archive_path": "hyperframes_168/c2v_107_hook_17.html",
+      "bytes": 1445,
+      "sha256": "b0e02ab3f7e82b6b9e05428dcd644815bac7493283ddff290e7de611974f74a2"
+    },
+    {
+      "prompt_index": 108,
+      "brief_id": "c2v_108_hook_18",
+      "beat_category": "Hook",
+      "archive_path": "hyperframes_168/c2v_108_hook_18.html",
+      "bytes": 1445,
+      "sha256": "1825091e6289f9238d309758fc91f0dc0518092c58135168f80c864d5edb933b"
+    },
+    {
+      "prompt_index": 109,
+      "brief_id": "c2v_109_hook_19",
+      "beat_category": "Hook",
+      "archive_path": "hyperframes_168/c2v_109_hook_19.html",
+      "bytes": 1445,
+      "sha256": "24aeae7e1a3240a106c8ae7163a5ececa404dfb657caa1b3279b0332cbcc4dfe"
+    },
+    {
+      "prompt_index": 110,
+      "brief_id": "c2v_110_benefits_01",
+      "beat_category": "Benefits",
+      "archive_path": "hyperframes_168/c2v_110_benefits_01.html",
+      "bytes": 1461,
+      "sha256": "4f954afad5f46438d903104895e6b61992dd9bcaa835874a2540e480d80e8484"
+    },
+    {
+      "prompt_index": 111,
+      "brief_id": "c2v_111_benefits_02",
+      "beat_category": "Benefits",
+      "archive_path": "hyperframes_168/c2v_111_benefits_02.html",
+      "bytes": 1461,
+      "sha256": "7d140d7b7e46500bb3b21e0bd66a73d76ae63a07cf1c732f835773987397aef0"
+    },
+    {
+      "prompt_index": 112,
+      "brief_id": "c2v_112_benefits_03",
+      "beat_category": "Benefits",
+      "archive_path": "hyperframes_168/c2v_112_benefits_03.html",
+      "bytes": 1461,
+      "sha256": "bd60f3f4eb7563fc174edf0d9da08ffd50ffc3e651799c5f9ba2397019cb0b51"
+    },
+    {
+      "prompt_index": 113,
+      "brief_id": "c2v_113_benefits_04",
+      "beat_category": "Benefits",
+      "archive_path": "hyperframes_168/c2v_113_benefits_04.html",
+      "bytes": 1461,
+      "sha256": "7cb4b43d1d7cd392d2726b36ea9e76423ccb7ea81907a267ccfa612bf4f20d9b"
+    },
+    {
+      "prompt_index": 114,
+      "brief_id": "c2v_114_benefits_05",
+      "beat_category": "Benefits",
+      "archive_path": "hyperframes_168/c2v_114_benefits_05.html",
+      "bytes": 1461,
+      "sha256": "041dec22453b39fde44af397e462463dfa0507f76ba5eda0116e4180d1003c12"
+    },
+    {
+      "prompt_index": 115,
+      "brief_id": "c2v_115_benefits_06",
+      "beat_category": "Benefits",
+      "archive_path": "hyperframes_168/c2v_115_benefits_06.html",
+      "bytes": 1461,
+      "sha256": "cb11b8d87876ad44ac73d8d1bae7b873bf50c238d4515b66ff47f2bdeaccedfd"
+    },
+    {
+      "prompt_index": 116,
+      "brief_id": "c2v_116_benefits_07",
+      "beat_category": "Benefits",
+      "archive_path": "hyperframes_168/c2v_116_benefits_07.html",
+      "bytes": 1461,
+      "sha256": "66dd515a77cb9c2cae26a5d4e39bf4ef2711195524dc51e81ad92389922fb39b"
+    },
+    {
+      "prompt_index": 117,
+      "brief_id": "c2v_117_benefits_08",
+      "beat_category": "Benefits",
+      "archive_path": "hyperframes_168/c2v_117_benefits_08.html",
+      "bytes": 1461,
+      "sha256": "6c72eb52fea806ef28019fc7215ba8c7c00350e2525336aa90ea43be7733a584"
+    },
+    {
+      "prompt_index": 118,
+      "brief_id": "c2v_118_benefits_09",
+      "beat_category": "Benefits",
+      "archive_path": "hyperframes_168/c2v_118_benefits_09.html",
+      "bytes": 1461,
+      "sha256": "a6ad1ee350d0d29f72996fec7ed9799cbc2a8b7737b9a484648329493846a056"
+    },
+    {
+      "prompt_index": 119,
+      "brief_id": "c2v_119_benefits_10",
+      "beat_category": "Benefits",
+      "archive_path": "hyperframes_168/c2v_119_benefits_10.html",
+      "bytes": 1461,
+      "sha256": "88cf358c55ca6654587697709cc2ff23aad73ee0e2fab777ff4ea41fbf3825ca"
+    },
+    {
+      "prompt_index": 120,
+      "brief_id": "c2v_120_benefits_11",
+      "beat_category": "Benefits",
+      "archive_path": "hyperframes_168/c2v_120_benefits_11.html",
+      "bytes": 1461,
+      "sha256": "dfa621f89c4c4ace2841320f36efbccedf207c349e438058150bf3cb518ce9ab"
+    },
+    {
+      "prompt_index": 121,
+      "brief_id": "c2v_121_benefits_12",
+      "beat_category": "Benefits",
+      "archive_path": "hyperframes_168/c2v_121_benefits_12.html",
+      "bytes": 1461,
+      "sha256": "7de9abfc8a56df3fd29d6066598354b63250d3c74c7a0ddffd8aad1f3425f919"
+    },
+    {
+      "prompt_index": 122,
+      "brief_id": "c2v_122_benefits_13",
+      "beat_category": "Benefits",
+      "archive_path": "hyperframes_168/c2v_122_benefits_13.html",
+      "bytes": 1461,
+      "sha256": "2edf63e3d3342ad26f91ab2ba575a97ac785bd402ff1748a9726777fc8d1fe23"
+    },
+    {
+      "prompt_index": 123,
+      "brief_id": "c2v_123_benefits_14",
+      "beat_category": "Benefits",
+      "archive_path": "hyperframes_168/c2v_123_benefits_14.html",
+      "bytes": 1461,
+      "sha256": "f4e862b72aab06b830a59a1ecca99deb0fac326926d12aadefa22979c3c0f144"
+    },
+    {
+      "prompt_index": 124,
+      "brief_id": "c2v_124_benefits_15",
+      "beat_category": "Benefits",
+      "archive_path": "hyperframes_168/c2v_124_benefits_15.html",
+      "bytes": 1461,
+      "sha256": "4331392ac86f2d9e82e5fe7428c66a538a0963e8bf2bf167641e6d358a2e5b77"
+    },
+    {
+      "prompt_index": 125,
+      "brief_id": "c2v_125_benefits_16",
+      "beat_category": "Benefits",
+      "archive_path": "hyperframes_168/c2v_125_benefits_16.html",
+      "bytes": 1461,
+      "sha256": "b1de8ffe91ba637ead4b5bb8095276fe5986bf0d089e33922ad46e61e8dba0a0"
+    },
+    {
+      "prompt_index": 126,
+      "brief_id": "c2v_126_benefits_17",
+      "beat_category": "Benefits",
+      "archive_path": "hyperframes_168/c2v_126_benefits_17.html",
+      "bytes": 1461,
+      "sha256": "68d6f1fdd7c3d60f904938c0251b0004430d94f984147175ee0c026ac100c5cb"
+    },
+    {
+      "prompt_index": 127,
+      "brief_id": "c2v_127_benefits_18",
+      "beat_category": "Benefits",
+      "archive_path": "hyperframes_168/c2v_127_benefits_18.html",
+      "bytes": 1461,
+      "sha256": "3a70a4a5d2efb8707e0520bbee309f157b28637b9aa63059f3c88ae55ee72ee3"
+    },
+    {
+      "prompt_index": 128,
+      "brief_id": "c2v_128_call_to_action_01",
+      "beat_category": "Call to action",
+      "archive_path": "hyperframes_168/c2v_128_call_to_action_01.html",
+      "bytes": 1485,
+      "sha256": "14a9bf1e4b6bdb1bbe9fae0d66ae4eebab8dac5ae8a98fcea8cb0c19f62695d4"
+    },
+    {
+      "prompt_index": 129,
+      "brief_id": "c2v_129_call_to_action_02",
+      "beat_category": "Call to action",
+      "archive_path": "hyperframes_168/c2v_129_call_to_action_02.html",
+      "bytes": 1485,
+      "sha256": "759f2bed3eef4350a125f1c691d4f7b7af65d9980da53d87672faad4809e185c"
+    },
+    {
+      "prompt_index": 130,
+      "brief_id": "c2v_130_call_to_action_03",
+      "beat_category": "Call to action",
+      "archive_path": "hyperframes_168/c2v_130_call_to_action_03.html",
+      "bytes": 1485,
+      "sha256": "85c0ca41e3b8d4e8000d6bc625011f7c4c778135062892ff92800ea2a42a4aaf"
+    },
+    {
+      "prompt_index": 131,
+      "brief_id": "c2v_131_call_to_action_04",
+      "beat_category": "Call to action",
+      "archive_path": "hyperframes_168/c2v_131_call_to_action_04.html",
+      "bytes": 1485,
+      "sha256": "3cce9d621bf209b4afc3943998a48680d4eb8d8fab164185409a514a93f1faeb"
+    },
+    {
+      "prompt_index": 132,
+      "brief_id": "c2v_132_call_to_action_05",
+      "beat_category": "Call to action",
+      "archive_path": "hyperframes_168/c2v_132_call_to_action_05.html",
+      "bytes": 1485,
+      "sha256": "41028a6c2fd9e165400795e7dc5bc388473efccc81b632283f64bb84b9973552"
+    },
+    {
+      "prompt_index": 133,
+      "brief_id": "c2v_133_call_to_action_06",
+      "beat_category": "Call to action",
+      "archive_path": "hyperframes_168/c2v_133_call_to_action_06.html",
+      "bytes": 1485,
+      "sha256": "eee5b904dcde5e2d03647a37acf7f64fc6f390c4fb48ae8947589f28f11f1fbf"
+    },
+    {
+      "prompt_index": 134,
+      "brief_id": "c2v_134_call_to_action_07",
+      "beat_category": "Call to action",
+      "archive_path": "hyperframes_168/c2v_134_call_to_action_07.html",
+      "bytes": 1485,
+      "sha256": "652424742344eb6ab547dae447ac3aada31c2fe11519bd83c0a046f38661a540"
+    },
+    {
+      "prompt_index": 135,
+      "brief_id": "c2v_135_call_to_action_08",
+      "beat_category": "Call to action",
+      "archive_path": "hyperframes_168/c2v_135_call_to_action_08.html",
+      "bytes": 1485,
+      "sha256": "d4b2f6189c988439466e210162203232927118f91a317e21f85d23a0f44e2231"
+    },
+    {
+      "prompt_index": 136,
+      "brief_id": "c2v_136_call_to_action_09",
+      "beat_category": "Call to action",
+      "archive_path": "hyperframes_168/c2v_136_call_to_action_09.html",
+      "bytes": 1485,
+      "sha256": "e36d3ddbbd0fa3850f8c62e3a2fdd08c8fdf99282fd43964324e1138e421869e"
+    },
+    {
+      "prompt_index": 137,
+      "brief_id": "c2v_137_call_to_action_10",
+      "beat_category": "Call to action",
+      "archive_path": "hyperframes_168/c2v_137_call_to_action_10.html",
+      "bytes": 1485,
+      "sha256": "d629f146aa18f52e32e52fa9c9bff1d7c095ec2408257c8b26315eae3bc35775"
+    },
+    {
+      "prompt_index": 138,
+      "brief_id": "c2v_138_call_to_action_11",
+      "beat_category": "Call to action",
+      "archive_path": "hyperframes_168/c2v_138_call_to_action_11.html",
+      "bytes": 1485,
+      "sha256": "06f9ee7ed8adfa4f7333123a955851a12cd2f808ea1adaf9af61713d6c23c358"
+    },
+    {
+      "prompt_index": 139,
+      "brief_id": "c2v_139_call_to_action_12",
+      "beat_category": "Call to action",
+      "archive_path": "hyperframes_168/c2v_139_call_to_action_12.html",
+      "bytes": 1485,
+      "sha256": "d15534928e063d9bc6ca622ad1839d3e86aecd7d31b918d44f31e8fb6a7441b1"
+    },
+    {
+      "prompt_index": 140,
+      "brief_id": "c2v_140_call_to_action_13",
+      "beat_category": "Call to action",
+      "archive_path": "hyperframes_168/c2v_140_call_to_action_13.html",
+      "bytes": 1485,
+      "sha256": "0a20b07cd1875ed255bdc8b7e5e4aea853bbd929514a90a95a8913d33ecec0a8"
+    },
+    {
+      "prompt_index": 141,
+      "brief_id": "c2v_141_call_to_action_14",
+      "beat_category": "Call to action",
+      "archive_path": "hyperframes_168/c2v_141_call_to_action_14.html",
+      "bytes": 1485,
+      "sha256": "8cb6d0d00615b63b1a2bc12679d21d7dd433cb1438c3ca02942826df15f9f715"
+    },
+    {
+      "prompt_index": 142,
+      "brief_id": "c2v_142_call_to_action_15",
+      "beat_category": "Call to action",
+      "archive_path": "hyperframes_168/c2v_142_call_to_action_15.html",
+      "bytes": 1485,
+      "sha256": "3ed43dc6dc3b2421dbbb819e95de699805024866cbbb8252cfbce19fcae4561b"
+    },
+    {
+      "prompt_index": 143,
+      "brief_id": "c2v_143_brand_outro_01",
+      "beat_category": "Brand outro",
+      "archive_path": "hyperframes_168/c2v_143_brand_outro_01.html",
+      "bytes": 1473,
+      "sha256": "b2d134ac3746763f330770be9c868ed3b0397b13b38bfcee6729972d4b8c22b0"
+    },
+    {
+      "prompt_index": 144,
+      "brief_id": "c2v_144_brand_outro_02",
+      "beat_category": "Brand outro",
+      "archive_path": "hyperframes_168/c2v_144_brand_outro_02.html",
+      "bytes": 1473,
+      "sha256": "7820eb5c7cfeee1b0343489ccff1b1b1552da1a446d9b8563639be057486c503"
+    },
+    {
+      "prompt_index": 145,
+      "brief_id": "c2v_145_brand_outro_03",
+      "beat_category": "Brand outro",
+      "archive_path": "hyperframes_168/c2v_145_brand_outro_03.html",
+      "bytes": 1473,
+      "sha256": "2fba25cdbf34ada746662c95fa444de5fd6d09ec5054d34f268a7df48ad5d817"
+    },
+    {
+      "prompt_index": 146,
+      "brief_id": "c2v_146_brand_outro_04",
+      "beat_category": "Brand outro",
+      "archive_path": "hyperframes_168/c2v_146_brand_outro_04.html",
+      "bytes": 1473,
+      "sha256": "aa5aa45ca8114753faae74829ae71d8d6999669bb62bb1b780019a9ee94abf70"
+    },
+    {
+      "prompt_index": 147,
+      "brief_id": "c2v_147_brand_outro_05",
+      "beat_category": "Brand outro",
+      "archive_path": "hyperframes_168/c2v_147_brand_outro_05.html",
+      "bytes": 1473,
+      "sha256": "6a8d07bfb9c78f0dec1dcf95d63dabfe625d69a6681c3b5e68b5d5da18189184"
+    },
+    {
+      "prompt_index": 148,
+      "brief_id": "c2v_148_brand_outro_06",
+      "beat_category": "Brand outro",
+      "archive_path": "hyperframes_168/c2v_148_brand_outro_06.html",
+      "bytes": 1473,
+      "sha256": "487f4d5852736998c0beee19a70039d4418064f633752f571015f6906646dea1"
+    },
+    {
+      "prompt_index": 149,
+      "brief_id": "c2v_149_brand_outro_07",
+      "beat_category": "Brand outro",
+      "archive_path": "hyperframes_168/c2v_149_brand_outro_07.html",
+      "bytes": 1473,
+      "sha256": "1e951362013ef5783f5e591ae2cb548b3f949a458836b0c191bb4f7cc28d542c"
+    },
+    {
+      "prompt_index": 150,
+      "brief_id": "c2v_150_brand_outro_08",
+      "beat_category": "Brand outro",
+      "archive_path": "hyperframes_168/c2v_150_brand_outro_08.html",
+      "bytes": 1473,
+      "sha256": "a04e1de4d803d7acc5e15326a4a5050482fd1e8b461b3cb19dd0dd6c7059bdd4"
+    },
+    {
+      "prompt_index": 151,
+      "brief_id": "c2v_151_brand_outro_09",
+      "beat_category": "Brand outro",
+      "archive_path": "hyperframes_168/c2v_151_brand_outro_09.html",
+      "bytes": 1473,
+      "sha256": "0c8893b0613d37f2a6dad658415e933ca77d880b0b94e85068eb9c16ef64b347"
+    },
+    {
+      "prompt_index": 152,
+      "brief_id": "c2v_152_brand_outro_10",
+      "beat_category": "Brand outro",
+      "archive_path": "hyperframes_168/c2v_152_brand_outro_10.html",
+      "bytes": 1473,
+      "sha256": "e590a470e005ed431a2a53760cd80bba495728befc04c2c712cf91475d780055"
+    },
+    {
+      "prompt_index": 153,
+      "brief_id": "c2v_153_brand_outro_11",
+      "beat_category": "Brand outro",
+      "archive_path": "hyperframes_168/c2v_153_brand_outro_11.html",
+      "bytes": 1473,
+      "sha256": "dfb9300683d387c8c4f9fc7afd638a58e4f6fb4c14e58f08389307736f7fe3eb"
+    },
+    {
+      "prompt_index": 154,
+      "brief_id": "c2v_154_brand_outro_12",
+      "beat_category": "Brand outro",
+      "archive_path": "hyperframes_168/c2v_154_brand_outro_12.html",
+      "bytes": 1473,
+      "sha256": "722ffb1463d22774c7830541dd299a5b4a7ac4c11eb5f55bad0d15c41f0471e7"
+    },
+    {
+      "prompt_index": 155,
+      "brief_id": "c2v_155_brand_outro_13",
+      "beat_category": "Brand outro",
+      "archive_path": "hyperframes_168/c2v_155_brand_outro_13.html",
+      "bytes": 1473,
+      "sha256": "81921587d254c7ba1104f4ae1d8eea05e83c58aa29990319f449f06e36301b6b"
+    },
+    {
+      "prompt_index": 156,
+      "brief_id": "c2v_156_problem_01",
+      "beat_category": "Problem",
+      "archive_path": "hyperframes_168/c2v_156_problem_01.html",
+      "bytes": 1457,
+      "sha256": "ab9db7e190292e1466ffc24272d1a450e01b7f8c47117b1989889d6a7a93c07b"
+    },
+    {
+      "prompt_index": 157,
+      "brief_id": "c2v_157_problem_02",
+      "beat_category": "Problem",
+      "archive_path": "hyperframes_168/c2v_157_problem_02.html",
+      "bytes": 1457,
+      "sha256": "854d2fac22873cfe8e2a78b524eb1462959f4cbb02c67bd26da7ad22dd8e8575"
+    },
+    {
+      "prompt_index": 158,
+      "brief_id": "c2v_158_problem_03",
+      "beat_category": "Problem",
+      "archive_path": "hyperframes_168/c2v_158_problem_03.html",
+      "bytes": 1457,
+      "sha256": "fe6381e08ac80906774c1def7053d678547b2389b45dce59eb42e236105e4bd2"
+    },
+    {
+      "prompt_index": 159,
+      "brief_id": "c2v_159_problem_04",
+      "beat_category": "Problem",
+      "archive_path": "hyperframes_168/c2v_159_problem_04.html",
+      "bytes": 1457,
+      "sha256": "212583e4b6c18e1025912a9f793bc9cbd568d75aaa00eca9db7fce18dbb900b1"
+    },
+    {
+      "prompt_index": 160,
+      "brief_id": "c2v_160_problem_05",
+      "beat_category": "Problem",
+      "archive_path": "hyperframes_168/c2v_160_problem_05.html",
+      "bytes": 1457,
+      "sha256": "70a913d73897d08d3ea2aeb4025db1b0e644299451fc80f766b46300db13a01e"
+    },
+    {
+      "prompt_index": 161,
+      "brief_id": "c2v_161_problem_06",
+      "beat_category": "Problem",
+      "archive_path": "hyperframes_168/c2v_161_problem_06.html",
+      "bytes": 1457,
+      "sha256": "d67d1b7d3319e6055b25811faafc701ce6338e58084fe8eafb0d425c8b94dd11"
+    },
+    {
+      "prompt_index": 162,
+      "brief_id": "c2v_162_problem_07",
+      "beat_category": "Problem",
+      "archive_path": "hyperframes_168/c2v_162_problem_07.html",
+      "bytes": 1457,
+      "sha256": "a195764c7bcbcbbfd86bda5b4c5fe7a782597eb0e2ac08258dc21ff64fce7637"
+    },
+    {
+      "prompt_index": 163,
+      "brief_id": "c2v_163_social_proof_01",
+      "beat_category": "Social proof",
+      "archive_path": "hyperframes_168/c2v_163_social_proof_01.html",
+      "bytes": 1477,
+      "sha256": "8afe5287517c3f090a97efb4e16e265fd0518bd805160e1db867e9abd2b572b0"
+    },
+    {
+      "prompt_index": 164,
+      "brief_id": "c2v_164_social_proof_02",
+      "beat_category": "Social proof",
+      "archive_path": "hyperframes_168/c2v_164_social_proof_02.html",
+      "bytes": 1477,
+      "sha256": "296358fd8ca1e055f6d2852232a619d7eb63e9d66f7cee4a16b3bbdf5a379ca5"
+    },
+    {
+      "prompt_index": 165,
+      "brief_id": "c2v_165_social_proof_03",
+      "beat_category": "Social proof",
+      "archive_path": "hyperframes_168/c2v_165_social_proof_03.html",
+      "bytes": 1477,
+      "sha256": "adbb5fa94389f49ce8fc21c2571be59cccd883e251a538423b791e1703fa130a"
+    },
+    {
+      "prompt_index": 166,
+      "brief_id": "c2v_166_social_proof_04",
+      "beat_category": "Social proof",
+      "archive_path": "hyperframes_168/c2v_166_social_proof_04.html",
+      "bytes": 1477,
+      "sha256": "7aec6076a59a24d70132ecc979a9eaf55b576c6ff921f05724508d45f4235f90"
+    },
+    {
+      "prompt_index": 167,
+      "brief_id": "c2v_167_social_proof_05",
+      "beat_category": "Social proof",
+      "archive_path": "hyperframes_168/c2v_167_social_proof_05.html",
+      "bytes": 1477,
+      "sha256": "d22f8c7e34143babaf0ada0f35076fb46593e2976fec27185d2a3a298a78b98e"
+    },
+    {
+      "prompt_index": 168,
+      "brief_id": "c2v_168_social_proof_06",
+      "beat_category": "Social proof",
+      "archive_path": "hyperframes_168/c2v_168_social_proof_06.html",
+      "bytes": 1477,
+      "sha256": "7b6d26ea39d6c8be5fbf75ceae5c2c5a76421ecb44c1fc4e04e2122cd7fccae7"
+    }
+  ]
+}
