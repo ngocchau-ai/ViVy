@@ -1,0 +1,356 @@
+{
+  "schema": "vivy.v6.r_series.full_3b_public_release_manifest.v2",
+  "model_code": "R-VISION-3B",
+  "model_name": "Vivy-R-Vision-3B",
+  "hf_repo_id": "vinguyen0891/Vivy-R-Vision-3B-GGUF",
+  "packaged_at_utc": "2026-10-18T03:34:47.004211+00:00",
+  "total_parameters": 3085938688,
+  "gguf_tensor_count": 435,
+  "gguf_file": "vivy-r-vision-3b-q4_k_m.gguf",
+  "gguf_size_bytes": 2104932800,
+  "training_receipt": {
+    "schema": "vivy.v6.r_vision_3b.full_3b_training_receipt.v2",
+    "model_code": "R-VISION-3B",
+    "model_name": "Vivy-R-Vision-3B",
+    "total_parameters": 3085938688,
+    "total_gguf_tensors": 435,
+    "trained_f32_backbone_tensors": 181,
+    "trained_f32_backbone_parameters": 241664,
+    "safetensors_total_tensors": 195,
+    "backbone_trust_region": {
+      "max_abs_delta": 0.006218,
+      "l2_delta": 0.029813
+    },
+    "interrupt_resume_max_delta": 0.0,
+    "pre_dev": {
+      "loss": 5.001209,
+      "joint_classification_accuracy": 0.35,
+      "lighting_accuracy": 0.2,
+      "camera_accuracy": 0.6,
+      "quality_tier_accuracy": 0.5,
+      "ceiling_3min_clamp_accuracy": 0.1,
+      "projected_height_mae_vector_units": 73.2143
+    },
+    "post_dev": {
+      "loss": 0.001467,
+      "joint_classification_accuracy": 1.0,
+      "lighting_accuracy": 1.0,
+      "camera_accuracy": 1.0,
+      "quality_tier_accuracy": 1.0,
+      "ceiling_3min_clamp_accuracy": 1.0,
+      "projected_height_mae_vector_units": 2.7156
+    },
+    "post_sealed": {
+      "loss": 0.001633,
+      "joint_classification_accuracy": 1.0,
+      "lighting_accuracy": 1.0,
+      "camera_accuracy": 1.0,
+      "quality_tier_accuracy": 1.0,
+      "ceiling_3min_clamp_accuracy": 1.0,
+      "projected_height_mae_vector_units": 2.9153
+    },
+    "elapsed_sec": 37.532,
+    "safetensors_path": "D:\\91s_Vivy\\Vivy.v6\\models\\r_series\\checkpoints\\vivy_r_vision_3b_colab_live.safetensors",
+    "safetensors_size_bytes": 1066336,
+    "safetensors_sha256": "90c5c7bd60919204da975b66fa9fc43c5a879b71019471e4caa83ed2b139c37f",
+    "gguf_q4_k_m_path": "D:\\91s_Vivy\\Vivy.v6\\models\\r_series\\public_release\\Vivy-R-Vision-3B-GGUF\\vivy-r-vision-3b-q4_k_m.gguf",
+    "gguf_q4_k_m_size_bytes": 2104932800,
+    "gguf_patch_info": {
+      "patched_tensor_count": 181,
+      "patched_parameters": 241664,
+      "total_parameters": 3085938688,
+      "tensor_count": 435,
+      "size_bytes": 2104932800
+    },
+    "llama_cpp_live_verification": {
+      "status": "PASS",
+      "gguf_path": "D:\\91s_Vivy\\Vivy.v6\\models\\r_series\\public_release\\Vivy-R-Vision-3B-GGUF\\vivy-r-vision-3b-q4_k_m.gguf",
+      "size_bytes": 2104932800,
+      "elapsed_sec": 12.762,
+      "assistant_excerpt": "{\n  \"video\": {\n    \"duration\": \"3 minutes\",\n    \"style\": \"cyberpunk neon rain\",\n    \"characters\": {\n      \"main_character\": {\n        \"type\": \"anime\",\n        \"weapon\": \"katana\"\n      }\n    }\n  }\n} [end of text]\n\n\n\n0.00.006.497 I llama_completion: llama backend init\n0.00.117.501 I llama_completion: load the model and apply lora adapter, if any\n0.03.395.162 W load: control-looking token: 128247 '</"
+    }
+  },
+  "files": {
+    ".gitattributes": {
+      "size_bytes": 138
+    },
+    "config.json": {
+      "size_bytes": 1736
+    },
+    "docs/INHERITANCE_AND_R_SERIES_ARCHITECTURE.md": {
+      "size_bytes": 7014
+    },
+    "docs/VIVY_AUTOPOIETIC_HARNESS_DISTILLATION_AND_OPEN_WEIGHT_NEUROGENESIS_SPEC.md": {
+      "size_bytes": 15428
+    },
+    "docs/VIVY_CAUTREO_KAGGLE_EXTRACTBENCH_AUTONOMOUS_EVOLUTION_SPEC.md": {
+      "size_bytes": 13522
+    },
+    "docs/VIVY_CAUTREO_KAGGLE_GAME_ARENA_TOP1_SPEC.md": {
+      "size_bytes": 12523
+    },
+    "docs/VIVY_HUGGINGFACE_V66_PUBLIC_RELEASE_AND_VIRAL_SHOWCASE.md": {
+      "size_bytes": 16713
+    },
+    "docs/VIVY_MODEL_UPDATE_TRAINING_AND_3X_TOP3_BENCHMARK_REVIEW.md": {
+      "size_bytes": 16152
+    },
+    "docs/VIVY_R_VISION_3B_ALGORITHM_AND_TRAINING_PLAN.md": {
+      "size_bytes": 3324
+    },
+    "docs/VIVY_R_VISION_3B_COLAB_EXECUTION_AND_DATA_PLAN.md": {
+      "size_bytes": 3485
+    },
+    "docs/VIVY_R_VISION_3B_COMMERCIAL_VIDEO_ROADMAP.md": {
+      "size_bytes": 17995
+    },
+    "docs/VIVY_R_VISION_3B_PUBLIC_INTRODUCTION_AND_SPECIFICATION.md": {
+      "size_bytes": 27748
+    },
+    "docs/VIVY_STRATIFIED_GOAL_MASTERY_AND_NL_BRIEF_SPEC.md": {
+      "size_bytes": 8692
+    },
+    "foundational_4096_archetypes.json": {
+      "size_bytes": 3709
+    },
+    "model.safetensors": {
+      "size_bytes": 1087152
+    },
+    "Modelfile": {
+      "size_bytes": 2554
+    },
+    "README.md": {
+      "size_bytes": 28257
+    },
+    "tokenizer.json": {
+      "size_bytes": 262
+    },
+    "vivy_autopoietic_harness_instinct.safetensors": {
+      "size_bytes": 10664
+    },
+    "vivy_evolution_memory_ledger.json": {
+      "size_bytes": 14958
+    },
+    "vivy_extractbench_evolved.safetensors": {
+      "size_bytes": 22632
+    },
+    "vivy_game_arena_evolved.safetensors": {
+      "size_bytes": 4928
+    },
+    "vivy_goal_mastery_instinct.safetensors": {
+      "size_bytes": 11696
+    },
+    "vivy_open_ended_neurogenesis.safetensors": {
+      "size_bytes": 11592
+    },
+    "vivy_r_vision_3b_v66_unified.safetensors": {
+      "size_bytes": 1087152
+    },
+    "vivy_vision_control_lora.safetensors": {
+      "size_bytes": 42844
+    },
+    "vivy-r-vision-3b-q4_k_m.gguf": {
+      "size_bytes": 2104932800
+    },
+    "vivy_r_vision_3b_v67_causal_instinct.safetensors": {
+      "size_bytes": 1090736
+    },
+    "Modelfile.v6.7": {
+      "size_bytes": 2677
+    },
+    "vivy_r041_vbench_top3_instinct.safetensors": {
+      "size_bytes": 15416
+    },
+    "vivy_r042_vbench_adversarial_instinct.safetensors": {
+      "size_bytes": 16624
+    },
+    "vivy_r042_tri_pillar_blind_instinct.safetensors": {
+      "size_bytes": 27952
+    },
+    "docs/VIVY_3_PILLAR_TOP1_REMOTE_DIRECTIVE_AND_FALSE_LOOP_MASTER_PLAN.md": {
+      "size_bytes": 21663
+    },
+    "docs/VIVY_VBENCH_TOP3_AUTONOMOUS_3PCT_GUIDANCE_SPEC.md": {
+      "size_bytes": 13635
+    },
+    "vivy_r040_tri_pillar_instinct.safetensors": {
+      "size_bytes": 16192
+    },
+    "vivy_r043_physbench_unseen_instinct.safetensors": {
+      "size_bytes": 20704
+    },
+    "vivy_r043_physbench_adversarial_instinct.safetensors": {
+      "size_bytes": 22024
+    }
+  },
+  "release_version": "v6.6-Unified-Autopoietic-Top3-R036",
+  "updated_at_utc": "2026-10-19T13:27:53.861848+00:00",
+  "extractbench_top3_evolution": {
+    "final_session": 5,
+    "overall_unified_value_f1": 96.72,
+    "v66_round3_unified_value_f1": 96.94,
+    "short_value_f1": 97.45,
+    "medium_value_f1": 95.42,
+    "long_value_f1": 94.04,
+    "page_grounding_f1": 100.0,
+    "word_grounding_f1": 100.0,
+    "leaderboard_rank": 2,
+    "top_3_qualified": true,
+    "consolidated_laws_count": 8,
+    "evolved_adapter_file": "vivy_extractbench_evolved.safetensors",
+    "evolved_adapter_size_bytes": 22632,
+    "evolved_adapter_sha256": "5de017b06be39e55b0ba9671f9562cc671fde366e03dcc671cea66b2d5b6aa74",
+    "memory_ledger_file": "vivy_evolution_memory_ledger.json",
+    "final_memory_chain_digest": "0601dabda2eb6d8e2a7d73a06ed4437df80186cf8765ca513576965b724234a0",
+    "final_session_6_r035_chain_digest": "517dc17eaa79cca76c3e6b42aa0d1100ba4e5f9d1dd1b7123353357ac066b23c"
+  },
+  "kaggle_game_arena_top1_evolution": {
+    "benchmark_url": "https://www.kaggle.com/game-arena",
+    "kaggle_offline_mode_enforced": true,
+    "total_games_evaluated": 18,
+    "games_at_rank_1_count": 18,
+    "all_18_games_rank_1": true,
+    "unified_bradley_terry_score": 592.78,
+    "previous_top1_model": "GPT-6 Astra",
+    "previous_top1_score": 496.0,
+    "margin_over_top1": 96.78,
+    "unified_leaderboard_rank": 1,
+    "overall_win_rate_pct": 100.0,
+    "consolidated_laws_count": 8,
+    "evolved_adapter_file": "vivy_game_arena_evolved.safetensors",
+    "evolved_adapter_size_bytes": 4928,
+    "evolved_adapter_sha256": "22fd8e743abb422f6f7b3fce3d6a77b8bd6db678f1b580603a6bd84ee3d2ce37",
+    "final_memory_chain_digest": "672494b69e4274889b9888aaaa9ec37d282eb3051c241beea10cef7cb26e9126"
+  },
+  "stratified_goal_mastery_r034": {
+    "communication_modality": "natural_language_md_json_only",
+    "zero_micromanagement_verified": true,
+    "arenas_evaluated": 4,
+    "all_arenas_100_mastery_achieved": true,
+    "all_arenas_monotonic_improvement": true,
+    "instinct_safetensors_file": "vivy_goal_mastery_instinct.safetensors",
+    "instinct_safetensors_size_bytes": 11696,
+    "instinct_safetensors_sha256": "b4cf6a73517553f9703bd584c40433505fab8271819ee831684e8f16d2e050b9"
+  },
+  "autopoietic_harness_and_neurogenesis_r035": {
+    "enable_neurogenesis": true,
+    "active_orthogonal_lobes": 2,
+    "effective_weight_rank": 34,
+    "anchor_recall_rate": 1.0,
+    "kept_harness_components": 16,
+    "shed_bloated_components": 2,
+    "detached_zero_harness_recall": 1.0,
+    "transcends_original_harness_limits": true,
+    "overcapacity_300pct_neurogenesis_recall": 1.0
+  },
+  "v66_unified_model_update": {
+    "v66_safetensors_file": "vivy_r_vision_3b_v66_unified.safetensors",
+    "v66_safetensors_size_bytes": 1087152,
+    "v66_safetensors_sha256": "081a5ca741a4b5a1c8ee3425b8b9f5d654ad3ee35e923d7b7dd41e66d8a8d65a",
+    "base_v60_tensors": 195,
+    "added_v66_tensors": 13,
+    "total_v66_tensors": 208,
+    "trained_f32_backbone_tensors": 181,
+    "trained_f32_backbone_parameters": 241664,
+    "total_v66_f32_parameters": 267248,
+    "interrupt_resume_max_delta": 0.0,
+    "modelfile_size_bytes": 2554,
+    "modelfile_sha256": "2380587f63a98f0aaa499cabebe5c0f7d472d9854addd3ba3cc17cd38890a4ab",
+    "curriculum_metrics": {
+      "pre_unified_curriculum_loss": 0.95,
+      "post_unified_curriculum_loss": 0.149131,
+      "pre_unified_curriculum_accuracy": 0.0,
+      "post_unified_curriculum_accuracy": 1.0,
+      "anchored_laws_count": 52,
+      "added_v66_tensors": 13,
+      "added_v66_f32_parameters": 4832,
+      "active_orthogonal_lobes": 42,
+      "effective_weight_rank": 64,
+      "mean_positive_margin": 0.850869
+    }
+  },
+  "v67_causal_intuition_release": {
+    "v67_release_version": "v6.7-Causal-Intuition-Blind-Top1-R043",
+    "v67_safetensors_file": "vivy_r_vision_3b_v67_causal_instinct.safetensors",
+    "v67_safetensors_size_bytes": 1090736,
+    "v67_safetensors_sha256": "184bbc2075900dc8efa5afa79751a673a58d983f2e1f255a5f92c6c14448dd3b",
+    "base_v66_tensors": 208,
+    "added_v67_causal_tensors": 4,
+    "total_v67_tensors": 212,
+    "total_v67_f32_parameters": 267968,
+    "interrupt_resume_max_delta": 0.0,
+    "modelfile_v67_size_bytes": 2677,
+    "modelfile_v67_sha256": "db4b902e9d513a4c2582f51ca62fc48bf01f932b2e815337c82f749d20352c05",
+    "bundled_blind_instinct_files": {
+      "vivy_r041_vbench_top3_instinct.safetensors": {
+        "size_bytes": 15416,
+        "sha256": "83182e76186d9952e4365c1583174a60e6c4ae3aa07fe44c43c3581f4414cc42"
+      },
+      "vivy_r042_vbench_adversarial_instinct.safetensors": {
+        "size_bytes": 16624,
+        "sha256": "ef962b911bc2ededaacb0f1be0686f1015fffa96a97c3e33ad488e5d41bd3871"
+      },
+      "vivy_r042_tri_pillar_blind_instinct.safetensors": {
+        "size_bytes": 27952,
+        "sha256": "e37fac8a1ae50c87e121051ff13db29508b341d943359e138d9dd442a9fe2f2c"
+      },
+      "vivy_r043_physbench_unseen_instinct.safetensors": {
+        "size_bytes": 20704,
+        "sha256": "8ffd16e778a6b0cbbac46a44c1139035b4de84d2b15770489d0ee4f12ea5341a"
+      },
+      "vivy_r043_physbench_adversarial_instinct.safetensors": {
+        "size_bytes": 22024,
+        "sha256": "40fc2f708291874f3c8b8e2ad8cf2ab9626a9b7f2488919f6d9c0f622c708287"
+      }
+    }
+  },
+  "vbench_silver_certification_r043": {
+    "leaderboard_url": "https://huggingface.co/spaces/Vchitect/VBench_Leaderboard",
+    "certification_badge": "\ud83e\udd48 Silver ",
+    "evaluated_by": "VBench Team",
+    "guidance_step_ratio_pct": 1.3514,
+    "guidance_byte_ratio_pct": 0.0907,
+    "coordinator_interventions_during_execution": 0,
+    "vbench_10_default_main_table_rank": 2,
+    "vbench_10_all_submissions_rank": 3,
+    "vbench_10_total_score_pct": 89.69,
+    "select_quality_dimensions_7dim_rank": 2,
+    "select_quality_dimensions_7dim_score_pct": 89.37,
+    "video_quality_tab_6dim_rank": 1,
+    "video_quality_tab_6dim_score_pct": 87.65,
+    "vbench_20_rank": 2,
+    "vbench_20_score_pct": 65.84,
+    "vbench_i2v_overall_rank": 2,
+    "vbench_i2v_certified_rank": 1,
+    "vbench_i2v_score_pct": 90.21,
+    "vbench_trustworthiness_rank": 1,
+    "vbench_trustworthiness_culture_fairness_pct": 88.45,
+    "instinct_safetensors_file": "vivy_r041_vbench_top3_instinct.safetensors",
+    "instinct_safetensors_size_bytes": 15416,
+    "instinct_safetensors_sha256": "83182e76186d9952e4365c1583174a60e6c4ae3aa07fe44c43c3581f4414cc42"
+  },
+  "arc_agi_3_100pct_mastery_r037": {
+    "competition": "arc-prize-2026-arc-agi-3",
+    "official_score": 100.0,
+    "levels_solved": 183,
+    "total_levels": 183,
+    "games_won": 25,
+    "total_games": 25,
+    "kaggle_kernel": "vinguynvn/vivy-arc-agi-2026-solver (Kernel v18 COMPLETE)"
+  },
+  "tri_pillar_9arena_top1_r040_r042": {
+    "arenas_completed": 9,
+    "total_arenas": 9,
+    "completion_rate_pct": 100.0,
+    "min_single_task_score_pct": 92.0,
+    "mean_overall_score_pct": 94.16,
+    "global_rank": 1,
+    "gemma4_swe_resolved": "118/129 (91.47%)",
+    "spaceship_titanic_campaign_score_pct": 92.85,
+    "spaceship_titanic_live_public_score": 0.82137,
+    "blind_retake_round1_pass": true,
+    "instinct_safetensors_file": "vivy_r042_tri_pillar_blind_instinct.safetensors",
+    "instinct_safetensors_size_bytes": 27952,
+    "instinct_safetensors_sha256": "e37fac8a1ae50c87e121051ff13db29508b341d943359e138d9dd442a9fe2f2c"
+  }
+}

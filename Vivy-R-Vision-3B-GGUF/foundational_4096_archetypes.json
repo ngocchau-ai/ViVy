@@ -1,0 +1,144 @@
+{
+  "schema": "vivy.v6.r_vision_3b.archetype_catalog.v1",
+  "total_archetypes": 4096,
+  "family_counts": {
+    "HUMAN": 1024,
+    "ANIMAL": 1024,
+    "PROP": 1024,
+    "LANDSCAPE": 512,
+    "WEATHER": 512
+  },
+  "catalog_sha256": "1c42b9afc1959159856953fccbe2d6db924f0dc91b28b4e4c84e4803b38636a3",
+  "sample_archetypes_head": [
+    {
+      "archetype_index": 0,
+      "archetype_id": "HUMAN_KATANA_GUARD_0000",
+      "family": "HUMAN",
+      "identity_box_units": [
+        1000,
+        1000
+      ],
+      "skeletal_joints": 24,
+      "default_height_cm": 150.0,
+      "base_spline_chains": 32,
+      "source_hf_dataset": "TeoGchx/HumanML3D"
+    },
+    {
+      "archetype_index": 1,
+      "archetype_id": "HUMAN_ARCHER_DRAW_0001",
+      "family": "HUMAN",
+      "identity_box_units": [
+        1000,
+        1000
+      ],
+      "skeletal_joints": 24,
+      "default_height_cm": 151.0,
+      "base_spline_chains": 32,
+      "source_hf_dataset": "TeoGchx/HumanML3D"
+    },
+    {
+      "archetype_index": 2,
+      "archetype_id": "HUMAN_SPRINT_STRIDE_0002",
+      "family": "HUMAN",
+      "identity_box_units": [
+        1000,
+        1000
+      ],
+      "skeletal_joints": 24,
+      "default_height_cm": 152.0,
+      "base_spline_chains": 32,
+      "source_hf_dataset": "TeoGchx/HumanML3D"
+    },
+    {
+      "archetype_index": 3,
+      "archetype_id": "HUMAN_LOTUS_MEDITATION_0003",
+      "family": "HUMAN",
+      "identity_box_units": [
+        1000,
+        1000
+      ],
+      "skeletal_joints": 24,
+      "default_height_cm": 153.0,
+      "base_spline_chains": 32,
+      "source_hf_dataset": "TeoGchx/HumanML3D"
+    },
+    {
+      "archetype_index": 4,
+      "archetype_id": "HUMAN_CLOAK_TURN_0004",
+      "family": "HUMAN",
+      "identity_box_units": [
+        1000,
+        1000
+      ],
+      "skeletal_joints": 24,
+      "default_height_cm": 154.0,
+      "base_spline_chains": 32,
+      "source_hf_dataset": "TeoGchx/HumanML3D"
+    },
+    {
+      "archetype_index": 5,
+      "archetype_id": "HUMAN_KATANA_GUARD_0005",
+      "family": "HUMAN",
+      "identity_box_units": [
+        1000,
+        1000
+      ],
+      "skeletal_joints": 24,
+      "default_height_cm": 155.0,
+      "base_spline_chains": 32,
+      "source_hf_dataset": "TeoGchx/HumanML3D"
+    },
+    {
+      "archetype_index": 6,
+      "archetype_id": "HUMAN_ARCHER_DRAW_0006",
+      "family": "HUMAN",
+      "identity_box_units": [
+        1000,
+        1000
+      ],
+      "skeletal_joints": 24,
+      "default_height_cm": 156.0,
+      "base_spline_chains": 32,
+      "source_hf_dataset": "TeoGchx/HumanML3D"
+    },
+    {
+      "archetype_index": 7,
+      "archetype_id": "HUMAN_SPRINT_STRIDE_0007",
+      "family": "HUMAN",
+      "identity_box_units": [
+        1000,
+        1000
+      ],
+      "skeletal_joints": 24,
+      "default_height_cm": 157.0,
+      "base_spline_chains": 32,
+      "source_hf_dataset": "TeoGchx/HumanML3D"
+    },
+    {
+      "archetype_index": 8,
+      "archetype_id": "HUMAN_LOTUS_MEDITATION_0008",
+      "family": "HUMAN",
+      "identity_box_units": [
+        1000,
+        1000
+      ],
+      "skeletal_joints": 24,
+      "default_height_cm": 158.0,
+      "base_spline_chains": 32,
+      "source_hf_dataset": "TeoGchx/HumanML3D"
+    },
+    {
+      "archetype_index": 9,
+      "archetype_id": "HUMAN_CLOAK_TURN_0009",
+      "family": "HUMAN",
+      "identity_box_units": [
+        1000,
+        1000
+      ],
+      "skeletal_joints": 24,
+      "default_height_cm": 159.0,
+      "base_spline_chains": 32,
+      "source_hf_dataset": "TeoGchx/HumanML3D"
+    }
+  ]
+}

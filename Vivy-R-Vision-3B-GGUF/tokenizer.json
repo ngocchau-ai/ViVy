@@ -1,0 +1,10 @@
+{
+  "version": "1.0",
+  "model_code": "R-VISION-3B",
+  "model_name": "Vivy-R-Vision-3B",
+  "base_tokenizer": "Qwen/Qwen2.5-3B-Instruct",
+  "vocab_size": 151936,
+  "bos_token": "<|im_start|>",
+  "eos_token": "<|im_end|>",
+  "pad_token": "<|endoftext|>"
+}

@@ -1,6 +1,0 @@
-# Ollama / llama.cpp Modelfile for Vivy-Robot-3B-Video-Pro-GGUF (vivy-robot-3b-video-pro-v1)
-FROM ./vivy-robot-3b-video-pro-q8_0.gguf
-PARAMETER temperature 0.0
-PARAMETER num_ctx 512
-PARAMETER stop "<|eos|>"
-SYSTEM "You are Vivy-Robot-3B-Video-Pro-GGUF, a specialized robotics manipulation and video-to-action control model verified on Google DeepMind MuJoCo 3.x with VM-11 and ROB-101..104 hardware safety guarantees."

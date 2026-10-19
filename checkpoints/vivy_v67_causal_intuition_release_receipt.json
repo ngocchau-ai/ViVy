@@ -1,0 +1,72 @@
+{
+  "schema": "vivy.v6.v67_causal_intuition_release_receipt.v1",
+  "receipt_id": "R-043-V67-PACKAGE",
+  "v67_release_version": "v6.7-Causal-Intuition-Blind-Top1-R043",
+  "packaged_at_utc": "2026-10-19T13:27:39.743985+00:00",
+  "elapsed_sec": 0.2412,
+  "bundled_blind_instinct_files": [
+    "D:\\91s_Vivy\\Vivy.v6\\artifacts\\vbench_blind_retest_r042\\vivy_r041_vbench_top3_instinct.safetensors",
+    "D:\\91s_Vivy\\Vivy.v6\\artifacts\\vbench_blind_retest_r042\\vivy_r042_vbench_adversarial_instinct.safetensors",
+    "D:\\91s_Vivy\\Vivy.v6\\artifacts\\vbench_blind_retest_r042\\exp4_tri_pillar_blind_retake\\vivy_r042_tri_pillar_blind_instinct.safetensors",
+    "D:\\91s_Vivy\\Vivy.v6\\artifacts\\unseen_physbench_r043\\vivy_r043_physbench_unseen_instinct.safetensors",
+    "D:\\91s_Vivy\\Vivy.v6\\artifacts\\unseen_physbench_r043\\vivy_r043_physbench_adversarial_instinct.safetensors"
+  ],
+  "packaged_models": [
+    {
+      "model_code": "R-VISION-3B",
+      "model_name": "Vivy-R-Vision-3B",
+      "repo_id": "vinguyen0891/Vivy-R-Vision-3B-GGUF",
+      "gguf_name": "vivy-r-vision-3b-q4_k_m.gguf",
+      "v67_safetensors_name": "vivy_r_vision_3b_v67_causal_instinct.safetensors",
+      "base_v66_tensors": 208,
+      "added_v67_tensors": 4,
+      "total_v67_tensors": 212,
+      "total_v67_f32_parameters": 267968,
+      "interrupt_resume_max_delta": 0.0,
+      "v67_checkpoint_path": "D:\\91s_Vivy\\Vivy.v6\\models\\r_series\\checkpoints\\vivy_r_vision_3b_v67_causal_instinct.safetensors",
+      "v67_bundle_path": "D:\\91s_Vivy\\Vivy.v6\\models\\r_series\\public_release\\Vivy-R-Vision-3B-GGUF\\vivy_r_vision_3b_v67_causal_instinct.safetensors",
+      "v67_size_bytes": 1090736,
+      "v67_sha256": "184bbc2075900dc8efa5afa79751a673a58d983f2e1f255a5f92c6c14448dd3b",
+      "modelfile_v67_path": "D:\\91s_Vivy\\Vivy.v6\\models\\r_series\\public_release\\Vivy-R-Vision-3B-GGUF\\Modelfile.v6.7",
+      "modelfile_v67_sha256": "db4b902e9d513a4c2582f51ca62fc48bf01f932b2e815337c82f749d20352c05"
+    },
+    {
+      "model_code": "R-FINANCE-3B",
+      "model_name": "Vivy-R-Finance-3B",
+      "repo_id": "vinguyen0891/Vivy-R-Finance-3B-GGUF",
+      "gguf_name": "vivy-r-finance-3b-q4_k_m.gguf",
+      "v67_safetensors_name": "vivy_r_finance_3b_v67_causal_instinct.safetensors",
+      "base_v66_tensors": 208,
+      "added_v67_tensors": 4,
+      "total_v67_tensors": 212,
+      "total_v67_f32_parameters": 258558,
+      "interrupt_resume_max_delta": 0.0,
+      "v67_checkpoint_path": "D:\\91s_Vivy\\Vivy.v6\\models\\r_series\\checkpoints\\vivy_r_finance_3b_v67_causal_instinct.safetensors",
+      "v67_bundle_path": "D:\\91s_Vivy\\Vivy.v6\\models\\r_series\\public_release\\Vivy-R-Finance-3B-GGUF\\vivy_r_finance_3b_v67_causal_instinct.safetensors",
+      "v67_size_bytes": 1053040,
+      "v67_sha256": "f0a653f88ff13e362f8e23ffa9cf384d146336f1b326de5e27a2637a2c18913a",
+      "modelfile_v67_path": "D:\\91s_Vivy\\Vivy.v6\\models\\r_series\\public_release\\Vivy-R-Finance-3B-GGUF\\Modelfile.v6.7",
+      "modelfile_v67_sha256": "0e9b77bcc28ae2a28dbc12defbf9803dd2fc7e3d0bc7efada35faed1282c5008"
+    },
+    {
+      "model_code": "R-ROBOTICS-3B",
+      "model_name": "Vivy-R-Robotics-3B",
+      "repo_id": "vinguyen0891/Vivy-R-Robotics-3B-GGUF",
+      "gguf_name": "vivy-r-robotics-3b-q4_k_m.gguf",
+      "v67_safetensors_name": "vivy_r_robotics_3b_v67_causal_instinct.safetensors",
+      "base_v66_tensors": 208,
+      "added_v67_tensors": 4,
+      "total_v67_tensors": 212,
+      "total_v67_f32_parameters": 258883,
+      "interrupt_resume_max_delta": 0.0,
+      "v67_checkpoint_path": "D:\\91s_Vivy\\Vivy.v6\\models\\r_series\\checkpoints\\vivy_r_robotics_3b_v67_causal_instinct.safetensors",
+      "v67_bundle_path": "D:\\91s_Vivy\\Vivy.v6\\models\\r_series\\public_release\\Vivy-R-Robotics-3B-GGUF\\vivy_r_robotics_3b_v67_causal_instinct.safetensors",
+      "v67_size_bytes": 1054356,
+      "v67_sha256": "0045f9857816f057418c382c1f709ee6600ffd5c9dc8a8467c319de36157725f",
+      "modelfile_v67_path": "D:\\91s_Vivy\\Vivy.v6\\models\\r_series\\public_release\\Vivy-R-Robotics-3B-GGUF\\Modelfile.v6.7",
+      "modelfile_v67_sha256": "4ecd2c6344981c7aa0c1565501b1e1337754779ee38656d0a156b3c875e7ff2f"
+    }
+  ],
+  "all_models_212_tensors_verified": true,
+  "all_models_interrupt_resume_zero_delta": true
+}
