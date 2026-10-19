@@ -44,7 +44,10 @@
     "vivy_r042_vbench_adversarial_instinct.safetensors",
     "vivy_r042_tri_pillar_blind_instinct.safetensors",
     "vivy_r043_physbench_unseen_instinct.safetensors",
-    "vivy_r043_physbench_adversarial_instinct.safetensors"
+    "vivy_r043_physbench_adversarial_instinct.safetensors",
+    "vivy_code2video_top3_instinct.safetensors",
+    "vivy_r050_arc_paper_track_instinct.safetensors",
+    "vivy_r050_arc_paper_track_adversarial_instinct.safetensors"
   ],
   "v67_zero_assistance_compass_pruning_ratio": 0.9375
 }

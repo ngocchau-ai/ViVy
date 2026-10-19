@@ -63,7 +63,7 @@
       "size_bytes": 138
     },
     "config.json": {
-      "size_bytes": 1741
+      "size_bytes": 1913
     },
     "docs/INHERITANCE_AND_R_SERIES_ARCHITECTURE.md": {
       "size_bytes": 7014
@@ -154,6 +154,15 @@
     },
     "vivy_r043_physbench_adversarial_instinct.safetensors": {
       "size_bytes": 22024
+    },
+    "vivy_code2video_top3_instinct.safetensors": {
+      "size_bytes": 15000
+    },
+    "vivy_r050_arc_paper_track_instinct.safetensors": {
+      "size_bytes": 12648
+    },
+    "vivy_r050_arc_paper_track_adversarial_instinct.safetensors": {
+      "size_bytes": 12648
     }
   },
   "release_version": "v6.6-Unified-Autopoietic-Top3-R036",
@@ -274,6 +283,18 @@
       "vivy_r043_physbench_adversarial_instinct.safetensors": {
         "size_bytes": 22024,
         "sha256": "40fc2f708291874f3c8b8e2ad8cf2ab9626a9b7f2488919f6d9c0f622c708287"
+      },
+      "vivy_code2video_top3_instinct.safetensors": {
+        "size_bytes": 15000,
+        "sha256": "1ba7547bc1baed1d8dd7c31b379094d2b30d9df2fff3d03868b997c3ebf32c22"
+      },
+      "vivy_r050_arc_paper_track_instinct.safetensors": {
+        "size_bytes": 12648,
+        "sha256": "a2bd9fc5083482f7fac010de4964d49543524c1c18210fb3995d690943754ec8"
+      },
+      "vivy_r050_arc_paper_track_adversarial_instinct.safetensors": {
+        "size_bytes": 12648,
+        "sha256": "a2bd9fc5083482f7fac010de4964d49543524c1c18210fb3995d690943754ec8"
       }
     }
   },

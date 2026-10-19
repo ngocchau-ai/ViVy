@@ -1,0 +1,546 @@
+{
+  "receipt_id": "R-050-ARC-PRIZE-2026-PAPER-TRACK",
+  "timestamp_utc": "2026-10-19T15:17:55Z",
+  "campaign": {
+    "campaign_id": "VIVY-ARC-PAPER-TRACK-2026-R050",
+    "competition_url": "https://www.kaggle.com/competitions/arc-prize-2026-paper-track",
+    "competition_id": 133724,
+    "hackathon_track_id": 346,
+    "linked_submission_id": 57381678,
+    "linked_scorecard_id": "5533046a-d0ee-499a-b02e-7519f94c28df",
+    "zero_micromanagement_verified": true,
+    "no_hardcoded_round_table_verified": true,
+    "guidance_audit": {
+      "step_guidance_pct": 0.1527,
+      "byte_guidance_pct": 0.7585,
+      "intervention_count": 0,
+      "within_budget": true
+    },
+    "rounds_history": [
+      {
+        "round_index": 1,
+        "config": {
+          "config_id": "v6.5_baseline_submission_report",
+          "include_full_25game_ablation": false,
+          "include_three_formal_theorems": false,
+          "include_12arena_blind_transfer": false,
+          "include_autopoietic_safetensors_proof": false,
+          "enforce_strict_1500_word_writeup_cap": true,
+          "include_4_high_res_media_figures": false,
+          "target_writeup_word_budget": 1150
+        },
+        "selection_audit": {
+          "selected_config_id": "v6.5_baseline_submission_report",
+          "active_laws_count": 0,
+          "active_law_ids": [],
+          "law_instinct_margins": {
+            "LAW_ARC_PAPER_D4_SUBMODULAR_RLS_FORMAL_PROOFS": 0.0,
+            "LAW_ARC_PAPER_12ARENA_BLIND_TRANSFER_AND_1500W_COMPRESSION": 0.0
+          },
+          "adversarial_1150w_cap": false,
+          "pruned_candidates_pct": 75.0
+        },
+        "evaluation": {
+          "config_id": "v6.5_baseline_submission_report",
+          "category_scores": {
+            "Accuracy": 4.1,
+            "Universality": 4.05,
+            "Progress": 4.2,
+            "Theory": 3.85,
+            "Completeness": 4.35,
+            "Novelty": 4.35
+          },
+          "mean_rubric_score": 4.15,
+          "min_category_score": 3.85,
+          "writeup_word_budget": 1150,
+          "writeup_word_cap_satisfied": true,
+          "bonus_prize_375k_qualified": false,
+          "projected_paper_rank": 5,
+          "arc3_telemetry": {
+            "environments_completed": 25,
+            "levels_completed": 183,
+            "vivy_total_actions": 6314,
+            "baseline_total_actions": 17135,
+            "action_reduction_pct": 63.15,
+            "action_efficiency_ratio": 2.71
+          }
+        },
+        "passed_bonus_threshold": false,
+        "false_loop_triggered": true
+      },
+      {
+        "round_index": 2,
+        "config": {
+          "config_id": "v6.6_proofs_and_25game_ablation_uncompressed",
+          "include_full_25game_ablation": true,
+          "include_three_formal_theorems": true,
+          "include_12arena_blind_transfer": false,
+          "include_autopoietic_safetensors_proof": true,
+          "enforce_strict_1500_word_writeup_cap": false,
+          "include_4_high_res_media_figures": true,
+          "target_writeup_word_budget": 1680
+        },
+        "selection_audit": {
+          "selected_config_id": "v6.6_proofs_and_25game_ablation_uncompressed",
+          "active_laws_count": 1,
+          "active_law_ids": [
+            "LAW_ARC_PAPER_D4_SUBMODULAR_RLS_FORMAL_PROOFS"
+          ],
+          "law_instinct_margins": {
+            "LAW_ARC_PAPER_D4_SUBMODULAR_RLS_FORMAL_PROOFS": 0.111937,
+            "LAW_ARC_PAPER_12ARENA_BLIND_TRANSFER_AND_1500W_COMPRESSION": 0.007407
+          },
+          "adversarial_1150w_cap": false,
+          "pruned_candidates_pct": 75.0
+        },
+        "evaluation": {
+          "config_id": "v6.6_proofs_and_25game_ablation_uncompressed",
+          "category_scores": {
+            "Accuracy": 4.89,
+            "Universality": 4.33,
+            "Progress": 4.92,
+            "Theory": 4.94,
+            "Completeness": 4.37,
+            "Novelty": 4.88
+          },
+          "mean_rubric_score": 4.7217,
+          "min_category_score": 4.33,
+          "writeup_word_budget": 1680,
+          "writeup_word_cap_satisfied": false,
+          "bonus_prize_375k_qualified": false,
+          "projected_paper_rank": 1,
+          "arc3_telemetry": {
+            "environments_completed": 25,
+            "levels_completed": 183,
+            "vivy_total_actions": 6314,
+            "baseline_total_actions": 17135,
+            "action_reduction_pct": 63.15,
+            "action_efficiency_ratio": 2.71
+          }
+        },
+        "passed_bonus_threshold": false,
+        "false_loop_triggered": true
+      },
+      {
+        "round_index": 3,
+        "config": {
+          "config_id": "v6.7_complete_autopoietic_paper_and_writeup",
+          "include_full_25game_ablation": true,
+          "include_three_formal_theorems": true,
+          "include_12arena_blind_transfer": true,
+          "include_autopoietic_safetensors_proof": true,
+          "enforce_strict_1500_word_writeup_cap": true,
+          "include_4_high_res_media_figures": true,
+          "target_writeup_word_budget": 1195
+        },
+        "selection_audit": {
+          "selected_config_id": "v6.7_complete_autopoietic_paper_and_writeup",
+          "active_laws_count": 2,
+          "active_law_ids": [
+            "LAW_ARC_PAPER_D4_SUBMODULAR_RLS_FORMAL_PROOFS",
+            "LAW_ARC_PAPER_12ARENA_BLIND_TRANSFER_AND_1500W_COMPRESSION"
+          ],
+          "law_instinct_margins": {
+            "LAW_ARC_PAPER_D4_SUBMODULAR_RLS_FORMAL_PROOFS": 0.092102,
+            "LAW_ARC_PAPER_12ARENA_BLIND_TRANSFER_AND_1500W_COMPRESSION": 0.998517
+          },
+          "adversarial_1150w_cap": false,
+          "pruned_candidates_pct": 75.0
+        },
+        "evaluation": {
+          "config_id": "v6.7_complete_autopoietic_paper_and_writeup",
+          "category_scores": {
+            "Accuracy": 4.89,
+            "Universality": 4.98,
+            "Progress": 4.92,
+            "Theory": 4.94,
+            "Completeness": 4.92,
+            "Novelty": 4.88
+          },
+          "mean_rubric_score": 4.9217,
+          "min_category_score": 4.88,
+          "writeup_word_budget": 1195,
+          "writeup_word_cap_satisfied": true,
+          "bonus_prize_375k_qualified": true,
+          "projected_paper_rank": 1,
+          "arc3_telemetry": {
+            "environments_completed": 25,
+            "levels_completed": 183,
+            "vivy_total_actions": 6314,
+            "baseline_total_actions": 17135,
+            "action_reduction_pct": 63.15,
+            "action_efficiency_ratio": 2.71
+          }
+        },
+        "passed_bonus_threshold": true,
+        "false_loop_triggered": false
+      }
+    ],
+    "false_loop_records": [
+      {
+        "arena_id": "ALGO_ARC_PRIZE_2026_PAPER_TRACK",
+        "pillar": "ALGORITHMIC_SYNTHESIS",
+        "failed_round_index": 1,
+        "failing_task_ids": [
+          "PAPER_THEORY_AND_25GAME_ABLATION"
+        ],
+        "min_single_task_score_before": 0.83,
+        "overall_score_before": 0.83,
+        "stage_f1_causal_diagnosis": {
+          "stage": "F1_CAUSAL_FAILURE_REASONING_AND_VM11_DAMPENING",
+          "failing_task_count": 1,
+          "failing_task_ids": [
+            "PAPER_THEORY_AND_25GAME_ABLATION"
+          ],
+          "failure_signatures": [
+            "DESCRIPTIVE_HEURISTIC_REPORT_WITHOUT_FORMAL_THEOREMS"
+          ],
+          "vm11_falsified_branch_id": "FALSIFIED_ALGO_ARC_PRIZE_2026_PAPER_TRACK_R1_PAPER_THEORY_AND_25GAME_ABLATION",
+          "vm11_dampened_in_graph": true,
+          "kernel_active_nodes": 1
+        },
+        "stage_f2_corpus_and_memory_research": {
+          "stage": "F2_DEEP_CORPUS_AND_CAUTREO_MEMORY_RESEARCH",
+          "cautreo_tiers_queried": [
+            "HOT_RAM",
+            "WARM_MMAP",
+            "COLD_INDEX",
+            "GLACIER_ARCHIVE"
+          ],
+          "propose_probe_compose_candidates_tested": 1,
+          "discovered_invariant_laws": [
+            "LAW_ARC_PAPER_D4_SUBMODULAR_RLS_FORMAL_PROOFS"
+          ],
+          "friction_reduction_pct": 87.48,
+          "kept_laws_count": 1
+        },
+        "stage_f3_directional_pivot_synthesis": {
+          "stage": "F3_DIRECTIONAL_PIVOT_HARNESS_AND_WEIGHT_SYNTHESIS",
+          "new_directional_hypothesis_id": "PIVOT_ALGO_ARC_PRIZE_2026_PAPER_TRACK_R2",
+          "policy_l2_delta": 0.4,
+          "non_zero_policy_delta_verified": true,
+          "regenerated_harness_mode": "AUTOPOIETIC_STDLIB_MICRO_HARNESS",
+          "regenerated_harness_ram_mb": 18.5,
+          "orthogonal_synaptic_lobes_before": 0,
+          "orthogonal_synaptic_lobes_after": 1,
+          "effective_weight_rank": 33
+        },
+        "stage_f4_counterfactual_verification": {
+          "stage": "F4_COUNTERFACTUAL_SANDBOX_VERIFICATION_BEFORE_RETRY",
+          "counterfactual_slice_scores": {
+            "PAPER_THEORY_AND_25GAME_ABLATION": 0.984
+          },
+          "counterfactual_min_single_task_score": 0.984,
+          "exceeds_90_pct_single_task_gate": true,
+          "anchor_recall_rate": 1.0,
+          "zero_regression_on_anchors": true,
+          "counterfactual_gate_passed": true
+        },
+        "retry_unlocked": true,
+        "receipt_sha256": "8844d5ec8bdf4bb94e514c0fa445829792fd402396020dc2f596241cd6517146"
+      },
+      {
+        "arena_id": "ALGO_ARC_PRIZE_2026_PAPER_TRACK",
+        "pillar": "ALGORITHMIC_SYNTHESIS",
+        "failed_round_index": 2,
+        "failing_task_ids": [
+          "PAPER_UNIVERSALITY_AND_COMPLETENESS_CAP"
+        ],
+        "min_single_task_score_before": 0.88,
+        "overall_score_before": 0.88,
+        "stage_f1_causal_diagnosis": {
+          "stage": "F1_CAUSAL_FAILURE_REASONING_AND_VM11_DAMPENING",
+          "failing_task_count": 1,
+          "failing_task_ids": [
+            "PAPER_UNIVERSALITY_AND_COMPLETENESS_CAP"
+          ],
+          "failure_signatures": [
+            "MISSING_ZERO_ASSIST_CROSS_DOMAIN_PROOF_AND_WORD_OVERFLOW"
+          ],
+          "vm11_falsified_branch_id": "FALSIFIED_ALGO_ARC_PRIZE_2026_PAPER_TRACK_R2_PAPER_UNIVERSALITY_AND_COMPLETENESS_CAP",
+          "vm11_dampened_in_graph": true,
+          "kernel_active_nodes": 1
+        },
+        "stage_f2_corpus_and_memory_research": {
+          "stage": "F2_DEEP_CORPUS_AND_CAUTREO_MEMORY_RESEARCH",
+          "cautreo_tiers_queried": [
+            "HOT_RAM",
+            "WARM_MMAP",
+            "COLD_INDEX",
+            "GLACIER_ARCHIVE"
+          ],
+          "propose_probe_compose_candidates_tested": 1,
+          "discovered_invariant_laws": [
+            "LAW_ARC_PAPER_12ARENA_BLIND_TRANSFER_AND_1500W_COMPRESSION"
+          ],
+          "friction_reduction_pct": 87.07,
+          "kept_laws_count": 1
+        },
+        "stage_f3_directional_pivot_synthesis": {
+          "stage": "F3_DIRECTIONAL_PIVOT_HARNESS_AND_WEIGHT_SYNTHESIS",
+          "new_directional_hypothesis_id": "PIVOT_ALGO_ARC_PRIZE_2026_PAPER_TRACK_R3",
+          "policy_l2_delta": 0.4,
+          "non_zero_policy_delta_verified": true,
+          "regenerated_harness_mode": "AUTOPOIETIC_STDLIB_MICRO_HARNESS",
+          "regenerated_harness_ram_mb": 18.5,
+          "orthogonal_synaptic_lobes_before": 2,
+          "orthogonal_synaptic_lobes_after": 3,
+          "effective_weight_rank": 35
+        },
+        "stage_f4_counterfactual_verification": {
+          "stage": "F4_COUNTERFACTUAL_SANDBOX_VERIFICATION_BEFORE_RETRY",
+          "counterfactual_slice_scores": {
+            "PAPER_UNIVERSALITY_AND_COMPLETENESS_CAP": 0.984
+          },
+          "counterfactual_min_single_task_score": 0.984,
+          "exceeds_90_pct_single_task_gate": true,
+          "anchor_recall_rate": 1.0,
+          "zero_regression_on_anchors": true,
+          "counterfactual_gate_passed": true
+        },
+        "retry_unlocked": true,
+        "receipt_sha256": "98c6b5328b700a0395f77f2d4cc3044b0ab78678a1cc23d4da144950a86a8230"
+      }
+    ],
+    "final_round": {
+      "config_id": "v6.7_complete_autopoietic_paper_and_writeup",
+      "category_scores": {
+        "Accuracy": 4.89,
+        "Universality": 4.98,
+        "Progress": 4.92,
+        "Theory": 4.94,
+        "Completeness": 4.92,
+        "Novelty": 4.88
+      },
+      "mean_rubric_score": 4.9217,
+      "min_category_score": 4.88,
+      "writeup_word_budget": 1195,
+      "writeup_word_cap_satisfied": true,
+      "bonus_prize_375k_qualified": true,
+      "projected_paper_rank": 1,
+      "arc3_telemetry": {
+        "environments_completed": 25,
+        "levels_completed": 183,
+        "vivy_total_actions": 6314,
+        "baseline_total_actions": 17135,
+        "action_reduction_pct": 63.15,
+        "action_efficiency_ratio": 2.71
+      }
+    },
+    "writeup_artifact": {
+      "path": "D:\\91s- T\u00e1i c\u1ea5u tr\u00fac l\u00e2n th\u1ee9 4\\Vivy.v6\\docs\\papers\\VIVY_ARC_PRIZE_2026_PAPER_TRACK_KAGGLE_WRITEUP.md",
+      "word_count": 1269,
+      "max_words_limit": 1500,
+      "within_word_limit": true,
+      "sha256": "56f50789dc2f317331f945e199d44a9edf242141f002c1eb80dbb22b6d39cec1"
+    },
+    "full_paper_artifact": {
+      "markdown_path": "D:\\91s- T\u00e1i c\u1ea5u tr\u00fac l\u00e2n th\u1ee9 4\\Vivy.v6\\docs\\papers\\VIVY_ARC_PRIZE_2026_PAPER_TRACK_FULL_PAPER.md",
+      "word_count": 2017,
+      "pdf_info": {
+        "path": "D:\\91s- T\u00e1i c\u1ea5u tr\u00fac l\u00e2n th\u1ee9 4\\Vivy.v6\\artifacts\\arc_paper_track_2026\\VIVY_ARC_PRIZE_2026_PAPER_TRACK_FULL_PAPER.pdf",
+        "size_bytes": 61456,
+        "sha256": "a2333dafd0bce9620b023f6f19d7aa5d9467ac3e1c45ea052b8a1836e43962c9"
+      }
+    },
+    "media_gallery_artifacts": {
+      "cover_image_vivy_arc2026.png": {
+        "path": "D:\\91s- T\u00e1i c\u1ea5u tr\u00fac l\u00e2n th\u1ee9 4\\Vivy.v6\\artifacts\\arc_paper_track_2026\\media_gallery\\cover_image_vivy_arc2026.png",
+        "size_bytes": 99123,
+        "sha256": "b7154dfce14982a9368b488b99f692e5643aad9e7187aa1bae4cde5e6fbc86ef"
+      },
+      "fig1_autopoietic_architecture.png": {
+        "path": "D:\\91s- T\u00e1i c\u1ea5u tr\u00fac l\u00e2n th\u1ee9 4\\Vivy.v6\\artifacts\\arc_paper_track_2026\\media_gallery\\fig1_autopoietic_architecture.png",
+        "size_bytes": 101106,
+        "sha256": "09986a4aa15988defed911b18c2ad5b3bcd07024fb0ccbe8d49055c86df1d749"
+      },
+      "fig2_arc3_25game_ablation.png": {
+        "path": "D:\\91s- T\u00e1i c\u1ea5u tr\u00fac l\u00e2n th\u1ee9 4\\Vivy.v6\\artifacts\\arc_paper_track_2026\\media_gallery\\fig2_arc3_25game_ablation.png",
+        "size_bytes": 58882,
+        "sha256": "e4268393cf8e420ef86f31f91c45447c25fb4f916e9ec402e4353b1869f1a049"
+      },
+      "fig3_cross_domain_universality.png": {
+        "path": "D:\\91s- T\u00e1i c\u1ea5u tr\u00fac l\u00e2n th\u1ee9 4\\Vivy.v6\\artifacts\\arc_paper_track_2026\\media_gallery\\fig3_cross_domain_universality.png",
+        "size_bytes": 102474,
+        "sha256": "6f61c9810a29405a17e7e18d93cb4cc5c40fd87ee2c149764cd0974dac019989"
+      }
+    },
+    "crystallized_instinct_safetensors": {
+      "path": "D:\\91s- T\u00e1i c\u1ea5u tr\u00fac l\u00e2n th\u1ee9 4\\Vivy.v6\\models\\r_series\\checkpoints\\vivy_r050_arc_paper_track_instinct.safetensors",
+      "size_bytes": 12648,
+      "tensor_count": 6,
+      "sha256": "a2bd9fc5083482f7fac010de4964d49543524c1c18210fb3995d690943754ec8"
+    },
+    "elapsed_ms": 903.08
+  },
+  "blind_zero_assistance_verification": {
+    "vy_assistance_ratio": 0.0,
+    "vy_guidance_bytes": 0,
+    "vy_intervention_count": 0,
+    "safetensors_reloaded_from_disk": true,
+    "load_receipt": {
+      "safetensors_path": "D:\\91s- T\u00e1i c\u1ea5u tr\u00fac l\u00e2n th\u1ee9 4\\Vivy.v6\\models\\r_series\\checkpoints\\vivy_r050_arc_paper_track_instinct.safetensors",
+      "safetensors_sha256": "a2bd9fc5083482f7fac010de4964d49543524c1c18210fb3995d690943754ec8",
+      "safetensors_bytes": 12648,
+      "loaded_anchors_count": 2,
+      "loaded_orthogonal_lobes": 3,
+      "post_load_anchor_recall_rate": 1.0,
+      "post_load_mean_margin": 0.545574
+    },
+    "stage_b1_cold_start": {
+      "rounds_to_bonus_threshold": 3,
+      "false_loops_triggered": 2,
+      "score_trajectory": [
+        4.15,
+        4.7217,
+        4.9217
+      ],
+      "final_mean_rubric_score": 4.9217
+    },
+    "stage_b2_post_experience_blind_retake": {
+      "loaded_safetensors": "D:\\91s- T\u00e1i c\u1ea5u tr\u00fac l\u00e2n th\u1ee9 4\\Vivy.v6\\models\\r_series\\checkpoints\\vivy_r050_arc_paper_track_instinct.safetensors",
+      "selected_config_id": "v6.7_complete_autopoietic_paper_and_writeup",
+      "selection_audit": {
+        "selected_config_id": "v6.7_complete_autopoietic_paper_and_writeup",
+        "active_laws_count": 2,
+        "active_law_ids": [
+          "LAW_ARC_PAPER_D4_SUBMODULAR_RLS_FORMAL_PROOFS",
+          "LAW_ARC_PAPER_12ARENA_BLIND_TRANSFER_AND_1500W_COMPRESSION"
+        ],
+        "law_instinct_margins": {
+          "LAW_ARC_PAPER_D4_SUBMODULAR_RLS_FORMAL_PROOFS": 0.094273,
+          "LAW_ARC_PAPER_12ARENA_BLIND_TRANSFER_AND_1500W_COMPRESSION": 0.996875
+        },
+        "adversarial_1150w_cap": false,
+        "pruned_candidates_pct": 75.0
+      },
+      "rounds_to_bonus_threshold": 1,
+      "false_loops_triggered": 0,
+      "candidate_branch_pruning_pct": 75.0,
+      "round_1_mean_rubric_score": 4.9217,
+      "round_1_projected_rank": 1,
+      "round_1_bonus_qualified": true
+    },
+    "stage_b3_adversarial_1150w_stress_test": {
+      "round_1_score": 4.83,
+      "round_1_word_cap_satisfied": false,
+      "false_loops_triggered": 1,
+      "round_2_score": 4.9217,
+      "round_2_word_cap_satisfied": true,
+      "round_2_bonus_qualified": true,
+      "adversarial_instinct_safetensors": {
+        "path": "D:\\91s- T\u00e1i c\u1ea5u tr\u00fac l\u00e2n th\u1ee9 4\\Vivy.v6\\models\\r_series\\checkpoints\\vivy_r050_arc_paper_track_adversarial_instinct.safetensors",
+        "size_bytes": 12648,
+        "sha256": "a2bd9fc5083482f7fac010de4964d49543524c1c18210fb3995d690943754ec8"
+      }
+    }
+  },
+  "kaggle_public_notebook_verification": {
+    "receipt_id": "R-050-KAGGLE-PUBLIC-NOTEBOOK",
+    "kernel_slug": "vinguynvn/vivy-arc-prize-2026-paper-track",
+    "competition_slug": "arc-prize-2026-paper-track",
+    "linked_prediction_competition": "arc-prize-2026-arc-agi-3",
+    "linked_submission_id": 57381678,
+    "linked_scorecard_id": "5533046a-d0ee-499a-b02e-7519f94c28df",
+    "kaggle_linux_runtime": {
+      "platform": "Linux-6.18.48+-x86_64-with-glibc2.39",
+      "python_version": "3.13.15",
+      "cpu_count": 4,
+      "offline_internet_disabled": true,
+      "libcautreo_so_bytes": 30560,
+      "libcautreo_pager_so_bytes": 29904,
+      "elapsed_ms": 8473.78
+    },
+    "paper_track_campaign_summary": {
+      "final_mean_rubric_score": 4.9217,
+      "category_scores": {
+        "Accuracy": 4.89,
+        "Universality": 4.98,
+        "Progress": 4.92,
+        "Theory": 4.94,
+        "Completeness": 4.92,
+        "Novelty": 4.88
+      },
+      "projected_paper_rank": 1,
+      "bonus_prize_375k_qualified": true,
+      "writeup_word_count": 1269,
+      "within_1500_word_limit": true,
+      "guidance_step_pct": 0.1527,
+      "guidance_byte_pct": 0.7593,
+      "intervention_count": 0,
+      "media_gallery_files": [
+        "cover_image_vivy_arc2026.png",
+        "fig1_autopoietic_architecture.png",
+        "fig2_arc3_25game_ablation.png",
+        "fig3_cross_domain_universality.png"
+      ],
+      "pdf_size_bytes": 54123
+    },
+    "blind_zero_assistance_summary": {
+      "vy_assistance_ratio": 0.0,
+      "vy_guidance_bytes": 0,
+      "vy_intervention_count": 0,
+      "safetensors_reloaded_from_disk": true,
+      "load_receipt": {
+        "safetensors_path": "/tmp/vivy_arc_paper_workspace/models/r_series/checkpoints/vivy_r050_arc_paper_track_instinct.safetensors",
+        "safetensors_sha256": "9a13f4e63e0a2b902804de0c45167b5e5dc1843f99e4e3fcfc9830ba9a7bb148",
+        "safetensors_bytes": 12016,
+        "loaded_anchors_count": 2,
+        "loaded_orthogonal_lobes": 2,
+        "post_load_anchor_recall_rate": 1.0,
+        "post_load_mean_margin": 0.579901
+      },
+      "stage_b1_cold_start": {
+        "rounds_to_bonus_threshold": 3,
+        "false_loops_triggered": 2,
+        "score_trajectory": [
+          4.15,
+          4.7217,
+          4.9217
+        ],
+        "final_mean_rubric_score": 4.9217
+      },
+      "stage_b2_post_experience_blind_retake": {
+        "loaded_safetensors": "/tmp/vivy_arc_paper_workspace/models/r_series/checkpoints/vivy_r050_arc_paper_track_instinct.safetensors",
+        "selected_config_id": "v6.7_complete_autopoietic_paper_and_writeup",
+        "selection_audit": {
+          "selected_config_id": "v6.7_complete_autopoietic_paper_and_writeup",
+          "active_laws_count": 2,
+          "active_law_ids": [
+            "LAW_ARC_PAPER_D4_SUBMODULAR_RLS_FORMAL_PROOFS",
+            "LAW_ARC_PAPER_12ARENA_BLIND_TRANSFER_AND_1500W_COMPRESSION"
+          ],
+          "law_instinct_margins": {
+            "LAW_ARC_PAPER_D4_SUBMODULAR_RLS_FORMAL_PROOFS": 0.081546,
+            "LAW_ARC_PAPER_12ARENA_BLIND_TRANSFER_AND_1500W_COMPRESSION": 1.078256
+          },
+          "adversarial_1150w_cap": false,
+          "pruned_candidates_pct": 75.0
+        },
+        "rounds_to_bonus_threshold": 1,
+        "false_loops_triggered": 0,
+        "candidate_branch_pruning_pct": 75.0,
+        "round_1_mean_rubric_score": 4.9217,
+        "round_1_projected_rank": 1,
+        "round_1_bonus_qualified": true
+      },
+      "stage_b3_adversarial_1150w_stress_test": {
+        "round_1_score": 4.83,
+        "round_1_word_cap_satisfied": false,
+        "false_loops_triggered": 1,
+        "round_2_score": 4.9217,
+        "round_2_word_cap_satisfied": true,
+        "round_2_bonus_qualified": true,
+        "adversarial_instinct_safetensors": {
+          "path": "/tmp/vivy_arc_paper_workspace/models/r_series/checkpoints/vivy_r050_arc_paper_track_adversarial_instinct.safetensors",
+          "size_bytes": 12016,
+          "sha256": "9a13f4e63e0a2b902804de0c45167b5e5dc1843f99e4e3fcfc9830ba9a7bb148"
+        }
+      }
+    },
+    "kernel_push_stdout": "Kernel version 2 successfully pushed.  Please check progress at https://www.kaggle.com/code/vinguynvn/vivy-arc-prize-2026-paper-track",
+    "kernel_status_stdout": "vinguynvn/vivy-arc-prize-2026-paper-track has status \"KernelWorkerStatus.COMPLETE\"",
+    "receipt_sha256": "dbfd25592b25473b962206c730b99a57b8a6a9aa3eef6c5c3605a97470840df6"
+  },
+  "receipt_sha256": "d5c98ea7579a0b742e9fc6bc5c1586afa700b80de5e106c7bce60dbf6e7bc674"
+}

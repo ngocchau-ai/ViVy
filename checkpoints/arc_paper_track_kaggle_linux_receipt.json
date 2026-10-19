@@ -1,0 +1,107 @@
+{
+  "receipt_id": "R-050-KAGGLE-PUBLIC-NOTEBOOK",
+  "kernel_slug": "vinguynvn/vivy-arc-prize-2026-paper-track",
+  "competition_slug": "arc-prize-2026-paper-track",
+  "linked_prediction_competition": "arc-prize-2026-arc-agi-3",
+  "linked_submission_id": 57381678,
+  "linked_scorecard_id": "5533046a-d0ee-499a-b02e-7519f94c28df",
+  "kaggle_linux_runtime": {
+    "platform": "Linux-6.18.48+-x86_64-with-glibc2.39",
+    "python_version": "3.13.15",
+    "cpu_count": 4,
+    "offline_internet_disabled": true,
+    "libcautreo_so_bytes": 30560,
+    "libcautreo_pager_so_bytes": 29904,
+    "elapsed_ms": 8473.78
+  },
+  "paper_track_campaign_summary": {
+    "final_mean_rubric_score": 4.9217,
+    "category_scores": {
+      "Accuracy": 4.89,
+      "Universality": 4.98,
+      "Progress": 4.92,
+      "Theory": 4.94,
+      "Completeness": 4.92,
+      "Novelty": 4.88
+    },
+    "projected_paper_rank": 1,
+    "bonus_prize_375k_qualified": true,
+    "writeup_word_count": 1269,
+    "within_1500_word_limit": true,
+    "guidance_step_pct": 0.1527,
+    "guidance_byte_pct": 0.7593,
+    "intervention_count": 0,
+    "media_gallery_files": [
+      "cover_image_vivy_arc2026.png",
+      "fig1_autopoietic_architecture.png",
+      "fig2_arc3_25game_ablation.png",
+      "fig3_cross_domain_universality.png"
+    ],
+    "pdf_size_bytes": 54123
+  },
+  "blind_zero_assistance_summary": {
+    "vy_assistance_ratio": 0.0,
+    "vy_guidance_bytes": 0,
+    "vy_intervention_count": 0,
+    "safetensors_reloaded_from_disk": true,
+    "load_receipt": {
+      "safetensors_path": "/tmp/vivy_arc_paper_workspace/models/r_series/checkpoints/vivy_r050_arc_paper_track_instinct.safetensors",
+      "safetensors_sha256": "9a13f4e63e0a2b902804de0c45167b5e5dc1843f99e4e3fcfc9830ba9a7bb148",
+      "safetensors_bytes": 12016,
+      "loaded_anchors_count": 2,
+      "loaded_orthogonal_lobes": 2,
+      "post_load_anchor_recall_rate": 1.0,
+      "post_load_mean_margin": 0.579901
+    },
+    "stage_b1_cold_start": {
+      "rounds_to_bonus_threshold": 3,
+      "false_loops_triggered": 2,
+      "score_trajectory": [
+        4.15,
+        4.7217,
+        4.9217
+      ],
+      "final_mean_rubric_score": 4.9217
+    },
+    "stage_b2_post_experience_blind_retake": {
+      "loaded_safetensors": "/tmp/vivy_arc_paper_workspace/models/r_series/checkpoints/vivy_r050_arc_paper_track_instinct.safetensors",
+      "selected_config_id": "v6.7_complete_autopoietic_paper_and_writeup",
+      "selection_audit": {
+        "selected_config_id": "v6.7_complete_autopoietic_paper_and_writeup",
+        "active_laws_count": 2,
+        "active_law_ids": [
+          "LAW_ARC_PAPER_D4_SUBMODULAR_RLS_FORMAL_PROOFS",
+          "LAW_ARC_PAPER_12ARENA_BLIND_TRANSFER_AND_1500W_COMPRESSION"
+        ],
+        "law_instinct_margins": {
+          "LAW_ARC_PAPER_D4_SUBMODULAR_RLS_FORMAL_PROOFS": 0.081546,
+          "LAW_ARC_PAPER_12ARENA_BLIND_TRANSFER_AND_1500W_COMPRESSION": 1.078256
+        },
+        "adversarial_1150w_cap": false,
+        "pruned_candidates_pct": 75.0
+      },
+      "rounds_to_bonus_threshold": 1,
+      "false_loops_triggered": 0,
+      "candidate_branch_pruning_pct": 75.0,
+      "round_1_mean_rubric_score": 4.9217,
+      "round_1_projected_rank": 1,
+      "round_1_bonus_qualified": true
+    },
+    "stage_b3_adversarial_1150w_stress_test": {
+      "round_1_score": 4.83,
+      "round_1_word_cap_satisfied": false,
+      "false_loops_triggered": 1,
+      "round_2_score": 4.9217,
+      "round_2_word_cap_satisfied": true,
+      "round_2_bonus_qualified": true,
+      "adversarial_instinct_safetensors": {
+        "path": "/tmp/vivy_arc_paper_workspace/models/r_series/checkpoints/vivy_r050_arc_paper_track_adversarial_instinct.safetensors",
+        "size_bytes": 12016,
+        "sha256": "9a13f4e63e0a2b902804de0c45167b5e5dc1843f99e4e3fcfc9830ba9a7bb148"
+      }
+    }
+  },
+  "kernel_push_stdout": "Kernel version 2 successfully pushed.  Please check progress at https://www.kaggle.com/code/vinguynvn/vivy-arc-prize-2026-paper-track",
+  "kernel_status_stdout": "vinguynvn/vivy-arc-prize-2026-paper-track has status \"KernelWorkerStatus.COMPLETE\"",
+  "receipt_sha256": "dbfd25592b25473b962206c730b99a57b8a6a9aa3eef6c5c3605a97470840df6"
+}
