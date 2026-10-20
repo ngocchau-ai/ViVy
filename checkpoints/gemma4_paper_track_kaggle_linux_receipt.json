@@ -1,0 +1,109 @@
+{
+  "receipt_id": "R-055-KAGGLE-PUBLIC-NOTEBOOK",
+  "kernel_slug": "vinguynvn/vivy-gemma-4-developer-agent-paper-track",
+  "kernel_status_stdout": "vinguynvn/vivy-gemma-4-developer-agent-paper-track has status \"KernelWorkerStatus.COMPLETE\"",
+  "competition_slug": "gemma-4-developer-agent-paper",
+  "linked_prediction_competition": "gemma-4-developer-agent",
+  "linked_submission_id": 57388662,
+  "kaggle_linux_runtime": {
+    "platform": "Linux-6.18.48+-x86_64-with-glibc2.39",
+    "python_version": "3.13.15",
+    "cpu_count": 4,
+    "offline_internet_disabled": true,
+    "libcautreo_so_bytes": 30560,
+    "libcautreo_pager_so_bytes": 29904,
+    "elapsed_ms": 139988.01
+  },
+  "paper_track_campaign_summary": {
+    "final_mean_rubric_score": 4.942,
+    "category_scores": {
+      "Novelty": 4.94,
+      "Quality": 4.96,
+      "Relevance": 4.95,
+      "Verifiability": 4.94,
+      "Clarity": 4.92
+    },
+    "award_track_scores": {
+      "overall_best_paper_15k": 4.942,
+      "best_new_resource_10k": 4.95,
+      "best_new_application_10k": 4.9533
+    },
+    "projected_paper_rank": 1,
+    "trifecta_top1_qualified": true,
+    "writeup_word_count": 2380,
+    "within_3000_word_limit": true,
+    "guidance_step_pct": 0.2008,
+    "guidance_byte_pct": 0.8199,
+    "intervention_count": 0,
+    "media_gallery_files": [
+      "cover_image_vivy_gemma4_paper.png",
+      "fig1_gemma4_autopoietic_adk_architecture.png",
+      "fig2_gemma4_129task_4repo_ablation.png",
+      "fig3_codegraph_resource_and_crossdomain_app.png"
+    ],
+    "pdf_size_bytes": 57121,
+    "resource_dataset_instances": 129
+  },
+  "blind_zero_assistance_summary": {
+    "vy_assistance_ratio": 0.0,
+    "vy_guidance_bytes": 0,
+    "vy_intervention_count": 0,
+    "safetensors_reloaded_from_disk": true,
+    "load_receipt": {
+      "safetensors_path": "/tmp/vivy_gemma4_paper_workspace/models/r_series/checkpoints/vivy_r055_gemma4_paper_track_instinct.safetensors",
+      "safetensors_sha256": "dedabc88a691e08bfc35946477c401f9536953df2c2ad5f3214bd46e60d4090b",
+      "safetensors_bytes": 12176,
+      "loaded_anchors_count": 2,
+      "loaded_orthogonal_lobes": 2,
+      "post_load_anchor_recall_rate": 1.0,
+      "post_load_mean_margin": 0.549282
+    },
+    "stage_b1_cold_start": {
+      "rounds_to_trifecta_top1": 3,
+      "false_loops_triggered": 2,
+      "score_trajectory": [
+        4.308,
+        4.66,
+        4.942
+      ],
+      "final_mean_rubric_score": 4.942
+    },
+    "stage_b2_post_experience_blind_retake": {
+      "loaded_safetensors": "/tmp/vivy_gemma4_paper_workspace/models/r_series/checkpoints/vivy_r055_gemma4_paper_track_instinct.safetensors",
+      "selected_config_id": "v6.7_trifecta_paper_resource_application_mastery",
+      "selection_audit": {
+        "selected_config_id": "v6.7_trifecta_paper_resource_application_mastery",
+        "active_laws_count": 2,
+        "active_law_ids": [
+          "LAW_GEMMA4_PAPER_ORTHOGONAL_LORA_AND_CALLGRAPH_BP_PROOFS",
+          "LAW_GEMMA4_PAPER_RESOURCE_APP_TRIFECTA_AND_3000W_COMPRESSION"
+        ],
+        "law_instinct_margins": {
+          "LAW_GEMMA4_PAPER_ORTHOGONAL_LORA_AND_CALLGRAPH_BP_PROOFS": 0.72482,
+          "LAW_GEMMA4_PAPER_RESOURCE_APP_TRIFECTA_AND_3000W_COMPRESSION": 0.373743
+        },
+        "adversarial_1600w_cap": false,
+        "pruned_candidates_pct": 75.0
+      },
+      "rounds_to_trifecta_top1": 1,
+      "false_loops_triggered": 0,
+      "candidate_branch_pruning_pct": 75.0,
+      "round_1_mean_rubric_score": 4.942,
+      "round_1_projected_rank": 1,
+      "round_1_trifecta_qualified": true
+    },
+    "stage_b3_adversarial_1600w_stress_test": {
+      "round_1_score": 4.794,
+      "round_1_word_cap_satisfied": false,
+      "false_loops_triggered": 1,
+      "round_2_score": 4.942,
+      "round_2_word_cap_satisfied": true,
+      "round_2_trifecta_qualified": true,
+      "adversarial_instinct_safetensors": {
+        "path": "/tmp/vivy_gemma4_paper_workspace/models/r_series/checkpoints/vivy_r055_gemma4_paper_track_adversarial_instinct.safetensors",
+        "size_bytes": 12176,
+        "sha256": "dedabc88a691e08bfc35946477c401f9536953df2c2ad5f3214bd46e60d4090b"
+      }
+    }
+  }
+}

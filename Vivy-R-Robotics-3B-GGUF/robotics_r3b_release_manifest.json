@@ -63,7 +63,7 @@
       "size_bytes": 138
     },
     "config.json": {
-      "size_bytes": 1918
+      "size_bytes": 2046
     },
     "docs/INHERITANCE_AND_R_SERIES_ARCHITECTURE.md": {
       "size_bytes": 7014
@@ -163,6 +163,12 @@
     },
     "vivy_r050_arc_paper_track_adversarial_instinct.safetensors": {
       "size_bytes": 12648
+    },
+    "vivy_r055_gemma4_paper_track_instinct.safetensors": {
+      "size_bytes": 12808
+    },
+    "vivy_r055_gemma4_paper_track_adversarial_instinct.safetensors": {
+      "size_bytes": 12808
     }
   },
   "release_version": "v6.5-Autopoietic-Harness-Open-Neurogenesis-R035",
@@ -295,6 +301,14 @@
       "vivy_r050_arc_paper_track_adversarial_instinct.safetensors": {
         "size_bytes": 12648,
         "sha256": "a2bd9fc5083482f7fac010de4964d49543524c1c18210fb3995d690943754ec8"
+      },
+      "vivy_r055_gemma4_paper_track_instinct.safetensors": {
+        "size_bytes": 12808,
+        "sha256": "43a0b41353bc778a7afc75ee6954cef412cbd8203749669c3178dc6130845a5d"
+      },
+      "vivy_r055_gemma4_paper_track_adversarial_instinct.safetensors": {
+        "size_bytes": 12808,
+        "sha256": "43a0b41353bc778a7afc75ee6954cef412cbd8203749669c3178dc6130845a5d"
       }
     }
   },

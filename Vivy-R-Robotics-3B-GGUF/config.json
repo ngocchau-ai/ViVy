@@ -47,7 +47,9 @@
     "vivy_r043_physbench_adversarial_instinct.safetensors",
     "vivy_code2video_top3_instinct.safetensors",
     "vivy_r050_arc_paper_track_instinct.safetensors",
-    "vivy_r050_arc_paper_track_adversarial_instinct.safetensors"
+    "vivy_r050_arc_paper_track_adversarial_instinct.safetensors",
+    "vivy_r055_gemma4_paper_track_instinct.safetensors",
+    "vivy_r055_gemma4_paper_track_adversarial_instinct.safetensors"
   ],
   "v67_zero_assistance_compass_pruning_ratio": 0.9375
 }

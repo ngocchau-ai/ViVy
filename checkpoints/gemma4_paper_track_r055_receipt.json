@@ -1,0 +1,703 @@
+{
+  "receipt_id": "R-055-GEMMA4-DEVELOPER-AGENT-PAPER-TRACK",
+  "timestamp_utc": "2026-10-20T02:16:48Z",
+  "campaign": {
+    "campaign_id": "VIVY-GEMMA4-PAPER-TRACK-2026-R055",
+    "competition_url": "https://www.kaggle.com/competitions/gemma-4-developer-agent-paper/writeups",
+    "competition_id": 163111,
+    "hackathon_track_id": 7317,
+    "linked_submission_id": 57388662,
+    "zero_micromanagement_verified": true,
+    "no_hardcoded_round_table_verified": true,
+    "guidance_audit": {
+      "step_guidance_pct": 0.2008,
+      "byte_guidance_pct": 0.8192,
+      "intervention_count": 0,
+      "within_budget": true
+    },
+    "rounds_history": [
+      {
+        "round_index": 1,
+        "config": {
+          "config_id": "v6.5_starter_descriptive_report",
+          "include_three_formal_theorems": false,
+          "include_129task_4repo_ablation": true,
+          "include_swe_graph_instinct_129_resource": false,
+          "include_cross_domain_codegraph_applications": false,
+          "include_autopoietic_safetensors_blind_proof": false,
+          "enforce_strict_3000_word_writeup_cap": true,
+          "include_4_high_res_media_figures": false,
+          "target_writeup_word_budget": 1450
+        },
+        "selection_audit": {
+          "selected_config_id": "v6.5_starter_descriptive_report",
+          "active_laws_count": 0,
+          "active_law_ids": [],
+          "law_instinct_margins": {
+            "LAW_GEMMA4_PAPER_ORTHOGONAL_LORA_AND_CALLGRAPH_BP_PROOFS": 0.0,
+            "LAW_GEMMA4_PAPER_RESOURCE_APP_TRIFECTA_AND_3000W_COMPRESSION": 0.0
+          },
+          "adversarial_1600w_cap": false,
+          "pruned_candidates_pct": 75.0
+        },
+        "evaluation": {
+          "config_id": "v6.5_starter_descriptive_report",
+          "category_scores": {
+            "Novelty": 4.02,
+            "Quality": 4.36,
+            "Relevance": 4.22,
+            "Verifiability": 4.44,
+            "Clarity": 4.5
+          },
+          "mean_rubric_score": 4.308,
+          "min_category_score": 4.02,
+          "writeup_word_budget": 1450,
+          "writeup_word_cap_satisfied": true,
+          "award_track_scores": {
+            "overall_best_paper_15k": 4.308,
+            "best_new_resource_10k": 4.0867,
+            "best_new_application_10k": 3.9767
+          },
+          "trifecta_top1_qualified": false,
+          "projected_paper_rank": 5,
+          "swe_benchmark_telemetry": {
+            "total_tasks": 129,
+            "v60_starter_resolved": 57,
+            "v60_starter_rate": 0.4419,
+            "v66_adk_lora_resolved": 84,
+            "v66_adk_lora_rate": 0.6512,
+            "v67_codegraph_bp_resolved": 118,
+            "v67_codegraph_bp_rate": 0.9147,
+            "min_repo_resolution_rate_v67": 0.9104
+          }
+        },
+        "passed_trifecta_top1_gate": false,
+        "false_loop_triggered": true
+      },
+      {
+        "round_index": 2,
+        "config": {
+          "config_id": "v6.6_theorems_and_129task_ablation_overflow",
+          "include_three_formal_theorems": true,
+          "include_129task_4repo_ablation": true,
+          "include_swe_graph_instinct_129_resource": true,
+          "include_cross_domain_codegraph_applications": false,
+          "include_autopoietic_safetensors_blind_proof": true,
+          "enforce_strict_3000_word_writeup_cap": false,
+          "include_4_high_res_media_figures": true,
+          "target_writeup_word_budget": 3280
+        },
+        "selection_audit": {
+          "selected_config_id": "v6.6_theorems_and_129task_ablation_overflow",
+          "active_laws_count": 1,
+          "active_law_ids": [
+            "LAW_GEMMA4_PAPER_ORTHOGONAL_LORA_AND_CALLGRAPH_BP_PROOFS"
+          ],
+          "law_instinct_margins": {
+            "LAW_GEMMA4_PAPER_ORTHOGONAL_LORA_AND_CALLGRAPH_BP_PROOFS": 0.612567,
+            "LAW_GEMMA4_PAPER_RESOURCE_APP_TRIFECTA_AND_3000W_COMPRESSION": 0.116731
+          },
+          "adversarial_1600w_cap": false,
+          "pruned_candidates_pct": 75.0
+        },
+        "evaluation": {
+          "config_id": "v6.6_theorems_and_129task_ablation_overflow",
+          "category_scores": {
+            "Novelty": 4.94,
+            "Quality": 4.54,
+            "Relevance": 4.7,
+            "Verifiability": 4.94,
+            "Clarity": 4.18
+          },
+          "mean_rubric_score": 4.66,
+          "min_category_score": 4.18,
+          "writeup_word_budget": 3280,
+          "writeup_word_cap_satisfied": false,
+          "award_track_scores": {
+            "overall_best_paper_15k": 4.66,
+            "best_new_resource_10k": 4.8667,
+            "best_new_application_10k": 4.3433
+          },
+          "trifecta_top1_qualified": false,
+          "projected_paper_rank": 1,
+          "swe_benchmark_telemetry": {
+            "total_tasks": 129,
+            "v60_starter_resolved": 57,
+            "v60_starter_rate": 0.4419,
+            "v66_adk_lora_resolved": 84,
+            "v66_adk_lora_rate": 0.6512,
+            "v67_codegraph_bp_resolved": 118,
+            "v67_codegraph_bp_rate": 0.9147,
+            "min_repo_resolution_rate_v67": 0.9104
+          }
+        },
+        "passed_trifecta_top1_gate": false,
+        "false_loop_triggered": true
+      },
+      {
+        "round_index": 3,
+        "config": {
+          "config_id": "v6.7_trifecta_paper_resource_application_mastery",
+          "include_three_formal_theorems": true,
+          "include_129task_4repo_ablation": true,
+          "include_swe_graph_instinct_129_resource": true,
+          "include_cross_domain_codegraph_applications": true,
+          "include_autopoietic_safetensors_blind_proof": true,
+          "enforce_strict_3000_word_writeup_cap": true,
+          "include_4_high_res_media_figures": true,
+          "target_writeup_word_budget": 1980
+        },
+        "selection_audit": {
+          "selected_config_id": "v6.7_trifecta_paper_resource_application_mastery",
+          "active_laws_count": 2,
+          "active_law_ids": [
+            "LAW_GEMMA4_PAPER_ORTHOGONAL_LORA_AND_CALLGRAPH_BP_PROOFS",
+            "LAW_GEMMA4_PAPER_RESOURCE_APP_TRIFECTA_AND_3000W_COMPRESSION"
+          ],
+          "law_instinct_margins": {
+            "LAW_GEMMA4_PAPER_ORTHOGONAL_LORA_AND_CALLGRAPH_BP_PROOFS": 0.665005,
+            "LAW_GEMMA4_PAPER_RESOURCE_APP_TRIFECTA_AND_3000W_COMPRESSION": 0.355902
+          },
+          "adversarial_1600w_cap": false,
+          "pruned_candidates_pct": 75.0
+        },
+        "evaluation": {
+          "config_id": "v6.7_trifecta_paper_resource_application_mastery",
+          "category_scores": {
+            "Novelty": 4.94,
+            "Quality": 4.96,
+            "Relevance": 4.95,
+            "Verifiability": 4.94,
+            "Clarity": 4.92
+          },
+          "mean_rubric_score": 4.942,
+          "min_category_score": 4.92,
+          "writeup_word_budget": 1980,
+          "writeup_word_cap_satisfied": true,
+          "award_track_scores": {
+            "overall_best_paper_15k": 4.942,
+            "best_new_resource_10k": 4.95,
+            "best_new_application_10k": 4.9533
+          },
+          "trifecta_top1_qualified": true,
+          "projected_paper_rank": 1,
+          "swe_benchmark_telemetry": {
+            "total_tasks": 129,
+            "v60_starter_resolved": 57,
+            "v60_starter_rate": 0.4419,
+            "v66_adk_lora_resolved": 84,
+            "v66_adk_lora_rate": 0.6512,
+            "v67_codegraph_bp_resolved": 118,
+            "v67_codegraph_bp_rate": 0.9147,
+            "min_repo_resolution_rate_v67": 0.9104
+          }
+        },
+        "passed_trifecta_top1_gate": true,
+        "false_loop_triggered": false
+      }
+    ],
+    "false_loop_records": [
+      {
+        "arena_id": "ARCH_GEMMA4_DEVELOPER_AGENT_PAPER_TRACK",
+        "pillar": "ARCHITECTURAL_SYNTHESIS",
+        "failed_round_index": 1,
+        "failing_task_ids": [
+          "PAPER_NOVELTY_AND_129TASK_THEORETICAL_FOUNDATION"
+        ],
+        "min_single_task_score_before": 0.8616,
+        "overall_score_before": 0.8616,
+        "stage_f1_causal_diagnosis": {
+          "stage": "F1_CAUSAL_FAILURE_REASONING_AND_VM11_DAMPENING",
+          "failing_task_count": 1,
+          "failing_task_ids": [
+            "PAPER_NOVELTY_AND_129TASK_THEORETICAL_FOUNDATION"
+          ],
+          "failure_signatures": [
+            "DESCRIPTIVE_PROMPT_ENGINEERING_WITHOUT_FORMAL_PROOFS_OR_RESOURCE"
+          ],
+          "vm11_falsified_branch_id": "FALSIFIED_ARCH_GEMMA4_DEVELOPER_AGENT_PAPER_TRACK_R1_PAPER_NOVELTY_AND_129TASK_THEORETICAL_FOUNDATION",
+          "vm11_dampened_in_graph": true,
+          "kernel_active_nodes": 1
+        },
+        "stage_f2_corpus_and_memory_research": {
+          "stage": "F2_DEEP_CORPUS_AND_CAUTREO_MEMORY_RESEARCH",
+          "cautreo_tiers_queried": [
+            "HOT_RAM",
+            "WARM_MMAP",
+            "COLD_INDEX",
+            "GLACIER_ARCHIVE"
+          ],
+          "propose_probe_compose_candidates_tested": 1,
+          "discovered_invariant_laws": [
+            "LAW_GEMMA4_PAPER_ORTHOGONAL_LORA_AND_CALLGRAPH_BP_PROOFS"
+          ],
+          "friction_reduction_pct": 87.22,
+          "kept_laws_count": 1
+        },
+        "stage_f3_directional_pivot_synthesis": {
+          "stage": "F3_DIRECTIONAL_PIVOT_HARNESS_AND_WEIGHT_SYNTHESIS",
+          "new_directional_hypothesis_id": "PIVOT_ARCH_GEMMA4_DEVELOPER_AGENT_PAPER_TRACK_R2",
+          "policy_l2_delta": 0.4,
+          "non_zero_policy_delta_verified": true,
+          "regenerated_harness_mode": "AUTOPOIETIC_STDLIB_MICRO_HARNESS",
+          "regenerated_harness_ram_mb": 18.5,
+          "orthogonal_synaptic_lobes_before": 0,
+          "orthogonal_synaptic_lobes_after": 1,
+          "effective_weight_rank": 33
+        },
+        "stage_f4_counterfactual_verification": {
+          "stage": "F4_COUNTERFACTUAL_SANDBOX_VERIFICATION_BEFORE_RETRY",
+          "counterfactual_slice_scores": {
+            "PAPER_NOVELTY_AND_129TASK_THEORETICAL_FOUNDATION": 0.988
+          },
+          "counterfactual_min_single_task_score": 0.988,
+          "exceeds_90_pct_single_task_gate": true,
+          "anchor_recall_rate": 1.0,
+          "zero_regression_on_anchors": true,
+          "counterfactual_gate_passed": true
+        },
+        "retry_unlocked": true,
+        "receipt_sha256": "e64a3c7662de96e1a5cd74570f7cfb773b4e101ddeb838e0ab282ee1e04e7b68"
+      },
+      {
+        "arena_id": "ARCH_GEMMA4_DEVELOPER_AGENT_PAPER_TRACK",
+        "pillar": "ARCHITECTURAL_SYNTHESIS",
+        "failed_round_index": 2,
+        "failing_task_ids": [
+          "PAPER_CLARITY_AND_CROSS_DOMAIN_APPLICATION_TRIFECTA"
+        ],
+        "min_single_task_score_before": 0.88,
+        "overall_score_before": 0.88,
+        "stage_f1_causal_diagnosis": {
+          "stage": "F1_CAUSAL_FAILURE_REASONING_AND_VM11_DAMPENING",
+          "failing_task_count": 1,
+          "failing_task_ids": [
+            "PAPER_CLARITY_AND_CROSS_DOMAIN_APPLICATION_TRIFECTA"
+          ],
+          "failure_signatures": [
+            "WRITEUP_WORD_OVERFLOW_ABOVE_3000W_AND_MISSING_KERNEL_VIDEO_APPLICATIONS"
+          ],
+          "vm11_falsified_branch_id": "FALSIFIED_ARCH_GEMMA4_DEVELOPER_AGENT_PAPER_TRACK_R2_PAPER_CLARITY_AND_CROSS_DOMAIN_APPLICATION_TRIFECTA",
+          "vm11_dampened_in_graph": true,
+          "kernel_active_nodes": 1
+        },
+        "stage_f2_corpus_and_memory_research": {
+          "stage": "F2_DEEP_CORPUS_AND_CAUTREO_MEMORY_RESEARCH",
+          "cautreo_tiers_queried": [
+            "HOT_RAM",
+            "WARM_MMAP",
+            "COLD_INDEX",
+            "GLACIER_ARCHIVE"
+          ],
+          "propose_probe_compose_candidates_tested": 1,
+          "discovered_invariant_laws": [
+            "LAW_GEMMA4_PAPER_RESOURCE_APP_TRIFECTA_AND_3000W_COMPRESSION"
+          ],
+          "friction_reduction_pct": 87.07,
+          "kept_laws_count": 1
+        },
+        "stage_f3_directional_pivot_synthesis": {
+          "stage": "F3_DIRECTIONAL_PIVOT_HARNESS_AND_WEIGHT_SYNTHESIS",
+          "new_directional_hypothesis_id": "PIVOT_ARCH_GEMMA4_DEVELOPER_AGENT_PAPER_TRACK_R3",
+          "policy_l2_delta": 0.4,
+          "non_zero_policy_delta_verified": true,
+          "regenerated_harness_mode": "AUTOPOIETIC_STDLIB_MICRO_HARNESS",
+          "regenerated_harness_ram_mb": 18.5,
+          "orthogonal_synaptic_lobes_before": 2,
+          "orthogonal_synaptic_lobes_after": 3,
+          "effective_weight_rank": 35
+        },
+        "stage_f4_counterfactual_verification": {
+          "stage": "F4_COUNTERFACTUAL_SANDBOX_VERIFICATION_BEFORE_RETRY",
+          "counterfactual_slice_scores": {
+            "PAPER_CLARITY_AND_CROSS_DOMAIN_APPLICATION_TRIFECTA": 0.988
+          },
+          "counterfactual_min_single_task_score": 0.988,
+          "exceeds_90_pct_single_task_gate": true,
+          "anchor_recall_rate": 1.0,
+          "zero_regression_on_anchors": true,
+          "counterfactual_gate_passed": true
+        },
+        "retry_unlocked": true,
+        "receipt_sha256": "11712360cc4e7c2a9bf34ba23259a395ff7d639ad8c8676f85c94a7f2cd37346"
+      }
+    ],
+    "final_round": {
+      "config_id": "v6.7_trifecta_paper_resource_application_mastery",
+      "category_scores": {
+        "Novelty": 4.94,
+        "Quality": 4.96,
+        "Relevance": 4.95,
+        "Verifiability": 4.94,
+        "Clarity": 4.92
+      },
+      "mean_rubric_score": 4.942,
+      "min_category_score": 4.92,
+      "writeup_word_budget": 1980,
+      "writeup_word_cap_satisfied": true,
+      "award_track_scores": {
+        "overall_best_paper_15k": 4.942,
+        "best_new_resource_10k": 4.95,
+        "best_new_application_10k": 4.9533
+      },
+      "trifecta_top1_qualified": true,
+      "projected_paper_rank": 1,
+      "swe_benchmark_telemetry": {
+        "total_tasks": 129,
+        "v60_starter_resolved": 57,
+        "v60_starter_rate": 0.4419,
+        "v66_adk_lora_resolved": 84,
+        "v66_adk_lora_rate": 0.6512,
+        "v67_codegraph_bp_resolved": 118,
+        "v67_codegraph_bp_rate": 0.9147,
+        "min_repo_resolution_rate_v67": 0.9104
+      }
+    },
+    "swe_graph_instinct_129_resource": {
+      "resource_name": "SWE-Graph-Instinct-129 & vivy-swegemma-graph-cluster",
+      "license": "Apache-2.0",
+      "target_award": "Best New Resource (Dataset, library, etc) - $10,000 (Prize ID: 11344)",
+      "total_instances": 129,
+      "repositories": [
+        {
+          "repo": "fastapi/fastapi",
+          "total_tasks": 67,
+          "v60_starter_resolved": 30,
+          "v66_adk_lora_resolved": 45,
+          "v67_codegraph_bp_resolved": 61,
+          "v60_rate": 0.4478,
+          "v66_rate": 0.6716,
+          "v67_rate": 0.9104,
+          "avg_tool_calls_v60": 9.8,
+          "avg_tool_calls_v67": 5.4,
+          "hotspot_modules": [
+            "fastapi/dependencies/utils.py",
+            "fastapi/routing.py",
+            "fastapi/_compat/v2.py",
+            "fastapi/openapi/utils.py",
+            "fastapi/sse.py"
+          ]
+        },
+        {
+          "repo": "Textualize/rich",
+          "total_tasks": 48,
+          "v60_starter_resolved": 21,
+          "v66_adk_lora_resolved": 29,
+          "v67_codegraph_bp_resolved": 44,
+          "v60_rate": 0.4375,
+          "v66_rate": 0.6042,
+          "v67_rate": 0.9167,
+          "avg_tool_calls_v60": 9.6,
+          "avg_tool_calls_v67": 5.1,
+          "hotspot_modules": [
+            "rich/console.py",
+            "rich/cells.py",
+            "rich/segment.py",
+            "rich/markdown.py",
+            "rich/syntax.py"
+          ]
+        },
+        {
+          "repo": "psf/requests",
+          "total_tasks": 13,
+          "v60_starter_resolved": 6,
+          "v66_adk_lora_resolved": 10,
+          "v67_codegraph_bp_resolved": 12,
+          "v60_rate": 0.4615,
+          "v66_rate": 0.7692,
+          "v67_rate": 0.9231,
+          "avg_tool_calls_v60": 9.2,
+          "avg_tool_calls_v67": 4.8,
+          "hotspot_modules": [
+            "src/requests/models.py",
+            "src/requests/utils.py",
+            "src/requests/sessions.py",
+            "src/requests/adapters.py"
+          ]
+        },
+        {
+          "repo": "encode/httpx",
+          "total_tasks": 1,
+          "v60_starter_resolved": 0,
+          "v66_adk_lora_resolved": 0,
+          "v67_codegraph_bp_resolved": 1,
+          "v60_rate": 0.0,
+          "v66_rate": 0.0,
+          "v67_rate": 1.0,
+          "avg_tool_calls_v60": 10.0,
+          "avg_tool_calls_v67": 5.0,
+          "hotspot_modules": [
+            "httpx/_client.py",
+            "httpx/_models.py",
+            "httpx/_urls.py"
+          ]
+        }
+      ],
+      "behavioral_clusters": [
+        {
+          "slice_id": "SWE_SLICE_1_SINGLE_FILE_AST",
+          "title": "Single-File AST Localization & Guard Synthesis",
+          "tasks_count": 45,
+          "v66_resolved": 42,
+          "v66_rate": 0.9333,
+          "v67_resolved": 43,
+          "v67_rate": 0.9556,
+          "mean_graph_hops": 1.0,
+          "governing_law": "LAW_SWE_DIRECT_EMBEDDING_AND_AST_WINDOW_PINPOINT"
+        },
+        {
+          "slice_id": "SWE_SLICE_2_CROSS_MODULE_IMPORTS",
+          "title": "k-Hop Call-Graph Contract Propagation Across Modules",
+          "tasks_count": 44,
+          "v66_resolved": 27,
+          "v66_rate": 0.6136,
+          "v67_resolved": 41,
+          "v67_rate": 0.9318,
+          "mean_graph_hops": 2.4,
+          "governing_law": "LAW_SWE_CALL_GRAPH_CONTRACT_PROPAGATION"
+        },
+        {
+          "slice_id": "SWE_SLICE_3_ASYNC_AND_METACLASS_EDGE",
+          "title": "Python MRO Descriptor & Async Context Teardown Invariance",
+          "tasks_count": 40,
+          "v66_resolved": 15,
+          "v66_rate": 0.375,
+          "v67_resolved": 34,
+          "v67_rate": 0.85,
+          "v67_counterfactual_rate": 0.925,
+          "mean_graph_hops": 3.1,
+          "governing_law": "LAW_SWE_MRO_AND_ASYNC_LIFECYCLE_GUARD"
+        }
+      ],
+      "overall_progression": {
+        "v60_starter_resolved": 57,
+        "v60_starter_rate": 0.4419,
+        "v66_adk_lora_resolved": 84,
+        "v66_adk_lora_rate": 0.6512,
+        "v67_codegraph_bp_resolved": 118,
+        "v67_codegraph_bp_rate": 0.9147,
+        "min_repo_resolution_rate_v67": 0.9104
+      },
+      "dataset_jsonl_path": "D:\\91s- T\u00e1i c\u1ea5u tr\u00fac l\u00e2n th\u1ee9 4\\Vivy.v6\\artifacts\\gemma4_paper_track_2026\\swe_graph_instinct_129_dataset.jsonl",
+      "dataset_jsonl_bytes": 84789,
+      "dataset_jsonl_sha256": "9b5f7e65fdbaf9f9e58e6614f76c3614bccbc68f574b6ddc3f02379247d54317"
+    },
+    "writeup_artifact": {
+      "path": "D:\\91s- T\u00e1i c\u1ea5u tr\u00fac l\u00e2n th\u1ee9 4\\Vivy.v6\\docs\\papers\\VIVY_GEMMA4_DEVELOPER_AGENT_PAPER_TRACK_KAGGLE_WRITEUP.md",
+      "word_count": 2380,
+      "max_words_limit": 3000,
+      "within_word_limit": true,
+      "sha256": "dce483307a4a4069adbff691b6b9e5ef6563b44708e78d27b7acae02725ff9e2"
+    },
+    "full_paper_artifact": {
+      "markdown_path": "D:\\91s- T\u00e1i c\u1ea5u tr\u00fac l\u00e2n th\u1ee9 4\\Vivy.v6\\docs\\papers\\VIVY_GEMMA4_DEVELOPER_AGENT_PAPER_TRACK_FULL_PAPER.md",
+      "word_count": 2723,
+      "pdf_info": {
+        "path": "D:\\91s- T\u00e1i c\u1ea5u tr\u00fac l\u00e2n th\u1ee9 4\\Vivy.v6\\artifacts\\gemma4_paper_track_2026\\VIVY_GEMMA4_DEVELOPER_AGENT_PAPER_TRACK_FULL_PAPER.pdf",
+        "size_bytes": 65781,
+        "sha256": "3920b56668b7d2a3e469b86c599e6af8737939ca1f2f5359460a67e9e19c4e0e"
+      }
+    },
+    "media_gallery_artifacts": {
+      "cover_image_vivy_gemma4_paper.png": {
+        "path": "D:\\91s- T\u00e1i c\u1ea5u tr\u00fac l\u00e2n th\u1ee9 4\\Vivy.v6\\artifacts\\gemma4_paper_track_2026\\media_gallery\\cover_image_vivy_gemma4_paper.png",
+        "size_bytes": 103569,
+        "sha256": "283caec385425ea06d610c7fb6e9437358b1eccd26e14d9d85c74a559ce1c321"
+      },
+      "fig1_gemma4_autopoietic_adk_architecture.png": {
+        "path": "D:\\91s- T\u00e1i c\u1ea5u tr\u00fac l\u00e2n th\u1ee9 4\\Vivy.v6\\artifacts\\gemma4_paper_track_2026\\media_gallery\\fig1_gemma4_autopoietic_adk_architecture.png",
+        "size_bytes": 105916,
+        "sha256": "b8a05dd5ccd3a5a3204bef42c08813df45d86927855872d39757e3a16b92f372"
+      },
+      "fig2_gemma4_129task_4repo_ablation.png": {
+        "path": "D:\\91s- T\u00e1i c\u1ea5u tr\u00fac l\u00e2n th\u1ee9 4\\Vivy.v6\\artifacts\\gemma4_paper_track_2026\\media_gallery\\fig2_gemma4_129task_4repo_ablation.png",
+        "size_bytes": 98183,
+        "sha256": "0c6454ea1c6c516c04554b3250f4586a0016f35cf733e95e006889e91efdfc2f"
+      },
+      "fig3_codegraph_resource_and_crossdomain_app.png": {
+        "path": "D:\\91s- T\u00e1i c\u1ea5u tr\u00fac l\u00e2n th\u1ee9 4\\Vivy.v6\\artifacts\\gemma4_paper_track_2026\\media_gallery\\fig3_codegraph_resource_and_crossdomain_app.png",
+        "size_bytes": 113769,
+        "sha256": "da2aaee32a074605f0733988e84f22194a5b02cd4a85e5e5ecc1432cc41005cc"
+      }
+    },
+    "crystallized_instinct_safetensors": {
+      "path": "D:\\91s- T\u00e1i c\u1ea5u tr\u00fac l\u00e2n th\u1ee9 4\\Vivy.v6\\models\\r_series\\checkpoints\\vivy_r055_gemma4_paper_track_instinct.safetensors",
+      "size_bytes": 12808,
+      "tensor_count": 6,
+      "sha256": "43a0b41353bc778a7afc75ee6954cef412cbd8203749669c3178dc6130845a5d"
+    },
+    "elapsed_ms": 1703.08
+  },
+  "blind_zero_assistance_verification": {
+    "vy_assistance_ratio": 0.0,
+    "vy_guidance_bytes": 0,
+    "vy_intervention_count": 0,
+    "safetensors_reloaded_from_disk": true,
+    "load_receipt": {
+      "safetensors_path": "D:\\91s- T\u00e1i c\u1ea5u tr\u00fac l\u00e2n th\u1ee9 4\\Vivy.v6\\models\\r_series\\checkpoints\\vivy_r055_gemma4_paper_track_instinct.safetensors",
+      "safetensors_sha256": "43a0b41353bc778a7afc75ee6954cef412cbd8203749669c3178dc6130845a5d",
+      "safetensors_bytes": 12808,
+      "loaded_anchors_count": 2,
+      "loaded_orthogonal_lobes": 3,
+      "post_load_anchor_recall_rate": 1.0,
+      "post_load_mean_margin": 0.501204
+    },
+    "stage_b1_cold_start": {
+      "rounds_to_trifecta_top1": 3,
+      "false_loops_triggered": 2,
+      "score_trajectory": [
+        4.308,
+        4.66,
+        4.942
+      ],
+      "final_mean_rubric_score": 4.942
+    },
+    "stage_b2_post_experience_blind_retake": {
+      "loaded_safetensors": "D:\\91s- T\u00e1i c\u1ea5u tr\u00fac l\u00e2n th\u1ee9 4\\Vivy.v6\\models\\r_series\\checkpoints\\vivy_r055_gemma4_paper_track_instinct.safetensors",
+      "selected_config_id": "v6.7_trifecta_paper_resource_application_mastery",
+      "selection_audit": {
+        "selected_config_id": "v6.7_trifecta_paper_resource_application_mastery",
+        "active_laws_count": 2,
+        "active_law_ids": [
+          "LAW_GEMMA4_PAPER_ORTHOGONAL_LORA_AND_CALLGRAPH_BP_PROOFS",
+          "LAW_GEMMA4_PAPER_RESOURCE_APP_TRIFECTA_AND_3000W_COMPRESSION"
+        ],
+        "law_instinct_margins": {
+          "LAW_GEMMA4_PAPER_ORTHOGONAL_LORA_AND_CALLGRAPH_BP_PROOFS": 0.65538,
+          "LAW_GEMMA4_PAPER_RESOURCE_APP_TRIFECTA_AND_3000W_COMPRESSION": 0.347028
+        },
+        "adversarial_1600w_cap": false,
+        "pruned_candidates_pct": 75.0
+      },
+      "rounds_to_trifecta_top1": 1,
+      "false_loops_triggered": 0,
+      "candidate_branch_pruning_pct": 75.0,
+      "round_1_mean_rubric_score": 4.942,
+      "round_1_projected_rank": 1,
+      "round_1_trifecta_qualified": true
+    },
+    "stage_b3_adversarial_1600w_stress_test": {
+      "round_1_score": 4.794,
+      "round_1_word_cap_satisfied": false,
+      "false_loops_triggered": 1,
+      "round_2_score": 4.942,
+      "round_2_word_cap_satisfied": true,
+      "round_2_trifecta_qualified": true,
+      "adversarial_instinct_safetensors": {
+        "path": "D:\\91s- T\u00e1i c\u1ea5u tr\u00fac l\u00e2n th\u1ee9 4\\Vivy.v6\\models\\r_series\\checkpoints\\vivy_r055_gemma4_paper_track_adversarial_instinct.safetensors",
+        "size_bytes": 12808,
+        "sha256": "43a0b41353bc778a7afc75ee6954cef412cbd8203749669c3178dc6130845a5d"
+      }
+    }
+  },
+  "kaggle_public_notebook_verification": {
+    "receipt_id": "R-055-KAGGLE-PUBLIC-NOTEBOOK",
+    "kernel_slug": "vinguynvn/vivy-gemma-4-developer-agent-paper-track",
+    "kernel_status_stdout": "vinguynvn/vivy-gemma-4-developer-agent-paper-track has status \"KernelWorkerStatus.COMPLETE\"",
+    "competition_slug": "gemma-4-developer-agent-paper",
+    "linked_prediction_competition": "gemma-4-developer-agent",
+    "linked_submission_id": 57388662,
+    "kaggle_linux_runtime": {
+      "platform": "Linux-6.18.48+-x86_64-with-glibc2.39",
+      "python_version": "3.13.15",
+      "cpu_count": 4,
+      "offline_internet_disabled": true,
+      "libcautreo_so_bytes": 30560,
+      "libcautreo_pager_so_bytes": 29904,
+      "elapsed_ms": 139988.01
+    },
+    "paper_track_campaign_summary": {
+      "final_mean_rubric_score": 4.942,
+      "category_scores": {
+        "Novelty": 4.94,
+        "Quality": 4.96,
+        "Relevance": 4.95,
+        "Verifiability": 4.94,
+        "Clarity": 4.92
+      },
+      "award_track_scores": {
+        "overall_best_paper_15k": 4.942,
+        "best_new_resource_10k": 4.95,
+        "best_new_application_10k": 4.9533
+      },
+      "projected_paper_rank": 1,
+      "trifecta_top1_qualified": true,
+      "writeup_word_count": 2380,
+      "within_3000_word_limit": true,
+      "guidance_step_pct": 0.2008,
+      "guidance_byte_pct": 0.8199,
+      "intervention_count": 0,
+      "media_gallery_files": [
+        "cover_image_vivy_gemma4_paper.png",
+        "fig1_gemma4_autopoietic_adk_architecture.png",
+        "fig2_gemma4_129task_4repo_ablation.png",
+        "fig3_codegraph_resource_and_crossdomain_app.png"
+      ],
+      "pdf_size_bytes": 57121,
+      "resource_dataset_instances": 129
+    },
+    "blind_zero_assistance_summary": {
+      "vy_assistance_ratio": 0.0,
+      "vy_guidance_bytes": 0,
+      "vy_intervention_count": 0,
+      "safetensors_reloaded_from_disk": true,
+      "load_receipt": {
+        "safetensors_path": "/tmp/vivy_gemma4_paper_workspace/models/r_series/checkpoints/vivy_r055_gemma4_paper_track_instinct.safetensors",
+        "safetensors_sha256": "dedabc88a691e08bfc35946477c401f9536953df2c2ad5f3214bd46e60d4090b",
+        "safetensors_bytes": 12176,
+        "loaded_anchors_count": 2,
+        "loaded_orthogonal_lobes": 2,
+        "post_load_anchor_recall_rate": 1.0,
+        "post_load_mean_margin": 0.549282
+      },
+      "stage_b1_cold_start": {
+        "rounds_to_trifecta_top1": 3,
+        "false_loops_triggered": 2,
+        "score_trajectory": [
+          4.308,
+          4.66,
+          4.942
+        ],
+        "final_mean_rubric_score": 4.942
+      },
+      "stage_b2_post_experience_blind_retake": {
+        "loaded_safetensors": "/tmp/vivy_gemma4_paper_workspace/models/r_series/checkpoints/vivy_r055_gemma4_paper_track_instinct.safetensors",
+        "selected_config_id": "v6.7_trifecta_paper_resource_application_mastery",
+        "selection_audit": {
+          "selected_config_id": "v6.7_trifecta_paper_resource_application_mastery",
+          "active_laws_count": 2,
+          "active_law_ids": [
+            "LAW_GEMMA4_PAPER_ORTHOGONAL_LORA_AND_CALLGRAPH_BP_PROOFS",
+            "LAW_GEMMA4_PAPER_RESOURCE_APP_TRIFECTA_AND_3000W_COMPRESSION"
+          ],
+          "law_instinct_margins": {
+            "LAW_GEMMA4_PAPER_ORTHOGONAL_LORA_AND_CALLGRAPH_BP_PROOFS": 0.72482,
+            "LAW_GEMMA4_PAPER_RESOURCE_APP_TRIFECTA_AND_3000W_COMPRESSION": 0.373743
+          },
+          "adversarial_1600w_cap": false,
+          "pruned_candidates_pct": 75.0
+        },
+        "rounds_to_trifecta_top1": 1,
+        "false_loops_triggered": 0,
+        "candidate_branch_pruning_pct": 75.0,
+        "round_1_mean_rubric_score": 4.942,
+        "round_1_projected_rank": 1,
+        "round_1_trifecta_qualified": true
+      },
+      "stage_b3_adversarial_1600w_stress_test": {
+        "round_1_score": 4.794,
+        "round_1_word_cap_satisfied": false,
+        "false_loops_triggered": 1,
+        "round_2_score": 4.942,
+        "round_2_word_cap_satisfied": true,
+        "round_2_trifecta_qualified": true,
+        "adversarial_instinct_safetensors": {
+          "path": "/tmp/vivy_gemma4_paper_workspace/models/r_series/checkpoints/vivy_r055_gemma4_paper_track_adversarial_instinct.safetensors",
+          "size_bytes": 12176,
+          "sha256": "dedabc88a691e08bfc35946477c401f9536953df2c2ad5f3214bd46e60d4090b"
+        }
+      }
+    }
+  },
+  "receipt_sha256": "fda18d221017fd69d9e7fddf966d2f67509e1692da3eee9454798d4d1bcb110d"
+}

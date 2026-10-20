@@ -1,0 +1,129 @@
+{
+  "resource_name": "SWE-Graph-Instinct-129 & vivy-swegemma-graph-cluster",
+  "license": "Apache-2.0",
+  "target_award": "Best New Resource (Dataset, library, etc) - $10,000 (Prize ID: 11344)",
+  "total_instances": 129,
+  "repositories": [
+    {
+      "repo": "fastapi/fastapi",
+      "total_tasks": 67,
+      "v60_starter_resolved": 30,
+      "v66_adk_lora_resolved": 45,
+      "v67_codegraph_bp_resolved": 61,
+      "v60_rate": 0.4478,
+      "v66_rate": 0.6716,
+      "v67_rate": 0.9104,
+      "avg_tool_calls_v60": 9.8,
+      "avg_tool_calls_v67": 5.4,
+      "hotspot_modules": [
+        "fastapi/dependencies/utils.py",
+        "fastapi/routing.py",
+        "fastapi/_compat/v2.py",
+        "fastapi/openapi/utils.py",
+        "fastapi/sse.py"
+      ]
+    },
+    {
+      "repo": "Textualize/rich",
+      "total_tasks": 48,
+      "v60_starter_resolved": 21,
+      "v66_adk_lora_resolved": 29,
+      "v67_codegraph_bp_resolved": 44,
+      "v60_rate": 0.4375,
+      "v66_rate": 0.6042,
+      "v67_rate": 0.9167,
+      "avg_tool_calls_v60": 9.6,
+      "avg_tool_calls_v67": 5.1,
+      "hotspot_modules": [
+        "rich/console.py",
+        "rich/cells.py",
+        "rich/segment.py",
+        "rich/markdown.py",
+        "rich/syntax.py"
+      ]
+    },
+    {
+      "repo": "psf/requests",
+      "total_tasks": 13,
+      "v60_starter_resolved": 6,
+      "v66_adk_lora_resolved": 10,
+      "v67_codegraph_bp_resolved": 12,
+      "v60_rate": 0.4615,
+      "v66_rate": 0.7692,
+      "v67_rate": 0.9231,
+      "avg_tool_calls_v60": 9.2,
+      "avg_tool_calls_v67": 4.8,
+      "hotspot_modules": [
+        "src/requests/models.py",
+        "src/requests/utils.py",
+        "src/requests/sessions.py",
+        "src/requests/adapters.py"
+      ]
+    },
+    {
+      "repo": "encode/httpx",
+      "total_tasks": 1,
+      "v60_starter_resolved": 0,
+      "v66_adk_lora_resolved": 0,
+      "v67_codegraph_bp_resolved": 1,
+      "v60_rate": 0.0,
+      "v66_rate": 0.0,
+      "v67_rate": 1.0,
+      "avg_tool_calls_v60": 10.0,
+      "avg_tool_calls_v67": 5.0,
+      "hotspot_modules": [
+        "httpx/_client.py",
+        "httpx/_models.py",
+        "httpx/_urls.py"
+      ]
+    }
+  ],
+  "behavioral_clusters": [
+    {
+      "slice_id": "SWE_SLICE_1_SINGLE_FILE_AST",
+      "title": "Single-File AST Localization & Guard Synthesis",
+      "tasks_count": 45,
+      "v66_resolved": 42,
+      "v66_rate": 0.9333,
+      "v67_resolved": 43,
+      "v67_rate": 0.9556,
+      "mean_graph_hops": 1.0,
+      "governing_law": "LAW_SWE_DIRECT_EMBEDDING_AND_AST_WINDOW_PINPOINT"
+    },
+    {
+      "slice_id": "SWE_SLICE_2_CROSS_MODULE_IMPORTS",
+      "title": "k-Hop Call-Graph Contract Propagation Across Modules",
+      "tasks_count": 44,
+      "v66_resolved": 27,
+      "v66_rate": 0.6136,
+      "v67_resolved": 41,
+      "v67_rate": 0.9318,
+      "mean_graph_hops": 2.4,
+      "governing_law": "LAW_SWE_CALL_GRAPH_CONTRACT_PROPAGATION"
+    },
+    {
+      "slice_id": "SWE_SLICE_3_ASYNC_AND_METACLASS_EDGE",
+      "title": "Python MRO Descriptor & Async Context Teardown Invariance",
+      "tasks_count": 40,
+      "v66_resolved": 15,
+      "v66_rate": 0.375,
+      "v67_resolved": 34,
+      "v67_rate": 0.85,
+      "v67_counterfactual_rate": 0.925,
+      "mean_graph_hops": 3.1,
+      "governing_law": "LAW_SWE_MRO_AND_ASYNC_LIFECYCLE_GUARD"
+    }
+  ],
+  "overall_progression": {
+    "v60_starter_resolved": 57,
+    "v60_starter_rate": 0.4419,
+    "v66_adk_lora_resolved": 84,
+    "v66_adk_lora_rate": 0.6512,
+    "v67_codegraph_bp_resolved": 118,
+    "v67_codegraph_bp_rate": 0.9147,
+    "min_repo_resolution_rate_v67": 0.9104
+  },
+  "dataset_jsonl_path": "D:\\91s- T\u00e1i c\u1ea5u tr\u00fac l\u00e2n th\u1ee9 4\\Vivy.v6\\artifacts\\gemma4_paper_track_2026\\swe_graph_instinct_129_dataset.jsonl",
+  "dataset_jsonl_bytes": 84789,
+  "dataset_jsonl_sha256": "9b5f7e65fdbaf9f9e58e6614f76c3614bccbc68f574b6ddc3f02379247d54317"
+}
