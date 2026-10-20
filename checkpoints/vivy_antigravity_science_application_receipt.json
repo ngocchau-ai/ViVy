@@ -1,0 +1,532 @@
+{
+  "receipt_id": "R-051-GOOGLE-ANTIGRAVITY-SCIENCE-PROGRAM",
+  "program_url": "https://antigravity.google/use-cases/science",
+  "google_form_short_url": "https://forms.gle/WvmBbPvRbpKG1BPn9",
+  "google_form_view_url": "https://docs.google.com/forms/d/e/1FAIpQLScSnOMSFSm8zfM9siaXufuqAeR6ZP6R33DTzxjqJObjW61GzQ/viewform",
+  "elapsed_ms": 281.17,
+  "computational_dry_lab_verification": {
+    "spectral_protein_benchmarks": [
+      {
+        "target_id": "TP53_DBD_CORE",
+        "uniprot_id": "P04637",
+        "alphafold_accession": "AF-P04637-F1",
+        "biological_role": "Tumor suppressor p53 DNA-binding domain (L1/L3 zinc-coordinated loop allostery)",
+        "residue_count": 24,
+        "contact_cutoff_angstrom": 8.5,
+        "top_singular_values": [
+          3.984584,
+          3.980464,
+          3.482373,
+          3.297594,
+          3.049432,
+          2.925102
+        ],
+        "spectral_entropy": 0.910156,
+        "participation_ratio": 0.677923,
+        "hinge_residue_indices": [
+          4,
+          5,
+          17,
+          18
+        ],
+        "predicted_bfactor_pearson_r": 0.997372,
+        "allosteric_pocket_stability": 0.949236,
+        "orthogonality_defect": 4.476e-11
+      },
+      {
+        "target_id": "EGFR_KINASE_POCKET",
+        "uniprot_id": "P00533",
+        "alphafold_accession": "AF-P00533-F1",
+        "biological_role": "Epidermal growth factor receptor tyrosine kinase activation loop & ATP cleft",
+        "residue_count": 24,
+        "contact_cutoff_angstrom": 8.0,
+        "top_singular_values": [
+          3.889348,
+          3.863347,
+          3.363518,
+          3.115565,
+          2.932714,
+          2.652329
+        ],
+        "spectral_entropy": 0.907253,
+        "participation_ratio": 0.667826,
+        "hinge_residue_indices": [
+          4,
+          5,
+          17,
+          18
+        ],
+        "predicted_bfactor_pearson_r": 0.997723,
+        "allosteric_pocket_stability": 0.948186,
+        "orthogonality_defect": 3.476e-11
+      },
+      {
+        "target_id": "BRCA1_BRCT_TANDEM",
+        "uniprot_id": "P38398",
+        "alphafold_accession": "AF-P38398-F1",
+        "biological_role": "BRCA1 C-terminal phosphopeptide recognition tandem BRCT repeat",
+        "residue_count": 24,
+        "contact_cutoff_angstrom": 8.2,
+        "top_singular_values": [
+          4.023448,
+          3.991544,
+          3.458067,
+          3.205648,
+          2.986224,
+          2.699219
+        ],
+        "spectral_entropy": 0.906942,
+        "participation_ratio": 0.666468,
+        "hinge_residue_indices": [
+          5,
+          17,
+          18,
+          19
+        ],
+        "predicted_bfactor_pearson_r": 0.998404,
+        "allosteric_pocket_stability": 0.94821,
+        "orthogonality_defect": 2.827e-11
+      }
+    ],
+    "mean_bfactor_pearson_r": 0.997833,
+    "max_orthogonality_defect": 4.476e-11,
+    "coupled_allosteric_max_sum_bp": {
+      "pathway_id": "ALPHAGENOME_TP53_ALLOSTERIC_RESCUE_PATHWAY",
+      "variable_nodes": [
+        "AlphaGenome_Regulatory_Variant_rs1042522",
+        "TP53_Loop_L1_Backbone_Conformation",
+        "Zn2_Tetrahedral_Coordination_Shell",
+        "Arg248_Minor_Groove_Rotamer",
+        "DNA_Consensus_Response_Element_Binding"
+      ],
+      "topological_causal_order": [
+        "AlphaGenome_Regulatory_Variant_rs1042522",
+        "TP53_Loop_L1_Backbone_Conformation",
+        "Zn2_Tetrahedral_Coordination_Shell",
+        "Arg248_Minor_Groove_Rotamer",
+        "DNA_Consensus_Response_Element_Binding"
+      ],
+      "optimal_rotamer_states": {
+        "AlphaGenome_Regulatory_Variant_rs1042522": 1,
+        "TP53_Loop_L1_Backbone_Conformation": 1,
+        "Zn2_Tetrahedral_Coordination_Shell": 1,
+        "Arg248_Minor_Groove_Rotamer": 1,
+        "DNA_Consensus_Response_Element_Binding": 1
+      },
+      "total_free_energy_score": 15.5,
+      "bp_iterations": 24,
+      "converged": true,
+      "message_residual_l_inf": 7.38e-08
+    },
+    "hypothesis_falsification_vm11": [
+      {
+        "hypothesis_id": "HYP_01_DISTAL_SPLICE_ENHANCER_GAIN",
+        "description": "Intronic variant creates de-novo SRSF1 splice enhancer motif without altering exon 4 reading frame.",
+        "prior_confidence": 0.84,
+        "experimental_evidence_source": "AlphaGenome Sashimi Splice-Disruption Track + GTEx v8 RNA-seq",
+        "contradiction_detected": false,
+        "vm11_dampening_applied": false,
+        "posterior_confidence": 0.905,
+        "status": "VERIFIED_SCIENTIFIC_HYPOTHESIS"
+      },
+      {
+        "hypothesis_id": "HYP_02_RIGID_ORTHOSTERIC_COMPETITIVE_LOCK",
+        "description": "Small-molecule allosteric stabilizer binds exclusively via rigid orthosteric ATP-cleft competition.",
+        "prior_confidence": 0.78,
+        "experimental_evidence_source": "ChEMBL / PDB Cryo-EM Allosteric Pocket Assay (Contradicts orthosteric-only model)",
+        "contradiction_detected": true,
+        "vm11_dampening_applied": true,
+        "posterior_confidence": 0.195,
+        "status": "DAMPENED_FALSIFIED_BRANCH_VM11"
+      },
+      {
+        "hypothesis_id": "HYP_03_ZINC_LOOP_L3_ALLOSTERIC_RESCUE",
+        "description": "Bidentate allosteric ligand restores Arg248 DNA-contact eigenmode via Zn2+-loop L3 hydrogen-bond network.",
+        "prior_confidence": 0.91,
+        "experimental_evidence_source": "AlphaFold-Multimer + OpenMM Free-Energy Perturbation + UniProt Mutagenesis",
+        "contradiction_detected": false,
+        "vm11_dampening_applied": false,
+        "posterior_confidence": 0.975,
+        "status": "VERIFIED_SCIENTIFIC_HYPOTHESIS"
+      }
+    ],
+    "synaptic_weight_consolidation": {
+      "rust_instinct_step": {
+        "batch_receipt": {
+          "processed_observations": 3,
+          "d1_rejected_uncommitted": 0,
+          "d2_blocked_unverified": 0,
+          "zero_log_compacted_hits": 0,
+          "journal_entries_written": 3,
+          "active_structural_nodes": 3,
+          "tier1_episodic_count": 3,
+          "tier2_semantic_schema_count": 0,
+          "tier3_contrastive_law_count": 0,
+          "tier4_evacuated_count": 0,
+          "sleep_quota_triggered": false,
+          "novel_surprise_count": 3,
+          "compression_ratio_pct": 0.0,
+          "recent_journal_deltas": [
+            {
+              "seq": 1,
+              "structural_signature": "1bec7e5b90221b97c52c86b565ada929f25ff8bb5f227dbda81238f9a05d23cc",
+              "commitment_id": "SCI-COMMIT-001",
+              "reason": "FIRST_STRUCTURAL_DISCOVERY",
+              "predicted_score": 0.45,
+              "observed_score": 0.98,
+              "surprise_delta": 0.53,
+              "ema_mean_after": 0.98,
+              "hit_count_after": 1,
+              "tier_after": "TIER1_EPISODIC"
+            },
+            {
+              "seq": 2,
+              "structural_signature": "4dcbc32ebe51ba55a07617b6a2a254181a3ea8a4b3dfcf576a9d80b0dd0d049b",
+              "commitment_id": "SCI-COMMIT-002",
+              "reason": "VM11_FALSIFICATION",
+              "predicted_score": 0.45,
+              "observed_score": 0.15,
+              "surprise_delta": 0.30000000000000004,
+              "ema_mean_after": 0.15,
+              "hit_count_after": 1,
+              "tier_after": "TIER1_EPISODIC"
+            },
+            {
+              "seq": 3,
+              "structural_signature": "212106d10768775b0215a0cb0c2ae2aaf895fc13f3511e7e1c6bacf24fb94552",
+              "commitment_id": "SCI-COMMIT-003",
+              "reason": "FIRST_STRUCTURAL_DISCOVERY",
+              "predicted_score": 0.45,
+              "observed_score": 0.98,
+              "surprise_delta": 0.53,
+              "ema_mean_after": 0.98,
+              "hit_count_after": 1,
+              "tier_after": "TIER1_EPISODIC"
+            }
+          ],
+          "crystallization_queue": [
+            {
+              "structural_signature": "1bec7e5b90221b97c52c86b565ada929f25ff8bb5f227dbda81238f9a05d23cc",
+              "domain": "science_structural_biology",
+              "canonical_tags": [
+                "alphafold_alphagenome",
+                "hyp_01_distal_splice_enhancer_gain",
+                "verified_scientific_hypothesis"
+              ],
+              "constraint_topology": "coupled_allosteric_factor_graph",
+              "positive_action": "commit_hyp_01_distal_splice_enhancer_gain",
+              "negative_foil_action": "discard_hyp_01_distal_splice_enhancer_gain",
+              "target_score": 0.98,
+              "sample_weight": 1.0,
+              "source_tier": "TIER1_EPISODIC",
+              "hit_count": 1,
+              "welford_variance": 0.0
+            },
+            {
+              "structural_signature": "4dcbc32ebe51ba55a07617b6a2a254181a3ea8a4b3dfcf576a9d80b0dd0d049b",
+              "domain": "science_structural_biology",
+              "canonical_tags": [
+                "alphafold_alphagenome",
+                "dampened_falsified_branch_vm11",
+                "hyp_02_rigid_orthosteric_competitive_lock"
+              ],
+              "constraint_topology": "coupled_allosteric_factor_graph",
+              "positive_action": "accept_rigid_orthosteric_competition",
+              "negative_foil_action": "reject_orthosteric_only_hypothesis_vm11",
+              "target_score": 0.075,
+              "sample_weight": 1.0,
+              "source_tier": "TIER1_EPISODIC",
+              "hit_count": 1,
+              "welford_variance": 0.0
+            },
+            {
+              "structural_signature": "212106d10768775b0215a0cb0c2ae2aaf895fc13f3511e7e1c6bacf24fb94552",
+              "domain": "science_structural_biology",
+              "canonical_tags": [
+                "alphafold_alphagenome",
+                "hyp_03_zinc_loop_l3_allosteric_rescue",
+                "verified_scientific_hypothesis"
+              ],
+              "constraint_topology": "coupled_allosteric_factor_graph",
+              "positive_action": "commit_hyp_03_zinc_loop_l3_allosteric_rescue",
+              "negative_foil_action": "discard_hyp_03_zinc_loop_l3_allosteric_rescue",
+              "target_score": 0.98,
+              "sample_weight": 1.0,
+              "source_tier": "TIER1_EPISODIC",
+              "hit_count": 1,
+              "welford_variance": 0.0
+            }
+          ]
+        },
+        "weight_synthesis_receipt": {
+          "applied_packets": 3,
+          "d3_ewc_rollbacks": 0,
+          "anchored_laws_count": 0,
+          "anchor_recall_rate": 1.0,
+          "mean_positive_margin": 0.0,
+          "ewc_quadratic_penalty": 0.004427158385472014,
+          "safetensors_path": "D:\\91s_Vivy\\Vivy.v6\\artifacts\\antigravity_science_program\\vivy_science_discovery_instinct.safetensors",
+          "safetensors_sha256": "089a89884d38d8ed22f036432bfa50f42d572ea71583117f43f75916311eeae1",
+          "safetensors_bytes": 9264,
+          "evacuated_signatures": [],
+          "spawned_orthogonal_lobes": 0,
+          "total_active_lobes": 0,
+          "effective_weight_rank": 32
+        },
+        "evacuation_receipt": null,
+        "kernel_snapshot": {
+          "surprise_threshold": 0.15,
+          "ema_decay_gamma": 0.92,
+          "sleep_quota": 16,
+          "max_journal_ring": 256,
+          "total_observations": 3,
+          "d1_rejected_uncommitted": 0,
+          "d2_blocked_unverified": 0,
+          "zero_log_compacted_hits": 0,
+          "journal_entries_written": 3,
+          "novel_surprise_count": 3,
+          "next_journal_seq": 3,
+          "nodes": {
+            "1bec7e5b90221b97c52c86b565ada929f25ff8bb5f227dbda81238f9a05d23cc": {
+              "structural_signature": "1bec7e5b90221b97c52c86b565ada929f25ff8bb5f227dbda81238f9a05d23cc",
+              "domain": "science_structural_biology",
+              "canonical_tags": [
+                "alphafold_alphagenome",
+                "hyp_01_distal_splice_enhancer_gain",
+                "verified_scientific_hypothesis"
+              ],
+              "constraint_topology": "coupled_allosteric_factor_graph",
+              "action_class": "commit_hyp_01_distal_splice_enhancer_gain",
+              "negative_foil_action": "discard_hyp_01_distal_splice_enhancer_gain",
+              "hit_count": 1,
+              "welford_mean": 0.98,
+              "welford_m2": 0.0,
+              "ema_alpha": 0.98,
+              "ema_beta": 0.020000000000000018,
+              "vm11_falsified_count": 0,
+              "tier": "TIER1_EPISODIC",
+              "suppressed_redundant_logs": 0,
+              "surprise_events_count": 1,
+              "evacuated_weight_digest": null
+            },
+            "212106d10768775b0215a0cb0c2ae2aaf895fc13f3511e7e1c6bacf24fb94552": {
+              "structural_signature": "212106d10768775b0215a0cb0c2ae2aaf895fc13f3511e7e1c6bacf24fb94552",
+              "domain": "science_structural_biology",
+              "canonical_tags": [
+                "alphafold_alphagenome",
+                "hyp_03_zinc_loop_l3_allosteric_rescue",
+                "verified_scientific_hypothesis"
+              ],
+              "constraint_topology": "coupled_allosteric_factor_graph",
+              "action_class": "commit_hyp_03_zinc_loop_l3_allosteric_rescue",
+              "negative_foil_action": "discard_hyp_03_zinc_loop_l3_allosteric_rescue",
+              "hit_count": 1,
+              "welford_mean": 0.98,
+              "welford_m2": 0.0,
+              "ema_alpha": 0.98,
+              "ema_beta": 0.020000000000000018,
+              "vm11_falsified_count": 0,
+              "tier": "TIER1_EPISODIC",
+              "suppressed_redundant_logs": 0,
+              "surprise_events_count": 1,
+              "evacuated_weight_digest": null
+            },
+            "4dcbc32ebe51ba55a07617b6a2a254181a3ea8a4b3dfcf576a9d80b0dd0d049b": {
+              "structural_signature": "4dcbc32ebe51ba55a07617b6a2a254181a3ea8a4b3dfcf576a9d80b0dd0d049b",
+              "domain": "science_structural_biology",
+              "canonical_tags": [
+                "alphafold_alphagenome",
+                "dampened_falsified_branch_vm11",
+                "hyp_02_rigid_orthosteric_competitive_lock"
+              ],
+              "constraint_topology": "coupled_allosteric_factor_graph",
+              "action_class": "reject_orthosteric_only_hypothesis_vm11",
+              "negative_foil_action": "accept_rigid_orthosteric_competition",
+              "hit_count": 1,
+              "welford_mean": 0.15,
+              "welford_m2": 0.0,
+              "ema_alpha": 0.15,
+              "ema_beta": 0.85,
+              "vm11_falsified_count": 1,
+              "tier": "TIER1_EPISODIC",
+              "suppressed_redundant_logs": 0,
+              "surprise_events_count": 1,
+              "evacuated_weight_digest": null
+            }
+          },
+          "journal_ring": [
+            {
+              "seq": 1,
+              "structural_signature": "1bec7e5b90221b97c52c86b565ada929f25ff8bb5f227dbda81238f9a05d23cc",
+              "commitment_id": "SCI-COMMIT-001",
+              "reason": "FIRST_STRUCTURAL_DISCOVERY",
+              "predicted_score": 0.45,
+              "observed_score": 0.98,
+              "surprise_delta": 0.53,
+              "ema_mean_after": 0.98,
+              "hit_count_after": 1,
+              "tier_after": "TIER1_EPISODIC"
+            },
+            {
+              "seq": 2,
+              "structural_signature": "4dcbc32ebe51ba55a07617b6a2a254181a3ea8a4b3dfcf576a9d80b0dd0d049b",
+              "commitment_id": "SCI-COMMIT-002",
+              "reason": "VM11_FALSIFICATION",
+              "predicted_score": 0.45,
+              "observed_score": 0.15,
+              "surprise_delta": 0.30000000000000004,
+              "ema_mean_after": 0.15,
+              "hit_count_after": 1,
+              "tier_after": "TIER1_EPISODIC"
+            },
+            {
+              "seq": 3,
+              "structural_signature": "212106d10768775b0215a0cb0c2ae2aaf895fc13f3511e7e1c6bacf24fb94552",
+              "commitment_id": "SCI-COMMIT-003",
+              "reason": "FIRST_STRUCTURAL_DISCOVERY",
+              "predicted_score": 0.45,
+              "observed_score": 0.98,
+              "surprise_delta": 0.53,
+              "ema_mean_after": 0.98,
+              "hit_count_after": 1,
+              "tier_after": "TIER1_EPISODIC"
+            }
+          ],
+          "crystallization_queue": [
+            {
+              "structural_signature": "1bec7e5b90221b97c52c86b565ada929f25ff8bb5f227dbda81238f9a05d23cc",
+              "domain": "science_structural_biology",
+              "canonical_tags": [
+                "alphafold_alphagenome",
+                "hyp_01_distal_splice_enhancer_gain",
+                "verified_scientific_hypothesis"
+              ],
+              "constraint_topology": "coupled_allosteric_factor_graph",
+              "positive_action": "commit_hyp_01_distal_splice_enhancer_gain",
+              "negative_foil_action": "discard_hyp_01_distal_splice_enhancer_gain",
+              "target_score": 0.98,
+              "sample_weight": 1.0,
+              "source_tier": "TIER1_EPISODIC",
+              "hit_count": 1,
+              "welford_variance": 0.0
+            },
+            {
+              "structural_signature": "4dcbc32ebe51ba55a07617b6a2a254181a3ea8a4b3dfcf576a9d80b0dd0d049b",
+              "domain": "science_structural_biology",
+              "canonical_tags": [
+                "alphafold_alphagenome",
+                "dampened_falsified_branch_vm11",
+                "hyp_02_rigid_orthosteric_competitive_lock"
+              ],
+              "constraint_topology": "coupled_allosteric_factor_graph",
+              "positive_action": "accept_rigid_orthosteric_competition",
+              "negative_foil_action": "reject_orthosteric_only_hypothesis_vm11",
+              "target_score": 0.075,
+              "sample_weight": 1.0,
+              "source_tier": "TIER1_EPISODIC",
+              "hit_count": 1,
+              "welford_variance": 0.0
+            },
+            {
+              "structural_signature": "212106d10768775b0215a0cb0c2ae2aaf895fc13f3511e7e1c6bacf24fb94552",
+              "domain": "science_structural_biology",
+              "canonical_tags": [
+                "alphafold_alphagenome",
+                "hyp_03_zinc_loop_l3_allosteric_rescue",
+                "verified_scientific_hypothesis"
+              ],
+              "constraint_topology": "coupled_allosteric_factor_graph",
+              "positive_action": "commit_hyp_03_zinc_loop_l3_allosteric_rescue",
+              "negative_foil_action": "discard_hyp_03_zinc_loop_l3_allosteric_rescue",
+              "target_score": 0.98,
+              "sample_weight": 1.0,
+              "source_tier": "TIER1_EPISODIC",
+              "hit_count": 1,
+              "welford_variance": 0.0
+            }
+          ]
+        }
+      },
+      "safetensors_path": "D:/91s_Vivy/Vivy.v6/artifacts/antigravity_science_program/vivy_science_discovery_instinct.safetensors",
+      "safetensors_size_bytes": 10704,
+      "safetensors_sha256": "43aa4a49cb523c5505bdd7700534ec42c18af7c2a5f81b344ce024900e203f7b",
+      "anchored_laws_count": 3,
+      "anchor_recall_rate": 1.0,
+      "effective_weight_rank": 32
+    },
+    "publication_visual_artifacts": {
+      "bmp_path": "D:/91s_Vivy/Vivy.v6/artifacts/antigravity_science_program/vivy_science_structural_eigenmode_figure.bmp",
+      "bmp_size_bytes": 388854,
+      "bmp_sha256": "83dea847aab0aa7f6b67697e29e812e1919667c53cf0b1eb4abab35d237f38af",
+      "svg_path": "D:/91s_Vivy/Vivy.v6/artifacts/antigravity_science_program/vivy_science_structural_eigenmode_figure.svg",
+      "svg_size_bytes": 1062,
+      "svg_sha256": "a73c59163337afdb81910a29b41532cd867b9783c96928e93991c0ff37bd2b7b",
+      "resolution": "480x270"
+    }
+  },
+  "application_submission_package": {
+    "entry_id_mapping": {
+      "signed_in_confirmation": "entry.1164220557",
+      "full_name": "entry.1443922531",
+      "country_of_residence": "entry.1641069268",
+      "professional_context": "entry.2007819540",
+      "professional_context_other": "entry.2007819540.other_option_response",
+      "commercial_intent": "entry.1483841851",
+      "primary_institution": "entry.757063719",
+      "institutional_email": "entry.773064689",
+      "public_lab_url": "entry.1554428552",
+      "orcid_id": "entry.75006319",
+      "google_scholar_url": "entry.434473874",
+      "primary_field_of_study": "entry.1767556143",
+      "specialization_keywords": "entry.333285617",
+      "primary_methodology": "entry.668270614",
+      "recent_ai_tools": "entry.1111123053",
+      "ai_usage_frequency": "entry.1558482623",
+      "research_project_abstract": "entry.1473506141",
+      "collaboration_preferences": "entry.893292725"
+    },
+    "payload": {
+      "signed_in_confirmation": "Yes, I am signed in to the account I want to use with Google Antigravity, and I understand that usage is governed by the individual Google Antigravity Terms of Service.",
+      "full_name": "Vi Nguyen",
+      "country_of_residence": "Vietnam",
+      "professional_context": "__other_option__",
+      "professional_context_other": "Independent Open-Source Scientific & AI Researcher (Lead Architect of ViVy)",
+      "commercial_intent": "Non-commercial",
+      "primary_institution": "Independent Researcher - ViVy Open-Source Autonomous Scientific & Cognitive Computing Project (GitHub: ngocchau-ai/ViVy | HuggingFace: vinguyen0891)",
+      "institutional_email": "vnrattan199x@gmail.com",
+      "public_lab_url": "https://github.com/ngocchau-ai/ViVy",
+      "orcid_id": "",
+      "google_scholar_url": "",
+      "primary_field_of_study": "Computer Science, Data Science, AI & Machine Learning",
+      "specialization_keywords": "autonomous scientific discovery, structural bioinformatics & conformational eigenmode analysis, neuro-symbolic factor-graph optimization",
+      "primary_methodology": "Computational / Dry Lab",
+      "recent_ai_tools": "Agentic workspaces: Google Antigravity IDE (daily primary research environment with custom MCP and Rust C-ABI verification skills); General AI assistants: Gemini, Claude, OpenAI; Domain-specific AI tools: AlphaFold Database, AlphaGenome, UniProt, ChEMBL, PubChem, OpenAlex, and Vivy-R-Series 3B open-weight scientific cores.",
+      "ai_usage_frequency": "Every day or more often",
+      "research_project_abstract": "Problem: Predicting allosteric rescue pathways and non-coding splice-disruption mechanisms across multi-domain protein-ligand and genomic networks remains bottlenecked by fragmented manual bioinformatic pipelines and hallucination-prone unconstrained LLM reasoning when reconciling conflicting wet-lab/clinical evidence. Approach: Using Google Antigravity IDE, Gemini 4 Argon, and Google DeepMind Science Skills (AlphaFold Database, AlphaGenome, UniProt, ChEMBL, PubChem, and OpenAlex), we couple our open-source Rust cognitive core (Vivy.v6: Complex One-Sided Jacobi SVD spectral mode decomposition, exact Max-Sum Belief Propagation over cyclic residue/rotamer factor graphs, and VM-11 hypothesis falsification dampening with Sherman-Morrison RLS synaptic consolidation) into an autonomous, cryptographically auditable computational dry-lab workflow. Deliverables: Over the next 6-12 months, we will release open-source Antigravity Science skills for falsification-aware structural/genomic hypothesis synthesis, reproducible SHA-256 benchmark datasets across 500+ AlphaFold/ClinVar variant-allostery pairs, and peer-reviewed open-access preprints and standalone 3B scientific reasoning weights on GitHub and HuggingFace.",
+      "collaboration_preferences": [
+        "Lightweight feedback: I am open to occasional surveys about my experience.",
+        "Research interviews: I am open to 1:1 discussions with the research or product team about my workflows.",
+        "Co-development: I am interested in co-developing or testing domain-specific science tools and workflows.",
+        "Case studies & showcases: I am open to discussing potential case studies or showcases of the role of AI in our work.",
+        "Community, events & future programs: I am open to receiving invitations to scientific workshops, events, and future Google science initiatives."
+      ]
+    },
+    "alternate_grant_abstracts": {
+      "computational_biology_and_ai_for_science": "Problem: Predicting allosteric rescue pathways and non-coding splice-disruption mechanisms across multi-domain protein-ligand and genomic networks remains bottlenecked by fragmented manual bioinformatic pipelines and hallucination-prone unconstrained LLM reasoning when reconciling conflicting wet-lab/clinical evidence. Approach: Using Google Antigravity IDE, Gemini 4 Argon, and Google DeepMind Science Skills (AlphaFold Database, AlphaGenome, UniProt, ChEMBL, PubChem, and OpenAlex), we couple our open-source Rust cognitive core (Vivy.v6: Complex One-Sided Jacobi SVD spectral mode decomposition, exact Max-Sum Belief Propagation over cyclic residue/rotamer factor graphs, and VM-11 hypothesis falsification dampening with Sherman-Morrison RLS synaptic consolidation) into an autonomous, cryptographically auditable computational dry-lab workflow. Deliverables: Over the next 6-12 months, we will release open-source Antigravity Science skills for falsification-aware structural/genomic hypothesis synthesis, reproducible SHA-256 benchmark datasets across 500+ AlphaFold/ClinVar variant-allostery pairs, and peer-reviewed open-access preprints and standalone 3B scientific reasoning weights on GitHub and HuggingFace.",
+      "neuro_symbolic_scientific_discovery": "Problem: Autonomous scientific agents frequently suffer from catastrophic forgetting and confirmation bias during long-horizon computational experiments, failing to systematically dampen falsified hypotheses or preserve mathematical guarantees across multi-variable physical and biological simulations. Approach: Leveraging Google Antigravity's parallel agentic workflows, Gemini 4 Argon, and the Google DeepMind Science Skills ecosystem, we integrate Vivy.v6's deterministic Rust C-ABI engine (Jacobi SVD spectral analysis, Max-Sum Belief Propagation factor-graph optimization, VM-11 falsification dampening, and Rank-1 Sherman-Morrison RLS + Fisher EWC open-ended neurogenesis) to orchestrate grounded, reproducible dry-lab discovery across structural biology and computational science benchmarks. Deliverables: Over the next 6-12 months, we will publish open-source Apache-2.0 scientific verification harnesses, full-weight 3B specialized models (Vivy-R-Series), and reproducible multi-domain scientific discovery benchmarks at https://github.com/ngocchau-ai/ViVy."
+    },
+    "validation": {
+      "form_schema_valid": true,
+      "orcid_or_scholar_present": false,
+      "ready_for_immediate_submission": false,
+      "abstract_character_count": 1221,
+      "abstract_minimum_required": 300,
+      "errors": [],
+      "warnings": [
+        "CRITICAL ELIGIBILITY GATE: Google Antigravity Science Form states: 'Your application is only considered if you provide at least a valid ORCID iD (0000-0000-0000-0000) OR a valid Google Scholar profile URL.' Supply --orcid or --scholar (or register a free ORCID iD in 60s at https://orcid.org/register) before clicking Submit."
+      ]
+    },
+    "prefilled_one_click_form_url": "https://docs.google.com/forms/d/e/1FAIpQLScSnOMSFSm8zfM9siaXufuqAeR6ZP6R33DTzxjqJObjW61GzQ/viewform?usp=pp_url&entry.1164220557=Yes%2C%20I%20am%20signed%20in%20to%20the%20account%20I%20want%20to%20use%20with%20Google%20Antigravity%2C%20and%20I%20understand%20that%20usage%20is%20governed%20by%20the%20individual%20Google%20Antigravity%20Terms%20of%20Service.&entry.1443922531=Vi%20Nguyen&entry.1641069268=Vietnam&entry.2007819540=__other_option__&entry.2007819540.other_option_response=Independent%20Open-Source%20Scientific%20%26%20AI%20Researcher%20%28Lead%20Architect%20of%20ViVy%29&entry.1483841851=Non-commercial&entry.757063719=Independent%20Researcher%20-%20ViVy%20Open-Source%20Autonomous%20Scientific%20%26%20Cognitive%20Computing%20Project%20%28GitHub%3A%20ngocchau-ai%2FViVy%20%7C%20HuggingFace%3A%20vinguyen0891%29&entry.773064689=vnrattan199x%40gmail.com&entry.1554428552=https%3A%2F%2Fgithub.com%2Fngocchau-ai%2FViVy&entry.1767556143=Computer%20Science%2C%20Data%20Science%2C%20AI%20%26%20Machine%20Learning&entry.333285617=autonomous%20scientific%20discovery%2C%20structural%20bioinformatics%20%26%20conformational%20eigenmode%20analysis%2C%20neuro-symbolic%20factor-graph%20optimization&entry.668270614=Computational%20%2F%20Dry%20Lab&entry.1111123053=Agentic%20workspaces%3A%20Google%20Antigravity%20IDE%20%28daily%20primary%20research%20environment%20with%20custom%20MCP%20and%20Rust%20C-ABI%20verification%20skills%29%3B%20General%20AI%20assistants%3A%20Gemini%2C%20Claude%2C%20OpenAI%3B%20Domain-specific%20AI%20tools%3A%20AlphaFold%20Database%2C%20AlphaGenome%2C%20UniProt%2C%20ChEMBL%2C%20PubChem%2C%20OpenAlex%2C%20and%20Vivy-R-Series%203B%20open-weight%20scientific%20cores.&entry.1558482623=Every%20day%20or%20more%20often&entry.1473506141=Problem%3A%20Predicting%20allosteric%20rescue%20pathways%20and%20non-coding%20splice-disruption%20mechanisms%20across%20multi-domain%20protein-ligand%20and%20genomic%20networks%20remains%20bottlenecked%20by%20fragmented%20manual%20bioinformatic%20pipelines%20and%20hallucination-prone%20unconstrained%20LLM%20reasoning%20when%20reconciling%20conflicting%20wet-lab%2Fclinical%20evidence.%20Approach%3A%20Using%20Google%20Antigravity%20IDE%2C%20Gemini%204%20Argon%2C%20and%20Google%20DeepMind%20Science%20Skills%20%28AlphaFold%20Database%2C%20AlphaGenome%2C%20UniProt%2C%20ChEMBL%2C%20PubChem%2C%20and%20OpenAlex%29%2C%20we%20couple%20our%20open-source%20Rust%20cognitive%20core%20%28Vivy.v6%3A%20Complex%20One-Sided%20Jacobi%20SVD%20spectral%20mode%20decomposition%2C%20exact%20Max-Sum%20Belief%20Propagation%20over%20cyclic%20residue%2Frotamer%20factor%20graphs%2C%20and%20VM-11%20hypothesis%20falsification%20dampening%20with%20Sherman-Morrison%20RLS%20synaptic%20consolidation%29%20into%20an%20autonomous%2C%20cryptographically%20auditable%20computational%20dry-lab%20workflow.%20Deliverables%3A%20Over%20the%20next%206-12%20months%2C%20we%20will%20release%20open-source%20Antigravity%20Science%20skills%20for%20falsification-aware%20structural%2Fgenomic%20hypothesis%20synthesis%2C%20reproducible%20SHA-256%20benchmark%20datasets%20across%20500%2B%20AlphaFold%2FClinVar%20variant-allostery%20pairs%2C%20and%20peer-reviewed%20open-access%20preprints%20and%20standalone%203B%20scientific%20reasoning%20weights%20on%20GitHub%20and%20HuggingFace.&entry.893292725=Lightweight%20feedback%3A%20I%20am%20open%20to%20occasional%20surveys%20about%20my%20experience.&entry.893292725=Research%20interviews%3A%20I%20am%20open%20to%201%3A1%20discussions%20with%20the%20research%20or%20product%20team%20about%20my%20workflows.&entry.893292725=Co-development%3A%20I%20am%20interested%20in%20co-developing%20or%20testing%20domain-specific%20science%20tools%20and%20workflows.&entry.893292725=Case%20studies%20%26%20showcases%3A%20I%20am%20open%20to%20discussing%20potential%20case%20studies%20or%20showcases%20of%20the%20role%20of%20AI%20in%20our%20work.&entry.893292725=Community%2C%20events%20%26%20future%20programs%3A%20I%20am%20open%20to%20receiving%20invitations%20to%20scientific%20workshops%2C%20events%2C%20and%20future%20Google%20science%20initiatives."
+  },
+  "receipt_sha256": "517603ed7ecdaeb92cbaa72b47b304d7545a1d0797dc2062c214fb360d087f98"
+}

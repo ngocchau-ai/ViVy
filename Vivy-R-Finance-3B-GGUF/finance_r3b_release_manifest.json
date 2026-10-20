@@ -165,8 +165,8 @@
       "size_bytes": 12648
     }
   },
-  "release_version": "v6.6-Unified-Autopoietic-Top3-R036",
-  "updated_at_utc": "2026-10-19T13:28:08.736858+00:00",
+  "release_version": "v6.5-Autopoietic-Harness-Open-Neurogenesis-R035",
+  "updated_at_utc": "2026-10-20T00:01:03.729376+00:00",
   "extractbench_top3_evolution": {
     "final_session": 5,
     "overall_unified_value_f1": 96.72,
@@ -211,8 +211,8 @@
     "all_arenas_100_mastery_achieved": true,
     "all_arenas_monotonic_improvement": true,
     "instinct_safetensors_file": "vivy_goal_mastery_instinct.safetensors",
-    "instinct_safetensors_size_bytes": 11696,
-    "instinct_safetensors_sha256": "b4cf6a73517553f9703bd584c40433505fab8271819ee831684e8f16d2e050b9"
+    "instinct_safetensors_size_bytes": 11704,
+    "instinct_safetensors_sha256": "255649fc23fb4449f1ef20c2a051d4b2a9b185f836277c7dc93860c3de9c41ad"
   },
   "autopoietic_harness_and_neurogenesis_r035": {
     "enable_neurogenesis": true,
