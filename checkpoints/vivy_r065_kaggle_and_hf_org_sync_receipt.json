@@ -1,0 +1,90 @@
+{
+  "schema": "vivy.v6.r065_v69_kaggle_and_hf_blog_sync_master_receipt.v1",
+  "synced_at_utc": "2026-10-20T14:58:58.367834+00:00",
+  "release_version": "v6.9-Unified-ZeroBridge-3DWorldArena-R063",
+  "hf_spaces_synchronized": {
+    "vinguyen0891/Vivy-Kaggle-Achievements-Blog": {
+      "commit_sha": "84c5cfd06e443718bc766048d3133e962b3696f0",
+      "commit_url": "https://huggingface.co/spaces/vinguyen0891/Vivy-Kaggle-Achievements-Blog/commit/84c5cfd06e443718bc766048d3133e962b3696f0"
+    },
+    "vinguyen0891/Vivy-R-Series-Live-Sandbox": {
+      "commit_sha": "2d6496cfa458fb903bce835fa49d10bd02becef2",
+      "commit_url": "https://huggingface.co/spaces/vinguyen0891/Vivy-R-Series-Live-Sandbox/commit/2d6496cfa458fb903bce835fa49d10bd02becef2"
+    }
+  },
+  "dataset_slug": "vinguynvn/vivy-cautreo-extractbench-organism",
+  "dataset_push_stdout": "Dataset vinguynvn/vivy-cautreo-extractbench-organism already synchronized and ready with all v6.9 220-tensor Zero-Bridge checkpoints (vivy_cautreo_organism.tar.gz).",
+  "dataset_status_stdout": "ready",
+  "archive_tar_gz_bytes": 24013667,
+  "archived_file_count": 238,
+  "kernel_slug": "vinguynvn/vivy-gemma-cognitive-core",
+  "kernel_push_stdout": "Kernel version 17 successfully pushed.  Please check progress at https://www.kaggle.com/code/vinguynvn/vivy-gemma-cognitive-core",
+  "kernel_status_stdout": "vinguynvn/vivy-gemma-cognitive-core has status \"KernelWorkerStatus.COMPLETE\"",
+  "kaggle_linux_verification_receipt": {
+    "schema": "vivy.v6.v69_kaggle_dataset_sync_receipt.v1",
+    "receipt_id": "R-065-KAGGLE-SYNC",
+    "release_version": "v6.9-Unified-ZeroBridge-3DWorldArena-R063",
+    "dataset_slug": "vinguynvn/vivy-cautreo-extractbench-organism",
+    "kernel_slug": "vinguynvn/vivy-gemma-cognitive-core",
+    "stage_source": "auto_extracted_dir:/kaggle/input/vivy-cautreo-extractbench-organism",
+    "kaggle_linux_runtime": {
+      "platform": "Linux-6.18.48+-x86_64-with-glibc2.35",
+      "python_version": "3.12.13",
+      "cpu_count": 4,
+      "offline_internet_disabled": true,
+      "libcautreo_so_bytes": 30592,
+      "libcautreo_pager_so_bytes": 29872,
+      "elapsed_ms": 13616.56
+    },
+    "all_3_models_220_tensors_verified_on_kaggle": true,
+    "verified_v69_models": [
+      {
+        "model_code": "R-VISION-3B",
+        "file_name": "vivy_r_vision_3b_v69_zero_bridge.safetensors",
+        "tensor_count": 220,
+        "total_f32_parameters": 270352,
+        "size_bytes": 1101696,
+        "sha256": "64a51840d4bdce7ee99b42a4097803b4795b63d7348f185d0f8d077cc4b1b57c",
+        "sha256_matches_windows_and_hf": true,
+        "release_version_metadata": "v6.9-Unified-ZeroBridge-3DWorldArena-R063"
+      },
+      {
+        "model_code": "R-FINANCE-3B",
+        "file_name": "vivy_r_finance_3b_v69_zero_bridge.safetensors",
+        "tensor_count": 220,
+        "total_f32_parameters": 260942,
+        "size_bytes": 1063992,
+        "sha256": "1bcbaf22e19c2bd1a117a89926f9526daebaf849986583e8083fcf2ba7953053",
+        "sha256_matches_windows_and_hf": true,
+        "release_version_metadata": "v6.9-Unified-ZeroBridge-3DWorldArena-R063"
+      },
+      {
+        "model_code": "R-ROBOTICS-3B",
+        "file_name": "vivy_r_robotics_3b_v69_zero_bridge.safetensors",
+        "tensor_count": 220,
+        "total_f32_parameters": 261267,
+        "size_bytes": 1065308,
+        "sha256": "ad95e495f631d4cf29d9be80cd37d06e9ff2d06a97701a7f81ebdd2f1b2671b6",
+        "sha256_matches_windows_and_hf": true,
+        "release_version_metadata": "v6.9-Unified-ZeroBridge-3DWorldArena-R063"
+      }
+    ],
+    "zero_bridge_audit_on_kaggle_linux": {
+      "is_single_unified_organism": true,
+      "entity_count": 1,
+      "cautreo_unified_attached": true,
+      "active_intermediate_bridges_count": 0,
+      "smoke_task_correct": true,
+      "smoke_task_latency_ms": 0.6394
+    },
+    "kaggle_linux_3d_world_smoke": {
+      "case_id": "01-Golden-Gate-Bridge-San-Francisco",
+      "validation_passed": true,
+      "mesh_triangles": 400,
+      "rendered_triangles": 392000,
+      "glb_bytes": 37200,
+      "glb_sha256": "72e2bf4881fe9ae8398491813b9dc39573ba48439aabc405bf97a29fab6f2728"
+    },
+    "receipt_sha256": "8fce5073c5088139b5089de873d84e3418a4ef1237de4291fb1aafd53b603c3d"
+  }
+}

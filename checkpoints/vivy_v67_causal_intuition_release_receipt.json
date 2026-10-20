@@ -2,8 +2,8 @@
   "schema": "vivy.v6.v67_causal_intuition_release_receipt.v1",
   "receipt_id": "R-043-V67-PACKAGE",
   "v67_release_version": "v6.7-Causal-Intuition-Blind-Top1-R043",
-  "packaged_at_utc": "2026-10-20T14:17:57.947158+00:00",
-  "elapsed_sec": 0.2121,
+  "packaged_at_utc": "2026-10-20T23:22:44.684643+00:00",
+  "elapsed_sec": 1.4422,
   "bundled_blind_instinct_files": [
     "D:\\91s_Vivy\\Vivy.v6\\models\\r_series\\checkpoints\\vivy_r041_vbench_top3_instinct.safetensors",
     "D:\\91s_Vivy\\Vivy.v6\\models\\r_series\\checkpoints\\vivy_r042_vbench_adversarial_instinct.safetensors",
