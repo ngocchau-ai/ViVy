@@ -11,7 +11,7 @@
 - **HuggingFace Repository:** [`vinguyen0891/Vivy-R-Vision-3B-GGUF`](https://huggingface.co/vinguyen0891/Vivy-R-Vision-3B-GGUF)
 - **Backbone & Weight Class:** Complete Full-Weight `3,085,938,688` Parameters (`3.09B`, 36 Transformer Layers, `d_model = 2048`, `intermediate_size = 11008`, `vocab_size = 151936`, `435` GGUF v3 Tensors, `~2.10 GB` `Q4_K_M` Standalone GGUF + `d_model = 2048` BitFit/IA³ & Semantic Projection `.safetensors`)
 - **Native Rust Decision Kernel:** `vivy_core.dll` (`vivy-r-core` + `vivy-decide` Max-Sum Belief Propagation + `vivy-svd` Jacobi Complex SVD + `vivy-graph` VM-11 Dampening)
-- **Principal Independent Researcher & Maintainer:** **Vi Nguyen** (`vnrattan199x@gmail.com` — 100% Non-Commercial Open-Source Scientific & Cognitive Computing Research; see [`VIVY_GOOGLE_ANTIGRAVITY_SCIENCE_RESEARCH_PROPOSAL.md`](VIVY_GOOGLE_ANTIGRAVITY_SCIENCE_RESEARCH_PROPOSAL.md))
+- **Principal Independent Researcher & Maintainer:** **Vi Nguyen** (`vnrattan199x@gmail.com` | **ORCID iD:** [`0009-0009-4057-247X`](https://orcid.org/0009-0009-4057-247X) — 100% Non-Commercial Open-Source Scientific & Cognitive Computing Research; see [`VIVY_GOOGLE_ANTIGRAVITY_SCIENCE_RESEARCH_PROPOSAL.md`](VIVY_GOOGLE_ANTIGRAVITY_SCIENCE_RESEARCH_PROPOSAL.md))
 - **Quality Classification:** `[PRODUCTION-READY]`
 
 ---

@@ -10,6 +10,7 @@
 - **Program Target:** [Google Antigravity for Science Access Program](https://antigravity.google/use-cases/science) (`https://forms.gle/WvmBbPvRbpKG1BPn9`)
 - **Principal Independent Researcher:** **Vi Nguyen**
 - **Verified Contact Email (GitHub & HuggingFace Maintainer):** `vnrattan199x@gmail.com`
+- **Verified ORCID iD:** [`0009-0009-4057-247X`](https://orcid.org/0009-0009-4057-247X)
 - **Research Role:** Independent Open-Source Scientific & AI Researcher (Lead Architect of ViVy)
 - **Research Classification:** 100% Non-Commercial Open-Source Scientific Research (`Apache-2.0` / `CC-BY-4.0`)
 - **Public Research Repositories:**
@@ -92,7 +93,7 @@ Executed via `python/vivy_core/antigravity_science_lab.py` and `tools/science_pr
 | 6 | `entry.757063719` | Primary Institution / Organization | `Independent Researcher - ViVy Open-Source Autonomous Scientific & Cognitive Computing Project (GitHub: ngocchau-ai/ViVy | HuggingFace: vinguyen0891)` |
 | 7 | `entry.773064689` | Organizational / Contact Email | `vnrattan199x@gmail.com` |
 | 8 | `entry.1554428552` | Public URL for Research Group / Lab | `https://github.com/ngocchau-ai/ViVy` |
-| 9 | `entry.75006319` | ORCID iD | `0000-0000-0000-0000` format (Independent Researcher ORCID) |
+| 9 | `entry.75006319` | ORCID iD | [`0009-0009-4057-247X`](https://orcid.org/0009-0009-4057-247X) (`SUBMITTED`) |
 | 10 | `entry.434473874` | Google Scholar Profile | Optional if ORCID iD is provided |
 | 11 | `entry.1767556143` | Primary Field of Study | `Computer Science, Data Science, AI & Machine Learning` |
 | 12 | `entry.333285617` | Specialization Keywords | `autonomous scientific discovery, structural bioinformatics & conformational eigenmode analysis, neuro-symbolic factor-graph optimization` |
@@ -109,3 +110,4 @@ Executed via `python/vivy_core/antigravity_science_lab.py` and `tools/science_pr
 | Agent | Timestamp | Reason for Change |
 |---|---|---|
 | Antigravity IDE (`Receipt R-051`) | 2026-10-20 | Created public 100% English Google Antigravity for Science research proposal, verified independent researcher contact `vnrattan199x@gmail.com`, and documented `VivyAntigravityScienceLab` benchmarks. |
+| Antigravity IDE (`Receipt R-054`) | 2026-10-20 | Linked verified ORCID iD `0009-0009-4057-247X` (`https://orcid.org/0009-0009-4057-247X`) alongside `vnrattan199x@gmail.com` and recorded application submission status (`SUBMITTED`). |
