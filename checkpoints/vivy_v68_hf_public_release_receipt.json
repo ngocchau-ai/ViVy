@@ -1,0 +1,37 @@
+{
+  "schema": "vivy.v6.v68_hf_release_receipt.v1",
+  "release_version": "v6.8-Dream-Teacher-Distilled-3B-5B-R058",
+  "published_at_utc": "2026-10-20T10:09:43.211035+00:00",
+  "published_repositories": [
+    {
+      "model_code": "R-VISION-3B",
+      "repo_id": "vinguyen0891/Vivy-R-Vision-3B-GGUF",
+      "commit_sha": "c35304b5b0a82f3a859c7cfbee9562b75d195aae",
+      "commit_url": "https://huggingface.co/vinguyen0891/Vivy-R-Vision-3B-GGUF/commit/c35304b5b0a82f3a859c7cfbee9562b75d195aae",
+      "gguf_size_bytes": 2104932800,
+      "v68_safetensors_file": "vivy_r_vision_3b_v68_dream_distilled.safetensors",
+      "v68_tensors": 216,
+      "siblings_count": 64
+    },
+    {
+      "model_code": "R-FINANCE-3B",
+      "repo_id": "vinguyen0891/Vivy-R-Finance-3B-GGUF",
+      "commit_sha": "bf53abf02dd783e4e8323f3a089131511b99cf1f",
+      "commit_url": "https://huggingface.co/vinguyen0891/Vivy-R-Finance-3B-GGUF/commit/bf53abf02dd783e4e8323f3a089131511b99cf1f",
+      "gguf_size_bytes": 2104932800,
+      "v68_safetensors_file": "vivy_r_finance_3b_v68_dream_distilled.safetensors",
+      "v68_tensors": 216,
+      "siblings_count": 59
+    },
+    {
+      "model_code": "R-ROBOTICS-3B",
+      "repo_id": "vinguyen0891/Vivy-R-Robotics-3B-GGUF",
+      "commit_sha": "0cceae2358ff651a5f539a9dddc41d959c247766",
+      "commit_url": "https://huggingface.co/vinguyen0891/Vivy-R-Robotics-3B-GGUF/commit/0cceae2358ff651a5f539a9dddc41d959c247766",
+      "gguf_size_bytes": 2104932800,
+      "v68_safetensors_file": "vivy_r_robotics_3b_v68_dream_distilled.safetensors",
+      "v68_tensors": 216,
+      "siblings_count": 59
+    }
+  ]
+}

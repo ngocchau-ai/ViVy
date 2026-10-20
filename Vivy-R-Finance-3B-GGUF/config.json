@@ -53,5 +53,12 @@
     "vivy_r056_deepmind_videoqa_instinct.safetensors",
     "vivy_r056_deepmind_videoqa_adversarial_instinct.safetensors"
   ],
-  "v67_zero_assistance_compass_pruning_ratio": 0.9375
+  "v67_zero_assistance_compass_pruning_ratio": 0.9375,
+  "v68_release_version": "v6.8-Dream-Teacher-Distilled-3B-5B-R058",
+  "v68_unified_safetensors_file": "vivy_r_finance_3b_v68_dream_distilled.safetensors",
+  "v68_unified_safetensors_tensors": 216,
+  "v68_unified_f32_parameters": 259598,
+  "v68_teacher_tier_range_b": "100B-150B",
+  "v68_total_envelope_parameters": 3673938688,
+  "v68_consolidated_orthogonal_lobes": 14
 }

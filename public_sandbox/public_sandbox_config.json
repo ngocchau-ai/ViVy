@@ -1,0 +1,17 @@
+{
+  "schema": "vivy.v6.public_sandbox_config.v1",
+  "models_exposed": [
+    "R-VISION-3B",
+    "R-ROBOTICS-3B"
+  ],
+  "parameter_envelope": "3.09B-5.00B",
+  "session_ttl_seconds": 900,
+  "max_requests_per_session": 20,
+  "max_sessions_per_ip_per_day": 2,
+  "zero_raw_pii_storage": true,
+  "deployment_targets": [
+    "HuggingFace_Spaces_ZeroGPU",
+    "Client_Browser_WASM_Canvas_Zero_Server_Cost",
+    "Modal_Serverless_Burst_Worker"
+  ]
+}

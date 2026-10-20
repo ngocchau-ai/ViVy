@@ -1,0 +1,18 @@
+{
+  "schema": "vivy.v6.public_hf_space_deployment_receipt.v1",
+  "deployed_at_utc": "2026-10-20T10:14:15.339197+00:00",
+  "space_repo_id": "vinguyen0891/Vivy-R-Series-Live-Sandbox",
+  "space_url": "https://huggingface.co/spaces/vinguyen0891/Vivy-R-Series-Live-Sandbox",
+  "commit_sha": "8f0a04bda5393c8066f2478b2b58fdfd7ba56391",
+  "commit_url": "https://huggingface.co/spaces/vinguyen0891/Vivy-R-Series-Live-Sandbox/commit/8f0a04bda5393c8066f2478b2b58fdfd7ba56391",
+  "sdk": "static",
+  "private": false,
+  "siblings": [
+    ".gitattributes",
+    "README.md",
+    "app.py",
+    "index.html",
+    "public_sandbox_config.json",
+    "style.css"
+  ]
+}

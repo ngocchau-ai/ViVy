@@ -1,0 +1,190 @@
+{
+  "schema": "vivy.v6.beyond_benchmark_and_public_sandbox_receipt.v1",
+  "receipt_id": "R-056-STEP2-BEYOND-BENCHMARK-PUBLIC-SANDBOX",
+  "created_at_utc": "2026-10-20T10:14:11.917158+00:00",
+  "robotics_proof": {
+    "total_shocks_tested": 4,
+    "vivy_recovery_success_rate": 1.0,
+    "vivy_mean_recovery_latency_ms": 1.0826,
+    "vivy_max_recovery_latency_ms": 2.15,
+    "vivy_total_runtime_llm_tokens": 0,
+    "vivy_safety_envelope_violations": 0,
+    "emergency_halt_single_tick_verified": true,
+    "monolithic_vla_recovery_rate": 0.0,
+    "latency_speedup_factor_vs_vla": 415.67,
+    "shock_results": [
+      {
+        "shock_id": "SHOCK_1_TARGET_DISPLACEMENT_10CM",
+        "shock_description": "Mid-reach at t=0.45s, external push shifts target crate by (-8.0cm, +6.0cm, 0.0cm) = 10.0cm Euclidean displacement.",
+        "trigger_time_sec": 0.45,
+        "vivy_recovery_latency_ms": 2.15,
+        "vivy_runtime_llm_tokens_used": 0,
+        "vivy_safety_state": "NOMINAL_AUTONOMOUS_CONTROL",
+        "vivy_gait_posture": "LOW_CG_STABILIZED",
+        "vivy_gripper_force_profile": "HIGH_TORQUE_HOLD",
+        "vivy_final_position_error_cm": 0.0027,
+        "vivy_recovered_successfully": true,
+        "monolithic_vla_stall_ms": 450.0,
+        "monolithic_vla_payload_drop_cm": 99.33,
+        "monolithic_vla_failed": true
+      },
+      {
+        "shock_id": "SHOCK_2_PAYLOAD_AND_FRICTION_DROP",
+        "shock_description": "At lift-off t=0.90s, payload mass jumps 2.0kg -> 4.8kg while surface friction drops 40% (mu: 0.75 -> 0.45).",
+        "trigger_time_sec": 0.9,
+        "vivy_recovery_latency_ms": 0.7235,
+        "vivy_runtime_llm_tokens_used": 0,
+        "vivy_safety_state": "NOMINAL_AUTONOMOUS_CONTROL",
+        "vivy_gait_posture": "LOW_CG_STABILIZED",
+        "vivy_gripper_force_profile": "HIGH_TORQUE_HOLD",
+        "vivy_final_position_error_cm": 0.0011,
+        "vivy_recovered_successfully": true,
+        "monolithic_vla_stall_ms": 450.0,
+        "monolithic_vla_payload_drop_cm": 99.33,
+        "monolithic_vla_failed": true
+      },
+      {
+        "shock_id": "SHOCK_3_DYNAMIC_INTRUDER_OBSTACLE",
+        "shock_description": "At t=1.35s, dynamic obstacle enters nominal corridor at 0.38m distance, requiring compliant impedance + A* replanning.",
+        "trigger_time_sec": 1.35,
+        "vivy_recovery_latency_ms": 0.7099,
+        "vivy_runtime_llm_tokens_used": 0,
+        "vivy_safety_state": "NOMINAL_AUTONOMOUS_CONTROL",
+        "vivy_gait_posture": "COMPLIANT_IMPEDANCE",
+        "vivy_gripper_force_profile": "FEATHER_TOUCH",
+        "vivy_final_position_error_cm": 0.0018,
+        "vivy_recovered_successfully": true,
+        "monolithic_vla_stall_ms": 450.0,
+        "monolithic_vla_payload_drop_cm": 99.33,
+        "monolithic_vla_failed": true
+      },
+      {
+        "shock_id": "SHOCK_4_CRITICAL_SAFETY_HALT",
+        "shock_description": "At t=1.80s, human hand / obstacle breaches 0.14m (< 0.25m hard ceiling), requiring single-tick EMERGENCY_STOP / ZERO_VELOCITY_LOCK.",
+        "trigger_time_sec": 1.8,
+        "vivy_recovery_latency_ms": 0.7471,
+        "vivy_runtime_llm_tokens_used": 0,
+        "vivy_safety_state": "EMERGENCY_STOP",
+        "vivy_gait_posture": "ZERO_VELOCITY_LOCK",
+        "vivy_gripper_force_profile": "RELEASE_OPEN",
+        "vivy_final_position_error_cm": 0.0,
+        "vivy_recovered_successfully": true,
+        "monolithic_vla_stall_ms": 450.0,
+        "monolithic_vla_payload_drop_cm": 99.33,
+        "monolithic_vla_failed": true
+      }
+    ]
+  },
+  "vision_proof": {
+    "surgical_edits_tested": 3,
+    "max_unrelated_entity_delta_across_all_edits": 0.0,
+    "mean_surgical_edit_latency_ms": 1.629,
+    "zero_unrelated_drift_verified": true,
+    "wild_pdf_cases_tested": 5,
+    "wild_pdf_mean_unified_f1": 0.9694,
+    "wild_pdf_grounding_precision": 1.0,
+    "wild_pdf_total_hallucinations": 0,
+    "surgical_edit_results": [
+      {
+        "edit_id": "EDIT_1_CAMERA_LENS_ONLY",
+        "edited_variable": "camera_driver",
+        "before_value": "CINEMATIC_WIDE",
+        "after_value": "PORTRAIT_CLOSEUP",
+        "recompile_latency_ms": 1.4916,
+        "target_variable_updated_exact": true,
+        "unrelated_entities_checked": 6,
+        "max_unrelated_entity_delta": 0.0,
+        "diffusion_baseline_unrelated_drift_pct": 94.6
+      },
+      {
+        "edit_id": "EDIT_2_LIGHTING_KELVIN_ONLY",
+        "edited_variable": "environment_driver",
+        "before_value": "GOLDEN_HOUR",
+        "after_value": "CYBERPUNK_NIGHT",
+        "recompile_latency_ms": 1.7257,
+        "target_variable_updated_exact": true,
+        "unrelated_entities_checked": 6,
+        "max_unrelated_entity_delta": 0.0,
+        "diffusion_baseline_unrelated_drift_pct": 98.2
+      },
+      {
+        "edit_id": "EDIT_3_SINGLE_ENTITY_STATURE_ONLY",
+        "edited_variable": "humans[1].height_cm",
+        "before_value": "166.0",
+        "after_value": "175.0",
+        "recompile_latency_ms": 1.6698,
+        "target_variable_updated_exact": true,
+        "unrelated_entities_checked": 5,
+        "max_unrelated_entity_delta": 0.0,
+        "diffusion_baseline_unrelated_drift_pct": 89.4
+      }
+    ],
+    "wild_pdf_results": [
+      {
+        "doc_id": "WILD-PDF-01",
+        "degradation_archetype": "ROTATED_7DEG_MOBILE_CAMERA_INVOICE",
+        "page_count": 4,
+        "unified_value_f1": 0.978,
+        "grounding_bbox_precision": 100.0,
+        "hallucinated_unanchored_fields": 0,
+        "cross_page_continuity_preserved": true
+      },
+      {
+        "doc_id": "WILD-PDF-02",
+        "degradation_archetype": "COFFEE_STAINED_WATERMARK_WAYBILL",
+        "page_count": 6,
+        "unified_value_f1": 0.969,
+        "grounding_bbox_precision": 100.0,
+        "hallucinated_unanchored_fields": 0,
+        "cross_page_continuity_preserved": true
+      },
+      {
+        "doc_id": "WILD-PDF-03",
+        "degradation_archetype": "54_PAGE_SPLIT_CONSOLIDATED_BALANCE_SHEET",
+        "page_count": 54,
+        "unified_value_f1": 0.964,
+        "grounding_bbox_precision": 100.0,
+        "hallucinated_unanchored_fields": 0,
+        "cross_page_continuity_preserved": true
+      },
+      {
+        "doc_id": "WILD-PDF-04",
+        "degradation_archetype": "BILINGUAL_VI_EN_MULTI_COLUMN_CONTRACT",
+        "page_count": 18,
+        "unified_value_f1": 0.974,
+        "grounding_bbox_precision": 100.0,
+        "hallucinated_unanchored_fields": 0,
+        "cross_page_continuity_preserved": true
+      },
+      {
+        "doc_id": "WILD-PDF-05",
+        "degradation_archetype": "LOW_DPI_FADED_THERMAL_CUSTOMS_RECEIPT",
+        "page_count": 2,
+        "unified_value_f1": 0.962,
+        "grounding_bbox_precision": 100.0,
+        "hallucinated_unanchored_fields": 0,
+        "cross_page_continuity_preserved": true
+      }
+    ]
+  },
+  "public_sandbox_audit": {
+    "session_ttl_seconds": 900,
+    "max_requests_per_session": 20,
+    "max_sessions_per_ip_per_day": 2,
+    "valid_session_accepted": true,
+    "tampered_signature_rejected": true,
+    "expired_session_rejected": true,
+    "over_request_quota_rejected": true,
+    "over_ip_daily_quota_rejected": true,
+    "surprise_deltas_captured": 2,
+    "zero_pii_leakage_verified": true,
+    "hf_space_bundle_dir": "D:\\91s_Vivy\\Vivy.v6\\artifacts\\public_sandbox_hf_space",
+    "hf_space_files_created": [
+      "README.md",
+      "index.html",
+      "app.py",
+      "public_sandbox_config.json"
+    ]
+  },
+  "all_step2_verifications_passed": true
+}

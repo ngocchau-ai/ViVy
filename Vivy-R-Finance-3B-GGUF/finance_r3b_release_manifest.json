@@ -63,7 +63,7 @@
       "size_bytes": 138
     },
     "config.json": {
-      "size_bytes": 2165
+      "size_bytes": 2542
     },
     "docs/INHERITANCE_AND_R_SERIES_ARCHITECTURE.md": {
       "size_bytes": 7014
@@ -171,10 +171,19 @@
       "size_bytes": 12808
     },
     "vivy_r056_deepmind_videoqa_instinct.safetensors": {
-      "size_bytes": 18728
+      "size_bytes": 19360
     },
     "vivy_r056_deepmind_videoqa_adversarial_instinct.safetensors": {
-      "size_bytes": 18728
+      "size_bytes": 19360
+    },
+    "vivy_r_finance_3b_v68_dream_distilled.safetensors": {
+      "size_bytes": 1057952
+    },
+    "vivy_r_finance_3b_dream_distilled_3b_5b.safetensors": {
+      "size_bytes": 27176
+    },
+    "Modelfile.v6.8": {
+      "size_bytes": 1455
     }
   },
   "release_version": "v6.5-Autopoietic-Harness-Open-Neurogenesis-R035",
@@ -317,12 +326,12 @@
         "sha256": "43a0b41353bc778a7afc75ee6954cef412cbd8203749669c3178dc6130845a5d"
       },
       "vivy_r056_deepmind_videoqa_instinct.safetensors": {
-        "size_bytes": 18728,
-        "sha256": "87f5feb5ff6eaae3ca7e1bbe5ba658b5b1852ee6181e4912206a647cb895c0b9"
+        "size_bytes": 19360,
+        "sha256": "e503e69eef16998e3ea7ba879db391a85b0dda8df05a972a72e915547d5cba53"
       },
       "vivy_r056_deepmind_videoqa_adversarial_instinct.safetensors": {
-        "size_bytes": 18728,
-        "sha256": "87f5feb5ff6eaae3ca7e1bbe5ba658b5b1852ee6181e4912206a647cb895c0b9"
+        "size_bytes": 19360,
+        "sha256": "e503e69eef16998e3ea7ba879db391a85b0dda8df05a972a72e915547d5cba53"
       }
     }
   },
@@ -374,5 +383,19 @@
     "instinct_safetensors_file": "vivy_r042_tri_pillar_blind_instinct.safetensors",
     "instinct_safetensors_size_bytes": 27952,
     "instinct_safetensors_sha256": "e37fac8a1ae50c87e121051ff13db29508b341d943359e138d9dd442a9fe2f2c"
+  },
+  "v68_dream_teacher_distilled_release": {
+    "v68_release_version": "v6.8-Dream-Teacher-Distilled-3B-5B-R058",
+    "v68_safetensors_file": "vivy_r_finance_3b_v68_dream_distilled.safetensors",
+    "v68_safetensors_size_bytes": 1057952,
+    "v68_safetensors_sha256": "6968dbb1d29089ef64bb5235cab383f9d99976b30dc72fbced6b89b7e7731caa",
+    "base_v67_tensors": 212,
+    "added_v68_dream_tensors": 4,
+    "total_v68_tensors": 216,
+    "total_v68_f32_parameters": 259598,
+    "teacher_tier_range_b": "100B-150B",
+    "total_student_envelope_parameters": 3673938688,
+    "consolidated_orthogonal_lobes": 14,
+    "interrupt_resume_max_delta": 0.0
   }
 }

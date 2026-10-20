@@ -1,7 +1,7 @@
 {
   "schema": "vivy.v6.deepmind_1h_videoqa_top1_receipt.v1",
   "receipt_id": "R-056",
-  "timestamp_utc": "2026-10-20T02:55:56.881689+00:00",
+  "timestamp_utc": "2026-10-20T03:00:54.088572+00:00",
   "campaign": {
     "benchmark_url": "https://www.kaggle.com/benchmarks/deepmind/video-qa",
     "official_github_url": "https://github.com/google-deepmind/1h-videoqa",
@@ -11,7 +11,7 @@
     "no_hardcoded_round_table_verified": true,
     "guidance_audit": {
       "step_guidance_pct": 0.2326,
-      "byte_guidance_pct": 0.6537,
+      "byte_guidance_pct": 0.653,
       "intervention_count": 0,
       "within_budget": true
     },
@@ -190,12 +190,12 @@
             "LAW_VIDEOQA_VM11_DISTRACTOR_FALSIFICATION_DAMPENING"
           ],
           "law_instinct_margins": {
-            "LAW_VIDEOQA_CAUTREO_SLIDING_RING_SALIENCY_INDEX": 0.748388,
-            "LAW_VIDEOQA_QUERY_AWARE_ADAPTIVE_KEYFRAME_FUNNEL": 0.655422,
-            "LAW_VIDEOQA_SVD_SCENE_TRANSITION_BOUNDARY_ANCHOR": 0.450083,
-            "LAW_VIDEOQA_MAX_SUM_BP_CAUSAL_EVENT_CHAIN": 0.204601,
-            "LAW_VIDEOQA_VM11_DISTRACTOR_FALSIFICATION_DAMPENING": 0.513353,
-            "LAW_VIDEOQA_STRICT_FINAL_ANSWER_GRAMMAR_GUARD": 0.247598
+            "LAW_VIDEOQA_CAUTREO_SLIDING_RING_SALIENCY_INDEX": 0.744987,
+            "LAW_VIDEOQA_QUERY_AWARE_ADAPTIVE_KEYFRAME_FUNNEL": 0.655842,
+            "LAW_VIDEOQA_SVD_SCENE_TRANSITION_BOUNDARY_ANCHOR": 0.449646,
+            "LAW_VIDEOQA_MAX_SUM_BP_CAUSAL_EVENT_CHAIN": 0.192114,
+            "LAW_VIDEOQA_VM11_DISTRACTOR_FALSIFICATION_DAMPENING": 0.504245,
+            "LAW_VIDEOQA_STRICT_FINAL_ANSWER_GRAMMAR_GUARD": 0.238732
           },
           "adversarial_packet_loss": false,
           "pruned_candidates_pct": 98.44
@@ -299,9 +299,9 @@
               "non_zero_policy_delta_verified": true,
               "regenerated_harness_mode": "AUTOPOIETIC_STDLIB_MICRO_HARNESS",
               "regenerated_harness_ram_mb": 18.5,
-              "orthogonal_synaptic_lobes_before": 4,
-              "orthogonal_synaptic_lobes_after": 7,
-              "effective_weight_rank": 39
+              "orthogonal_synaptic_lobes_before": 5,
+              "orthogonal_synaptic_lobes_after": 8,
+              "effective_weight_rank": 40
             },
             "stage_f4_counterfactual_verification": {
               "stage": "F4_COUNTERFACTUAL_SANDBOX_VERIFICATION_BEFORE_RETRY",
@@ -317,7 +317,7 @@
               "counterfactual_gate_passed": true
             },
             "retry_unlocked": true,
-            "receipt_sha256": "56012f79ae2dd9d3e5bddf9528939d16a4e1e0b2ff25c80ff20b832be730fb8d"
+            "receipt_sha256": "bd035a21d12902b0a7959f798784ab7c4e988d3dfcf67666d3aa3360be38e02d"
           }
         }
       },
@@ -347,12 +347,12 @@
             "LAW_VIDEOQA_STRICT_FINAL_ANSWER_GRAMMAR_GUARD"
           ],
           "law_instinct_margins": {
-            "LAW_VIDEOQA_CAUTREO_SLIDING_RING_SALIENCY_INDEX": 0.768455,
-            "LAW_VIDEOQA_QUERY_AWARE_ADAPTIVE_KEYFRAME_FUNNEL": 0.651797,
-            "LAW_VIDEOQA_SVD_SCENE_TRANSITION_BOUNDARY_ANCHOR": 0.426937,
-            "LAW_VIDEOQA_MAX_SUM_BP_CAUSAL_EVENT_CHAIN": 0.687134,
-            "LAW_VIDEOQA_VM11_DISTRACTOR_FALSIFICATION_DAMPENING": 0.726002,
-            "LAW_VIDEOQA_STRICT_FINAL_ANSWER_GRAMMAR_GUARD": 0.604732
+            "LAW_VIDEOQA_CAUTREO_SLIDING_RING_SALIENCY_INDEX": 0.762856,
+            "LAW_VIDEOQA_QUERY_AWARE_ADAPTIVE_KEYFRAME_FUNNEL": 0.677267,
+            "LAW_VIDEOQA_SVD_SCENE_TRANSITION_BOUNDARY_ANCHOR": 0.429108,
+            "LAW_VIDEOQA_MAX_SUM_BP_CAUSAL_EVENT_CHAIN": 0.677239,
+            "LAW_VIDEOQA_VM11_DISTRACTOR_FALSIFICATION_DAMPENING": 0.720673,
+            "LAW_VIDEOQA_STRICT_FINAL_ANSWER_GRAMMAR_GUARD": 0.60145
           },
           "adversarial_packet_loss": false,
           "pruned_candidates_pct": 98.44
@@ -544,9 +544,9 @@
             "non_zero_policy_delta_verified": true,
             "regenerated_harness_mode": "AUTOPOIETIC_STDLIB_MICRO_HARNESS",
             "regenerated_harness_ram_mb": 18.5,
-            "orthogonal_synaptic_lobes_before": 4,
-            "orthogonal_synaptic_lobes_after": 7,
-            "effective_weight_rank": 39
+            "orthogonal_synaptic_lobes_before": 5,
+            "orthogonal_synaptic_lobes_after": 8,
+            "effective_weight_rank": 40
           },
           "stage_f4_counterfactual_verification": {
             "stage": "F4_COUNTERFACTUAL_SANDBOX_VERIFICATION_BEFORE_RETRY",
@@ -562,7 +562,7 @@
             "counterfactual_gate_passed": true
           },
           "retry_unlocked": true,
-          "receipt_sha256": "56012f79ae2dd9d3e5bddf9528939d16a4e1e0b2ff25c80ff20b832be730fb8d"
+          "receipt_sha256": "bd035a21d12902b0a7959f798784ab7c4e988d3dfcf67666d3aa3360be38e02d"
         }
       }
     ],
@@ -608,9 +608,9 @@
     },
     "crystallized_instinct_safetensors": {
       "path": "D:\\91s- T\u00e1i c\u1ea5u tr\u00fac l\u00e2n th\u1ee9 4\\Vivy.v6\\models\\r_series\\checkpoints\\vivy_r056_deepmind_videoqa_instinct.safetensors",
-      "size_bytes": 17528,
+      "size_bytes": 18152,
       "tensor_count": 6,
-      "sha256": "6ba143f6cc3a17f5192a006baa3a94c93add57649fda92f9d7723e845d35fe52",
+      "sha256": "849b6d1e85115cbbdd86ce0504b45846199da312bfb25da4b08e9e9e347f84ef",
       "anchored_laws_count": 6
     }
   },
@@ -621,12 +621,12 @@
     "safetensors_reloaded_from_disk": true,
     "load_receipt": {
       "safetensors_path": "D:\\91s- T\u00e1i c\u1ea5u tr\u00fac l\u00e2n th\u1ee9 4\\Vivy.v6\\models\\r_series\\checkpoints\\vivy_r056_deepmind_videoqa_instinct.safetensors",
-      "safetensors_sha256": "6ba143f6cc3a17f5192a006baa3a94c93add57649fda92f9d7723e845d35fe52",
-      "safetensors_bytes": 17528,
+      "safetensors_sha256": "849b6d1e85115cbbdd86ce0504b45846199da312bfb25da4b08e9e9e347f84ef",
+      "safetensors_bytes": 18152,
       "loaded_anchors_count": 6,
-      "loaded_orthogonal_lobes": 7,
+      "loaded_orthogonal_lobes": 8,
       "post_load_anchor_recall_rate": 1.0,
-      "post_load_mean_margin": 0.626594
+      "post_load_mean_margin": 0.611194
     },
     "stage_b1_cold_start": {
       "rounds_to_top1": 3,
@@ -658,12 +658,12 @@
           "LAW_VIDEOQA_STRICT_FINAL_ANSWER_GRAMMAR_GUARD"
         ],
         "law_instinct_margins": {
-          "LAW_VIDEOQA_CAUTREO_SLIDING_RING_SALIENCY_INDEX": 0.746492,
-          "LAW_VIDEOQA_QUERY_AWARE_ADAPTIVE_KEYFRAME_FUNNEL": 0.615266,
-          "LAW_VIDEOQA_SVD_SCENE_TRANSITION_BOUNDARY_ANCHOR": 0.410758,
-          "LAW_VIDEOQA_MAX_SUM_BP_CAUSAL_EVENT_CHAIN": 0.684529,
-          "LAW_VIDEOQA_VM11_DISTRACTOR_FALSIFICATION_DAMPENING": 0.707717,
-          "LAW_VIDEOQA_STRICT_FINAL_ANSWER_GRAMMAR_GUARD": 0.594801
+          "LAW_VIDEOQA_CAUTREO_SLIDING_RING_SALIENCY_INDEX": 0.718912,
+          "LAW_VIDEOQA_QUERY_AWARE_ADAPTIVE_KEYFRAME_FUNNEL": 0.649604,
+          "LAW_VIDEOQA_SVD_SCENE_TRANSITION_BOUNDARY_ANCHOR": 0.406545,
+          "LAW_VIDEOQA_MAX_SUM_BP_CAUSAL_EVENT_CHAIN": 0.638041,
+          "LAW_VIDEOQA_VM11_DISTRACTOR_FALSIFICATION_DAMPENING": 0.681717,
+          "LAW_VIDEOQA_STRICT_FINAL_ANSWER_GRAMMAR_GUARD": 0.572345
         },
         "adversarial_packet_loss": false,
         "pruned_candidates_pct": 98.44
@@ -687,8 +687,8 @@
       "round_2_beats_rank1_gemini": true,
       "adversarial_instinct_safetensors": {
         "path": "D:\\91s- T\u00e1i c\u1ea5u tr\u00fac l\u00e2n th\u1ee9 4\\Vivy.v6\\models\\r_series\\checkpoints\\vivy_r056_deepmind_videoqa_adversarial_instinct.safetensors",
-        "size_bytes": 18728,
-        "sha256": "87f5feb5ff6eaae3ca7e1bbe5ba658b5b1852ee6181e4912206a647cb895c0b9"
+        "size_bytes": 19360,
+        "sha256": "e503e69eef16998e3ea7ba879db391a85b0dda8df05a972a72e915547d5cba53"
       }
     }
   },
@@ -804,5 +804,5 @@
     "kernel_status_stdout": "vinguynvn/vivy-deepmind-1h-videoqa-top1 has status \"KernelWorkerStatus.COMPLETE\"",
     "receipt_sha256": "b4529615ec215258cc881069aa73e1f0624e06a1f4a8b0ff5c2a7045353116b2"
   },
-  "receipt_sha256": "6d20d8ec153aeaa3750985cdc287a982fabea3254127b50fa58b21e3439e990b"
+  "receipt_sha256": "f67560c41f3b6354cf1f4dd06de7a177a679e324d46d2d92164738b8b70c3779"
 }
