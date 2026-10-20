@@ -1,0 +1,37 @@
+{
+  "schema": "vivy.v6.v69_hf_release_receipt.v1",
+  "release_version": "v6.9-Unified-ZeroBridge-3DWorldArena-R063",
+  "published_at_utc": "2026-10-20T14:12:11.414059+00:00",
+  "published_repositories": [
+    {
+      "model_code": "R-VISION-3B",
+      "repo_id": "vinguyen0891/Vivy-R-Vision-3B-GGUF",
+      "commit_sha": "0dae46e94dd0b47f13ee377844d8622e15734bad",
+      "commit_url": "https://huggingface.co/vinguyen0891/Vivy-R-Vision-3B-GGUF/commit/0dae46e94dd0b47f13ee377844d8622e15734bad",
+      "gguf_size_bytes": 2104932800,
+      "v69_safetensors_file": "vivy_r_vision_3b_v69_zero_bridge.safetensors",
+      "v69_tensors": 220,
+      "siblings_count": 70
+    },
+    {
+      "model_code": "R-FINANCE-3B",
+      "repo_id": "vinguyen0891/Vivy-R-Finance-3B-GGUF",
+      "commit_sha": "05b6f61a40e0c30bf9cd32f71fdb5486f5502d25",
+      "commit_url": "https://huggingface.co/vinguyen0891/Vivy-R-Finance-3B-GGUF/commit/05b6f61a40e0c30bf9cd32f71fdb5486f5502d25",
+      "gguf_size_bytes": 2104932800,
+      "v69_safetensors_file": "vivy_r_finance_3b_v69_zero_bridge.safetensors",
+      "v69_tensors": 220,
+      "siblings_count": 65
+    },
+    {
+      "model_code": "R-ROBOTICS-3B",
+      "repo_id": "vinguyen0891/Vivy-R-Robotics-3B-GGUF",
+      "commit_sha": "35dc6c9da4503a62857096e655a009429c9a903a",
+      "commit_url": "https://huggingface.co/vinguyen0891/Vivy-R-Robotics-3B-GGUF/commit/35dc6c9da4503a62857096e655a009429c9a903a",
+      "gguf_size_bytes": 2104932800,
+      "v69_safetensors_file": "vivy_r_robotics_3b_v69_zero_bridge.safetensors",
+      "v69_tensors": 220,
+      "siblings_count": 65
+    }
+  ]
+}

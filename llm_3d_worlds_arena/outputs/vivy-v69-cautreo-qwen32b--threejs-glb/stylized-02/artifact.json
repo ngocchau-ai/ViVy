@@ -1,0 +1,111 @@
+{
+  "schema_version": "2.0",
+  "id": "vivy-v69-cautreo-qwen32b--threejs-glb--stylized-02",
+  "system_id": "vivy-v69-cautreo-qwen32b--threejs-glb",
+  "case_id": "stylized-02",
+  "representation": "mesh/glb",
+  "status": "complete",
+  "starter_sha256": "3353e7353e377d812f3b0baac605fe145997d0b5aeb806bcf37717a5a5f141b3",
+  "caption_sha256": "929322efc6da5a5d3b9471a4333496111f5aed935aaf412f5b86866e7c4ea421",
+  "native": {
+    "schema_version": "2.0",
+    "path": "outputs/vivy-v69-cautreo-qwen32b--threejs-glb/stylized-02/native/world.glb",
+    "sha256": "6fcebcfff340100ca9c03e2f9554a3e590245bf209fbc39b8f639b4b6789276e",
+    "bytes": 43940,
+    "media_type": "model/gltf-binary"
+  },
+  "viewer": [
+    {
+      "schema_version": "2.0",
+      "path": "outputs/vivy-v69-cautreo-qwen32b--threejs-glb/stylized-02/viewer/world-web.glb",
+      "sha256": "6684426c864206916432739716de10c33e6dd84fb518cc12171b805ebd705de4",
+      "bytes": 41780,
+      "media_type": null
+    }
+  ],
+  "preview": {
+    "schema_version": "2.0",
+    "path": "outputs/vivy-v69-cautreo-qwen32b--threejs-glb/stylized-02/preview.png",
+    "sha256": "9cec175c9936abde59dcccfe50ae874cc080cfb4ce0d9dd7047f69d9b92f1b67",
+    "bytes": 179,
+    "media_type": "image/png"
+  },
+  "bounds": {
+    "schema_version": "2.0",
+    "minimum": [
+      -96.0,
+      -1.2,
+      -96.0
+    ],
+    "maximum": [
+      96.0,
+      42.0,
+      96.0
+    ],
+    "initial_position": [
+      0.0,
+      1.85,
+      18.0
+    ],
+    "initial_target": [
+      0.0,
+      1.75,
+      4.0
+    ],
+    "near": 0.05,
+    "far": 1200.0,
+    "coordinate_convention": "right-handed-y-up",
+    "scale_meters_per_unit": 1.0,
+    "ground_plane_offset": 0.0,
+    "up_vector": [
+      0.0,
+      1.0,
+      0.0
+    ]
+  },
+  "fidelity": null,
+  "primitive_count": 500,
+  "scene_elements": 1062,
+  "traversable": true,
+  "scene_review": "approved",
+  "settings": {
+    "effort": "xhigh-zero-bridge-6cam-loop",
+    "repair_attempts": 3,
+    "prompt_sha256": "a7feffe29f8943e8ea9e79f5dbafdc719b5bcc59b541c02009b0d3e0a1b74f8b",
+    "three": "0.180.0",
+    "browser": "Chromium 153.0.8010.12",
+    "max_triangles": 2000000,
+    "camera_strategy": "fitted-bounds"
+  },
+  "provenance": {
+    "model": "vivy-v6.9-cautreo-qwen2.5-vl-coder-32b",
+    "effort": "xhigh-zero-bridge-6cam-loop",
+    "three": "0.180.0",
+    "consumed_fields": [
+      "starter_image",
+      "caption"
+    ],
+    "source_files": [
+      {
+        "schema_version": "2.0",
+        "path": "outputs/vivy-v69-cautreo-qwen32b--threejs-glb/stylized-02/source/attempt-1-response.md",
+        "sha256": "e6c678809857f44420f932cb7f3b943742d4b34f73d124f5bb26068a6d8327f3",
+        "bytes": 4959
+      },
+      {
+        "schema_version": "2.0",
+        "path": "outputs/vivy-v69-cautreo-qwen32b--threejs-glb/stylized-02/source/world.js",
+        "sha256": "95b72afd06351593a9e1a2d727eca68fa473147b525d439ab57806306d409d84",
+        "bytes": 4940
+      }
+    ],
+    "browser_derivative": {
+      "path": "outputs/vivy-v69-cautreo-qwen32b--threejs-glb/stylized-02/viewer/world-web.glb",
+      "source_sha256": "6fcebcfff340100ca9c03e2f9554a3e590245bf209fbc39b8f639b4b6789276e",
+      "native_triangles": 525000,
+      "viewer_triangles": 435000,
+      "native_bytes": 43940,
+      "viewer_bytes": 41780
+    }
+  }
+}

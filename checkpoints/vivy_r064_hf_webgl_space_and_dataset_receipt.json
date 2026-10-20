@@ -1,0 +1,14 @@
+{
+  "schema": "vivy.v6.r064_3d_worlds_hf_space_and_dataset_receipt.v1",
+  "deployed_at_utc": "2026-10-20T14:14:53.578146+00:00",
+  "webgl_space_repo_id": "vinguyen0891/Vivy-3D-Worlds-Arena-WebGL-Viewer",
+  "webgl_space_url": "https://huggingface.co/spaces/vinguyen0891/Vivy-3D-Worlds-Arena-WebGL-Viewer",
+  "webgl_space_commit_sha": "f2cdc5517f84a71ba395043fde05104e49da7f60",
+  "webgl_space_commit_url": "https://huggingface.co/spaces/vinguyen0891/Vivy-3D-Worlds-Arena-WebGL-Viewer/commit/f2cdc5517f84a71ba395043fde05104e49da7f60",
+  "dataset_repo_id": "vinguyen0891/vivy-v69-llm-3d-worlds-arena-49-glb",
+  "dataset_url": "https://huggingface.co/datasets/vinguyen0891/vivy-v69-llm-3d-worlds-arena-49-glb",
+  "dataset_commit_sha": "b8c2dfb23f2be2db1fcf275a52bebbf6a255a60f",
+  "dataset_commit_url": "https://huggingface.co/datasets/vinguyen0891/vivy-v69-llm-3d-worlds-arena-49-glb/commit/b8c2dfb23f2be2db1fcf275a52bebbf6a255a60f",
+  "cases_published": 49,
+  "system_id": "vivy-v69-cautreo-qwen32b--threejs-glb"
+}

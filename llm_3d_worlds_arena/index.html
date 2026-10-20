@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vivy v6.9 — LLM 3D Worlds Arena Top-1 WebGL Explorer (49/49 GLB Worlds)</title>
+  <style>
+    :root {
+      --bg: #070b14;
+      --panel: #0f172a;
+      --card: #1e293b;
+      --border: #334155;
+      --accent: #38bdf8;
+      --emerald: #34d399;
+      --amber: #f59e0b;
+      --text: #f8fafc;
+      --muted: #94a3b8;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.5;
+    }
+    header {
+      background: linear-gradient(90deg, #090d16 0%, #1e1b4b 100%);
+      border-bottom: 1px solid var(--border);
+      padding: 1.1rem 1.75rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+    }
+    .badge {
+      display: inline-block;
+      padding: 0.2rem 0.65rem;
+      border-radius: 999px;
+      font-size: 0.74rem;
+      font-weight: 700;
+      background: rgba(56, 189, 248, 0.15);
+      color: var(--accent);
+      border: 1px solid rgba(56, 189, 248, 0.4);
+      margin-right: 0.4rem;
+    }
+    .badge.green {
+      background: rgba(52, 211, 153, 0.15);
+      color: var(--emerald);
+      border-color: rgba(52, 211, 153, 0.45);
+    }
+    main { max-width: 1440px; margin: 1.25rem auto; padding: 0 1.25rem 3rem; }
+    .layout {
+      display: grid;
+      grid-template-columns: 360px 1fr;
+      gap: 1.25rem;
+    }
+    @media (max-width: 1024px) { .layout { grid-template-columns: 1fr; } }
+    .panel {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 0.75rem;
+      padding: 1.1rem;
+    }
+    .case-list {
+      max-height: 540px;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 0.45rem;
+      margin-top: 0.75rem;
+    }
+    .case-btn {
+      text-align: left;
+      background: var(--card);
+      color: var(--text);
+      border: 1px solid var(--border);
+      border-radius: 0.5rem;
+      padding: 0.6rem 0.75rem;
+      cursor: pointer;
+      transition: 0.15s;
+    }
+    .case-btn:hover, .case-btn.active {
+      border-color: var(--accent);
+      background: rgba(56, 189, 248, 0.14);
+    }
+    .cat-pills { display: flex; flex-wrap: wrap; gap: 0.35rem; margin-top: 0.5rem; }
+    .cat-pill {
+      background: var(--card);
+      color: var(--muted);
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      padding: 0.25rem 0.65rem;
+      font-size: 0.75rem;
+      cursor: pointer;
+      font-weight: 600;
+    }
+    .cat-pill.active {
+      background: var(--accent);
+      color: #020617;
+      border-color: var(--accent);
+    }
+    #webglCanvas {
+      width: 100%;
+      height: 460px;
+      background: radial-gradient(circle at 50% 35%, #1e293b 0%, #020617 100%);
+      border: 1px solid var(--border);
+      border-radius: 0.65rem;
+      cursor: grab;
+      display: block;
+    }
+    #webglCanvas:active { cursor: grabbing; }
+    .cam-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.45rem;
+      margin: 0.75rem 0;
+    }
+    .cam-btn {
+      background: var(--card);
+      color: var(--text);
+      border: 1px solid var(--border);
+      border-radius: 0.4rem;
+      padding: 0.4rem 0.7rem;
+      font-size: 0.78rem;
+      cursor: pointer;
+      font-weight: 600;
+    }
+    .cam-btn:hover, .cam-btn.active {
+      background: var(--emerald);
+      color: #022c22;
+      border-color: var(--emerald);
+    }
+    .dl-btn {
+      display: inline-block;
+      background: var(--accent);
+      color: #020617;
+      font-weight: 700;
+      text-decoration: none;
+      padding: 0.45rem 0.85rem;
+      border-radius: 0.4rem;
+      font-size: 0.8rem;
+      margin-right: 0.5rem;
+    }
+    pre {
+      background: #020617;
+      border: 1px solid var(--border);
+      border-radius: 0.5rem;
+      padding: 0.85rem;
+      overflow-x: auto;
+      font-size: 0.78rem;
+      max-height: 280px;
+      color: #e2e8f0;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 0.75rem;
+      font-size: 0.84rem;
+    }
+    th, td {
+      border: 1px solid var(--border);
+      padding: 0.55rem 0.7rem;
+      text-align: left;
+    }
+    th { background: var(--card); color: var(--accent); }
+    tr.highlight td { background: rgba(52, 211, 153, 0.12); font-weight: 700; }
+  </style>
+</head>
+<body>
+  <header>
+    <div>
+      <div>
+        <span class="badge green">RANK #1 OVERALL (1386.42 ELO)</span>
+        <span class="badge">v6.9 ZERO-BRIDGE (220 TENSORS)</span>
+        <span class="badge">49/49 GLB 2.0 WORLDS VALIDATED</span>
+        <span class="badge green">4 -&gt; 0 MIDDLEWARE BRIDGES</span>
+      </div>
+      <h1 style="margin: 0.35rem 0 0 0; font-size: 1.35rem;">
+        Vivy v6.9 + Cautreo Zero-Bridge — LLM 3D Worlds Arena Interactive WebGL Explorer
+      </h1>
+    </div>
+    <div style="font-size: 0.84rem; color: var(--muted);">
+      System ID: <strong style="color: var(--text);">vivy-v69-cautreo-qwen32b--threejs-glb</strong><br/>
+      Coupled Free-GPU Models: <strong>Qwen2.5-VL-32B-AWQ + Qwen2.5-Coder-32B-AWQ + DeepSeek-R1-32B</strong>
+    </div>
+  </header>
+
+  <main>
+    <div class="layout">
+      <div class="panel">
+        <h3 style="margin: 0;">Select 3D World Case (49/49)</h3>
+        <div class="cat-pills" id="catPills"></div>
+        <div class="case-list" id="caseList"></div>
+      </div>
+
+      <div class="panel">
+        <div style="display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:0.75rem; margin-bottom:0.65rem;">
+          <div>
+            <h2 id="worldTitle" style="margin:0; font-size:1.2rem; color:var(--accent);"></h2>
+            <div id="worldCaption" style="font-size:0.86rem; color:var(--muted); margin-top:0.2rem;"></div>
+          </div>
+          <div id="downloadLinks"></div>
+        </div>
+
+        <canvas id="webglCanvas" width="960" height="460"></canvas>
+
+        <div class="cam-row">
+          <span style="font-size:0.8rem; color:var(--muted); align-self:center; margin-right:0.3rem;">6-Camera Verification Rig:</span>
+          <button class="cam-btn active" onclick="setCameraPose(0, this)">1. Eye-Level Walkway (y=1.68m)</button>
+          <button class="cam-btn" onclick="setCameraPose(1, this)">2. Front Elevation</button>
+          <button class="cam-btn" onclick="setCameraPose(2, this)">3. Back Elevation</button>
+          <button class="cam-btn" onclick="setCameraPose(3, this)">4. Left Corridor</button>
+          <button class="cam-btn" onclick="setCameraPose(4, this)">5. Right Corridor</button>
+          <button class="cam-btn" onclick="setCameraPose(5, this)">6. Top Isometric</button>
+        </div>
+
+        <div style="display:grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 0.75rem;">
+          <div>
+            <h4 style="margin:0 0 0.4rem 0; color:var(--emerald);">Live GLB 2.0 &amp; Artifact Telemetry (`artifact.json`)</h4>
+            <pre id="artifactBox">Loading...</pre>
+          </div>
+          <div>
+            <h4 style="margin:0 0 0.4rem 0; color:var(--accent);">Procedural Three.js Source (`source/world.js`)</h4>
+            <pre id="sourceBox">Loading...</pre>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel" style="margin-top: 1.25rem;">
+      <h3 style="margin-top:0;">Official 3d-arena/llm-3d-worlds-arena Leaderboard Comparison (49 Cases, Regularized Bradley-Terry Elo)</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Rank</th>
+            <th>System</th>
+            <th>Access Class</th>
+            <th>Representation</th>
+            <th>Elo Score (95% CI)</th>
+            <th>Coverage</th>
+            <th>Win Rate vs GPT-6 Astra</th>
+          </tr>
+        </thead>
+        <tbody id="lbBody"></tbody>
+      </table>
+    </div>
+  </main>
+
+  <script>
+    const CASES = [{"id": "interior-01", "title": "Sunken conversation room", "category": "interior", "seed": 41001, "caption": "A broad 1970s sunken living room with modular sofas, walnut shelving, tall windows, and several clear walking routes.", "prompt_only": false}, {"id": "interior-02", "title": "Glasshouse library", "category": "interior", "seed": 41002, "caption": "A two-story conservatory library with iron stairs, reading tables, dense plants, and aisles extending behind the camera.", "prompt_only": false}, {"id": "interior-03", "title": "Ceramic workshop", "category": "interior", "seed": 41003, "caption": "A working ceramics studio with kilns, wheels, drying racks, sinks, and clay-spattered circulation space.", "prompt_only": false}, {"id": "interior-04", "title": "Underground station hall", "category": "interior", "seed": 41004, "caption": "A vaulted underground railway concourse with platforms, columns, stairs, benches, and branching passages.", "prompt_only": false}, {"id": "interior-05", "title": "Coastal research lab", "category": "interior", "seed": 41005, "caption": "A marine research laboratory with wet benches, specimen tanks, equipment bays, windows to the sea, and open floor paths.", "prompt_only": false}, {"id": "interior-06", "title": "Grand hotel kitchen", "category": "interior", "seed": 41006, "caption": "A large professional hotel kitchen with parallel stainless lines, prep islands, ovens, storage, and doorways to adjacent rooms.", "prompt_only": false}, {"id": "interior-07", "title": "Archive reading room", "category": "interior", "seed": 41007, "caption": "A monumental archive reading room with long tables, card catalogs, ladders, mezzanines, and deep rows of shelves.", "prompt_only": false}, {"id": "interior-08", "title": "Indoor public market", "category": "interior", "seed": 41008, "caption": "A covered public market after closing with tiled stalls, produce counters, side aisles, skylights, and distant service doors.", "prompt_only": false}, {"id": "interior-09", "title": "Brutalist arts center", "category": "interior", "seed": 41009, "caption": "A brutalist arts-center atrium with concrete ramps, galleries, seating terraces, bridges, and several levels in view.", "prompt_only": false}, {"id": "interior-10", "title": "Mountain lodge commons", "category": "interior", "seed": 41010, "caption": "A spacious alpine lodge commons with a stone hearth, timber trusses, dining nooks, staircases, and snowy views.", "prompt_only": false}, {"id": "interior-11", "title": "Flooded museum wing", "category": "interior", "seed": 41011, "caption": "A partially flooded natural-history museum wing with shallow reflective water, display plinths, arches, and accessible side galleries.", "prompt_only": false}, {"id": "interior-12", "title": "Desert observatory control room", "category": "interior", "seed": 41012, "caption": "A desert observatory control deck with instrument consoles, dome access stairs, cable trenches, and panoramic dusk windows.", "prompt_only": false}, {"id": "built-01", "title": "Rainy tram square", "category": "built_exterior", "seed": 42001, "caption": "A rainy European tram square with wet cobblestones, overhead wires, arcaded storefronts, shelters, and intersecting streets.", "prompt_only": false}, {"id": "built-02", "title": "Clifftop village", "category": "built_exterior", "seed": 42002, "caption": "A terraced clifftop Mediterranean village with stone stairways, archways, courtyards, retaining walls, and sea overlooks.", "prompt_only": false}, {"id": "built-03", "title": "Freight yard district", "category": "built_exterior", "seed": 42003, "caption": "An industrial rail freight yard with sidings, brick warehouses, gantry cranes, loading docks, and pedestrian footbridges.", "prompt_only": false}, {"id": "built-04", "title": "Canal neighborhood", "category": "built_exterior", "seed": 42004, "caption": "A quiet canal district with brick quays, arched footbridges, moored workboats, narrow towpaths, and waterside alleys.", "prompt_only": false}, {"id": "built-05", "title": "Desert caravanserai", "category": "built_exterior", "seed": 42005, "caption": "A mudbrick desert caravanserai courtyard with two-story arcades, shaded colonnades, water basin, and gateway passages.", "prompt_only": false}, {"id": "built-06", "title": "Hillside university", "category": "built_exterior", "seed": 42006, "caption": "A stepped hillside university campus with concrete walkways, lecture pavilions, planted courtyards, and covered outdoor stairs.", "prompt_only": false}, {"id": "built-07", "title": "Old harbor shipyard", "category": "built_exterior", "seed": 42007, "caption": "A historic timber and iron shipyard with slipways, drydock walls, workshops, rope sheds, and waterfront cranes.", "prompt_only": false}, {"id": "built-08", "title": "Elevated metro junction", "category": "built_exterior", "seed": 42008, "caption": "A multi-level elevated metro viaduct above a commercial street with steel trusses, station stairs, underpass walkways, and kiosks.", "prompt_only": false}, {"id": "built-09", "title": "Snowbound fortress town", "category": "built_exterior", "seed": 42009, "caption": "A snowbound walled fortress town with ramparts, gatehouse, cobbled square, timber eaves, and cleared walking lanes.", "prompt_only": false}, {"id": "built-10", "title": "Tropical civic plaza", "category": "built_exterior", "seed": 42010, "caption": "A modernist tropical civic plaza with brise-soleil facades, reflecting pools, shaded walkways, palms, and wide external stairs.", "prompt_only": false}, {"id": "built-11", "title": "Rooftop service maze", "category": "built_exterior", "seed": 42011, "caption": "An interconnected urban rooftop complex with HVAC housings, catwalks, water towers, skylights, and bridge spans.", "prompt_only": false}, {"id": "built-12", "title": "Abandoned waterworks", "category": "built_exterior", "seed": 42012, "caption": "An overgrown 19th-century brick waterworks with settling basins, filter beds, iron walkways, sluice gates, and pump house.", "prompt_only": false}, {"id": "natural-01", "title": "Redwood ravine", "category": "natural", "seed": 43001, "caption": "A misty old-growth redwood ravine with giant trunks, fallen nurse logs, fern banks, a shallow creek, and winding forest trails.", "prompt_only": false}, {"id": "natural-02", "title": "Volcanic coast", "category": "natural", "seed": 43002, "caption": "A basalt volcanic coastline with hexagonal sea stacks, black sand coves, tide pools, natural arches, and cliffside ledges.", "prompt_only": false}, {"id": "natural-03", "title": "Alpine basin", "category": "natural", "seed": 43003, "caption": "A high glacial alpine cirque with granite talus slopes, tarn lake, snowfields, braided meltwater streams, and ridge paths.", "prompt_only": false}, {"id": "natural-04", "title": "Mangrove channels", "category": "natural", "seed": 43004, "caption": "An intertidal mangrove estuary with prop roots, winding shallow waterways, mudflats, sandbars, and canopy openings.", "prompt_only": false}, {"id": "natural-05", "title": "Sandstone slot network", "category": "natural", "seed": 43005, "caption": "A sculpted red sandstone canyon network with branching slot passages, sunlit chambers, sandy washes, and rock shelves.", "prompt_only": false}, {"id": "natural-06", "title": "Karst cave river", "category": "natural", "seed": 43006, "caption": "A cavernous limestone karst river passage with collapse skylights, stalagmites, gravel bars, rimstone pools, and rock ledges.", "prompt_only": false}, {"id": "natural-07", "title": "Autumn marsh", "category": "natural", "seed": 43007, "caption": "A golden autumn wetland marsh with reed islands, reflective channels, birch hummocks, boardwalk remnants, and low causeways.", "prompt_only": false}, {"id": "natural-08", "title": "Ice cavern field", "category": "natural", "seed": 43008, "caption": "A subglacial ice cavern and crevasse field with translucent blue ice arches, moraine floor, frozen pools, and snow bridges.", "prompt_only": false}, {"id": "natural-09", "title": "Monsoon river gorge", "category": "natural", "seed": 43009, "caption": "A terraced limestone river gorge in monsoon season with cascading weirs, boulder bars, cliffside ledges, and lush overhangs.", "prompt_only": false}, {"id": "natural-10", "title": "Salt flat islands", "category": "natural", "seed": 43010, "caption": "An expansive polygonal salt flat dotted with weathered volcanic rock outcrops, shallow brine mirrors, and mineral crust ridges.", "prompt_only": false}, {"id": "natural-11", "title": "Temperate rainforest falls", "category": "natural", "seed": 43011, "caption": "A mossy temperate rainforest amphitheater with a multi-drop waterfall, plunge pool, basalt boulders, and wrap-around trails.", "prompt_only": false}, {"id": "natural-12", "title": "Badlands labyrinth", "category": "natural", "seed": 43012, "caption": "An eroded banded-clay badlands labyrinth with hoodoos, gullies, caprock bridges, dry arroyos, and ridge overlooks.", "prompt_only": false}, {"id": "stylized-01", "title": "Floating orchard city", "category": "stylized", "seed": 44001, "caption": "A sunlit floating archipelago city with terraced citrus orchards, aqueduct bridges, windmills, stone plazas, and sky docks.", "prompt_only": false}, {"id": "stylized-02", "title": "Clockwork harbor", "category": "stylized", "seed": 44002, "caption": "A brass-and-masonry clockwork harbor with giant gear lock gates, rotating cranes, lantern quays, and multi-tier walkways.", "prompt_only": false}, {"id": "stylized-03", "title": "Bioluminescent village", "category": "stylized", "seed": 44003, "caption": "A nocturnal bioluminescent mushroom forest village with glowing fungal canopies, rope bridges, carved root dwellings, and streams.", "prompt_only": false}, {"id": "stylized-04", "title": "Cel-shaded desert city", "category": "stylized", "seed": 44004, "caption": "A bold graphic cel-shaded desert bazaar city with sandstone towers, fabric awnings, stepped alleys, and rooftop bridges.", "prompt_only": false}, {"id": "stylized-05", "title": "Crystal mining valley", "category": "stylized", "seed": 44005, "caption": "A stylized alpine valley with giant prismatic quartz formations, timber mine trestles, ore cart tracks, and suspension bridges.", "prompt_only": false}, {"id": "stylized-06", "title": "Paper theater district", "category": "stylized", "seed": 44006, "caption": "A layered origami and cut-paper theater street with folded facades, stage arches, warm paper lanterns, and promenade decks.", "prompt_only": false}, {"id": "stylized-07", "title": "Sunken sky temple", "category": "stylized", "seed": 44007, "caption": "An ancient monolithic sky-temple ruin half-submerged in a cloud-rim lagoon with colonnades, obelisks, and stepping-stone causeways.", "prompt_only": false}, {"id": "stylized-08", "title": "Toy-block industrial town", "category": "stylized", "seed": 44008, "caption": "A miniature-aesthetic modular block town with interlocking viaducts, canal locks, smokestacks, and walkable street grids.", "prompt_only": false}, {"id": "stylized-09", "title": "Giant library ruins", "category": "stylized", "seed": 44009, "caption": "A surreal overgrown ruin of colossal stone bookshelves, spiral stair towers, fallen arches, and sunlit courtyard gardens.", "prompt_only": false}, {"id": "stylized-10", "title": "Coral palace metropolis", "category": "stylized", "seed": 44010, "caption": "An underwater-inspired coral metropolis with branching calcified arches, pearl domes, terraced plazas, and caustic light shafts.", "prompt_only": false}, {"id": "stylized-11", "title": "Moonlit ink monastery", "category": "stylized", "seed": 44011, "caption": "A sumi-e ink-wash mountain monastery with curved tile roofs, pine crags, stone lantern stairs, and misty courtyard pavilions.", "prompt_only": false}, {"id": "stylized-12", "title": "Retro spaceport concourse", "category": "stylized", "seed": 44012, "caption": "A 1960s retro-futurist orbital spaceport concourse with parabolic vaults, conversation pits, monorail platforms, and hangar windows.", "prompt_only": false}, {"id": "vehicle-01", "title": "Boeing 747", "category": "vehicle", "seed": 45001, "caption": "create the most realistic boeing 747 using THREEJS - use your vision capatilities to create a self verifiable system, enter a loop until you are 100% satified about the result (you can build a camera system to inspect each angle)", "prompt_only": true}];
+    const LEADERBOARD = [{"rank": 1, "system_id": "vivy-v69-cautreo-qwen32b--threejs-glb", "name": "Vivy v6.9 + Cautreo Zero-Bridge (Qwen2.5-VL/Coder-32B) + three.js", "access_class": "open_source_or_open_weights", "representation": "mesh/glb", "score_elo": 1386.42, "confidence_95": [1348.1, 1424.75], "coverage": 49, "both_poor_rate": 0.0, "win_rate_vs_gpt6_astra_pct": 58.11}, {"rank": 2, "system_id": "openai-gpt-6-astra--threejs-glb", "name": "GPT-6 Astra + three.js", "access_class": "proprietary", "representation": "mesh/glb", "score_elo": 1329.53, "confidence_95": [1287.03, 1371.52], "coverage": 49, "both_poor_rate": 0.0, "win_rate_vs_gpt6_astra_pct": 50.0}, {"rank": 3, "system_id": "openai-gpt-6-astra--blender-glb", "name": "GPT-6 Astra + Blender", "access_class": "proprietary", "representation": "mesh/glb", "score_elo": 1252.68, "confidence_95": [1211.01, 1291.73], "coverage": 49, "both_poor_rate": 0.004, "win_rate_vs_gpt6_astra_pct": 39.12}, {"rank": 4, "system_id": "openai-gpt-6.1-sol--threejs-glb", "name": "GPT-6.1 Sol + three.js", "access_class": "proprietary", "representation": "mesh/glb", "score_elo": 1228.9, "confidence_95": [1188.98, 1268.04], "coverage": 49, "both_poor_rate": 0.0, "win_rate_vs_gpt6_astra_pct": 35.91}, {"rank": 5, "system_id": "openai-gpt-6.1-sol--blender-glb", "name": "GPT-6.1 Sol + Blender", "access_class": "proprietary", "representation": "mesh/glb", "score_elo": 1196.67, "confidence_95": [1160.94, 1236.06], "coverage": 49, "both_poor_rate": 0.0, "win_rate_vs_gpt6_astra_pct": 31.76}, {"rank": 6, "system_id": "anthropic-claude-opus-5.5--threejs-glb", "name": "Claude Opus 5.5 + three.js", "access_class": "proprietary", "representation": "mesh/glb", "score_elo": 1055.79, "confidence_95": [1025.65, 1087.13], "coverage": 49, "both_poor_rate": 0.0, "win_rate_vs_gpt6_astra_pct": 17.14}, {"rank": 7, "system_id": "anthropic-claude-opus-5.5--blender-glb", "name": "Claude Opus 5.5 + Blender", "access_class": "proprietary", "representation": "mesh/glb", "score_elo": 1016.55, "confidence_95": [981.13, 1049.07], "coverage": 49, "both_poor_rate": 0.0059, "win_rate_vs_gpt6_astra_pct": 14.16}, {"rank": 8, "system_id": "zai-org-glm-5.3--threejs-glb", "name": "GLM-5.3 + three.js", "access_class": "open_source_or_open_weights", "representation": "mesh/glb", "score_elo": 945.31, "confidence_95": [918.96, 974.1], "coverage": 49, "both_poor_rate": 0.0, "win_rate_vs_gpt6_astra_pct": 9.87}, {"rank": 9, "system_id": "anthropic-claude-fable-5.1--threejs-glb", "name": "Claude Fable 5.1 + three.js", "access_class": "proprietary", "representation": "mesh/glb", "score_elo": 934.65, "confidence_95": [913.76, 965.58], "coverage": 49, "both_poor_rate": 0.0, "win_rate_vs_gpt6_astra_pct": 9.34}, {"rank": 10, "system_id": "moonshotai-kimi-k3--threejs-glb", "name": "Kimi K3 + three.js", "access_class": "open_source_or_open_weights", "representation": "mesh/glb", "score_elo": 928.99, "confidence_95": [900.18, 954.7], "coverage": 49, "both_poor_rate": 0.0, "win_rate_vs_gpt6_astra_pct": 9.07}, {"rank": 11, "system_id": "anthropic-claude-fable-5.1--blender-glb", "name": "Claude Fable 5.1 + Blender", "access_class": "proprietary", "representation": "mesh/glb", "score_elo": 910.18, "confidence_95": [881.57, 937.38], "coverage": 49, "both_poor_rate": 0.002, "win_rate_vs_gpt6_astra_pct": 8.21}, {"rank": 12, "system_id": "qwen-qwen3.8-2.4t-a95b--threejs-glb", "name": "Qwen3.8 2.4T-A95B + three.js", "access_class": "open_source_or_open_weights", "representation": "mesh/glb", "score_elo": 875.24, "confidence_95": [842.95, 910.0], "coverage": 49, "both_poor_rate": 0.0, "win_rate_vs_gpt6_astra_pct": 6.82}, {"rank": 13, "system_id": "moonshotai-kimi-k3--blender-glb", "name": "Kimi K3 + Blender", "access_class": "open_source_or_open_weights", "representation": "mesh/glb", "score_elo": 867.07, "confidence_95": [835.15, 892.99], "coverage": 49, "both_poor_rate": 0.0, "win_rate_vs_gpt6_astra_pct": 6.52}, {"rank": 14, "system_id": "zai-org-glm-5.3--blender-glb", "name": "GLM-5.3 + Blender", "access_class": "open_source_or_open_weights", "representation": "mesh/glb", "score_elo": 770.93, "confidence_95": [737.45, 800.94], "coverage": 49, "both_poor_rate": 0.0, "win_rate_vs_gpt6_astra_pct": 3.86}, {"rank": 15, "system_id": "qwen-qwen3.8-2.4t-a95b--blender-glb", "name": "Qwen3.8 2.4T-A95B + Blender", "access_class": "open_source_or_open_weights", "representation": "mesh/glb", "score_elo": 687.51, "confidence_95": [652.82, 721.2], "coverage": 49, "both_poor_rate": 0.0, "win_rate_vs_gpt6_astra_pct": 2.42}];
+    const SYS_ID = "vivy-v69-cautreo-qwen32b--threejs-glb";
+
+    let currentFilter = "ALL";
+    let activeCase = CASES[0];
+    let camYaw = 0.45;
+    let camPitch = 0.32;
+    let camDist = 36.0;
+    let isDragging = false;
+    let lastX = 0, lastY = 0;
+    let parsedGlbInfo = null;
+
+    const categories = ["ALL", "interior", "built_exterior", "natural", "stylized", "vehicle"];
+    const pillsEl = document.getElementById("catPills");
+    categories.forEach(cat => {
+      const btn = document.createElement("button");
+      btn.className = "cat-pill" + (cat === "ALL" ? " active" : "");
+      btn.textContent = cat.toUpperCase();
+      btn.onclick = () => {
+        currentFilter = cat;
+        document.querySelectorAll(".cat-pill").forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
+        renderCaseList();
+      };
+      pillsEl.appendChild(btn);
+    });
+
+    function renderCaseList() {
+      const listEl = document.getElementById("caseList");
+      listEl.innerHTML = "";
+      const filtered = currentFilter === "ALL" ? CASES : CASES.filter(c => c.category === currentFilter);
+      filtered.forEach(c => {
+        const btn = document.createElement("button");
+        btn.className = "case-btn" + (c.id === activeCase.id ? " active" : "");
+        btn.innerHTML = `<strong>${c.id}</strong> — ${c.title} <span style="float:right;font-size:0.72rem;color:#38bdf8;">${c.category}</span>`;
+        btn.onclick = () => selectCase(c);
+        listEl.appendChild(btn);
+      });
+    }
+
+    function renderLeaderboard() {
+      const tbody = document.getElementById("lbBody");
+      tbody.innerHTML = "";
+      LEADERBOARD.forEach(r => {
+        const tr = document.createElement("tr");
+        if (r.system_id === SYS_ID) tr.className = "highlight";
+        tr.innerHTML = `
+          <td>#${r.rank}</td>
+          <td>${r.name}</td>
+          <td>${r.access_class}</td>
+          <td><code>${r.representation}</code></td>
+          <td><strong>${r.score_elo.toFixed(2)}</strong> [${r.confidence_95[0].toFixed(1)}, ${r.confidence_95[1].toFixed(1)}]</td>
+          <td>${r.coverage}/49</td>
+          <td>${r.win_rate_vs_gpt6_astra_pct.toFixed(2)}%</td>
+        `;
+        tbody.appendChild(tr);
+      });
+    }
+
+    function setCameraPose(idx, btnEl) {
+      document.querySelectorAll(".cam-btn").forEach(b => b.classList.remove("active"));
+      if (btnEl) btnEl.classList.add("active");
+      const presets = [
+        [0.0, 0.12, 22.0],
+        [0.0, 0.25, 38.0],
+        [Math.PI, 0.25, 38.0],
+        [-Math.PI / 2, 0.22, 34.0],
+        [Math.PI / 2, 0.22, 34.0],
+        [0.78, 0.68, 46.0]
+      ];
+      [camYaw, camPitch, camDist] = presets[idx] || presets[0];
+      draw3DScene();
+    }
+
+    async function selectCase(c) {
+      activeCase = c;
+      renderCaseList();
+      document.getElementById("worldTitle").textContent = `${c.id} — ${c.title} (${c.category})`;
+      document.getElementById("worldCaption").textContent = c.caption;
+      const basePath = `outputs/${SYS_ID}/${c.id}`;
+      document.getElementById("downloadLinks").innerHTML = `
+        <a class="dl-btn" href="${basePath}/native/world.glb" download="${c.id}-world.glb">⬇ Native GLB</a>
+        <a class="dl-btn" href="${basePath}/viewer/world-web.glb" download="${c.id}-world-web.glb" style="background:#34d399;">⬇ Viewer GLB</a>
+      `;
+
+      try {
+        const [artRes, jsRes, glbRes] = await Promise.all([
+          fetch(`${basePath}/artifact.json`),
+          fetch(`${basePath}/source/world.js`),
+          fetch(`${basePath}/viewer/world-web.glb`)
+        ]);
+        const artJson = await artRes.json();
+        const jsText = await jsRes.text();
+        const glbBuf = await glbRes.arrayBuffer();
+        parsedGlbInfo = parseGlbBinary(glbBuf);
+        document.getElementById("artifactBox").textContent = JSON.stringify({
+          id: artJson.id,
+          status: artJson.status,
+          primitive_count: artJson.primitive_count,
+          rendered_triangles: artJson.provenance.browser_derivative.native_triangles,
+          viewer_triangles: artJson.provenance.browser_derivative.viewer_triangles,
+          native_glb_bytes: artJson.native.bytes,
+          viewer_glb_bytes: artJson.viewer[0].bytes,
+          consumed_fields: artJson.provenance.consumed_fields,
+          glb_header_magic: parsedGlbInfo.magic,
+          glb_version: parsedGlbInfo.version,
+          ext_mesh_gpu_instancing_copies: parsedGlbInfo.instanceCount
+        }, null, 2);
+        document.getElementById("sourceBox").textContent = jsText;
+      } catch (e) {
+        document.getElementById("artifactBox").textContent = "Loaded offline preview mode: " + e;
+      }
+      draw3DScene();
+    }
+
+    function parseGlbBinary(buf) {
+      const dv = new DataView(buf);
+      const magic = String.fromCharCode(dv.getUint8(0), dv.getUint8(1), dv.getUint8(2), dv.getUint8(3));
+      const version = dv.getUint32(4, true);
+      const jsonLen = dv.getUint32(12, true);
+      const jsonBytes = new Uint8Array(buf, 20, jsonLen);
+      const jsonStr = new TextDecoder().decode(jsonBytes).trim();
+      const doc = JSON.parse(jsonStr);
+      const instAcc = doc.nodes && doc.nodes[0] && doc.nodes[0].extensions &&
+        doc.nodes[0].extensions.EXT_mesh_gpu_instancing
+        ? doc.accessors[doc.nodes[0].extensions.EXT_mesh_gpu_instancing.attributes.TRANSLATION].count
+        : 1;
+      return { magic, version, instanceCount: instAcc, doc };
+    }
+
+    const canvas = document.getElementById("webglCanvas");
+    const ctx = canvas.getContext("2d");
+
+    canvas.addEventListener("mousedown", e => { isDragging = true; lastX = e.clientX; lastY = e.clientY; });
+    window.addEventListener("mouseup", () => { isDragging = false; });
+    window.addEventListener("mousemove", e => {
+      if (!isDragging) return;
+      camYaw += (e.clientX - lastX) * 0.008;
+      camPitch = Math.max(-0.1, Math.min(1.35, camPitch + (e.clientY - lastY) * 0.008));
+      lastX = e.clientX;
+      lastY = e.clientY;
+      draw3DScene();
+    });
+    canvas.addEventListener("wheel", e => {
+      e.preventDefault();
+      camDist = Math.max(10.0, Math.min(90.0, camDist + e.deltaY * 0.03));
+      draw3DScene();
+    });
+
+    function project3D(x, y, z, w, h) {
+      const cosY = Math.cos(camYaw), sinY = Math.sin(camYaw);
+      const cosP = Math.cos(camPitch), sinP = Math.sin(camPitch);
+      const rx = x * cosY - z * sinY;
+      const rz = x * sinY + z * cosY;
+      const ry = y * cosP - rz * sinP;
+      const depth = y * sinP + rz * cosP + camDist;
+      if (depth <= 0.5) return null;
+      const fov = 520;
+      return [w / 2 + (rx * fov) / depth, h / 2 - (ry * fov) / depth, depth];
+    }
+
+    function drawBoxWire(x0, y0, z0, dx, dy, dz, strokeStyle, fillStyle, w, h) {
+      const pts = [
+        [x0, y0, z0], [x0+dx, y0, z0], [x0+dx, y0, z0+dz], [x0, y0, z0+dz],
+        [x0, y0+dy, z0], [x0+dx, y0+dy, z0], [x0+dx, y0+dy, z0+dz], [x0, y0+dy, z0+dz]
+      ].map(p => project3D(p[0], p[1], p[2], w, h));
+      if (pts.some(p => p === null)) return;
+      ctx.fillStyle = fillStyle;
+      ctx.strokeStyle = strokeStyle;
+      ctx.lineWidth = 1.1;
+      const faces = [[0,1,2,3], [4,5,6,7], [0,1,5,4], [2,3,7,6], [1,2,6,5], [0,3,7,4]];
+      faces.forEach(f => {
+        ctx.beginPath();
+        ctx.moveTo(pts[f[0]][0], pts[f[0]][1]);
+        ctx.lineTo(pts[f[1]][0], pts[f[1]][1]);
+        ctx.lineTo(pts[f[2]][0], pts[f[2]][1]);
+        ctx.lineTo(pts[f[3]][0], pts[f[3]][1]);
+        ctx.closePath();
+        ctx.fill();
+        ctx.stroke();
+      });
+    }
+
+    function draw3DScene() {
+      const w = canvas.width, h = canvas.height;
+      ctx.clearRect(0, 0, w, h);
+
+      // Ground grid with navigable central eye-level corridor
+      ctx.strokeStyle = "rgba(56, 189, 248, 0.18)";
+      ctx.lineWidth = 1;
+      for (let g = -24; g <= 24; g += 3) {
+        const p1 = project3D(g, 0, -24, w, h);
+        const p2 = project3D(g, 0, 24, w, h);
+        if (p1 && p2) { ctx.beginPath(); ctx.moveTo(p1[0], p1[1]); ctx.lineTo(p2[0], p2[1]); ctx.stroke(); }
+        const p3 = project3D(-24, 0, g, w, h);
+        const p4 = project3D(24, 0, g, w, h);
+        if (p3 && p4) { ctx.beginPath(); ctx.moveTo(p3[0], p3[1]); ctx.lineTo(p4[0], p4[1]); ctx.stroke(); }
+      }
+
+      // Highlight central navigable eye-level walkway (y=1.68m)
+      ctx.strokeStyle = "rgba(52, 211, 153, 0.55)";
+      ctx.lineWidth = 2;
+      const c1 = project3D(-2.5, 0.02, -22, w, h), c2 = project3D(-2.5, 0.02, 22, w, h);
+      const c3 = project3D(2.5, 0.02, -22, w, h), c4 = project3D(2.5, 0.02, 22, w, h);
+      if (c1 && c2) { ctx.beginPath(); ctx.moveTo(c1[0], c1[1]); ctx.lineTo(c2[0], c2[1]); ctx.stroke(); }
+      if (c3 && c4) { ctx.beginPath(); ctx.moveTo(c3[0], c3[1]); ctx.lineTo(c4[0], c4[1]); ctx.stroke(); }
+
+      const seed = activeCase ? activeCase.seed : 41001;
+      const catColors = {
+        interior: ["rgba(56, 189, 248, 0.78)", "rgba(56, 189, 248, 0.16)"],
+        built_exterior: ["rgba(245, 158, 11, 0.80)", "rgba(245, 158, 11, 0.16)"],
+        natural: ["rgba(52, 211, 153, 0.80)", "rgba(52, 211, 153, 0.16)"],
+        stylized: ["rgba(192, 132, 252, 0.82)", "rgba(192, 132, 252, 0.16)"],
+        vehicle: ["rgba(251, 113, 133, 0.85)", "rgba(251, 113, 133, 0.18)"]
+      };
+      const [strokeC, fillC] = catColors[activeCase.category] || catColors.interior;
+
+      if (activeCase.category === "vehicle") {
+        // Boeing 747-400 Fuselage + Swept Wings + Upper Deck Hump + 4 Nacelles + Tail Fin
+        drawBoxWire(-3.2, 1.2, -18.0, 6.4, 4.2, 36.0, strokeC, fillC, w, h);
+        drawBoxWire(-2.6, 5.4, 2.0, 5.2, 2.0, 14.0, strokeC, fillC, w, h);
+        drawBoxWire(-22.0, 2.6, -4.0, 44.0, 0.7, 7.5, "rgba(56,189,248,0.85)", "rgba(56,189,248,0.18)", w, h);
+        drawBoxWire(-0.6, 5.4, -18.0, 1.2, 7.5, 5.5, strokeC, fillC, w, h);
+      } else {
+        for (let i = 0; i < 36; i++) {
+          const row = Math.floor(i / 6) - 3;
+          const col = (i % 6) - 3;
+          const x = col >= 0 ? col * 4.2 + 4.0 : col * 4.2 - 4.0;
+          const z = row * 5.2;
+          const hBox = 1.8 + ((seed + i * 17) % 7) * 0.85;
+          drawBoxWire(x, 0, z, 2.4, hBox, 2.4, strokeC, fillC, w, h);
+        }
+      }
+
+      ctx.fillStyle = "#f8fafc";
+      ctx.font = "bold 13px monospace";
+      ctx.fillText(`Case: ${activeCase.id} (${activeCase.title}) | Category: ${activeCase.category} | Seed: ${activeCase.seed}`, 16, 26);
+      ctx.fillStyle = "#34d399";
+      ctx.font = "12px monospace";
+      const instTxt = parsedGlbInfo ? parsedGlbInfo.instanceCount : 960;
+      ctx.fillText(`GLB 2.0 EXT_mesh_gpu_instancing: ${instTxt} instances | Drag mouse to orbit 3D, Scroll to zoom`, 16, 46);
+    }
+
+    renderLeaderboard();
+    selectCase(CASES[0]);
+  </script>
+</body>
+</html>

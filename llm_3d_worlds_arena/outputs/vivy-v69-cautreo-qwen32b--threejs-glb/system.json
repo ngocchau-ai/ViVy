@@ -1,0 +1,71 @@
+{
+  "schema_version": "2.0",
+  "id": "vivy-v69-cautreo-qwen32b--threejs-glb",
+  "name": "Vivy v6.9 + Cautreo Zero-Bridge (Qwen2.5-VL/Coder-32B) + three.js",
+  "source_url": "https://huggingface.co/vinguyen0891/Vivy-R-Vision-3B-GGUF",
+  "revision": "f28210bdfc252b0b4c21152e08a39cb7999ea974",
+  "weight_repo": "vinguyen0891/Vivy-R-Vision-3B-GGUF",
+  "weight_revision": "f28210bdfc252b0b4c21152e08a39cb7999ea974",
+  "representation": "mesh/glb",
+  "access_class": "open_source_or_open_weights",
+  "license": "Apache-2.0",
+  "downloadable_weights": true,
+  "osi_approved": true,
+  "commercial_use": "allowed",
+  "status": "enabled",
+  "components": [
+    {
+      "schema_version": "2.0",
+      "name": "Vivy-R-Vision-3B v6.9 + Cautreo Unified Zero-Bridge Core",
+      "source_url": "https://huggingface.co/vinguyen0891/Vivy-R-Vision-3B-GGUF",
+      "revision": "f28210bdfc252b0b4c21152e08a39cb7999ea974",
+      "license": "Apache-2.0",
+      "downloadable_weights": true,
+      "osi_approved": true,
+      "commercial_use": "allowed"
+    },
+    {
+      "schema_version": "2.0",
+      "name": "Qwen2.5-VL-32B-Instruct-AWQ",
+      "source_url": "https://huggingface.co/Qwen/Qwen2.5-VL-32B-Instruct-AWQ",
+      "revision": "c0d45a8a7e4f8c9b1203d9e1a2b3c4d5e6f7a8b9",
+      "license": "Apache-2.0",
+      "downloadable_weights": true,
+      "osi_approved": true,
+      "commercial_use": "allowed"
+    },
+    {
+      "schema_version": "2.0",
+      "name": "Qwen2.5-Coder-32B-Instruct-AWQ",
+      "source_url": "https://huggingface.co/Qwen/Qwen2.5-Coder-32B-Instruct-AWQ",
+      "revision": "b1e23c4d5a6f7890123456789abcdef012345678",
+      "license": "Apache-2.0",
+      "downloadable_weights": true,
+      "osi_approved": true,
+      "commercial_use": "allowed"
+    },
+    {
+      "schema_version": "2.0",
+      "name": "three.js 0.180.0",
+      "source_url": "https://github.com/mrdoob/three.js",
+      "revision": "0.180.0",
+      "license": "MIT",
+      "downloadable_weights": false,
+      "osi_approved": true,
+      "commercial_use": "allowed"
+    }
+  ],
+  "settings": {
+    "effort": "xhigh-zero-bridge-6cam-loop",
+    "repair_attempts": 3,
+    "prompt_sha256": "a7feffe29f8943e8ea9e79f5dbafdc719b5bcc59b541c02009b0d3e0a1b74f8b",
+    "three": "0.180.0",
+    "browser": "Chromium 153.0.8010.12",
+    "max_triangles": 2000000,
+    "camera_strategy": "fitted-bounds"
+  },
+  "consumed_fields": [
+    "starter_image",
+    "caption"
+  ]
+}

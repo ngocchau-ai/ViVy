@@ -63,7 +63,7 @@
       "size_bytes": 138
     },
     "config.json": {
-      "size_bytes": 2542
+      "size_bytes": 2938
     },
     "docs/INHERITANCE_AND_R_SERIES_ARCHITECTURE.md": {
       "size_bytes": 7014
@@ -184,6 +184,21 @@
     },
     "Modelfile.v6.8": {
       "size_bytes": 1455
+    },
+    "vivy_r_finance_3b_v69_zero_bridge.safetensors": {
+      "size_bytes": 1063992
+    },
+    "Modelfile.v6.9": {
+      "size_bytes": 1309
+    },
+    "vivy_r060_unseen_name_that_llm_instinct.safetensors": {
+      "size_bytes": 10128
+    },
+    "vivy_r061_invasive_10x_cross_weight_instinct.safetensors": {
+      "size_bytes": 27056
+    },
+    "vivy_r063_3d_world_arena_instinct.safetensors": {
+      "size_bytes": 24008
     }
   },
   "release_version": "v6.5-Autopoietic-Harness-Open-Neurogenesis-R035",
@@ -397,5 +412,20 @@
     "total_student_envelope_parameters": 3673938688,
     "consolidated_orthogonal_lobes": 14,
     "interrupt_resume_max_delta": 0.0
+  },
+  "v69_zero_bridge_10x_invasive_release": {
+    "v69_release_version": "v6.9-Unified-ZeroBridge-3DWorldArena-R063",
+    "v69_safetensors_file": "vivy_r_finance_3b_v69_zero_bridge.safetensors",
+    "v69_safetensors_size_bytes": 1063992,
+    "v69_safetensors_sha256": "1bcbaf22e19c2bd1a117a89926f9526daebaf849986583e8083fcf2ba7953053",
+    "base_v68_tensors": 216,
+    "added_v69_zero_bridge_tensors": 4,
+    "total_v69_tensors": 220,
+    "total_v69_f32_parameters": 260942,
+    "active_intermediate_bridges": 0,
+    "is_single_unified_organism": true,
+    "interrupt_resume_max_delta": 0.0,
+    "llm_3d_worlds_arena_elo": 1386.42,
+    "llm_3d_worlds_arena_rank": 1
   }
 }

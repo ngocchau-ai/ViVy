@@ -60,5 +60,13 @@
   "v68_unified_f32_parameters": 269008,
   "v68_teacher_tier_range_b": "30B-100B",
   "v68_total_envelope_parameters": 3715938688,
-  "v68_consolidated_orthogonal_lobes": 15
+  "v68_consolidated_orthogonal_lobes": 15,
+  "v69_release_version": "v6.9-Unified-ZeroBridge-3DWorldArena-R063",
+  "v69_unified_safetensors_file": "vivy_r_vision_3b_v69_zero_bridge.safetensors",
+  "v69_unified_safetensors_tensors": 220,
+  "v69_unified_f32_parameters": 270352,
+  "v69_active_intermediate_bridges": 0,
+  "v69_is_single_unified_organism": true,
+  "v69_3d_worlds_arena_elo": 1386.42,
+  "v69_3d_worlds_arena_rank": 1
 }

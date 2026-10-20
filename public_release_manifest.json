@@ -1,8 +1,8 @@
 {
-  "schema": "vivy.v6.github_public_release_manifest.v6_8",
+  "schema": "vivy.v6.github_public_release_manifest.v6_9",
   "repository": "ngocchau-ai/ViVy",
-  "release_tag": "v6.8-Dream-Teacher-Distilled-3B-5B-R058",
-  "updated_at_utc": "2026-10-20T10:28:52.130291+00:00",
+  "release_tag": "v6.9-Unified-ZeroBridge-3DWorld-Top1-R063",
+  "updated_at_utc": "2026-10-20T14:18:22.747709+00:00",
   "v67_safetensors_verification": {
     "Vivy-R-Vision-3B-GGUF": {
       "file": "vivy_r_vision_3b_v67_causal_instinct.safetensors",
@@ -43,11 +43,31 @@
       "sha256": "099e64ab590248cac91d5bb1da11c6f81cf722d1bb6557b7f6fa686de97d9eee"
     }
   },
-  "total_files": 247,
+  "v69_safetensors_verification": {
+    "Vivy-R-Vision-3B-GGUF": {
+      "file": "vivy_r_vision_3b_v69_zero_bridge.safetensors",
+      "tensor_count": 220,
+      "size_bytes": 1101696,
+      "sha256": "64a51840d4bdce7ee99b42a4097803b4795b63d7348f185d0f8d077cc4b1b57c"
+    },
+    "Vivy-R-Finance-3B-GGUF": {
+      "file": "vivy_r_finance_3b_v69_zero_bridge.safetensors",
+      "tensor_count": 220,
+      "size_bytes": 1063992,
+      "sha256": "1bcbaf22e19c2bd1a117a89926f9526daebaf849986583e8083fcf2ba7953053"
+    },
+    "Vivy-R-Robotics-3B-GGUF": {
+      "file": "vivy_r_robotics_3b_v69_zero_bridge.safetensors",
+      "tensor_count": 220,
+      "size_bytes": 1065308,
+      "sha256": "ad95e495f631d4cf29d9be80cd37d06e9ff2d06a97701a7f81ebdd2f1b2671b6"
+    }
+  },
+  "total_files": 573,
   "files": {
     "benchmarks/BENCHMARK_REPORT.md": {
-      "size_bytes": 8603,
-      "sha256": "99e932991fdbeb9c64e920fa7a19fcb594043f81baa32c33cc26803f274bc30a"
+      "size_bytes": 10675,
+      "sha256": "23c255fc52de7da6add2a5b1fd7d7eb586ca4d2d7fba2c98eab41527506f1a7a"
     },
     "benchmarks/vivy_1hvideoqa_101_predictions.csv": {
       "size_bytes": 17351,
@@ -137,6 +157,26 @@
       "size_bytes": 19360,
       "sha256": "e503e69eef16998e3ea7ba879db391a85b0dda8df05a972a72e915547d5cba53"
     },
+    "checkpoints/vivy_r060_unseen_name_that_llm_instinct.safetensors": {
+      "size_bytes": 10128,
+      "sha256": "2356c488e6f4f314d28289efed772547af7160d1bafd8c1d84bd9cb8c777ef81"
+    },
+    "checkpoints/vivy_r061_invasive_10x_cross_weight_instinct.safetensors": {
+      "size_bytes": 27056,
+      "sha256": "c412b4fee1ce164d48d7591c1de9fe7b25474b7f0534e8ff21b5af6b29fd26f4"
+    },
+    "checkpoints/vivy_r063_3d_world_arena_instinct.safetensors": {
+      "size_bytes": 24008,
+      "sha256": "7c972edcb81848463aa1fcb2ad66978f6df2d5b200859430632988cc3867aa3d"
+    },
+    "checkpoints/vivy_r063_llm_3d_worlds_arena_receipt.json": {
+      "size_bytes": 11884,
+      "sha256": "aa34e138e54a74c381562828a152171842204097edeb61c7a10fb904b03c46dc"
+    },
+    "checkpoints/vivy_r064_hf_webgl_space_and_dataset_receipt.json": {
+      "size_bytes": 1027,
+      "sha256": "1a11a524dd8e0af1325318ad7c7c594f331375208a2f5bf6026c5c838359aa34"
+    },
     "checkpoints/vivy_science_discovery_instinct.safetensors": {
       "size_bytes": 10704,
       "sha256": "43aa4a49cb523c5505bdd7700534ec42c18af7c2a5f81b344ce024900e203f7b"
@@ -151,11 +191,15 @@
     },
     "checkpoints/vivy_v67_causal_intuition_release_receipt.json": {
       "size_bytes": 5129,
-      "sha256": "f45c841075e5b6174e5b940f5b028be54355d0c4e80b429785b0f0dcc26fb4a9"
+      "sha256": "f9ed1120477388d1cc6f79c34aeee929b2658d4f09e61d5141db3c0d307583f9"
     },
     "checkpoints/vivy_v68_hf_public_release_receipt.json": {
       "size_bytes": 1661,
       "sha256": "5f11909edae8100a25297ded8fc2688ea905f9d57aed1965f2d9a92e7cb8d85b"
+    },
+    "checkpoints/vivy_v69_hf_public_release_receipt.json": {
+      "size_bytes": 1651,
+      "sha256": "3fc53801c529413f66f17558efff750b3a647d3533e72775d326fac735661645"
     },
     "docs/INHERITANCE_AND_R_SERIES_ARCHITECTURE.md": {
       "size_bytes": 7014,
@@ -193,6 +237,10 @@
       "size_bytes": 17058,
       "sha256": "d596bf2cabbd75762c13140dc9c880a3a5830d0d65a237a330d1906f0e728325"
     },
+    "docs/VIVY_INVASIVE_10X_CROSS_WEIGHT_TRAINING_AND_AUTOPOIETIC_HARNESS_SPEC.md": {
+      "size_bytes": 9735,
+      "sha256": "53ca28ab160cbb708a8b99ba04ededfbffa8cb73f3ad775e8364ff30c37e6084"
+    },
     "docs/VIVY_KAGGLE_DEEPMIND_VIDEOQA_TOP1_MASTER_PLAN.md": {
       "size_bytes": 9308,
       "sha256": "90d41a75c41df3beede1b214453f6507021081e5df2b1128660ef468965d75b3"
@@ -201,29 +249,1233 @@
       "size_bytes": 17178,
       "sha256": "2f0e9f9d774dbed38662493a1624d8584c798a593cb331e572715c811e752d28"
     },
+    "docs/VIVY_LLM_3D_WORLDS_ARENA_TOP1_PLAN_AND_V69_SPEC.md": {
+      "size_bytes": 5583,
+      "sha256": "e7409aa93d62dee460e2b804e906a94c3446ce98f15776aa2834eeb58fa02fbf"
+    },
     "docs/VIVY_MODEL_UPDATE_TRAINING_AND_3X_TOP3_BENCHMARK_REVIEW.md": {
       "size_bytes": 16152,
       "sha256": "0391e07d68e62a5f31c4302d0738f376397d2a5df4f0d77b6f7558e7bb4fa772"
     },
     "docs/VIVY_R_FINANCE_3B_PUBLIC_INTRODUCTION_AND_SPECIFICATION.md": {
-      "size_bytes": 19163,
-      "sha256": "1ebff75dcbd22c52122c86298e8e6317523444b78e2c6e28f5a9725e39933eb0"
+      "size_bytes": 26368,
+      "sha256": "573dd33384cac779a82062245dd14682bd308b6b70fd9eb9b932d63633929552"
     },
     "docs/VIVY_R_ROBOTICS_3B_PUBLIC_INTRODUCTION_AND_SPECIFICATION.md": {
-      "size_bytes": 19516,
-      "sha256": "f95432769aa788558450cdbb35b16707aa09b33611dec8a966dbf98de51bddb7"
+      "size_bytes": 26729,
+      "sha256": "1c431a2e11655778aed6c0ddb92ac479e0d77f15e772d86591d5a65b0a7d1120"
     },
     "docs/VIVY_R_VISION_3B_PUBLIC_INTRODUCTION_AND_SPECIFICATION.md": {
-      "size_bytes": 32989,
-      "sha256": "2088dfbbbaa0c1b9bfbebf65d0c998d89f9d5d5090bc6b272bbff4430b026bc6"
+      "size_bytes": 40263,
+      "sha256": "18db7a13c2bd7dfb2a6833e5448585a82caafbb3ecfd8897be6619d233f5898b"
     },
     "docs/VIVY_STRATIFIED_GOAL_MASTERY_AND_NL_BRIEF_SPEC.md": {
       "size_bytes": 8692,
       "sha256": "b995621be7ab4a96067e85756611caa3e4f44fa661cb0002b0cc6de424f04288"
     },
+    "docs/VIVY_UNIFIED_CAUTREO_ORGANISM_AND_UNSEEN_KAGGLE_BRIDGE_SPEC.md": {
+      "size_bytes": 9775,
+      "sha256": "dbf05dc606b6ff37d9ef073295bd4f62dce71a65a209a628098802357e0eeb72"
+    },
     "docs/VIVY_VBENCH_TOP3_AUTONOMOUS_3PCT_GUIDANCE_SPEC.md": {
       "size_bytes": 13635,
       "sha256": "bd3af549831c098994ae7fe1763309184b00277cc3a8f35ce331a682634e4b70"
+    },
+    "llm_3d_worlds_arena/DISCUSSION_PROPOSAL_AND_PR_MANIFEST.md": {
+      "size_bytes": 1584,
+      "sha256": "a50e725e0c6b66357b3952c8ba6785dac40cef68551a6492209bb39dd3697e14"
+    },
+    "llm_3d_worlds_arena/index.html": {
+      "size_bytes": 36437,
+      "sha256": "ac12e4d7499cb08747431d69f73fb974067911f8c78b364e39adf690299dd593"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/built-01/artifact.json": {
+      "size_bytes": 3271,
+      "sha256": "8cc0506578c006f198e15a2fd44685a9b4c336350e3e7b966eef39bd541db7a2"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/built-01/native/world.glb": {
+      "size_bytes": 44012,
+      "sha256": "9359fab4332c1c64b8cbc5756d44c3cd1268b433fe39bd1a3aef38549f513445"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/built-01/preview.png": {
+      "size_bytes": 179,
+      "sha256": "6377202f56ac8c40bab93029b175da510b90bb05480741ff8cb923d0f0e098cb"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/built-01/source/attempt-1-response.md": {
+      "size_bytes": 4949,
+      "sha256": "63e484847c8b44f7ea064cd715dd63cc27f0ea98324187e628148df1ab62ac77"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/built-01/source/world.js": {
+      "size_bytes": 4930,
+      "sha256": "d36d45dadc2a3e3801a154f9aa880c0b067196d9d41d8832a8787f7e62e7969b"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/built-01/viewer/world-web.glb": {
+      "size_bytes": 41492,
+      "sha256": "faf71a06a4146d3a3ef8cdb9dc683404d33d9a64649336b808ba957f5e841fdb"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/built-02/artifact.json": {
+      "size_bytes": 3271,
+      "sha256": "41424da375417d4d7cdc65262543232523b9092d882c5d95f2fbc2450abb7220"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/built-02/native/world.glb": {
+      "size_bytes": 45624,
+      "sha256": "7bacbb4373228016bcbbcfd0527d6cbd8e0cd0a6c4b1a02fd6d2ef46f5aeda94"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/built-02/preview.png": {
+      "size_bytes": 179,
+      "sha256": "d6ac6c567ca3d61b734dc5c1f0be150ec38b69ad19226703816890e92696493c"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/built-02/source/attempt-1-response.md": {
+      "size_bytes": 4944,
+      "sha256": "44dbf8776a787bcaee56b21c118fa0740372a3018a5d2943caa84d68a248b972"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/built-02/source/world.js": {
+      "size_bytes": 4925,
+      "sha256": "1108612b9865938f831b5fafd7d82745e7b8f2a598aab9a722eb6bb4bef7bcfe"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/built-02/viewer/world-web.glb": {
+      "size_bytes": 42980,
+      "sha256": "0a6e47aa0dd786b45d9defecaca96b8de86d01947788f9f417915895d13ceea8"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/built-03/artifact.json": {
+      "size_bytes": 3270,
+      "sha256": "af4fd358887ca2aefaf740ed15938f4b78e4b66ef2c924b70d0a180165e483e1"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/built-03/native/world.glb": {
+      "size_bytes": 44316,
+      "sha256": "841861937083f308a96dfccd75582cdf94b899172d657db39f91245d0aeb9b63"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/built-03/preview.png": {
+      "size_bytes": 179,
+      "sha256": "42b42cdc9acf975d78a436e4f756857aa0c70a4053f0b479e85c510e9e53c6ed"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/built-03/source/attempt-1-response.md": {
+      "size_bytes": 4954,
+      "sha256": "da5f3968edafce29ba297f4f76e60724f540c1d1475574a108a1ea93d9e301d6"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/built-03/source/world.js": {
+      "size_bytes": 4935,
+      "sha256": "f5f559844e01dc32ddd99bd712174788b596d22832fce181e182f22254476638"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/built-03/viewer/world-web.glb": {
+      "size_bytes": 42396,
+      "sha256": "8140c642b51bae7d20640dc092e59a04faf4691f752aa9f8b66a3d1157792211"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/built-04/artifact.json": {
+      "size_bytes": 3271,
+      "sha256": "41fba1deeca47adfa6479effad0bb4174ce9a53eaef3125ee84a4b098c35bd13"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/built-04/native/world.glb": {
+      "size_bytes": 45936,
+      "sha256": "e8ad9f3e79954a0aa35701c9c10d72e3bb2fcd246e0f95aefa4fcf5ea64e8399"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/built-04/preview.png": {
+      "size_bytes": 178,
+      "sha256": "f58d9a1786b607b5c06863add08081f15ca1348176f08afe68d95e48427d8e1a"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/built-04/source/attempt-1-response.md": {
+      "size_bytes": 4944,
+      "sha256": "60c98d34c5f680003f87efd97de0e3ad29ed21bc44fa5a6a9469d4647d25d92d"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/built-04/source/world.js": {
+      "size_bytes": 4925,
+      "sha256": "2ae371226ef3a9d1da5934bb860c4db37c481e2b6b4bfcdbdb713691ed4f35b7"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/built-04/viewer/world-web.glb": {
+      "size_bytes": 43892,
+      "sha256": "ee8fa5e36288d475c55c52d20393fe14699c98ba4ed51227487d3650c479d312"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/built-05/artifact.json": {
+      "size_bytes": 3271,
+      "sha256": "8a0be3e688d721dabb021140eeab33274ae4a3b5c2cea4d3d4b63c3ac9cce458"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/built-05/native/world.glb": {
+      "size_bytes": 37952,
+      "sha256": "9291fe493c5bb66c5c02d3ad6ad273a0497c55f856664e6d8a24864872d6b2e2"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/built-05/preview.png": {
+      "size_bytes": 179,
+      "sha256": "9ffadef543bfef7fdbb932c0109b1d96df4079a30accb081c98cab247ba02a42"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/built-05/source/attempt-1-response.md": {
+      "size_bytes": 4947,
+      "sha256": "1473625d3bb365658f96dc15f64f8d42bfbf2f4ff22ef97807c58e2da96e9efd"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/built-05/source/world.js": {
+      "size_bytes": 4928,
+      "sha256": "8c2e2a1a7bf6653ee007f05983504803544982d2442c4c75033e6c3e07d2150f"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/built-05/viewer/world-web.glb": {
+      "size_bytes": 35788,
+      "sha256": "f20da6523098138f9e3e01298c3f1b972e5553ac86b0aca8d03b239da51325de"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/built-06/artifact.json": {
+      "size_bytes": 3271,
+      "sha256": "f2564b46e563d3fb644d041e4bb983cd42cc43093347afd5b576734021fdf14a"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/built-06/native/world.glb": {
+      "size_bytes": 39572,
+      "sha256": "d51ab0292da655c16282e17295144f00139787516a427f4b3306ee2208601c34"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/built-06/preview.png": {
+      "size_bytes": 179,
+      "sha256": "ce9ad2fae71713b6c495a5bbab99ef8979a5e598eb80611618c0c0dcc86d71d6"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/built-06/source/attempt-1-response.md": {
+      "size_bytes": 4956,
+      "sha256": "714bdbc527cb7e7a7e8b0c1ecbc42b26fa4145eb9254b69b7003c82c83d961d6"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/built-06/source/world.js": {
+      "size_bytes": 4937,
+      "sha256": "9d05aceee2c3f834a7de0aba1944c6fd22b2cc9113e65c026d8ea701c55df0fb"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/built-06/viewer/world-web.glb": {
+      "size_bytes": 37292,
+      "sha256": "4dd6a1415f128c8bc54d7bea4317e7c26c13c5b08b2630636222d95ce6b97b51"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/built-07/artifact.json": {
+      "size_bytes": 3271,
+      "sha256": "3178619ba864a9362b6c8f7cf84f67b40654790adc0b491a400614ec2ffcb740"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/built-07/native/world.glb": {
+      "size_bytes": 41192,
+      "sha256": "50360b4f511154008a96898f126bb201449cf910e40ddd7528cfd6f45c875f17"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/built-07/preview.png": {
+      "size_bytes": 179,
+      "sha256": "548c2fa9ddc2e817fb6c43e3fd3d5d39b5e7c4b09fb5a83d1a401ed5e6f8283c"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/built-07/source/attempt-1-response.md": {
+      "size_bytes": 4940,
+      "sha256": "e7493bd67828eec56a21d3e2f49d8275e274373f33bd2202823807373e699920"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/built-07/source/world.js": {
+      "size_bytes": 4921,
+      "sha256": "ae089ecd09b93225fc8203c0da15813047c4fd26862cff52d8cd5d68537ed481"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/built-07/viewer/world-web.glb": {
+      "size_bytes": 38792,
+      "sha256": "9897a222f0fa59dccc86180dc55698eb49d24712360494267c81f97c8e2ab0c5"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/built-08/artifact.json": {
+      "size_bytes": 3271,
+      "sha256": "7b45126ecb96b6d2765b7de063241b320cbcd21086fee739edd1e3a1eccec9d3"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/built-08/native/world.glb": {
+      "size_bytes": 42816,
+      "sha256": "c6b4b97d3753b9937e7598ec99374245aca189311eac39bf7aa00ac671066171"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/built-08/preview.png": {
+      "size_bytes": 179,
+      "sha256": "df3563395f3cd374999a5af1c48796307ec0ddf4238853c373bc3bad023ceedd"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/built-08/source/attempt-1-response.md": {
+      "size_bytes": 4967,
+      "sha256": "28f08765fb6caa3c8591afb36b2cc9a824090a15adb2e207f2b0a0e768693e66"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/built-08/source/world.js": {
+      "size_bytes": 4948,
+      "sha256": "9b62d93748c1ee288ec83227304b8e88ff5f763fa63faa22d9310619d99be2a5"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/built-08/viewer/world-web.glb": {
+      "size_bytes": 40296,
+      "sha256": "d0dd4699ec903ab64043d9b66034a3724437f73d4e828fab644bd0770ce84422"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/built-09/artifact.json": {
+      "size_bytes": 3271,
+      "sha256": "93f21dd28d2765ca89efff7245eefcf66bf8a2c1abeacd1ff10953db93b6a89b"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/built-09/native/world.glb": {
+      "size_bytes": 44436,
+      "sha256": "2cd78b118f855a98bc923ccd55acdb3fa62bd9c9d8bb2b402850ee32405025e1"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/built-09/preview.png": {
+      "size_bytes": 179,
+      "sha256": "cef54fcd7c364c9e4b2336859095c76bc34136812deb21bc2e880615b5162d0b"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/built-09/source/attempt-1-response.md": {
+      "size_bytes": 4952,
+      "sha256": "5583073ffafdc147fb93ae43953a15ee4add37e108ac1525a6e68eec042e8d1e"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/built-09/source/world.js": {
+      "size_bytes": 4933,
+      "sha256": "224a52b7cbdf9f00900129e9035e1d0d190a0f66fe4d39e29791a8bd02514d94"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/built-09/viewer/world-web.glb": {
+      "size_bytes": 41796,
+      "sha256": "8324d7bb0d01296c653e104731ceac9698a9c3cb596390c3207d038b7798d647"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/built-10/artifact.json": {
+      "size_bytes": 3270,
+      "sha256": "df7c7c996cc73ffcdd8158c9c55f59060c6a07ccf2fc9cec270bf1346ed2f615"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/built-10/native/world.glb": {
+      "size_bytes": 43104,
+      "sha256": "cda4ab4cf5fec5ff1ae3abc3a61c3fbef50b14f9fecfe4ffe3c4528fd8290f5d"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/built-10/preview.png": {
+      "size_bytes": 179,
+      "sha256": "bd9e98d2799a0e118eaf3af2b570b642f5d231b8c510a77dd6a2af00766c9053"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/built-10/source/attempt-1-response.md": {
+      "size_bytes": 4958,
+      "sha256": "4588f2c9f5d96ad08a02d118d310ae044c0c06562976a3dce37f996e00126135"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/built-10/source/world.js": {
+      "size_bytes": 4939,
+      "sha256": "b0449a9eda6dcb513b5fc416767734ff5c7c858cbdde94fadbb58eb55ae46f6c"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/built-10/viewer/world-web.glb": {
+      "size_bytes": 41184,
+      "sha256": "791dc50c04208c83b05a7b9de074ca81d1364c39725ca9f3065991011a039487"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/built-11/artifact.json": {
+      "size_bytes": 3271,
+      "sha256": "a5f36a37e6b497d28621c76fdd8bde26a33e131ddd6d6844f56288d6e56f9282"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/built-11/native/world.glb": {
+      "size_bytes": 44736,
+      "sha256": "5ec9813b656386ba1aa54417655c524f5595790bae117aca2ecf61c78a2304d5"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/built-11/preview.png": {
+      "size_bytes": 179,
+      "sha256": "4411fb380e2944c795fc8651bbdf8445b77dcdb7c36b46d7475d1e535cf44ca5"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/built-11/source/attempt-1-response.md": {
+      "size_bytes": 4943,
+      "sha256": "a7f9124099202abc62631ed17f950eb519d8d3ef86710f9fda862671b27c3c86"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/built-11/source/world.js": {
+      "size_bytes": 4924,
+      "sha256": "cfaa7842b09235eb5b58229add110ce55516c8dbc58db35338a2b0f6a97068e5"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/built-11/viewer/world-web.glb": {
+      "size_bytes": 42696,
+      "sha256": "17a112344a9cd9a31a84bf73a881ca4d0a0b43e8d48bd01673a86c05964bba79"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/built-12/artifact.json": {
+      "size_bytes": 3271,
+      "sha256": "b5b7092edf38dbdd12170bb26bfb85dc10ba06eb2b3cffad7f9e0436e6c1fe1f"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/built-12/native/world.glb": {
+      "size_bytes": 46356,
+      "sha256": "823aa5b8f87fb3701924cc055751db2669b9e882beb742f1aad3c5a40eec05d4"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/built-12/preview.png": {
+      "size_bytes": 179,
+      "sha256": "7f0fa9305c7bb42620190e01bc81124c70283de84f3c0d789fc433f28e4d4cce"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/built-12/source/attempt-1-response.md": {
+      "size_bytes": 4953,
+      "sha256": "abf8bf4b328e92a8c6b4411428c3c27faf91f13ff18bf3c9dc58534904e35e5c"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/built-12/source/world.js": {
+      "size_bytes": 4934,
+      "sha256": "0144b5ad1522b6fadb5c11bf5592ad26cffcbc1eecbc9b51bd39663188806b85"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/built-12/viewer/world-web.glb": {
+      "size_bytes": 44196,
+      "sha256": "d3cce23458da0cd5dfbc9da93768e63d1310ffc72f873e51e07a9f9b3ae2d26a"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/interior-01/artifact.json": {
+      "size_bytes": 3294,
+      "sha256": "46a73f5e63243016e1bee002c9ede931bb5f86ad03ad2112f8388add0062e628"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/interior-01/native/world.glb": {
+      "size_bytes": 33992,
+      "sha256": "02ffac9dfc53a5d297df96c5c1dab09db11e0b5646b08f612b8cd2f70e7198c6"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/interior-01/preview.png": {
+      "size_bytes": 180,
+      "sha256": "5155a17e56916fd7884514d71351197e13b851eaede2b9580ea2923f6655b182"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/interior-01/source/attempt-1-response.md": {
+      "size_bytes": 4971,
+      "sha256": "0fdbcc1dd7cec93c0e083b60d4aedebf4b61a6360e4a13df544119b8bb60d2b0"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/interior-01/source/world.js": {
+      "size_bytes": 4952,
+      "sha256": "75478340611ae0c9d54331bc46fd9813cf56d427a1c754413cfcb9f48c7eaba4"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/interior-01/viewer/world-web.glb": {
+      "size_bytes": 32312,
+      "sha256": "fb2954a5d53a9cf511bb8ae5fec9cfb591b858f87a0b3d08c49a51d310393d31"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/interior-02/artifact.json": {
+      "size_bytes": 3294,
+      "sha256": "04816911d04de14bf879a2e41bb954a1509ae1a243e004123a19513ee51fe846"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/interior-02/native/world.glb": {
+      "size_bytes": 35664,
+      "sha256": "46865762119637b285a24f107f7cc9c43f54a6aad9407caa993b2b5cc24a91f9"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/interior-02/preview.png": {
+      "size_bytes": 180,
+      "sha256": "67951afb970070f85b8b55a93e342fbff110ed7065110ef3a580c0b81d9488b1"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/interior-02/source/attempt-1-response.md": {
+      "size_bytes": 4962,
+      "sha256": "ffb39ee48f9992fe0de1c9052240b761a28c17d8376939c9b450f3cf70c1c655"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/interior-02/source/world.js": {
+      "size_bytes": 4943,
+      "sha256": "c1a9f9a3475a21f134f72457c93c27fc56603e063f949941886524420b01d170"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/interior-02/viewer/world-web.glb": {
+      "size_bytes": 33864,
+      "sha256": "ee0c6446c5b726eeb4d7a1f1eec52392afdf0e220270960ce5a7cbce06db70fc"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/interior-03/artifact.json": {
+      "size_bytes": 3295,
+      "sha256": "ddc8ae966c1a37f4577a1ce4a1846678529009911c1864724b6e8e982bcddcb3"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/interior-03/native/world.glb": {
+      "size_bytes": 37344,
+      "sha256": "6d240225948829e3082d1dc01164315cb22b27d2baa189a3ec6c8a70d5fb3410"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/interior-03/preview.png": {
+      "size_bytes": 180,
+      "sha256": "885dcea32bd13d4f1b30cad485c310de104af6b50e0a1b6b69a53a8e62e69e40"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/interior-03/source/attempt-1-response.md": {
+      "size_bytes": 4942,
+      "sha256": "f3644e47a5a19022a2c30ab827a3730b9ee957db615fb866c90f141d46b0bb74"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/interior-03/source/world.js": {
+      "size_bytes": 4923,
+      "sha256": "16e8a1883d1d64dbffc71ae78381490328392036239724f582188ace23d3d9d8"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/interior-03/viewer/world-web.glb": {
+      "size_bytes": 35424,
+      "sha256": "28e7fa834d1bc28e7d035c1271bf1d97b1372c40b13b8937e71e69f0f9166f09"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/interior-04/artifact.json": {
+      "size_bytes": 3295,
+      "sha256": "18ac4a5854c2ab74243497dacdf91d2466b27af9870caeb31a74d0abc1b176cc"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/interior-04/native/world.glb": {
+      "size_bytes": 39036,
+      "sha256": "0e9283e509ae79adca9816dc7429d74a18c9be2cfd5cddcb7a5c5b4763711856"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/interior-04/preview.png": {
+      "size_bytes": 180,
+      "sha256": "afce175a48bee1d4d75635d6c566e4a0212c6b7d7768a585bca16b8dd54cabe6"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/interior-04/source/attempt-1-response.md": {
+      "size_bytes": 4959,
+      "sha256": "de9d6e9624a43805cdfc39bb8987348d046e7e595a52cdd926c139f0bae93dfc"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/interior-04/source/world.js": {
+      "size_bytes": 4940,
+      "sha256": "fa4a14cc48bee1ed4326b36367e5517b3d56b3d41fde40d77043bbcd4ae43df8"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/interior-04/viewer/world-web.glb": {
+      "size_bytes": 36996,
+      "sha256": "5fba93bbaca1e83c3a4722307398454b445be1ac7cfde2103b61268d064a289a"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/interior-05/artifact.json": {
+      "size_bytes": 3295,
+      "sha256": "52cd79a7e64463cda907bbd38f46454bfe2149b68748d9669a7d48bd8085a5a6"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/interior-05/native/world.glb": {
+      "size_bytes": 40712,
+      "sha256": "20745945026933ebccf1a01e8c997905089d1b7c89ebe88522189b5e572ab1ed"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/interior-05/preview.png": {
+      "size_bytes": 179,
+      "sha256": "643364c95dc381ee9d46acd18a028ff22f5d3025ab3488fdf4998feda6f5a978"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/interior-05/source/attempt-1-response.md": {
+      "size_bytes": 4966,
+      "sha256": "d904698010de114ff9c7f42eeeb4301639ad1a892a69c331c8534076b8fe681d"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/interior-05/source/world.js": {
+      "size_bytes": 4947,
+      "sha256": "eb8d8e99febde794679b9c9ef93091e1c78c125306387b44e4cd81bacf9507ef"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/interior-05/viewer/world-web.glb": {
+      "size_bytes": 38552,
+      "sha256": "d8bae94f8bbd391f8b39eec83954ba4b8d5e708fbb5ab7cf69faae4c9619a441"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/interior-06/artifact.json": {
+      "size_bytes": 3294,
+      "sha256": "25255d128fa0ecdf4df53a1fa6230c4cc94b563a09e0bed061069727332d5fd6"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/interior-06/native/world.glb": {
+      "size_bytes": 39988,
+      "sha256": "8b1f6a235fd051d5f166b2aa4da3b8c6ecb658d1388712095541f7345f23e951"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/interior-06/preview.png": {
+      "size_bytes": 179,
+      "sha256": "2e61c4031303fdf5402b5432b48b29396a2ca60524ac9e3ce04021d69ef82fb3"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/interior-06/source/attempt-1-response.md": {
+      "size_bytes": 4971,
+      "sha256": "71fe50fb7e1a22127fb4429529d758df2f2d2e15a713aa71ce10da6a08d5e4e7"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/interior-06/source/world.js": {
+      "size_bytes": 4952,
+      "sha256": "864f9a709fdfbc1b3b691304c0c9f2a188bec61ba36b3f1f7fb9b19831768393"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/interior-06/viewer/world-web.glb": {
+      "size_bytes": 38308,
+      "sha256": "0cae81822a89ac784a4029c635ea3f4b3f58eb400beac496fdf7a643c7657bce"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/interior-07/artifact.json": {
+      "size_bytes": 3294,
+      "sha256": "db5afccedc913235fb8636934363bc8fee49d428c95d7d5dd583e4b76e762e9d"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/interior-07/native/world.glb": {
+      "size_bytes": 34468,
+      "sha256": "4e2b1778a8bf7965f10e08ebd8a7d4c251bf8c3d5d7ee39eb07f18ad34f26b0f"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/interior-07/preview.png": {
+      "size_bytes": 179,
+      "sha256": "2bac6563ea9ff049e8940996ff032ad086b0ef2afa75d48efd8b25695ab53c8e"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/interior-07/source/attempt-1-response.md": {
+      "size_bytes": 4959,
+      "sha256": "54bbf08c869fb69b99aeb875ddba31530a1f3905c0f2efec82092fd79f839b24"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/interior-07/source/world.js": {
+      "size_bytes": 4940,
+      "sha256": "b3dac515d43386694261ca4a6f3cdc59be477f958c069ba564fd2ca088f929bc"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/interior-07/viewer/world-web.glb": {
+      "size_bytes": 32668,
+      "sha256": "3974b2abb61398207a4316e443e2e754b7842b94c9ab016b61e35d0a6833d2f0"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/interior-08/artifact.json": {
+      "size_bytes": 3295,
+      "sha256": "614ab380fd0014d5eaca542b79ad877b0d981d0ec1859fbedf502be2f0f735df"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/interior-08/native/world.glb": {
+      "size_bytes": 36148,
+      "sha256": "40175b33167f0518c11ce6d0168c9725bbd04b11b2e3c87350953aecc567dd83"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/interior-08/preview.png": {
+      "size_bytes": 179,
+      "sha256": "fe2072ef656bea7c45f206231b10d3f3ef99f2c96aa2da97175259d8f052c900"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/interior-08/source/attempt-1-response.md": {
+      "size_bytes": 4971,
+      "sha256": "80dfb09366f4849323bc081f684763c6909556d3d80eb2d45b8f8ee9189305ba"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/interior-08/source/world.js": {
+      "size_bytes": 4952,
+      "sha256": "286a8053e333d5c757afb689c2c3f971c7cd53f8c0ff0945e3077dd50683cf9d"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/interior-08/viewer/world-web.glb": {
+      "size_bytes": 34228,
+      "sha256": "5dd6814234d7ce2942fbe13c8173cae3f117c6041ed48395bb89a62fb38724ea"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/interior-09/artifact.json": {
+      "size_bytes": 3295,
+      "sha256": "f3a8d00bb05b8ef401b6a0f018f52e300b63e023ebc262d3b46dd999d10d61c3"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/interior-09/native/world.glb": {
+      "size_bytes": 37828,
+      "sha256": "8e4e42a4132ceaab7acc79cfe8fd9b33576f34ac57c2bc0e3876529fc3f8784a"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/interior-09/preview.png": {
+      "size_bytes": 179,
+      "sha256": "5da6dd795d1ce80927f9c5f8cf83b5f4565a810b6a6c4606cc1505951c34b9fc"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/interior-09/source/attempt-1-response.md": {
+      "size_bytes": 4965,
+      "sha256": "a2cf2c16b4b935f366c0ea83e84ee4c632f1eaf6b7d10549d9525b72fb93025a"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/interior-09/source/world.js": {
+      "size_bytes": 4946,
+      "sha256": "b8bd90a3e08c589fe95e1ca480b37c7fa917a99226889e3e4abcfb0a3568aee2"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/interior-09/viewer/world-web.glb": {
+      "size_bytes": 35788,
+      "sha256": "722b6f776cef359716311153866607baba7933da38eef52f3d0b3b2d9a7a4241"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/interior-10/artifact.json": {
+      "size_bytes": 3295,
+      "sha256": "95f875656c499c8ab6254bbab8ac14defcccf5c7f0ca9508aa5a50a94f47642e"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/interior-10/native/world.glb": {
+      "size_bytes": 39512,
+      "sha256": "43cca88044156e6f2ad1667853b5fa4ff984f4cc954e8e60c2e7f95edb6044f2"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/interior-10/preview.png": {
+      "size_bytes": 179,
+      "sha256": "8b176015f44363c342ef203bcfb8ad5f1a8d9adc06043cf8ad8c3b7ca28ea443"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/interior-10/source/attempt-1-response.md": {
+      "size_bytes": 4961,
+      "sha256": "5ec994c2520a1f433261a9f5d1cb0fcba8f3779aa33030877129c518c9f3c586"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/interior-10/source/world.js": {
+      "size_bytes": 4942,
+      "sha256": "7167649a712d8ef91e78cc540f385d156082909ea6721c16e6558d2f9edb5772"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/interior-10/viewer/world-web.glb": {
+      "size_bytes": 37352,
+      "sha256": "322b5fafde0c8ba34769dbbe07ebc6031c322f8269c9a98637cc152412b6e134"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/interior-11/artifact.json": {
+      "size_bytes": 3294,
+      "sha256": "73a09baf22f6008196fafc7f13fc76140da496904b6910190531dfa722dc957a"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/interior-11/native/world.glb": {
+      "size_bytes": 38792,
+      "sha256": "dff75ba4e046f3d35b33952089e621b3edac3f9724a987ab64c8b220c3f29083"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/interior-11/preview.png": {
+      "size_bytes": 179,
+      "sha256": "265f3e5c01db4b2dc669b383a4c1bd81ad14eaeb655c36a771d82cbda5387191"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/interior-11/source/attempt-1-response.md": {
+      "size_bytes": 4978,
+      "sha256": "2e22cb825181aae8acd44b3ce87d7f713ef8f8039850cb052da81bf3178c8d56"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/interior-11/source/world.js": {
+      "size_bytes": 4959,
+      "sha256": "62e794c9582a07869cac1f49d74556670b9d58800e4fac7da95710bd8af486b1"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/interior-11/viewer/world-web.glb": {
+      "size_bytes": 37108,
+      "sha256": "632132598cb007f1afc46dc723763550e7f2b6032b661d70394d3e79e328c07e"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/interior-12/artifact.json": {
+      "size_bytes": 3294,
+      "sha256": "d6ede8526ad0c0400881adb8630d6338c17ac65575ae3a8f63c04410227f05a9"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/interior-12/native/world.glb": {
+      "size_bytes": 40480,
+      "sha256": "7c80f131ab2875d688d6716b0237fd0942e93501d966343df3f652e0bf2c4096"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/interior-12/preview.png": {
+      "size_bytes": 179,
+      "sha256": "32e0711fcbfa6527ee7399cdb5d72dafdb4c8ea32493af12368ecf5d8f7352f4"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/interior-12/source/attempt-1-response.md": {
+      "size_bytes": 4991,
+      "sha256": "c0890c5d1309d4ac90b7598495a04dd94b93bd98e3d3aae01f4eb9255963a696"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/interior-12/source/world.js": {
+      "size_bytes": 4972,
+      "sha256": "7206ecf1d44dd10302abcb2ad841cdec10d9d521c799d994a739247c82314ca7"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/interior-12/viewer/world-web.glb": {
+      "size_bytes": 38680,
+      "sha256": "a4ad43422bccb8bdbf713890625d56964fb99c362ff73c9fef45cfefadfd4de8"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/natural-01/artifact.json": {
+      "size_bytes": 3287,
+      "sha256": "8bc68f6ecdc23190edeed45ea256b8f9edbc7618253934399faba43faf0c71e6"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/natural-01/native/world.glb": {
+      "size_bytes": 38356,
+      "sha256": "d418f939a9fa696fdfdb3a6097f38675cf7f9a1fb134d2463373ec06e6a32b7a"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/natural-01/preview.png": {
+      "size_bytes": 179,
+      "sha256": "0e2fa5a1d5d31b5b465e61b290ff78c394d9431796a6af6963b5aba5cb0b3dc1"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/natural-01/source/attempt-1-response.md": {
+      "size_bytes": 4953,
+      "sha256": "7a19793d2ad0133dab0e4dcc2313eb3d36d85939d05a80c95b8fe90acdbe5904"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/natural-01/source/world.js": {
+      "size_bytes": 4934,
+      "sha256": "b5aac8b0fb2bc04655cf9356a7aa20731c4beb088da24287bd9bc30c462bcff5"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/natural-01/viewer/world-web.glb": {
+      "size_bytes": 36076,
+      "sha256": "dcd6101458c6184deb4dfeb932b217d026d3cc6fa81e3a1a39a4bcf9c9e3f6a6"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/natural-02/artifact.json": {
+      "size_bytes": 3287,
+      "sha256": "818816307b6d2d58e462ee5d324ffd2bf4a1a0c6544b06c485a5a69d7c852a00"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/natural-02/native/world.glb": {
+      "size_bytes": 39980,
+      "sha256": "5c97fbc50bfbec82e93c00b4b34713aa5fab25b66ceef0c84a21bc7994fdee75"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/natural-02/preview.png": {
+      "size_bytes": 179,
+      "sha256": "75b3c7abeecf7b8b6eb4fe792fa71a8585d9e271720ea512b7aa5820cbb91547"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/natural-02/source/attempt-1-response.md": {
+      "size_bytes": 4948,
+      "sha256": "5340e33f8d59458f01235d98f788866c4d7fa78a590664e5dbfb5df4c4d20b94"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/natural-02/source/world.js": {
+      "size_bytes": 4929,
+      "sha256": "5e417b24c96a02379c35a23b212d4fa46c183226b4f87062a7f007847a05a458"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/natural-02/viewer/world-web.glb": {
+      "size_bytes": 37580,
+      "sha256": "5c7777c729c28fdc1d21f652e6a5830dba65345992962211ec856f85a860fe60"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/natural-03/artifact.json": {
+      "size_bytes": 3287,
+      "sha256": "d4dc2eb47373a0fd3cbb25368cadb0d305fe9c7ebf6a8b85160442040bbc769c"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/natural-03/native/world.glb": {
+      "size_bytes": 41600,
+      "sha256": "c08834d3fcc5fc275b3bf2faf2fffc2aa3e46ee48ea350799d13aaee89476c22"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/natural-03/preview.png": {
+      "size_bytes": 179,
+      "sha256": "dcd9e874309a991b4e09078dbebb9cbcc95902cde630374521316bb4ffd393fd"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/natural-03/source/attempt-1-response.md": {
+      "size_bytes": 4944,
+      "sha256": "6d88a53d4019b0843c1e3631224536b274496a1dedacbe7b1920ff4f511c14a5"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/natural-03/source/world.js": {
+      "size_bytes": 4925,
+      "sha256": "7886b3959f0878efcc43aa432b5b43c7d8ce418611a2215c0306da1613d931d7"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/natural-03/viewer/world-web.glb": {
+      "size_bytes": 39076,
+      "sha256": "6947bc54c3e2eef86f5b17021690f01f4a21a44a412a122fbf27e081bc998f14"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/natural-04/artifact.json": {
+      "size_bytes": 3287,
+      "sha256": "0c5aae50bc0e710bd78e878d8a3e2bdf2afb942d388131c6311f7fa7f9820cb6"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/natural-04/native/world.glb": {
+      "size_bytes": 43224,
+      "sha256": "5edd8c885d2f8181bc96a82917816047885b7df9d3ae61cc5116dbc2b2bd70d1"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/natural-04/preview.png": {
+      "size_bytes": 179,
+      "sha256": "29d992cd786e5e06f2ce30ffb81e353d84bbff3be88d3705cd76997fc4c3338a"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/natural-04/source/attempt-1-response.md": {
+      "size_bytes": 4947,
+      "sha256": "fb80f099d11c99e2c0522a3f45b13fa71232c9d0976f07f855925c6cf61d9a11"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/natural-04/source/world.js": {
+      "size_bytes": 4928,
+      "sha256": "88ead33c16da688c2a79a0640cd8ad42fedcc788114696b3fdc436ecb2071e62"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/natural-04/viewer/world-web.glb": {
+      "size_bytes": 40580,
+      "sha256": "e89d9a80e2f92962384d3e555a72759586d2ee9b839f1449560366724ee5270e"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/natural-05/artifact.json": {
+      "size_bytes": 3286,
+      "sha256": "2544d9d147f343e031daac78786a6a9c728cfa4d40c277cee13924fd10ad5df8"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/natural-05/native/world.glb": {
+      "size_bytes": 41908,
+      "sha256": "89d01e2e4fa57f12ff8b0f76c5f3ee841106608211c0bc410a6e32e11747b068"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/natural-05/preview.png": {
+      "size_bytes": 179,
+      "sha256": "8eb322a099f402ba87a157c1ca50a58bc97e94d7d4ab3924cdbc3179c1b6fc31"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/natural-05/source/attempt-1-response.md": {
+      "size_bytes": 4960,
+      "sha256": "de82635469edb0a4145fa7142c2cd0f2df1b22da93d9754d0397aac494dc3b94"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/natural-05/source/world.js": {
+      "size_bytes": 4941,
+      "sha256": "1cd3a35b22df53cf01f4781b8924dbfdf1e85c3240ecb627a2ca729c92ec187b"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/natural-05/viewer/world-web.glb": {
+      "size_bytes": 39988,
+      "sha256": "626eb67dc64d895ab58730279102af848e5859ef28ea806281e1894bbf278b97"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/natural-06/artifact.json": {
+      "size_bytes": 3287,
+      "sha256": "33c00562e63af9a9c75b7ef32b80f75b5219335858f9ea83c0fa2c92ae5500aa"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/natural-06/native/world.glb": {
+      "size_bytes": 43516,
+      "sha256": "9a40d09329436d428f5e3fead2ed52186ed8328db00d59e3a50891864e4faf70"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/natural-06/preview.png": {
+      "size_bytes": 178,
+      "sha256": "c08e00273dc1f37d3bd1aa45861fd815c5a98371a2c866a689b96ec377ca62ab"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/natural-06/source/attempt-1-response.md": {
+      "size_bytes": 4955,
+      "sha256": "a7f112990d72cfecb28569906f42197d50d257d38b3df5c638fadf65712f061f"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/natural-06/source/world.js": {
+      "size_bytes": 4936,
+      "sha256": "11ac070709394df1793788ede4889adced1872334e47d4f27f9d828c86580231"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/natural-06/viewer/world-web.glb": {
+      "size_bytes": 41472,
+      "sha256": "5983747a7b240d21f2bbca54781805155bdac24d3b40a75c972af6a73613699b"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/natural-07/artifact.json": {
+      "size_bytes": 3287,
+      "sha256": "831b3a01789096aada996a83ca40397fcf4c3b0b03793d478964234b4cee6ecd"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/natural-07/native/world.glb": {
+      "size_bytes": 45140,
+      "sha256": "3dfb11dbe49d7525ff8ea5cc7d5fb3175aedb0844c628abed869cb9e8f2948b6"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/natural-07/preview.png": {
+      "size_bytes": 178,
+      "sha256": "8afdfc16603b48abff23a686f1328d6b4fe9d2c4a6e823c4d86e7e9138947082"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/natural-07/source/attempt-1-response.md": {
+      "size_bytes": 4946,
+      "sha256": "190c566d291ecd78484f61580e09e26187b0423086d351ea304775aa9faff0c5"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/natural-07/source/world.js": {
+      "size_bytes": 4927,
+      "sha256": "880389c6a297dbadb9873652738e366b1df3c01da0c776f8dfb0a0ea8012d398"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/natural-07/viewer/world-web.glb": {
+      "size_bytes": 42980,
+      "sha256": "1de9c64a2883363b7e6b93121384acbbcb510a060383ffa10b3aa1e4a9d1904b"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/natural-08/artifact.json": {
+      "size_bytes": 3287,
+      "sha256": "b211a9b3a2c52944a1abd4615a609e53b756cc2b78cf48b88f9bf7d0dee09477"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/natural-08/native/world.glb": {
+      "size_bytes": 46764,
+      "sha256": "9e8f0e5fc9519d89c12d0f659badf0048d1a3f9dd8059e6b32673991e72d9ab8"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/natural-08/preview.png": {
+      "size_bytes": 178,
+      "sha256": "e0c304daa820e146c0c261d61cc8289abfa500c229cc5d178c722e74be39d7e9"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/natural-08/source/attempt-1-response.md": {
+      "size_bytes": 4953,
+      "sha256": "c44b3f2e273b1ecaa0312c7862809e26dfb93c1ef50738da56c0a0aa2adcf064"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/natural-08/source/world.js": {
+      "size_bytes": 4934,
+      "sha256": "3e63e3ba2dd0fbb4e10e24c74684fe10eac5fc42d099368f051da0cad50e160c"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/natural-08/viewer/world-web.glb": {
+      "size_bytes": 44484,
+      "sha256": "073153da50049971aeb66ea504119d242979900d31cc8c756d0291df286e71ac"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/natural-09/artifact.json": {
+      "size_bytes": 3287,
+      "sha256": "196ab79c92a24d8303f08b39d5ae523e66f880d45654207afed06af3add7d4d5"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/natural-09/native/world.glb": {
+      "size_bytes": 38784,
+      "sha256": "e397c333997b9d243884535be0fdf7943556fa08ba97ec75875bd78b0bb295c8"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/natural-09/preview.png": {
+      "size_bytes": 178,
+      "sha256": "37db816fc438559d935ac05559254a951fa10ad31c644aad6cacef554a16066d"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/natural-09/source/attempt-1-response.md": {
+      "size_bytes": 4960,
+      "sha256": "5fb9ff03c676afd61cb61ae725ced3c175252d757c3c801960213ae54664a1a6"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/natural-09/source/world.js": {
+      "size_bytes": 4941,
+      "sha256": "25ed606a3297d30061a8d08a6c58b875f80feed848222e916ed03e85128c31ae"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/natural-09/viewer/world-web.glb": {
+      "size_bytes": 36380,
+      "sha256": "9bce431af6e826a8afadc4f272da4b7ed36a7883eaae28c77daef1f14bab35e6"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/natural-10/artifact.json": {
+      "size_bytes": 3287,
+      "sha256": "7378633e83fd08495bf6614caa580f13dc09ea1ce1e02df6c0e7133f0003c817"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/natural-10/native/world.glb": {
+      "size_bytes": 40404,
+      "sha256": "c1ff6dbfedd21850dc2ef0a35027cf267e3343342d7f35b8d80df0350487ff0c"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/natural-10/preview.png": {
+      "size_bytes": 177,
+      "sha256": "361c687d2ec07406077c74bbf1dddfe2b41d202d97db4c70546afa94a13444a3"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/natural-10/source/attempt-1-response.md": {
+      "size_bytes": 4959,
+      "sha256": "31505a362e448b7b7628f352ae5f811fd1a95edd654e843ef4b2ea8f6786e3f1"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/natural-10/source/world.js": {
+      "size_bytes": 4940,
+      "sha256": "fd6c0780d0a74f43ad54877fc81733e7e992178e049c2e7f0e09dc588618ea34"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/natural-10/viewer/world-web.glb": {
+      "size_bytes": 37884,
+      "sha256": "0c396769789921f32f9e0b797c8c000d017b0a1cdc6ff9edc83069fb359ed54b"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/natural-11/artifact.json": {
+      "size_bytes": 3287,
+      "sha256": "2b246ab98f94035fcfbad6019a070e9ba7922b19402e3c69f6ffb3e99c9d394f"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/natural-11/native/world.glb": {
+      "size_bytes": 42032,
+      "sha256": "2bda58af600aa75b4cafc1bfdc68d69b6ac7bf367d107607829abe69e7b74d4e"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/natural-11/preview.png": {
+      "size_bytes": 178,
+      "sha256": "114d3eddbb9d5eb3d799f287f8f63cadfe8870e59422f1bd2f4aa3e06fbfd79b"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/natural-11/source/attempt-1-response.md": {
+      "size_bytes": 4974,
+      "sha256": "8a369c3728765f1835f4e87e10461d8eb5e24c93def6973532d39846feb62b0f"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/natural-11/source/world.js": {
+      "size_bytes": 4955,
+      "sha256": "91cc689ffa5dad707da87ab49dedb29b1ace4c0436f12d2a5fcc9a8f0826c632"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/natural-11/viewer/world-web.glb": {
+      "size_bytes": 39392,
+      "sha256": "34fc1d6e9ae9cad369a86c3d87029223527310ec963015ccc1fb1a6ed587d30d"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/natural-12/artifact.json": {
+      "size_bytes": 3286,
+      "sha256": "6571db3d7c075c6bc83906a0a220bd0aa3890a03c851673a637ddf9c7e20fdff"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/natural-12/native/world.glb": {
+      "size_bytes": 40704,
+      "sha256": "f825d5afcc9889f55694a0c6146dd2be41c7263b7749e0afe100b907826a030d"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/natural-12/preview.png": {
+      "size_bytes": 178,
+      "sha256": "a495f5a2240a86b9e59c980fa6585c463df8d88f35f81cc9832065d65e00153f"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/natural-12/source/attempt-1-response.md": {
+      "size_bytes": 4948,
+      "sha256": "96936a926297633e031c41a3f04e0f3d99cb9a95e0b4e61ff4dc79c0fb0857b1"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/natural-12/source/world.js": {
+      "size_bytes": 4929,
+      "sha256": "01279b4b088dd4c8c5e898c382e9ba526af6395d2bd44c6a72542798342b85c6"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/natural-12/viewer/world-web.glb": {
+      "size_bytes": 38780,
+      "sha256": "42342fa229a7c32898035b3fe423e2779838559346b18f62f602610a9add6779"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/stylized-01/artifact.json": {
+      "size_bytes": 3295,
+      "sha256": "e99f9b27364441a9c147aa17f6358145fdf4a0ebadfce39c88127de25f885d6a"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/stylized-01/native/world.glb": {
+      "size_bytes": 42332,
+      "sha256": "6843cb93a76cca274a7247a73a52202ce4e5a2b5a005c970051c34a039bfe530"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/stylized-01/preview.png": {
+      "size_bytes": 178,
+      "sha256": "aa1dae147a8553d0ed22ba7a2e953deac93a962241a0eb5f3e7ee1fc3ed04bcb"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/stylized-01/source/attempt-1-response.md": {
+      "size_bytes": 4971,
+      "sha256": "26daf6a0c463bc5b75f2a3b96405f2bddcb5d46314ca9bbe0cf9a3383f458e6b"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/stylized-01/source/world.js": {
+      "size_bytes": 4952,
+      "sha256": "d9ff71651ecf2d5197521e38753ba727d1dd5da4bef5d55521802f6adc9269d7"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/stylized-01/viewer/world-web.glb": {
+      "size_bytes": 40292,
+      "sha256": "baaefbc2f83e347cd36924fcd3ea9a291c97abc26c43c8163ed16d5e2b8f8bb6"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/stylized-02/artifact.json": {
+      "size_bytes": 3295,
+      "sha256": "a845f5c4dfec88cbaded475826ce7d34b864d53650cd300fc259a7251361cd9f"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/stylized-02/native/world.glb": {
+      "size_bytes": 43940,
+      "sha256": "6fcebcfff340100ca9c03e2f9554a3e590245bf209fbc39b8f639b4b6789276e"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/stylized-02/preview.png": {
+      "size_bytes": 179,
+      "sha256": "9cec175c9936abde59dcccfe50ae874cc080cfb4ce0d9dd7047f69d9b92f1b67"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/stylized-02/source/attempt-1-response.md": {
+      "size_bytes": 4959,
+      "sha256": "e6c678809857f44420f932cb7f3b943742d4b34f73d124f5bb26068a6d8327f3"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/stylized-02/source/world.js": {
+      "size_bytes": 4940,
+      "sha256": "95b72afd06351593a9e1a2d727eca68fa473147b525d439ab57806306d409d84"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/stylized-02/viewer/world-web.glb": {
+      "size_bytes": 41780,
+      "sha256": "6684426c864206916432739716de10c33e6dd84fb518cc12171b805ebd705de4"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/stylized-03/artifact.json": {
+      "size_bytes": 3295,
+      "sha256": "8cc881ec664faad1c4495af4df5659f0fb42c3dac16912c16c370af928deb9c1"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/stylized-03/native/world.glb": {
+      "size_bytes": 45576,
+      "sha256": "a2f575f725e83edbabf96a0dc1b9945144eea3ead42691c96ea74985bcbc13ff"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/stylized-03/preview.png": {
+      "size_bytes": 178,
+      "sha256": "cf19ce29875857ecec221be6ef4f3207b63ed9056c39bce2ff6fca54d0dce62f"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/stylized-03/source/attempt-1-response.md": {
+      "size_bytes": 4980,
+      "sha256": "5a28fe6942ad0ec160b55d23f949ed5ae83e8483604cbf4835b46c318c2b5b1b"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/stylized-03/source/world.js": {
+      "size_bytes": 4961,
+      "sha256": "a18e0c686a4c312f9f5c9decebea73798c756a6037d907fa6b71b9644367ffad"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/stylized-03/viewer/world-web.glb": {
+      "size_bytes": 43296,
+      "sha256": "1f7283782fb2605523d6c02cf8076192b3dea383cdd92fc883c81fc43f1fdaa0"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/stylized-04/artifact.json": {
+      "size_bytes": 3295,
+      "sha256": "fba78f495ed4069b05085feb8a6c8807b85255e10cb9bd892fee9418831852e1"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/stylized-04/native/world.glb": {
+      "size_bytes": 47196,
+      "sha256": "3e17fa89a8dc93999ef7b1408f569a5c893a072eff749affb6c094aaac15a9ee"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/stylized-04/preview.png": {
+      "size_bytes": 179,
+      "sha256": "1bf2bfa2fc7e96496beafdced0be7f97130be874420a51de8f233e004e48bc2e"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/stylized-04/source/attempt-1-response.md": {
+      "size_bytes": 4970,
+      "sha256": "4daff64fcac282f4aae4591478dc0069cb50a90ecebe1f6883615b501fee5e9b"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/stylized-04/source/world.js": {
+      "size_bytes": 4951,
+      "sha256": "95da2949dddc6650c808b48bc34b7ae325787f6daf425bf56e919eaccab9d3c5"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/stylized-04/viewer/world-web.glb": {
+      "size_bytes": 44796,
+      "sha256": "b1ba2a07e0ec5c20b995f5b8026560b000e63b9b5f2c64916036628128b82fc1"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/stylized-05/artifact.json": {
+      "size_bytes": 3295,
+      "sha256": "4c53860871993ed64e0f5decf4b1bb30e7c75c012f9d91dacd6a6f18985a6334"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/stylized-05/native/world.glb": {
+      "size_bytes": 39208,
+      "sha256": "dfd45190779235ca70373f55fd37fcacf1e80caa145808e78e0cf5ac3e6b8383"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/stylized-05/preview.png": {
+      "size_bytes": 179,
+      "sha256": "dbe2ff3223c93f2a4b0dea8363dfa4d1e33413a1016d0d673ba12afff143265f"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/stylized-05/source/attempt-1-response.md": {
+      "size_bytes": 4975,
+      "sha256": "feb8c3cf1c717fa3c95a5e3487f450675101aeb79b31a9c61859211e3dd5848c"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/stylized-05/source/world.js": {
+      "size_bytes": 4956,
+      "sha256": "b712a3a7b67ee5596f529f54c3cd2b919c7a10970cff728e29a5c3ca0eb15a24"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/stylized-05/viewer/world-web.glb": {
+      "size_bytes": 36688,
+      "sha256": "e3ace1b273b24569d3c62f1d528bb01bbce6c60bd618ee420d3971abb4af2dc2"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/stylized-06/artifact.json": {
+      "size_bytes": 3295,
+      "sha256": "0942212e9b502ab38db3891b0e2bdebdab37afe51b4f7db0ec7e6cb4d3662fbb"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/stylized-06/native/world.glb": {
+      "size_bytes": 40832,
+      "sha256": "82f856b4476486d9f883f76129286b5a79e9878d5b6359794d5a9a2bfb2409ec"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/stylized-06/preview.png": {
+      "size_bytes": 179,
+      "sha256": "67b5af0e9033c662801335730715dffca19a39763bd6e636cd73750252a03251"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/stylized-06/source/attempt-1-response.md": {
+      "size_bytes": 4973,
+      "sha256": "ad45a51d2c19bb2857b0a3eb36d29db107c01c24b437ddf5bd8ff6c66e4d00eb"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/stylized-06/source/world.js": {
+      "size_bytes": 4954,
+      "sha256": "6647143ede76d2170acb6b9b8ba797d85fd221f080f92bb6271e851c782d1caa"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/stylized-06/viewer/world-web.glb": {
+      "size_bytes": 38192,
+      "sha256": "47bd6f777bcccd7975a381b5efb0266addfa0b1f0d245fa8a594cb1883b11068"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/stylized-07/artifact.json": {
+      "size_bytes": 3294,
+      "sha256": "a99709bdad9be933badfd62976742f7544724275c3d9b133024c680d4bb74258"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/stylized-07/native/world.glb": {
+      "size_bytes": 39508,
+      "sha256": "d1aa7666c7d2640594e97e9ff972edfd0454e0e1d6229387afade6d421758c59"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/stylized-07/preview.png": {
+      "size_bytes": 179,
+      "sha256": "44c969e3432b9f55e45e81c42301ccc23a4a4748ef86cc6145eeaf1f1c5a718a"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/stylized-07/source/attempt-1-response.md": {
+      "size_bytes": 4971,
+      "sha256": "a59c95c850dcb4e0bfeafa69b23df96a956484d3110c395b8a7b6ab9b2354151"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/stylized-07/source/world.js": {
+      "size_bytes": 4952,
+      "sha256": "1d24aadf4217f55144f7c88294921e23e0bb6144503e7ac03d12f3a700e407a7"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/stylized-07/viewer/world-web.glb": {
+      "size_bytes": 37588,
+      "sha256": "1e47fa432425a9a2c8bf6cff90bfbe3e3149eabe0f7dd217b5a5b66014927812"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/stylized-08/artifact.json": {
+      "size_bytes": 3295,
+      "sha256": "ade81ad9629134cdad173ff0a9cb6a51b76c80308b836238f8b36a03364ae96f"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/stylized-08/native/world.glb": {
+      "size_bytes": 41136,
+      "sha256": "597101864b2512195f893cd46a0d6344216518deb83af6e86394dfc849fb59f5"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/stylized-08/preview.png": {
+      "size_bytes": 179,
+      "sha256": "9ce36555b2c9bbb46278075f3bf2c3f3817179678da664b9a2d639a3285e2d46"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/stylized-08/source/attempt-1-response.md": {
+      "size_bytes": 4977,
+      "sha256": "f5230acf3ab77bc7641328ae6a7850ccbb5f1189d81e2a4d99b4274f7f2806eb"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/stylized-08/source/world.js": {
+      "size_bytes": 4958,
+      "sha256": "ac9e0ead995b60e3efd1843fbd24c43a1f44ecc46c5cc724782d0ba2135b5432"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/stylized-08/viewer/world-web.glb": {
+      "size_bytes": 39096,
+      "sha256": "4d96a032342b39c9229cfefb6e173c6c54fb84c881a17ec9daea6a9f6459257f"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/stylized-09/artifact.json": {
+      "size_bytes": 3295,
+      "sha256": "5febe2634734bca59113ecfe3878f60994b90cb027e6bd4cd806eef0e6e22d92"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/stylized-09/native/world.glb": {
+      "size_bytes": 42752,
+      "sha256": "cd81e97744baa2887c3ac9b6f0bb96002527d8985103258bf3240a3799afee07"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/stylized-09/preview.png": {
+      "size_bytes": 180,
+      "sha256": "18805286ef011733a5feff663e916073d82a17c941b87dd58b0ac8d3e907ca53"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/stylized-09/source/attempt-1-response.md": {
+      "size_bytes": 4965,
+      "sha256": "852233f52fef155063480757b871eb38ec2b5d3d94db1ec58709d5de47bb0193"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/stylized-09/source/world.js": {
+      "size_bytes": 4946,
+      "sha256": "04b3787d229a0d62e766ccc2d741874e0abd205aa9b3509f041f224791386b28"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/stylized-09/viewer/world-web.glb": {
+      "size_bytes": 40588,
+      "sha256": "0d138da3ae4feff8b7496960f1035f9f340a55702c3e058453a2d29b3db58794"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/stylized-10/artifact.json": {
+      "size_bytes": 3295,
+      "sha256": "fd22e27feeed412b2886734efd819d4dc38dbfcb476e4406ba35deaa1e8e0b0d"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/stylized-10/native/world.glb": {
+      "size_bytes": 44368,
+      "sha256": "2cd1674f7c49040ae62f317f381385cb991b586c7ca625091fbc6f72e9af99ea"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/stylized-10/preview.png": {
+      "size_bytes": 180,
+      "sha256": "ce89f4c5759a9dde70504e0780b328168a4444d1281cd6575dbe54f98af92685"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/stylized-10/source/attempt-1-response.md": {
+      "size_bytes": 4980,
+      "sha256": "e8a97f97a6e399be3c3e444f4e73d1e116d37c63b33a4922abc0d5f4113af992"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/stylized-10/source/world.js": {
+      "size_bytes": 4961,
+      "sha256": "66fe11837a476d6cadebb1ddddc39cf7d9f169b458f84090e60d655d589af2da"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/stylized-10/viewer/world-web.glb": {
+      "size_bytes": 42084,
+      "sha256": "5d276909e515f8c0f8cd23b2395a529865ccf2b3921c517019a2a1db608e0a88"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/stylized-11/artifact.json": {
+      "size_bytes": 3295,
+      "sha256": "077b82f3da241545cdc04daa98d08c7fe0dd0dd26c779c9d683c12562b021a42"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/stylized-11/native/world.glb": {
+      "size_bytes": 45996,
+      "sha256": "a48875b7f9d5d6702526897fe4238f477716663afb396cea365d1ecfe9442985"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/stylized-11/preview.png": {
+      "size_bytes": 180,
+      "sha256": "12678098fd3832c71cc85fe14419cf561faee1463b64af425556527e5f917efd"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/stylized-11/source/attempt-1-response.md": {
+      "size_bytes": 4973,
+      "sha256": "574adcf8c44a52dfd82cb12201f82b1fcd33dd02750b1daf1cf9b88681587e6b"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/stylized-11/source/world.js": {
+      "size_bytes": 4954,
+      "sha256": "eae674c0e5ba764a635a7b2664acdb36d3a210eb597b94853f5cded202dca459"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/stylized-11/viewer/world-web.glb": {
+      "size_bytes": 43592,
+      "sha256": "835fbe894e655ded1a962740af24544444ab4f37b26b57551a1509ef28b74cb9"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/stylized-12/artifact.json": {
+      "size_bytes": 3295,
+      "sha256": "5b924630d2319b0bb73d6920c9cc8d6df6848e410d77d526dd8f0dec6f270434"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/stylized-12/native/world.glb": {
+      "size_bytes": 47620,
+      "sha256": "b71fa4d6ef03389e5e6d96cf4745a006f0fbf3baf759bdce24321667f0e50ab5"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/stylized-12/preview.png": {
+      "size_bytes": 179,
+      "sha256": "b66ce990ecede3c0b1cc66e080fbcd4763b67709feadc5b9509e89ebbb98233c"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/stylized-12/source/attempt-1-response.md": {
+      "size_bytes": 4988,
+      "sha256": "ab8be0702586a9955547bc6287112c9eec5a95c76388005cd1f0c84d74d8f673"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/stylized-12/source/world.js": {
+      "size_bytes": 4969,
+      "sha256": "f73144433a7d662fe8196d2d885aee3e499a35ae6c83959e51430344e91ffa7b"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/stylized-12/viewer/world-web.glb": {
+      "size_bytes": 45096,
+      "sha256": "fa94b73aa830d38f79fe39c9e30dff75a751856acf60e750f1ef4045bc5e20f9"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/system.json": {
+      "size_bytes": 2504,
+      "sha256": "cd173eab757fea14fb21b3bab5124ba3f72ee0971590769ee546483b156a43c0"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/vehicle-01/artifact.json": {
+      "size_bytes": 3207,
+      "sha256": "fd9464d7fdeb1e8c413573fe70de9a779dd91a32243a5a28c15b2a03b0cac434"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/vehicle-01/native/world.glb": {
+      "size_bytes": 43940,
+      "sha256": "663bbef6dd7255b08b4e3b9bc54c9e7aef46f768f5ef37ee893463f1c4000ada"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/vehicle-01/preview.png": {
+      "size_bytes": 179,
+      "sha256": "7a52fb0d5448b290249008870c21565a022ec531cfa10f50966bc24739145d5c"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/vehicle-01/source/attempt-1-response.md": {
+      "size_bytes": 5047,
+      "sha256": "15f1e41642af0ec5f7538b4ae64d0106af406fe28fa2f296b0d15fa31373bf4a"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/vehicle-01/source/world.js": {
+      "size_bytes": 5028,
+      "sha256": "273b4a957f3dbeb13831b94da995adfdf669106574c08d39c9026c4493a5de5e"
+    },
+    "llm_3d_worlds_arena/outputs/vivy-v69-cautreo-qwen32b--threejs-glb/vehicle-01/viewer/world-web.glb": {
+      "size_bytes": 41656,
+      "sha256": "b901ab3e330914ca435904eaf01b4a1df7cfc7d55f12eca2f324039805d6486f"
+    },
+    "llm_3d_worlds_arena/README.md": {
+      "size_bytes": 1580,
+      "sha256": "6df43bff8bcae778b8048a3f831c5671487d4744c11f4e67622856d6866b3139"
+    },
+    "llm_3d_worlds_arena/vivy_r063_llm_3d_worlds_arena_receipt.json": {
+      "size_bytes": 11884,
+      "sha256": "aa34e138e54a74c381562828a152171842204097edeb61c7a10fb904b03c46dc"
     },
     "papers/media_gallery/cover_image_vivy_arc2026.png": {
       "size_bytes": 99123,
@@ -306,16 +1558,20 @@
       "sha256": "11360fd6222848d94824eb972a430fc00ed509a2910554ffc4578bd1d4a02b58"
     },
     "README.md": {
-      "size_bytes": 20852,
-      "sha256": "0cf65e2edbbedb002e6e2f4517112a5a71571081668417b879c28caf0ec1e861"
+      "size_bytes": 23428,
+      "sha256": "0c33607311455d5abfde4d6816ca02a2c085ae99dcfba3fc6053c765fd338e6b"
     },
     "Vivy-R-Finance-3B-GGUF/.gitattributes": {
       "size_bytes": 138,
       "sha256": "4a98216883e97297b452dae0039bb148b4c803148b39b13277bc2103aca9ce96"
     },
+    "Vivy-R-Finance-3B-GGUF/blog/VIVY_V68_KAGGLE_TOP1_HUGGINGFACE_BLOG.md": {
+      "size_bytes": 16578,
+      "sha256": "d174967a60575a9e8ece746ca68d19bb20802ea1c43e1be61564f078b01baac8"
+    },
     "Vivy-R-Finance-3B-GGUF/config.json": {
-      "size_bytes": 2542,
-      "sha256": "ec0ec5e2f2a8efdd057398bfa466caa449d034b33a01f49d8bb70aba01105aec"
+      "size_bytes": 2938,
+      "sha256": "179b92abb2c42c22a7b5a57e30abd8c01c8e90d918f7f0b02b11d95e5ef4a058"
     },
     "Vivy-R-Finance-3B-GGUF/docs/INHERITANCE_AND_R_SERIES_ARCHITECTURE.md": {
       "size_bytes": 7014,
@@ -358,16 +1614,16 @@
       "sha256": "bd3af549831c098994ae7fe1763309184b00277cc3a8f35ce331a682634e4b70"
     },
     "Vivy-R-Finance-3B-GGUF/finance_r3b_release_manifest.json": {
-      "size_bytes": 15950,
-      "sha256": "a7ba898efca498fb582a0cb17563a29aacb9c32f57ea3c664502e167b7dc239b"
+      "size_bytes": 17076,
+      "sha256": "becce8c08d5593d841aa2957167f3f98161937004965ce5cdc6b187b15d60dce"
     },
     "Vivy-R-Finance-3B-GGUF/model.safetensors": {
       "size_bytes": 1049464,
       "sha256": "b14c422b327244d73c674b7430d2218c35514e9de9ceba977dbe0730eb940090"
     },
     "Vivy-R-Finance-3B-GGUF/Modelfile": {
-      "size_bytes": 2686,
-      "sha256": "3a98675cb15e6024aadbcd1a87e4aea6a015b6488c23b7f5e84249cb1a23c144"
+      "size_bytes": 1309,
+      "sha256": "8fd11e68d31237d3baef534b78ffbbc9201caa8c6afa0b30f81452766d8533ce"
     },
     "Vivy-R-Finance-3B-GGUF/Modelfile.v6.7": {
       "size_bytes": 2771,
@@ -376,6 +1632,10 @@
     "Vivy-R-Finance-3B-GGUF/Modelfile.v6.8": {
       "size_bytes": 1455,
       "sha256": "7e525d20672101d6879e93d24a2312d4c535b1c2a3c4d43536f00de5de2efb89"
+    },
+    "Vivy-R-Finance-3B-GGUF/Modelfile.v6.9": {
+      "size_bytes": 1309,
+      "sha256": "8fd11e68d31237d3baef534b78ffbbc9201caa8c6afa0b30f81452766d8533ce"
     },
     "Vivy-R-Finance-3B-GGUF/papers/media_gallery/cover_image_vivy_arc2026.png": {
       "size_bytes": 99123,
@@ -442,8 +1702,8 @@
       "sha256": "1cf0b60c2b9cde9816c96fcd50a4f7784e14f71ed6fd130c22da515f4725c233"
     },
     "Vivy-R-Finance-3B-GGUF/README.md": {
-      "size_bytes": 21799,
-      "sha256": "eebf4acac438bf9a9a135565d5606416119983901aa6f264fb8927d1e7bfb7e4"
+      "size_bytes": 30030,
+      "sha256": "4c677dccbec5dff5a87d8a9387e4f62d75ad0595ac68e61dafcd96b26412b389"
     },
     "Vivy-R-Finance-3B-GGUF/tokenizer.json": {
       "size_bytes": 264,
@@ -529,6 +1789,18 @@
       "size_bytes": 19360,
       "sha256": "e503e69eef16998e3ea7ba879db391a85b0dda8df05a972a72e915547d5cba53"
     },
+    "Vivy-R-Finance-3B-GGUF/vivy_r060_unseen_name_that_llm_instinct.safetensors": {
+      "size_bytes": 10128,
+      "sha256": "2356c488e6f4f314d28289efed772547af7160d1bafd8c1d84bd9cb8c777ef81"
+    },
+    "Vivy-R-Finance-3B-GGUF/vivy_r061_invasive_10x_cross_weight_instinct.safetensors": {
+      "size_bytes": 27056,
+      "sha256": "c412b4fee1ce164d48d7591c1de9fe7b25474b7f0534e8ff21b5af6b29fd26f4"
+    },
+    "Vivy-R-Finance-3B-GGUF/vivy_r063_3d_world_arena_instinct.safetensors": {
+      "size_bytes": 24008,
+      "sha256": "7c972edcb81848463aa1fcb2ad66978f6df2d5b200859430632988cc3867aa3d"
+    },
     "Vivy-R-Finance-3B-GGUF/vivy_r_finance_3b_dream_distilled_3b_5b.safetensors": {
       "size_bytes": 27176,
       "sha256": "cb9dfc9927a54038a1472712740d669d6048ff37520516a02cbfedd519f8319b"
@@ -545,13 +1817,21 @@
       "size_bytes": 1057952,
       "sha256": "6968dbb1d29089ef64bb5235cab383f9d99976b30dc72fbced6b89b7e7731caa"
     },
+    "Vivy-R-Finance-3B-GGUF/vivy_r_finance_3b_v69_zero_bridge.safetensors": {
+      "size_bytes": 1063992,
+      "sha256": "1bcbaf22e19c2bd1a117a89926f9526daebaf849986583e8083fcf2ba7953053"
+    },
     "Vivy-R-Robotics-3B-GGUF/.gitattributes": {
       "size_bytes": 138,
       "sha256": "4a98216883e97297b452dae0039bb148b4c803148b39b13277bc2103aca9ce96"
     },
+    "Vivy-R-Robotics-3B-GGUF/blog/VIVY_V68_KAGGLE_TOP1_HUGGINGFACE_BLOG.md": {
+      "size_bytes": 16578,
+      "sha256": "d174967a60575a9e8ece746ca68d19bb20802ea1c43e1be61564f078b01baac8"
+    },
     "Vivy-R-Robotics-3B-GGUF/config.json": {
-      "size_bytes": 2547,
-      "sha256": "8885c4ed663e613864abe9117926cd2823844d53b8b531974eba78027dba6007"
+      "size_bytes": 2944,
+      "sha256": "b30ecf8fe3f198c1233220ad0f18d0556d3c073eece401510558205c8cd8997b"
     },
     "Vivy-R-Robotics-3B-GGUF/docs/INHERITANCE_AND_R_SERIES_ARCHITECTURE.md": {
       "size_bytes": 7014,
@@ -598,8 +1878,8 @@
       "sha256": "c066c43b79020a9caa768a51a6dde5b5ad74c69e7a21d5e750381f0b029333fe"
     },
     "Vivy-R-Robotics-3B-GGUF/Modelfile": {
-      "size_bytes": 2555,
-      "sha256": "9c24d994d3896877868ca5b1cfc35522c10c166b7c6beed92d3485bf43aa913e"
+      "size_bytes": 1297,
+      "sha256": "0c49b9da94745c7b1d7c92095198850b3b204fe506744be697cbf3286e030d71"
     },
     "Vivy-R-Robotics-3B-GGUF/Modelfile.v6.7": {
       "size_bytes": 2653,
@@ -608,6 +1888,10 @@
     "Vivy-R-Robotics-3B-GGUF/Modelfile.v6.8": {
       "size_bytes": 1464,
       "sha256": "8c4af9bf14e9ebe32cf8a554ecb110e5abdb0e8997c1cb096999d1b3dcb7b4ba"
+    },
+    "Vivy-R-Robotics-3B-GGUF/Modelfile.v6.9": {
+      "size_bytes": 1297,
+      "sha256": "0c49b9da94745c7b1d7c92095198850b3b204fe506744be697cbf3286e030d71"
     },
     "Vivy-R-Robotics-3B-GGUF/papers/media_gallery/cover_image_vivy_arc2026.png": {
       "size_bytes": 99123,
@@ -674,12 +1958,12 @@
       "sha256": "1cf0b60c2b9cde9816c96fcd50a4f7784e14f71ed6fd130c22da515f4725c233"
     },
     "Vivy-R-Robotics-3B-GGUF/README.md": {
-      "size_bytes": 21772,
-      "sha256": "b1c51f92651dcb9be3a9145bfb92ce5e4c3b4166749ffc5e27863d0ce288f781"
+      "size_bytes": 30007,
+      "sha256": "eb153d9c3e2827ec9f70c2da2b432cd9b8567020b3dfa5eef30186ce37dcdf42"
     },
     "Vivy-R-Robotics-3B-GGUF/robotics_r3b_release_manifest.json": {
-      "size_bytes": 15992,
-      "sha256": "0333c2468392bfdfc720a8dcb08dcb54666e301a99fafe96481c10bc470a5ae9"
+      "size_bytes": 17120,
+      "sha256": "49c7d9abe784b0f1200cb5102767ddf5320db480f55d173363c09825a9d509f3"
     },
     "Vivy-R-Robotics-3B-GGUF/tokenizer.json": {
       "size_bytes": 266,
@@ -761,6 +2045,18 @@
       "size_bytes": 19360,
       "sha256": "e503e69eef16998e3ea7ba879db391a85b0dda8df05a972a72e915547d5cba53"
     },
+    "Vivy-R-Robotics-3B-GGUF/vivy_r060_unseen_name_that_llm_instinct.safetensors": {
+      "size_bytes": 10128,
+      "sha256": "2356c488e6f4f314d28289efed772547af7160d1bafd8c1d84bd9cb8c777ef81"
+    },
+    "Vivy-R-Robotics-3B-GGUF/vivy_r061_invasive_10x_cross_weight_instinct.safetensors": {
+      "size_bytes": 27056,
+      "sha256": "c412b4fee1ce164d48d7591c1de9fe7b25474b7f0534e8ff21b5af6b29fd26f4"
+    },
+    "Vivy-R-Robotics-3B-GGUF/vivy_r063_3d_world_arena_instinct.safetensors": {
+      "size_bytes": 24008,
+      "sha256": "7c972edcb81848463aa1fcb2ad66978f6df2d5b200859430632988cc3867aa3d"
+    },
     "Vivy-R-Robotics-3B-GGUF/vivy_r_robotics_3b_dream_distilled_3b_5b.safetensors": {
       "size_bytes": 28520,
       "sha256": "434bf38b20d631556aef022a28b8814e011b83e3ef26e1c83a7c344838df0d2f"
@@ -777,13 +2073,21 @@
       "size_bytes": 1059260,
       "sha256": "099e64ab590248cac91d5bb1da11c6f81cf722d1bb6557b7f6fa686de97d9eee"
     },
+    "Vivy-R-Robotics-3B-GGUF/vivy_r_robotics_3b_v69_zero_bridge.safetensors": {
+      "size_bytes": 1065308,
+      "sha256": "ad95e495f631d4cf29d9be80cd37d06e9ff2d06a97701a7f81ebdd2f1b2671b6"
+    },
     "Vivy-R-Vision-3B-GGUF/.gitattributes": {
       "size_bytes": 138,
       "sha256": "4a98216883e97297b452dae0039bb148b4c803148b39b13277bc2103aca9ce96"
     },
+    "Vivy-R-Vision-3B-GGUF/blog/VIVY_V68_KAGGLE_TOP1_HUGGINGFACE_BLOG.md": {
+      "size_bytes": 16578,
+      "sha256": "d174967a60575a9e8ece746ca68d19bb20802ea1c43e1be61564f078b01baac8"
+    },
     "Vivy-R-Vision-3B-GGUF/config.json": {
-      "size_bytes": 2535,
-      "sha256": "3d446979006d59b73f4ff532b38dabf6ec0e703aa927ede82ac53737fd8c6f7e"
+      "size_bytes": 2930,
+      "sha256": "08546d2e05a906fc63c88f7d775b0288e45c54e3594b447d5206687f667a98c8"
     },
     "Vivy-R-Vision-3B-GGUF/docs/INHERITANCE_AND_R_SERIES_ARCHITECTURE.md": {
       "size_bytes": 7014,
@@ -846,8 +2150,8 @@
       "sha256": "081a5ca741a4b5a1c8ee3425b8b9f5d654ad3ee35e923d7b7dd41e66d8a8d65a"
     },
     "Vivy-R-Vision-3B-GGUF/Modelfile": {
-      "size_bytes": 2554,
-      "sha256": "2380587f63a98f0aaa499cabebe5c0f7d472d9854addd3ba3cc17cd38890a4ab"
+      "size_bytes": 1290,
+      "sha256": "f5b38ebe7152010169edc6b11d1edf2c6de7f89e49d81fbe32375a9ba2e08c26"
     },
     "Vivy-R-Vision-3B-GGUF/Modelfile.v6.7": {
       "size_bytes": 2677,
@@ -856,6 +2160,10 @@
     "Vivy-R-Vision-3B-GGUF/Modelfile.v6.8": {
       "size_bytes": 1457,
       "sha256": "91c2ce9ac3d0ff6e7e6f9718767ddbbd45be8c094bd9262d6f5a4bc9187974fb"
+    },
+    "Vivy-R-Vision-3B-GGUF/Modelfile.v6.9": {
+      "size_bytes": 1290,
+      "sha256": "f5b38ebe7152010169edc6b11d1edf2c6de7f89e49d81fbe32375a9ba2e08c26"
     },
     "Vivy-R-Vision-3B-GGUF/papers/media_gallery/cover_image_vivy_arc2026.png": {
       "size_bytes": 99123,
@@ -922,16 +2230,16 @@
       "sha256": "1cf0b60c2b9cde9816c96fcd50a4f7784e14f71ed6fd130c22da515f4725c233"
     },
     "Vivy-R-Vision-3B-GGUF/README.md": {
-      "size_bytes": 37214,
-      "sha256": "7b22e84519660ef3b93cf7d1f00610044a449bb96e699b993bd89235799e482e"
+      "size_bytes": 45450,
+      "sha256": "01263bad54c657e2c1391acf3a69184b2b16b7b127cc622717fbf7a857f03e60"
     },
     "Vivy-R-Vision-3B-GGUF/tokenizer.json": {
       "size_bytes": 262,
       "sha256": "18bc152c2c0e4131e60db4532b73351fb577aa5be890853d7982862e6f1f6b59"
     },
     "Vivy-R-Vision-3B-GGUF/vision_r3b_release_manifest.json": {
-      "size_bytes": 16968,
-      "sha256": "1b0502c851b0a1e0e863ab9aec9a3368206c9935d8a3496f30bcd5d09cf70471"
+      "size_bytes": 18092,
+      "sha256": "b93b2cb8e1c3efd4e926558c364f134520da7f6fc87da841cef228c0c1e7ae93"
     },
     "Vivy-R-Vision-3B-GGUF/vivy_autopoietic_harness_instinct.safetensors": {
       "size_bytes": 10664,
@@ -1009,6 +2317,18 @@
       "size_bytes": 19360,
       "sha256": "e503e69eef16998e3ea7ba879db391a85b0dda8df05a972a72e915547d5cba53"
     },
+    "Vivy-R-Vision-3B-GGUF/vivy_r060_unseen_name_that_llm_instinct.safetensors": {
+      "size_bytes": 10128,
+      "sha256": "2356c488e6f4f314d28289efed772547af7160d1bafd8c1d84bd9cb8c777ef81"
+    },
+    "Vivy-R-Vision-3B-GGUF/vivy_r061_invasive_10x_cross_weight_instinct.safetensors": {
+      "size_bytes": 27056,
+      "sha256": "c412b4fee1ce164d48d7591c1de9fe7b25474b7f0534e8ff21b5af6b29fd26f4"
+    },
+    "Vivy-R-Vision-3B-GGUF/vivy_r063_3d_world_arena_instinct.safetensors": {
+      "size_bytes": 24008,
+      "sha256": "7c972edcb81848463aa1fcb2ad66978f6df2d5b200859430632988cc3867aa3d"
+    },
     "Vivy-R-Vision-3B-GGUF/vivy_r_vision_3b_dream_distilled_3b_5b.safetensors": {
       "size_bytes": 27584,
       "sha256": "58cdaf37ee474c2176949b240c4a57e9c997da25bc63fd6399a87ba1dfd9e21a"
@@ -1024,6 +2344,10 @@
     "Vivy-R-Vision-3B-GGUF/vivy_r_vision_3b_v68_dream_distilled.safetensors": {
       "size_bytes": 1095640,
       "sha256": "e9cd71da235c345da2ce763b2dc43b2f35fa87e019b96edaff601a4c570b6d7e"
+    },
+    "Vivy-R-Vision-3B-GGUF/vivy_r_vision_3b_v69_zero_bridge.safetensors": {
+      "size_bytes": 1101696,
+      "sha256": "64a51840d4bdce7ee99b42a4097803b4795b63d7348f185d0f8d077cc4b1b57c"
     },
     "Vivy-R-Vision-3B-GGUF/vivy_vision_control_lora.safetensors": {
       "size_bytes": 42844,

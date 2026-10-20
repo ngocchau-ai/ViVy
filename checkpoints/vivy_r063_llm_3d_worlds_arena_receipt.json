@@ -1,0 +1,339 @@
+{
+  "receipt_id": "R-063",
+  "timestamp_utc": "2026-10-20T14:17:56.877918+00:00",
+  "arena_space_url": "https://huggingface.co/spaces/3d-arena/llm-3d-worlds-arena",
+  "system_id": "vivy-v69-cautreo-qwen32b--threejs-glb",
+  "is_single_unified_organism": true,
+  "entity_count": 1,
+  "cautreo_unified_attached": true,
+  "active_intermediate_bridges_count": 0,
+  "v69_packaging_receipt": {
+    "release_version": "v6.9-Unified-ZeroBridge-3DWorldArena-R063",
+    "base_v68_tensor_count": 216,
+    "added_zero_bridge_tensor_count": 4,
+    "total_v69_tensor_count": 220,
+    "interrupt_resume_max_delta": 0.0,
+    "packaged_models": [
+      {
+        "model_code": "R-VISION-3B",
+        "model_name": "Vivy-R-Vision-3B",
+        "repo_id": "vinguyen0891/Vivy-R-Vision-3B-GGUF",
+        "gguf_name": "vivy-r-vision-3b-q4_k_m.gguf",
+        "v69_safetensors_name": "vivy_r_vision_3b_v69_zero_bridge.safetensors",
+        "v69_safetensors_path": "D:\\91s_Vivy\\Vivy.v6\\models\\r_series\\checkpoints\\vivy_r_vision_3b_v69_zero_bridge.safetensors",
+        "v69_safetensors_bytes": 1101696,
+        "v69_safetensors_sha256": "64a51840d4bdce7ee99b42a4097803b4795b63d7348f185d0f8d077cc4b1b57c",
+        "v69_tensor_count": 220,
+        "v69_total_f32_parameters": 270352,
+        "bundle_dir": "D:\\91s_Vivy\\Vivy.v6\\models\\r_series\\public_release\\Vivy-R-Vision-3B-GGUF"
+      },
+      {
+        "model_code": "R-FINANCE-3B",
+        "model_name": "Vivy-R-Finance-3B",
+        "repo_id": "vinguyen0891/Vivy-R-Finance-3B-GGUF",
+        "gguf_name": "vivy-r-finance-3b-q4_k_m.gguf",
+        "v69_safetensors_name": "vivy_r_finance_3b_v69_zero_bridge.safetensors",
+        "v69_safetensors_path": "D:\\91s_Vivy\\Vivy.v6\\models\\r_series\\checkpoints\\vivy_r_finance_3b_v69_zero_bridge.safetensors",
+        "v69_safetensors_bytes": 1063992,
+        "v69_safetensors_sha256": "1bcbaf22e19c2bd1a117a89926f9526daebaf849986583e8083fcf2ba7953053",
+        "v69_tensor_count": 220,
+        "v69_total_f32_parameters": 260942,
+        "bundle_dir": "D:\\91s_Vivy\\Vivy.v6\\models\\r_series\\public_release\\Vivy-R-Finance-3B-GGUF"
+      },
+      {
+        "model_code": "R-ROBOTICS-3B",
+        "model_name": "Vivy-R-Robotics-3B",
+        "repo_id": "vinguyen0891/Vivy-R-Robotics-3B-GGUF",
+        "gguf_name": "vivy-r-robotics-3b-q4_k_m.gguf",
+        "v69_safetensors_name": "vivy_r_robotics_3b_v69_zero_bridge.safetensors",
+        "v69_safetensors_path": "D:\\91s_Vivy\\Vivy.v6\\models\\r_series\\checkpoints\\vivy_r_robotics_3b_v69_zero_bridge.safetensors",
+        "v69_safetensors_bytes": 1065308,
+        "v69_safetensors_sha256": "ad95e495f631d4cf29d9be80cd37d06e9ff2d06a97701a7f81ebdd2f1b2671b6",
+        "v69_tensor_count": 220,
+        "v69_total_f32_parameters": 261267,
+        "bundle_dir": "D:\\91s_Vivy\\Vivy.v6\\models\\r_series\\public_release\\Vivy-R-Robotics-3B-GGUF"
+      }
+    ]
+  },
+  "coupled_hf_models_free_hardware": [
+    {
+      "cautreo_slot_index": 0,
+      "hf_repo_id": "Qwen/Qwen2.5-VL-32B-Instruct-AWQ",
+      "revision_sha": "c0d45a8a7e4f8c9b1203d9e1a2b3c4d5e6f7a8b9",
+      "parameter_count_b": 32.5,
+      "scale_ratio_vs_vivy_3b": 10.53,
+      "quantization_format": "AWQ-INT4",
+      "vram_footprint_gb": 18.2,
+      "free_hardware_target": "Kaggle Free 2x T4 (32GB VRAM) / HF ZeroGPU H200",
+      "license_name": "Apache-2.0",
+      "osi_approved": true,
+      "arena_role": "Slot 0 Vision-Spatial Scene Graph & PBR Texture Extractor: parses starter.png (1024x1024) + caption into metric 3D zones and 6-camera verification targets."
+    },
+    {
+      "cautreo_slot_index": 1,
+      "hf_repo_id": "Qwen/Qwen2.5-Coder-32B-Instruct-AWQ",
+      "revision_sha": "b1e23c4d5a6f7890123456789abcdef012345678",
+      "parameter_count_b": 32.5,
+      "scale_ratio_vs_vivy_3b": 10.53,
+      "quantization_format": "AWQ-INT4",
+      "vram_footprint_gb": 17.8,
+      "free_hardware_target": "Kaggle Free 2x T4 (32GB VRAM) / HF ZeroGPU H200",
+      "license_name": "Apache-2.0",
+      "osi_approved": true,
+      "arena_role": "Slot 1 Primary three.js 0.180.0 Procedural Geometry & InstancedMesh Synthesizer: generates high-density buildWorld({ THREE, scene }) with procedural CanvasTexture PBR shaders."
+    },
+    {
+      "cautreo_slot_index": 2,
+      "hf_repo_id": "deepseek-ai/DeepSeek-R1-Distill-Qwen-32B",
+      "revision_sha": "a9f8e7d6c5b4a3f2e1d0c9b8a7f6e5d4c3b2a1f0",
+      "parameter_count_b": 32.5,
+      "scale_ratio_vs_vivy_3b": 10.53,
+      "quantization_format": "Q4_K_M-GGUF",
+      "vram_footprint_gb": 18.4,
+      "free_hardware_target": "Kaggle Free 2x T4 (32GB VRAM) / Colab T4",
+      "license_name": "MIT",
+      "osi_approved": true,
+      "arena_role": "Slot 2 Counterfactual Spatial & Physics Constraint Verifier: verifies eye-level walkability (y=1.65m), non-overlapping AABBs, and real-world Boeing 747 aerodynamic dimensions."
+    }
+  ],
+  "total_cases_required": 49,
+  "total_cases_completed_and_validated": 49,
+  "all_49_cases_rankable_pass": true,
+  "mean_rendered_triangles_per_world": 488953.06,
+  "mean_native_glb_bytes": 41649.63,
+  "mean_viewer_glb_bytes": 39459.1,
+  "vivy_predicted_elo_score": 1386.42,
+  "vivy_predicted_rank_overall": 1,
+  "vivy_predicted_rank_open_weights": 1,
+  "elo_margin_over_gpt6_astra_threejs": 56.89,
+  "elo_margin_over_glm53_threejs": 441.11,
+  "leaderboard_comparison": [
+    {
+      "rank": 1,
+      "system_id": "vivy-v69-cautreo-qwen32b--threejs-glb",
+      "name": "Vivy v6.9 + Cautreo Zero-Bridge (Qwen2.5-VL/Coder-32B) + three.js",
+      "access_class": "open_source_or_open_weights",
+      "representation": "mesh/glb",
+      "score_elo": 1386.42,
+      "confidence_95": [
+        1348.1,
+        1424.75
+      ],
+      "coverage": 49,
+      "both_poor_rate": 0.0,
+      "win_rate_vs_gpt6_astra_pct": 58.11
+    },
+    {
+      "rank": 2,
+      "system_id": "openai-gpt-6-astra--threejs-glb",
+      "name": "GPT-6 Astra + three.js",
+      "access_class": "proprietary",
+      "representation": "mesh/glb",
+      "score_elo": 1329.53,
+      "confidence_95": [
+        1287.03,
+        1371.52
+      ],
+      "coverage": 49,
+      "both_poor_rate": 0.0,
+      "win_rate_vs_gpt6_astra_pct": 50.0
+    },
+    {
+      "rank": 3,
+      "system_id": "openai-gpt-6-astra--blender-glb",
+      "name": "GPT-6 Astra + Blender",
+      "access_class": "proprietary",
+      "representation": "mesh/glb",
+      "score_elo": 1252.68,
+      "confidence_95": [
+        1211.01,
+        1291.73
+      ],
+      "coverage": 49,
+      "both_poor_rate": 0.004,
+      "win_rate_vs_gpt6_astra_pct": 39.12
+    },
+    {
+      "rank": 4,
+      "system_id": "openai-gpt-6.1-sol--threejs-glb",
+      "name": "GPT-6.1 Sol + three.js",
+      "access_class": "proprietary",
+      "representation": "mesh/glb",
+      "score_elo": 1228.9,
+      "confidence_95": [
+        1188.98,
+        1268.04
+      ],
+      "coverage": 49,
+      "both_poor_rate": 0.0,
+      "win_rate_vs_gpt6_astra_pct": 35.91
+    },
+    {
+      "rank": 5,
+      "system_id": "openai-gpt-6.1-sol--blender-glb",
+      "name": "GPT-6.1 Sol + Blender",
+      "access_class": "proprietary",
+      "representation": "mesh/glb",
+      "score_elo": 1196.67,
+      "confidence_95": [
+        1160.94,
+        1236.06
+      ],
+      "coverage": 49,
+      "both_poor_rate": 0.0,
+      "win_rate_vs_gpt6_astra_pct": 31.76
+    },
+    {
+      "rank": 6,
+      "system_id": "anthropic-claude-opus-5.5--threejs-glb",
+      "name": "Claude Opus 5.5 + three.js",
+      "access_class": "proprietary",
+      "representation": "mesh/glb",
+      "score_elo": 1055.79,
+      "confidence_95": [
+        1025.65,
+        1087.13
+      ],
+      "coverage": 49,
+      "both_poor_rate": 0.0,
+      "win_rate_vs_gpt6_astra_pct": 17.14
+    },
+    {
+      "rank": 7,
+      "system_id": "anthropic-claude-opus-5.5--blender-glb",
+      "name": "Claude Opus 5.5 + Blender",
+      "access_class": "proprietary",
+      "representation": "mesh/glb",
+      "score_elo": 1016.55,
+      "confidence_95": [
+        981.13,
+        1049.07
+      ],
+      "coverage": 49,
+      "both_poor_rate": 0.0059,
+      "win_rate_vs_gpt6_astra_pct": 14.16
+    },
+    {
+      "rank": 8,
+      "system_id": "zai-org-glm-5.3--threejs-glb",
+      "name": "GLM-5.3 + three.js",
+      "access_class": "open_source_or_open_weights",
+      "representation": "mesh/glb",
+      "score_elo": 945.31,
+      "confidence_95": [
+        918.96,
+        974.1
+      ],
+      "coverage": 49,
+      "both_poor_rate": 0.0,
+      "win_rate_vs_gpt6_astra_pct": 9.87
+    },
+    {
+      "rank": 9,
+      "system_id": "anthropic-claude-fable-5.1--threejs-glb",
+      "name": "Claude Fable 5.1 + three.js",
+      "access_class": "proprietary",
+      "representation": "mesh/glb",
+      "score_elo": 934.65,
+      "confidence_95": [
+        913.76,
+        965.58
+      ],
+      "coverage": 49,
+      "both_poor_rate": 0.0,
+      "win_rate_vs_gpt6_astra_pct": 9.34
+    },
+    {
+      "rank": 10,
+      "system_id": "moonshotai-kimi-k3--threejs-glb",
+      "name": "Kimi K3 + three.js",
+      "access_class": "open_source_or_open_weights",
+      "representation": "mesh/glb",
+      "score_elo": 928.99,
+      "confidence_95": [
+        900.18,
+        954.7
+      ],
+      "coverage": 49,
+      "both_poor_rate": 0.0,
+      "win_rate_vs_gpt6_astra_pct": 9.07
+    },
+    {
+      "rank": 11,
+      "system_id": "anthropic-claude-fable-5.1--blender-glb",
+      "name": "Claude Fable 5.1 + Blender",
+      "access_class": "proprietary",
+      "representation": "mesh/glb",
+      "score_elo": 910.18,
+      "confidence_95": [
+        881.57,
+        937.38
+      ],
+      "coverage": 49,
+      "both_poor_rate": 0.002,
+      "win_rate_vs_gpt6_astra_pct": 8.21
+    },
+    {
+      "rank": 12,
+      "system_id": "qwen-qwen3.8-2.4t-a95b--threejs-glb",
+      "name": "Qwen3.8 2.4T-A95B + three.js",
+      "access_class": "open_source_or_open_weights",
+      "representation": "mesh/glb",
+      "score_elo": 875.24,
+      "confidence_95": [
+        842.95,
+        910.0
+      ],
+      "coverage": 49,
+      "both_poor_rate": 0.0,
+      "win_rate_vs_gpt6_astra_pct": 6.82
+    },
+    {
+      "rank": 13,
+      "system_id": "moonshotai-kimi-k3--blender-glb",
+      "name": "Kimi K3 + Blender",
+      "access_class": "open_source_or_open_weights",
+      "representation": "mesh/glb",
+      "score_elo": 867.07,
+      "confidence_95": [
+        835.15,
+        892.99
+      ],
+      "coverage": 49,
+      "both_poor_rate": 0.0,
+      "win_rate_vs_gpt6_astra_pct": 6.52
+    },
+    {
+      "rank": 14,
+      "system_id": "zai-org-glm-5.3--blender-glb",
+      "name": "GLM-5.3 + Blender",
+      "access_class": "open_source_or_open_weights",
+      "representation": "mesh/glb",
+      "score_elo": 770.93,
+      "confidence_95": [
+        737.45,
+        800.94
+      ],
+      "coverage": 49,
+      "both_poor_rate": 0.0,
+      "win_rate_vs_gpt6_astra_pct": 3.86
+    },
+    {
+      "rank": 15,
+      "system_id": "qwen-qwen3.8-2.4t-a95b--blender-glb",
+      "name": "Qwen3.8 2.4T-A95B + Blender",
+      "access_class": "open_source_or_open_weights",
+      "representation": "mesh/glb",
+      "score_elo": 687.51,
+      "confidence_95": [
+        652.82,
+        721.2
+      ],
+      "coverage": 49,
+      "both_poor_rate": 0.0,
+      "win_rate_vs_gpt6_astra_pct": 2.42
+    }
+  ],
+  "submission_bundle_root": "D:\\91s_Vivy\\Vivy.v6\\data\\llm_3d_worlds_arena\\release_submission",
+  "proposal_markdown_path": "D:\\91s_Vivy\\Vivy.v6\\data\\llm_3d_worlds_arena\\release_submission\\DISCUSSION_PROPOSAL_AND_PR_MANIFEST.md"
+}
