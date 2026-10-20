@@ -1,6 +1,6 @@
 {
   "receipt_id": "R-055-GEMMA4-DEVELOPER-AGENT-PAPER-TRACK",
-  "timestamp_utc": "2026-10-20T02:16:48Z",
+  "timestamp_utc": "2026-10-20T02:23:41Z",
   "campaign": {
     "campaign_id": "VIVY-GEMMA4-PAPER-TRACK-2026-R055",
     "competition_url": "https://www.kaggle.com/competitions/gemma-4-developer-agent-paper/writeups",
@@ -495,7 +495,7 @@
       "pdf_info": {
         "path": "D:\\91s- T\u00e1i c\u1ea5u tr\u00fac l\u00e2n th\u1ee9 4\\Vivy.v6\\artifacts\\gemma4_paper_track_2026\\VIVY_GEMMA4_DEVELOPER_AGENT_PAPER_TRACK_FULL_PAPER.pdf",
         "size_bytes": 65781,
-        "sha256": "3920b56668b7d2a3e469b86c599e6af8737939ca1f2f5359460a67e9e19c4e0e"
+        "sha256": "414d73453e68493d4e0edaffe33e38a6758adb521b4c968be2187c0716a5abea"
       }
     },
     "media_gallery_artifacts": {
@@ -526,7 +526,7 @@
       "tensor_count": 6,
       "sha256": "43a0b41353bc778a7afc75ee6954cef412cbd8203749669c3178dc6130845a5d"
     },
-    "elapsed_ms": 1703.08
+    "elapsed_ms": 1509.34
   },
   "blind_zero_assistance_verification": {
     "vy_assistance_ratio": 0.0,
@@ -699,5 +699,5 @@
       }
     }
   },
-  "receipt_sha256": "fda18d221017fd69d9e7fddf966d2f67509e1692da3eee9454798d4d1bcb110d"
+  "receipt_sha256": "e02ab71a9400aec258ee26eb967e883dd8a0e222949832132de2acf3c92a5549"
 }

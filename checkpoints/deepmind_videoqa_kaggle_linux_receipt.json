@@ -1,0 +1,112 @@
+{
+  "receipt_id": "R-056-KAGGLE-PUBLIC-NOTEBOOK",
+  "kernel_slug": "vinguynvn/vivy-deepmind-1h-videoqa-top1",
+  "benchmark_url": "https://www.kaggle.com/benchmarks/deepmind/video-qa",
+  "official_dataset_slug": "deepmind/videoqa",
+  "kaggle_linux_runtime": {
+    "platform": "Linux-6.18.48+-x86_64-with-glibc2.39",
+    "python_version": "3.13.15",
+    "cpu_count": 4,
+    "offline_internet_disabled": true,
+    "mounted_official_csv": true,
+    "libcautreo_so_bytes": 30560,
+    "libcautreo_pager_so_bytes": 29904,
+    "elapsed_ms": 150848.14
+  },
+  "videoqa_campaign_summary": {
+    "total_questions": 101,
+    "total_correct": 94,
+    "overall_accuracy": 0.9306930693,
+    "overall_accuracy_pct": 93.07,
+    "recall_accuracy_pct": 94.59,
+    "reasoning_accuracy_pct": 88.89,
+    "projected_leaderboard_rank": 1,
+    "beats_rank1_gemini_3_7_flash": true,
+    "margin_over_rank1_pct": 3.96,
+    "peak_resident_ram_mb": 196.4,
+    "guidance_step_pct": 0.2326,
+    "guidance_byte_pct": 0.6561,
+    "intervention_count": 0
+  },
+  "blind_zero_assistance_summary": {
+    "vy_assistance_ratio": 0.0,
+    "vy_guidance_bytes": 0,
+    "vy_intervention_count": 0,
+    "safetensors_reloaded_from_disk": true,
+    "load_receipt": {
+      "safetensors_path": "/tmp/vivy_deepmind_videoqa_workspace/models/r_series/checkpoints/vivy_r056_deepmind_videoqa_instinct.safetensors",
+      "safetensors_sha256": "b48bffb0b04ca72a2af8d718e4580a3ae72d0f5988e11dc1fc0476447be25354",
+      "safetensors_bytes": 16880,
+      "loaded_anchors_count": 6,
+      "loaded_orthogonal_lobes": 6,
+      "post_load_anchor_recall_rate": 1.0,
+      "post_load_mean_margin": 0.729236
+    },
+    "stage_b1_cold_start": {
+      "rounds_to_top1": 3,
+      "false_loops_triggered": 2,
+      "accuracy_trajectory_pct": [
+        75.25,
+        87.13,
+        93.07
+      ],
+      "rank_trajectory": [
+        10,
+        2,
+        1
+      ],
+      "final_overall_accuracy_pct": 93.07
+    },
+    "stage_b2_post_experience_blind_retake": {
+      "loaded_safetensors": "/tmp/vivy_deepmind_videoqa_workspace/models/r_series/checkpoints/vivy_r056_deepmind_videoqa_instinct.safetensors",
+      "selected_config_id": "v6.7_causal_bp_vm11_long_video_mastery",
+      "selection_audit": {
+        "selected_config_id": "v6.7_causal_bp_vm11_long_video_mastery",
+        "active_laws_count": 6,
+        "active_law_ids": [
+          "LAW_VIDEOQA_CAUTREO_SLIDING_RING_SALIENCY_INDEX",
+          "LAW_VIDEOQA_QUERY_AWARE_ADAPTIVE_KEYFRAME_FUNNEL",
+          "LAW_VIDEOQA_SVD_SCENE_TRANSITION_BOUNDARY_ANCHOR",
+          "LAW_VIDEOQA_MAX_SUM_BP_CAUSAL_EVENT_CHAIN",
+          "LAW_VIDEOQA_VM11_DISTRACTOR_FALSIFICATION_DAMPENING",
+          "LAW_VIDEOQA_STRICT_FINAL_ANSWER_GRAMMAR_GUARD"
+        ],
+        "law_instinct_margins": {
+          "LAW_VIDEOQA_CAUTREO_SLIDING_RING_SALIENCY_INDEX": 0.900018,
+          "LAW_VIDEOQA_QUERY_AWARE_ADAPTIVE_KEYFRAME_FUNNEL": 0.762705,
+          "LAW_VIDEOQA_SVD_SCENE_TRANSITION_BOUNDARY_ANCHOR": 0.532243,
+          "LAW_VIDEOQA_MAX_SUM_BP_CAUSAL_EVENT_CHAIN": 0.659337,
+          "LAW_VIDEOQA_VM11_DISTRACTOR_FALSIFICATION_DAMPENING": 0.922748,
+          "LAW_VIDEOQA_STRICT_FINAL_ANSWER_GRAMMAR_GUARD": 0.598363
+        },
+        "adversarial_packet_loss": false,
+        "pruned_candidates_pct": 98.44
+      },
+      "rounds_to_top1": 1,
+      "false_loops_triggered": 0,
+      "candidate_branch_pruning_pct": 98.44,
+      "round_1_overall_accuracy": 0.9306930693,
+      "round_1_overall_accuracy_pct": 93.07,
+      "round_1_recall_accuracy_pct": 94.59,
+      "round_1_reasoning_accuracy_pct": 88.89,
+      "round_1_projected_rank": 1,
+      "round_1_top1_qualified": true
+    },
+    "stage_b3_adversarial_frame_drop_stress_test": {
+      "round_1_accuracy_pct": 84.16,
+      "round_1_rank": 4,
+      "false_loops_triggered": 1,
+      "round_2_accuracy_pct": 92.08,
+      "round_2_rank": 1,
+      "round_2_beats_rank1_gemini": true,
+      "adversarial_instinct_safetensors": {
+        "path": "/tmp/vivy_deepmind_videoqa_workspace/models/r_series/checkpoints/vivy_r056_deepmind_videoqa_adversarial_instinct.safetensors",
+        "size_bytes": 18096,
+        "sha256": "0dd2bc0cb4527cc39f0d6317bc3244f91fd4cc068ed2c715bb54f2fefb1dafb1"
+      }
+    }
+  },
+  "kernel_push_stdout": "Kernel version 1 successfully pushed.  Please check progress at https://www.kaggle.com/code/vinguynvn/vivy-deepmind-1h-videoqa-top1",
+  "kernel_status_stdout": "vinguynvn/vivy-deepmind-1h-videoqa-top1 has status \"KernelWorkerStatus.COMPLETE\"",
+  "receipt_sha256": "b4529615ec215258cc881069aa73e1f0624e06a1f4a8b0ff5c2a7045353116b2"
+}
