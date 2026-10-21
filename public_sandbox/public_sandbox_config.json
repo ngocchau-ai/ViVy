@@ -1,8 +1,13 @@
 {
   "schema": "vivy.v6.public_sandbox_config.v1",
+  "release_version": "v7.2-Post-M3-Sovereign-Live-Ops-R074",
+  "tensors_per_specialist": 236,
   "models_exposed": [
     "R-VISION-3B",
-    "R-ROBOTICS-3B"
+    "R-FINANCE-3B",
+    "R-ROBOTICS-3B",
+    "R-SWE-CODE-3B",
+    "R-SCIENCE-BIO-3B"
   ],
   "parameter_envelope": "3.09B-5.00B",
   "session_ttl_seconds": 900,
