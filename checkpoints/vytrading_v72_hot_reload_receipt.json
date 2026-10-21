@@ -1,0 +1,23 @@
+{
+  "schema": "vivy.v6.vytrading_v72_hot_reload_receipt.v1",
+  "receipt_id": "R-074-VYTRADING-V72-POST-M3-SOVEREIGN-HOT-RELOAD",
+  "reloaded_at_utc": "2026-10-21T07:07:50.699079+00:00",
+  "model_code": "R-FINANCE-3B",
+  "release_version": "v7.2-Post-M3-Sovereign-Live-Ops-R074",
+  "safetensors_file": "D:\\91s_Vivy\\Vivy.v6\\models\\r_series\\checkpoints\\vivy_r_finance_3b_v72_post_m3_sovereign.safetensors",
+  "safetensors_size_bytes": 1071240,
+  "safetensors_sha256": "91da37e50dafd3e892c43e720ecdd1459e2cbd3442aa158621bcf6847979084b",
+  "swe_code_eyes_bridge_safetensors_sha256": "87b49f904637fa6df814dd8782d11b69c18c7d6a2f64588d60e190e12bf8ab1c",
+  "tensor_count_verified": 236,
+  "v72_post_m3_sovereign_loaded": true,
+  "swe_code_v72_observational_eyes_bridge_ready": true,
+  "canonical_laws_total": 1300,
+  "bio_activity_saturation_pct": 99.94,
+  "mt5_account_login": 5057462812,
+  "mt5_live_cycle_observed": 16100,
+  "mt5_live_equity_usd": 20593.4,
+  "active_intermediate_bridges_count": 0,
+  "programmatic_filters_applied": 0,
+  "vy_tactical_guidance_bytes": 0,
+  "hot_reload_verified": true
+}

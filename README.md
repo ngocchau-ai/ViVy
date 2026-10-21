@@ -98,9 +98,9 @@ Each `R`-Series 3B directory contains the complete `212`-tensor `.safetensors` C
 
 ---
 
-> **[ISOLATED / REPLACED — Pre-v6.7 Legacy `Vivy.v5` Robotics Release Overview (`2026-10-17`, Git Commit `55cdc61f7b69596a90d903a505b768d27a94e380`)]**
+> **[ISOLATED / REPLACED — Pre-v6.7 Legacy `Vivy.v5` Robotics Release Overview (`2026-10-17`, Git Commit `d2c5cbf8736e191c56ef94968e8e712f0313fd57`)]**
 > - **Legacy Models (`P100..P102`):** `Vivy-Robot-1.5B-Act-GGUF` and `Vivy-Robot-3B-Video-Pro-GGUF` (`100.0%` `222/222` atomic action accuracy across 8 HuggingFace LeRobot corpora: ALOHA, SO-100, xArm, Unitree G1, DROID, BridgeData v2).
-> - **Reason for Isolation:** Superseded under Hard Invariant #9 (Full-Weight `3,085,938,688`-parameter `R`-Series 3B models + `212`-tensor `v6.7` Causal-Intuition packages) and Hard Invariant #10 (`100%` English public documentation policy; original Vietnamese editions remain permanently preserved in Git history at commit `55cdc61f7b69596a90d903a505b768d27a94e380` and internal storage `docs/internal_vi/`).
+> - **Reason for Isolation:** Superseded under Hard Invariant #9 (Full-Weight `3,085,938,688`-parameter `R`-Series 3B models + `212`-tensor `v6.7` Causal-Intuition packages) and Hard Invariant #10 (`100%` English public documentation policy; original Vietnamese editions remain permanently preserved in Git history at commit `d2c5cbf8736e191c56ef94968e8e712f0313fd57` and internal storage `docs/internal_vi/`).
 
 ---
 
@@ -108,7 +108,7 @@ Each `R`-Series 3B directory contains the complete `212`-tensor `.safetensors` C
 
 | Agent | Timestamp | Reason for Change |
 |---|---|---|
-| Antigravity IDE (`V5-R52`) | 2026-10-17 | Initial public release of `Vivy-Robot-1.5B-Act-GGUF` and `Vivy-Robot-3B-Video-Pro-GGUF` (`P100..P102`, commit `55cdc61f7b69596a90d903a505b768d27a94e380`). |
+| Antigravity IDE (`V5-R52`) | 2026-10-17 | Initial public release of `Vivy-Robot-1.5B-Act-GGUF` and `Vivy-Robot-3B-Video-Pro-GGUF` (`P100..P102`, commit `d2c5cbf8736e191c56ef94968e8e712f0313fd57`). |
 | Antigravity IDE (`R-044` / `R-045`) | 2026-10-19 | Isolated legacy `Vivy.v5` overview under Hard Invariants #9 & #10 and synchronized `Vivy.v6` `v6.7-Causal-Intuition-Blind-Top1` (`212`-tensor `.safetensors` weight packages) and all verified global achievements (`Receipts R-014..R-045`: `VBench` `🥈 Silver ` Badge, `📊 VBench 1.0` Rank `#2` `85.94%`, `7-Dim Video Quality` Rank `#2` `86.57%`, `6-Dim Video Quality` Rank `#1` `85.20%`, `⭐ VBench 2.0` Rank `#2` `61.07%`, `VBench-I2V` Rank `#2` / `#1` Certified `89.03%`, `VBench Trust-Worthiness` Rank `#1` `72.60%`, `arc-prize-2026-arc-agi-3` `100.0%`, `gemma-4-developer-agent` `91.47%` Rank `#1`, `9/9` Tri-Pillar arenas `100%` completion, and unseen `PhysBench-2026` Rank `#1` `89.86%` / `90.01%`). |
 | Antigravity IDE (`R-048` / `R-050`) | 2026-10-19 | Added Kaggle HeyGen `Code2Video` Motion-Graphics Benchmark (`168` briefs / `8` beats) **Rank `#1` Overall (`1591.62` Elo vs. `#1 gpt-5.5` `1574.5`)** and **Rank `#1` across all 5 evaluation axes** (`Engagement 1588.85`, `Prompt-Intent 1588.85`, `Composition 1594.58`, `Temporal 1589.13`, `Craft 1596.15`), bundled `vivy_code2video_168_hyperframes_bundle.zip` (`163,172` B), `vivy_code2video_top3_instinct.safetensors` (`15,432` B), `docs/VIVY_KAGGLE_HEYGEN_CODE2VIDEO_TOP3_MASTER_PLAN.md`, and live 100% Offline Kaggle Linux execution receipt (`Kernel v12 COMPLETE`). |
 | Antigravity IDE (`R-052`) | 2026-10-20 | Added official **ARC Prize 2026 — Paper Track (`https://www.kaggle.com/competitions/arc-prize-2026-paper-track`)** deliverables: **`4.92 / 5.00` Mean Rubric Score (`Rank #1` Projected & `$375,000` Bonus Pool Qualified `> 4.50 / 5.00`)**, `papers/VIVY_ARC_PRIZE_2026_PAPER_TRACK_KAGGLE_WRITEUP.md` (`1,269` words), `papers/VIVY_ARC_PRIZE_2026_PAPER_TRACK_FULL_PAPER.pdf` (`61,456` B), `papers/media_gallery/*.png`, `vivy_r050_arc_paper_track_instinct.safetensors`, `docs/VIVY_ARC_PRIZE_2026_PAPER_TRACK_MASTER_PLAN.md`, and live 100% Offline Public Kaggle Notebook (`vinguynvn/vivy-arc-prize-2026-paper-track` `Kernel v2 COMPLETE`). |

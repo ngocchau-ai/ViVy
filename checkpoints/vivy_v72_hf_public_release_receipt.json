@@ -1,0 +1,69 @@
+{
+  "schema": "vivy.v6.v72_five_specialist_hf_release_receipt.v1",
+  "receipt_id": "R-074-V72-5-SPECIALIST-HF-PUBLIC",
+  "release_version": "v7.2-Post-M3-Sovereign-Live-Ops-R074",
+  "published_at_utc": "2026-10-21T07:08:29.712860+00:00",
+  "total_repositories_published": 5,
+  "published_repositories": [
+    {
+      "specialist_index": 1,
+      "model_code": "R-VISION-3B",
+      "model_name": "Vivy-R-Vision-3B",
+      "repo_id": "vinguyen0891/Vivy-R-Vision-3B-GGUF",
+      "commit_sha": "14925cb958ea82cc747912835c224a448882f097",
+      "gguf_filename": "vivy-r-vision-3b-q4_k_m.gguf",
+      "gguf_size_bytes": 2104932800,
+      "v72_safetensors_file": "vivy_r_vision_3b_v72_post_m3_sovereign.safetensors",
+      "v72_tensors": 236,
+      "siblings_count": 77
+    },
+    {
+      "specialist_index": 2,
+      "model_code": "R-FINANCE-3B",
+      "model_name": "Vivy-R-Finance-3B",
+      "repo_id": "vinguyen0891/Vivy-R-Finance-3B-GGUF",
+      "commit_sha": "07640186ddec8546debcce619bdbea3cce7dda5e",
+      "gguf_filename": "vivy-r-finance-3b-q4_k_m.gguf",
+      "gguf_size_bytes": 2104932800,
+      "v72_safetensors_file": "vivy_r_finance_3b_v72_post_m3_sovereign.safetensors",
+      "v72_tensors": 236,
+      "siblings_count": 72
+    },
+    {
+      "specialist_index": 3,
+      "model_code": "R-ROBOTICS-3B",
+      "model_name": "Vivy-R-Robotics-3B",
+      "repo_id": "vinguyen0891/Vivy-R-Robotics-3B-GGUF",
+      "commit_sha": "2ec4f1ee4c29bc7c45d10fc8b46827d4ea9eb9bf",
+      "gguf_filename": "vivy-r-robotics-3b-q4_k_m.gguf",
+      "gguf_size_bytes": 2104932800,
+      "v72_safetensors_file": "vivy_r_robotics_3b_v72_post_m3_sovereign.safetensors",
+      "v72_tensors": 236,
+      "siblings_count": 72
+    },
+    {
+      "specialist_index": 4,
+      "model_code": "R-SWE-CODE-3B",
+      "model_name": "Vivy-R-SWE-Code-3B",
+      "repo_id": "vinguyen0891/Vivy-R-SWE-Code-3B-GGUF",
+      "commit_sha": "a802e41d227e8e5e26ce38a372cd4b1494677f22",
+      "gguf_filename": "vivy-r-swe-code-3b-q4_k_m.gguf",
+      "gguf_size_bytes": 2104932800,
+      "v72_safetensors_file": "vivy_r_swe_code_3b_v72_post_m3_sovereign.safetensors",
+      "v72_tensors": 236,
+      "siblings_count": 16
+    },
+    {
+      "specialist_index": 5,
+      "model_code": "R-SCIENCE-BIO-3B",
+      "model_name": "Vivy-R-Science-Bio-3B",
+      "repo_id": "vinguyen0891/Vivy-R-Science-Bio-3B-GGUF",
+      "commit_sha": "fd24c97c081f310ba422a564eaa86f858307ceeb",
+      "gguf_filename": "vivy-r-science-bio-3b-q4_k_m.gguf",
+      "gguf_size_bytes": 2104932800,
+      "v72_safetensors_file": "vivy_r_science_bio_3b_v72_post_m3_sovereign.safetensors",
+      "v72_tensors": 236,
+      "siblings_count": 16
+    }
+  ]
+}

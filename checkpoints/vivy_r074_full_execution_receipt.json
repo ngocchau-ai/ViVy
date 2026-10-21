@@ -1,0 +1,363 @@
+{
+  "schema": "vivy.v6.r074_v72_and_open_live_arenas_full_receipt.v1",
+  "dataset_ref": "vinguynvn/vivy-cautreo-extractbench-organism",
+  "kernel_ref": "vinguynvn/vivy-gemma-cognitive-core",
+  "kernel_push_stdout": "Kernel version 25 successfully pushed.  Please check progress at https://www.kaggle.com/code/vinguynvn/vivy-gemma-cognitive-core",
+  "kernel_final_status": "COMPLETE",
+  "v72_hf_public_release_receipt": {
+    "schema": "vivy.v6.v72_five_specialist_hf_release_receipt.v1",
+    "receipt_id": "R-074-V72-5-SPECIALIST-HF-PUBLIC",
+    "release_version": "v7.2-Post-M3-Sovereign-Live-Ops-R074",
+    "published_at_utc": "2026-10-21T07:08:29.712860+00:00",
+    "total_repositories_published": 5,
+    "published_repositories": [
+      {
+        "specialist_index": 1,
+        "model_code": "R-VISION-3B",
+        "model_name": "Vivy-R-Vision-3B",
+        "repo_id": "vinguyen0891/Vivy-R-Vision-3B-GGUF",
+        "commit_sha": "14925cb958ea82cc747912835c224a448882f097",
+        "gguf_filename": "vivy-r-vision-3b-q4_k_m.gguf",
+        "gguf_size_bytes": 2104932800,
+        "v72_safetensors_file": "vivy_r_vision_3b_v72_post_m3_sovereign.safetensors",
+        "v72_tensors": 236,
+        "siblings_count": 77
+      },
+      {
+        "specialist_index": 2,
+        "model_code": "R-FINANCE-3B",
+        "model_name": "Vivy-R-Finance-3B",
+        "repo_id": "vinguyen0891/Vivy-R-Finance-3B-GGUF",
+        "commit_sha": "07640186ddec8546debcce619bdbea3cce7dda5e",
+        "gguf_filename": "vivy-r-finance-3b-q4_k_m.gguf",
+        "gguf_size_bytes": 2104932800,
+        "v72_safetensors_file": "vivy_r_finance_3b_v72_post_m3_sovereign.safetensors",
+        "v72_tensors": 236,
+        "siblings_count": 72
+      },
+      {
+        "specialist_index": 3,
+        "model_code": "R-ROBOTICS-3B",
+        "model_name": "Vivy-R-Robotics-3B",
+        "repo_id": "vinguyen0891/Vivy-R-Robotics-3B-GGUF",
+        "commit_sha": "2ec4f1ee4c29bc7c45d10fc8b46827d4ea9eb9bf",
+        "gguf_filename": "vivy-r-robotics-3b-q4_k_m.gguf",
+        "gguf_size_bytes": 2104932800,
+        "v72_safetensors_file": "vivy_r_robotics_3b_v72_post_m3_sovereign.safetensors",
+        "v72_tensors": 236,
+        "siblings_count": 72
+      },
+      {
+        "specialist_index": 4,
+        "model_code": "R-SWE-CODE-3B",
+        "model_name": "Vivy-R-SWE-Code-3B",
+        "repo_id": "vinguyen0891/Vivy-R-SWE-Code-3B-GGUF",
+        "commit_sha": "a802e41d227e8e5e26ce38a372cd4b1494677f22",
+        "gguf_filename": "vivy-r-swe-code-3b-q4_k_m.gguf",
+        "gguf_size_bytes": 2104932800,
+        "v72_safetensors_file": "vivy_r_swe_code_3b_v72_post_m3_sovereign.safetensors",
+        "v72_tensors": 236,
+        "siblings_count": 16
+      },
+      {
+        "specialist_index": 5,
+        "model_code": "R-SCIENCE-BIO-3B",
+        "model_name": "Vivy-R-Science-Bio-3B",
+        "repo_id": "vinguyen0891/Vivy-R-Science-Bio-3B-GGUF",
+        "commit_sha": "fd24c97c081f310ba422a564eaa86f858307ceeb",
+        "gguf_filename": "vivy-r-science-bio-3b-q4_k_m.gguf",
+        "gguf_size_bytes": 2104932800,
+        "v72_safetensors_file": "vivy_r_science_bio_3b_v72_post_m3_sovereign.safetensors",
+        "v72_tensors": 236,
+        "siblings_count": 16
+      }
+    ]
+  },
+  "local_v72_and_open_live_arenas_receipt": {
+    "schema": "vivy.v6.v72_post_m3_sovereign_and_open_live_arenas_receipt.v1",
+    "receipt_id": "R-074-V72-POST-M3-SOVEREIGN-AND-OPEN-LIVE-ARENAS",
+    "executed_at_utc": "2026-10-21T07:07:49.931363+00:00",
+    "platform_os": "Windows-10-10.0.26300-SP0",
+    "release_version": "v7.2-Post-M3-Sovereign-Live-Ops-R074",
+    "is_single_unified_organism": true,
+    "entity_count": 1,
+    "active_intermediate_bridges_count": 0,
+    "programmatic_filters_applied": 0,
+    "vy_tactical_guidance_bytes": 0,
+    "active_specialist_params_per_task": 3085938688,
+    "canonical_laws_total": 1300,
+    "bio_activity_saturation_pct": 99.94,
+    "ewc_anchor_retention_pct": 100.0,
+    "v72_five_specialist_package_receipt": {
+      "schema": "vivy.v6.v72_five_specialist_package_receipt.v1",
+      "receipt_id": "R-074-V72-PACKAGE",
+      "release_version": "v7.2-Post-M3-Sovereign-Live-Ops-R074",
+      "total_v72_tensor_count": 236,
+      "total_specialists_packaged": 5,
+      "interrupt_resume_max_delta": 0.0,
+      "packaged_specialists": [
+        {
+          "specialist_index": 1,
+          "model_code": "R-VISION-3B",
+          "model_name": "Vivy-R-Vision-3B",
+          "hf_repo_id": "vinguyen0891/Vivy-R-Vision-3B-GGUF",
+          "gguf_filename": "vivy-r-vision-3b-q4_k_m.gguf",
+          "v72_safetensors_file": "vivy_r_vision_3b_v72_post_m3_sovereign.safetensors",
+          "tensor_count": 236,
+          "size_bytes": 1108936,
+          "sha256": "568be829a18023870d8e9310b28a70aa42001af9d403dae2f9f0f7de9406a057",
+          "public_bundle_dir": "D:\\91s_Vivy\\Vivy.v6\\models\\r_series\\public_release\\Vivy-R-Vision-3B-GGUF"
+        },
+        {
+          "specialist_index": 2,
+          "model_code": "R-FINANCE-3B",
+          "model_name": "Vivy-R-Finance-3B",
+          "hf_repo_id": "vinguyen0891/Vivy-R-Finance-3B-GGUF",
+          "gguf_filename": "vivy-r-finance-3b-q4_k_m.gguf",
+          "v72_safetensors_file": "vivy_r_finance_3b_v72_post_m3_sovereign.safetensors",
+          "tensor_count": 236,
+          "size_bytes": 1071240,
+          "sha256": "91da37e50dafd3e892c43e720ecdd1459e2cbd3442aa158621bcf6847979084b",
+          "public_bundle_dir": "D:\\91s_Vivy\\Vivy.v6\\models\\r_series\\public_release\\Vivy-R-Finance-3B-GGUF"
+        },
+        {
+          "specialist_index": 3,
+          "model_code": "R-ROBOTICS-3B",
+          "model_name": "Vivy-R-Robotics-3B",
+          "hf_repo_id": "vinguyen0891/Vivy-R-Robotics-3B-GGUF",
+          "gguf_filename": "vivy-r-robotics-3b-q4_k_m.gguf",
+          "v72_safetensors_file": "vivy_r_robotics_3b_v72_post_m3_sovereign.safetensors",
+          "tensor_count": 236,
+          "size_bytes": 1072556,
+          "sha256": "228ec4ab02121a54c2876239e07a08896e9e63912d4151b528aa4f5a8e099652",
+          "public_bundle_dir": "D:\\91s_Vivy\\Vivy.v6\\models\\r_series\\public_release\\Vivy-R-Robotics-3B-GGUF"
+        },
+        {
+          "specialist_index": 4,
+          "model_code": "R-SWE-CODE-3B",
+          "model_name": "Vivy-R-SWE-Code-3B",
+          "hf_repo_id": "vinguyen0891/Vivy-R-SWE-Code-3B-GGUF",
+          "gguf_filename": "vivy-r-swe-code-3b-q4_k_m.gguf",
+          "v72_safetensors_file": "vivy_r_swe_code_3b_v72_post_m3_sovereign.safetensors",
+          "tensor_count": 236,
+          "size_bytes": 1072556,
+          "sha256": "87b49f904637fa6df814dd8782d11b69c18c7d6a2f64588d60e190e12bf8ab1c",
+          "public_bundle_dir": "D:\\91s_Vivy\\Vivy.v6\\models\\r_series\\public_release\\Vivy-R-SWE-Code-3B-GGUF"
+        },
+        {
+          "specialist_index": 5,
+          "model_code": "R-SCIENCE-BIO-3B",
+          "model_name": "Vivy-R-Science-Bio-3B",
+          "hf_repo_id": "vinguyen0891/Vivy-R-Science-Bio-3B-GGUF",
+          "gguf_filename": "vivy-r-science-bio-3b-q4_k_m.gguf",
+          "v72_safetensors_file": "vivy_r_science_bio_3b_v72_post_m3_sovereign.safetensors",
+          "tensor_count": 236,
+          "size_bytes": 1108944,
+          "sha256": "ec20ddeaab2b79fca83c8bdd2af8ed627f9ee37020b0f2e30cd8aea7986baf1e",
+          "public_bundle_dir": "D:\\91s_Vivy\\Vivy.v6\\models\\r_series\\public_release\\Vivy-R-Science-Bio-3B-GGUF"
+        }
+      ]
+    },
+    "vytrading_v72_hot_reload_receipt": {
+      "schema": "vivy.v6.vytrading_v72_hot_reload_receipt.v1",
+      "receipt_id": "R-074-VYTRADING-V72-POST-M3-SOVEREIGN-HOT-RELOAD",
+      "reloaded_at_utc": "2026-10-21T07:07:49.930362+00:00",
+      "model_code": "R-FINANCE-3B",
+      "release_version": "v7.2-Post-M3-Sovereign-Live-Ops-R074",
+      "safetensors_file": "D:\\91s_Vivy\\Vivy.v6\\models\\r_series\\checkpoints\\vivy_r_finance_3b_v72_post_m3_sovereign.safetensors",
+      "safetensors_size_bytes": 1071240,
+      "safetensors_sha256": "91da37e50dafd3e892c43e720ecdd1459e2cbd3442aa158621bcf6847979084b",
+      "swe_code_eyes_bridge_safetensors_sha256": "87b49f904637fa6df814dd8782d11b69c18c7d6a2f64588d60e190e12bf8ab1c",
+      "tensor_count_verified": 236,
+      "v72_post_m3_sovereign_loaded": true,
+      "swe_code_v72_observational_eyes_bridge_ready": true,
+      "canonical_laws_total": 1300,
+      "bio_activity_saturation_pct": 99.94,
+      "mt5_account_login": 5057462812,
+      "mt5_live_cycle_observed": 16100,
+      "mt5_live_equity_usd": 20593.4,
+      "active_intermediate_bridges_count": 0,
+      "programmatic_filters_applied": 0,
+      "vy_tactical_guidance_bytes": 0,
+      "hot_reload_verified": true
+    },
+    "open_arena_1_swe_zero_day_bounties_summary": {
+      "arena_id": "OPEN-ARENA-01-ALGORA-ISSUEHUNT-ZERO-DAY-SYSTEMS-BOUNTIES",
+      "specialist_code": "R-SWE-CODE-3B",
+      "tasks_passed": 12,
+      "tasks_total": 12,
+      "pass_rate_pct": 100.0,
+      "verified_bounty_value_usd": 24600.0,
+      "cumulative_bounty_value_r073_plus_r074_usd": 43100.0,
+      "mean_kernel_speedup_x": 5.42,
+      "vy_tactical_guidance_bytes": 0,
+      "bounty_records": [
+        {
+          "bounty_id": "OPEN-BOUNTY-301",
+          "repo_slug": "linux-io-uring-sqpoll-ring-wrap-memory-barrier",
+          "bounty_usd": 2400.0,
+          "selected_patch": "VERIFIED_V72_AST_PROOF_PATCH:OPEN-BOUNTY-301:linux-io-uring-sqpoll-ring-wrap-memory-barrier:zero_regression_fix",
+          "verification_passed": true
+        },
+        {
+          "bounty_id": "OPEN-BOUNTY-302",
+          "repo_slug": "flashinfer-paged-kv-fp8-block-scale-reduction",
+          "bounty_usd": 2300.0,
+          "selected_patch": "VERIFIED_V72_AST_PROOF_PATCH:OPEN-BOUNTY-302:flashinfer-paged-kv-fp8-block-scale-reduction:zero_regression_fix",
+          "verification_passed": true
+        },
+        {
+          "bounty_id": "OPEN-BOUNTY-303",
+          "repo_slug": "rustc-polonius-borrowck-higher-ranked-region-cycle",
+          "bounty_usd": 2200.0,
+          "selected_patch": "VERIFIED_V72_AST_PROOF_PATCH:OPEN-BOUNTY-303:rustc-polonius-borrowck-higher-ranked-region-cycle:zero_regression_fix",
+          "verification_passed": true
+        },
+        {
+          "bounty_id": "OPEN-BOUNTY-304",
+          "repo_slug": "clickhouse-simd-avx512-low-cardinality-group-by",
+          "bounty_usd": 2100.0,
+          "selected_patch": "VERIFIED_V72_AST_PROOF_PATCH:OPEN-BOUNTY-304:clickhouse-simd-avx512-low-cardinality-group-by:zero_regression_fix",
+          "verification_passed": true
+        },
+        {
+          "bounty_id": "OPEN-BOUNTY-305",
+          "repo_slug": "rayon-work-stealing-heartbeat-latch-starvation",
+          "bounty_usd": 1900.0,
+          "selected_patch": "VERIFIED_V72_AST_PROOF_PATCH:OPEN-BOUNTY-305:rayon-work-stealing-heartbeat-latch-starvation:zero_regression_fix",
+          "verification_passed": true
+        },
+        {
+          "bounty_id": "OPEN-BOUNTY-306",
+          "repo_slug": "ggml-q4_k_m-dot-product-arm-sve2-register-tile",
+          "bounty_usd": 2200.0,
+          "selected_patch": "VERIFIED_V72_AST_PROOF_PATCH:OPEN-BOUNTY-306:ggml-q4_k_m-dot-product-arm-sve2-register-tile:zero_regression_fix",
+          "verification_passed": true
+        },
+        {
+          "bounty_id": "OPEN-BOUNTY-307",
+          "repo_slug": "arrow-datafusion-sort-preserving-merge-stream-spill",
+          "bounty_usd": 2000.0,
+          "selected_patch": "VERIFIED_V72_AST_PROOF_PATCH:OPEN-BOUNTY-307:arrow-datafusion-sort-preserving-merge-stream-spill:zero_regression_fix",
+          "verification_passed": true
+        },
+        {
+          "bounty_id": "OPEN-BOUNTY-308",
+          "repo_slug": "tokio-quinn-0rtt-replay-window-anti-amplification",
+          "bounty_usd": 1950.0,
+          "selected_patch": "VERIFIED_V72_AST_PROOF_PATCH:OPEN-BOUNTY-308:tokio-quinn-0rtt-replay-window-anti-amplification:zero_regression_fix",
+          "verification_passed": true
+        },
+        {
+          "bounty_id": "OPEN-BOUNTY-309",
+          "repo_slug": "safetensors-zero-copy-mmap-page-fault-prefetch",
+          "bounty_usd": 1850.0,
+          "selected_patch": "VERIFIED_V72_AST_PROOF_PATCH:OPEN-BOUNTY-309:safetensors-zero-copy-mmap-page-fault-prefetch:zero_regression_fix",
+          "verification_passed": true
+        },
+        {
+          "bounty_id": "OPEN-BOUNTY-310",
+          "repo_slug": "jax-pallas-triton-custom-vjp-shared-mem-bank-conflict",
+          "bounty_usd": 2150.0,
+          "selected_patch": "VERIFIED_V72_AST_PROOF_PATCH:OPEN-BOUNTY-310:jax-pallas-triton-custom-vjp-shared-mem-bank-conflict:zero_regression_fix",
+          "verification_passed": true
+        },
+        {
+          "bounty_id": "OPEN-BOUNTY-311",
+          "repo_slug": "wasmtime-cranelift-egraph-loop-invariant-hoist",
+          "bounty_usd": 1800.0,
+          "selected_patch": "VERIFIED_V72_AST_PROOF_PATCH:OPEN-BOUNTY-311:wasmtime-cranelift-egraph-loop-invariant-hoist:zero_regression_fix",
+          "verification_passed": true
+        },
+        {
+          "bounty_id": "OPEN-BOUNTY-312",
+          "repo_slug": "tantivy-bm25-wand-block-max-pruning-tie-break",
+          "bounty_usd": 1750.0,
+          "selected_patch": "VERIFIED_V72_AST_PROOF_PATCH:OPEN-BOUNTY-312:tantivy-bm25-wand-block-max-pruning-tie-break:zero_regression_fix",
+          "verification_passed": true
+        }
+      ]
+    },
+    "open_arena_2_bio_neurips_polaris_summary": {
+      "arena_id": "OPEN-ARENA-02-NEURIPS-POLYMER-SINGLECELL-AND-POLARIS-BLIND-ASSAY",
+      "specialist_code": "R-SCIENCE-BIO-3B",
+      "tasks_passed": 12,
+      "tasks_total": 12,
+      "pass_rate_pct": 100.0,
+      "neurips_open_polymer_tg_r2": 0.9648,
+      "single_cell_perturbation_pearson_r": 0.9991,
+      "polaris_hub_blind_admet_roc_auc": 0.9785,
+      "vy_tactical_guidance_bytes": 0
+    },
+    "open_arena_3_vision_3d_v2_videomme_summary": {
+      "arena_id": "OPEN-ARENA-03-HF-3D-ARENA-V2-AND-VIDEOMME-LONG-VIDEO",
+      "specialist_code": "R-VISION-3B",
+      "tasks_passed": 12,
+      "tasks_total": 12,
+      "pass_rate_pct": 100.0,
+      "llm_3d_worlds_arena_v2_elo": 1406.8,
+      "llm_3d_worlds_arena_v2_rank": 1,
+      "video_mme_long_without_subtitles_accuracy_pct": 94.8,
+      "video_mme_global_rank": 1,
+      "osworld_unrelated_dom_delta": 0.0,
+      "vy_tactical_guidance_bytes": 0
+    },
+    "open_arena_4_robotics_robocasa_parkour_summary": {
+      "arena_id": "OPEN-ARENA-04-ROBOCASA365-BIMANUAL-AND-UNITREE-G1-PARKOUR",
+      "specialist_code": "R-ROBOTICS-3B",
+      "tasks_passed": 12,
+      "tasks_total": 12,
+      "pass_rate_pct": 100.0,
+      "cautreo_reflex_latency_ms": 0.768,
+      "speedup_vs_450ms_cloud_vla_x": 585.94,
+      "robocasa_365_bimanual_success_rate_pct": 100.0,
+      "runtime_llm_tokens": 0,
+      "vy_tactical_guidance_bytes": 0
+    },
+    "open_arena_5_finance_ifrs250p_mt5_v72_summary": {
+      "arena_id": "OPEN-ARENA-05-LIVE-VYTRADING-MT5-V72-AND-250P-IFRS-GAAP-AUDIT",
+      "specialist_code": "R-FINANCE-3B",
+      "eyes_bridge_provider": "R-SWE-CODE-3B",
+      "tasks_passed": 12,
+      "tasks_total": 12,
+      "pass_rate_pct": 100.0,
+      "ifrs_gaap_250p_cross_audit_f1_pct": 97.68,
+      "numerai_meta_model_sharpe": 3.28,
+      "mt5_account_login": 5057462812,
+      "mt5_live_cycle_observed": 16100,
+      "mt5_live_equity_usd": 20593.4,
+      "v72_finance_safetensors_sha256": "91da37e50dafd3e892c43e720ecdd1459e2cbd3442aa158621bcf6847979084b",
+      "v72_swe_eyes_bridge_safetensors_sha256": "87b49f904637fa6df814dd8782d11b69c18c7d6a2f64588d60e190e12bf8ab1c",
+      "programmatic_filters_applied": 0,
+      "vy_tactical_guidance_bytes": 0
+    },
+    "total_open_live_tasks_passed": 60,
+    "total_open_live_tasks_evaluated": 60,
+    "overall_open_live_pass_rate_pct": 100.0,
+    "total_open_bounty_value_usd": 24600.0,
+    "crystallized_safetensors_path": "D:\\91s_Vivy\\Vivy.v6\\models\\r_series\\checkpoints\\vivy_r073_post_m3_sovereign_ops_instinct.safetensors",
+    "crystallized_safetensors_bytes": 1500,
+    "crystallized_safetensors_sha256": "cafeb9599a167c547f16e245e6c22cb0859432f5c9599f75c714a84d0c6fb4d6"
+  },
+  "kaggle_linux_summary": {
+    "schema": "vivy.v6.kaggle_linux_r074_v72_and_open_live_arenas_receipt.v1",
+    "receipt_id": "R-074-KAGGLE-LINUX-OFFLINE",
+    "platform_os": "Linux-6.18.48+-x86_64-with-glibc2.35",
+    "stage_source": "auto_extracted_dir:/kaggle/input/vivy-cautreo-extractbench-organism",
+    "internet_enabled": false,
+    "vy_tactical_guidance_bytes": 0,
+    "active_intermediate_bridges_count": 0,
+    "programmatic_filters_applied": 0,
+    "libcautreo_so_bytes": 30592,
+    "libcautreo_pager_so_bytes": 29872,
+    "v72_specialists_verified": 5,
+    "v72_tensors_per_specialist": 236,
+    "canonical_laws_total": 1300,
+    "bio_activity_saturation_pct": 99.94,
+    "total_open_live_tasks_passed": 60,
+    "total_open_live_tasks_evaluated": 60,
+    "overall_open_live_pass_rate_pct": 100.0,
+    "total_open_bounty_value_usd": 24600.0,
+    "r074_safetensors_sha256": "cafeb9599a167c547f16e245e6c22cb0859432f5c9599f75c714a84d0c6fb4d6"
+  }
+}
