@@ -2,7 +2,7 @@
   "schema": "vivy.v6.github_public_release_manifest.v7_1",
   "repository": "ngocchau-ai/ViVy",
   "release_tag": "v7.1-Stage-M3-Sovereign-5Specialist-R072",
-  "updated_at_utc": "2026-10-21T04:50:46.325272+00:00",
+  "updated_at_utc": "2026-10-21T05:29:13.043284+00:00",
   "v67_safetensors_verification": {
     "Vivy-R-Vision-3B-GGUF": {
       "file": "vivy_r_vision_3b_v67_causal_instinct.safetensors",
@@ -127,11 +127,11 @@
       "sha256": "156434292eea89e9b59164df61e1f801e9dab6e12c2351a3f92299f8dfb13f59"
     }
   },
-  "total_files": 641,
+  "total_files": 642,
   "files": {
     "benchmarks/BENCHMARK_REPORT.md": {
       "size_bytes": 12596,
-      "sha256": "aed85106dea5a82e47ed6c801d693aca05858c2b64afc0f983e87df518d8ece9"
+      "sha256": "98cb5b00113b3f49bd2a8f4c792bd0ba056f5c2183769f676a17dc6be3f49486"
     },
     "benchmarks/vivy_1hvideoqa_101_predictions.csv": {
       "size_bytes": 17351,
@@ -255,7 +255,7 @@
     },
     "checkpoints/vivy_r067_stage_m3_five_specialist_receipt.json": {
       "size_bytes": 32307,
-      "sha256": "1fa25e98b6228b927525a979d625ef1cbfbf14873a0c0d92de1f6cc9f7636362"
+      "sha256": "c0e69a942237d572a82d9f1afe7c38218f265a627f4f8f115ea4f87e9fc3590f"
     },
     "checkpoints/vivy_r068_full_execution_receipt.json": {
       "size_bytes": 12927,
@@ -305,6 +305,10 @@
       "size_bytes": 13282,
       "sha256": "b4d4623ffb7d83289205c5d5e1f11757d4bef9526ef0303ecd7c745392662523"
     },
+    "checkpoints/vivy_r073_full_execution_receipt.json": {
+      "size_bytes": 8497,
+      "sha256": "0513ac88d240f3bacffd39176b4ce1910c6025639f5428da4a5f057274451f17"
+    },
     "checkpoints/vivy_science_discovery_instinct.safetensors": {
       "size_bytes": 10704,
       "sha256": "43aa4a49cb523c5505bdd7700534ec42c18af7c2a5f81b344ce024900e203f7b"
@@ -319,7 +323,7 @@
     },
     "checkpoints/vivy_v67_causal_intuition_release_receipt.json": {
       "size_bytes": 5128,
-      "sha256": "0751470a6890fe18b8c8f63721df18bfef1e1b1b4a3d26c2e3f66420d3ddb124"
+      "sha256": "99e8cd5c8e51f89b709c0ffc3f3ee69302be569a7c580927cd7be12d9d1c90ee"
     },
     "checkpoints/vivy_v68_hf_public_release_receipt.json": {
       "size_bytes": 1661,
@@ -347,15 +351,15 @@
     },
     "checkpoints/vytrading_v69_hot_reload_receipt.json": {
       "size_bytes": 680,
-      "sha256": "f5ab22c798e9b1db8ec486f7add83fde3ef4ccf058b637c3f7a060bf24681e69"
+      "sha256": "eaf8ed4825fa97e2e251244a8bf07c8186ba32485b6b1e114514a54061aa41ed"
     },
     "checkpoints/vytrading_v70_hot_reload_receipt.json": {
       "size_bytes": 904,
-      "sha256": "78348f32b865ecfc63c7d3ca686f6cbfbba0f82875289a4a9eeabcebe6c2182e"
+      "sha256": "73bfae02bb04d6ea21485f571677519d7df0bd6e4df58fc4b89530314c527bc4"
     },
     "checkpoints/vytrading_v71_hot_reload_receipt.json": {
-      "size_bytes": 762,
-      "sha256": "89781afc86fc22827abd8cdb7f1aeb7993da9f84dd5d1843a16d20410c79d022"
+      "size_bytes": 1157,
+      "sha256": "7fe3990dbbc2afecd8a33d8b215e08bfaf91f22006c194112aac95ea158f9dba"
     },
     "docs/INHERITANCE_AND_R_SERIES_ARCHITECTURE.md": {
       "size_bytes": 7014,
@@ -438,8 +442,8 @@
       "sha256": "914ba5e0193b449b018fde699484cf8ab35631190cdf162fae98b614f2b43873"
     },
     "docs/VIVY_STAGE_M3_CROSS_CLOUD_AND_5_SPECIALIST_MASTER_PLAN.md": {
-      "size_bytes": 34698,
-      "sha256": "e7bc4c587171202e744c0d38efd53c99b71e09a4412f8b4547423a2969399a78"
+      "size_bytes": 38470,
+      "sha256": "6af56aec89799fc81022dd223ae20d2eb47e105a46cb6fadda1c09f662addc02"
     },
     "docs/VIVY_STRATIFIED_GOAL_MASTERY_AND_NL_BRIEF_SPEC.md": {
       "size_bytes": 8692,
@@ -1730,8 +1734,8 @@
       "sha256": "11360fd6222848d94824eb972a430fc00ed509a2910554ffc4578bd1d4a02b58"
     },
     "README.md": {
-      "size_bytes": 27743,
-      "sha256": "0c7590dd9642a9ddfb4e2a4734feff81c518bc513055fdcacb97028fcbaab923"
+      "size_bytes": 28651,
+      "sha256": "04e3a6982b1c5123bc52ac7734562acd115e7f586bf3cfb84ee53607a967011f"
     },
     "Vivy-R-Finance-3B-GGUF/.gitattributes": {
       "size_bytes": 138,
