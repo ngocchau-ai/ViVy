@@ -1,0 +1,12 @@
+{
+  "source_specialist": "R-SWE-CODE-3B",
+  "target_specialist": "R-FINANCE-3B",
+  "synthesized_module_role": "Observational Eyes Telemetry Verifier (`M15/M30/H1` Liquidity & Range Matrix)",
+  "chosen_synthesis_strategy": "PURE_OBSERVATIONAL_EYES_MTF_LIQUIDITY_AND_CAUTREO_INTUITION_TENSOR",
+  "confidence_score": -0.167659,
+  "programmatic_filters_applied": 0,
+  "hard_gatekeepers_added": 0,
+  "respects_vytrading_global_rule_section_5": true,
+  "crystallized_tensor_key": "vivy.r070.sprint_w2.swe_to_finance_mtf_eyes_prior",
+  "crystallized_safetensors_sha256": "380131087bc883d9ac615d8be3343ec70b82e263d7f07cee15d29f91b94e97e2"
+}
