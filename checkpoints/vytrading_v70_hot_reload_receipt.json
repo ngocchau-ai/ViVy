@@ -1,0 +1,20 @@
+{
+  "schema": "vivy.v6.vytrading_v70_hot_reload_receipt.v1",
+  "receipt_id": "R-067-VYTRADING-V70-HOT-RELOAD",
+  "reloaded_at_utc": "2026-10-21T03:24:57.810657+00:00",
+  "mt5_account_login": 5057462812,
+  "account_balance_usd": 21985.92,
+  "account_equity_usd": 21987.84,
+  "model_code": "R-FINANCE-3B",
+  "release_version": "v7.0-DeepInfer-BioActivity-5Specialist-R067",
+  "safetensors_file": "D:\\91s_Vivy\\Vivy.v6\\models\\r_series\\checkpoints\\vivy_r_finance_3b_v70_bioactivity.safetensors",
+  "safetensors_size_bytes": 1065872,
+  "safetensors_sha256": "ecde41f10e5e99879860bac77cf364d3665bf8524b5017c72be27220a6b820e7",
+  "tensor_count_verified": 224,
+  "swa_bounded_replay_ratio": 0.125,
+  "dspark_zero_bridge_latency_ms": 0.1175,
+  "active_intermediate_bridges_count": 0,
+  "programmatic_filters_applied": 0,
+  "vy_tactical_guidance_bytes": 0,
+  "hot_reload_verified": true
+}

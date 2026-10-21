@@ -68,5 +68,15 @@
   "v69_active_intermediate_bridges": 0,
   "v69_is_single_unified_organism": true,
   "v69_3d_worlds_arena_elo": 1386.42,
-  "v69_3d_worlds_arena_rank": 1
+  "v69_3d_worlds_arena_rank": 1,
+  "v70_release_version": "v7.0-DeepInfer-BioActivity-5Specialist-R067",
+  "v70_unified_safetensors_file": "vivy_r_robotics_3b_v70_bioactivity.safetensors",
+  "v70_unified_safetensors_tensors": 224,
+  "v70_unified_f32_parameters": 261523,
+  "v70_effective_envelope_billions": 4.08,
+  "v70_specialist_index_of_5": 3,
+  "v70_swa_compression_ratio": 0.125,
+  "v70_dspark_latency_ms": 0.1175,
+  "v70_active_intermediate_bridges": 0,
+  "v70_is_single_unified_organism": true
 }

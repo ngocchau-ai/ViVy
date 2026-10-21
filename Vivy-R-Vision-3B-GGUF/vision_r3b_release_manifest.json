@@ -75,7 +75,7 @@
       "size_bytes": 138
     },
     "config.json": {
-      "size_bytes": 2930
+      "size_bytes": 3408
     },
     "docs/INHERITANCE_AND_R_SERIES_ARCHITECTURE.md": {
       "size_bytes": 7014
@@ -454,5 +454,11 @@
     "interrupt_resume_max_delta": 0.0,
     "llm_3d_worlds_arena_elo": 1386.42,
     "llm_3d_worlds_arena_rank": 1
-  }
+  },
+  "v70_release_version": "v7.0-DeepInfer-BioActivity-5Specialist-R067",
+  "v70_safetensors_file": "vivy_r_vision_3b_v70_bioactivity.safetensors",
+  "v70_safetensors_tensors": 224,
+  "v70_safetensors_size_bytes": 1103576,
+  "v70_safetensors_sha256": "990e6153721e59018756e5a82dc73b17941bf2b853e95933febc9908f368cbaf",
+  "v70_effective_envelope_billions": 4.12
 }

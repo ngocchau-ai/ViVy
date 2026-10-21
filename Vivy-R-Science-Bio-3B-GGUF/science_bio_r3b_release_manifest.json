@@ -1,0 +1,14 @@
+{
+  "model_code": "R-SCIENCE-BIO-3B",
+  "model_name": "Vivy-R-Science-Bio-3B",
+  "hf_repo_id": "vinguyen0891/Vivy-R-Science-Bio-3B-GGUF",
+  "gguf_file": "vivy-r-science-bio-3b-q4_k_m.gguf",
+  "gguf_parameters": 3085938688,
+  "gguf_tensors": 435,
+  "v70_release_version": "v7.0-DeepInfer-BioActivity-5Specialist-R067",
+  "v70_safetensors_file": "vivy_r_science_bio_3b_v70_bioactivity.safetensors",
+  "v70_safetensors_tensors": 224,
+  "v70_safetensors_size_bytes": 1103576,
+  "v70_safetensors_sha256": "e544b5ff433658f3186431431d419cfa7cfe0f0d7a1645cd0324e1a1f2cd9f2c",
+  "v70_effective_envelope_billions": 4.32
+}

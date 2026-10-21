@@ -1,6 +1,6 @@
 {
   "schema": "vivy.v6.vytrading_v69_zero_bridge_hot_reload.v1",
-  "reloaded_at_utc": "2026-10-20T14:40:43Z",
+  "reloaded_at_utc": "2026-10-21T03:17:42Z",
   "v69_zero_bridge_safetensors_path": "D:\\91s_Vivy\\Vivy.v6\\models\\r_series\\checkpoints\\vivy_r_finance_3b_v69_zero_bridge.safetensors",
   "v69_zero_bridge_safetensors_loaded": true,
   "v69_zero_bridge_tensor_count": 220,
@@ -9,28 +9,5 @@
   "zero_bridge_tensors_present": true,
   "active_intermediate_bridges_count": 0,
   "programmatic_filters_applied": 0,
-  "vytrading_eyes_and_hands_compliant": true,
-  "live_mt5_account": {
-    "login": 5057462812,
-    "balance_usd": 21985.92,
-    "equity_usd": 21987.84,
-    "free_margin_usd": 21855.14,
-    "symbol": "XAUUSD",
-    "bid": 4146.94,
-    "ask": 4147.33
-  },
-  "offline_currency_audit_v69": {
-    "exists": true,
-    "path": "D:\\91s_Vivy\\Vivy.v6\\models\\r_series\\checkpoints\\vivy_r_finance_3b_v69_zero_bridge.safetensors",
-    "size_bytes": 1063992,
-    "sha256": "1bcbaf22e19c2bd1a117a89926f9526daebaf849986583e8083fcf2ba7953053",
-    "tensor_count": 220,
-    "v69_release_version": "v6.9-Unified-ZeroBridge-3DWorldArena-R063",
-    "verified_220_tensors": true,
-    "active_intermediate_bridges_count": 0,
-    "zero_bridge_tensors_present": true,
-    "modelfile_v69_path": "D:\\91s_Vivy\\Vivy.v6\\models\\r_series\\public_release\\Vivy-R-Finance-3B-GGUF\\Modelfile.v6.9",
-    "modelfile_v69_exists": true,
-    "modelfile_v69_sha256": "8fd11e68d31237d3baef534b78ffbbc9201caa8c6afa0b30f81452766d8533ce"
-  }
+  "vytrading_eyes_and_hands_compliant": true
 }
