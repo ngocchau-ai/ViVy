@@ -1,0 +1,72 @@
+{
+  "schema": "vivy.v6.v73_five_specialist_package_receipt.v1",
+  "receipt_id": "R-076-V73-PACKAGE",
+  "release_version": "v7.3-Cross-Specialist-Synthesis-R076",
+  "total_v73_tensor_count": 240,
+  "total_specialists_packaged": 5,
+  "canonical_laws_total": 1400,
+  "bio_activity_saturation_pct": 99.98,
+  "interrupt_resume_max_delta": 0.0,
+  "packaged_specialists": [
+    {
+      "specialist_index": 1,
+      "model_code": "R-VISION-3B",
+      "model_name": "Vivy-R-Vision-3B",
+      "hf_repo_id": "vinguyen0891/Vivy-R-Vision-3B-GGUF",
+      "gguf_filename": "vivy-r-vision-3b-q4_k_m.gguf",
+      "v73_safetensors_file": "vivy_r_vision_3b_v73_cross_specialist.safetensors",
+      "tensor_count": 240,
+      "size_bytes": 1111064,
+      "sha256": "96bccc95c50d1fb9b7f7dfd588dd32521c587e90d5493b21ebbb20649714c358",
+      "public_bundle_dir": "D:\\91s_Vivy\\Vivy.v6\\models\\r_series\\public_release\\Vivy-R-Vision-3B-GGUF"
+    },
+    {
+      "specialist_index": 2,
+      "model_code": "R-FINANCE-3B",
+      "model_name": "Vivy-R-Finance-3B",
+      "hf_repo_id": "vinguyen0891/Vivy-R-Finance-3B-GGUF",
+      "gguf_filename": "vivy-r-finance-3b-q4_k_m.gguf",
+      "v73_safetensors_file": "vivy_r_finance_3b_v73_cross_specialist.safetensors",
+      "tensor_count": 240,
+      "size_bytes": 1073328,
+      "sha256": "13b6c84764ea9da2701597b93735055467109865416ee2a048e63c9c6596f843",
+      "public_bundle_dir": "D:\\91s_Vivy\\Vivy.v6\\models\\r_series\\public_release\\Vivy-R-Finance-3B-GGUF"
+    },
+    {
+      "specialist_index": 3,
+      "model_code": "R-ROBOTICS-3B",
+      "model_name": "Vivy-R-Robotics-3B",
+      "hf_repo_id": "vinguyen0891/Vivy-R-Robotics-3B-GGUF",
+      "gguf_filename": "vivy-r-robotics-3b-q4_k_m.gguf",
+      "v73_safetensors_file": "vivy_r_robotics_3b_v73_cross_specialist.safetensors",
+      "tensor_count": 240,
+      "size_bytes": 1074684,
+      "sha256": "f2a765865f294638e9246160cef6239a8234a5163cc13c5b1185ea9949be03dc",
+      "public_bundle_dir": "D:\\91s_Vivy\\Vivy.v6\\models\\r_series\\public_release\\Vivy-R-Robotics-3B-GGUF"
+    },
+    {
+      "specialist_index": 4,
+      "model_code": "R-SWE-CODE-3B",
+      "model_name": "Vivy-R-SWE-Code-3B",
+      "hf_repo_id": "vinguyen0891/Vivy-R-SWE-Code-3B-GGUF",
+      "gguf_filename": "vivy-r-swe-code-3b-q4_k_m.gguf",
+      "v73_safetensors_file": "vivy_r_swe_code_3b_v73_cross_specialist.safetensors",
+      "tensor_count": 240,
+      "size_bytes": 1074684,
+      "sha256": "1dfe47167ca60cc4e46682d15ba332ca1558750bd7932514dafcd69bc474c1cb",
+      "public_bundle_dir": "D:\\91s_Vivy\\Vivy.v6\\models\\r_series\\public_release\\Vivy-R-SWE-Code-3B-GGUF"
+    },
+    {
+      "specialist_index": 5,
+      "model_code": "R-SCIENCE-BIO-3B",
+      "model_name": "Vivy-R-Science-Bio-3B",
+      "hf_repo_id": "vinguyen0891/Vivy-R-Science-Bio-3B-GGUF",
+      "gguf_filename": "vivy-r-science-bio-3b-q4_k_m.gguf",
+      "v73_safetensors_file": "vivy_r_science_bio_3b_v73_cross_specialist.safetensors",
+      "tensor_count": 240,
+      "size_bytes": 1111072,
+      "sha256": "f5077a8d8f2a271f6e4050033e10bce345e73d620d0fadac334bb31746882d12",
+      "public_bundle_dir": "D:\\91s_Vivy\\Vivy.v6\\models\\r_series\\public_release\\Vivy-R-Science-Bio-3B-GGUF"
+    }
+  ]
+}

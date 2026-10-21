@@ -1,6 +1,6 @@
 {
   "schema": "vivy.v6.vytrading_v69_zero_bridge_hot_reload.v1",
-  "reloaded_at_utc": "2026-10-21T07:32:20Z",
+  "reloaded_at_utc": "2026-10-21T08:33:41Z",
   "v69_zero_bridge_safetensors_path": "D:\\91s_Vivy\\Vivy.v6\\models\\r_series\\checkpoints\\vivy_r_finance_3b_v69_zero_bridge.safetensors",
   "v69_zero_bridge_safetensors_loaded": true,
   "v69_zero_bridge_tensor_count": 220,

@@ -1,7 +1,7 @@
 {
   "schema": "vivy.v6.stage_m3_and_five_specialist_receipt.v1",
   "receipt_id": "R-067",
-  "created_at_utc": "2026-10-21T07:34:16.835110+00:00",
+  "created_at_utc": "2026-10-21T08:38:13.171983+00:00",
   "unified_organism_invariants": {
     "is_single_unified_organism": true,
     "entity_count": 1,
@@ -227,7 +227,7 @@
   "vytrading_v70_hot_reload_receipt": {
     "schema": "vivy.v6.vytrading_v70_hot_reload_receipt.v1",
     "receipt_id": "R-067-VYTRADING-V70-HOT-RELOAD",
-    "reloaded_at_utc": "2026-10-21T07:34:16.214856+00:00",
+    "reloaded_at_utc": "2026-10-21T08:38:11.869510+00:00",
     "mt5_account_login": 5057462812,
     "account_balance_usd": 21985.92,
     "account_equity_usd": 21987.84,
@@ -256,7 +256,7 @@
     "total_contrastive_tasks": 30,
     "target_window_tasks_range": "18 - 45 contrastive tasks",
     "target_wall_clock_ceiling_minutes": 15.0,
-    "measured_wall_clock_seconds": 0.0095,
+    "measured_wall_clock_seconds": 0.0188,
     "within_15_minute_ceiling": true,
     "round_progression": [
       {
@@ -302,7 +302,7 @@
       "chosen_patch": "SYNTHESIZE_AST_INVARIANT_ASYNC_EXITSTACK_VERIFIED_PATCH",
       "confidence_score": 1.289004,
       "rust_svd_energy": 0.992956,
-      "latency_ms": 1.2512,
+      "latency_ms": 2.3565,
       "active_intermediate_bridges": 0
     },
     "science_bio_3b_sample_execution": {
@@ -313,7 +313,7 @@
       "chosen_mechanism": "ALLOSTERIC_RESCUE_CLEFT_STABILIZATION_EIGENMODE_LOCK",
       "confidence_score": 1.053485,
       "rust_svd_energy": 0.9786,
-      "latency_ms": 0.9516,
+      "latency_ms": 2.5394,
       "active_intermediate_bridges": 0
     }
   },

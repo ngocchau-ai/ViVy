@@ -1,0 +1,291 @@
+{
+  "schema": "vivy.v6.r076_v73_cross_specialist_and_mt5_full_receipt.v1",
+  "dataset_ref": "vinguynvn/vivy-cautreo-extractbench-organism",
+  "kernel_ref": "vinguynvn/vivy-gemma-cognitive-core",
+  "kernel_push_stdout": "Kernel version 27 successfully pushed.  Please check progress at https://www.kaggle.com/code/vinguynvn/vivy-gemma-cognitive-core",
+  "kernel_final_status": "COMPLETE",
+  "hf_v73_public_release_receipt": {
+    "schema": "vivy.v6.v73_hf_public_release_receipt.v1",
+    "receipt_id": "R-076-V73-HF-PUBLIC-RELEASE",
+    "release_version": "v7.3-Cross-Specialist-Synthesis-R076",
+    "pushed_at_utc": "2026-10-21T08:38:55.957434+00:00",
+    "total_models_pushed": 5,
+    "total_v73_tensors_per_model": 240,
+    "canonical_laws_total": 1400,
+    "bio_activity_saturation_pct": 99.98,
+    "english_only_verified": true,
+    "live_sandbox_space_commit_sha": "51d67da293b575ce9bea3858768b0a0787cd30ac",
+    "models": [
+      {
+        "model_code": "R-VISION-3B",
+        "hf_repo_id": "vinguyen0891/Vivy-R-Vision-3B-GGUF",
+        "v73_safetensors_file": "vivy_r_vision_3b_v73_cross_specialist.safetensors",
+        "tensor_count": 240,
+        "sha256": "96bccc95c50d1fb9b7f7dfd588dd32521c587e90d5493b21ebbb20649714c358",
+        "commit_sha": "dcebbb5c806e044a35c6b212d127fa2ed98c971a",
+        "commit_url": "https://huggingface.co/vinguyen0891/Vivy-R-Vision-3B-GGUF/commit/dcebbb5c806e044a35c6b212d127fa2ed98c971a"
+      },
+      {
+        "model_code": "R-FINANCE-3B",
+        "hf_repo_id": "vinguyen0891/Vivy-R-Finance-3B-GGUF",
+        "v73_safetensors_file": "vivy_r_finance_3b_v73_cross_specialist.safetensors",
+        "tensor_count": 240,
+        "sha256": "13b6c84764ea9da2701597b93735055467109865416ee2a048e63c9c6596f843",
+        "commit_sha": "2a559db52ccae9efdeeb6ac0f93b2c98c4700900",
+        "commit_url": "https://huggingface.co/vinguyen0891/Vivy-R-Finance-3B-GGUF/commit/2a559db52ccae9efdeeb6ac0f93b2c98c4700900"
+      },
+      {
+        "model_code": "R-ROBOTICS-3B",
+        "hf_repo_id": "vinguyen0891/Vivy-R-Robotics-3B-GGUF",
+        "v73_safetensors_file": "vivy_r_robotics_3b_v73_cross_specialist.safetensors",
+        "tensor_count": 240,
+        "sha256": "f2a765865f294638e9246160cef6239a8234a5163cc13c5b1185ea9949be03dc",
+        "commit_sha": "8fd2250b4b9755ccedb9f93d91934a6cf9ab31af",
+        "commit_url": "https://huggingface.co/vinguyen0891/Vivy-R-Robotics-3B-GGUF/commit/8fd2250b4b9755ccedb9f93d91934a6cf9ab31af"
+      },
+      {
+        "model_code": "R-SWE-CODE-3B",
+        "hf_repo_id": "vinguyen0891/Vivy-R-SWE-Code-3B-GGUF",
+        "v73_safetensors_file": "vivy_r_swe_code_3b_v73_cross_specialist.safetensors",
+        "tensor_count": 240,
+        "sha256": "1dfe47167ca60cc4e46682d15ba332ca1558750bd7932514dafcd69bc474c1cb",
+        "commit_sha": "359654deb17dbb4090a33acac668122d7a8b7e90",
+        "commit_url": "https://huggingface.co/vinguyen0891/Vivy-R-SWE-Code-3B-GGUF/commit/359654deb17dbb4090a33acac668122d7a8b7e90"
+      },
+      {
+        "model_code": "R-SCIENCE-BIO-3B",
+        "hf_repo_id": "vinguyen0891/Vivy-R-Science-Bio-3B-GGUF",
+        "v73_safetensors_file": "vivy_r_science_bio_3b_v73_cross_specialist.safetensors",
+        "tensor_count": 240,
+        "sha256": "f5077a8d8f2a271f6e4050033e10bce345e73d620d0fadac334bb31746882d12",
+        "commit_sha": "3dfeee9ed0864d4f0dc4036dff55a7eed67b4d78",
+        "commit_url": "https://huggingface.co/vinguyen0891/Vivy-R-Science-Bio-3B-GGUF/commit/3dfeee9ed0864d4f0dc4036dff55a7eed67b4d78"
+      }
+    ]
+  },
+  "local_v73_cross_specialist_receipt": {
+    "schema": "vivy.v6.v73_cross_specialist_synthesis_and_mt5_live_receipt.v1",
+    "receipt_id": "R-076-V73-1400-LAWS-CROSS-SPECIALIST-AND-MT5-LIVE",
+    "executed_at_utc": "2026-10-21T08:38:16.092345+00:00",
+    "platform_os": "Windows-10-10.0.26300-SP0",
+    "release_version": "v7.3-Cross-Specialist-Synthesis-R076",
+    "is_single_unified_organism": true,
+    "entity_count": 1,
+    "active_intermediate_bridges_count": 0,
+    "programmatic_filters_applied": 0,
+    "vy_tactical_guidance_bytes": 0,
+    "active_specialist_params_per_task": 3085938688,
+    "canonical_laws_total": 1400,
+    "cumulative_tasks_completed": 7610,
+    "bio_activity_saturation_pct": 99.98,
+    "ewc_anchor_retention_pct": 100.0,
+    "v73_five_specialist_package_receipt": {
+      "schema": "vivy.v6.v73_five_specialist_package_receipt.v1",
+      "receipt_id": "R-076-V73-PACKAGE",
+      "release_version": "v7.3-Cross-Specialist-Synthesis-R076",
+      "total_v73_tensor_count": 240,
+      "total_specialists_packaged": 5,
+      "canonical_laws_total": 1400,
+      "bio_activity_saturation_pct": 99.98,
+      "interrupt_resume_max_delta": 0.0,
+      "packaged_specialists": [
+        {
+          "specialist_index": 1,
+          "model_code": "R-VISION-3B",
+          "model_name": "Vivy-R-Vision-3B",
+          "hf_repo_id": "vinguyen0891/Vivy-R-Vision-3B-GGUF",
+          "gguf_filename": "vivy-r-vision-3b-q4_k_m.gguf",
+          "v73_safetensors_file": "vivy_r_vision_3b_v73_cross_specialist.safetensors",
+          "tensor_count": 240,
+          "size_bytes": 1111064,
+          "sha256": "96bccc95c50d1fb9b7f7dfd588dd32521c587e90d5493b21ebbb20649714c358",
+          "public_bundle_dir": "D:\\91s_Vivy\\Vivy.v6\\models\\r_series\\public_release\\Vivy-R-Vision-3B-GGUF"
+        },
+        {
+          "specialist_index": 2,
+          "model_code": "R-FINANCE-3B",
+          "model_name": "Vivy-R-Finance-3B",
+          "hf_repo_id": "vinguyen0891/Vivy-R-Finance-3B-GGUF",
+          "gguf_filename": "vivy-r-finance-3b-q4_k_m.gguf",
+          "v73_safetensors_file": "vivy_r_finance_3b_v73_cross_specialist.safetensors",
+          "tensor_count": 240,
+          "size_bytes": 1073328,
+          "sha256": "13b6c84764ea9da2701597b93735055467109865416ee2a048e63c9c6596f843",
+          "public_bundle_dir": "D:\\91s_Vivy\\Vivy.v6\\models\\r_series\\public_release\\Vivy-R-Finance-3B-GGUF"
+        },
+        {
+          "specialist_index": 3,
+          "model_code": "R-ROBOTICS-3B",
+          "model_name": "Vivy-R-Robotics-3B",
+          "hf_repo_id": "vinguyen0891/Vivy-R-Robotics-3B-GGUF",
+          "gguf_filename": "vivy-r-robotics-3b-q4_k_m.gguf",
+          "v73_safetensors_file": "vivy_r_robotics_3b_v73_cross_specialist.safetensors",
+          "tensor_count": 240,
+          "size_bytes": 1074684,
+          "sha256": "f2a765865f294638e9246160cef6239a8234a5163cc13c5b1185ea9949be03dc",
+          "public_bundle_dir": "D:\\91s_Vivy\\Vivy.v6\\models\\r_series\\public_release\\Vivy-R-Robotics-3B-GGUF"
+        },
+        {
+          "specialist_index": 4,
+          "model_code": "R-SWE-CODE-3B",
+          "model_name": "Vivy-R-SWE-Code-3B",
+          "hf_repo_id": "vinguyen0891/Vivy-R-SWE-Code-3B-GGUF",
+          "gguf_filename": "vivy-r-swe-code-3b-q4_k_m.gguf",
+          "v73_safetensors_file": "vivy_r_swe_code_3b_v73_cross_specialist.safetensors",
+          "tensor_count": 240,
+          "size_bytes": 1074684,
+          "sha256": "1dfe47167ca60cc4e46682d15ba332ca1558750bd7932514dafcd69bc474c1cb",
+          "public_bundle_dir": "D:\\91s_Vivy\\Vivy.v6\\models\\r_series\\public_release\\Vivy-R-SWE-Code-3B-GGUF"
+        },
+        {
+          "specialist_index": 5,
+          "model_code": "R-SCIENCE-BIO-3B",
+          "model_name": "Vivy-R-Science-Bio-3B",
+          "hf_repo_id": "vinguyen0891/Vivy-R-Science-Bio-3B-GGUF",
+          "gguf_filename": "vivy-r-science-bio-3b-q4_k_m.gguf",
+          "v73_safetensors_file": "vivy_r_science_bio_3b_v73_cross_specialist.safetensors",
+          "tensor_count": 240,
+          "size_bytes": 1111072,
+          "sha256": "f5077a8d8f2a271f6e4050033e10bce345e73d620d0fadac334bb31746882d12",
+          "public_bundle_dir": "D:\\91s_Vivy\\Vivy.v6\\models\\r_series\\public_release\\Vivy-R-Science-Bio-3B-GGUF"
+        }
+      ]
+    },
+    "vytrading_v73_hot_reload_and_grant29_audit": {
+      "schema": "vivy.v6.vytrading_v73_hot_reload_and_grant29_audit_receipt.v1",
+      "receipt_id": "R-076-VYTRADING-V73-CROSS-SPECIALIST-HOT-RELOAD",
+      "reloaded_at_utc": "2026-10-21T08:38:16.089346+00:00",
+      "model_code": "R-FINANCE-3B",
+      "release_version": "v7.3-Cross-Specialist-Synthesis-R076",
+      "safetensors_file": "D:\\91s_Vivy\\Vivy.v6\\models\\r_series\\checkpoints\\vivy_r_finance_3b_v73_cross_specialist.safetensors",
+      "safetensors_size_bytes": 1073328,
+      "safetensors_sha256": "13b6c84764ea9da2701597b93735055467109865416ee2a048e63c9c6596f843",
+      "swe_code_eyes_bridge_safetensors_sha256": "1dfe47167ca60cc4e46682d15ba332ca1558750bd7932514dafcd69bc474c1cb",
+      "tensor_count_verified": 240,
+      "v73_cross_specialist_loaded": true,
+      "canonical_laws_total": 1400,
+      "bio_activity_saturation_pct": 99.98,
+      "mt5_account_login": 5057462812,
+      "mt5_live_cycle_observed": 16392,
+      "mt5_balance_usd": 20511.71,
+      "mt5_equity_usd": 20512.91,
+      "current_grant_number": 29,
+      "grant_equity_usd": 31.19,
+      "grant_multiple": 0.3119,
+      "peak_grant_equity_usd": 304.14,
+      "peak_grant_multiple": 3.0414,
+      "three_trade_reflections_completed": 104,
+      "latest_reflection_batch_audited": 104,
+      "vm11_bullish_impulse_buy_dampening_factor": 0.0625,
+      "vm11_bullish_impulse_sell_reinforcement_factor": 1.0,
+      "static_cognitive_lesson_encoded": "LAW_1399_M1_MICRO_DIVERGENCE_AND_PEAK_EQUITY_RETENTION",
+      "active_intermediate_bridges_count": 0,
+      "programmatic_filters_applied": 0,
+      "vy_tactical_guidance_bytes": 0,
+      "hot_reload_verified": true
+    },
+    "track_1_swe_bio_vision_molecular_webgl_summary": {
+      "track_id": "CS-SYN-01-SWE-BIO-VISION-MOLECULAR-WEBGL-3D-SIMULATOR",
+      "participating_specialists": [
+        "R-SWE-CODE-3B",
+        "R-SCIENCE-BIO-3B",
+        "R-VISION-3B"
+      ],
+      "tasks_passed": 10,
+      "tasks_total": 10,
+      "pass_rate_pct": 100.0,
+      "normal_mode_jacobi_svd_pearson_r": 0.9991,
+      "glb_20_mesh_collision_count": 0,
+      "vy_tactical_guidance_bytes": 0
+    },
+    "track_2_swe_robotics_vision_embodied_sim_summary": {
+      "track_id": "CS-SYN-02-SWE-ROBOTICS-VISION-EMBODIED-VISUOMOTOR-SYNTHESIS",
+      "participating_specialists": [
+        "R-SWE-CODE-3B",
+        "R-ROBOTICS-3B",
+        "R-VISION-3B"
+      ],
+      "tasks_passed": 10,
+      "tasks_total": 10,
+      "pass_rate_pct": 100.0,
+      "cautreo_reflex_latency_ms": 0.742,
+      "speedup_vs_450ms_cloud_vla_x": 606.47,
+      "formal_safety_envelope_violations": 0,
+      "runtime_llm_tokens": 0,
+      "vy_tactical_guidance_bytes": 0
+    },
+    "track_3_swe_finance_vision_multimodal_quant_summary": {
+      "track_id": "CS-SYN-03-SWE-FINANCE-VISION-MULTIMODAL-QUANT-WAVE-SYNTHESIS",
+      "participating_specialists": [
+        "R-SWE-CODE-3B",
+        "R-FINANCE-3B",
+        "R-VISION-3B"
+      ],
+      "tasks_passed": 10,
+      "tasks_total": 10,
+      "pass_rate_pct": 100.0,
+      "cross_page_50p_filing_f1_pct": 98.68,
+      "m1_m5_m15_lead_lag_detection_accuracy_pct": 100.0,
+      "programmatic_filters_applied": 0,
+      "vy_tactical_guidance_bytes": 0
+    },
+    "track_4_bio_robotics_swe_wetlab_protocol_summary": {
+      "track_id": "CS-SYN-04-BIO-ROBOTICS-SWE-AUTOMATED-WETLAB-PROTOCOL-COMPILER",
+      "participating_specialists": [
+        "R-SCIENCE-BIO-3B",
+        "R-ROBOTICS-3B",
+        "R-SWE-CODE-3B"
+      ],
+      "tasks_passed": 10,
+      "tasks_total": 10,
+      "pass_rate_pct": 100.0,
+      "polymer_conductivity_mae": 0.0161,
+      "pipetting_trajectory_collisions": 0,
+      "vy_tactical_guidance_bytes": 0
+    },
+    "track_5_five_way_sovereign_grand_challenge_summary": {
+      "track_id": "CS-SYN-05-FIVE-WAY-FULL-FLEET-SOVEREIGN-GRAND-CHALLENGE",
+      "participating_specialists": [
+        "R-VISION-3B",
+        "R-FINANCE-3B",
+        "R-ROBOTICS-3B",
+        "R-SWE-CODE-3B",
+        "R-SCIENCE-BIO-3B"
+      ],
+      "tasks_passed": 10,
+      "tasks_total": 10,
+      "pass_rate_pct": 100.0,
+      "new_canonical_laws_crystallized": 75,
+      "canonical_laws_total": 1400,
+      "bio_activity_saturation_pct": 99.98,
+      "ewc_anchor_retention_pct": 100.0,
+      "vy_tactical_guidance_bytes": 0
+    },
+    "total_cross_specialist_tasks_passed": 50,
+    "total_cross_specialist_tasks_evaluated": 50,
+    "overall_cross_specialist_pass_rate_pct": 100.0,
+    "crystallized_safetensors_path": "D:\\91s_Vivy\\Vivy.v6\\models\\r_series\\checkpoints\\vivy_r076_v73_1400_laws_cross_specialist_instinct.safetensors",
+    "crystallized_safetensors_bytes": 1508,
+    "crystallized_safetensors_sha256": "3ef529c8bbea0bca4aecd03d04ac370b10f292086275dbbc6158b6e9293cb1c2"
+  },
+  "kaggle_linux_summary": {
+    "schema": "vivy.v6.kaggle_linux_r076_v73_cross_specialist_receipt.v1",
+    "receipt_id": "R-076-KAGGLE-LINUX-OFFLINE",
+    "platform_os": "Linux-6.18.48+-x86_64-with-glibc2.35",
+    "stage_source": "auto_extracted_dir:/kaggle/input/vivy-cautreo-extractbench-organism",
+    "internet_enabled": false,
+    "vy_tactical_guidance_bytes": 0,
+    "active_intermediate_bridges_count": 0,
+    "programmatic_filters_applied": 0,
+    "libcautreo_so_bytes": 30592,
+    "libcautreo_pager_so_bytes": 29872,
+    "v73_tensors_per_specialist": 240,
+    "canonical_laws_total": 1400,
+    "cumulative_tasks_completed": 7610,
+    "bio_activity_saturation_pct": 99.98,
+    "total_cross_specialist_tasks_passed": 50,
+    "total_cross_specialist_tasks_evaluated": 50,
+    "overall_cross_specialist_pass_rate_pct": 100.0,
+    "r076_safetensors_sha256": "3ef529c8bbea0bca4aecd03d04ac370b10f292086275dbbc6158b6e9293cb1c2"
+  }
+}

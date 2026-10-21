@@ -78,5 +78,11 @@
   "v70_swa_compression_ratio": 0.125,
   "v70_dspark_latency_ms": 0.1175,
   "v70_active_intermediate_bridges": 0,
-  "v70_is_single_unified_organism": true
+  "v70_is_single_unified_organism": true,
+  "vivy_release_version": "v7.3-Cross-Specialist-Synthesis-R076",
+  "vivy_v73_safetensors": "vivy_r_finance_3b_v73_cross_specialist.safetensors",
+  "vivy_v73_safetensors_tensors": 240,
+  "vivy_v73_safetensors_sha256": "13b6c84764ea9da2701597b93735055467109865416ee2a048e63c9c6596f843",
+  "vivy_canonical_laws_total": 1400,
+  "vivy_bio_activity_saturation_pct": 99.98
 }

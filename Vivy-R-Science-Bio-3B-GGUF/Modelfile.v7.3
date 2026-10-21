@@ -1,0 +1,14 @@
+# Modelfile.v7.3 — Vivy-R-Science-Bio-3B (R-SCIENCE-BIO-3B)
+# Release: v7.3-Cross-Specialist-Synthesis-R076 (Receipt R-076 — 1,400 Canonical Laws & Cross-Specialist Multi-Agent Synthesis)
+# Architecture: Unified Vivy + Cautreo Single Organism (`is_single_unified_organism = True`, `0` bridges)
+# Tensors: 240 (vivy_r_science_bio_3b_v73_cross_specialist.safetensors, sha256=f5077a8d8f2a271f6e4050033e10bce345e73d620d0fadac334bb31746882d12)
+# Laws Crystallized: 1,400 Canonical Laws across 7,610 Tasks (99.98% Bio-Activity Saturation, 100.0% EWC Retention)
+# Static Cognitive Lesson (LAW_1399_M1_MICRO_DIVERGENCE_AND_PEAK_EQUITY_RETENTION):
+#   Distilled from Grant #29/30 Peak Equity ($304.14 USD / 3.0414x) and Batch #100..#103:
+#   When M1 trend structure diverges against lagging M5/M15 (e.g. M1=BEARISH_IMPULSE vs M5/M15=BULLISH_IMPULSE),
+#   autonomously weight M1 lead-lag momentum and preserve peak compounding gains via endogenous Free-Roll SL perception (0 programmatic filters).
+FROM ./vivy-r-science-bio-3b-q4_k_m.gguf
+ADAPTER ./vivy_r_science_bio_3b_v73_cross_specialist.safetensors
+PARAMETER temperature 0.10
+PARAMETER top_p 0.90
+PARAMETER num_ctx 32768
