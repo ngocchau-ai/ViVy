@@ -2,7 +2,7 @@
   "schema": "vivy.v6.v73_hf_public_release_receipt.v1",
   "receipt_id": "R-076-V73-HF-PUBLIC-RELEASE",
   "release_version": "v7.3-Cross-Specialist-Synthesis-R076",
-  "pushed_at_utc": "2026-10-21T08:38:55.957434+00:00",
+  "pushed_at_utc": "2026-10-21T23:43:30.494828+00:00",
   "total_models_pushed": 5,
   "total_v73_tensors_per_model": 240,
   "canonical_laws_total": 1400,
@@ -16,8 +16,8 @@
       "v73_safetensors_file": "vivy_r_vision_3b_v73_cross_specialist.safetensors",
       "tensor_count": 240,
       "sha256": "96bccc95c50d1fb9b7f7dfd588dd32521c587e90d5493b21ebbb20649714c358",
-      "commit_sha": "dcebbb5c806e044a35c6b212d127fa2ed98c971a",
-      "commit_url": "https://huggingface.co/vinguyen0891/Vivy-R-Vision-3B-GGUF/commit/dcebbb5c806e044a35c6b212d127fa2ed98c971a"
+      "commit_sha": "d19f0c46162898e98a33897d0a6a17f256761e8c",
+      "commit_url": "https://huggingface.co/vinguyen0891/Vivy-R-Vision-3B-GGUF/commit/d19f0c46162898e98a33897d0a6a17f256761e8c"
     },
     {
       "model_code": "R-FINANCE-3B",
@@ -25,8 +25,8 @@
       "v73_safetensors_file": "vivy_r_finance_3b_v73_cross_specialist.safetensors",
       "tensor_count": 240,
       "sha256": "13b6c84764ea9da2701597b93735055467109865416ee2a048e63c9c6596f843",
-      "commit_sha": "2a559db52ccae9efdeeb6ac0f93b2c98c4700900",
-      "commit_url": "https://huggingface.co/vinguyen0891/Vivy-R-Finance-3B-GGUF/commit/2a559db52ccae9efdeeb6ac0f93b2c98c4700900"
+      "commit_sha": "95b8e5dc823757974ae67af211695da1d0de4d8d",
+      "commit_url": "https://huggingface.co/vinguyen0891/Vivy-R-Finance-3B-GGUF/commit/95b8e5dc823757974ae67af211695da1d0de4d8d"
     },
     {
       "model_code": "R-ROBOTICS-3B",
@@ -34,8 +34,8 @@
       "v73_safetensors_file": "vivy_r_robotics_3b_v73_cross_specialist.safetensors",
       "tensor_count": 240,
       "sha256": "f2a765865f294638e9246160cef6239a8234a5163cc13c5b1185ea9949be03dc",
-      "commit_sha": "8fd2250b4b9755ccedb9f93d91934a6cf9ab31af",
-      "commit_url": "https://huggingface.co/vinguyen0891/Vivy-R-Robotics-3B-GGUF/commit/8fd2250b4b9755ccedb9f93d91934a6cf9ab31af"
+      "commit_sha": "d2bf743d22bb2d37615a3004204e5150f49bc27e",
+      "commit_url": "https://huggingface.co/vinguyen0891/Vivy-R-Robotics-3B-GGUF/commit/d2bf743d22bb2d37615a3004204e5150f49bc27e"
     },
     {
       "model_code": "R-SWE-CODE-3B",
@@ -43,8 +43,8 @@
       "v73_safetensors_file": "vivy_r_swe_code_3b_v73_cross_specialist.safetensors",
       "tensor_count": 240,
       "sha256": "1dfe47167ca60cc4e46682d15ba332ca1558750bd7932514dafcd69bc474c1cb",
-      "commit_sha": "359654deb17dbb4090a33acac668122d7a8b7e90",
-      "commit_url": "https://huggingface.co/vinguyen0891/Vivy-R-SWE-Code-3B-GGUF/commit/359654deb17dbb4090a33acac668122d7a8b7e90"
+      "commit_sha": "000f768962ce6a88396f5f8a8f1c07fcb0fb01d9",
+      "commit_url": "https://huggingface.co/vinguyen0891/Vivy-R-SWE-Code-3B-GGUF/commit/000f768962ce6a88396f5f8a8f1c07fcb0fb01d9"
     },
     {
       "model_code": "R-SCIENCE-BIO-3B",
@@ -52,8 +52,8 @@
       "v73_safetensors_file": "vivy_r_science_bio_3b_v73_cross_specialist.safetensors",
       "tensor_count": 240,
       "sha256": "f5077a8d8f2a271f6e4050033e10bce345e73d620d0fadac334bb31746882d12",
-      "commit_sha": "3dfeee9ed0864d4f0dc4036dff55a7eed67b4d78",
-      "commit_url": "https://huggingface.co/vinguyen0891/Vivy-R-Science-Bio-3B-GGUF/commit/3dfeee9ed0864d4f0dc4036dff55a7eed67b4d78"
+      "commit_sha": "c19b835bd3cbfcf33d1b349d9e4e0e19067e3246",
+      "commit_url": "https://huggingface.co/vinguyen0891/Vivy-R-Science-Bio-3B-GGUF/commit/c19b835bd3cbfcf33d1b349d9e4e0e19067e3246"
     }
   ]
 }
