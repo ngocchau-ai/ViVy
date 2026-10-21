@@ -1,0 +1,16 @@
+{
+  "schema": "vivy.v6.vytrading_v71_hot_reload_receipt.v1",
+  "receipt_id": "R-072-VYTRADING-V71-SOVEREIGN-HOT-RELOAD",
+  "reloaded_at_utc": "2026-10-21T04:43:36.282635+00:00",
+  "model_code": "R-FINANCE-3B",
+  "release_version": "v7.1-Stage-M3-Sovereign-5Specialist-R072",
+  "safetensors_file": "D:\\91s_Vivy\\Vivy.v6\\models\\r_series\\checkpoints\\vivy_r_finance_3b_v71_stage_m3_sovereign.safetensors",
+  "safetensors_size_bytes": 1069280,
+  "safetensors_sha256": "81e9ebfcb817b0bcbe5964b6398e8e56767122aad502965b35148964dabae8e1",
+  "tensor_count_verified": 232,
+  "canonical_laws_total": 1250,
+  "active_intermediate_bridges_count": 0,
+  "programmatic_filters_applied": 0,
+  "vy_tactical_guidance_bytes": 0,
+  "hot_reload_verified": true
+}

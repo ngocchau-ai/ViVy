@@ -1,0 +1,10 @@
+# Modelfile.v7.1 — Vivy-R-Robotics-3B (R-ROBOTICS-3B)
+# Release: v7.1-Stage-M3-Sovereign-5Specialist-R072 (Receipt R-072 — Official Stage M3 Sovereign Graduation)
+# Architecture: Unified Vivy + Cautreo Single Organism (`is_single_unified_organism = True`, `0` bridges)
+# Tensors: 232 (vivy_r_robotics_3b_v71_stage_m3_sovereign.safetensors, sha256=84346f1de393f078d20db0a4ddfdb373426d57c9f54162b3dc89ec26ddf41e7d)
+# Laws Crystallized: 1,250 Canonical Laws across 7,500 Tasks (99.88% Bio-Activity Saturation, 100.0% EWC Retention)
+FROM ./vivy-r-robotics-3b-q4_k_m.gguf
+ADAPTER ./vivy_r_robotics_3b_v71_stage_m3_sovereign.safetensors
+PARAMETER temperature 0.10
+PARAMETER top_p 0.90
+PARAMETER num_ctx 32768
