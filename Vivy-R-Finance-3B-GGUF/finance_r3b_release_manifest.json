@@ -126,7 +126,7 @@
       "size_bytes": 2104932800
     },
     "vivy_r_finance_3b_v67_causal_instinct.safetensors": {
-      "size_bytes": 1053040
+      "size_bytes": 1053200
     },
     "Modelfile.v6.7": {
       "size_bytes": 2771
@@ -177,7 +177,7 @@
       "size_bytes": 19360
     },
     "vivy_r_finance_3b_v68_dream_distilled.safetensors": {
-      "size_bytes": 1057952
+      "size_bytes": 1058112
     },
     "vivy_r_finance_3b_dream_distilled_3b_5b.safetensors": {
       "size_bytes": 27176
@@ -186,7 +186,7 @@
       "size_bytes": 1455
     },
     "vivy_r_finance_3b_v69_zero_bridge.safetensors": {
-      "size_bytes": 1063992
+      "size_bytes": 1064152
     },
     "Modelfile.v6.9": {
       "size_bytes": 1309
@@ -290,8 +290,8 @@
   "v67_causal_intuition_release": {
     "v67_release_version": "v6.7-Causal-Intuition-Blind-Top1-R043",
     "v67_safetensors_file": "vivy_r_finance_3b_v67_causal_instinct.safetensors",
-    "v67_safetensors_size_bytes": 1053040,
-    "v67_safetensors_sha256": "f0a653f88ff13e362f8e23ffa9cf384d146336f1b326de5e27a2637a2c18913a",
+    "v67_safetensors_size_bytes": 1053200,
+    "v67_safetensors_sha256": "5bf72d9fc0048baca8b4c5e449fbf647f86258ded45d43412eef5bc15be61a80",
     "base_v66_tensors": 208,
     "added_v67_causal_tensors": 4,
     "total_v67_tensors": 212,
@@ -402,8 +402,8 @@
   "v68_dream_teacher_distilled_release": {
     "v68_release_version": "v6.8-Dream-Teacher-Distilled-3B-5B-R058",
     "v68_safetensors_file": "vivy_r_finance_3b_v68_dream_distilled.safetensors",
-    "v68_safetensors_size_bytes": 1057952,
-    "v68_safetensors_sha256": "6968dbb1d29089ef64bb5235cab383f9d99976b30dc72fbced6b89b7e7731caa",
+    "v68_safetensors_size_bytes": 1058112,
+    "v68_safetensors_sha256": "491c10fa776f06e29145544039a69600f8d02fab7384a033baf389c71a16a22c",
     "base_v67_tensors": 212,
     "added_v68_dream_tensors": 4,
     "total_v68_tensors": 216,
@@ -416,8 +416,8 @@
   "v69_zero_bridge_10x_invasive_release": {
     "v69_release_version": "v6.9-Unified-ZeroBridge-3DWorldArena-R063",
     "v69_safetensors_file": "vivy_r_finance_3b_v69_zero_bridge.safetensors",
-    "v69_safetensors_size_bytes": 1063992,
-    "v69_safetensors_sha256": "1bcbaf22e19c2bd1a117a89926f9526daebaf849986583e8083fcf2ba7953053",
+    "v69_safetensors_size_bytes": 1064152,
+    "v69_safetensors_sha256": "ad67a76ff49938d8573086d05f7483761409d953bf9c70d7af82e3e35548d509",
     "base_v68_tensors": 216,
     "added_v69_zero_bridge_tensors": 4,
     "total_v69_tensors": 220,
@@ -431,7 +431,7 @@
   "v70_release_version": "v7.0-DeepInfer-BioActivity-5Specialist-R067",
   "v70_safetensors_file": "vivy_r_finance_3b_v70_bioactivity.safetensors",
   "v70_safetensors_tensors": 224,
-  "v70_safetensors_size_bytes": 1065872,
-  "v70_safetensors_sha256": "ecde41f10e5e99879860bac77cf364d3665bf8524b5017c72be27220a6b820e7",
+  "v70_safetensors_size_bytes": 1066032,
+  "v70_safetensors_sha256": "76f96461d44b029e2fd8cb6bce867dcc027363f5f2f1f3328869d2e4f27bf8de",
   "v70_effective_envelope_billions": 4.25
 }

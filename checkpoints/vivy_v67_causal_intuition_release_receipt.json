@@ -2,8 +2,8 @@
   "schema": "vivy.v6.v67_causal_intuition_release_receipt.v1",
   "receipt_id": "R-043-V67-PACKAGE",
   "v67_release_version": "v6.7-Causal-Intuition-Blind-Top1-R043",
-  "packaged_at_utc": "2026-10-21T23:46:31.237021+00:00",
-  "elapsed_sec": 0.5888,
+  "packaged_at_utc": "2026-10-22T00:32:25.111870+00:00",
+  "elapsed_sec": 0.3348,
   "bundled_blind_instinct_files": [
     "D:\\91s_Vivy\\Vivy.v6\\models\\r_series\\checkpoints\\vivy_r041_vbench_top3_instinct.safetensors",
     "D:\\91s_Vivy\\Vivy.v6\\models\\r_series\\checkpoints\\vivy_r042_vbench_adversarial_instinct.safetensors",
@@ -50,8 +50,8 @@
       "interrupt_resume_max_delta": 0.0,
       "v67_checkpoint_path": "D:\\91s_Vivy\\Vivy.v6\\models\\r_series\\checkpoints\\vivy_r_finance_3b_v67_causal_instinct.safetensors",
       "v67_bundle_path": "D:\\91s_Vivy\\Vivy.v6\\models\\r_series\\public_release\\Vivy-R-Finance-3B-GGUF\\vivy_r_finance_3b_v67_causal_instinct.safetensors",
-      "v67_size_bytes": 1053040,
-      "v67_sha256": "f0a653f88ff13e362f8e23ffa9cf384d146336f1b326de5e27a2637a2c18913a",
+      "v67_size_bytes": 1053200,
+      "v67_sha256": "5bf72d9fc0048baca8b4c5e449fbf647f86258ded45d43412eef5bc15be61a80",
       "modelfile_v67_path": "D:\\91s_Vivy\\Vivy.v6\\models\\r_series\\public_release\\Vivy-R-Finance-3B-GGUF\\Modelfile.v6.7",
       "modelfile_v67_sha256": "0e9b77bcc28ae2a28dbc12defbf9803dd2fc7e3d0bc7efada35faed1282c5008"
     },

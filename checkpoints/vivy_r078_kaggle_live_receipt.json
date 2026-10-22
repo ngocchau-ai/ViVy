@@ -1,6 +1,6 @@
 {
   "receipt_id": "R-078-KAGGLE-ARC-AGI-2-TOP1",
-  "timestamp_utc": "2026-10-21T23:39:00.977737+00:00",
+  "timestamp_utc": "2026-10-22T00:24:02.124961+00:00",
   "competition_slug": "arc-prize-2026-arc-agi-2",
   "competition_url": "https://www.kaggle.com/competitions/arc-prize-2026-arc-agi-2",
   "leaderboard_url": "https://www.kaggle.com/competitions/arc-prize-2026-arc-agi-2/leaderboard",
@@ -129,16 +129,16 @@
         "active_cautreo_slots": 4,
         "eval_tasks_count": 120,
         "eval_outputs_count": 172,
-        "pass_at_2_score": 79.5833,
-        "strict_solved_tasks": 92,
-        "solved_outputs": 132,
-        "output_accuracy_pct": 76.7442,
+        "pass_at_2_score": 80.4167,
+        "strict_solved_tasks": 93,
+        "solved_outputs": 133,
+        "output_accuracy_pct": 77.3256,
         "beats_public_baseline_3590": true,
         "beats_top3_rabbithole_8083": false,
         "beats_top1_tufa_labs_8806": false,
-        "estimated_leaderboard_rank": 5,
+        "estimated_leaderboard_rank": 4,
         "false_loop_triggered": true,
-        "false_loop_diagnosis": "F1..F4 False-Loop (Survival=0.25): CFG_4SLOT_D4_RELATIONAL_DSL_AND_10PCT_RESIDUAL_REPAIR reached 79.58% (Rank #5) < #1 Tufa Labs (88.06%). Reorienting toward LAW_ARC2_3_LOCALIZED_RESIDUAL_CELL_DELTA_REPAIR.",
+        "false_loop_diagnosis": "F1..F4 False-Loop (Survival=0.25): CFG_4SLOT_D4_RELATIONAL_DSL_AND_10PCT_RESIDUAL_REPAIR reached 80.42% (Rank #4) < #1 Tufa Labs (88.06%). Reorienting toward LAW_ARC2_3_LOCALIZED_RESIDUAL_CELL_DELTA_REPAIR.",
         "vm11_survival_factor": 0.25,
         "cautreo_slot_weights": [
           0.45,
@@ -189,10 +189,10 @@
         "LAW_ARC2_3_LOCALIZED_RESIDUAL_CELL_DELTA_REPAIR",
         "LAW_ARC2_4_ORTHOGONAL_PASS_AT_2_MAX_SUM_BP_ALLOCATION"
       ],
-      "dream_elapsed_ms": 0.114
+      "dream_elapsed_ms": 0.09
     },
     "crystallized_safetensors_path": "/kaggle/working/vivy_r078_arc_agi_2_top1_instinct.safetensors",
-    "crystallized_safetensors_sha256": "955a23878c9d98c2d7799d1c1f2b623b4f61838bbc2b7b0b3ab6edc2b1abd12d",
+    "crystallized_safetensors_sha256": "19738474395e6217119b45a73ee2f9db43061391738c8847e1dc36cff7e086fa",
     "crystallized_safetensors_bytes": 500,
     "submission": {
       "submission_json_path": "/kaggle/working/submission.json",
@@ -203,7 +203,7 @@
       "submission_outputs_count": 259,
       "all_grids_valid_1_to_30": true
     },
-    "elapsed_ms": 43572.027
+    "elapsed_ms": 36689.571
   },
   "stage_b_blind_retake": {
     "stage": "STAGE_B_ZERO_ASSISTANCE_BLIND_RETAKE",
@@ -219,13 +219,18 @@
     "round1_false_loops": 0
   },
   "kaggle_environment": {
-    "platform": "Linux-6.18.48+-x86_64-with-glibc2.39",
-    "python_version": "3.13.15",
+    "platform": "Linux-6.18.48+-x86_64-with-glibc2.35",
+    "python_version": "3.11.13",
     "offline_mode_enforced": true,
     "stage_info": {
       "work_root": "/tmp/vivy_r078_arc2_work",
       "bin_dir": "/tmp/vivy_r078_arc2_work/python/vivy_core/assets/native/bin"
     },
-    "total_wall_ms": 108841.861
+    "gpu_ttt_status": {
+      "gpu_ttt_executed": false,
+      "reason": "interactive_commit_fast_mode",
+      "qwen3_model_path": "/kaggle/input/models/sorokin/qwen3_4b_grids15_sft139/transformers/bfloat16/1"
+    },
+    "total_wall_ms": 107434.498
   }
 }
