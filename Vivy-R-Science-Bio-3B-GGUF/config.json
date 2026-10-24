@@ -2,6 +2,8 @@
   "model_id": "Vivy-V-Science-Bio-3B",
   "generation": "Vivy-V",
   "summary": "Upgraded Vivy-V version with an optimized thinking core.",
+  "development_status": "PAUSED_DEVELOPMENT",
+  "priority_rank": 99,
   "parameter_class": "3.09B (3,085,938,688 parameters)",
   "declared_parameters": 3085938688,
   "open_source_weights": true,
@@ -21,8 +23,8 @@
     "safetensors_sha256": "c0369287fa67165eebe8f6645fdddb9061faca9ed281a57694b0b1146e5d36ad",
     "safetensors_tensor_count": 263,
     "encrypted_architecture_vcore": "vivy-v-science-bio-3b_arch.vcore",
-    "encrypted_architecture_size_bytes": 8524,
-    "encrypted_architecture_sha256": "137ab8d81ecf59ed6ae4d83234361065567daea5d6016116a3cabd7668bc5aa4",
+    "encrypted_architecture_size_bytes": 8549,
+    "encrypted_architecture_sha256": "a13cf16de994cf4acad287414e1b36201c5f46751a2631a3507b2851d36277e9",
     "modelfile": "Modelfile"
   }
 }

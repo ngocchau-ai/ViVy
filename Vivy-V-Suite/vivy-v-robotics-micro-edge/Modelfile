@@ -1,8 +1,8 @@
 # Modelfile.vivy-v — Vivy-V-Robotics-Micro-Edge
 # Generation: Vivy-V (Upgraded Version — Optimized Thinking Core)
 # Legacy Supersession: Vivy-R-Robotics-Micro-Edge (v7.4) [ARCHIVED_LEGACY_VIVY_V6]
-# Weights Policy: Open-Source Full Weights (vivy-v-robotics-micro-edge-q4_k_m.gguf + vivy-v-robotics-micro-edge_weights.safetensors, sha256=a8d391d7481d6821de83dbad65ac9a49c41e97a7f8a4a47262ed98de83e1e4d1)
-# Architecture Policy: Encrypted Vivy-V Architecture (vivy-v-robotics-micro-edge_arch.vcore, format=VIVY_V_ARCH_ENC_V1, sha256=b03579f1300a9cc8ce2693ea1749ee17e659cfe1623005a3dc31afa77641c466)
+# Weights Policy: Open-Source Full Weights (vivy-v-robotics-micro-edge-q4_k_m.gguf + vivy-v-robotics-micro-edge_weights.safetensors, sha256=54cf10ee2f1a2e8ab4e4e1e15dd5b46787b45ee1b969afe4255fcf41a63b885e)
+# Architecture Policy: Encrypted Vivy-V Architecture (vivy-v-robotics-micro-edge_arch.vcore, format=VIVY_V_ARCH_ENC_V1, sha256=b6e8ad5a1665a869e0527034e637e079bc7ace7b7ca937fe4fb82542cc3fafe4)
 FROM ./vivy-v-robotics-micro-edge-q4_k_m.gguf
 ADAPTER ./vivy-v-robotics-micro-edge_weights.safetensors
 PARAMETER temperature 0.15

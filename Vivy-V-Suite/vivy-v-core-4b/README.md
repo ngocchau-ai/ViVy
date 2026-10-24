@@ -17,6 +17,7 @@ tags:
 - **Model Family:** `Vivy-V`
 - **Model ID:** `Vivy-V-Core-4B`
 - **Domain Focus:** Unified General & Multimodal Thinking Core
+- **Development Status:** `ACTIVE_CORE_FOUNDATION`
 - **Parameter Class:** 4.09B (3.09B + 0.49B + 0.51B Vivy-V Core)
 - **Release Policy:** **Open-Source Model Weights (`Apache-2.0`)** + **Encrypted Proprietary `Vivy-V` Architecture (`.vcore`)**
 - **Legacy Lineage Stamp:** Replaces `Vivy-v6.8-Unified-Organism` (`[ARCHIVED_LEGACY_VIVY_V6]`)
@@ -39,7 +40,7 @@ In accordance with the `Vivy-V` release policy, **model weights are open-source*
 |---|---|---|---|
 | `vivy-v-core-4b-q4_k_m.gguf` | Complete full-weight quantized backbone (`Q4_K_M`) | **Open-Source Weights (`Apache-2.0`)** | `GGUF v3` |
 | `vivy-v-core-4b_weights.safetensors` | Complete `Vivy-V` fine-tuned weight tensors (`weights.layer_*`, SHA-256: `86568e019d488708...`) | **Open-Source Weights (`Apache-2.0`)** | `.safetensors` |
-| `vivy-v-core-4b_arch.vcore` | Encrypted `Vivy-V` thinking-core architecture & routing topology (SHA-256: `619d9fdbf9143a9c...`) | **Encrypted Architecture (`VIVY_V_ARCH_ENC_V1`)** | `.vcore` (`VCORE3`) |
+| `vivy-v-core-4b_arch.vcore` | Encrypted `Vivy-V` thinking-core architecture & routing topology (SHA-256: `69f0a880f21aa821...`) | **Encrypted Architecture (`VIVY_V_ARCH_ENC_V1`)** | `.vcore` (`VCORE3`) |
 | `Modelfile` / `Modelfile.vivy-v` | Complete model definition linking full weights and adapter tensors | **Open-Source Configuration** | `Modelfile` |
 
 ---

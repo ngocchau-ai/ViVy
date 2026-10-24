@@ -2,6 +2,8 @@
   "model_id": "Vivy-V-Robotics-Micro-Edge",
   "generation": "Vivy-V",
   "summary": "Upgraded Vivy-V version with an optimized thinking core.",
+  "development_status": "ACTIVE_EMBEDDED_EDGE",
+  "priority_rank": 4,
   "parameter_class": "0.50B Embedded + Vivy-V Micro Core",
   "declared_parameters": 495000000,
   "open_source_weights": true,
@@ -18,11 +20,11 @@
     "gguf_size_bytes": 491400032,
     "safetensors_weights": "vivy-v-robotics-micro-edge_weights.safetensors",
     "safetensors_size_bytes": 927148,
-    "safetensors_sha256": "a8d391d7481d6821de83dbad65ac9a49c41e97a7f8a4a47262ed98de83e1e4d1",
+    "safetensors_sha256": "54cf10ee2f1a2e8ab4e4e1e15dd5b46787b45ee1b969afe4255fcf41a63b885e",
     "safetensors_tensor_count": 108,
     "encrypted_architecture_vcore": "vivy-v-robotics-micro-edge_arch.vcore",
-    "encrypted_architecture_size_bytes": 6613,
-    "encrypted_architecture_sha256": "b03579f1300a9cc8ce2693ea1749ee17e659cfe1623005a3dc31afa77641c466",
+    "encrypted_architecture_size_bytes": 6608,
+    "encrypted_architecture_sha256": "b6e8ad5a1665a869e0527034e637e079bc7ace7b7ca937fe4fb82542cc3fafe4",
     "modelfile": "Modelfile"
   }
 }

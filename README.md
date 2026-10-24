@@ -2,6 +2,10 @@
 
 - **Current Active Generation:** **`Vivy-V`** (Upgraded Version — Optimized Thinking Core)
 - **Prior Generation Status:** **`Vivy.v6`** (`v6.0` – `v7.4`) is officially stamped and archived as **`[ARCHIVED_LEGACY_VIVY_V6]`**
+- **Strategic Development Focus:**
+  - **Priority #1 (Top Priority):** **`Vivy-V-CyberSec-3B`** (`TOP_PRIORITY_1_ACTIVE_EXPANSION`)
+  - **Priority #2 (Primary Expansion):** **`Vivy-V-Vision-3B`** (`ACTIVE_PRIMARY_EXPANSION`)
+  - **Paused Tracks:** **`Vivy-V-SWE-Code-3B`** & **`Vivy-V-Science-Bio-3B`** (`PAUSED_DEVELOPMENT`)
 - **Release & Licensing Policy:**
   - **Model Weights (`.gguf`, `.safetensors`, `Modelfile`):** **Open-Source (`Apache-2.0`)**
   - **`Vivy-V` Thinking-Core Architecture (`.vcore`):** **Proprietary & Cryptographically Encrypted (`VIVY_V_ARCH_ENC_V1`, `open_source_architecture = False`)**
@@ -20,16 +24,16 @@ In this release:
 
 ## 2. `Vivy-V` Complete Model Suite
 
-| Model ID | Parameter Class | Open-Source Weights (`Apache-2.0`) | Encrypted Architecture (`VIVY_V_ARCH_ENC_V1`) | Superseded Legacy Version |
-|---|---|---|---|---|
-| **`Vivy-V-Core-4B`** | `4.09B (3.09B + 0.49B + 0.51B Vivy-V Core)` | `vivy-v-core-4b_weights.safetensors` + `.gguf` (`Open-Source Weights`) | `vivy-v-core-4b_arch.vcore` (`Encrypted Vivy-V Architecture`) | `Vivy-v6.8-Unified-Organism` (`[ARCHIVED_LEGACY_VIVY_V6]`) |
-| **`Vivy-V-Vision-3B`** | `3.09B (3,085,938,688 parameters)` | `vivy-v-vision-3b_weights.safetensors` + `.gguf` (`Open-Source Weights`) | `vivy-v-vision-3b_arch.vcore` (`Encrypted Vivy-V Architecture`) | `Vivy-R-Vision-3B (v6.6..v7.4)` (`[ARCHIVED_LEGACY_VIVY_V6]`) |
-| **`Vivy-V-Finance-3B`** | `3.09B (3,085,938,688 parameters)` | `vivy-v-finance-3b_weights.safetensors` + `.gguf` (`Open-Source Weights`) | `vivy-v-finance-3b_arch.vcore` (`Encrypted Vivy-V Architecture`) | `Vivy-R-Finance-3B (v6.6..v7.4)` (`[ARCHIVED_LEGACY_VIVY_V6]`) |
-| **`Vivy-V-Robotics-3B`** | `3.09B (3,085,938,688 parameters)` | `vivy-v-robotics-3b_weights.safetensors` + `.gguf` (`Open-Source Weights`) | `vivy-v-robotics-3b_arch.vcore` (`Encrypted Vivy-V Architecture`) | `Vivy-R-Robotics-3B (v6.6..v7.4)` (`[ARCHIVED_LEGACY_VIVY_V6]`) |
-| **`Vivy-V-SWE-Code-3B`** | `3.09B (3,085,938,688 parameters)` | `vivy-v-swe-code-3b_weights.safetensors` + `.gguf` (`Open-Source Weights`) | `vivy-v-swe-code-3b_arch.vcore` (`Encrypted Vivy-V Architecture`) | `Vivy-R-SWE-Code-3B (v7.0..v7.4)` (`[ARCHIVED_LEGACY_VIVY_V6]`) |
-| **`Vivy-V-Science-Bio-3B`** | `3.09B (3,085,938,688 parameters)` | `vivy-v-science-bio-3b_weights.safetensors` + `.gguf` (`Open-Source Weights`) | `vivy-v-science-bio-3b_arch.vcore` (`Encrypted Vivy-V Architecture`) | `Vivy-R-Science-Bio-3B (v7.0..v7.4)` (`[ARCHIVED_LEGACY_VIVY_V6]`) |
-| **`Vivy-V-CyberSec-3B`** | `3.09B (3,085,938,688 parameters)` | `vivy-v-cybersec-3b_weights.safetensors` + `.gguf` (`Open-Source Weights`) | `vivy-v-cybersec-3b_arch.vcore` (`Encrypted Vivy-V Architecture`) | `Vivy-R-CyberSec-3B (v7.3..v7.4)` (`[ARCHIVED_LEGACY_VIVY_V6]`) |
-| **`Vivy-V-Robotics-Micro-Edge`** | `0.50B Embedded + Vivy-V Micro Core` | `vivy-v-robotics-micro-edge_weights.safetensors` + `.gguf` (`Open-Source Weights`) | `vivy-v-robotics-micro-edge_arch.vcore` (`Encrypted Vivy-V Architecture`) | `Vivy-R-Robotics-Micro-Edge (v7.4)` (`[ARCHIVED_LEGACY_VIVY_V6]`) |
+| Model ID | Development Status | Parameter Class | Open-Source Weights (`Apache-2.0`) | Encrypted Architecture (`VIVY_V_ARCH_ENC_V1`) | Superseded Legacy Version |
+|---|---|---|---|---|---|
+| **`Vivy-V-Core-4B`** | `ACTIVE_CORE_FOUNDATION` | `4.09B (3.09B + 0.49B + 0.51B Vivy-V Core)` | `vivy-v-core-4b_weights.safetensors` + `.gguf` (`Open-Source Weights`) | `vivy-v-core-4b_arch.vcore` (`Encrypted Vivy-V Architecture`) | `Vivy-v6.8-Unified-Organism` (`[ARCHIVED_LEGACY_VIVY_V6]`) |
+| **`Vivy-V-Vision-3B`** | `ACTIVE_PRIMARY_EXPANSION` | `3.09B (3,085,938,688 parameters)` | `vivy-v-vision-3b_weights.safetensors` + `.gguf` (`Open-Source Weights`) | `vivy-v-vision-3b_arch.vcore` (`Encrypted Vivy-V Architecture`) | `Vivy-R-Vision-3B (v6.6..v7.4)` (`[ARCHIVED_LEGACY_VIVY_V6]`) |
+| **`Vivy-V-Finance-3B`** | `LOCAL_EXPERIMENTAL_STANDBY` | `3.09B (3,085,938,688 parameters)` | `vivy-v-finance-3b_weights.safetensors` + `.gguf` (`Open-Source Weights`) | `vivy-v-finance-3b_arch.vcore` (`Encrypted Vivy-V Architecture`) | `Vivy-R-Finance-3B (v6.6..v7.4)` (`[ARCHIVED_LEGACY_VIVY_V6]`) |
+| **`Vivy-V-Robotics-3B`** | `ACTIVE_MAINTENANCE` | `3.09B (3,085,938,688 parameters)` | `vivy-v-robotics-3b_weights.safetensors` + `.gguf` (`Open-Source Weights`) | `vivy-v-robotics-3b_arch.vcore` (`Encrypted Vivy-V Architecture`) | `Vivy-R-Robotics-3B (v6.6..v7.4)` (`[ARCHIVED_LEGACY_VIVY_V6]`) |
+| **`Vivy-V-SWE-Code-3B`** | `PAUSED_DEVELOPMENT` | `3.09B (3,085,938,688 parameters)` | `vivy-v-swe-code-3b_weights.safetensors` + `.gguf` (`Open-Source Weights`) | `vivy-v-swe-code-3b_arch.vcore` (`Encrypted Vivy-V Architecture`) | `Vivy-R-SWE-Code-3B (v7.0..v7.4)` (`[ARCHIVED_LEGACY_VIVY_V6]`) |
+| **`Vivy-V-Science-Bio-3B`** | `PAUSED_DEVELOPMENT` | `3.09B (3,085,938,688 parameters)` | `vivy-v-science-bio-3b_weights.safetensors` + `.gguf` (`Open-Source Weights`) | `vivy-v-science-bio-3b_arch.vcore` (`Encrypted Vivy-V Architecture`) | `Vivy-R-Science-Bio-3B (v7.0..v7.4)` (`[ARCHIVED_LEGACY_VIVY_V6]`) |
+| **`Vivy-V-CyberSec-3B`** | `TOP_PRIORITY_1_ACTIVE_EXPANSION` | `3.09B (3,085,938,688 parameters)` | `vivy-v-cybersec-3b_weights.safetensors` + `.gguf` (`Open-Source Weights`) | `vivy-v-cybersec-3b_arch.vcore` (`Encrypted Vivy-V Architecture`) | `Vivy-R-CyberSec-3B (v7.3..v7.4)` (`[ARCHIVED_LEGACY_VIVY_V6]`) |
+| **`Vivy-V-Robotics-Micro-Edge`** | `ACTIVE_EMBEDDED_EDGE` | `0.50B Embedded + Vivy-V Micro Core` | `vivy-v-robotics-micro-edge_weights.safetensors` + `.gguf` (`Open-Source Weights`) | `vivy-v-robotics-micro-edge_arch.vcore` (`Encrypted Vivy-V Architecture`) | `Vivy-R-Robotics-Micro-Edge (v7.4)` (`[ARCHIVED_LEGACY_VIVY_V6]`) |
 
 ---
 

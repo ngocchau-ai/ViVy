@@ -2,7 +2,7 @@
 # Generation: Vivy-V (Upgraded Version — Optimized Thinking Core)
 # Legacy Supersession: Vivy-R-SWE-Code-3B (v7.0..v7.4) [ARCHIVED_LEGACY_VIVY_V6]
 # Weights Policy: Open-Source Full Weights (vivy-v-swe-code-3b-q4_k_m.gguf + vivy-v-swe-code-3b_weights.safetensors, sha256=16d526620eea462d67d023f54daab68170d9fde990bb5fd9e9a10bf040078087)
-# Architecture Policy: Encrypted Vivy-V Architecture (vivy-v-swe-code-3b_arch.vcore, format=VIVY_V_ARCH_ENC_V1, sha256=5d4823448587db70397980f5f6c07449512882483dae94e294101f3b0509b672)
+# Architecture Policy: Encrypted Vivy-V Architecture (vivy-v-swe-code-3b_arch.vcore, format=VIVY_V_ARCH_ENC_V1, sha256=0b9810d6d3e9ba5565f4ddcb31f4eeefd8f9b7ad7251250c29bceacc25d5d3ba)
 FROM ./vivy-v-swe-code-3b-q4_k_m.gguf
 ADAPTER ./vivy-v-swe-code-3b_weights.safetensors
 PARAMETER temperature 0.15

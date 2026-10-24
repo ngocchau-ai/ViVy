@@ -2,7 +2,7 @@
 # Generation: Vivy-V (Upgraded Version — Optimized Thinking Core)
 # Legacy Supersession: Vivy-R-Robotics-3B (v6.6..v7.4) [ARCHIVED_LEGACY_VIVY_V6]
 # Weights Policy: Open-Source Full Weights (vivy-v-robotics-3b-q4_k_m.gguf + vivy-v-robotics-3b_weights.safetensors, sha256=22c8b0b68ab431128408cf78ff071e83e67e5acceaef77602a67a284e25580c7)
-# Architecture Policy: Encrypted Vivy-V Architecture (vivy-v-robotics-3b_arch.vcore, format=VIVY_V_ARCH_ENC_V1, sha256=f5d10e4140435c0a257a7617193b403f7504e2553406ab09ecc1d4263158950e)
+# Architecture Policy: Encrypted Vivy-V Architecture (vivy-v-robotics-3b_arch.vcore, format=VIVY_V_ARCH_ENC_V1, sha256=e0a2c5ac55939a92644d692ff99a07852215c643fb04ec3e669b53c1efb635cd)
 FROM ./vivy-v-robotics-3b-q4_k_m.gguf
 ADAPTER ./vivy-v-robotics-3b_weights.safetensors
 PARAMETER temperature 0.15

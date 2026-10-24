@@ -2,6 +2,8 @@
   "model_id": "Vivy-V-Robotics-3B",
   "generation": "Vivy-V",
   "summary": "Upgraded Vivy-V version with an optimized thinking core.",
+  "development_status": "ACTIVE_MAINTENANCE",
+  "priority_rank": 4,
   "parameter_class": "3.09B (3,085,938,688 parameters)",
   "declared_parameters": 3085938688,
   "open_source_weights": true,
@@ -21,8 +23,8 @@
     "safetensors_sha256": "22c8b0b68ab431128408cf78ff071e83e67e5acceaef77602a67a284e25580c7",
     "safetensors_tensor_count": 338,
     "encrypted_architecture_vcore": "vivy-v-robotics-3b_arch.vcore",
-    "encrypted_architecture_size_bytes": 9202,
-    "encrypted_architecture_sha256": "f5d10e4140435c0a257a7617193b403f7504e2553406ab09ecc1d4263158950e",
+    "encrypted_architecture_size_bytes": 9198,
+    "encrypted_architecture_sha256": "e0a2c5ac55939a92644d692ff99a07852215c643fb04ec3e669b53c1efb635cd",
     "modelfile": "Modelfile"
   }
 }

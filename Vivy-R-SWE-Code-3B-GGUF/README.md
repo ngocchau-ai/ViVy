@@ -17,6 +17,7 @@ tags:
 - **Model Family:** `Vivy-V`
 - **Model ID:** `Vivy-V-SWE-Code-3B`
 - **Domain Focus:** Software Engineering & Code Analysis Thinking Core
+- **Development Status:** `PAUSED_DEVELOPMENT`
 - **Parameter Class:** 3.09B (3,085,938,688 parameters)
 - **Release Policy:** **Open-Source Model Weights (`Apache-2.0`)** + **Encrypted Proprietary `Vivy-V` Architecture (`.vcore`)**
 - **Legacy Lineage Stamp:** Replaces `Vivy-R-SWE-Code-3B (v7.0..v7.4)` (`[ARCHIVED_LEGACY_VIVY_V6]`)
@@ -39,7 +40,7 @@ In accordance with the `Vivy-V` release policy, **model weights are open-source*
 |---|---|---|---|
 | `vivy-v-swe-code-3b-q4_k_m.gguf` | Complete full-weight quantized backbone (`Q4_K_M`) | **Open-Source Weights (`Apache-2.0`)** | `GGUF v3` |
 | `vivy-v-swe-code-3b_weights.safetensors` | Complete `Vivy-V` fine-tuned weight tensors (`weights.layer_*`, SHA-256: `16d526620eea462d...`) | **Open-Source Weights (`Apache-2.0`)** | `.safetensors` |
-| `vivy-v-swe-code-3b_arch.vcore` | Encrypted `Vivy-V` thinking-core architecture & routing topology (SHA-256: `5d4823448587db70...`) | **Encrypted Architecture (`VIVY_V_ARCH_ENC_V1`)** | `.vcore` (`VCORE3`) |
+| `vivy-v-swe-code-3b_arch.vcore` | Encrypted `Vivy-V` thinking-core architecture & routing topology (SHA-256: `0b9810d6d3e9ba55...`) | **Encrypted Architecture (`VIVY_V_ARCH_ENC_V1`)** | `.vcore` (`VCORE3`) |
 | `Modelfile` / `Modelfile.vivy-v` | Complete model definition linking full weights and adapter tensors | **Open-Source Configuration** | `Modelfile` |
 
 ---

@@ -17,6 +17,7 @@ tags:
 - **Model Family:** `Vivy-V`
 - **Model ID:** `Vivy-V-Finance-3B`
 - **Domain Focus:** Quantitative & Analytical Thinking Core
+- **Development Status:** `LOCAL_EXPERIMENTAL_STANDBY`
 - **Parameter Class:** 3.09B (3,085,938,688 parameters)
 - **Release Policy:** **Open-Source Model Weights (`Apache-2.0`)** + **Encrypted Proprietary `Vivy-V` Architecture (`.vcore`)**
 - **Legacy Lineage Stamp:** Replaces `Vivy-R-Finance-3B (v6.6..v7.4)` (`[ARCHIVED_LEGACY_VIVY_V6]`)
@@ -39,7 +40,7 @@ In accordance with the `Vivy-V` release policy, **model weights are open-source*
 |---|---|---|---|
 | `vivy-v-finance-3b-q4_k_m.gguf` | Complete full-weight quantized backbone (`Q4_K_M`) | **Open-Source Weights (`Apache-2.0`)** | `GGUF v3` |
 | `vivy-v-finance-3b_weights.safetensors` | Complete `Vivy-V` fine-tuned weight tensors (`weights.layer_*`, SHA-256: `1a75a5ca084208d7...`) | **Open-Source Weights (`Apache-2.0`)** | `.safetensors` |
-| `vivy-v-finance-3b_arch.vcore` | Encrypted `Vivy-V` thinking-core architecture & routing topology (SHA-256: `878052094358c0e9...`) | **Encrypted Architecture (`VIVY_V_ARCH_ENC_V1`)** | `.vcore` (`VCORE3`) |
+| `vivy-v-finance-3b_arch.vcore` | Encrypted `Vivy-V` thinking-core architecture & routing topology (SHA-256: `45a98ed823e7b9ae...`) | **Encrypted Architecture (`VIVY_V_ARCH_ENC_V1`)** | `.vcore` (`VCORE3`) |
 | `Modelfile` / `Modelfile.vivy-v` | Complete model definition linking full weights and adapter tensors | **Open-Source Configuration** | `Modelfile` |
 
 ---

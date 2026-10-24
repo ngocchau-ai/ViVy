@@ -2,6 +2,8 @@
   "model_id": "Vivy-V-SWE-Code-3B",
   "generation": "Vivy-V",
   "summary": "Upgraded Vivy-V version with an optimized thinking core.",
+  "development_status": "PAUSED_DEVELOPMENT",
+  "priority_rank": 99,
   "parameter_class": "3.09B (3,085,938,688 parameters)",
   "declared_parameters": 3085938688,
   "open_source_weights": true,
@@ -21,8 +23,8 @@
     "safetensors_sha256": "16d526620eea462d67d023f54daab68170d9fde990bb5fd9e9a10bf040078087",
     "safetensors_tensor_count": 263,
     "encrypted_architecture_vcore": "vivy-v-swe-code-3b_arch.vcore",
-    "encrypted_architecture_size_bytes": 8496,
-    "encrypted_architecture_sha256": "5d4823448587db70397980f5f6c07449512882483dae94e294101f3b0509b672",
+    "encrypted_architecture_size_bytes": 8488,
+    "encrypted_architecture_sha256": "0b9810d6d3e9ba5565f4ddcb31f4eeefd8f9b7ad7251250c29bceacc25d5d3ba",
     "modelfile": "Modelfile"
   }
 }

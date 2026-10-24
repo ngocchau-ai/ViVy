@@ -2,6 +2,8 @@
   "model_id": "Vivy-V-CyberSec-3B",
   "generation": "Vivy-V",
   "summary": "Upgraded Vivy-V version with an optimized thinking core.",
+  "development_status": "TOP_PRIORITY_1_ACTIVE_EXPANSION",
+  "priority_rank": 1,
   "parameter_class": "3.09B (3,085,938,688 parameters)",
   "declared_parameters": 3085938688,
   "open_source_weights": true,
@@ -21,8 +23,8 @@
     "safetensors_sha256": "033e7abfea6c01c4a848343349619eb6091953cd9d8471b91bd4b2f9f3d8563b",
     "safetensors_tensor_count": 263,
     "encrypted_architecture_vcore": "vivy-v-cybersec-3b_arch.vcore",
-    "encrypted_architecture_size_bytes": 8508,
-    "encrypted_architecture_sha256": "d1984350423d0a646b64c77dbffe3680e9154fa478738a5d2ae8ef407229277d",
+    "encrypted_architecture_size_bytes": 8514,
+    "encrypted_architecture_sha256": "ca598f2dc08d4168c420f9fecbb5ebace1a18b3d06683dcd052bbc2780b5489c",
     "modelfile": "Modelfile"
   }
 }
