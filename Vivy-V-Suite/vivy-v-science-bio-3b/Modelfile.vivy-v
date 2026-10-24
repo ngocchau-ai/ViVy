@@ -1,0 +1,11 @@
+# Modelfile.vivy-v — Vivy-V-Science-Bio-3B
+# Generation: Vivy-V (Upgraded Version — Optimized Thinking Core)
+# Legacy Supersession: Vivy-R-Science-Bio-3B (v7.0..v7.4) [ARCHIVED_LEGACY_VIVY_V6]
+# Weights Policy: Open-Source Full Weights (vivy-v-science-bio-3b-q4_k_m.gguf + vivy-v-science-bio-3b_weights.safetensors, sha256=c0369287fa67165eebe8f6645fdddb9061faca9ed281a57694b0b1146e5d36ad)
+# Architecture Policy: Encrypted Vivy-V Architecture (vivy-v-science-bio-3b_arch.vcore, format=VIVY_V_ARCH_ENC_V1, sha256=137ab8d81ecf59ed6ae4d83234361065567daea5d6016116a3cabd7668bc5aa4)
+FROM ./vivy-v-science-bio-3b-q4_k_m.gguf
+ADAPTER ./vivy-v-science-bio-3b_weights.safetensors
+PARAMETER temperature 0.15
+PARAMETER top_p 0.90
+PARAMETER num_ctx 32768
+SYSTEM """You are Vivy-V-Science-Bio-3B (Vivy-V generation), an upgraded AI model with an optimized thinking core for accurate, structured, and reliable reasoning."""

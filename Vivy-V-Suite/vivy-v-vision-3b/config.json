@@ -1,0 +1,28 @@
+{
+  "model_id": "Vivy-V-Vision-3B",
+  "generation": "Vivy-V",
+  "summary": "Upgraded Vivy-V version with an optimized thinking core.",
+  "parameter_class": "3.09B (3,085,938,688 parameters)",
+  "declared_parameters": 3085938688,
+  "open_source_weights": true,
+  "weights_license": "apache-2.0",
+  "architecture_encrypted": true,
+  "open_source_architecture": false,
+  "architecture_format": "VIVY_V_ARCH_ENC_V1 (.vcore)",
+  "legacy_vivy_v6_reference": {
+    "legacy_id": "Vivy-R-Vision-3B (v6.6..v7.4)",
+    "status": "ARCHIVED_LEGACY_VIVY_V6"
+  },
+  "files": {
+    "gguf_weights": "vivy-v-vision-3b-q4_k_m.gguf",
+    "gguf_size_bytes": 2104932768,
+    "safetensors_weights": "vivy-v-vision-3b_weights.safetensors",
+    "safetensors_size_bytes": 3789576,
+    "safetensors_sha256": "a07a55ed2dad24fd9ad3636c4ca54033d8f7208e3e55b5c00598046b7861ea43",
+    "safetensors_tensor_count": 288,
+    "encrypted_architecture_vcore": "vivy-v-vision-3b_arch.vcore",
+    "encrypted_architecture_size_bytes": 8740,
+    "encrypted_architecture_sha256": "7f91a599db84342b7adf90e00dcbc0a8a044eb403b435a487bad328075a23f5b",
+    "modelfile": "Modelfile"
+  }
+}

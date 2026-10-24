@@ -1,20 +1,28 @@
 {
-  "model_code": "R-SWE-CODE-3B",
-  "model_name": "Vivy-R-SWE-Code-3B",
-  "v70_release_version": "v7.0-DeepInfer-BioActivity-5Specialist-R067",
-  "v70_unified_safetensors_file": "vivy_r_swe_code_3b_v70_bioactivity.safetensors",
-  "v70_unified_safetensors_tensors": 224,
-  "v70_unified_f32_parameters": 261523,
-  "v70_effective_envelope_billions": 4.38,
-  "v70_specialist_index_of_5": 4,
-  "v70_swa_compression_ratio": 0.125,
-  "v70_dspark_latency_ms": 0.1175,
-  "v70_active_intermediate_bridges": 0,
-  "v70_is_single_unified_organism": true,
-  "vivy_release_version": "v7.3-Cross-Specialist-Synthesis-R076",
-  "vivy_v73_safetensors": "vivy_r_swe_code_3b_v73_cross_specialist.safetensors",
-  "vivy_v73_safetensors_tensors": 240,
-  "vivy_v73_safetensors_sha256": "1dfe47167ca60cc4e46682d15ba332ca1558750bd7932514dafcd69bc474c1cb",
-  "vivy_canonical_laws_total": 1400,
-  "vivy_bio_activity_saturation_pct": 99.98
+  "model_id": "Vivy-V-SWE-Code-3B",
+  "generation": "Vivy-V",
+  "summary": "Upgraded Vivy-V version with an optimized thinking core.",
+  "parameter_class": "3.09B (3,085,938,688 parameters)",
+  "declared_parameters": 3085938688,
+  "open_source_weights": true,
+  "weights_license": "apache-2.0",
+  "architecture_encrypted": true,
+  "open_source_architecture": false,
+  "architecture_format": "VIVY_V_ARCH_ENC_V1 (.vcore)",
+  "legacy_vivy_v6_reference": {
+    "legacy_id": "Vivy-R-SWE-Code-3B (v7.0..v7.4)",
+    "status": "ARCHIVED_LEGACY_VIVY_V6"
+  },
+  "files": {
+    "gguf_weights": "vivy-v-swe-code-3b-q4_k_m.gguf",
+    "gguf_size_bytes": 2104932768,
+    "safetensors_weights": "vivy-v-swe-code-3b_weights.safetensors",
+    "safetensors_size_bytes": 2455488,
+    "safetensors_sha256": "16d526620eea462d67d023f54daab68170d9fde990bb5fd9e9a10bf040078087",
+    "safetensors_tensor_count": 263,
+    "encrypted_architecture_vcore": "vivy-v-swe-code-3b_arch.vcore",
+    "encrypted_architecture_size_bytes": 8496,
+    "encrypted_architecture_sha256": "5d4823448587db70397980f5f6c07449512882483dae94e294101f3b0509b672",
+    "modelfile": "Modelfile"
+  }
 }

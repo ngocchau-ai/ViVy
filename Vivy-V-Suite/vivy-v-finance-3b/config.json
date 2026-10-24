@@ -1,0 +1,28 @@
+{
+  "model_id": "Vivy-V-Finance-3B",
+  "generation": "Vivy-V",
+  "summary": "Upgraded Vivy-V version with an optimized thinking core.",
+  "parameter_class": "3.09B (3,085,938,688 parameters)",
+  "declared_parameters": 3085938688,
+  "open_source_weights": true,
+  "weights_license": "apache-2.0",
+  "architecture_encrypted": true,
+  "open_source_architecture": false,
+  "architecture_format": "VIVY_V_ARCH_ENC_V1 (.vcore)",
+  "legacy_vivy_v6_reference": {
+    "legacy_id": "Vivy-R-Finance-3B (v6.6..v7.4)",
+    "status": "ARCHIVED_LEGACY_VIVY_V6"
+  },
+  "files": {
+    "gguf_weights": "vivy-v-finance-3b-q4_k_m.gguf",
+    "gguf_size_bytes": 2104932768,
+    "safetensors_weights": "vivy-v-finance-3b_weights.safetensors",
+    "safetensors_size_bytes": 2454180,
+    "safetensors_sha256": "1a75a5ca084208d7ddfe741476f598a9827da7986808e1c370dc9dcf218fbac1",
+    "safetensors_tensor_count": 263,
+    "encrypted_architecture_vcore": "vivy-v-finance-3b_arch.vcore",
+    "encrypted_architecture_size_bytes": 8478,
+    "encrypted_architecture_sha256": "878052094358c0e93891b89e09706c0ec8ad8c482c53492174dd15c0644a1935",
+    "modelfile": "Modelfile"
+  }
+}

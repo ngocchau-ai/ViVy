@@ -1,0 +1,1229 @@
+{
+  "manifest_version": "VIVY_V6_LEGACY_ARCHIVE_STAMP_V1",
+  "stamped_at_utc": "2026-10-24T19:40:00Z",
+  "status": "ARCHIVED_LEGACY_VIVY_V6",
+  "policy": "All products completed under Vivy.v6 (v6.0 through v7.4 R-Series) are officially stamped and preserved as legacy versions. Active production and public releases have transitioned to the Vivy-V architecture (Encrypted Architecture in .vcore + Open-Source Weights in .gguf/.safetensors).",
+  "total_archived_entries": 122,
+  "archived_items": [
+    {
+      "artifact_name": "static_fixed_rank.safetensors",
+      "original_path": "D:\\91s_Vivy\\Vivy.v6\\models\\r_series\\checkpoints\\static_fixed_rank.safetensors",
+      "archived_v6_path": "D:\\91s_Vivy\\Vivy.v6\\archives\\vivy_v6_legacy_stamped_2026_10_24\\checkpoints_v6_to_v74\\static_fixed_rank.safetensors",
+      "archived_vivy_v_path": "D:\\91s- T\u00e1i c\u1ea5u tr\u00fac l\u00e2n th\u1ee9 4\\Vivy-V\\models\\legacy_vivy_v6_archive\\checkpoints_v6_to_v74\\static_fixed_rank.safetensors",
+      "size_bytes": 2880,
+      "sha256": "ab93b0150f15779cecfc37d36eb360bf5a30a0cf93b67f6c0821241eb6eb622c",
+      "legacy_version_stamp": "ARCHIVED_LEGACY_VIVY_V6",
+      "superseded_by_architecture": "Vivy-V (Encrypted Architecture + Open-Source Weights)"
+    },
+    {
+      "artifact_name": "vivy_arc3_instinct.safetensors",
+      "original_path": "D:\\91s_Vivy\\Vivy.v6\\models\\r_series\\checkpoints\\vivy_arc3_instinct.safetensors",
+      "archived_v6_path": "D:\\91s_Vivy\\Vivy.v6\\archives\\vivy_v6_legacy_stamped_2026_10_24\\checkpoints_v6_to_v74\\vivy_arc3_instinct.safetensors",
+      "archived_vivy_v_path": "D:\\91s- T\u00e1i c\u1ea5u tr\u00fac l\u00e2n th\u1ee9 4\\Vivy-V\\models\\legacy_vivy_v6_archive\\checkpoints_v6_to_v74\\vivy_arc3_instinct.safetensors",
+      "size_bytes": 9264,
+      "sha256": "4e2860c03b549fa1a83086d10f7fb6e003066b08dfc83d0f7a4e05ca87dc2912",
+      "legacy_version_stamp": "ARCHIVED_LEGACY_VIVY_V6",
+      "superseded_by_architecture": "Vivy-V (Encrypted Architecture + Open-Source Weights)"
+    },
+    {
+      "artifact_name": "vivy_arc3_instinct_harness.safetensors",
+      "original_path": "D:\\91s_Vivy\\Vivy.v6\\models\\r_series\\checkpoints\\vivy_arc3_instinct_harness.safetensors",
+      "archived_v6_path": "D:\\91s_Vivy\\Vivy.v6\\archives\\vivy_v6_legacy_stamped_2026_10_24\\checkpoints_v6_to_v74\\vivy_arc3_instinct_harness.safetensors",
+      "archived_vivy_v_path": "D:\\91s- T\u00e1i c\u1ea5u tr\u00fac l\u00e2n th\u1ee9 4\\Vivy-V\\models\\legacy_vivy_v6_archive\\checkpoints_v6_to_v74\\vivy_arc3_instinct_harness.safetensors",
+      "size_bytes": 9784,
+      "sha256": "31fc209951656b39d37c3660b22da975bbc8e9338c80258453536d6b6599bd04",
+      "legacy_version_stamp": "ARCHIVED_LEGACY_VIVY_V6",
+      "superseded_by_architecture": "Vivy-V (Encrypted Architecture + Open-Source Weights)"
+    },
+    {
+      "artifact_name": "vivy_autopoietic_harness_instinct.safetensors",
+      "original_path": "D:\\91s_Vivy\\Vivy.v6\\models\\r_series\\checkpoints\\vivy_autopoietic_harness_instinct.safetensors",
+      "archived_v6_path": "D:\\91s_Vivy\\Vivy.v6\\archives\\vivy_v6_legacy_stamped_2026_10_24\\checkpoints_v6_to_v74\\vivy_autopoietic_harness_instinct.safetensors",
+      "archived_vivy_v_path": "D:\\91s- T\u00e1i c\u1ea5u tr\u00fac l\u00e2n th\u1ee9 4\\Vivy-V\\models\\legacy_vivy_v6_archive\\checkpoints_v6_to_v74\\vivy_autopoietic_harness_instinct.safetensors",
+      "size_bytes": 10664,
+      "sha256": "c27beb2ba58790c61610158603a20d17c685ff38ca9ea769ba6dcf9f670f2225",
+      "legacy_version_stamp": "ARCHIVED_LEGACY_VIVY_V6",
+      "superseded_by_architecture": "Vivy-V (Encrypted Architecture + Open-Source Weights)"
+    },
+    {
+      "artifact_name": "vivy_code2video_top3_instinct.safetensors",
+      "original_path": "D:\\91s_Vivy\\Vivy.v6\\models\\r_series\\checkpoints\\vivy_code2video_top3_instinct.safetensors",
+      "archived_v6_path": "D:\\91s_Vivy\\Vivy.v6\\archives\\vivy_v6_legacy_stamped_2026_10_24\\checkpoints_v6_to_v74\\vivy_code2video_top3_instinct.safetensors",
+      "archived_vivy_v_path": "D:\\91s- T\u00e1i c\u1ea5u tr\u00fac l\u00e2n th\u1ee9 4\\Vivy-V\\models\\legacy_vivy_v6_archive\\checkpoints_v6_to_v74\\vivy_code2video_top3_instinct.safetensors",
+      "size_bytes": 15000,
+      "sha256": "1ba7547bc1baed1d8dd7c31b379094d2b30d9df2fff3d03868b997c3ebf32c22",
+      "legacy_version_stamp": "ARCHIVED_LEGACY_VIVY_V6",
+      "superseded_by_architecture": "Vivy-V (Encrypted Architecture + Open-Source Weights)"
+    },
+    {
+      "artifact_name": "vivy_evolution_memory_ledger.json",
+      "original_path": "D:\\91s_Vivy\\Vivy.v6\\models\\r_series\\checkpoints\\vivy_evolution_memory_ledger.json",
+      "archived_v6_path": "D:\\91s_Vivy\\Vivy.v6\\archives\\vivy_v6_legacy_stamped_2026_10_24\\checkpoints_v6_to_v74\\vivy_evolution_memory_ledger.json",
+      "archived_vivy_v_path": "D:\\91s- T\u00e1i c\u1ea5u tr\u00fac l\u00e2n th\u1ee9 4\\Vivy-V\\models\\legacy_vivy_v6_archive\\checkpoints_v6_to_v74\\vivy_evolution_memory_ledger.json",
+      "size_bytes": 14958,
+      "sha256": "97a64e5020bbd919293c31c0eb531960c10cc7cf651a228efe06214cd71fff5a",
+      "legacy_version_stamp": "ARCHIVED_LEGACY_VIVY_V6",
+      "superseded_by_architecture": "Vivy-V (Encrypted Architecture + Open-Source Weights)"
+    },
+    {
+      "artifact_name": "vivy_extractbench_evolved.safetensors",
+      "original_path": "D:\\91s_Vivy\\Vivy.v6\\models\\r_series\\checkpoints\\vivy_extractbench_evolved.safetensors",
+      "archived_v6_path": "D:\\91s_Vivy\\Vivy.v6\\archives\\vivy_v6_legacy_stamped_2026_10_24\\checkpoints_v6_to_v74\\vivy_extractbench_evolved.safetensors",
+      "archived_vivy_v_path": "D:\\91s- T\u00e1i c\u1ea5u tr\u00fac l\u00e2n th\u1ee9 4\\Vivy-V\\models\\legacy_vivy_v6_archive\\checkpoints_v6_to_v74\\vivy_extractbench_evolved.safetensors",
+      "size_bytes": 22632,
+      "sha256": "5de017b06be39e55b0ba9671f9562cc671fde366e03dcc671cea66b2d5b6aa74",
+      "legacy_version_stamp": "ARCHIVED_LEGACY_VIVY_V6",
+      "superseded_by_architecture": "Vivy-V (Encrypted Architecture + Open-Source Weights)"
+    },
+    {
+      "artifact_name": "vivy_game_arena_evolved.safetensors",
+      "original_path": "D:\\91s_Vivy\\Vivy.v6\\models\\r_series\\checkpoints\\vivy_game_arena_evolved.safetensors",
+      "archived_v6_path": "D:\\91s_Vivy\\Vivy.v6\\archives\\vivy_v6_legacy_stamped_2026_10_24\\checkpoints_v6_to_v74\\vivy_game_arena_evolved.safetensors",
+      "archived_vivy_v_path": "D:\\91s- T\u00e1i c\u1ea5u tr\u00fac l\u00e2n th\u1ee9 4\\Vivy-V\\models\\legacy_vivy_v6_archive\\checkpoints_v6_to_v74\\vivy_game_arena_evolved.safetensors",
+      "size_bytes": 4928,
+      "sha256": "22fd8e743abb422f6f7b3fce3d6a77b8bd6db678f1b580603a6bd84ee3d2ce37",
+      "legacy_version_stamp": "ARCHIVED_LEGACY_VIVY_V6",
+      "superseded_by_architecture": "Vivy-V (Encrypted Architecture + Open-Source Weights)"
+    },
+    {
+      "artifact_name": "vivy_goal_mastery_instinct.safetensors",
+      "original_path": "D:\\91s_Vivy\\Vivy.v6\\models\\r_series\\checkpoints\\vivy_goal_mastery_instinct.safetensors",
+      "archived_v6_path": "D:\\91s_Vivy\\Vivy.v6\\archives\\vivy_v6_legacy_stamped_2026_10_24\\checkpoints_v6_to_v74\\vivy_goal_mastery_instinct.safetensors",
+      "archived_vivy_v_path": "D:\\91s- T\u00e1i c\u1ea5u tr\u00fac l\u00e2n th\u1ee9 4\\Vivy-V\\models\\legacy_vivy_v6_archive\\checkpoints_v6_to_v74\\vivy_goal_mastery_instinct.safetensors",
+      "size_bytes": 11704,
+      "sha256": "255649fc23fb4449f1ef20c2a051d4b2a9b185f836277c7dc93860c3de9c41ad",
+      "legacy_version_stamp": "ARCHIVED_LEGACY_VIVY_V6",
+      "superseded_by_architecture": "Vivy-V (Encrypted Architecture + Open-Source Weights)"
+    },
+    {
+      "artifact_name": "vivy_open_ended_neurogenesis.safetensors",
+      "original_path": "D:\\91s_Vivy\\Vivy.v6\\models\\r_series\\checkpoints\\vivy_open_ended_neurogenesis.safetensors",
+      "archived_v6_path": "D:\\91s_Vivy\\Vivy.v6\\archives\\vivy_v6_legacy_stamped_2026_10_24\\checkpoints_v6_to_v74\\vivy_open_ended_neurogenesis.safetensors",
+      "archived_vivy_v_path": "D:\\91s- T\u00e1i c\u1ea5u tr\u00fac l\u00e2n th\u1ee9 4\\Vivy-V\\models\\legacy_vivy_v6_archive\\checkpoints_v6_to_v74\\vivy_open_ended_neurogenesis.safetensors",
+      "size_bytes": 37304,
+      "sha256": "909d4f0d7760b25e89df2a2f753aad945ee284993751e8f40bdfebe32ff7c7d2",
+      "legacy_version_stamp": "ARCHIVED_LEGACY_VIVY_V6",
+      "superseded_by_architecture": "Vivy-V (Encrypted Architecture + Open-Source Weights)"
+    },
+    {
+      "artifact_name": "vivy_r041_vbench_top3_instinct.safetensors",
+      "original_path": "D:\\91s_Vivy\\Vivy.v6\\models\\r_series\\checkpoints\\vivy_r041_vbench_top3_instinct.safetensors",
+      "archived_v6_path": "D:\\91s_Vivy\\Vivy.v6\\archives\\vivy_v6_legacy_stamped_2026_10_24\\checkpoints_v6_to_v74\\vivy_r041_vbench_top3_instinct.safetensors",
+      "archived_vivy_v_path": "D:\\91s- T\u00e1i c\u1ea5u tr\u00fac l\u00e2n th\u1ee9 4\\Vivy-V\\models\\legacy_vivy_v6_archive\\checkpoints_v6_to_v74\\vivy_r041_vbench_top3_instinct.safetensors",
+      "size_bytes": 15416,
+      "sha256": "83182e76186d9952e4365c1583174a60e6c4ae3aa07fe44c43c3581f4414cc42",
+      "legacy_version_stamp": "ARCHIVED_LEGACY_VIVY_V6",
+      "superseded_by_architecture": "Vivy-V (Encrypted Architecture + Open-Source Weights)"
+    },
+    {
+      "artifact_name": "vivy_r042_tri_pillar_blind_instinct.safetensors",
+      "original_path": "D:\\91s_Vivy\\Vivy.v6\\models\\r_series\\checkpoints\\vivy_r042_tri_pillar_blind_instinct.safetensors",
+      "archived_v6_path": "D:\\91s_Vivy\\Vivy.v6\\archives\\vivy_v6_legacy_stamped_2026_10_24\\checkpoints_v6_to_v74\\vivy_r042_tri_pillar_blind_instinct.safetensors",
+      "archived_vivy_v_path": "D:\\91s- T\u00e1i c\u1ea5u tr\u00fac l\u00e2n th\u1ee9 4\\Vivy-V\\models\\legacy_vivy_v6_archive\\checkpoints_v6_to_v74\\vivy_r042_tri_pillar_blind_instinct.safetensors",
+      "size_bytes": 27952,
+      "sha256": "e37fac8a1ae50c87e121051ff13db29508b341d943359e138d9dd442a9fe2f2c",
+      "legacy_version_stamp": "ARCHIVED_LEGACY_VIVY_V6",
+      "superseded_by_architecture": "Vivy-V (Encrypted Architecture + Open-Source Weights)"
+    },
+    {
+      "artifact_name": "vivy_r042_vbench_adversarial_instinct.safetensors",
+      "original_path": "D:\\91s_Vivy\\Vivy.v6\\models\\r_series\\checkpoints\\vivy_r042_vbench_adversarial_instinct.safetensors",
+      "archived_v6_path": "D:\\91s_Vivy\\Vivy.v6\\archives\\vivy_v6_legacy_stamped_2026_10_24\\checkpoints_v6_to_v74\\vivy_r042_vbench_adversarial_instinct.safetensors",
+      "archived_vivy_v_path": "D:\\91s- T\u00e1i c\u1ea5u tr\u00fac l\u00e2n th\u1ee9 4\\Vivy-V\\models\\legacy_vivy_v6_archive\\checkpoints_v6_to_v74\\vivy_r042_vbench_adversarial_instinct.safetensors",
+      "size_bytes": 16624,
+      "sha256": "ef962b911bc2ededaacb0f1be0686f1015fffa96a97c3e33ad488e5d41bd3871",
+      "legacy_version_stamp": "ARCHIVED_LEGACY_VIVY_V6",
+      "superseded_by_architecture": "Vivy-V (Encrypted Architecture + Open-Source Weights)"
+    },
+    {
+      "artifact_name": "vivy_r043_physbench_adversarial_instinct.safetensors",
+      "original_path": "D:\\91s_Vivy\\Vivy.v6\\models\\r_series\\checkpoints\\vivy_r043_physbench_adversarial_instinct.safetensors",
+      "archived_v6_path": "D:\\91s_Vivy\\Vivy.v6\\archives\\vivy_v6_legacy_stamped_2026_10_24\\checkpoints_v6_to_v74\\vivy_r043_physbench_adversarial_instinct.safetensors",
+      "archived_vivy_v_path": "D:\\91s- T\u00e1i c\u1ea5u tr\u00fac l\u00e2n th\u1ee9 4\\Vivy-V\\models\\legacy_vivy_v6_archive\\checkpoints_v6_to_v74\\vivy_r043_physbench_adversarial_instinct.safetensors",
+      "size_bytes": 22024,
+      "sha256": "40fc2f708291874f3c8b8e2ad8cf2ab9626a9b7f2488919f6d9c0f622c708287",
+      "legacy_version_stamp": "ARCHIVED_LEGACY_VIVY_V6",
+      "superseded_by_architecture": "Vivy-V (Encrypted Architecture + Open-Source Weights)"
+    },
+    {
+      "artifact_name": "vivy_r043_physbench_unseen_instinct.safetensors",
+      "original_path": "D:\\91s_Vivy\\Vivy.v6\\models\\r_series\\checkpoints\\vivy_r043_physbench_unseen_instinct.safetensors",
+      "archived_v6_path": "D:\\91s_Vivy\\Vivy.v6\\archives\\vivy_v6_legacy_stamped_2026_10_24\\checkpoints_v6_to_v74\\vivy_r043_physbench_unseen_instinct.safetensors",
+      "archived_vivy_v_path": "D:\\91s- T\u00e1i c\u1ea5u tr\u00fac l\u00e2n th\u1ee9 4\\Vivy-V\\models\\legacy_vivy_v6_archive\\checkpoints_v6_to_v74\\vivy_r043_physbench_unseen_instinct.safetensors",
+      "size_bytes": 20704,
+      "sha256": "8ffd16e778a6b0cbbac46a44c1139035b4de84d2b15770489d0ee4f12ea5341a",
+      "legacy_version_stamp": "ARCHIVED_LEGACY_VIVY_V6",
+      "superseded_by_architecture": "Vivy-V (Encrypted Architecture + Open-Source Weights)"
+    },
+    {
+      "artifact_name": "vivy_r050_arc_paper_track_adversarial_instinct.safetensors",
+      "original_path": "D:\\91s_Vivy\\Vivy.v6\\models\\r_series\\checkpoints\\vivy_r050_arc_paper_track_adversarial_instinct.safetensors",
+      "archived_v6_path": "D:\\91s_Vivy\\Vivy.v6\\archives\\vivy_v6_legacy_stamped_2026_10_24\\checkpoints_v6_to_v74\\vivy_r050_arc_paper_track_adversarial_instinct.safetensors",
+      "archived_vivy_v_path": "D:\\91s- T\u00e1i c\u1ea5u tr\u00fac l\u00e2n th\u1ee9 4\\Vivy-V\\models\\legacy_vivy_v6_archive\\checkpoints_v6_to_v74\\vivy_r050_arc_paper_track_adversarial_instinct.safetensors",
+      "size_bytes": 12648,
+      "sha256": "a2bd9fc5083482f7fac010de4964d49543524c1c18210fb3995d690943754ec8",
+      "legacy_version_stamp": "ARCHIVED_LEGACY_VIVY_V6",
+      "superseded_by_architecture": "Vivy-V (Encrypted Architecture + Open-Source Weights)"
+    },
+    {
+      "artifact_name": "vivy_r050_arc_paper_track_instinct.safetensors",
+      "original_path": "D:\\91s_Vivy\\Vivy.v6\\models\\r_series\\checkpoints\\vivy_r050_arc_paper_track_instinct.safetensors",
+      "archived_v6_path": "D:\\91s_Vivy\\Vivy.v6\\archives\\vivy_v6_legacy_stamped_2026_10_24\\checkpoints_v6_to_v74\\vivy_r050_arc_paper_track_instinct.safetensors",
+      "archived_vivy_v_path": "D:\\91s- T\u00e1i c\u1ea5u tr\u00fac l\u00e2n th\u1ee9 4\\Vivy-V\\models\\legacy_vivy_v6_archive\\checkpoints_v6_to_v74\\vivy_r050_arc_paper_track_instinct.safetensors",
+      "size_bytes": 12648,
+      "sha256": "a2bd9fc5083482f7fac010de4964d49543524c1c18210fb3995d690943754ec8",
+      "legacy_version_stamp": "ARCHIVED_LEGACY_VIVY_V6",
+      "superseded_by_architecture": "Vivy-V (Encrypted Architecture + Open-Source Weights)"
+    },
+    {
+      "artifact_name": "vivy_r055_gemma4_paper_track_adversarial_instinct.safetensors",
+      "original_path": "D:\\91s_Vivy\\Vivy.v6\\models\\r_series\\checkpoints\\vivy_r055_gemma4_paper_track_adversarial_instinct.safetensors",
+      "archived_v6_path": "D:\\91s_Vivy\\Vivy.v6\\archives\\vivy_v6_legacy_stamped_2026_10_24\\checkpoints_v6_to_v74\\vivy_r055_gemma4_paper_track_adversarial_instinct.safetensors",
+      "archived_vivy_v_path": "D:\\91s- T\u00e1i c\u1ea5u tr\u00fac l\u00e2n th\u1ee9 4\\Vivy-V\\models\\legacy_vivy_v6_archive\\checkpoints_v6_to_v74\\vivy_r055_gemma4_paper_track_adversarial_instinct.safetensors",
+      "size_bytes": 12808,
+      "sha256": "43a0b41353bc778a7afc75ee6954cef412cbd8203749669c3178dc6130845a5d",
+      "legacy_version_stamp": "ARCHIVED_LEGACY_VIVY_V6",
+      "superseded_by_architecture": "Vivy-V (Encrypted Architecture + Open-Source Weights)"
+    },
+    {
+      "artifact_name": "vivy_r055_gemma4_paper_track_instinct.safetensors",
+      "original_path": "D:\\91s_Vivy\\Vivy.v6\\models\\r_series\\checkpoints\\vivy_r055_gemma4_paper_track_instinct.safetensors",
+      "archived_v6_path": "D:\\91s_Vivy\\Vivy.v6\\archives\\vivy_v6_legacy_stamped_2026_10_24\\checkpoints_v6_to_v74\\vivy_r055_gemma4_paper_track_instinct.safetensors",
+      "archived_vivy_v_path": "D:\\91s- T\u00e1i c\u1ea5u tr\u00fac l\u00e2n th\u1ee9 4\\Vivy-V\\models\\legacy_vivy_v6_archive\\checkpoints_v6_to_v74\\vivy_r055_gemma4_paper_track_instinct.safetensors",
+      "size_bytes": 12808,
+      "sha256": "43a0b41353bc778a7afc75ee6954cef412cbd8203749669c3178dc6130845a5d",
+      "legacy_version_stamp": "ARCHIVED_LEGACY_VIVY_V6",
+      "superseded_by_architecture": "Vivy-V (Encrypted Architecture + Open-Source Weights)"
+    },
+    {
+      "artifact_name": "vivy_r056_deepmind_videoqa_adversarial_instinct.safetensors",
+      "original_path": "D:\\91s_Vivy\\Vivy.v6\\models\\r_series\\checkpoints\\vivy_r056_deepmind_videoqa_adversarial_instinct.safetensors",
+      "archived_v6_path": "D:\\91s_Vivy\\Vivy.v6\\archives\\vivy_v6_legacy_stamped_2026_10_24\\checkpoints_v6_to_v74\\vivy_r056_deepmind_videoqa_adversarial_instinct.safetensors",
+      "archived_vivy_v_path": "D:\\91s- T\u00e1i c\u1ea5u tr\u00fac l\u00e2n th\u1ee9 4\\Vivy-V\\models\\legacy_vivy_v6_archive\\checkpoints_v6_to_v74\\vivy_r056_deepmind_videoqa_adversarial_instinct.safetensors",
+      "size_bytes": 19360,
+      "sha256": "e503e69eef16998e3ea7ba879db391a85b0dda8df05a972a72e915547d5cba53",
+      "legacy_version_stamp": "ARCHIVED_LEGACY_VIVY_V6",
+      "superseded_by_architecture": "Vivy-V (Encrypted Architecture + Open-Source Weights)"
+    },
+    {
+      "artifact_name": "vivy_r056_deepmind_videoqa_instinct.safetensors",
+      "original_path": "D:\\91s_Vivy\\Vivy.v6\\models\\r_series\\checkpoints\\vivy_r056_deepmind_videoqa_instinct.safetensors",
+      "archived_v6_path": "D:\\91s_Vivy\\Vivy.v6\\archives\\vivy_v6_legacy_stamped_2026_10_24\\checkpoints_v6_to_v74\\vivy_r056_deepmind_videoqa_instinct.safetensors",
+      "archived_vivy_v_path": "D:\\91s- T\u00e1i c\u1ea5u tr\u00fac l\u00e2n th\u1ee9 4\\Vivy-V\\models\\legacy_vivy_v6_archive\\checkpoints_v6_to_v74\\vivy_r056_deepmind_videoqa_instinct.safetensors",
+      "size_bytes": 19360,
+      "sha256": "e503e69eef16998e3ea7ba879db391a85b0dda8df05a972a72e915547d5cba53",
+      "legacy_version_stamp": "ARCHIVED_LEGACY_VIVY_V6",
+      "superseded_by_architecture": "Vivy-V (Encrypted Architecture + Open-Source Weights)"
+    },
+    {
+      "artifact_name": "vivy_r060_unseen_name_that_llm_instinct.safetensors",
+      "original_path": "D:\\91s_Vivy\\Vivy.v6\\models\\r_series\\checkpoints\\vivy_r060_unseen_name_that_llm_instinct.safetensors",
+      "archived_v6_path": "D:\\91s_Vivy\\Vivy.v6\\archives\\vivy_v6_legacy_stamped_2026_10_24\\checkpoints_v6_to_v74\\vivy_r060_unseen_name_that_llm_instinct.safetensors",
+      "archived_vivy_v_path": "D:\\91s- T\u00e1i c\u1ea5u tr\u00fac l\u00e2n th\u1ee9 4\\Vivy-V\\models\\legacy_vivy_v6_archive\\checkpoints_v6_to_v74\\vivy_r060_unseen_name_that_llm_instinct.safetensors",
+      "size_bytes": 11352,
+      "sha256": "155bbdf131485d764cea305f2fdd7bbce9351bc4b4156072c4791687a4330d11",
+      "legacy_version_stamp": "ARCHIVED_LEGACY_VIVY_V6",
+      "superseded_by_architecture": "Vivy-V (Encrypted Architecture + Open-Source Weights)"
+    },
+    {
+      "artifact_name": "vivy_r061_invasive_10x_cross_weight_instinct.safetensors",
+      "original_path": "D:\\91s_Vivy\\Vivy.v6\\models\\r_series\\checkpoints\\vivy_r061_invasive_10x_cross_weight_instinct.safetensors",
+      "archived_v6_path": "D:\\91s_Vivy\\Vivy.v6\\archives\\vivy_v6_legacy_stamped_2026_10_24\\checkpoints_v6_to_v74\\vivy_r061_invasive_10x_cross_weight_instinct.safetensors",
+      "archived_vivy_v_path": "D:\\91s- T\u00e1i c\u1ea5u tr\u00fac l\u00e2n th\u1ee9 4\\Vivy-V\\models\\legacy_vivy_v6_archive\\checkpoints_v6_to_v74\\vivy_r061_invasive_10x_cross_weight_instinct.safetensors",
+      "size_bytes": 27056,
+      "sha256": "c412b4fee1ce164d48d7591c1de9fe7b25474b7f0534e8ff21b5af6b29fd26f4",
+      "legacy_version_stamp": "ARCHIVED_LEGACY_VIVY_V6",
+      "superseded_by_architecture": "Vivy-V (Encrypted Architecture + Open-Source Weights)"
+    },
+    {
+      "artifact_name": "vivy_r062_name_that_llm_top1_instinct.safetensors",
+      "original_path": "D:\\91s_Vivy\\Vivy.v6\\models\\r_series\\checkpoints\\vivy_r062_name_that_llm_top1_instinct.safetensors",
+      "archived_v6_path": "D:\\91s_Vivy\\Vivy.v6\\archives\\vivy_v6_legacy_stamped_2026_10_24\\checkpoints_v6_to_v74\\vivy_r062_name_that_llm_top1_instinct.safetensors",
+      "archived_vivy_v_path": "D:\\91s- T\u00e1i c\u1ea5u tr\u00fac l\u00e2n th\u1ee9 4\\Vivy-V\\models\\legacy_vivy_v6_archive\\checkpoints_v6_to_v74\\vivy_r062_name_that_llm_top1_instinct.safetensors",
+      "size_bytes": 516,
+      "sha256": "4cefcaa4df5eb6894d1ecbd98e4788b69314c22ca620484a4537ef8d37cf040e",
+      "legacy_version_stamp": "ARCHIVED_LEGACY_VIVY_V6",
+      "superseded_by_architecture": "Vivy-V (Encrypted Architecture + Open-Source Weights)"
+    },
+    {
+      "artifact_name": "vivy_r063_3d_world_arena_instinct.safetensors",
+      "original_path": "D:\\91s_Vivy\\Vivy.v6\\models\\r_series\\checkpoints\\vivy_r063_3d_world_arena_instinct.safetensors",
+      "archived_v6_path": "D:\\91s_Vivy\\Vivy.v6\\archives\\vivy_v6_legacy_stamped_2026_10_24\\checkpoints_v6_to_v74\\vivy_r063_3d_world_arena_instinct.safetensors",
+      "archived_vivy_v_path": "D:\\91s- T\u00e1i c\u1ea5u tr\u00fac l\u00e2n th\u1ee9 4\\Vivy-V\\models\\legacy_vivy_v6_archive\\checkpoints_v6_to_v74\\vivy_r063_3d_world_arena_instinct.safetensors",
+      "size_bytes": 24008,
+      "sha256": "7c972edcb81848463aa1fcb2ad66978f6df2d5b200859430632988cc3867aa3d",
+      "legacy_version_stamp": "ARCHIVED_LEGACY_VIVY_V6",
+      "superseded_by_architecture": "Vivy-V (Encrypted Architecture + Open-Source Weights)"
+    },
+    {
+      "artifact_name": "vivy_r066_deepinfer_bioactivity_instinct.safetensors",
+      "original_path": "D:\\91s_Vivy\\Vivy.v6\\models\\r_series\\checkpoints\\vivy_r066_deepinfer_bioactivity_instinct.safetensors",
+      "archived_v6_path": "D:\\91s_Vivy\\Vivy.v6\\archives\\vivy_v6_legacy_stamped_2026_10_24\\checkpoints_v6_to_v74\\vivy_r066_deepinfer_bioactivity_instinct.safetensors",
+      "archived_vivy_v_path": "D:\\91s- T\u00e1i c\u1ea5u tr\u00fac l\u00e2n th\u1ee9 4\\Vivy-V\\models\\legacy_vivy_v6_archive\\checkpoints_v6_to_v74\\vivy_r066_deepinfer_bioactivity_instinct.safetensors",
+      "size_bytes": 1856,
+      "sha256": "d73bc436e3d87cea920c9de82ac1ff524a41269d01af61d7fb06181d0928e152",
+      "legacy_version_stamp": "ARCHIVED_LEGACY_VIVY_V6",
+      "superseded_by_architecture": "Vivy-V (Encrypted Architecture + Open-Source Weights)"
+    },
+    {
+      "artifact_name": "vivy_r066_dspark_zero_bridge_state.safetensors",
+      "original_path": "D:\\91s_Vivy\\Vivy.v6\\models\\r_series\\checkpoints\\vivy_r066_dspark_zero_bridge_state.safetensors",
+      "archived_v6_path": "D:\\91s_Vivy\\Vivy.v6\\archives\\vivy_v6_legacy_stamped_2026_10_24\\checkpoints_v6_to_v74\\vivy_r066_dspark_zero_bridge_state.safetensors",
+      "archived_vivy_v_path": "D:\\91s- T\u00e1i c\u1ea5u tr\u00fac l\u00e2n th\u1ee9 4\\Vivy-V\\models\\legacy_vivy_v6_archive\\checkpoints_v6_to_v74\\vivy_r066_dspark_zero_bridge_state.safetensors",
+      "size_bytes": 18776,
+      "sha256": "d6f2a9a4b742b80494ed94f2e9dc35038ed3b1ed657215db49c7b2496e1fddcd",
+      "legacy_version_stamp": "ARCHIVED_LEGACY_VIVY_V6",
+      "superseded_by_architecture": "Vivy-V (Encrypted Architecture + Open-Source Weights)"
+    },
+    {
+      "artifact_name": "vivy_r068_sprint_w1_swe_bio_instinct.safetensors",
+      "original_path": "D:\\91s_Vivy\\Vivy.v6\\models\\r_series\\checkpoints\\vivy_r068_sprint_w1_swe_bio_instinct.safetensors",
+      "archived_v6_path": "D:\\91s_Vivy\\Vivy.v6\\archives\\vivy_v6_legacy_stamped_2026_10_24\\checkpoints_v6_to_v74\\vivy_r068_sprint_w1_swe_bio_instinct.safetensors",
+      "archived_vivy_v_path": "D:\\91s- T\u00e1i c\u1ea5u tr\u00fac l\u00e2n th\u1ee9 4\\Vivy-V\\models\\legacy_vivy_v6_archive\\checkpoints_v6_to_v74\\vivy_r068_sprint_w1_swe_bio_instinct.safetensors",
+      "size_bytes": 1060,
+      "sha256": "19a507cfeafcb5de44f98da5a0793e5cce3303b3ac79fc2ee5e500b95fdaf37c",
+      "legacy_version_stamp": "ARCHIVED_LEGACY_VIVY_V6",
+      "superseded_by_architecture": "Vivy-V (Encrypted Architecture + Open-Source Weights)"
+    },
+    {
+      "artifact_name": "vivy_r070_sprint_w2_vision_robotics_swe_fin_instinct.safetensors",
+      "original_path": "D:\\91s_Vivy\\Vivy.v6\\models\\r_series\\checkpoints\\vivy_r070_sprint_w2_vision_robotics_swe_fin_instinct.safetensors",
+      "archived_v6_path": "D:\\91s_Vivy\\Vivy.v6\\archives\\vivy_v6_legacy_stamped_2026_10_24\\checkpoints_v6_to_v74\\vivy_r070_sprint_w2_vision_robotics_swe_fin_instinct.safetensors",
+      "archived_vivy_v_path": "D:\\91s- T\u00e1i c\u1ea5u tr\u00fac l\u00e2n th\u1ee9 4\\Vivy-V\\models\\legacy_vivy_v6_archive\\checkpoints_v6_to_v74\\vivy_r070_sprint_w2_vision_robotics_swe_fin_instinct.safetensors",
+      "size_bytes": 1516,
+      "sha256": "380131087bc883d9ac615d8be3343ec70b82e263d7f07cee15d29f91b94e97e2",
+      "legacy_version_stamp": "ARCHIVED_LEGACY_VIVY_V6",
+      "superseded_by_architecture": "Vivy-V (Encrypted Architecture + Open-Source Weights)"
+    },
+    {
+      "artifact_name": "vivy_r071_sprint_w3_stage_m2_sovereign_instinct.safetensors",
+      "original_path": "D:\\91s_Vivy\\Vivy.v6\\models\\r_series\\checkpoints\\vivy_r071_sprint_w3_stage_m2_sovereign_instinct.safetensors",
+      "archived_v6_path": "D:\\91s_Vivy\\Vivy.v6\\archives\\vivy_v6_legacy_stamped_2026_10_24\\checkpoints_v6_to_v74\\vivy_r071_sprint_w3_stage_m2_sovereign_instinct.safetensors",
+      "archived_vivy_v_path": "D:\\91s- T\u00e1i c\u1ea5u tr\u00fac l\u00e2n th\u1ee9 4\\Vivy-V\\models\\legacy_vivy_v6_archive\\checkpoints_v6_to_v74\\vivy_r071_sprint_w3_stage_m2_sovereign_instinct.safetensors",
+      "size_bytes": 1612,
+      "sha256": "f9816f0fe893ba9ae1d5d9d66a3d820f2c37eafd733d91a5308095e0103e87da",
+      "legacy_version_stamp": "ARCHIVED_LEGACY_VIVY_V6",
+      "superseded_by_architecture": "Vivy-V (Encrypted Architecture + Open-Source Weights)"
+    },
+    {
+      "artifact_name": "vivy_r072_stage_m3_sovereign_1250_laws_instinct.safetensors",
+      "original_path": "D:\\91s_Vivy\\Vivy.v6\\models\\r_series\\checkpoints\\vivy_r072_stage_m3_sovereign_1250_laws_instinct.safetensors",
+      "archived_v6_path": "D:\\91s_Vivy\\Vivy.v6\\archives\\vivy_v6_legacy_stamped_2026_10_24\\checkpoints_v6_to_v74\\vivy_r072_stage_m3_sovereign_1250_laws_instinct.safetensors",
+      "archived_vivy_v_path": "D:\\91s- T\u00e1i c\u1ea5u tr\u00fac l\u00e2n th\u1ee9 4\\Vivy-V\\models\\legacy_vivy_v6_archive\\checkpoints_v6_to_v74\\vivy_r072_stage_m3_sovereign_1250_laws_instinct.safetensors",
+      "size_bytes": 1360,
+      "sha256": "8e9352f6bf1d59094022bc50bf8d967c931b421bb059d2fbf8bcad37441c7fb5",
+      "legacy_version_stamp": "ARCHIVED_LEGACY_VIVY_V6",
+      "superseded_by_architecture": "Vivy-V (Encrypted Architecture + Open-Source Weights)"
+    },
+    {
+      "artifact_name": "vivy_r073_post_m3_sovereign_ops_instinct.safetensors",
+      "original_path": "D:\\91s_Vivy\\Vivy.v6\\models\\r_series\\checkpoints\\vivy_r073_post_m3_sovereign_ops_instinct.safetensors",
+      "archived_v6_path": "D:\\91s_Vivy\\Vivy.v6\\archives\\vivy_v6_legacy_stamped_2026_10_24\\checkpoints_v6_to_v74\\vivy_r073_post_m3_sovereign_ops_instinct.safetensors",
+      "archived_vivy_v_path": "D:\\91s- T\u00e1i c\u1ea5u tr\u00fac l\u00e2n th\u1ee9 4\\Vivy-V\\models\\legacy_vivy_v6_archive\\checkpoints_v6_to_v74\\vivy_r073_post_m3_sovereign_ops_instinct.safetensors",
+      "size_bytes": 1500,
+      "sha256": "cafeb9599a167c547f16e245e6c22cb0859432f5c9599f75c714a84d0c6fb4d6",
+      "legacy_version_stamp": "ARCHIVED_LEGACY_VIVY_V6",
+      "superseded_by_architecture": "Vivy-V (Encrypted Architecture + Open-Source Weights)"
+    },
+    {
+      "artifact_name": "vivy_r075_v72_ecosystem_and_kaggle_submissions_instinct.safetensors",
+      "original_path": "D:\\91s_Vivy\\Vivy.v6\\models\\r_series\\checkpoints\\vivy_r075_v72_ecosystem_and_kaggle_submissions_instinct.safetensors",
+      "archived_v6_path": "D:\\91s_Vivy\\Vivy.v6\\archives\\vivy_v6_legacy_stamped_2026_10_24\\checkpoints_v6_to_v74\\vivy_r075_v72_ecosystem_and_kaggle_submissions_instinct.safetensors",
+      "archived_vivy_v_path": "D:\\91s- T\u00e1i c\u1ea5u tr\u00fac l\u00e2n th\u1ee9 4\\Vivy-V\\models\\legacy_vivy_v6_archive\\checkpoints_v6_to_v74\\vivy_r075_v72_ecosystem_and_kaggle_submissions_instinct.safetensors",
+      "size_bytes": 1096,
+      "sha256": "c1ef0f0401433b933bfe041ef531e3b80c060d04aaa703f25ef2a9d7339fa563",
+      "legacy_version_stamp": "ARCHIVED_LEGACY_VIVY_V6",
+      "superseded_by_architecture": "Vivy-V (Encrypted Architecture + Open-Source Weights)"
+    },
+    {
+      "artifact_name": "vivy_r076_v73_1400_laws_cross_specialist_instinct.safetensors",
+      "original_path": "D:\\91s_Vivy\\Vivy.v6\\models\\r_series\\checkpoints\\vivy_r076_v73_1400_laws_cross_specialist_instinct.safetensors",
+      "archived_v6_path": "D:\\91s_Vivy\\Vivy.v6\\archives\\vivy_v6_legacy_stamped_2026_10_24\\checkpoints_v6_to_v74\\vivy_r076_v73_1400_laws_cross_specialist_instinct.safetensors",
+      "archived_vivy_v_path": "D:\\91s- T\u00e1i c\u1ea5u tr\u00fac l\u00e2n th\u1ee9 4\\Vivy-V\\models\\legacy_vivy_v6_archive\\checkpoints_v6_to_v74\\vivy_r076_v73_1400_laws_cross_specialist_instinct.safetensors",
+      "size_bytes": 1508,
+      "sha256": "3ef529c8bbea0bca4aecd03d04ac370b10f292086275dbbc6158b6e9293cb1c2",
+      "legacy_version_stamp": "ARCHIVED_LEGACY_VIVY_V6",
+      "superseded_by_architecture": "Vivy-V (Encrypted Architecture + Open-Source Weights)"
+    },
+    {
+      "artifact_name": "vivy_r078_arc_agi_2_top1_instinct.safetensors",
+      "original_path": "D:\\91s_Vivy\\Vivy.v6\\models\\r_series\\checkpoints\\vivy_r078_arc_agi_2_top1_instinct.safetensors",
+      "archived_v6_path": "D:\\91s_Vivy\\Vivy.v6\\archives\\vivy_v6_legacy_stamped_2026_10_24\\checkpoints_v6_to_v74\\vivy_r078_arc_agi_2_top1_instinct.safetensors",
+      "archived_vivy_v_path": "D:\\91s- T\u00e1i c\u1ea5u tr\u00fac l\u00e2n th\u1ee9 4\\Vivy-V\\models\\legacy_vivy_v6_archive\\checkpoints_v6_to_v74\\vivy_r078_arc_agi_2_top1_instinct.safetensors",
+      "size_bytes": 500,
+      "sha256": "19738474395e6217119b45a73ee2f9db43061391738c8847e1dc36cff7e086fa",
+      "legacy_version_stamp": "ARCHIVED_LEGACY_VIVY_V6",
+      "superseded_by_architecture": "Vivy-V (Encrypted Architecture + Open-Source Weights)"
+    },
+    {
+      "artifact_name": "vivy_r081_finance_quantum_algo_hf_receipt.json",
+      "original_path": "D:\\91s_Vivy\\Vivy.v6\\models\\r_series\\checkpoints\\vivy_r081_finance_quantum_algo_hf_receipt.json",
+      "archived_v6_path": "D:\\91s_Vivy\\Vivy.v6\\archives\\vivy_v6_legacy_stamped_2026_10_24\\checkpoints_v6_to_v74\\vivy_r081_finance_quantum_algo_hf_receipt.json",
+      "archived_vivy_v_path": "D:\\91s- T\u00e1i c\u1ea5u tr\u00fac l\u00e2n th\u1ee9 4\\Vivy-V\\models\\legacy_vivy_v6_archive\\checkpoints_v6_to_v74\\vivy_r081_finance_quantum_algo_hf_receipt.json",
+      "size_bytes": 1273,
+      "sha256": "8d3adcf1aac209473ebfd73331605150491be6451edad1d38919644dd938e357",
+      "legacy_version_stamp": "ARCHIVED_LEGACY_VIVY_V6",
+      "superseded_by_architecture": "Vivy-V (Encrypted Architecture + Open-Source Weights)"
+    },
+    {
+      "artifact_name": "vivy_r_cybersec_3b_v68_dream_distilled.safetensors",
+      "original_path": "D:\\91s_Vivy\\Vivy.v6\\models\\r_series\\checkpoints\\vivy_r_cybersec_3b_v68_dream_distilled.safetensors",
+      "archived_v6_path": "D:\\91s_Vivy\\Vivy.v6\\archives\\vivy_v6_legacy_stamped_2026_10_24\\checkpoints_v6_to_v74\\vivy_r_cybersec_3b_v68_dream_distilled.safetensors",
+      "archived_vivy_v_path": "D:\\91s- T\u00e1i c\u1ea5u tr\u00fac l\u00e2n th\u1ee9 4\\Vivy-V\\models\\legacy_vivy_v6_archive\\checkpoints_v6_to_v74\\vivy_r_cybersec_3b_v68_dream_distilled.safetensors",
+      "size_bytes": 1095848,
+      "sha256": "22c766416a432fee01edad3e81059f2db81adbd707d3abc31598dc6e88c9094b",
+      "legacy_version_stamp": "ARCHIVED_LEGACY_VIVY_V6",
+      "superseded_by_architecture": "Vivy-V (Encrypted Architecture + Open-Source Weights)"
+    },
+    {
+      "artifact_name": "vivy_r_cybersec_3b_v70_bioactivity.safetensors",
+      "original_path": "D:\\91s_Vivy\\Vivy.v6\\models\\r_series\\checkpoints\\vivy_r_cybersec_3b_v70_bioactivity.safetensors",
+      "archived_v6_path": "D:\\91s_Vivy\\Vivy.v6\\archives\\vivy_v6_legacy_stamped_2026_10_24\\checkpoints_v6_to_v74\\vivy_r_cybersec_3b_v70_bioactivity.safetensors",
+      "archived_vivy_v_path": "D:\\91s- T\u00e1i c\u1ea5u tr\u00fac l\u00e2n th\u1ee9 4\\Vivy-V\\models\\legacy_vivy_v6_archive\\checkpoints_v6_to_v74\\vivy_r_cybersec_3b_v70_bioactivity.safetensors",
+      "size_bytes": 1103328,
+      "sha256": "bceebc7c6a0c7c36f1c19aeef1dd5779492470cc2ebae0d39b41be059cb48f9c",
+      "legacy_version_stamp": "ARCHIVED_LEGACY_VIVY_V6",
+      "superseded_by_architecture": "Vivy-V (Encrypted Architecture + Open-Source Weights)"
+    },
+    {
+      "artifact_name": "vivy_r_cybersec_3b_v74_tricore_decision.safetensors",
+      "original_path": "D:\\91s_Vivy\\Vivy.v6\\models\\r_series\\checkpoints\\vivy_r_cybersec_3b_v74_tricore_decision.safetensors",
+      "archived_v6_path": "D:\\91s_Vivy\\Vivy.v6\\archives\\vivy_v6_legacy_stamped_2026_10_24\\checkpoints_v6_to_v74\\vivy_r_cybersec_3b_v74_tricore_decision.safetensors",
+      "archived_vivy_v_path": "D:\\91s- T\u00e1i c\u1ea5u tr\u00fac l\u00e2n th\u1ee9 4\\Vivy-V\\models\\legacy_vivy_v6_archive\\checkpoints_v6_to_v74\\vivy_r_cybersec_3b_v74_tricore_decision.safetensors",
+      "size_bytes": 1371928,
+      "sha256": "a8890bde880a105840b3d42602dfc8a6ab9325184f8bfbe59a5f1c0df9fcef94",
+      "legacy_version_stamp": "ARCHIVED_LEGACY_VIVY_V6",
+      "superseded_by_architecture": "Vivy-V (Encrypted Architecture + Open-Source Weights)"
+    },
+    {
+      "artifact_name": "vivy_r_finance_3b_colab_live.safetensors",
+      "original_path": "D:\\91s_Vivy\\Vivy.v6\\models\\r_series\\checkpoints\\vivy_r_finance_3b_colab_live.safetensors",
+      "archived_v6_path": "D:\\91s_Vivy\\Vivy.v6\\archives\\vivy_v6_legacy_stamped_2026_10_24\\checkpoints_v6_to_v74\\vivy_r_finance_3b_colab_live.safetensors",
+      "archived_vivy_v_path": "D:\\91s- T\u00e1i c\u1ea5u tr\u00fac l\u00e2n th\u1ee9 4\\Vivy-V\\models\\legacy_vivy_v6_archive\\checkpoints_v6_to_v74\\vivy_r_finance_3b_colab_live.safetensors",
+      "size_bytes": 1028640,
+      "sha256": "ace326955d06aa26a98b09b9347b004c973dac745d7014b0e0dac2e3b4b01a8f",
+      "legacy_version_stamp": "ARCHIVED_LEGACY_VIVY_V6",
+      "superseded_by_architecture": "Vivy-V (Encrypted Architecture + Open-Source Weights)"
+    },
+    {
+      "artifact_name": "vivy_r_finance_3b_colab_live_receipt.json",
+      "original_path": "D:\\91s_Vivy\\Vivy.v6\\models\\r_series\\checkpoints\\vivy_r_finance_3b_colab_live_receipt.json",
+      "archived_v6_path": "D:\\91s_Vivy\\Vivy.v6\\archives\\vivy_v6_legacy_stamped_2026_10_24\\checkpoints_v6_to_v74\\vivy_r_finance_3b_colab_live_receipt.json",
+      "archived_vivy_v_path": "D:\\91s- T\u00e1i c\u1ea5u tr\u00fac l\u00e2n th\u1ee9 4\\Vivy-V\\models\\legacy_vivy_v6_archive\\checkpoints_v6_to_v74\\vivy_r_finance_3b_colab_live_receipt.json",
+      "size_bytes": 2092,
+      "sha256": "6e09a0bb699730be77318bf718b23b262899d46cef705be093c1958f45a02b49",
+      "legacy_version_stamp": "ARCHIVED_LEGACY_VIVY_V6",
+      "superseded_by_architecture": "Vivy-V (Encrypted Architecture + Open-Source Weights)"
+    },
+    {
+      "artifact_name": "vivy_r_finance_3b_compiler.safetensors",
+      "original_path": "D:\\91s_Vivy\\Vivy.v6\\models\\r_series\\checkpoints\\vivy_r_finance_3b_compiler.safetensors",
+      "archived_v6_path": "D:\\91s_Vivy\\Vivy.v6\\archives\\vivy_v6_legacy_stamped_2026_10_24\\checkpoints_v6_to_v74\\vivy_r_finance_3b_compiler.safetensors",
+      "archived_vivy_v_path": "D:\\91s- T\u00e1i c\u1ea5u tr\u00fac l\u00e2n th\u1ee9 4\\Vivy-V\\models\\legacy_vivy_v6_archive\\checkpoints_v6_to_v74\\vivy_r_finance_3b_compiler.safetensors",
+      "size_bytes": 1028640,
+      "sha256": "ace326955d06aa26a98b09b9347b004c973dac745d7014b0e0dac2e3b4b01a8f",
+      "legacy_version_stamp": "ARCHIVED_LEGACY_VIVY_V6",
+      "superseded_by_architecture": "Vivy-V (Encrypted Architecture + Open-Source Weights)"
+    },
+    {
+      "artifact_name": "vivy_r_finance_3b_dream_distilled_3b_5b.safetensors",
+      "original_path": "D:\\91s_Vivy\\Vivy.v6\\models\\r_series\\checkpoints\\vivy_r_finance_3b_dream_distilled_3b_5b.safetensors",
+      "archived_v6_path": "D:\\91s_Vivy\\Vivy.v6\\archives\\vivy_v6_legacy_stamped_2026_10_24\\checkpoints_v6_to_v74\\vivy_r_finance_3b_dream_distilled_3b_5b.safetensors",
+      "archived_vivy_v_path": "D:\\91s- T\u00e1i c\u1ea5u tr\u00fac l\u00e2n th\u1ee9 4\\Vivy-V\\models\\legacy_vivy_v6_archive\\checkpoints_v6_to_v74\\vivy_r_finance_3b_dream_distilled_3b_5b.safetensors",
+      "size_bytes": 27176,
+      "sha256": "cb9dfc9927a54038a1472712740d669d6048ff37520516a02cbfedd519f8319b",
+      "legacy_version_stamp": "ARCHIVED_LEGACY_VIVY_V6",
+      "superseded_by_architecture": "Vivy-V (Encrypted Architecture + Open-Source Weights)"
+    },
+    {
+      "artifact_name": "vivy_r_finance_3b_hf_release_receipt.json",
+      "original_path": "D:\\91s_Vivy\\Vivy.v6\\models\\r_series\\checkpoints\\vivy_r_finance_3b_hf_release_receipt.json",
+      "archived_v6_path": "D:\\91s_Vivy\\Vivy.v6\\archives\\vivy_v6_legacy_stamped_2026_10_24\\checkpoints_v6_to_v74\\vivy_r_finance_3b_hf_release_receipt.json",
+      "archived_vivy_v_path": "D:\\91s- T\u00e1i c\u1ea5u tr\u00fac l\u00e2n th\u1ee9 4\\Vivy-V\\models\\legacy_vivy_v6_archive\\checkpoints_v6_to_v74\\vivy_r_finance_3b_hf_release_receipt.json",
+      "size_bytes": 3262,
+      "sha256": "e5ca4d97d65c520531678af198641b6b84aa62b67ef0618830f52762991a16d4",
+      "legacy_version_stamp": "ARCHIVED_LEGACY_VIVY_V6",
+      "superseded_by_architecture": "Vivy-V (Encrypted Architecture + Open-Source Weights)"
+    },
+    {
+      "artifact_name": "vivy_r_finance_3b_v66_unified.safetensors",
+      "original_path": "D:\\91s_Vivy\\Vivy.v6\\models\\r_series\\checkpoints\\vivy_r_finance_3b_v66_unified.safetensors",
+      "archived_v6_path": "D:\\91s_Vivy\\Vivy.v6\\archives\\vivy_v6_legacy_stamped_2026_10_24\\checkpoints_v6_to_v74\\vivy_r_finance_3b_v66_unified.safetensors",
+      "archived_vivy_v_path": "D:\\91s- T\u00e1i c\u1ea5u tr\u00fac l\u00e2n th\u1ee9 4\\Vivy-V\\models\\legacy_vivy_v6_archive\\checkpoints_v6_to_v74\\vivy_r_finance_3b_v66_unified.safetensors",
+      "size_bytes": 1049624,
+      "sha256": "4200dc0624ef4b5b7f182afcf0cac5db744e36e7abd8dfc6f1a5d62b3870a17e",
+      "legacy_version_stamp": "ARCHIVED_LEGACY_VIVY_V6",
+      "superseded_by_architecture": "Vivy-V (Encrypted Architecture + Open-Source Weights)"
+    },
+    {
+      "artifact_name": "vivy_r_finance_3b_v67_causal_instinct.safetensors",
+      "original_path": "D:\\91s_Vivy\\Vivy.v6\\models\\r_series\\checkpoints\\vivy_r_finance_3b_v67_causal_instinct.safetensors",
+      "archived_v6_path": "D:\\91s_Vivy\\Vivy.v6\\archives\\vivy_v6_legacy_stamped_2026_10_24\\checkpoints_v6_to_v74\\vivy_r_finance_3b_v67_causal_instinct.safetensors",
+      "archived_vivy_v_path": "D:\\91s- T\u00e1i c\u1ea5u tr\u00fac l\u00e2n th\u1ee9 4\\Vivy-V\\models\\legacy_vivy_v6_archive\\checkpoints_v6_to_v74\\vivy_r_finance_3b_v67_causal_instinct.safetensors",
+      "size_bytes": 1053528,
+      "sha256": "f25c926868f29096244817df8d9be17ce2331950cf789d1f7d4791df33aacf22",
+      "legacy_version_stamp": "ARCHIVED_LEGACY_VIVY_V6",
+      "superseded_by_architecture": "Vivy-V (Encrypted Architecture + Open-Source Weights)"
+    },
+    {
+      "artifact_name": "vivy_r_finance_3b_v68_dream_distilled.safetensors",
+      "original_path": "D:\\91s_Vivy\\Vivy.v6\\models\\r_series\\checkpoints\\vivy_r_finance_3b_v68_dream_distilled.safetensors",
+      "archived_v6_path": "D:\\91s_Vivy\\Vivy.v6\\archives\\vivy_v6_legacy_stamped_2026_10_24\\checkpoints_v6_to_v74\\vivy_r_finance_3b_v68_dream_distilled.safetensors",
+      "archived_vivy_v_path": "D:\\91s- T\u00e1i c\u1ea5u tr\u00fac l\u00e2n th\u1ee9 4\\Vivy-V\\models\\legacy_vivy_v6_archive\\checkpoints_v6_to_v74\\vivy_r_finance_3b_v68_dream_distilled.safetensors",
+      "size_bytes": 1058112,
+      "sha256": "7dbdc3d5ffda628214baee53a7b59897e77311ded36547795ec2de76c6633a4d",
+      "legacy_version_stamp": "ARCHIVED_LEGACY_VIVY_V6",
+      "superseded_by_architecture": "Vivy-V (Encrypted Architecture + Open-Source Weights)"
+    },
+    {
+      "artifact_name": "vivy_r_finance_3b_v69_zero_bridge.safetensors",
+      "original_path": "D:\\91s_Vivy\\Vivy.v6\\models\\r_series\\checkpoints\\vivy_r_finance_3b_v69_zero_bridge.safetensors",
+      "archived_v6_path": "D:\\91s_Vivy\\Vivy.v6\\archives\\vivy_v6_legacy_stamped_2026_10_24\\checkpoints_v6_to_v74\\vivy_r_finance_3b_v69_zero_bridge.safetensors",
+      "archived_vivy_v_path": "D:\\91s- T\u00e1i c\u1ea5u tr\u00fac l\u00e2n th\u1ee9 4\\Vivy-V\\models\\legacy_vivy_v6_archive\\checkpoints_v6_to_v74\\vivy_r_finance_3b_v69_zero_bridge.safetensors",
+      "size_bytes": 1064152,
+      "sha256": "7e8f9d86ca4b4ce3969e124dc27ca6eef40611508c7dca970ef285ea6d2104f3",
+      "legacy_version_stamp": "ARCHIVED_LEGACY_VIVY_V6",
+      "superseded_by_architecture": "Vivy-V (Encrypted Architecture + Open-Source Weights)"
+    },
+    {
+      "artifact_name": "vivy_r_finance_3b_v70_bioactivity.safetensors",
+      "original_path": "D:\\91s_Vivy\\Vivy.v6\\models\\r_series\\checkpoints\\vivy_r_finance_3b_v70_bioactivity.safetensors",
+      "archived_v6_path": "D:\\91s_Vivy\\Vivy.v6\\archives\\vivy_v6_legacy_stamped_2026_10_24\\checkpoints_v6_to_v74\\vivy_r_finance_3b_v70_bioactivity.safetensors",
+      "archived_vivy_v_path": "D:\\91s- T\u00e1i c\u1ea5u tr\u00fac l\u00e2n th\u1ee9 4\\Vivy-V\\models\\legacy_vivy_v6_archive\\checkpoints_v6_to_v74\\vivy_r_finance_3b_v70_bioactivity.safetensors",
+      "size_bytes": 1066032,
+      "sha256": "f56c59431b74ca2c0056dbfa4f1e7eddc5af7f94949655ef334fcb0c552c6b42",
+      "legacy_version_stamp": "ARCHIVED_LEGACY_VIVY_V6",
+      "superseded_by_architecture": "Vivy-V (Encrypted Architecture + Open-Source Weights)"
+    },
+    {
+      "artifact_name": "vivy_r_finance_3b_v71_stage_m3_sovereign.safetensors",
+      "original_path": "D:\\91s_Vivy\\Vivy.v6\\models\\r_series\\checkpoints\\vivy_r_finance_3b_v71_stage_m3_sovereign.safetensors",
+      "archived_v6_path": "D:\\91s_Vivy\\Vivy.v6\\archives\\vivy_v6_legacy_stamped_2026_10_24\\checkpoints_v6_to_v74\\vivy_r_finance_3b_v71_stage_m3_sovereign.safetensors",
+      "archived_vivy_v_path": "D:\\91s- T\u00e1i c\u1ea5u tr\u00fac l\u00e2n th\u1ee9 4\\Vivy-V\\models\\legacy_vivy_v6_archive\\checkpoints_v6_to_v74\\vivy_r_finance_3b_v71_stage_m3_sovereign.safetensors",
+      "size_bytes": 1069432,
+      "sha256": "aa4600e28246e2dbe410c2a7ddf9aae12dc4a421ce3deb31bc64c9074cf08525",
+      "legacy_version_stamp": "ARCHIVED_LEGACY_VIVY_V6",
+      "superseded_by_architecture": "Vivy-V (Encrypted Architecture + Open-Source Weights)"
+    },
+    {
+      "artifact_name": "vivy_r_finance_3b_v72_post_m3_sovereign.safetensors",
+      "original_path": "D:\\91s_Vivy\\Vivy.v6\\models\\r_series\\checkpoints\\vivy_r_finance_3b_v72_post_m3_sovereign.safetensors",
+      "archived_v6_path": "D:\\91s_Vivy\\Vivy.v6\\archives\\vivy_v6_legacy_stamped_2026_10_24\\checkpoints_v6_to_v74\\vivy_r_finance_3b_v72_post_m3_sovereign.safetensors",
+      "archived_vivy_v_path": "D:\\91s- T\u00e1i c\u1ea5u tr\u00fac l\u00e2n th\u1ee9 4\\Vivy-V\\models\\legacy_vivy_v6_archive\\checkpoints_v6_to_v74\\vivy_r_finance_3b_v72_post_m3_sovereign.safetensors",
+      "size_bytes": 1071400,
+      "sha256": "1f356181a0947fe7bbd182a1e993ef4c05257efd0ae8b63df65bc1fc2d6d295f",
+      "legacy_version_stamp": "ARCHIVED_LEGACY_VIVY_V6",
+      "superseded_by_architecture": "Vivy-V (Encrypted Architecture + Open-Source Weights)"
+    },
+    {
+      "artifact_name": "vivy_r_finance_3b_v73_cross_specialist.safetensors",
+      "original_path": "D:\\91s_Vivy\\Vivy.v6\\models\\r_series\\checkpoints\\vivy_r_finance_3b_v73_cross_specialist.safetensors",
+      "archived_v6_path": "D:\\91s_Vivy\\Vivy.v6\\archives\\vivy_v6_legacy_stamped_2026_10_24\\checkpoints_v6_to_v74\\vivy_r_finance_3b_v73_cross_specialist.safetensors",
+      "archived_vivy_v_path": "D:\\91s- T\u00e1i c\u1ea5u tr\u00fac l\u00e2n th\u1ee9 4\\Vivy-V\\models\\legacy_vivy_v6_archive\\checkpoints_v6_to_v74\\vivy_r_finance_3b_v73_cross_specialist.safetensors",
+      "size_bytes": 1073488,
+      "sha256": "880ccf3e0d3de9cfb7a265e1cb845878a96b0c9bba5365837d34aab4a47429a5",
+      "legacy_version_stamp": "ARCHIVED_LEGACY_VIVY_V6",
+      "superseded_by_architecture": "Vivy-V (Encrypted Architecture + Open-Source Weights)"
+    },
+    {
+      "artifact_name": "vivy_r_finance_3b_v74_tricore_decision.safetensors",
+      "original_path": "D:\\91s_Vivy\\Vivy.v6\\models\\r_series\\checkpoints\\vivy_r_finance_3b_v74_tricore_decision.safetensors",
+      "archived_v6_path": "D:\\91s_Vivy\\Vivy.v6\\archives\\vivy_v6_legacy_stamped_2026_10_24\\checkpoints_v6_to_v74\\vivy_r_finance_3b_v74_tricore_decision.safetensors",
+      "archived_vivy_v_path": "D:\\91s- T\u00e1i c\u1ea5u tr\u00fac l\u00e2n th\u1ee9 4\\Vivy-V\\models\\legacy_vivy_v6_archive\\checkpoints_v6_to_v74\\vivy_r_finance_3b_v74_tricore_decision.safetensors",
+      "size_bytes": 1334872,
+      "sha256": "72cc0d18bd129163ad06840d56b7eccd2081034b39d690d6ad042eb74071acdb",
+      "legacy_version_stamp": "ARCHIVED_LEGACY_VIVY_V6",
+      "superseded_by_architecture": "Vivy-V (Encrypted Architecture + Open-Source Weights)"
+    },
+    {
+      "artifact_name": "vivy_r_robotics_3b_colab_live.safetensors",
+      "original_path": "D:\\91s_Vivy\\Vivy.v6\\models\\r_series\\checkpoints\\vivy_r_robotics_3b_colab_live.safetensors",
+      "archived_v6_path": "D:\\91s_Vivy\\Vivy.v6\\archives\\vivy_v6_legacy_stamped_2026_10_24\\checkpoints_v6_to_v74\\vivy_r_robotics_3b_colab_live.safetensors",
+      "archived_vivy_v_path": "D:\\91s- T\u00e1i c\u1ea5u tr\u00fac l\u00e2n th\u1ee9 4\\Vivy-V\\models\\legacy_vivy_v6_archive\\checkpoints_v6_to_v74\\vivy_r_robotics_3b_colab_live.safetensors",
+      "size_bytes": 1029956,
+      "sha256": "5090d508335681d1422a31c20f0eb2bdc1fbf639747c1e46caddfff91ce29fa8",
+      "legacy_version_stamp": "ARCHIVED_LEGACY_VIVY_V6",
+      "superseded_by_architecture": "Vivy-V (Encrypted Architecture + Open-Source Weights)"
+    },
+    {
+      "artifact_name": "vivy_r_robotics_3b_colab_live_receipt.json",
+      "original_path": "D:\\91s_Vivy\\Vivy.v6\\models\\r_series\\checkpoints\\vivy_r_robotics_3b_colab_live_receipt.json",
+      "archived_v6_path": "D:\\91s_Vivy\\Vivy.v6\\archives\\vivy_v6_legacy_stamped_2026_10_24\\checkpoints_v6_to_v74\\vivy_r_robotics_3b_colab_live_receipt.json",
+      "archived_vivy_v_path": "D:\\91s- T\u00e1i c\u1ea5u tr\u00fac l\u00e2n th\u1ee9 4\\Vivy-V\\models\\legacy_vivy_v6_archive\\checkpoints_v6_to_v74\\vivy_r_robotics_3b_colab_live_receipt.json",
+      "size_bytes": 2122,
+      "sha256": "7a2dfa1716c3055c57d97555e19e6efafa92ce9aea681bbdb906e20ef8faedef",
+      "legacy_version_stamp": "ARCHIVED_LEGACY_VIVY_V6",
+      "superseded_by_architecture": "Vivy-V (Encrypted Architecture + Open-Source Weights)"
+    },
+    {
+      "artifact_name": "vivy_r_robotics_3b_compiler.safetensors",
+      "original_path": "D:\\91s_Vivy\\Vivy.v6\\models\\r_series\\checkpoints\\vivy_r_robotics_3b_compiler.safetensors",
+      "archived_v6_path": "D:\\91s_Vivy\\Vivy.v6\\archives\\vivy_v6_legacy_stamped_2026_10_24\\checkpoints_v6_to_v74\\vivy_r_robotics_3b_compiler.safetensors",
+      "archived_vivy_v_path": "D:\\91s- T\u00e1i c\u1ea5u tr\u00fac l\u00e2n th\u1ee9 4\\Vivy-V\\models\\legacy_vivy_v6_archive\\checkpoints_v6_to_v74\\vivy_r_robotics_3b_compiler.safetensors",
+      "size_bytes": 1029956,
+      "sha256": "5090d508335681d1422a31c20f0eb2bdc1fbf639747c1e46caddfff91ce29fa8",
+      "legacy_version_stamp": "ARCHIVED_LEGACY_VIVY_V6",
+      "superseded_by_architecture": "Vivy-V (Encrypted Architecture + Open-Source Weights)"
+    },
+    {
+      "artifact_name": "vivy_r_robotics_3b_dream_distilled_3b_5b.safetensors",
+      "original_path": "D:\\91s_Vivy\\Vivy.v6\\models\\r_series\\checkpoints\\vivy_r_robotics_3b_dream_distilled_3b_5b.safetensors",
+      "archived_v6_path": "D:\\91s_Vivy\\Vivy.v6\\archives\\vivy_v6_legacy_stamped_2026_10_24\\checkpoints_v6_to_v74\\vivy_r_robotics_3b_dream_distilled_3b_5b.safetensors",
+      "archived_vivy_v_path": "D:\\91s- T\u00e1i c\u1ea5u tr\u00fac l\u00e2n th\u1ee9 4\\Vivy-V\\models\\legacy_vivy_v6_archive\\checkpoints_v6_to_v74\\vivy_r_robotics_3b_dream_distilled_3b_5b.safetensors",
+      "size_bytes": 28520,
+      "sha256": "434bf38b20d631556aef022a28b8814e011b83e3ef26e1c83a7c344838df0d2f",
+      "legacy_version_stamp": "ARCHIVED_LEGACY_VIVY_V6",
+      "superseded_by_architecture": "Vivy-V (Encrypted Architecture + Open-Source Weights)"
+    },
+    {
+      "artifact_name": "vivy_r_robotics_3b_hf_release_receipt.json",
+      "original_path": "D:\\91s_Vivy\\Vivy.v6\\models\\r_series\\checkpoints\\vivy_r_robotics_3b_hf_release_receipt.json",
+      "archived_v6_path": "D:\\91s_Vivy\\Vivy.v6\\archives\\vivy_v6_legacy_stamped_2026_10_24\\checkpoints_v6_to_v74\\vivy_r_robotics_3b_hf_release_receipt.json",
+      "archived_vivy_v_path": "D:\\91s- T\u00e1i c\u1ea5u tr\u00fac l\u00e2n th\u1ee9 4\\Vivy-V\\models\\legacy_vivy_v6_archive\\checkpoints_v6_to_v74\\vivy_r_robotics_3b_hf_release_receipt.json",
+      "size_bytes": 3272,
+      "sha256": "bff8e5f41b0f307580cf970e2e668e36725cbd3c59cf52e7515bbdb88810cfda",
+      "legacy_version_stamp": "ARCHIVED_LEGACY_VIVY_V6",
+      "superseded_by_architecture": "Vivy-V (Encrypted Architecture + Open-Source Weights)"
+    },
+    {
+      "artifact_name": "vivy_r_robotics_3b_v66_unified.safetensors",
+      "original_path": "D:\\91s_Vivy\\Vivy.v6\\models\\r_series\\checkpoints\\vivy_r_robotics_3b_v66_unified.safetensors",
+      "archived_v6_path": "D:\\91s_Vivy\\Vivy.v6\\archives\\vivy_v6_legacy_stamped_2026_10_24\\checkpoints_v6_to_v74\\vivy_r_robotics_3b_v66_unified.safetensors",
+      "archived_vivy_v_path": "D:\\91s- T\u00e1i c\u1ea5u tr\u00fac l\u00e2n th\u1ee9 4\\Vivy-V\\models\\legacy_vivy_v6_archive\\checkpoints_v6_to_v74\\vivy_r_robotics_3b_v66_unified.safetensors",
+      "size_bytes": 1050772,
+      "sha256": "c066c43b79020a9caa768a51a6dde5b5ad74c69e7a21d5e750381f0b029333fe",
+      "legacy_version_stamp": "ARCHIVED_LEGACY_VIVY_V6",
+      "superseded_by_architecture": "Vivy-V (Encrypted Architecture + Open-Source Weights)"
+    },
+    {
+      "artifact_name": "vivy_r_robotics_3b_v67_causal_instinct.safetensors",
+      "original_path": "D:\\91s_Vivy\\Vivy.v6\\models\\r_series\\checkpoints\\vivy_r_robotics_3b_v67_causal_instinct.safetensors",
+      "archived_v6_path": "D:\\91s_Vivy\\Vivy.v6\\archives\\vivy_v6_legacy_stamped_2026_10_24\\checkpoints_v6_to_v74\\vivy_r_robotics_3b_v67_causal_instinct.safetensors",
+      "archived_vivy_v_path": "D:\\91s- T\u00e1i c\u1ea5u tr\u00fac l\u00e2n th\u1ee9 4\\Vivy-V\\models\\legacy_vivy_v6_archive\\checkpoints_v6_to_v74\\vivy_r_robotics_3b_v67_causal_instinct.safetensors",
+      "size_bytes": 1054356,
+      "sha256": "0045f9857816f057418c382c1f709ee6600ffd5c9dc8a8467c319de36157725f",
+      "legacy_version_stamp": "ARCHIVED_LEGACY_VIVY_V6",
+      "superseded_by_architecture": "Vivy-V (Encrypted Architecture + Open-Source Weights)"
+    },
+    {
+      "artifact_name": "vivy_r_robotics_3b_v68_dream_distilled.safetensors",
+      "original_path": "D:\\91s_Vivy\\Vivy.v6\\models\\r_series\\checkpoints\\vivy_r_robotics_3b_v68_dream_distilled.safetensors",
+      "archived_v6_path": "D:\\91s_Vivy\\Vivy.v6\\archives\\vivy_v6_legacy_stamped_2026_10_24\\checkpoints_v6_to_v74\\vivy_r_robotics_3b_v68_dream_distilled.safetensors",
+      "archived_vivy_v_path": "D:\\91s- T\u00e1i c\u1ea5u tr\u00fac l\u00e2n th\u1ee9 4\\Vivy-V\\models\\legacy_vivy_v6_archive\\checkpoints_v6_to_v74\\vivy_r_robotics_3b_v68_dream_distilled.safetensors",
+      "size_bytes": 1059260,
+      "sha256": "099e64ab590248cac91d5bb1da11c6f81cf722d1bb6557b7f6fa686de97d9eee",
+      "legacy_version_stamp": "ARCHIVED_LEGACY_VIVY_V6",
+      "superseded_by_architecture": "Vivy-V (Encrypted Architecture + Open-Source Weights)"
+    },
+    {
+      "artifact_name": "vivy_r_robotics_3b_v69_zero_bridge.safetensors",
+      "original_path": "D:\\91s_Vivy\\Vivy.v6\\models\\r_series\\checkpoints\\vivy_r_robotics_3b_v69_zero_bridge.safetensors",
+      "archived_v6_path": "D:\\91s_Vivy\\Vivy.v6\\archives\\vivy_v6_legacy_stamped_2026_10_24\\checkpoints_v6_to_v74\\vivy_r_robotics_3b_v69_zero_bridge.safetensors",
+      "archived_vivy_v_path": "D:\\91s- T\u00e1i c\u1ea5u tr\u00fac l\u00e2n th\u1ee9 4\\Vivy-V\\models\\legacy_vivy_v6_archive\\checkpoints_v6_to_v74\\vivy_r_robotics_3b_v69_zero_bridge.safetensors",
+      "size_bytes": 1065308,
+      "sha256": "ad95e495f631d4cf29d9be80cd37d06e9ff2d06a97701a7f81ebdd2f1b2671b6",
+      "legacy_version_stamp": "ARCHIVED_LEGACY_VIVY_V6",
+      "superseded_by_architecture": "Vivy-V (Encrypted Architecture + Open-Source Weights)"
+    },
+    {
+      "artifact_name": "vivy_r_robotics_3b_v70_bioactivity.safetensors",
+      "original_path": "D:\\91s_Vivy\\Vivy.v6\\models\\r_series\\checkpoints\\vivy_r_robotics_3b_v70_bioactivity.safetensors",
+      "archived_v6_path": "D:\\91s_Vivy\\Vivy.v6\\archives\\vivy_v6_legacy_stamped_2026_10_24\\checkpoints_v6_to_v74\\vivy_r_robotics_3b_v70_bioactivity.safetensors",
+      "archived_vivy_v_path": "D:\\91s- T\u00e1i c\u1ea5u tr\u00fac l\u00e2n th\u1ee9 4\\Vivy-V\\models\\legacy_vivy_v6_archive\\checkpoints_v6_to_v74\\vivy_r_robotics_3b_v70_bioactivity.safetensors",
+      "size_bytes": 1067196,
+      "sha256": "0e075f7b945672b54a904254086aaad574cd5df5969e3f90a4ac966ee15c880a",
+      "legacy_version_stamp": "ARCHIVED_LEGACY_VIVY_V6",
+      "superseded_by_architecture": "Vivy-V (Encrypted Architecture + Open-Source Weights)"
+    },
+    {
+      "artifact_name": "vivy_r_robotics_3b_v71_stage_m3_sovereign.safetensors",
+      "original_path": "D:\\91s_Vivy\\Vivy.v6\\models\\r_series\\checkpoints\\vivy_r_robotics_3b_v71_stage_m3_sovereign.safetensors",
+      "archived_v6_path": "D:\\91s_Vivy\\Vivy.v6\\archives\\vivy_v6_legacy_stamped_2026_10_24\\checkpoints_v6_to_v74\\vivy_r_robotics_3b_v71_stage_m3_sovereign.safetensors",
+      "archived_vivy_v_path": "D:\\91s- T\u00e1i c\u1ea5u tr\u00fac l\u00e2n th\u1ee9 4\\Vivy-V\\models\\legacy_vivy_v6_archive\\checkpoints_v6_to_v74\\vivy_r_robotics_3b_v71_stage_m3_sovereign.safetensors",
+      "size_bytes": 1070596,
+      "sha256": "84346f1de393f078d20db0a4ddfdb373426d57c9f54162b3dc89ec26ddf41e7d",
+      "legacy_version_stamp": "ARCHIVED_LEGACY_VIVY_V6",
+      "superseded_by_architecture": "Vivy-V (Encrypted Architecture + Open-Source Weights)"
+    },
+    {
+      "artifact_name": "vivy_r_robotics_3b_v72_post_m3_sovereign.safetensors",
+      "original_path": "D:\\91s_Vivy\\Vivy.v6\\models\\r_series\\checkpoints\\vivy_r_robotics_3b_v72_post_m3_sovereign.safetensors",
+      "archived_v6_path": "D:\\91s_Vivy\\Vivy.v6\\archives\\vivy_v6_legacy_stamped_2026_10_24\\checkpoints_v6_to_v74\\vivy_r_robotics_3b_v72_post_m3_sovereign.safetensors",
+      "archived_vivy_v_path": "D:\\91s- T\u00e1i c\u1ea5u tr\u00fac l\u00e2n th\u1ee9 4\\Vivy-V\\models\\legacy_vivy_v6_archive\\checkpoints_v6_to_v74\\vivy_r_robotics_3b_v72_post_m3_sovereign.safetensors",
+      "size_bytes": 1072556,
+      "sha256": "228ec4ab02121a54c2876239e07a08896e9e63912d4151b528aa4f5a8e099652",
+      "legacy_version_stamp": "ARCHIVED_LEGACY_VIVY_V6",
+      "superseded_by_architecture": "Vivy-V (Encrypted Architecture + Open-Source Weights)"
+    },
+    {
+      "artifact_name": "vivy_r_robotics_3b_v73_cross_specialist.safetensors",
+      "original_path": "D:\\91s_Vivy\\Vivy.v6\\models\\r_series\\checkpoints\\vivy_r_robotics_3b_v73_cross_specialist.safetensors",
+      "archived_v6_path": "D:\\91s_Vivy\\Vivy.v6\\archives\\vivy_v6_legacy_stamped_2026_10_24\\checkpoints_v6_to_v74\\vivy_r_robotics_3b_v73_cross_specialist.safetensors",
+      "archived_vivy_v_path": "D:\\91s- T\u00e1i c\u1ea5u tr\u00fac l\u00e2n th\u1ee9 4\\Vivy-V\\models\\legacy_vivy_v6_archive\\checkpoints_v6_to_v74\\vivy_r_robotics_3b_v73_cross_specialist.safetensors",
+      "size_bytes": 1074684,
+      "sha256": "f2a765865f294638e9246160cef6239a8234a5163cc13c5b1185ea9949be03dc",
+      "legacy_version_stamp": "ARCHIVED_LEGACY_VIVY_V6",
+      "superseded_by_architecture": "Vivy-V (Encrypted Architecture + Open-Source Weights)"
+    },
+    {
+      "artifact_name": "vivy_r_robotics_3b_v74_tricore_decision.safetensors",
+      "original_path": "D:\\91s_Vivy\\Vivy.v6\\models\\r_series\\checkpoints\\vivy_r_robotics_3b_v74_tricore_decision.safetensors",
+      "archived_v6_path": "D:\\91s_Vivy\\Vivy.v6\\archives\\vivy_v6_legacy_stamped_2026_10_24\\checkpoints_v6_to_v74\\vivy_r_robotics_3b_v74_tricore_decision.safetensors",
+      "archived_vivy_v_path": "D:\\91s- T\u00e1i c\u1ea5u tr\u00fac l\u00e2n th\u1ee9 4\\Vivy-V\\models\\legacy_vivy_v6_archive\\checkpoints_v6_to_v74\\vivy_r_robotics_3b_v74_tricore_decision.safetensors",
+      "size_bytes": 1336068,
+      "sha256": "b9b91c44a85c98c22038784cb12b0a755959441642eef0f2391dfb27f2f1c3d2",
+      "legacy_version_stamp": "ARCHIVED_LEGACY_VIVY_V6",
+      "superseded_by_architecture": "Vivy-V (Encrypted Architecture + Open-Source Weights)"
+    },
+    {
+      "artifact_name": "vivy_r_science_bio_3b_v67_causal_instinct.safetensors",
+      "original_path": "D:\\91s_Vivy\\Vivy.v6\\models\\r_series\\checkpoints\\vivy_r_science_bio_3b_v67_causal_instinct.safetensors",
+      "archived_v6_path": "D:\\91s_Vivy\\Vivy.v6\\archives\\vivy_v6_legacy_stamped_2026_10_24\\checkpoints_v6_to_v74\\vivy_r_science_bio_3b_v67_causal_instinct.safetensors",
+      "archived_vivy_v_path": "D:\\91s- T\u00e1i c\u1ea5u tr\u00fac l\u00e2n th\u1ee9 4\\Vivy-V\\models\\legacy_vivy_v6_archive\\checkpoints_v6_to_v74\\vivy_r_science_bio_3b_v67_causal_instinct.safetensors",
+      "size_bytes": 1090736,
+      "sha256": "184bbc2075900dc8efa5afa79751a673a58d983f2e1f255a5f92c6c14448dd3b",
+      "legacy_version_stamp": "ARCHIVED_LEGACY_VIVY_V6",
+      "superseded_by_architecture": "Vivy-V (Encrypted Architecture + Open-Source Weights)"
+    },
+    {
+      "artifact_name": "vivy_r_science_bio_3b_v68_dream_distilled.safetensors",
+      "original_path": "D:\\91s_Vivy\\Vivy.v6\\models\\r_series\\checkpoints\\vivy_r_science_bio_3b_v68_dream_distilled.safetensors",
+      "archived_v6_path": "D:\\91s_Vivy\\Vivy.v6\\archives\\vivy_v6_legacy_stamped_2026_10_24\\checkpoints_v6_to_v74\\vivy_r_science_bio_3b_v68_dream_distilled.safetensors",
+      "archived_vivy_v_path": "D:\\91s- T\u00e1i c\u1ea5u tr\u00fac l\u00e2n th\u1ee9 4\\Vivy-V\\models\\legacy_vivy_v6_archive\\checkpoints_v6_to_v74\\vivy_r_science_bio_3b_v68_dream_distilled.safetensors",
+      "size_bytes": 1095640,
+      "sha256": "e9cd71da235c345da2ce763b2dc43b2f35fa87e019b96edaff601a4c570b6d7e",
+      "legacy_version_stamp": "ARCHIVED_LEGACY_VIVY_V6",
+      "superseded_by_architecture": "Vivy-V (Encrypted Architecture + Open-Source Weights)"
+    },
+    {
+      "artifact_name": "vivy_r_science_bio_3b_v69_zero_bridge.safetensors",
+      "original_path": "D:\\91s_Vivy\\Vivy.v6\\models\\r_series\\checkpoints\\vivy_r_science_bio_3b_v69_zero_bridge.safetensors",
+      "archived_v6_path": "D:\\91s_Vivy\\Vivy.v6\\archives\\vivy_v6_legacy_stamped_2026_10_24\\checkpoints_v6_to_v74\\vivy_r_science_bio_3b_v69_zero_bridge.safetensors",
+      "archived_vivy_v_path": "D:\\91s- T\u00e1i c\u1ea5u tr\u00fac l\u00e2n th\u1ee9 4\\Vivy-V\\models\\legacy_vivy_v6_archive\\checkpoints_v6_to_v74\\vivy_r_science_bio_3b_v69_zero_bridge.safetensors",
+      "size_bytes": 1101696,
+      "sha256": "64a51840d4bdce7ee99b42a4097803b4795b63d7348f185d0f8d077cc4b1b57c",
+      "legacy_version_stamp": "ARCHIVED_LEGACY_VIVY_V6",
+      "superseded_by_architecture": "Vivy-V (Encrypted Architecture + Open-Source Weights)"
+    },
+    {
+      "artifact_name": "vivy_r_science_bio_3b_v70_bioactivity.safetensors",
+      "original_path": "D:\\91s_Vivy\\Vivy.v6\\models\\r_series\\checkpoints\\vivy_r_science_bio_3b_v70_bioactivity.safetensors",
+      "archived_v6_path": "D:\\91s_Vivy\\Vivy.v6\\archives\\vivy_v6_legacy_stamped_2026_10_24\\checkpoints_v6_to_v74\\vivy_r_science_bio_3b_v70_bioactivity.safetensors",
+      "archived_vivy_v_path": "D:\\91s- T\u00e1i c\u1ea5u tr\u00fac l\u00e2n th\u1ee9 4\\Vivy-V\\models\\legacy_vivy_v6_archive\\checkpoints_v6_to_v74\\vivy_r_science_bio_3b_v70_bioactivity.safetensors",
+      "size_bytes": 1103576,
+      "sha256": "e544b5ff433658f3186431431d419cfa7cfe0f0d7a1645cd0324e1a1f2cd9f2c",
+      "legacy_version_stamp": "ARCHIVED_LEGACY_VIVY_V6",
+      "superseded_by_architecture": "Vivy-V (Encrypted Architecture + Open-Source Weights)"
+    },
+    {
+      "artifact_name": "vivy_r_science_bio_3b_v71_stage_m3_sovereign.safetensors",
+      "original_path": "D:\\91s_Vivy\\Vivy.v6\\models\\r_series\\checkpoints\\vivy_r_science_bio_3b_v71_stage_m3_sovereign.safetensors",
+      "archived_v6_path": "D:\\91s_Vivy\\Vivy.v6\\archives\\vivy_v6_legacy_stamped_2026_10_24\\checkpoints_v6_to_v74\\vivy_r_science_bio_3b_v71_stage_m3_sovereign.safetensors",
+      "archived_vivy_v_path": "D:\\91s- T\u00e1i c\u1ea5u tr\u00fac l\u00e2n th\u1ee9 4\\Vivy-V\\models\\legacy_vivy_v6_archive\\checkpoints_v6_to_v74\\vivy_r_science_bio_3b_v71_stage_m3_sovereign.safetensors",
+      "size_bytes": 1106976,
+      "sha256": "156434292eea89e9b59164df61e1f801e9dab6e12c2351a3f92299f8dfb13f59",
+      "legacy_version_stamp": "ARCHIVED_LEGACY_VIVY_V6",
+      "superseded_by_architecture": "Vivy-V (Encrypted Architecture + Open-Source Weights)"
+    },
+    {
+      "artifact_name": "vivy_r_science_bio_3b_v72_post_m3_sovereign.safetensors",
+      "original_path": "D:\\91s_Vivy\\Vivy.v6\\models\\r_series\\checkpoints\\vivy_r_science_bio_3b_v72_post_m3_sovereign.safetensors",
+      "archived_v6_path": "D:\\91s_Vivy\\Vivy.v6\\archives\\vivy_v6_legacy_stamped_2026_10_24\\checkpoints_v6_to_v74\\vivy_r_science_bio_3b_v72_post_m3_sovereign.safetensors",
+      "archived_vivy_v_path": "D:\\91s- T\u00e1i c\u1ea5u tr\u00fac l\u00e2n th\u1ee9 4\\Vivy-V\\models\\legacy_vivy_v6_archive\\checkpoints_v6_to_v74\\vivy_r_science_bio_3b_v72_post_m3_sovereign.safetensors",
+      "size_bytes": 1108944,
+      "sha256": "ec20ddeaab2b79fca83c8bdd2af8ed627f9ee37020b0f2e30cd8aea7986baf1e",
+      "legacy_version_stamp": "ARCHIVED_LEGACY_VIVY_V6",
+      "superseded_by_architecture": "Vivy-V (Encrypted Architecture + Open-Source Weights)"
+    },
+    {
+      "artifact_name": "vivy_r_science_bio_3b_v73_cross_specialist.safetensors",
+      "original_path": "D:\\91s_Vivy\\Vivy.v6\\models\\r_series\\checkpoints\\vivy_r_science_bio_3b_v73_cross_specialist.safetensors",
+      "archived_v6_path": "D:\\91s_Vivy\\Vivy.v6\\archives\\vivy_v6_legacy_stamped_2026_10_24\\checkpoints_v6_to_v74\\vivy_r_science_bio_3b_v73_cross_specialist.safetensors",
+      "archived_vivy_v_path": "D:\\91s- T\u00e1i c\u1ea5u tr\u00fac l\u00e2n th\u1ee9 4\\Vivy-V\\models\\legacy_vivy_v6_archive\\checkpoints_v6_to_v74\\vivy_r_science_bio_3b_v73_cross_specialist.safetensors",
+      "size_bytes": 1111072,
+      "sha256": "f5077a8d8f2a271f6e4050033e10bce345e73d620d0fadac334bb31746882d12",
+      "legacy_version_stamp": "ARCHIVED_LEGACY_VIVY_V6",
+      "superseded_by_architecture": "Vivy-V (Encrypted Architecture + Open-Source Weights)"
+    },
+    {
+      "artifact_name": "vivy_r_science_bio_3b_v74_tricore_decision.safetensors",
+      "original_path": "D:\\91s_Vivy\\Vivy.v6\\models\\r_series\\checkpoints\\vivy_r_science_bio_3b_v74_tricore_decision.safetensors",
+      "archived_v6_path": "D:\\91s_Vivy\\Vivy.v6\\archives\\vivy_v6_legacy_stamped_2026_10_24\\checkpoints_v6_to_v74\\vivy_r_science_bio_3b_v74_tricore_decision.safetensors",
+      "archived_vivy_v_path": "D:\\91s- T\u00e1i c\u1ea5u tr\u00fac l\u00e2n th\u1ee9 4\\Vivy-V\\models\\legacy_vivy_v6_archive\\checkpoints_v6_to_v74\\vivy_r_science_bio_3b_v74_tricore_decision.safetensors",
+      "size_bytes": 1372448,
+      "sha256": "cac1a18b7d366b88160e16e7db2041a35585daf2394fb1acf557c044b99805cd",
+      "legacy_version_stamp": "ARCHIVED_LEGACY_VIVY_V6",
+      "superseded_by_architecture": "Vivy-V (Encrypted Architecture + Open-Source Weights)"
+    },
+    {
+      "artifact_name": "vivy_r_swe_code_3b_v67_causal_instinct.safetensors",
+      "original_path": "D:\\91s_Vivy\\Vivy.v6\\models\\r_series\\checkpoints\\vivy_r_swe_code_3b_v67_causal_instinct.safetensors",
+      "archived_v6_path": "D:\\91s_Vivy\\Vivy.v6\\archives\\vivy_v6_legacy_stamped_2026_10_24\\checkpoints_v6_to_v74\\vivy_r_swe_code_3b_v67_causal_instinct.safetensors",
+      "archived_vivy_v_path": "D:\\91s- T\u00e1i c\u1ea5u tr\u00fac l\u00e2n th\u1ee9 4\\Vivy-V\\models\\legacy_vivy_v6_archive\\checkpoints_v6_to_v74\\vivy_r_swe_code_3b_v67_causal_instinct.safetensors",
+      "size_bytes": 1054356,
+      "sha256": "0045f9857816f057418c382c1f709ee6600ffd5c9dc8a8467c319de36157725f",
+      "legacy_version_stamp": "ARCHIVED_LEGACY_VIVY_V6",
+      "superseded_by_architecture": "Vivy-V (Encrypted Architecture + Open-Source Weights)"
+    },
+    {
+      "artifact_name": "vivy_r_swe_code_3b_v68_dream_distilled.safetensors",
+      "original_path": "D:\\91s_Vivy\\Vivy.v6\\models\\r_series\\checkpoints\\vivy_r_swe_code_3b_v68_dream_distilled.safetensors",
+      "archived_v6_path": "D:\\91s_Vivy\\Vivy.v6\\archives\\vivy_v6_legacy_stamped_2026_10_24\\checkpoints_v6_to_v74\\vivy_r_swe_code_3b_v68_dream_distilled.safetensors",
+      "archived_vivy_v_path": "D:\\91s- T\u00e1i c\u1ea5u tr\u00fac l\u00e2n th\u1ee9 4\\Vivy-V\\models\\legacy_vivy_v6_archive\\checkpoints_v6_to_v74\\vivy_r_swe_code_3b_v68_dream_distilled.safetensors",
+      "size_bytes": 1059260,
+      "sha256": "099e64ab590248cac91d5bb1da11c6f81cf722d1bb6557b7f6fa686de97d9eee",
+      "legacy_version_stamp": "ARCHIVED_LEGACY_VIVY_V6",
+      "superseded_by_architecture": "Vivy-V (Encrypted Architecture + Open-Source Weights)"
+    },
+    {
+      "artifact_name": "vivy_r_swe_code_3b_v69_zero_bridge.safetensors",
+      "original_path": "D:\\91s_Vivy\\Vivy.v6\\models\\r_series\\checkpoints\\vivy_r_swe_code_3b_v69_zero_bridge.safetensors",
+      "archived_v6_path": "D:\\91s_Vivy\\Vivy.v6\\archives\\vivy_v6_legacy_stamped_2026_10_24\\checkpoints_v6_to_v74\\vivy_r_swe_code_3b_v69_zero_bridge.safetensors",
+      "archived_vivy_v_path": "D:\\91s- T\u00e1i c\u1ea5u tr\u00fac l\u00e2n th\u1ee9 4\\Vivy-V\\models\\legacy_vivy_v6_archive\\checkpoints_v6_to_v74\\vivy_r_swe_code_3b_v69_zero_bridge.safetensors",
+      "size_bytes": 1065308,
+      "sha256": "ad95e495f631d4cf29d9be80cd37d06e9ff2d06a97701a7f81ebdd2f1b2671b6",
+      "legacy_version_stamp": "ARCHIVED_LEGACY_VIVY_V6",
+      "superseded_by_architecture": "Vivy-V (Encrypted Architecture + Open-Source Weights)"
+    },
+    {
+      "artifact_name": "vivy_r_swe_code_3b_v70_bioactivity.safetensors",
+      "original_path": "D:\\91s_Vivy\\Vivy.v6\\models\\r_series\\checkpoints\\vivy_r_swe_code_3b_v70_bioactivity.safetensors",
+      "archived_v6_path": "D:\\91s_Vivy\\Vivy.v6\\archives\\vivy_v6_legacy_stamped_2026_10_24\\checkpoints_v6_to_v74\\vivy_r_swe_code_3b_v70_bioactivity.safetensors",
+      "archived_vivy_v_path": "D:\\91s- T\u00e1i c\u1ea5u tr\u00fac l\u00e2n th\u1ee9 4\\Vivy-V\\models\\legacy_vivy_v6_archive\\checkpoints_v6_to_v74\\vivy_r_swe_code_3b_v70_bioactivity.safetensors",
+      "size_bytes": 1067196,
+      "sha256": "8903b277d881c241db03471761f846476b8e0ec433123be22048ce3c1790c698",
+      "legacy_version_stamp": "ARCHIVED_LEGACY_VIVY_V6",
+      "superseded_by_architecture": "Vivy-V (Encrypted Architecture + Open-Source Weights)"
+    },
+    {
+      "artifact_name": "vivy_r_swe_code_3b_v71_stage_m3_sovereign.safetensors",
+      "original_path": "D:\\91s_Vivy\\Vivy.v6\\models\\r_series\\checkpoints\\vivy_r_swe_code_3b_v71_stage_m3_sovereign.safetensors",
+      "archived_v6_path": "D:\\91s_Vivy\\Vivy.v6\\archives\\vivy_v6_legacy_stamped_2026_10_24\\checkpoints_v6_to_v74\\vivy_r_swe_code_3b_v71_stage_m3_sovereign.safetensors",
+      "archived_vivy_v_path": "D:\\91s- T\u00e1i c\u1ea5u tr\u00fac l\u00e2n th\u1ee9 4\\Vivy-V\\models\\legacy_vivy_v6_archive\\checkpoints_v6_to_v74\\vivy_r_swe_code_3b_v71_stage_m3_sovereign.safetensors",
+      "size_bytes": 1070596,
+      "sha256": "e8bdc74b852b138dffffcb4bcd377b0b8fce5dd16876a2b86c5c857bc21ce11f",
+      "legacy_version_stamp": "ARCHIVED_LEGACY_VIVY_V6",
+      "superseded_by_architecture": "Vivy-V (Encrypted Architecture + Open-Source Weights)"
+    },
+    {
+      "artifact_name": "vivy_r_swe_code_3b_v72_post_m3_sovereign.safetensors",
+      "original_path": "D:\\91s_Vivy\\Vivy.v6\\models\\r_series\\checkpoints\\vivy_r_swe_code_3b_v72_post_m3_sovereign.safetensors",
+      "archived_v6_path": "D:\\91s_Vivy\\Vivy.v6\\archives\\vivy_v6_legacy_stamped_2026_10_24\\checkpoints_v6_to_v74\\vivy_r_swe_code_3b_v72_post_m3_sovereign.safetensors",
+      "archived_vivy_v_path": "D:\\91s- T\u00e1i c\u1ea5u tr\u00fac l\u00e2n th\u1ee9 4\\Vivy-V\\models\\legacy_vivy_v6_archive\\checkpoints_v6_to_v74\\vivy_r_swe_code_3b_v72_post_m3_sovereign.safetensors",
+      "size_bytes": 1072556,
+      "sha256": "87b49f904637fa6df814dd8782d11b69c18c7d6a2f64588d60e190e12bf8ab1c",
+      "legacy_version_stamp": "ARCHIVED_LEGACY_VIVY_V6",
+      "superseded_by_architecture": "Vivy-V (Encrypted Architecture + Open-Source Weights)"
+    },
+    {
+      "artifact_name": "vivy_r_swe_code_3b_v73_cross_specialist.safetensors",
+      "original_path": "D:\\91s_Vivy\\Vivy.v6\\models\\r_series\\checkpoints\\vivy_r_swe_code_3b_v73_cross_specialist.safetensors",
+      "archived_v6_path": "D:\\91s_Vivy\\Vivy.v6\\archives\\vivy_v6_legacy_stamped_2026_10_24\\checkpoints_v6_to_v74\\vivy_r_swe_code_3b_v73_cross_specialist.safetensors",
+      "archived_vivy_v_path": "D:\\91s- T\u00e1i c\u1ea5u tr\u00fac l\u00e2n th\u1ee9 4\\Vivy-V\\models\\legacy_vivy_v6_archive\\checkpoints_v6_to_v74\\vivy_r_swe_code_3b_v73_cross_specialist.safetensors",
+      "size_bytes": 1074684,
+      "sha256": "1dfe47167ca60cc4e46682d15ba332ca1558750bd7932514dafcd69bc474c1cb",
+      "legacy_version_stamp": "ARCHIVED_LEGACY_VIVY_V6",
+      "superseded_by_architecture": "Vivy-V (Encrypted Architecture + Open-Source Weights)"
+    },
+    {
+      "artifact_name": "vivy_r_swe_code_3b_v74_tricore_decision.safetensors",
+      "original_path": "D:\\91s_Vivy\\Vivy.v6\\models\\r_series\\checkpoints\\vivy_r_swe_code_3b_v74_tricore_decision.safetensors",
+      "archived_v6_path": "D:\\91s_Vivy\\Vivy.v6\\archives\\vivy_v6_legacy_stamped_2026_10_24\\checkpoints_v6_to_v74\\vivy_r_swe_code_3b_v74_tricore_decision.safetensors",
+      "archived_vivy_v_path": "D:\\91s- T\u00e1i c\u1ea5u tr\u00fac l\u00e2n th\u1ee9 4\\Vivy-V\\models\\legacy_vivy_v6_archive\\checkpoints_v6_to_v74\\vivy_r_swe_code_3b_v74_tricore_decision.safetensors",
+      "size_bytes": 1336068,
+      "sha256": "09ae9673d3de16e2bb2054ea752d24faa0e2196fdb8a17293cefa7643143c441",
+      "legacy_version_stamp": "ARCHIVED_LEGACY_VIVY_V6",
+      "superseded_by_architecture": "Vivy-V (Encrypted Architecture + Open-Source Weights)"
+    },
+    {
+      "artifact_name": "vivy_r_vision_3b_colab_live.safetensors",
+      "original_path": "D:\\91s_Vivy\\Vivy.v6\\models\\r_series\\checkpoints\\vivy_r_vision_3b_colab_live.safetensors",
+      "archived_v6_path": "D:\\91s_Vivy\\Vivy.v6\\archives\\vivy_v6_legacy_stamped_2026_10_24\\checkpoints_v6_to_v74\\vivy_r_vision_3b_colab_live.safetensors",
+      "archived_vivy_v_path": "D:\\91s- T\u00e1i c\u1ea5u tr\u00fac l\u00e2n th\u1ee9 4\\Vivy-V\\models\\legacy_vivy_v6_archive\\checkpoints_v6_to_v74\\vivy_r_vision_3b_colab_live.safetensors",
+      "size_bytes": 1066336,
+      "sha256": "90c5c7bd60919204da975b66fa9fc43c5a879b71019471e4caa83ed2b139c37f",
+      "legacy_version_stamp": "ARCHIVED_LEGACY_VIVY_V6",
+      "superseded_by_architecture": "Vivy-V (Encrypted Architecture + Open-Source Weights)"
+    },
+    {
+      "artifact_name": "vivy_r_vision_3b_colab_live_receipt.json",
+      "original_path": "D:\\91s_Vivy\\Vivy.v6\\models\\r_series\\checkpoints\\vivy_r_vision_3b_colab_live_receipt.json",
+      "archived_v6_path": "D:\\91s_Vivy\\Vivy.v6\\archives\\vivy_v6_legacy_stamped_2026_10_24\\checkpoints_v6_to_v74\\vivy_r_vision_3b_colab_live_receipt.json",
+      "archived_vivy_v_path": "D:\\91s- T\u00e1i c\u1ea5u tr\u00fac l\u00e2n th\u1ee9 4\\Vivy-V\\models\\legacy_vivy_v6_archive\\checkpoints_v6_to_v74\\vivy_r_vision_3b_colab_live_receipt.json",
+      "size_bytes": 2649,
+      "sha256": "ada8102908c04d3bf3e22296eafec7e35e521b3042a77deb3818bca80e450aa1",
+      "legacy_version_stamp": "ARCHIVED_LEGACY_VIVY_V6",
+      "superseded_by_architecture": "Vivy-V (Encrypted Architecture + Open-Source Weights)"
+    },
+    {
+      "artifact_name": "vivy_r_vision_3b_compiler.safetensors",
+      "original_path": "D:\\91s_Vivy\\Vivy.v6\\models\\r_series\\checkpoints\\vivy_r_vision_3b_compiler.safetensors",
+      "archived_v6_path": "D:\\91s_Vivy\\Vivy.v6\\archives\\vivy_v6_legacy_stamped_2026_10_24\\checkpoints_v6_to_v74\\vivy_r_vision_3b_compiler.safetensors",
+      "archived_vivy_v_path": "D:\\91s- T\u00e1i c\u1ea5u tr\u00fac l\u00e2n th\u1ee9 4\\Vivy-V\\models\\legacy_vivy_v6_archive\\checkpoints_v6_to_v74\\vivy_r_vision_3b_compiler.safetensors",
+      "size_bytes": 1066336,
+      "sha256": "90c5c7bd60919204da975b66fa9fc43c5a879b71019471e4caa83ed2b139c37f",
+      "legacy_version_stamp": "ARCHIVED_LEGACY_VIVY_V6",
+      "superseded_by_architecture": "Vivy-V (Encrypted Architecture + Open-Source Weights)"
+    },
+    {
+      "artifact_name": "vivy_r_vision_3b_dream_distilled_3b_5b.safetensors",
+      "original_path": "D:\\91s_Vivy\\Vivy.v6\\models\\r_series\\checkpoints\\vivy_r_vision_3b_dream_distilled_3b_5b.safetensors",
+      "archived_v6_path": "D:\\91s_Vivy\\Vivy.v6\\archives\\vivy_v6_legacy_stamped_2026_10_24\\checkpoints_v6_to_v74\\vivy_r_vision_3b_dream_distilled_3b_5b.safetensors",
+      "archived_vivy_v_path": "D:\\91s- T\u00e1i c\u1ea5u tr\u00fac l\u00e2n th\u1ee9 4\\Vivy-V\\models\\legacy_vivy_v6_archive\\checkpoints_v6_to_v74\\vivy_r_vision_3b_dream_distilled_3b_5b.safetensors",
+      "size_bytes": 27584,
+      "sha256": "58cdaf37ee474c2176949b240c4a57e9c997da25bc63fd6399a87ba1dfd9e21a",
+      "legacy_version_stamp": "ARCHIVED_LEGACY_VIVY_V6",
+      "superseded_by_architecture": "Vivy-V (Encrypted Architecture + Open-Source Weights)"
+    },
+    {
+      "artifact_name": "vivy_r_vision_3b_hf_release_receipt.json",
+      "original_path": "D:\\91s_Vivy\\Vivy.v6\\models\\r_series\\checkpoints\\vivy_r_vision_3b_hf_release_receipt.json",
+      "archived_v6_path": "D:\\91s_Vivy\\Vivy.v6\\archives\\vivy_v6_legacy_stamped_2026_10_24\\checkpoints_v6_to_v74\\vivy_r_vision_3b_hf_release_receipt.json",
+      "archived_vivy_v_path": "D:\\91s- T\u00e1i c\u1ea5u tr\u00fac l\u00e2n th\u1ee9 4\\Vivy-V\\models\\legacy_vivy_v6_archive\\checkpoints_v6_to_v74\\vivy_r_vision_3b_hf_release_receipt.json",
+      "size_bytes": 3773,
+      "sha256": "107abb957328d9eed5dd533dd997b0eae60e6f524b5d2d7ec6ae21180e9ed612",
+      "legacy_version_stamp": "ARCHIVED_LEGACY_VIVY_V6",
+      "superseded_by_architecture": "Vivy-V (Encrypted Architecture + Open-Source Weights)"
+    },
+    {
+      "artifact_name": "vivy_r_vision_3b_training_receipt.json",
+      "original_path": "D:\\91s_Vivy\\Vivy.v6\\models\\r_series\\checkpoints\\vivy_r_vision_3b_training_receipt.json",
+      "archived_v6_path": "D:\\91s_Vivy\\Vivy.v6\\archives\\vivy_v6_legacy_stamped_2026_10_24\\checkpoints_v6_to_v74\\vivy_r_vision_3b_training_receipt.json",
+      "archived_vivy_v_path": "D:\\91s- T\u00e1i c\u1ea5u tr\u00fac l\u00e2n th\u1ee9 4\\Vivy-V\\models\\legacy_vivy_v6_archive\\checkpoints_v6_to_v74\\vivy_r_vision_3b_training_receipt.json",
+      "size_bytes": 3354,
+      "sha256": "340c58c29fa376b5f8bd2f1af60716b6febae0c5e9062aa7c367732875dce9fc",
+      "legacy_version_stamp": "ARCHIVED_LEGACY_VIVY_V6",
+      "superseded_by_architecture": "Vivy-V (Encrypted Architecture + Open-Source Weights)"
+    },
+    {
+      "artifact_name": "vivy_r_vision_3b_v66_unified.safetensors",
+      "original_path": "D:\\91s_Vivy\\Vivy.v6\\models\\r_series\\checkpoints\\vivy_r_vision_3b_v66_unified.safetensors",
+      "archived_v6_path": "D:\\91s_Vivy\\Vivy.v6\\archives\\vivy_v6_legacy_stamped_2026_10_24\\checkpoints_v6_to_v74\\vivy_r_vision_3b_v66_unified.safetensors",
+      "archived_vivy_v_path": "D:\\91s- T\u00e1i c\u1ea5u tr\u00fac l\u00e2n th\u1ee9 4\\Vivy-V\\models\\legacy_vivy_v6_archive\\checkpoints_v6_to_v74\\vivy_r_vision_3b_v66_unified.safetensors",
+      "size_bytes": 1087152,
+      "sha256": "081a5ca741a4b5a1c8ee3425b8b9f5d654ad3ee35e923d7b7dd41e66d8a8d65a",
+      "legacy_version_stamp": "ARCHIVED_LEGACY_VIVY_V6",
+      "superseded_by_architecture": "Vivy-V (Encrypted Architecture + Open-Source Weights)"
+    },
+    {
+      "artifact_name": "vivy_r_vision_3b_v67_causal_instinct.safetensors",
+      "original_path": "D:\\91s_Vivy\\Vivy.v6\\models\\r_series\\checkpoints\\vivy_r_vision_3b_v67_causal_instinct.safetensors",
+      "archived_v6_path": "D:\\91s_Vivy\\Vivy.v6\\archives\\vivy_v6_legacy_stamped_2026_10_24\\checkpoints_v6_to_v74\\vivy_r_vision_3b_v67_causal_instinct.safetensors",
+      "archived_vivy_v_path": "D:\\91s- T\u00e1i c\u1ea5u tr\u00fac l\u00e2n th\u1ee9 4\\Vivy-V\\models\\legacy_vivy_v6_archive\\checkpoints_v6_to_v74\\vivy_r_vision_3b_v67_causal_instinct.safetensors",
+      "size_bytes": 1090736,
+      "sha256": "184bbc2075900dc8efa5afa79751a673a58d983f2e1f255a5f92c6c14448dd3b",
+      "legacy_version_stamp": "ARCHIVED_LEGACY_VIVY_V6",
+      "superseded_by_architecture": "Vivy-V (Encrypted Architecture + Open-Source Weights)"
+    },
+    {
+      "artifact_name": "vivy_r_vision_3b_v68_dream_distilled.safetensors",
+      "original_path": "D:\\91s_Vivy\\Vivy.v6\\models\\r_series\\checkpoints\\vivy_r_vision_3b_v68_dream_distilled.safetensors",
+      "archived_v6_path": "D:\\91s_Vivy\\Vivy.v6\\archives\\vivy_v6_legacy_stamped_2026_10_24\\checkpoints_v6_to_v74\\vivy_r_vision_3b_v68_dream_distilled.safetensors",
+      "archived_vivy_v_path": "D:\\91s- T\u00e1i c\u1ea5u tr\u00fac l\u00e2n th\u1ee9 4\\Vivy-V\\models\\legacy_vivy_v6_archive\\checkpoints_v6_to_v74\\vivy_r_vision_3b_v68_dream_distilled.safetensors",
+      "size_bytes": 1095640,
+      "sha256": "e9cd71da235c345da2ce763b2dc43b2f35fa87e019b96edaff601a4c570b6d7e",
+      "legacy_version_stamp": "ARCHIVED_LEGACY_VIVY_V6",
+      "superseded_by_architecture": "Vivy-V (Encrypted Architecture + Open-Source Weights)"
+    },
+    {
+      "artifact_name": "vivy_r_vision_3b_v69_zero_bridge.safetensors",
+      "original_path": "D:\\91s_Vivy\\Vivy.v6\\models\\r_series\\checkpoints\\vivy_r_vision_3b_v69_zero_bridge.safetensors",
+      "archived_v6_path": "D:\\91s_Vivy\\Vivy.v6\\archives\\vivy_v6_legacy_stamped_2026_10_24\\checkpoints_v6_to_v74\\vivy_r_vision_3b_v69_zero_bridge.safetensors",
+      "archived_vivy_v_path": "D:\\91s- T\u00e1i c\u1ea5u tr\u00fac l\u00e2n th\u1ee9 4\\Vivy-V\\models\\legacy_vivy_v6_archive\\checkpoints_v6_to_v74\\vivy_r_vision_3b_v69_zero_bridge.safetensors",
+      "size_bytes": 1101696,
+      "sha256": "64a51840d4bdce7ee99b42a4097803b4795b63d7348f185d0f8d077cc4b1b57c",
+      "legacy_version_stamp": "ARCHIVED_LEGACY_VIVY_V6",
+      "superseded_by_architecture": "Vivy-V (Encrypted Architecture + Open-Source Weights)"
+    },
+    {
+      "artifact_name": "vivy_r_vision_3b_v70_bioactivity.safetensors",
+      "original_path": "D:\\91s_Vivy\\Vivy.v6\\models\\r_series\\checkpoints\\vivy_r_vision_3b_v70_bioactivity.safetensors",
+      "archived_v6_path": "D:\\91s_Vivy\\Vivy.v6\\archives\\vivy_v6_legacy_stamped_2026_10_24\\checkpoints_v6_to_v74\\vivy_r_vision_3b_v70_bioactivity.safetensors",
+      "archived_vivy_v_path": "D:\\91s- T\u00e1i c\u1ea5u tr\u00fac l\u00e2n th\u1ee9 4\\Vivy-V\\models\\legacy_vivy_v6_archive\\checkpoints_v6_to_v74\\vivy_r_vision_3b_v70_bioactivity.safetensors",
+      "size_bytes": 1103576,
+      "sha256": "990e6153721e59018756e5a82dc73b17941bf2b853e95933febc9908f368cbaf",
+      "legacy_version_stamp": "ARCHIVED_LEGACY_VIVY_V6",
+      "superseded_by_architecture": "Vivy-V (Encrypted Architecture + Open-Source Weights)"
+    },
+    {
+      "artifact_name": "vivy_r_vision_3b_v71_stage_m3_sovereign.safetensors",
+      "original_path": "D:\\91s_Vivy\\Vivy.v6\\models\\r_series\\checkpoints\\vivy_r_vision_3b_v71_stage_m3_sovereign.safetensors",
+      "archived_v6_path": "D:\\91s_Vivy\\Vivy.v6\\archives\\vivy_v6_legacy_stamped_2026_10_24\\checkpoints_v6_to_v74\\vivy_r_vision_3b_v71_stage_m3_sovereign.safetensors",
+      "archived_vivy_v_path": "D:\\91s- T\u00e1i c\u1ea5u tr\u00fac l\u00e2n th\u1ee9 4\\Vivy-V\\models\\legacy_vivy_v6_archive\\checkpoints_v6_to_v74\\vivy_r_vision_3b_v71_stage_m3_sovereign.safetensors",
+      "size_bytes": 1106976,
+      "sha256": "98da9dc84beb8d76b16530cd00a79211a4a273c2e3415d35141d0809ecab650f",
+      "legacy_version_stamp": "ARCHIVED_LEGACY_VIVY_V6",
+      "superseded_by_architecture": "Vivy-V (Encrypted Architecture + Open-Source Weights)"
+    },
+    {
+      "artifact_name": "vivy_r_vision_3b_v72_post_m3_sovereign.safetensors",
+      "original_path": "D:\\91s_Vivy\\Vivy.v6\\models\\r_series\\checkpoints\\vivy_r_vision_3b_v72_post_m3_sovereign.safetensors",
+      "archived_v6_path": "D:\\91s_Vivy\\Vivy.v6\\archives\\vivy_v6_legacy_stamped_2026_10_24\\checkpoints_v6_to_v74\\vivy_r_vision_3b_v72_post_m3_sovereign.safetensors",
+      "archived_vivy_v_path": "D:\\91s- T\u00e1i c\u1ea5u tr\u00fac l\u00e2n th\u1ee9 4\\Vivy-V\\models\\legacy_vivy_v6_archive\\checkpoints_v6_to_v74\\vivy_r_vision_3b_v72_post_m3_sovereign.safetensors",
+      "size_bytes": 1108936,
+      "sha256": "568be829a18023870d8e9310b28a70aa42001af9d403dae2f9f0f7de9406a057",
+      "legacy_version_stamp": "ARCHIVED_LEGACY_VIVY_V6",
+      "superseded_by_architecture": "Vivy-V (Encrypted Architecture + Open-Source Weights)"
+    },
+    {
+      "artifact_name": "vivy_r_vision_3b_v73_cross_specialist.safetensors",
+      "original_path": "D:\\91s_Vivy\\Vivy.v6\\models\\r_series\\checkpoints\\vivy_r_vision_3b_v73_cross_specialist.safetensors",
+      "archived_v6_path": "D:\\91s_Vivy\\Vivy.v6\\archives\\vivy_v6_legacy_stamped_2026_10_24\\checkpoints_v6_to_v74\\vivy_r_vision_3b_v73_cross_specialist.safetensors",
+      "archived_vivy_v_path": "D:\\91s- T\u00e1i c\u1ea5u tr\u00fac l\u00e2n th\u1ee9 4\\Vivy-V\\models\\legacy_vivy_v6_archive\\checkpoints_v6_to_v74\\vivy_r_vision_3b_v73_cross_specialist.safetensors",
+      "size_bytes": 1111064,
+      "sha256": "96bccc95c50d1fb9b7f7dfd588dd32521c587e90d5493b21ebbb20649714c358",
+      "legacy_version_stamp": "ARCHIVED_LEGACY_VIVY_V6",
+      "superseded_by_architecture": "Vivy-V (Encrypted Architecture + Open-Source Weights)"
+    },
+    {
+      "artifact_name": "vivy_r_vision_3b_v74_tricore_decision.safetensors",
+      "original_path": "D:\\91s_Vivy\\Vivy.v6\\models\\r_series\\checkpoints\\vivy_r_vision_3b_v74_tricore_decision.safetensors",
+      "archived_v6_path": "D:\\91s_Vivy\\Vivy.v6\\archives\\vivy_v6_legacy_stamped_2026_10_24\\checkpoints_v6_to_v74\\vivy_r_vision_3b_v74_tricore_decision.safetensors",
+      "archived_vivy_v_path": "D:\\91s- T\u00e1i c\u1ea5u tr\u00fac l\u00e2n th\u1ee9 4\\Vivy-V\\models\\legacy_vivy_v6_archive\\checkpoints_v6_to_v74\\vivy_r_vision_3b_v74_tricore_decision.safetensors",
+      "size_bytes": 1372448,
+      "sha256": "40ba30bb432154fc5efbd8253e0dec678e43f88d2426ce40cf6641a86ffc6504",
+      "legacy_version_stamp": "ARCHIVED_LEGACY_VIVY_V6",
+      "superseded_by_architecture": "Vivy-V (Encrypted Architecture + Open-Source Weights)"
+    },
+    {
+      "artifact_name": "vivy_v66_unified_training_receipt.json",
+      "original_path": "D:\\91s_Vivy\\Vivy.v6\\models\\r_series\\checkpoints\\vivy_v66_unified_training_receipt.json",
+      "archived_v6_path": "D:\\91s_Vivy\\Vivy.v6\\archives\\vivy_v6_legacy_stamped_2026_10_24\\checkpoints_v6_to_v74\\vivy_v66_unified_training_receipt.json",
+      "archived_vivy_v_path": "D:\\91s- T\u00e1i c\u1ea5u tr\u00fac l\u00e2n th\u1ee9 4\\Vivy-V\\models\\legacy_vivy_v6_archive\\checkpoints_v6_to_v74\\vivy_v66_unified_training_receipt.json",
+      "size_bytes": 5306,
+      "sha256": "0bcb95814b936e93f811d5edec73404f280853d4e47050404f93e96cffc3b802",
+      "legacy_version_stamp": "ARCHIVED_LEGACY_VIVY_V6",
+      "superseded_by_architecture": "Vivy-V (Encrypted Architecture + Open-Source Weights)"
+    },
+    {
+      "artifact_name": "vivy_v67_causal_intuition_release_receipt.json",
+      "original_path": "D:\\91s_Vivy\\Vivy.v6\\models\\r_series\\checkpoints\\vivy_v67_causal_intuition_release_receipt.json",
+      "archived_v6_path": "D:\\91s_Vivy\\Vivy.v6\\archives\\vivy_v6_legacy_stamped_2026_10_24\\checkpoints_v6_to_v74\\vivy_v67_causal_intuition_release_receipt.json",
+      "archived_vivy_v_path": "D:\\91s- T\u00e1i c\u1ea5u tr\u00fac l\u00e2n th\u1ee9 4\\Vivy-V\\models\\legacy_vivy_v6_archive\\checkpoints_v6_to_v74\\vivy_v67_causal_intuition_release_receipt.json",
+      "size_bytes": 5129,
+      "sha256": "4fd3ec7e709b2be58ad3e5dde31047dab1c0025bba30b56d23b64a1a18a66739",
+      "legacy_version_stamp": "ARCHIVED_LEGACY_VIVY_V6",
+      "superseded_by_architecture": "Vivy-V (Encrypted Architecture + Open-Source Weights)"
+    },
+    {
+      "artifact_name": "vivy_v68_dream_teacher_distilled_release_receipt.json",
+      "original_path": "D:\\91s_Vivy\\Vivy.v6\\models\\r_series\\checkpoints\\vivy_v68_dream_teacher_distilled_release_receipt.json",
+      "archived_v6_path": "D:\\91s_Vivy\\Vivy.v6\\archives\\vivy_v6_legacy_stamped_2026_10_24\\checkpoints_v6_to_v74\\vivy_v68_dream_teacher_distilled_release_receipt.json",
+      "archived_vivy_v_path": "D:\\91s- T\u00e1i c\u1ea5u tr\u00fac l\u00e2n th\u1ee9 4\\Vivy-V\\models\\legacy_vivy_v6_archive\\checkpoints_v6_to_v74\\vivy_v68_dream_teacher_distilled_release_receipt.json",
+      "size_bytes": 2679,
+      "sha256": "0ea8193a6032ebc2a7509bd4589a180e9822eb7d0409f912cc648bdfa4d3b691",
+      "legacy_version_stamp": "ARCHIVED_LEGACY_VIVY_V6",
+      "superseded_by_architecture": "Vivy-V (Encrypted Architecture + Open-Source Weights)"
+    },
+    {
+      "artifact_name": "vivy_v68_hf_public_release_receipt.json",
+      "original_path": "D:\\91s_Vivy\\Vivy.v6\\models\\r_series\\checkpoints\\vivy_v68_hf_public_release_receipt.json",
+      "archived_v6_path": "D:\\91s_Vivy\\Vivy.v6\\archives\\vivy_v6_legacy_stamped_2026_10_24\\checkpoints_v6_to_v74\\vivy_v68_hf_public_release_receipt.json",
+      "archived_vivy_v_path": "D:\\91s- T\u00e1i c\u1ea5u tr\u00fac l\u00e2n th\u1ee9 4\\Vivy-V\\models\\legacy_vivy_v6_archive\\checkpoints_v6_to_v74\\vivy_v68_hf_public_release_receipt.json",
+      "size_bytes": 1661,
+      "sha256": "5f11909edae8100a25297ded8fc2688ea905f9d57aed1965f2d9a92e7cb8d85b",
+      "legacy_version_stamp": "ARCHIVED_LEGACY_VIVY_V6",
+      "superseded_by_architecture": "Vivy-V (Encrypted Architecture + Open-Source Weights)"
+    },
+    {
+      "artifact_name": "vivy_v69_hf_public_release_receipt.json",
+      "original_path": "D:\\91s_Vivy\\Vivy.v6\\models\\r_series\\checkpoints\\vivy_v69_hf_public_release_receipt.json",
+      "archived_v6_path": "D:\\91s_Vivy\\Vivy.v6\\archives\\vivy_v6_legacy_stamped_2026_10_24\\checkpoints_v6_to_v74\\vivy_v69_hf_public_release_receipt.json",
+      "archived_vivy_v_path": "D:\\91s- T\u00e1i c\u1ea5u tr\u00fac l\u00e2n th\u1ee9 4\\Vivy-V\\models\\legacy_vivy_v6_archive\\checkpoints_v6_to_v74\\vivy_v69_hf_public_release_receipt.json",
+      "size_bytes": 1651,
+      "sha256": "3fc53801c529413f66f17558efff750b3a647d3533e72775d326fac735661645",
+      "legacy_version_stamp": "ARCHIVED_LEGACY_VIVY_V6",
+      "superseded_by_architecture": "Vivy-V (Encrypted Architecture + Open-Source Weights)"
+    },
+    {
+      "artifact_name": "vivy_v69_zero_bridge_release_receipt.json",
+      "original_path": "D:\\91s_Vivy\\Vivy.v6\\models\\r_series\\checkpoints\\vivy_v69_zero_bridge_release_receipt.json",
+      "archived_v6_path": "D:\\91s_Vivy\\Vivy.v6\\archives\\vivy_v6_legacy_stamped_2026_10_24\\checkpoints_v6_to_v74\\vivy_v69_zero_bridge_release_receipt.json",
+      "archived_vivy_v_path": "D:\\91s- T\u00e1i c\u1ea5u tr\u00fac l\u00e2n th\u1ee9 4\\Vivy-V\\models\\legacy_vivy_v6_archive\\checkpoints_v6_to_v74\\vivy_v69_zero_bridge_release_receipt.json",
+      "size_bytes": 2460,
+      "sha256": "234d6d85ec823ba4000934e59bbbc9ff53bb5219327acb6a4390c87e61878a4b",
+      "legacy_version_stamp": "ARCHIVED_LEGACY_VIVY_V6",
+      "superseded_by_architecture": "Vivy-V (Encrypted Architecture + Open-Source Weights)"
+    },
+    {
+      "artifact_name": "vivy_v70_five_specialist_release_receipt.json",
+      "original_path": "D:\\91s_Vivy\\Vivy.v6\\models\\r_series\\checkpoints\\vivy_v70_five_specialist_release_receipt.json",
+      "archived_v6_path": "D:\\91s_Vivy\\Vivy.v6\\archives\\vivy_v6_legacy_stamped_2026_10_24\\checkpoints_v6_to_v74\\vivy_v70_five_specialist_release_receipt.json",
+      "archived_vivy_v_path": "D:\\91s- T\u00e1i c\u1ea5u tr\u00fac l\u00e2n th\u1ee9 4\\Vivy-V\\models\\legacy_vivy_v6_archive\\checkpoints_v6_to_v74\\vivy_v70_five_specialist_release_receipt.json",
+      "size_bytes": 3993,
+      "sha256": "f2d533df299ad0d1faa04770f7f2e98642945ad16a96c1a7cc6db92542726715",
+      "legacy_version_stamp": "ARCHIVED_LEGACY_VIVY_V6",
+      "superseded_by_architecture": "Vivy-V (Encrypted Architecture + Open-Source Weights)"
+    },
+    {
+      "artifact_name": "vivy_v70_hf_public_release_receipt.json",
+      "original_path": "D:\\91s_Vivy\\Vivy.v6\\models\\r_series\\checkpoints\\vivy_v70_hf_public_release_receipt.json",
+      "archived_v6_path": "D:\\91s_Vivy\\Vivy.v6\\archives\\vivy_v6_legacy_stamped_2026_10_24\\checkpoints_v6_to_v74\\vivy_v70_hf_public_release_receipt.json",
+      "archived_vivy_v_path": "D:\\91s- T\u00e1i c\u1ea5u tr\u00fac l\u00e2n th\u1ee9 4\\Vivy-V\\models\\legacy_vivy_v6_archive\\checkpoints_v6_to_v74\\vivy_v70_hf_public_release_receipt.json",
+      "size_bytes": 3391,
+      "sha256": "e54959b955fb2e179b9ba8c2ef0a628c6c421a0a0910380d345083a37fce9321",
+      "legacy_version_stamp": "ARCHIVED_LEGACY_VIVY_V6",
+      "superseded_by_architecture": "Vivy-V (Encrypted Architecture + Open-Source Weights)"
+    },
+    {
+      "artifact_name": "vivy_v71_five_specialist_package_receipt.json",
+      "original_path": "D:\\91s_Vivy\\Vivy.v6\\models\\r_series\\checkpoints\\vivy_v71_five_specialist_package_receipt.json",
+      "archived_v6_path": "D:\\91s_Vivy\\Vivy.v6\\archives\\vivy_v6_legacy_stamped_2026_10_24\\checkpoints_v6_to_v74\\vivy_v71_five_specialist_package_receipt.json",
+      "archived_vivy_v_path": "D:\\91s- T\u00e1i c\u1ea5u tr\u00fac l\u00e2n th\u1ee9 4\\Vivy-V\\models\\legacy_vivy_v6_archive\\checkpoints_v6_to_v74\\vivy_v71_five_specialist_package_receipt.json",
+      "size_bytes": 3249,
+      "sha256": "a28454c32d864cd5efbe7156ee4e2f5e480842af19c7a846d066451b529980ba",
+      "legacy_version_stamp": "ARCHIVED_LEGACY_VIVY_V6",
+      "superseded_by_architecture": "Vivy-V (Encrypted Architecture + Open-Source Weights)"
+    },
+    {
+      "artifact_name": "vivy_v71_hf_public_release_receipt.json",
+      "original_path": "D:\\91s_Vivy\\Vivy.v6\\models\\r_series\\checkpoints\\vivy_v71_hf_public_release_receipt.json",
+      "archived_v6_path": "D:\\91s_Vivy\\Vivy.v6\\archives\\vivy_v6_legacy_stamped_2026_10_24\\checkpoints_v6_to_v74\\vivy_v71_hf_public_release_receipt.json",
+      "archived_vivy_v_path": "D:\\91s- T\u00e1i c\u1ea5u tr\u00fac l\u00e2n th\u1ee9 4\\Vivy-V\\models\\legacy_vivy_v6_archive\\checkpoints_v6_to_v74\\vivy_v71_hf_public_release_receipt.json",
+      "size_bytes": 2763,
+      "sha256": "9be7fc37e628fe458bc9fed362b851a0ce172ce6e285e7872afce0c98ea1b34c",
+      "legacy_version_stamp": "ARCHIVED_LEGACY_VIVY_V6",
+      "superseded_by_architecture": "Vivy-V (Encrypted Architecture + Open-Source Weights)"
+    },
+    {
+      "artifact_name": "vivy_v72_five_specialist_package_receipt.json",
+      "original_path": "D:\\91s_Vivy\\Vivy.v6\\models\\r_series\\checkpoints\\vivy_v72_five_specialist_package_receipt.json",
+      "archived_v6_path": "D:\\91s_Vivy\\Vivy.v6\\archives\\vivy_v6_legacy_stamped_2026_10_24\\checkpoints_v6_to_v74\\vivy_v72_five_specialist_package_receipt.json",
+      "archived_vivy_v_path": "D:\\91s- T\u00e1i c\u1ea5u tr\u00fac l\u00e2n th\u1ee9 4\\Vivy-V\\models\\legacy_vivy_v6_archive\\checkpoints_v6_to_v74\\vivy_v72_five_specialist_package_receipt.json",
+      "size_bytes": 3240,
+      "sha256": "adc617d34888188f5671ab3eaa72e972531367aa9f602bd9a44029c39a241cea",
+      "legacy_version_stamp": "ARCHIVED_LEGACY_VIVY_V6",
+      "superseded_by_architecture": "Vivy-V (Encrypted Architecture + Open-Source Weights)"
+    },
+    {
+      "artifact_name": "vivy_v72_hf_public_release_receipt.json",
+      "original_path": "D:\\91s_Vivy\\Vivy.v6\\models\\r_series\\checkpoints\\vivy_v72_hf_public_release_receipt.json",
+      "archived_v6_path": "D:\\91s_Vivy\\Vivy.v6\\archives\\vivy_v6_legacy_stamped_2026_10_24\\checkpoints_v6_to_v74\\vivy_v72_hf_public_release_receipt.json",
+      "archived_vivy_v_path": "D:\\91s- T\u00e1i c\u1ea5u tr\u00fac l\u00e2n th\u1ee9 4\\Vivy-V\\models\\legacy_vivy_v6_archive\\checkpoints_v6_to_v74\\vivy_v72_hf_public_release_receipt.json",
+      "size_bytes": 2754,
+      "sha256": "7c1654b2fae180c68026ad8a74617e099e11fe41594d778591e028ca1cc67f77",
+      "legacy_version_stamp": "ARCHIVED_LEGACY_VIVY_V6",
+      "superseded_by_architecture": "Vivy-V (Encrypted Architecture + Open-Source Weights)"
+    },
+    {
+      "artifact_name": "vivy_v73_five_specialist_package_receipt.json",
+      "original_path": "D:\\91s_Vivy\\Vivy.v6\\models\\r_series\\checkpoints\\vivy_v73_five_specialist_package_receipt.json",
+      "archived_v6_path": "D:\\91s_Vivy\\Vivy.v6\\archives\\vivy_v6_legacy_stamped_2026_10_24\\checkpoints_v6_to_v74\\vivy_v73_five_specialist_package_receipt.json",
+      "archived_vivy_v_path": "D:\\91s- T\u00e1i c\u1ea5u tr\u00fac l\u00e2n th\u1ee9 4\\Vivy-V\\models\\legacy_vivy_v6_archive\\checkpoints_v6_to_v74\\vivy_v73_five_specialist_package_receipt.json",
+      "size_bytes": 3309,
+      "sha256": "da90abadf13f2da6c9197ec3e376d4d31c82c9dcedc28ffff80de1f7e7f9e783",
+      "legacy_version_stamp": "ARCHIVED_LEGACY_VIVY_V6",
+      "superseded_by_architecture": "Vivy-V (Encrypted Architecture + Open-Source Weights)"
+    },
+    {
+      "artifact_name": "vivy_v73_hf_public_release_receipt.json",
+      "original_path": "D:\\91s_Vivy\\Vivy.v6\\models\\r_series\\checkpoints\\vivy_v73_hf_public_release_receipt.json",
+      "archived_v6_path": "D:\\91s_Vivy\\Vivy.v6\\archives\\vivy_v6_legacy_stamped_2026_10_24\\checkpoints_v6_to_v74\\vivy_v73_hf_public_release_receipt.json",
+      "archived_vivy_v_path": "D:\\91s- T\u00e1i c\u1ea5u tr\u00fac l\u00e2n th\u1ee9 4\\Vivy-V\\models\\legacy_vivy_v6_archive\\checkpoints_v6_to_v74\\vivy_v73_hf_public_release_receipt.json",
+      "size_bytes": 3049,
+      "sha256": "1fe705eb72935610ffd233e8a36f10bc145b55ef3fbe587ad8dbfb40cfd06585",
+      "legacy_version_stamp": "ARCHIVED_LEGACY_VIVY_V6",
+      "superseded_by_architecture": "Vivy-V (Encrypted Architecture + Open-Source Weights)"
+    },
+    {
+      "artifact_name": "vivy_vision_control_lora.safetensors",
+      "original_path": "D:\\91s_Vivy\\Vivy.v6\\models\\r_series\\checkpoints\\vivy_vision_control_lora.safetensors",
+      "archived_v6_path": "D:\\91s_Vivy\\Vivy.v6\\archives\\vivy_v6_legacy_stamped_2026_10_24\\checkpoints_v6_to_v74\\vivy_vision_control_lora.safetensors",
+      "archived_vivy_v_path": "D:\\91s- T\u00e1i c\u1ea5u tr\u00fac l\u00e2n th\u1ee9 4\\Vivy-V\\models\\legacy_vivy_v6_archive\\checkpoints_v6_to_v74\\vivy_vision_control_lora.safetensors",
+      "size_bytes": 42844,
+      "sha256": "8724b4ac4771f92fde0765aa4112a7d9fab58b981505dd0cc178433fc9664603",
+      "legacy_version_stamp": "ARCHIVED_LEGACY_VIVY_V6",
+      "superseded_by_architecture": "Vivy-V (Encrypted Architecture + Open-Source Weights)"
+    },
+    {
+      "artifact_name": "vivy_vision_control_lora_receipt.json",
+      "original_path": "D:\\91s_Vivy\\Vivy.v6\\models\\r_series\\checkpoints\\vivy_vision_control_lora_receipt.json",
+      "archived_v6_path": "D:\\91s_Vivy\\Vivy.v6\\archives\\vivy_v6_legacy_stamped_2026_10_24\\checkpoints_v6_to_v74\\vivy_vision_control_lora_receipt.json",
+      "archived_vivy_v_path": "D:\\91s- T\u00e1i c\u1ea5u tr\u00fac l\u00e2n th\u1ee9 4\\Vivy-V\\models\\legacy_vivy_v6_archive\\checkpoints_v6_to_v74\\vivy_vision_control_lora_receipt.json",
+      "size_bytes": 1374,
+      "sha256": "10ddb27709c6867a8692b7f12f85f644855ad2988bcb4c5e343ec44cd563695b",
+      "legacy_version_stamp": "ARCHIVED_LEGACY_VIVY_V6",
+      "superseded_by_architecture": "Vivy-V (Encrypted Architecture + Open-Source Weights)"
+    },
+    {
+      "artifact_name": "vivy_vytrading_mt5_x100_instinct.safetensors",
+      "original_path": "D:\\91s_Vivy\\Vivy.v6\\models\\r_series\\checkpoints\\vivy_vytrading_mt5_x100_instinct.safetensors",
+      "archived_v6_path": "D:\\91s_Vivy\\Vivy.v6\\archives\\vivy_v6_legacy_stamped_2026_10_24\\checkpoints_v6_to_v74\\vivy_vytrading_mt5_x100_instinct.safetensors",
+      "archived_vivy_v_path": "D:\\91s- T\u00e1i c\u1ea5u tr\u00fac l\u00e2n th\u1ee9 4\\Vivy-V\\models\\legacy_vivy_v6_archive\\checkpoints_v6_to_v74\\vivy_vytrading_mt5_x100_instinct.safetensors",
+      "size_bytes": 246856,
+      "sha256": "7389dddf7034321ea9cd573d2a5e7824326d08cea3384ba947eaf2183bf0ff5b",
+      "legacy_version_stamp": "ARCHIVED_LEGACY_VIVY_V6",
+      "superseded_by_architecture": "Vivy-V (Encrypted Architecture + Open-Source Weights)"
+    },
+    {
+      "artifact_name": "public_release/Vivy-R-CyberSec-3B-GGUF",
+      "original_path": "D:\\91s_Vivy\\Vivy.v6\\models\\r_series\\public_release\\Vivy-R-CyberSec-3B-GGUF",
+      "archived_v6_path": "D:\\91s_Vivy\\Vivy.v6\\archives\\vivy_v6_legacy_stamped_2026_10_24\\public_docs_backup\\Vivy-R-CyberSec-3B-GGUF",
+      "archived_vivy_v_path": "D:\\91s- T\u00e1i c\u1ea5u tr\u00fac l\u00e2n th\u1ee9 4\\Vivy-V\\models\\legacy_vivy_v6_archive",
+      "size_bytes": 42067,
+      "sha256": "fe2806991113cabdbe4f50eddce7575255c98cf1e00678ee0865c4c6975483e5",
+      "legacy_version_stamp": "ARCHIVED_LEGACY_VIVY_V6",
+      "superseded_by_architecture": "Vivy-V (Encrypted Architecture + Open-Source Weights)"
+    },
+    {
+      "artifact_name": "public_release/Vivy-R-Finance-3B-GGUF",
+      "original_path": "D:\\91s_Vivy\\Vivy.v6\\models\\r_series\\public_release\\Vivy-R-Finance-3B-GGUF",
+      "archived_v6_path": "D:\\91s_Vivy\\Vivy.v6\\archives\\vivy_v6_legacy_stamped_2026_10_24\\public_docs_backup\\Vivy-R-Finance-3B-GGUF",
+      "archived_vivy_v_path": "D:\\91s- T\u00e1i c\u1ea5u tr\u00fac l\u00e2n th\u1ee9 4\\Vivy-V\\models\\legacy_vivy_v6_archive",
+      "size_bytes": 10074142,
+      "sha256": "6d3ba17a7b617e7616532ec294c24634fb7ae438906cf16d50c8a45709aefbf5",
+      "legacy_version_stamp": "ARCHIVED_LEGACY_VIVY_V6",
+      "superseded_by_architecture": "Vivy-V (Encrypted Architecture + Open-Source Weights)"
+    },
+    {
+      "artifact_name": "public_release/Vivy-R-Robotics-3B-GGUF",
+      "original_path": "D:\\91s_Vivy\\Vivy.v6\\models\\r_series\\public_release\\Vivy-R-Robotics-3B-GGUF",
+      "archived_v6_path": "D:\\91s_Vivy\\Vivy.v6\\archives\\vivy_v6_legacy_stamped_2026_10_24\\public_docs_backup\\Vivy-R-Robotics-3B-GGUF",
+      "archived_vivy_v_path": "D:\\91s- T\u00e1i c\u1ea5u tr\u00fac l\u00e2n th\u1ee9 4\\Vivy-V\\models\\legacy_vivy_v6_archive",
+      "size_bytes": 168978,
+      "sha256": "4169b3162ff5d9ac9836d97f2914cf9fd2997ef9b8bd799f8f02c5381869c07a",
+      "legacy_version_stamp": "ARCHIVED_LEGACY_VIVY_V6",
+      "superseded_by_architecture": "Vivy-V (Encrypted Architecture + Open-Source Weights)"
+    },
+    {
+      "artifact_name": "public_release/Vivy-R-Robotics-Micro-Edge",
+      "original_path": "D:\\91s_Vivy\\Vivy.v6\\models\\r_series\\public_release\\Vivy-R-Robotics-Micro-Edge",
+      "archived_v6_path": "D:\\91s_Vivy\\Vivy.v6\\archives\\vivy_v6_legacy_stamped_2026_10_24\\public_docs_backup\\Vivy-R-Robotics-Micro-Edge",
+      "archived_vivy_v_path": "D:\\91s- T\u00e1i c\u1ea5u tr\u00fac l\u00e2n th\u1ee9 4\\Vivy-V\\models\\legacy_vivy_v6_archive",
+      "size_bytes": 115640,
+      "sha256": "a21f2646e29b4856347715c67c309a5eab0392706b941b7ef97badb8188f6866",
+      "legacy_version_stamp": "ARCHIVED_LEGACY_VIVY_V6",
+      "superseded_by_architecture": "Vivy-V (Encrypted Architecture + Open-Source Weights)"
+    },
+    {
+      "artifact_name": "public_release/Vivy-R-Science-Bio-3B-GGUF",
+      "original_path": "D:\\91s_Vivy\\Vivy.v6\\models\\r_series\\public_release\\Vivy-R-Science-Bio-3B-GGUF",
+      "archived_v6_path": "D:\\91s_Vivy\\Vivy.v6\\archives\\vivy_v6_legacy_stamped_2026_10_24\\public_docs_backup\\Vivy-R-Science-Bio-3B-GGUF",
+      "archived_vivy_v_path": "D:\\91s- T\u00e1i c\u1ea5u tr\u00fac l\u00e2n th\u1ee9 4\\Vivy-V\\models\\legacy_vivy_v6_archive",
+      "size_bytes": 7742036,
+      "sha256": "7752b724d2899ada0ca2c3bf16174be844f8db0b15aaa053851c9cf2e44a80af",
+      "legacy_version_stamp": "ARCHIVED_LEGACY_VIVY_V6",
+      "superseded_by_architecture": "Vivy-V (Encrypted Architecture + Open-Source Weights)"
+    },
+    {
+      "artifact_name": "public_release/Vivy-R-SWE-Code-3B-GGUF",
+      "original_path": "D:\\91s_Vivy\\Vivy.v6\\models\\r_series\\public_release\\Vivy-R-SWE-Code-3B-GGUF",
+      "archived_v6_path": "D:\\91s_Vivy\\Vivy.v6\\archives\\vivy_v6_legacy_stamped_2026_10_24\\public_docs_backup\\Vivy-R-SWE-Code-3B-GGUF",
+      "archived_vivy_v_path": "D:\\91s- T\u00e1i c\u1ea5u tr\u00fac l\u00e2n th\u1ee9 4\\Vivy-V\\models\\legacy_vivy_v6_archive",
+      "size_bytes": 7487162,
+      "sha256": "e2066f28dbe105b18c55d03ed655b1ceb0e7a9aa0d933ed5dae59aca6c8f816c",
+      "legacy_version_stamp": "ARCHIVED_LEGACY_VIVY_V6",
+      "superseded_by_architecture": "Vivy-V (Encrypted Architecture + Open-Source Weights)"
+    },
+    {
+      "artifact_name": "public_release/Vivy-R-Vision-3B-GGUF",
+      "original_path": "D:\\91s_Vivy\\Vivy.v6\\models\\r_series\\public_release\\Vivy-R-Vision-3B-GGUF",
+      "archived_v6_path": "D:\\91s_Vivy\\Vivy.v6\\archives\\vivy_v6_legacy_stamped_2026_10_24\\public_docs_backup\\Vivy-R-Vision-3B-GGUF",
+      "archived_vivy_v_path": "D:\\91s- T\u00e1i c\u1ea5u tr\u00fac l\u00e2n th\u1ee9 4\\Vivy-V\\models\\legacy_vivy_v6_archive",
+      "size_bytes": 10467962,
+      "sha256": "30510a3267649e3a09dfd527d7313244ccf3f7cc92d7d31ebec2417dc6c6980d",
+      "legacy_version_stamp": "ARCHIVED_LEGACY_VIVY_V6",
+      "superseded_by_architecture": "Vivy-V (Encrypted Architecture + Open-Source Weights)"
+    }
+  ]
+}
